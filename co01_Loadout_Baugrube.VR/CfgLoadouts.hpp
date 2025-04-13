@@ -1,139 +1,100 @@
-/*
- * Für weitere Informationen, wie genau Vererbung in einer Config funktioniert, wird der folgende BiWiki Eintrag empfohlen:
- *                              https://community.bistudio.com/wiki/Class_Inheritance
- *
- */
-
 class CfgLoadouts {
-    
-    /* Grundklassen */
-    class CommonBlufor { //Die Grundklasse für alle Blufor Einheiten. Sie stellt die unterste Ebene aller Blufor Loadouts dar, die aus ihr erben.
-        //LTM Settings
-        roledescription = "Default Loadout"; //Unter diesem Namen wir das Loadout im LTM-Menü angezeigt
-        isplayerloadout = false; //Definiert, ob das Loadout im LTM-Menü angezeigt wird.
-        
-        //Clothing
-        uniform[] = {"U_B_CTRG_1", "U_B_CTRG_3"};
+    class CommonBlufor {
+        uniform[] = {"UK3CB_BAF_U_CombatUniform_DPMW"};
+        vest[] = {
+            "UK3CB_BAF_V_Osprey_DPMW2",
+            "UK3CB_BAF_V_Osprey_DPMW4",
+            "UK3CB_BAF_V_Osprey_DPMW5",
+            "UK3CB_BAF_V_Osprey_DPMW6",
+            "UK3CB_BAF_V_Osprey_DPMW7",
+            "UK3CB_BAF_V_Osprey_DPMW8"
+            };
         backpack[] = {""};
-        vest[] = {"V_PlateCarrier2_blk"};
-        headgear[] = {"H_Cap_tan_specops_US", "H_Cap_oli_hs", "H_Booniehat_mcamo"};
-        goggles[] = {""};
-        
-        //Weapons
-        primary[] = {
-            {"arifle_SPAR_01_blk_F", "optic_Holosight_blk_F", "muzzle_snds_M","",""},
-            {"arifle_SPAR_01_snd_F", "optic_Holosight_blk_F", "muzzle_snds_M","",""}
-        };
-        secondary[] = {"hgun_ACPC2_F","","",""};
+        primary[] = {"UK3CB_BAF_L85A2","UK3CB_BAF_556_30Rnd","","UK3CB_BAF_SUSAT",""};
+        secondary[] = {"","","","",""};
         launcher[] = {"","","","",""};
+        magazines[] = {
+            "UK3CB_BAF_SmokeShell",2,
+            "UK3CB_BAF_SmokeShellGreen",
+            "HandGrenade",2
+            };
+        items[] = {
+            "ACE_fieldDressing",15,
+            "ACE_packingBandage",10,
+            "ACE_quikclot",10,
+            "ACE_Flashlight_XL50",
+            "ACE_MapTools",
+            "ACE_tourniquet",4,
+            "ACRE_PRC343"
+            };
         binoculars[] = {""};
-        
-        //Mags + Items
-        magazines[] = {
-            "30Rnd_556x45_Stanag", 6,
-            "30Rnd_556x45_Stanag_Tracer_Red", 2,
-            "9Rnd_45ACP_Mag", 2,
-            "HandGrenade", 2,
-            "SmokeShell", 2,
-            "SmokeShellRed",
-            "SmokeShellGreen"
-        };
-        items[] = {
-            "ACE_fieldDressing", 4,
-            "ACE_packingBandage", 4,
-            "ACE_elasticBandage", 4,
-            "ACE_quikclot", 4,
-            "ACE_morphine",
-            "ACE_earplugs"
-        };
-        
-        //misc
-        map[] = {"ItemMap"};
-        gps[] = {"ItemGps"};
-        nvgs[] = {""};
         compass[] = {"ItemCompass"};
-        watch[] = {"ItemWatch"};
-        
-        //Scripted
-        insignia[] = {"CTRG"};
-        slingHelmet[] = {"H_HelmetB_light", "H_HelmetB_light_black", "H_HelmetB_light_snakeskin"};
-        identity[] = {""};
-        preLoadout = "";
-        postLoadout = "";
-    };
-    
+        goggles[] = {""};
+        gps[] = {""};
+        headgear[] = {
+            "UK3CB_BAF_H_Mk6_DPMW_A",
+            "UK3CB_BAF_H_Mk6_DPMW_B",
+            "UK3CB_BAF_H_Mk6_DPMW_C",
+            "UK3CB_BAF_H_Mk6_DPMW_D",
+            "UK3CB_BAF_H_Mk6_DPMW_E",
+            "UK3CB_BAF_H_Mk6_DPMW_F"
 
-    /* Spielerloadouts */
-    class B_Soldier_SL_F: CommonBlufor {
-        roledescription = "Squad Leader";
-        isplayerloadout = true;
-        primary[] = {
-            {"arifle_SPAR_01_GL_blk_F", "optic_Arco_blk_F", "muzzle_snds_M"},
-            {"arifle_SPAR_01_GL_snd_F", "optic_Arco_blk_F", "muzzle_snds_M"}
-        };
-        magazines[] = {
-            "30Rnd_556x45_Stanag", 6,
-            "30Rnd_556x45_Stanag_Tracer_Red", 2,
-            "9Rnd_45ACP_Mag", 2,
-            "1Rnd_HE_Grenade_shell", 11,
-            "1Rnd_Smoke_Grenade_shell", 3,
-            "1Rnd_SmokeBlue_Grenade_shell", 3,
-            "1Rnd_SmokeRed_Grenade_shell", 3,
-            "SmokeShell", 2,
-            "SmokeShellRed",
-            "SmokeShellGreen"
-        };
-        backpack[] = {"B_AssaultPack_rgr", "B_AssaultPack_blk"};
+            };
+        map[] = {"ItemMap"};
+        nvgs[] = {""};
+        watch[] = {"ItemWatch"};
+        insignia[] = {""};
+        slingHelmet[] = {""};
+        identity[] = {""};
     };
-    
-    class B_Soldier_AR_F: CommonBlufor {
-        roledescription = "Automatic Rifleman";
-        isplayerloadout = true;
-        backpack[] = {"B_AssaultPack_rgr", "B_AssaultPack_blk"};
-        primary[] = {"LMG_03_F", "optic_Holosight_blk_F"};
-        magazines[] = {
-            "200Rnd_556x45_Box_Red_F", 5,
-            "9Rnd_45ACP_Mag", 2,
-            "SmokeShell", 2,
-            "SmokeShellRed",
-            "SmokeShellGreen"
+
+    class B_Soldier_F: CommonBlufor {
+        roledescription = "Rifleman";
+        magazines[] += {
+            "UK3CB_BAF_556_30Rnd", 8
         };
     };
-    
-    class B_Soldier_GL_F: CommonBlufor {
+
+    class B_soldier_AAR_F: B_Soldier_F {
+        roledescription = "LSW Gunner";
+        primary[] = {"UK3CB_BAF_L86A2","UK3CB_BAF_556_30Rnd","","UK3CB_BAF_SUSAT",""};
+        magazines[] += {
+            "UK3CB_BAF_556_30Rnd",8
+        };
+    };
+
+    class B_soldier_AR_F: B_Soldier_F {
+        roledescription = "LMG Gunner";
+        primary[] = {"UK3CB_BAF_L110A2","UK3CB_BAF_556_200Rnd_T","","UK3CB_BAF_SUSAT",""};
+    };
+
+    class B_Soldier_GL_F: B_Soldier_F {
         roledescription = "Grenadier";
-        isplayerloadout = true;
-        primary[] = {
-            {"arifle_SPAR_01_GL_blk_F", "optic_Holosight_blk_F", "muzzle_snds_M"},
-            {"arifle_SPAR_01_GL_snd_F", "optic_Holosight_blk_F", "muzzle_snds_M"}
+        vest[] = {"UK3CB_BAF_V_Osprey_DPMW3"};
+        backpack = {"UK3CB_BAF_B_Bergen_DPMW_Rifleman_A", "UK3CB_BAF_B_Bergen_DPMW_Rifleman_B"};
+        primary[] = {"UK3CB_BAF_L85A2_UGL","UK3CB_BAF_556_30Rnd","","UK3CB_BAF_SUSAT",""};
+        magazines[] += {
+            "1Rnd_HE_Grenade_shell", 20,
         };
-        magazines[] = {
-            "30Rnd_556x45_Stanag", 6,
-            "30Rnd_556x45_Stanag_Tracer_Red", 2,
-            "9Rnd_45ACP_Mag", 2,
-            "1Rnd_HE_Grenade_shell", 31,
-            "SmokeShell", 2,
-            "SmokeShellRed",
-            "SmokeShellGreen"
-        };
-        backpack[] = {"B_AssaultPack_rgr", "B_AssaultPack_blk"};
     };
-    
-    class B_medic_F: CommonBlufor {
-        roledescription = "Medic";
-        isplayerloadout = true;
-        backpack[] = {"B_Kitbag_rgr"};
-        items[] = {
-            "ACE_fieldDressing", 25,
-            "ACE_packingBandage", 25,
-            "ACE_elasticBandage", 25,
-            "ACE_quikclot", 25,
-            "ACE_morphine", 10,
-            "ACE_epinephrine", 10,
-            "ACE_salineIV_500", 10,
-            "ACE_tourniquet", 10,
-            "ACE_surgicalKit", 5,
-            "ACE_earplugs"
+
+    class B_Soldier_TL_F: B_Soldier_F {
+        roledescription = "Section 2iC";
+        binoculars[] = {"Binocular"};
+        items[] += {
+            "ace_flags_red",
         };
+    };
+
+    class B_Soldier_SL_F: B_Soldier_TL_F {
+        roledescription = "Section Commander";
+        backpack[] = {"UK3CB_BAF_B_Bergen_DPMT_SL_A"};
+        items[] += {
+            "ACRE_PRC117F"
+        };
+    };
+
+    class B_officer_F: B_Soldier_SL_F {
+        roledescription = "Platoon Commander";
     };
 };
