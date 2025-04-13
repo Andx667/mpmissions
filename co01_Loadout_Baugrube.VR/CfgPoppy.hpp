@@ -1,6 +1,6 @@
 class CfgPoppy {
-    forceShowInfos = 0;
-    forceShowWarnings = 0;
+    forceShowInfos = 1;
+    forceShowWarnings = 1;
     forceShowErrors = 1;
     showLoadoutInBriefing = 1;
     enableAILoadoutsSP = 1;
