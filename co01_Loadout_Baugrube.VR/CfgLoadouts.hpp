@@ -77,4 +77,28 @@ class CfgLoadouts {
             "1Rnd_HE_Grenade_shell", 20,
         };
     };
+
+    class B_Soldier_TL_F: B_Soldier_F {
+        roledescription = "Section 2iC";
+        binoculars[] = {"Binocular"};
+        items[] += {
+            "ace_flags_red",
+        };
+    };
+
+    class B_Soldier_SL_F: B_Soldier_TL_F {
+        roledescription = "Section Commander";
+        backpack[] = {"UK3CB_BAF_B_Bergen_DPMT_SL_A"};
+        items[] += {
+            "ACRE_PRC117F"
+        };
+    };
+
+    class B_officer_F: B_Soldier_SL_F {
+        roledescription = "Platoon Commander";
+    };
+
+    class B_medic_F: CommonBlufor {
+        roledescription = "Combat Life Saver";
+    };
 };
