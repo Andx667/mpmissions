@@ -71,7 +71,7 @@ class CfgLoadouts {
         };
     };
 
-    class B_soldier_AAR_F: B_Soldier_F {
+    class B_soldier_AAR_F: CommonBlufor {
         roledescription = "LSW Gunner";
         isplayerloadout = true;
         primary[] = {"UK3CB_BAF_L86A2","UK3CB_BAF_556_30Rnd","","UK3CB_BAF_SUSAT",""};
