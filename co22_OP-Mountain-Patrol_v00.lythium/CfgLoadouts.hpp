@@ -14,7 +14,7 @@ class CfgLoadouts {
         isplayerloadout = false; //Definiert, ob das Loadout im LTM-Menü angezeigt wird.
         
         //Clothing
-        uniform[] = {"UK3CB_BAF_U_CombatUniform_MTP"};
+        uniform[] = {"UK3CB_BAF_U_CombatUniform_MTP","UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve"};
         backpack[] = {
             //Nicht benötigte Blöcke einfach auskommentieren
             //Overnight
@@ -80,7 +80,7 @@ class CfgLoadouts {
             {"UK3CB_BAF_L85A3", "RKSL_optic_LDS", "UK3CB_BAF_LLM_Flashlight_Black","UK3CB_underbarrel_acc_grippod",""},
             {"UK3CB_BAF_L85A3", "RKSL_optic_LDS_C", "UK3CB_BAF_LLM_Flashlight_Black","UK3CB_underbarrel_acc_grippod",""},
         };
-        //secondary[] = {"UK3CB_BAF_L117A2","UK3CB_BAF_9_15Rnd","",""};
+        secondary[] = {"","","",""};
         launcher[] = {"","","","",""};
         binoculars[] = {"Binocular"};
         
@@ -101,10 +101,10 @@ class CfgLoadouts {
             "ACE_Painkillers", 1,
             "ACE_MapTools",
             "ACE_Flashlight_XL50",
-            "ACE_IR_Strobe_Item",
+            //"ACE_IR_Strobe_Item",
             "ACE_EntrenchingTool", 
             "ACRE_PRC152",   
-            "ACE_NVG_Gen4_Black",
+            "ACE_NVG_Wide_Black",
             "UK3CB_BAF_Bayonet_L3A1"
             };
         
@@ -155,10 +155,12 @@ class CfgLoadouts {
         primary[] = {
             {"UK3CB_BAF_L7A2", "UK3CB_BAF_762_200Rnd_T", "", "", ""}
         };
+        secondary[] = {"UK3CB_BAF_L117A2","UK3CB_BAF_9_15Rnd","",""};
         //launcher[] = {"UK3CB_BAF_Tripod", "", "", "", ""}; //Optional, kann auch ein Fhz
 
         magazines[] = {
-            "UK3CB_BAF_762_200Rnd_T", 3,
+            "UK3CB_BAF_762_200Rnd_T",
+            "UK3CB_BAF_762_100Rnd_T",
             "UK3CB_BAF_9_15Rnd", 2,
             "UK3CB_BAF_SmokeShell", 2,
             "UK3CB_BAF_SmokeShellGreen", 1,
@@ -182,6 +184,7 @@ class CfgLoadouts {
             {"UK3CB_BAF_L129A1", "UK3CB_BAF_TA648_308", "UK3CB_BAF_LLM_Flashlight_Tan", "UK3CB_underbarrel_acc_grippod", ""},
             {"UK3CB_BAF_L129A1", "UK3CB_BAF_TA648_308", "UK3CB_BAF_LLM_Flashlight_Black", "UK3CB_underbarrel_acc_grippod", ""},
         };
+        secondary[] = {"UK3CB_BAF_L117A2","UK3CB_BAF_9_15Rnd","",""};
 
         binoculars[] = {"Rangefinder"};
 
@@ -222,11 +225,6 @@ class CfgLoadouts {
             "1Rnd_Smoke_Grenade_shell", 10,
             "1Rnd_SmokeRed_Grenade_shell", 10,
         };
-
-        items[] += {
-            "ACE_Fortify"
-        };
-
     };
 
     class B_Soldier_TL_F: CommonBlufor {
@@ -241,8 +239,9 @@ class CfgLoadouts {
         binoculars[] = {"ACE_Vector"};
 
         magazines[] += {
-            "UK3CB_BAF_556_30Rnd_T", 9,
-            "UK3CB_BAF_762_200Rnd_T",
+            "UK3CB_BAF_556_30Rnd_T", 12,
+            "UK3CB_BAF_762_200Rnd_T", 2,
+            "UK3CB_BAF_762_100Rnd_T",
         };
 
         items[] += {
@@ -286,7 +285,6 @@ class CfgLoadouts {
             "ACE_Clacker",
             "ACE_Wirecutter",
             "mts_cutter_folding_saw",
-            "ACE_fortify",
         };
 
         magazines[] += {
@@ -318,15 +316,11 @@ class CfgLoadouts {
         roledescription = "Breacher";
         isplayerloadout = true;
 
-        backpack[] = {
-            "UK3CB_BAF_B_Bergen_MTP_PointMan_H_A",
-            //"UK3CB_BAF_B_Bergen_MTP_PointMan_L_A"
-        };
-
         magazines[] += {
-            "tsp_breach_block_mag", 3,
-            "tsp_breach_package_mag", 3,
-            "UK3CB_BAF_12G_Pellets", 12
+            "DemoCharge_Remote_Mag", 3,
+            // "tsp_breach_block_mag", 3,
+            // "tsp_breach_package_mag", 3,
+            //"UK3CB_BAF_12G_Pellets", 12
         };
 
         items[] += {
@@ -335,7 +329,7 @@ class CfgLoadouts {
         };
 
         preLoadout = "player setVariable ['ACE_isEngineer', 1, true]; player setVariable ['ACE_isEOD', true, true];";
-        postLoadout = "[['UK3CB_BAF_L128A1','','','',['UK3CB_BAF_12G_Pellets',8],[],'']] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;";
+        //postLoadout = "[['UK3CB_BAF_L128A1','','','',['UK3CB_BAF_12G_Pellets',8],[],'']] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;";
     };
 
     class B_medic_F: CommonBlufor {
@@ -370,7 +364,9 @@ class CfgLoadouts {
             "ACE_SalineIV_250",8,
             "ACE_Painkillers",8,
             "ACE_Morphine",8,
-            "ACE_Epinephrine",8
+            "ACE_Epinephrine",8,
+            "ACE_SpraypaintBlue",
+            "ace_flags_blue",
         };
 
         preLoadout = "player setVariable ['ace_medical_medicClass', 2, true];";
