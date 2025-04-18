@@ -1,233 +1,147 @@
-/*
- * Für weitere Informationen, wie genau Vererbung in einer Config funktioniert, wird der folgende BiWiki Eintrag empfohlen:
- *                              https://community.bistudio.com/wiki/Class_Inheritance
- *
- */
+// brazenly stolen from 1tac
+#define LIST_1(var1) var1
+#define LIST_2(var1) var1,var1
+#define LIST_3(var1) var1,var1,var1
+#define LIST_4(var1) var1,var1,var1,var1
+#define LIST_5(var1) var1,var1,var1,var1,var1
+#define LIST_6(var1) var1,var1,var1,var1,var1,var1
+#define LIST_7(var1) var1,var1,var1,var1,var1,var1,var1
+#define LIST_8(var1) var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_9(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_10(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_11(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_12(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_13(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_14(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_15(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_16(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_17(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_18(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_19(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_20(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_21(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_22(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_23(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_24(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_25(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_26(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_27(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_28(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_29(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_30(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
 
-class CfgLoadouts {
-    
-    /* Grundklassen */
-    class CommonBlufor { //Die Grundklasse für alle Blufor Einheiten. Sie stellt die unterste Ebene aller Blufor Loadouts dar, die aus ihr erben.
-        //LTM Settings
-        roledescription = "Default Loadout"; //Unter diesem Namen wir das Loadout im LTM-Menü angezeigt
-        isplayerloadout = false; //Definiert, ob das Loadout im LTM-Menü angezeigt wird.
-        
-        //Clothing
-        uniform[] = {"gm_ge_uniform_soldier_90_flk"};
-        backpack[] = {""};
-        vest[] = {"gm_ge_vest_armor_90_rifleman_flk"};
-        headgear[] = {"gm_ge_headgear_m92_flk"};
+class Loadouts {
+    baseDelay = 10;
+    perPlayerDelay = 1;
+    handleRadios = 1;
+    resetLoadout = 1;
+    randomizationMode = 2;
+    customGear = 300;
+    //
+    customGearAllowedCategories[] = {};
 
-        //Gasmaske geht auch auf den Goggles Slot -> Camo ist weg
-        //goggles[] = {"gm_headgear_foliage_summer_forest_01", "gm_headgear_foliage_summer_forest_02", "gm_headgear_foliage_summer_forest_03", "gm_headgear_foliage_summer_forest_04"};
-        goggles[] = {"gm_headgear_foliage_summer_grass_01", "gm_headgear_foliage_summer_grass_02", "gm_headgear_foliage_summer_grass_03", "gm_headgear_foliage_summer_grass_04"};
+    class AllUnits {
+        uniform[] = {
+            "CUP_U_B_BAF_MTP_UBACSLONG",
+            "CUP_U_B_BAF_MTP_UBACSLONG_Gloves",
+            "CUP_U_B_BAF_MTP_UBACSLONGKNEE",
+            "CUP_U_B_BAF_MTP_UBACSLONGKNEE_Gloves",
 
-        //Weapons
-        primary[] = {
-            {"gm_g36a1_blk", "", "","",""}
-        };
-        secondary[] = {"","","",""};
-        launcher[] = {"","","","",""};
-        binoculars[] = {"gm_ferod16_oli"};
-        
-        //Mags + Items
-        magazines[] = {
-            "gm_handgrenade_frag_dm51a1", 2,
-            "gm_smokeshell_grn_gc",
-            "gm_smokeshell_wht_gc",2,
-        };
-        items[] = {
-            "ACE_fieldDressing",15,
-            "ACE_packingBandage",15,
+            // "CUP_U_B_BAF_MTP_UBACSROLLED",
+            // "CUP_U_B_BAF_MTP_UBACSROLLED_Gloves",
+            // "CUP_U_B_BAF_MTP_UBACSROLLEDKNEE",
+
+            // "CUP_U_B_BAF_MTP_UBACSTSHIRT",
+            // "CUP_U_B_BAF_MTP_UBACSTSHIRT_Gloves",
+            // "CUP_U_B_BAF_MTP_UBACSTSHIRTKNEE",
+            };
+        vest = "CUP_V_B_BAF_MTP_Osprey_Mk4_Rifleman";
+        backpack = "CUP_B_Bergen_BAF";
+        headgear[] = {
+            "CUP_H_BAF_MTP_Mk6_EMPTY_PRR",
+            "CUP_H_BAF_MTP_Mk7_PRR",
+            "CUP_H_BAF_MTP_Mk6_GLASS_PRR",
+            "CUP_H_BAF_MTP_Mk6_GOGGLES_PRR",
+            "CUP_H_BAF_MTP_Mk6_NETTING_PRR",
+            };
+
+        addItemsToUniform[] = {
             "ACE_MapTools",
-            "ACE_Flashlight_KSF1",
-            "ACE_tourniquet",4,
-            "ACE_Painkillers",1,
-            "acex_intelitems_notepad"
+            "ItemMicroDAGR",
+            "ACE_Flashlight_XL50",
+            "acex_intelitems_notepad",
+            "ACE_Painkillers",
+            LIST_15("ACE_fieldDressing"),
+            LIST_15("ACE_packingBandage"),
+            LIST_4("ACE_Tourniquet"),
         };
-        
-        //misc
-        map[] = {"ItemMap"};
-        gps[] = {""};
-        nvgs[] = {""};
-        compass[] = {"ItemCompass"};
-        watch[] = {"ItemWatch"};
-        
-        //Scripted
-        insignia[] = {""};
-        slingHelmet[] = {"", "", ""};
-        identity[] = {""};
-        preLoadout = "";
-        postLoadout = "";
-    };
-    
-
-    /* Spielerloadouts */
-    class B_Soldier_F: CommonBlufor {
-        roledescription = "JÄGER";
-        isplayerloadout = true;
-
-        magazines[] += {
-            "gm_30Rnd_556x45mm_B_DM11_g36_blk", 9,
+        addItemsToVest[] = {
+            LIST_8("CUP_30Rnd_556x45_Stanag_L85"),
+            LIST_2("CUP_HandGrenade_L109A2_HE"),
+            LIST_2("SmokeShell"),
+            "SmokeShellGreen",
+        };
+        addItemsToBackpack[] = {
+            "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M",
         };
 
+        primaryWeapon = "CUP_arifle_L85A2_G";
+        primaryWeaponMagazine = "CUP_30Rnd_556x45_Stanag_L85";
+        primaryWeaponOptics[] = {
+            "CUP_optic_Elcan_reflex_OD",
+            "CUP_optic_Elcan_reflex_coyote",
+            "CUP_optic_Elcan_reflex",
+            };
+        primaryWeaponUnderbarrel = "";
+        primaryWeaponUnderbarrelMagazine = "";
+        secondaryWeapon = "";
+        secondaryWeaponMagazine = "";
+        handgunWeapon = "";
+        handgunWeaponMagazine = "";
+
+        goggles = "";
+        nvgoggles = "";
+
+        binoculars = "Binocular";
+        map = "ItemMap";
+        compass = "ItemCompass";
+        watch = "ItemWatch";
+        gps = "";
+        radio = "";
     };
 
-    class B_soldier_AR_F: CommonBlufor {
-        roledescription = "JÄGER U. MG1";
-        isplayerloadout = true;
-
-        vest[] = {"gm_ge_vest_armor_90_machinegunner_flk"};
-
-        primary[] = {"gm_mg3_blk","gm_120Rnd_762x51mm_B_T_DM21_mg3_grn","","",""};
-
-        magazines[] += {
-            "gm_120Rnd_762x51mm_B_T_DM21_mg3_grn", 2
+    class Type {
+        //Rifleman
+        class B_Soldier_F {
         };
 
-        items[] += {
-            "ACE_SpareBarrel",
-        };
-    };
+        class B_soldier_M_F: B_Soldier_F{
+            primaryWeapon = "CUP_srifle_L129A1_HG";
+            primaryWeaponMagazine = "CUP_20Rnd_762x51_L129_M";
+            primaryWeaponOptics[] = {
+                "CUP_optic_ACOG_TA648_308_RDS_Black",
+                "CUP_optic_ACOG_TA648_308_RDS_coyo",
+                "CUP_optic_ACOG_TA648_308_RDS_od",
+                "CUP_optic_ACOG_TA648_308_RDS_Desert",
+                };
+            primaryWeaponUnderbarrel = "";
 
-    class B_soldier_AAR_F: B_Soldier_F {
-        roledescription = "JÄGER U. MG2";
-        isplayerloadout = true;
+            handgunWeapon = "CUP_hgun_Glock17_blk";
+            handgunWeaponMagazine = "CUP_17Rnd_9x19_glock17";
 
-        backpack[] = {"gm_ge_army_backpack_90_flk"};
+            addItemsToVest[] = {
+                LIST_8("CUP_20Rnd_762x51_L129_M"),
+                LIST_2("CUP_HandGrenade_L109A2_HE"),
+                LIST_2("SmokeShell"),
+                "SmokeShellGreen",
+                "ACE_Rangecard",
+                LIST_2("CUP_17Rnd_9x19_glock17"),
+            };
 
-        primary[] = {"gm_g36a1_blk", "", "","",""};
-
-        magazines[] += {
-            "gm_120Rnd_762x51mm_B_T_DM21_mg3_grn", 4
-        };
-
-        items[] += {
-            "ACE_EntrenchingTool"
-        };
-    };
-
-    class B_soldier_M_F: CommonBlufor {
-        roledescription = "JÄGER U. SCHARFSCHTZ";
-        isplayerloadout = true;
-
-        primary[] = {"gm_g3sg1_oli", "gm_diavari_da_stanagClaw_oli", "gm_20Rnd_762x51mm_B_T_DM21A2_g3_blk","",""};
-
-        magazines[] += {
-            "gm_20Rnd_762x51mm_B_T_DM21A2_g3_blk", 8,
-        };
-
-        items[] += {
-            "ACE_Rangecard"
-        };
-    };
-
-    class B_soldier_LAT2_F: B_Soldier_F {
-        roledescription = "JÄGER  und Pzf3-Schütze";
-        isplayerloadout = true;
-
-        launcher[] = {"gm_pzf3_blk","gm_1Rnd_60mm_heat_dm22_pzf3","",""};
-    };
-
-    class B_soldier_AT_F: B_Soldier_F {
-        roledescription = "JÄGER U. PZ ABW SOLD MILAN";
-        isplayerloadout = true;
-    };
-
-    class B_soldier_AAT_F: B_Soldier_F {
-        roledescription = "JÄGER U. PZ ABW SOLD MILAN U. KRAFTFAHRER B";
-        isplayerloadout = true;
-    };
-
-    class B_crew_F: B_Soldier_F {
-        roledescription = "KRAFTFAHRER C-7,5";
-        isplayerloadout = true;
-
-        backpack[] = {"gm_ge_army_backpack_medic_80_oli"};
-    };
-
-    class B_medic_F: B_Soldier_F {
-        roledescription = "JÄGER UND San-B";
-        isplayerloadout = true;
-
-        vest[] = {"gm_ge_vest_90_medic_flk"};
-        backpack[] = {"gm_ge_army_backpack_90_flk"};
-
-        items[] += {
-            "ACE_personalAidKit",
-            "ACE_surgicalKit",
-            "ACE_morphine", 10,
-            "ACE_epinephrine", 10,
-            "ACE_quikclot", 10,
-            "ACE_tourniquet", 4,
-            "ACE_packingBandage", 60,
-        };
-    };
-
-    class B_Soldier_TL_F: CommonBlufor {
-        roledescription = "Stellv. Gruppenführer";
-        isplayerloadout = true;
-
-        vest[] = {"gm_ge_vest_armor_90_leader_flk"};
-
-        magazines[] += {
-            "gm_30Rnd_556x45mm_B_T_DM21_g36_blk", 9,
-        };
-
-        items[] += {
-            "mts_whistle_FOX40",
-            "ace_flags_red",
-            "ACRE_SEM52SL",
-        };
-    };
-
-    class B_Soldier_SL_F: B_Soldier_TL_F {
-        roledescription = "JG UFFZ U. GRP FHR";
-        isplayerloadout = true;
-
-        backpack[] = {"gm_dk_army_backpack_73_oli"};
-
-        secondary[] = {"gm_p2a1_blk","","",""};
-
-        magazines[] += {
-            "gm_1Rnd_265mm_flare_single_grn_gc", 5,
-            "gm_1Rnd_265mm_flare_multi_red_gc", 5,
-        };
-    };
-
-
-
-    class TTT_B_RadioOperator_F: B_Soldier_TL_F {
-        roledescription = "JÄGER UND FU GER BED";
-        isplayerloadout = true;
-
-        backpack[] = {"gm_ge_backpack_sem35_oli"};
-
-        items[] += {
-            "ACRE_SEM70",
-        };
-    };
-
-    class TTT_B_Executive_Officer_F: B_Soldier_TL_F {
-        roledescription = "JG FW U. PZ ABW FW MILAN";
-        isplayerloadout = true;
-
-        backpack[] = {"gm_dk_army_backpack_73_oli"};
-
-        secondary[] = {"gm_p2a1_blk","","",""};
-
-        magazines[] += {
-            "gm_1Rnd_265mm_flare_single_grn_gc", 5,
-            "gm_1Rnd_265mm_flare_multi_red_gc", 5,
-        };
-    };
-
-    class B_officer_F: B_Soldier_SL_F {
-        roledescription = "JG OFFZ u. ZUGFHR OFFZU";
-        isplayerloadout = true;
-
-        items[] += {
-            "ACRE_SEM52SL",
+            addItemsToBackpack[] = {
+                LIST_8("CUP_20Rnd_762x51_L129_M"),
+                "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M",
+            };
         };
     };
 };
