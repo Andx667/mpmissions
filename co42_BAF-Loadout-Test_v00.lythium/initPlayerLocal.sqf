@@ -17,19 +17,17 @@
 
 // Waffe sichern
 // Gegenstück zu [QGVAR(loadoutApplied), [_loadoutTarget, _unitLoadout], _loadoutTarget] call CBA_fnc_targetEvent;
-private _id = [
+[
     "grad_loadout_loadoutApplied",
     {
-        params ["_unit", "_loadout"];
-
         [
-            {//Function
-            [ACE_Player, currentWeapon ACE_Player, true] call ace_safemode_fnc_setWeaponSafety;
+            {
+                [ACE_Player, currentWeapon ACE_Player, true] call ace_safemode_fnc_setWeaponSafety;
             },
             //Args
-            [_unit,_loadout],
+            [],
             //Delay
-            3
+            2
         ] call CBA_fnc_waitAndExecute;
     }
 ] call CBA_fnc_addEventHandler;
