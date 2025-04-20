@@ -303,7 +303,7 @@ class Loadouts {
                 "ACE_Clacker",
                 "ACE_SpraypaintGreen",
                 "ACE_SpraypaintRed",
-                "ACRE_PRC343",
+                "ACRE_PRC152",
             };
 
             addItemsToBackpack[] = {
@@ -531,7 +531,7 @@ class Loadouts {
                         "ItemAndroid",
                         "ACE_SpraypaintBlue",
                         "ACE_surgicalKit",
-                        "ACRE_PRC343",
+                        "ACRE_PRC152",
                     };
                     addItemsToBackpack[] = {
                         LIST_30("ACE_Suture"),
