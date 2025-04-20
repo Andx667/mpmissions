@@ -42,136 +42,138 @@ class Loadouts {
         "uniform",
         "headgear",
         "goggles",
-        "primaryWeaponOptics",
-        "primaryWeaponPointer",
+        //"primaryWeaponOptics",
     };
 
     // MTP = Multi-Terrain Pattern
     // DDPM = Disruptive Pattern Material
     // DPMT = Disruptive Pattern Material Temperate
-    class AllUnits {
-        uniform[] = {
-            //MTP / Universal / Modern
-            "CUP_U_B_BAF_MTP_UBACSLONG",
-            "CUP_U_B_BAF_MTP_UBACSLONG_Gloves",
-            "CUP_U_B_BAF_MTP_UBACSLONGKNEE",
-            "CUP_U_B_BAF_MTP_UBACSLONGKNEE_Gloves",
+    class Side {
+        class Blufor {
+            uniform[] = {
+                //MTP / Universal / Modern
+                "CUP_U_B_BAF_MTP_UBACSLONG",
+                "CUP_U_B_BAF_MTP_UBACSLONG_Gloves",
+                "CUP_U_B_BAF_MTP_UBACSLONGKNEE",
+                "CUP_U_B_BAF_MTP_UBACSLONGKNEE_Gloves",
 
-            "CUP_U_B_BAF_MTP_UBACSROLLED",
-            "CUP_U_B_BAF_MTP_UBACSROLLED_Gloves",
-            "CUP_U_B_BAF_MTP_UBACSROLLEDKNEE",
+                "CUP_U_B_BAF_MTP_UBACSROLLED",
+                "CUP_U_B_BAF_MTP_UBACSROLLED_Gloves",
+                "CUP_U_B_BAF_MTP_UBACSROLLEDKNEE",
 
-            "CUP_U_B_BAF_MTP_UBACSTSHIRT",
-            "CUP_U_B_BAF_MTP_UBACSTSHIRT_Gloves",
-            "CUP_U_B_BAF_MTP_UBACSTSHIRTKNEE",
+                "CUP_U_B_BAF_MTP_UBACSTSHIRT",
+                "CUP_U_B_BAF_MTP_UBACSTSHIRT_Gloves",
+                "CUP_U_B_BAF_MTP_UBACSTSHIRTKNEE",
 
-            //DDPM / Wüste
-            // "CUP_U_B_BAF_DDPM_UBACSLONG",
-            // "CUP_U_B_BAF_DDPM_UBACSLONG_Gloves",
-            // "CUP_U_B_BAF_DDPM_UBACSLONGKNEE",
-            // "CUP_U_B_BAF_DDPM_UBACSLONGKNEE_Gloves",
+                //DDPM / Wüste
+                // "CUP_U_B_BAF_DDPM_UBACSLONG",
+                // "CUP_U_B_BAF_DDPM_UBACSLONG_Gloves",
+                // "CUP_U_B_BAF_DDPM_UBACSLONGKNEE",
+                // "CUP_U_B_BAF_DDPM_UBACSLONGKNEE_Gloves",
 
-            // "CUP_U_B_BAF_DDPM_UBACSROLLED",
-            // "CUP_U_B_BAF_DDPM_UBACSROLLED_Gloves",
-            // "CUP_U_B_BAF_DDPM_UBACSROLLEDKNEE",
+                // "CUP_U_B_BAF_DDPM_UBACSROLLED",
+                // "CUP_U_B_BAF_DDPM_UBACSROLLED_Gloves",
+                // "CUP_U_B_BAF_DDPM_UBACSROLLEDKNEE",
 
-            // "CUP_U_B_BAF_DDPM_UBACSTSHIRT",
-            // "CUP_U_B_BAF_DDPM_UBACSTSHIRT_Gloves",
-            // "CUP_U_B_BAF_DDPM_UBACSTSHIRTKNEE"  
+                // "CUP_U_B_BAF_DDPM_UBACSTSHIRT",
+                // "CUP_U_B_BAF_DDPM_UBACSTSHIRT_Gloves",
+                // "CUP_U_B_BAF_DDPM_UBACSTSHIRTKNEE"  
 
-            //DPM / Wald
-            // "CUP_U_B_BAF_DPM_UBACSLONG",
-            // "CUP_U_B_BAF_DPM_UBACSLONG_Gloves",
-            // "CUP_U_B_BAF_DPM_UBACSLONGKNEE",
-            // "CUP_U_B_BAF_DPM_UBACSLONGKNEE_Gloves",
-            // "CUP_U_B_BAF_DPM_UBACSROLLED",
-            // "CUP_U_B_BAF_DPM_UBACSROLLED_Gloves",
-            // "CUP_U_B_BAF_DPM_UBACSROLLEDKNEE",
-            // "CUP_U_B_BAF_DPM_UBACSTSHIRT",
-            // "CUP_U_B_BAF_DPM_UBACSTSHIRT_Gloves",
-            // "CUP_U_B_BAF_DPM_UBACSTSHIRTKNEE",
-            };
+                //DPM / Wald
+                // "CUP_U_B_BAF_DPM_UBACSLONG",
+                // "CUP_U_B_BAF_DPM_UBACSLONG_Gloves",
+                // "CUP_U_B_BAF_DPM_UBACSLONGKNEE",
+                // "CUP_U_B_BAF_DPM_UBACSLONGKNEE_Gloves",
+                // "CUP_U_B_BAF_DPM_UBACSROLLED",
+                // "CUP_U_B_BAF_DPM_UBACSROLLED_Gloves",
+                // "CUP_U_B_BAF_DPM_UBACSROLLEDKNEE",
+                // "CUP_U_B_BAF_DPM_UBACSTSHIRT",
+                // "CUP_U_B_BAF_DPM_UBACSTSHIRT_Gloves",
+                // "CUP_U_B_BAF_DPM_UBACSTSHIRTKNEE",
+                };
 
-        //MTP
-        vest = "CUP_V_B_BAF_MTP_Osprey_Mk4_Rifleman";
-        //DDPM
-        // vest = "CUP_V_B_BAF_DDPM_Osprey_Mk3_Rifleman";
-        //DPM
-        // vest = "CUP_V_B_BAF_DPM_Osprey_Mk3_Rifleman";
-
-        backpack = "CUP_B_Bergen_BAF";
-        headgear[] = {
             //MTP
-            "CUP_H_BAF_MTP_Mk6_EMPTY_PRR",
-            "CUP_H_BAF_MTP_Mk6_GLASS_PRR",
-            "CUP_H_BAF_MTP_Mk6_GOGGLES_PRR",
-            "CUP_H_BAF_MTP_Mk6_NETTING_PRR",
-            "CUP_H_BAF_MTP_Mk7_PRR",
-            "CUP_H_BAF_MTP_Mk7_PRR_SCRIM_B",
-            "CUP_H_BAF_MTP_Mk7_PRR_SCRIM_A",
-
+            vest = "CUP_V_B_BAF_MTP_Osprey_Mk4_Rifleman";
             //DDPM
-            // "CUP_H_BAF_DDPM_Mk6_EMPTY_PRR",
-            // "CUP_H_BAF_DDPM_Mk6_GLASS_PRR",
-            // "CUP_H_BAF_DDPM_Mk6_GOGGLES_PRR",
-            // "CUP_H_BAF_DDPM_Mk6_NETTING_PRR",
-
+            // vest = "CUP_V_B_BAF_DDPM_Osprey_Mk3_Rifleman";
             //DPM
-            // "CUP_H_BAF_DPM_Mk6_EMPTY_PRR",
-            // "CUP_H_BAF_DPM_Mk6_GLASS_PRR",
-            // "CUP_H_BAF_DPM_Mk6_GOGGLES_PRR",
-            // "CUP_H_BAF_DPM_Mk6_NETTING_PRR",
+            // vest = "CUP_V_B_BAF_DPM_Osprey_Mk3_Rifleman";
+
+            backpack = "CUP_B_Bergen_BAF";
+            headgear[] = {
+                //MTP
+                "CUP_H_BAF_MTP_Mk6_EMPTY_PRR",
+                "CUP_H_BAF_MTP_Mk6_GLASS_PRR",
+                "CUP_H_BAF_MTP_Mk6_GOGGLES_PRR",
+                "CUP_H_BAF_MTP_Mk6_NETTING_PRR",
+                "CUP_H_BAF_MTP_Mk7_PRR",
+                "CUP_H_BAF_MTP_Mk7_PRR_SCRIM_B",
+                "CUP_H_BAF_MTP_Mk7_PRR_SCRIM_A",
+
+                //DDPM
+                // "CUP_H_BAF_DDPM_Mk6_EMPTY_PRR",
+                // "CUP_H_BAF_DDPM_Mk6_GLASS_PRR",
+                // "CUP_H_BAF_DDPM_Mk6_GOGGLES_PRR",
+                // "CUP_H_BAF_DDPM_Mk6_NETTING_PRR",
+
+                //DPM
+                // "CUP_H_BAF_DPM_Mk6_EMPTY_PRR",
+                // "CUP_H_BAF_DPM_Mk6_GLASS_PRR",
+                // "CUP_H_BAF_DPM_Mk6_GOGGLES_PRR",
+                // "CUP_H_BAF_DPM_Mk6_NETTING_PRR",
+                };
+
+            addItemsToUniform[] = {
+                "ACE_MapTools",
+                "ACE_Flashlight_XL50",
+                "acex_intelitems_notepad",
+                "ACE_Painkillers",
+                LIST_15("ACE_fieldDressing"),
+                LIST_15("ACE_packingBandage"),
+                LIST_4("ACE_Tourniquet"),
+                "CUP_NVG_HMNVS"
+            };
+            addItemsToVest[] = {
+                LIST_2("CUP_HandGrenade_L109A2_HE"),
+                LIST_2("SmokeShell"),
+                "SmokeShellGreen",
             };
 
-        addItemsToUniform[] = {
-            "ACE_MapTools",
-            "ACE_Flashlight_XL50",
-            "acex_intelitems_notepad",
-            "ACE_Painkillers",
-            LIST_15("ACE_fieldDressing"),
-            LIST_15("ACE_packingBandage"),
-            LIST_4("ACE_Tourniquet"),
-            "CUP_NVG_HMNVS"
-        };
-        addItemsToVest[] = {
-            LIST_2("CUP_HandGrenade_L109A2_HE"),
-            LIST_2("SmokeShell"),
-            "SmokeShellGreen",
-        };
-
-        primaryWeapon = "CUP_arifle_L85A2_G";
-        primaryWeaponMagazine = "CUP_30Rnd_556x45_Stanag_L85";
-        primaryWeaponOptics[] = {
-            "CUP_optic_Elcan_reflex_coyote",
-            "CUP_optic_Elcan_reflex",
-            "CUP_optic_Elcan_reflex_OD"
+            primaryWeapon = "CUP_arifle_L85A2_G";
+            primaryWeaponMagazine = "CUP_30Rnd_556x45_Stanag_L85";
+            primaryWeaponOptics[] = {
+                "CUP_optic_Elcan_reflex_coyote",
+                "CUP_optic_Elcan_reflex",
+                "CUP_optic_Elcan_reflex_OD",
+                //"CUP_optic_ACOG",
+                };
+            primaryWeaponPointer[] = {
+                "CUP_acc_LLM",
+                "CUP_acc_LLM_black",
+                "CUP_acc_LLM_od"
             };
-        primaryWeaponPointer[] = {
-            "CUP_acc_LLM",
-            "CUP_acc_LLM_black",
-            "CUP_acc_LLM_od"
+            primaryWeaponMuzzle = "";
+            primaryWeaponUnderbarrel = "";
+            primaryWeaponUnderbarrelMagazine = "";
+            secondaryWeapon = "";
+            secondaryWeaponMagazine = "";
+            handgunWeapon = "";
+            handgunWeaponMagazine = "";
+
+            goggles[] = {
+                "CUP_G_Oakleys_Clr",
+                "CUP_G_Oakleys_Drk",
+                "CUP_G_Oakleys_Embr"
+                };
+            nvgoggles = "";
+
+            binoculars = "Binocular";
+            map = "ItemMap";
+            compass = "ItemCompass";
+            watch = "ItemWatch";
+            gps = "";
+            radio = "";
         };
-        primaryWeaponMuzzle = "";
-        primaryWeaponUnderbarrel = "";
-        primaryWeaponUnderbarrelMagazine = "";
-        secondaryWeapon = "";
-        secondaryWeaponMagazine = "";
-        handgunWeapon = "";
-        handgunWeaponMagazine = "";
-
-        goggles[] = {
-            "CUP_G_Oakleys_Clr",
-            "CUP_G_Oakleys_Drk",
-            "CUP_G_Oakleys_Embr"
-            };
-        nvgoggles = "";
-
-        binoculars = "Binocular";
-        map = "ItemMap";
-        compass = "ItemCompass";
-        watch = "ItemWatch";
-        gps = "";
-        radio = "";
     };
 
     class Type {
@@ -301,11 +303,12 @@ class Loadouts {
                 "ACE_Clacker",
                 "ACE_SpraypaintGreen",
                 "ACE_SpraypaintRed",
-                "ACRE_PRC152",
+                "ACRE_PRC343",
             };
 
             addItemsToBackpack[] = {
                 LIST_3("DemoCharge_Remote_Mag"),
+                "SatchelCharge_Remote_Mag",
                 "ACE_Wirecutter",
                 "ACE_EntrenchingTool",
                 "mts_cutter_folding_saw",
@@ -528,7 +531,7 @@ class Loadouts {
                         "ItemAndroid",
                         "ACE_SpraypaintBlue",
                         "ACE_surgicalKit",
-                        "ACRE_PRC152",
+                        "ACRE_PRC343",
                     };
                     addItemsToBackpack[] = {
                         LIST_30("ACE_Suture"),

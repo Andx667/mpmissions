@@ -12,3 +12,32 @@
 
 //Laden von CLib Modulen für den Streamator
 if !(isNil "CLib_fnc_loadModules") then {call CLib_fnc_loadModules;};
+
+// Trage/Ziehlimit erhöhen
+ACE_maxWeightCarry = 2200; //wie schwer kann man Tragen
+ACE_maxWeightDrag = 2600;  //wie schwer kann man ziehen
+
+// Sets ACRE2 channel names
+{
+    [_x, "default", "TTT"] call acre_api_fnc_copyPreset;
+    [_x, "TTT", 1, "label", "PLT NET 1"] call acre_api_fnc_setPresetChannelField;      // Kampfkreis
+    [_x, "TTT", 2, "label", "PLT NET 2"] call acre_api_fnc_setPresetChannelField;
+    [_x, "TTT", 3, "label", "PLT NET 3"] call acre_api_fnc_setPresetChannelField;
+    [_x, "TTT", 4, "label", "COY NET"] call acre_api_fnc_setPresetChannelField;   // Zugführung <-> Zeus/HQ
+    [_x, "TTT", 5, "label", "CAS"] call acre_api_fnc_setPresetChannelField;             // JTAC <-> Fluggerät
+    [_x, "TTT", 6, "label", "ATC"] call acre_api_fnc_setPresetChannelField;             // Flugfunk
+    [_x, "TTT", 7, "label", "SUPPORT"] call acre_api_fnc_setPresetChannelField;         // Zugführung <-> Aufklärer/Pioniere/etc
+    [_x, "TTT", 8, "label", "FIRES"] call acre_api_fnc_setPresetChannelField;           // FO <-> Artillere/Mörser
+    [_x, "TTT", 9, "label", "LOGISTICS"] call acre_api_fnc_setPresetChannelField;       // Zugführung <-> Sanität und Logistik
+
+    //Funknamen anpassen!
+    [_x, "TTT", 10, "label", "Charlie"] call acre_api_fnc_setPresetChannelField;           // Zugführung intern
+    [_x, "TTT", 11, "label", "Charlie-1"] call acre_api_fnc_setPresetChannelField;         // 1. Gruppe
+    [_x, "TTT", 12, "label", "Charlie-2"] call acre_api_fnc_setPresetChannelField;         // 2. Gruppe
+    [_x, "TTT", 13, "label", "Charlie-3"] call acre_api_fnc_setPresetChannelField;         // 3. Gruppe
+    [_x, "TTT", 14, "label", "Grizzly"] call acre_api_fnc_setPresetChannelField;         // 4. Gruppe
+
+    [_x, "TTT", 18, "label", "Panda"] call acre_api_fnc_setPresetChannelField;         // Logistik 3 intern 
+    [_x, "TTT", 19, "label", "Polar"] call acre_api_fnc_setPresetChannelField;         // Logistik 3 intern
+    [_x, "TTT"] call acre_api_fnc_setPreset;
+} forEach ["ACRE_PRC148", "ACRE_PRC152", "ACRE_PRC117F"];
