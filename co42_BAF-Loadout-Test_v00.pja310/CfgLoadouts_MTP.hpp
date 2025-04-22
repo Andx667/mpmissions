@@ -202,6 +202,7 @@ class Loadouts {
             addItemsToBackpack[] = {
                 LIST_20("CUP_1Rnd_HE_M203"),
                 LIST_5("CUP_1Rnd_HEDP_M203"),
+                LIST_5("ACE_HuntIR_M203"),
                 "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M",
             };
         };
@@ -427,11 +428,14 @@ class Loadouts {
 
             primaryWeaponMagazine = "CUP_30Rnd_556x45_Stanag_L85_Tracer_Red";
 
+            addItemsToUniform[] += {
+                "ACE_Microdagr",
+            };
+
             addItemsToVest[] = {
                 LIST_8("CUP_30Rnd_556x45_Stanag_L85_Tracer_Red"),
                 "ItemAndroid",
                 "ACRE_PRC152",
-                "ACE_Microdagr",
             };
             addItemsToBackpack[] = {
                 LIST_5("CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M"),
@@ -446,6 +450,7 @@ class Loadouts {
             addItemsToBackpack[] = {
                 "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M",
                 "ACRE_PRC117F",
+                "ACE_HuntIR_monitor",
             };
 
             binoculars = "ACE_Vector";
@@ -465,10 +470,9 @@ class Loadouts {
                 LIST_2("CUP_17Rnd_9x19_glock17"),
             };
             
-            addItemsToBackpack[] = {
-                LIST_5("CUP_1Rnd_HE_M203"),
-                LIST_5("CUP_1Rnd_HEDP_M203"),
+            addItemsToBackpack[] += {
                 LIST_10("CUP_1Rnd_SmokeRed_M203"),
+                LIST_5("ACE_HuntIR_M203"),
             };
 
         };
