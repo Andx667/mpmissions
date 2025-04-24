@@ -25,4 +25,5 @@ private _reloaded = _unit addEventHandler ["Reloaded", {
 	_unit setVehicleAmmo 1;
 }];
 
+//return
 _handle;
