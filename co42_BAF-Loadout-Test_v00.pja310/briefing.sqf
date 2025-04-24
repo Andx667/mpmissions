@@ -17,9 +17,9 @@
 player createDiaryRecord ["Diary", [
     "Lage",
     "Die Armee Takistans verfügt in Al-Rayak über folgende Kräfte in unsrer Area-of-Operations:<br/>
-    <t/><marker name=''>Obj. 1</marker> Leichte Infanterie in Zugstärke.<br/>
-    <t/><marker name=''>Obj. 2</marker> 2 Gruppen Leichte Infanterie.<br/>
-    <t/><marker name=''>Obj. 3</marker> Leichte Infanterie in doppelter Gruppenstärke. Hier werden außerdem Mörser vermutet.<br/>
+    <t/><marker name='marker_0'>Obj. 1</marker> Leichte Infanterie in Zugstärke.<br/>
+    <t/><marker name='marker_1'>Obj. 2</marker> 2 Gruppen Leichte Infanterie.<br/>
+    <t/><marker name='marker_2'>Obj. 3</marker> Leichte Infanterie in doppelter Gruppenstärke. Hier werden außerdem Mörser vermutet.<br/>
     Im gesamten Gebiet also Kompanie, verstärkt mit 2-3 BTR-60.<br/>
     Der Feind verfügt außerdem über begrenzte Luftverlegbarkeit von etwa einem Infanteriezug aus dem Norden.<br/>
     <br/>
@@ -38,5 +38,5 @@ player createDiaryRecord ["Diary", [
 
 player createDiaryRecord ["Diary", [
     "Durchführung",
-    "Fallschirmsprung im Süden von Al-Rayak. Dann ausführung des Auftrags."
+    "Fallschirmsprung im Süden von <marker name='marker_3'>Al-Rayak</marker>. Dann ausführung des Auftrags."
 ]];

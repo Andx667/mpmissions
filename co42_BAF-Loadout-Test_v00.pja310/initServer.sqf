@@ -10,8 +10,8 @@ setDate [2016, 5, 31, 3, 45]; //Datum ändern
 {
     if (side _x != west) then {
         _x setBehaviour "SAFE";
-        _x setCombatMode "WHITE";
-        _x setSpeedMode "LIMITED";
+        _x setCombatMode "YELLOW";
+        _x setSpeedMode "NORMAL";
 
         _x setSkill ["general", 0.75];
         _x setSkill ["commanding", 0.75];
