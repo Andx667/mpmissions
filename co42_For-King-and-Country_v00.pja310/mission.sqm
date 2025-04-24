@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=61;
+		nextID=74;
 	};
 	class Camera
 	{
-		pos[]={17036.965,34.866577,7538.3369};
-		dir[]={-1.2363448e-07,-0.70710671,0.70710683};
-		up[]={-1.2363445e-07,0.70710683,0.70710659};
-		aside[]={0.99999988,7.1054274e-15,1.7484552e-07};
+		pos[]={17542.26,164.8338,2555.7385};
+		dir[]={-0.62621778,-0.40190643,0.66807371};
+		up[]={-0.27485666,0.91568077,0.29322788};
+		aside[]={0.72959244,-1.4901161e-08,0.68388224};
 	};
 };
 binarizationWanted=0;
@@ -19491,7 +19491,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={15283.824,623.49268,5227.8442};
+				position[]={16902.104,503.41849,4169.4536};
 			};
 			name="flak_target_01";
 			id=1478;
@@ -19502,10 +19502,10 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={12059.204,5.4769669,5037.3071};
-			angle=6.2784538;
+			angle=6.2784548;
 			class Attributes
 			{
-				onActivation="[flak_01, flak_target_01] call TTT_fnc_doFlakFire;" \n "[flak_02, flak_target_02] call TTT_fnc_doFlakFire;" \n "[flak_03, flak_target_03] call TTT_fnc_doFlakFire;" \n "[flak_04, flak_target_04] call TTT_fnc_doFlakFire;";
+				onActivation="pfh_01 = [flak_01, flak_target_01] call TTT_fnc_doFlakFire;" \n "pfh_02 = [flak_02, flak_target_02] call TTT_fnc_doFlakFire;" \n "pfh_03 = [flak_03, flak_target_03] call TTT_fnc_doFlakFire;" \n "pfh_04 = [flak_04, flak_target_04] call TTT_fnc_doFlakFire;";
 				sizeA=156.746;
 				sizeB=5180.771;
 				sizeC=5000;
@@ -19552,7 +19552,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={15293.999,124.43229,5213.8389};
-						angles[]={6.2391858,0,6.2549634};
+						angles[]={0.0022375863,0,0.016932372};
 					};
 					side="East";
 					flags=6;
@@ -19562,6 +19562,7 @@ class Mission
 					};
 					id=1493;
 					type="CUP_O_TK_Soldier";
+					atlOffset=-0.0040836334;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19681,14 +19682,15 @@ class Mission
 				};
 			};
 			id=1491;
+			atlOffset=-0.0040836334;
 		};
 		class Item51
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15293.999,124.43085,5213.7886};
-				angles[]={6.2391858,0,6.2549634};
+				position[]={16912.277,5.4860826,4155.3979};
+				angles[]={0.0022375863,0,0.016932372};
 			};
 			side="East";
 			flags=6;
@@ -19698,6 +19700,7 @@ class Mission
 			};
 			id=1492;
 			type="CUP_O_ZU23_TK";
+			atlOffset=-0.0040836334;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -19734,7 +19737,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={13847.123,621.83124,5956.4785};
+				position[]={14726.326,504.48438,4232.3276};
 			};
 			name="flak_target_02";
 			id=1494;
@@ -19754,7 +19757,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={13857.298,123.69585,5942.4731};
-						angles[]={0.0033829133,0,6.2741556};
+						angles[]={6.2673821,0,6.2786703};
 					};
 					side="East";
 					flags=6;
@@ -19764,6 +19767,7 @@ class Mission
 					};
 					id=1496;
 					type="CUP_O_TK_Soldier";
+					atlOffset=-0.00037002563;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19883,14 +19887,15 @@ class Mission
 				};
 			};
 			id=1495;
+			atlOffset=-0.00037002563;
 		};
 		class Item54
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={13857.298,123.69048,5942.4229};
-				angles[]={0.0033829133,0,6.2741556};
+				position[]={14736.501,6.0502954,4218.272};
+				angles[]={6.2673821,0,6.2786703};
 			};
 			side="East";
 			flags=6;
@@ -19900,6 +19905,7 @@ class Mission
 			};
 			id=1497;
 			type="CUP_O_ZU23_TK";
+			atlOffset=-0.00037002563;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -19936,7 +19942,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={15771,618.65265,6447.9482};
+				position[]={15715.075,504.05164,4555.4067};
 			};
 			name="flak_target_03";
 			id=1498;
@@ -19956,7 +19962,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={15781.175,121.35349,6433.9429};
-						angles[]={0.066518068,0,0.021451468};
+						angles[]={6.2639956,0,0.0056417165};
 					};
 					side="East";
 					flags=6;
@@ -19966,6 +19972,7 @@ class Mission
 					};
 					id=1500;
 					type="CUP_O_TK_Soldier";
+					atlOffset=-0.0073843002;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -20085,14 +20092,15 @@ class Mission
 				};
 			};
 			id=1499;
+			atlOffset=-0.0073843002;
 		};
 		class Item57
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15781.175,121.72861,6433.8926};
-				angles[]={0.066518068,0,0.021451468};
+				position[]={15725.25,5.7830563,4541.3511};
+				angles[]={6.2639956,0,0.0056417165};
 			};
 			side="East";
 			flags=6;
@@ -20102,6 +20110,7 @@ class Mission
 			};
 			id=1501;
 			type="CUP_O_ZU23_TK";
+			atlOffset=-0.0073843002;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20138,7 +20147,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={18681.271,506.25586,6881.7617};
+				position[]={17639.818,506.86414,2456.5818};
 			};
 			name="flak_target_04";
 			id=1502;
@@ -20158,7 +20167,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={18691.445,7.8052244,6867.7563};
-						angles[]={0.011288759,0,6.2572231};
+						angles[]={6.2594819,0,6.2448163};
 					};
 					side="East";
 					flags=6;
@@ -20168,6 +20177,7 @@ class Mission
 					};
 					id=1504;
 					type="CUP_O_TK_Soldier";
+					atlOffset=-0.0013051033;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -20287,14 +20297,15 @@ class Mission
 				};
 			};
 			id=1503;
+			atlOffset=-0.0013051033;
 		};
 		class Item60
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={18691.445,7.6882358,6867.7061};
-				angles[]={0.011288759,0,6.2572231};
+				position[]={17649.992,8.1777172,2442.5261};
+				angles[]={6.2594819,0,6.2448163};
 			};
 			side="East";
 			flags=6;
@@ -20304,6 +20315,7 @@ class Mission
 			};
 			id=1505;
 			type="CUP_O_ZU23_TK";
+			atlOffset=-0.0013051033;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20341,7 +20353,7 @@ class Mission
 			position[]={17844.986,4.310925,2308.5769};
 			class Attributes
 			{
-				onActivation="deleteVehicle flak_01;" \n "deleteVehicle flak_02;" \n "deleteVehicle flak_03;" \n "deleteVehicle flak_04;" \n "";
+				onActivation="[pfh_01] call CBA_fnc_removePerFrameHandler;" \n "[pfh_02] call CBA_fnc_removePerFrameHandler;" \n "[pfh_03] call CBA_fnc_removePerFrameHandler;" \n "[pfh_04] call CBA_fnc_removePerFrameHandler;";
 				sizeA=250;
 				sizeB=250;
 				activationBy="ANYPLAYER";
