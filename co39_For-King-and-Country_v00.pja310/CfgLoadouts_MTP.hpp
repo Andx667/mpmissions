@@ -287,7 +287,7 @@ class Loadouts {
             vest = "CUP_V_B_BAF_MTP_Osprey_Mk4_Engineer"; //MTP
             //vest = "CUP_V_B_BAF_DDPM_Osprey_Mk3_Engineer"; //DDPM
             //vest = "CUP_V_B_BAF_DPM_Osprey_Mk3_Engineer"; //DPM
-            backpack = "CUP_B_Predator_MTP";
+            backpack = "CUP_B_Motherlode_MTP";
             headgear[] = {
                 //MTP
                 "CUP_H_BAF_MTP_Mk6_GLASS_PRR",
@@ -336,7 +336,7 @@ class Loadouts {
             vest = "CUP_V_B_BAF_MTP_Osprey_Mk4_Engineer"; //MTP
             //vest = "CUP_V_B_BAF_DDPM_Osprey_Mk3_Engineer"; //DDPM
             //vest = "CUP_V_B_BAF_DPM_Osprey_Mk3_Engineer"; //DPM
-            backpack = "CUP_B_Predator_MTP";
+            backpack = "CUP_B_Motherlode_MTP";
 
             addItemsToVest[] += {
                 "ACRE_PRC152",
@@ -398,7 +398,7 @@ class Loadouts {
 
         // Logistics
         class B_soldier_repair_F {
-            backpack = "CUP_B_Predator_MTP";
+            backpack = "CUP_B_Motherlode_MTP";
 
             addItemsToVest[] = {
                 LIST_8("CUP_30Rnd_556x45_Stanag_L85"),
@@ -410,7 +410,7 @@ class Loadouts {
 
             class Rank {
                 class SERGEANT {
-                    backpack = "CUP_B_Predator_Radio_MTP";
+                    backpack = "CUP_B_Motherlode_Radio_MTP";
 
                     addItemsToVest[] += {
                         "ItemAndroid",

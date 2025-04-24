@@ -14,6 +14,20 @@
     <marker name='MARKER'>TEXT</marker>                 - Verlinkung auf Marker
     <execute expression='CODE'>TEXT</execute>           - Code ausführen
  */
+
+player createDiaryRecord ["Diary", [
+    "03 - Durchführung",
+    "<marker name='marker_3'>Fallschirmsprung</marker> im Süden von Al-Rayak. Dann ausführung des Auftrags."
+]];
+
+player createDiaryRecord ["Diary", [
+    "02 - Auftrag",
+    "Charlie Platoon wird:<br/>
+    <t/> - die Ölförderung unterbrechen<br/>
+    <t/> - den Flughaben nehmen und einsatzbereit machen<br/>
+    <t/> - die Kaserne in der Stadt nehmen<br/>"
+]];
+
 player createDiaryRecord ["Diary", [
     "01 - Lage",
     "Die Armee Takistans verfügt in Al-Rayak über folgende Kräfte in unsrer Area-of-Operations:<br/>
@@ -26,17 +40,4 @@ player createDiaryRecord ["Diary", [
     Die Startbahn des Flughafen (Obj.2) wurde durch den Feind mit Sperren unbrauchbar gemacht.<br/>
     Vermutete Absicht des Feindes ist es uns das erreichen der Ziele zu verwehren, indem die Ziele von den Truppen gehalten oder zurückerobert werden.<br/>
     "
-]];
-
-player createDiaryRecord ["Diary", [
-    "02 - Auftrag",
-    "Charlie Platoon wird:<br/>
-    <t/> - die Ölförderung unterbrechen<br/>
-    <t/> - den Flughaben nehmen und einsatzbereit machen<br/>
-    <t/> - die Kaserne in der Stadt nehmen<br/>"
-]];
-
-player createDiaryRecord ["Diary", [
-    "03 - Durchführung",
-    "Fallschirmsprung im Süden von <marker name='marker_3'>Al-Rayak</marker>. Dann ausführung des Auftrags."
 ]];

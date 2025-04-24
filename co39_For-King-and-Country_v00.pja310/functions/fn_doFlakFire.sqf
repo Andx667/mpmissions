@@ -20,4 +20,9 @@ _handle = [
 		[_unit,_target]
 	] call CBA_fnc_addPerFrameHandler;
 
+private _reloaded = _unit addEventHandler ["Reloaded", {
+	params ["_unit", "_weapon", "_muzzle", "_newMagazine", "_oldMagazine"];
+	_unit setVehicleAmmo 1;
+}];
+
 _handle;

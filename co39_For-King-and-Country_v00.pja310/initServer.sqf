@@ -77,5 +77,5 @@ setDate [2016, 5, 31, 3, 45]; //Datum ändern
 //VBT, VBA, Spreng, Fallschirme über TTT-Standardkisten
 
 // grad-fortifications
-[equip_01, "PortableHelipadLight_01_green_F",10] call grad_fortifications_fnc_addFort;
-[equip_01, "PortableHelipadLight_01_red_F",10] call grad_fortifications_fnc_addFort;
+[equip_01, "PortableHelipadLight_01_green_F", 10] call grad_fortifications_fnc_addFort;
+[equip_01, "PortableHelipadLight_01_red_F", 10] call grad_fortifications_fnc_addFort;
