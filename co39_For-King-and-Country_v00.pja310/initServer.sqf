@@ -5,7 +5,7 @@
     oder auch zum Beladen von Kisten verwenden kann.
  */
 
-setDate [2016, 5, 31, 3, 45]; //Datum ändern
+setDate [2022, 5, 25, 3, 45]; //Datum ändern
 
 {
     if (side _x != west) then {
