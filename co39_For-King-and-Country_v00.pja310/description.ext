@@ -1,0 +1,86 @@
+// - Generelle Einstellungen --------------------------------------------------
+// Name des Missionsbauers
+author = "";
+// Missionsname über dem Ladebild
+onLoadName = "";
+// Ladebild
+loadScreen = "";
+// Kurzbeschreibung unter dem Ladebild
+onLoadMission = "";
+// Kurzbeschreibung in der Missionsauswahl
+overviewText = "";
+
+class Header
+{
+    gameType = "coop";
+    minPlayers = "1";
+    maxPlayers = "44";
+};
+
+// - Respawn ------------------------------------------------------------------
+respawn = 3;
+respawnButton = 1;
+respawnDelay = 5;
+respawnDialog = 0;
+
+// - Misc ---------------------------------------------------------------------
+disabledAI = 1;
+cba_settings_hasSettingsFile = 1;
+
+disableChannels[] =
+{
+    {0, true, true}, //Global
+    {1, true, true}, //Side
+    {2, true, true}, //Command
+    {3, false, true}, //Group
+    {4, false, true}, //Vehicle
+    {5, false, true} //Direct
+};
+
+// - Corpsemanager ------------------------------------------------------------
+corpseManagerMode = 1; // Default: 0
+corpseLimit = 15; // Default: 15
+corpseRemovalMinTime = 900; // Default: 10
+corpseRemovalMaxTime = 1800; // Default: 3600
+disposalCheckPeriod = 60; // seconds. Default: 10
+
+// - CfgFunctions -------------------------------------------------------------
+#include "modules\grad-fortifications\grad_fortifications.hpp"
+
+class CfgFunctions {
+    #include "modules\grad-loadout\CfgFunctions.hpp"
+    #include "modules\grad-fortifications\cfgFunctions.hpp"
+    #include "functions\CfgFunctions.hpp"
+};
+
+class RscTitles {
+    #include "modules\grad-fortifications\dialog\hint\title.hpp"
+};
+
+// - Loadouts ----------------------------------------------------------------
+#include "CfgLoadouts_MTP.hpp"
+
+// - Fortifications --------------------------------------------------------
+class CfgGradFortifications {
+    playerInventorySize = 500;
+    vehicleInventorySizeFactor = 2;
+
+    class Fortifications {
+        //light disableDamage
+    };
+
+    class Vehicles {
+        class Box_NATO_Equip_F {
+            isStorage = 1;
+            vehicleInventorySize = 30;
+        };
+    };
+};
+
+// - Streamator -------------------------------------------------------------
+class CLib {
+    Modules[] = {"CLib", "Streamator"};
+    useExperimentalAutoload = 0;
+    useCompressedFunction = 0;
+    useFallbackRemoteExecution = 0;
+};
