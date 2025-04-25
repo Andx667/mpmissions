@@ -66,8 +66,7 @@ class CfgGradFortifications {
     vehicleInventorySizeFactor = 2;
 
     class Fortifications {
-        onBuildComplete = "params ['_unit', '_object']; _object allowDamage false;"
-        ;
+        onBuildComplete = "params ['_unit', '_object']; _object allowDamage false;";
     };
 
     class Vehicles {
