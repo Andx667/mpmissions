@@ -1,5 +1,5 @@
 /*
-	author = Reimchen
+	author = Reimchen, improved by Andx
 	description = n.a.
 */
 
