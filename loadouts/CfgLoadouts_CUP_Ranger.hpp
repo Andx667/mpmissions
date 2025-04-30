@@ -118,7 +118,6 @@ class Loadouts {
             addItemsToVest[] = {
                 LIST_2("CUP_HandGrenade_M67"),
                 LIST_2("SmokeShell"),
-                "SmokeShellGreen",
                 LIST_2("CUP_17Rnd_9x19_M17_Black"),
             };
 
@@ -219,7 +218,7 @@ class Loadouts {
         };
 
         class B_soldier_AR_F: B_Soldier_F {
-            primaryWeapon = "CUP_lmg_m249_pip3";
+            primaryWeapon = "CUP_lmg_m249_pip4";
             primaryWeaponMagazine = "CUP_100Rnd_TE4_Red_Tracer_556x45_M249";
             primaryWeaponOptics[] = {
                 "CUP_optic_Elcan_SpecterDR_black",
@@ -341,6 +340,7 @@ class Loadouts {
                 "CUP_srifle_M110",
                 "CUP_srifle_M110_woodland",
                 };
+            primaryWeaponMagazine = "CUP_20Rnd_TE1_Red_Tracer_762x51_M110";
             primaryWeaponMuzzle[] = {
                 "CUP_muzzle_snds_M110_black",
                 "CUP_muzzle_snds_M110",
@@ -351,6 +351,7 @@ class Loadouts {
                 "CUP_optic_LeupoldMk4_10x40_LRT_Woodland",
                 "CUP_optic_LeupoldMk4",
                 };
+            primaryWeaponUnderbarrel = "CUP_bipod_Harris_1A2_L_BLK";
 
             addItemsToVest[] = {
                 LIST_8("CUP_20Rnd_TE1_Red_Tracer_762x51_M110"),
@@ -368,6 +369,7 @@ class Loadouts {
         //Führung
         class B_Soldier_TL_F {
             primaryWeapon = "CUP_arifle_mk18_black";
+            primaryWeaponMagazine = "CUP_30Rnd_556x45_PMAG_OD_RPL_Tracer_Red";
 
             vest[] = {
                 "CUP_V_CPC_tlbelt_mc",
@@ -384,10 +386,8 @@ class Loadouts {
             };
 
             addItemsToVest[] += {
-                "ItemAndroid",
                 "ACRE_PRC152",
-                LIST_8("CUP_30Rnd_556x45_PMAG_OD_RPL_Tracer_Red"),
-                LIST_2("CUP_17Rnd_9x19_M17_Black"),
+                LIST_7("CUP_30Rnd_556x45_PMAG_OD_RPL_Tracer_Red"),
             };
 
             addItemsToBackpack[] += {
@@ -406,14 +406,21 @@ class Loadouts {
                 };
 
             addItemsToVest[] += {
-                "ACRE_PRC152",
+                "ItemAndroid",
             };
 
             addItemsToBackpack = "";
         };
 
         class B_officer_F: B_Soldier_SL_F {
-            
+            primaryWeapon[] = {
+                "CUP_arifle_M4A1_SOMMOD_black",
+                "CUP_arifle_M4A1_SOMMOD_tan",
+                "CUP_arifle_M4A1_SOMMOD_green",
+                "CUP_arifle_M4A1_SOMMOD_Grip_black",
+                "CUP_arifle_M4A1_SOMMOD_Grip_tan",
+                "CUP_arifle_M4A1_SOMMOD_Grip_green",
+                };
         };
 
         //Sani
@@ -430,8 +437,6 @@ class Loadouts {
                 class PRIVATE {
                     addItemsToVest[] += {
                         LIST_3("CUP_30Rnd_556x45_PMAG_BLACK_RPL"),
-                        LIST_2("CUP_17Rnd_9x19_M17_Black"),
-                        "ACE_SurgicalKit",
                     };
 
                     addItemsToBackpack[] = {
@@ -442,6 +447,7 @@ class Loadouts {
                         LIST_30("ACE_elasticBandage"),
                         LIST_10("ACE_elasticBandage"),
                         LIST_20("ACE_quikclot"),
+                        "ACE_SurgicalKit",
 
                         LIST_16("ACE_Epinephrine"),
                         LIST_8("ACE_Painkillers"),

@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=357;
+		nextID=358;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7733.9106,8.4841013,5106.6924};
-		dir[]={-0.6571725,-0.49303472,-0.57012379};
-		up[]={-0.37241983,0.8700096,-0.3230893};
-		aside[]={-0.65530741,0,0.75536233};
+		pos[]={7734.6338,11.479964,5095.8198};
+		dir[]={-0.098227993,-0.57678759,0.81096703};
+		up[]={-0.069356218,0.81689417,0.57260257};
+		aside[]={0.99274427,3.7252903e-09,0.12024568};
 	};
 };
 binarizationWanted=0;
@@ -33,6 +33,7 @@ addons[]=
 	"A3_Characters_F",
 	"ttt_common",
 	"A3_Characters_F_Mark",
+	"A3_Characters_F_Tank",
 	"ace_explosives",
 	"A3_Characters_F_Orange"
 };
@@ -40,7 +41,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=5;
+		items=6;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -64,12 +65,19 @@ class AddonsMetaData
 		};
 		class Item3
 		{
+			className="A3_Characters_F_Tank";
+			name="Arma 3 Tank - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
 			className="ace_explosives";
 			name="ACE3 - Explosives";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item4
+		class Item5
 		{
 			className="A3_Characters_F_Orange";
 			name="Arma 3 Orange - Characters and Clothing";
@@ -839,7 +847,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7726,5.0014391,5098.0498};
+						position[]={7726,5.0014391,5096.0498};
 					};
 					side="West";
 					flags=5;
@@ -1416,7 +1424,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7726,5.0014391,5096.0498};
+						position[]={7726,5.0014391,5098.0498};
 					};
 					side="West";
 					flags=5;
@@ -1424,8 +1432,8 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=355;
-					type="B_soldier_AR_F";
+					id=357;
+					type="B_soldier_LAT2_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1437,7 +1445,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="Male09ENG";
+									value="Male04ENG";
 								};
 							};
 						};
@@ -1450,7 +1458,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=0.99000001;
+									value=1.02;
 								};
 							};
 						};

@@ -124,6 +124,10 @@ class Loadouts {
                 LIST_8("BWA3_30Rnd_556x45_G36_AP"),
             };
 
+            addItemsToBackpack[] = {
+                "BWA3_optic_NSV600"
+            };
+
         };
 
         class B_Soldier_GL_F: B_Soldier_F {
@@ -188,7 +192,7 @@ class Loadouts {
             handgunWeaponMagazine = "BWA3_15Rnd_9x19_P8";
 
             addItemsToVest[] = {
-                LIST_8("BWA3_20Rnd_762x51_G28_Tracer"),
+                LIST_6("BWA3_20Rnd_762x51_G28_Tracer"),
                 LIST_2("BWA3_15Rnd_9x19_P8"),
                 LIST_2("BWA3_DM51A1"),
                 LIST_2("BWA3_DM25"),
@@ -197,11 +201,55 @@ class Loadouts {
             };
 
             addItemsToBackpack[] = {
-                LIST_8("BWA3_20Rnd_762x51_G28_LR"),
+                LIST_6("BWA3_20Rnd_762x51_G28_LR"),
             };
 
             binoculars = "ACE_Yardage450";
 
+        };
+
+        class B_soldier_LAT2_F: B_Soldier_F {
+            secondaryWeapon = "BWA3_PzF3_Tandem_Loaded";
+
+            addItemsToBackpack[] += {
+                "BWA3_optic_NSA80"
+            };
+
+        };
+
+        class B_HeavyGunner_F: B_Soldier_F {
+            vest = "BWA3_Vest_MachineGunner_Fleck"; 
+
+            primaryWeapon[] = {
+                "BWA3_MG5",
+                "BWA3_MG5_tan",
+                };
+
+            primaryWeaponOptics[] = {
+                "BWA3_optic_ZO4x30i_RSAS",
+                "BWA3_optic_ZO4x30i_RSAS_sand",
+                "BWA3_optic_ZO4x30i_MicroT2",
+                "BWA3_optic_ZO4x30i_MicroT2_sand",
+                };
+
+            addItemsToVest[] = {
+                LIST_2("BWA3_120Rnd_762x51_Tracer_soft"),
+                LIST_2("BWA3_15Rnd_9x19_P8"),
+            };
+
+            addItemsToBackpack[] = {
+                "BWA3_120Rnd_762x51_Tracer_soft",
+                "ACE_Sparebarrel"
+            };
+        };
+
+        class B_Soldier_A_F: B_Soldier_F {
+            backpack = "BWA3_PatrolPack_Fleck";
+
+            addItemsToBackpack[] = {
+                LIST_7("BWA3_120Rnd_762x51_Tracer_soft"),
+                "ACE_EntrenchingTool"
+            };
         };
 
         class TTT_B_RadioOperator_F: B_Soldier_F {
@@ -214,6 +262,15 @@ class Loadouts {
             };
 
         };
+
+        class B_soldier_AT_F: B_Soldier_F {
+            backpack = "BWA3_MELLS_Weapon_Bag";
+        };
+
+        class B_soldier_AAT_F: B_Soldier_F {
+            backpack = "BWA3_MELLS_Tripod_Bag";
+        };
+
 
         //Führung
         class B_Soldier_TL_F {
@@ -231,7 +288,7 @@ class Loadouts {
         class B_Soldier_SL_F: B_Soldier_TL_F {
             addItemsToVest[] += {
                 "ItemAndroid",
-            ´};
+            };
 
             addItemsToBackpack[] += {
                 "ace_flags_red",
@@ -245,25 +302,29 @@ class Loadouts {
 
         //Sani
         class B_medic_F {
-            vest[] = {
-
-            };
-            backpack = "";
+            vest = "BWA3_Vest_Medic_Fleck";
+            backpack = "BWA3_Kitbag_Fleck_Medic";
 
             class Rank {
                 class PRIVATE {
                     addItemsToVest[] += {
+                        LIST_4("BWA3_30Rnd_556x45_G36_AP"),
+                        "ACE_SurgicalKit",
                     };
 
                     addItemsToBackpack[] = {
                         LIST_30("ACE_Suture"),
+                        LIST_30("ACE_Suture"),
+
                         LIST_16("ACE_Tourniquet"),
+
                         LIST_30("ACE_packingBandage"),
                         LIST_10("ACE_packingBandage"),
+
                         LIST_30("ACE_elasticBandage"),
-                        LIST_10("ACE_elasticBandage"),
+                        LIST_30("ACE_elasticBandage"),
+
                         LIST_20("ACE_quikclot"),
-                        "ACE_SurgicalKit",
 
                         LIST_16("ACE_Epinephrine"),
                         LIST_8("ACE_Painkillers"),
@@ -281,20 +342,53 @@ class Loadouts {
                     addItemsToVest[] += {
                         "ItemAndroid",
                         "ACRE_PRC152",
+                        "ACE_PersonalAidkit",
                     };
 
                     addItemsToBackpack[] += {
                         LIST_4("ACE_SalineIV"),
                         LIST_2("ACE_salineIV_500"),
                         LIST_2("ACE_SalineIV_250"),
-                        "ACE_PersonalAidkit",
+
                     };
                 };
 
                 class SERGEANT: CORPORAL {
                     addItemsToVest[] += {
                         "ace_flags_blue",
+                        "ACE_SpraypaintBlue",
                     };
+                };
+
+                class LIEUTENANT: SERGEANT {
+
+                };
+            };
+        };
+
+        class B_engineer_F {
+            backpack = "BWA3_PatrolPack_Fleck";
+
+            class Rank {
+                class PRIVATE {
+                    addItemsToVest[] += {
+                    };
+
+                    addItemsToBackpack[] = {
+
+                    };
+                };
+
+                class CORPORAL: PRIVATE {
+
+                };
+
+                class SERGEANT: CORPORAL {
+                    addItemsToVest[] += {
+                        "ItemAndroid",
+                        "ACRE_PRC152",
+                    };
+
                 };
 
                 class LIEUTENANT: SERGEANT {
