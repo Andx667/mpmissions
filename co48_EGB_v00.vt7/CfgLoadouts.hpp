@@ -61,6 +61,7 @@ class Loadouts {
                 LIST_4("ACE_Tourniquet"),
                 "ACRE_SEM52SL",
                 LIST_2("BWA3_15Rnd_9x19_P8"),
+                LIST_4("ACE_Chemlight_IR"),
                 };
             addItemsToVest[] = {
                 LIST_2("BWA3_DM25"),
@@ -284,14 +285,13 @@ class Loadouts {
                 "BWA3_G36KA3_green",
                 "BWA3_G36KA3_tan",
                 };
+            primaryWeaponOptics[] = {
+                "BWA3_optic_EOTech_sand_Mag_Off",
+                "BWA3_optic_EOTech_Mag_Off",
+                };
             primaryWeaponMagazine = "BWA3_30Rnd_556x45_G36_AP";
             primaryWeaponMuzzle[] = {
                 "",
-                };
-            primaryWeaponOptics[] = {
-                "BWA3_optic_EOTech552",
-                "BWA3_optic_EOTech552_green",
-                "BWA3_optic_EOTech552_tan",
                 };
             primaryWeaponPointer[] = {
                 "BWA3_acc_LLM01_irlaser_tan",
@@ -300,7 +300,6 @@ class Loadouts {
                 };
 
             addItemsToVest[] += {
-                "ACE_SurgicalKit",
                 LIST_4("BWA3_30Rnd_556x45_G36_AP"),
                 };
 
@@ -315,53 +314,47 @@ class Loadouts {
                     };
 
                     addItemsToBackpack[] = {
-                        LIST_20("ACE_Suture"),
+                        LIST_10("ACE_Tourniquet"),
+                        LIST_30("ACE_packingBandage"),
+                        LIST_10("ACE_elasticBandage"),
+                        LIST_30("ACE_quikclot"),
 
-                        LIST_16("ACE_Tourniquet"),
-
-                        LIST_20("ACE_packingBandage"),
-
-                        LIST_20("ACE_elasticBandage"),
-
-                        LIST_20("ACE_quikclot"),
-
-                        LIST_8("ACE_Epinephrine"),
                         LIST_4("ACE_Painkillers"),
-                        LIST_4("ACE_morphine"),
 
-                        LIST_4("ACE_SalineIV"),
-                        LIST_2("ACE_salineIV_500"),
-                        LIST_2("ACE_SalineIV_250"),
-
-                        "ACE_Bodybag",
+                        LIST_7("ACE_SalineIV"),
+                        LIST_3("ACE_salineIV_500"),
+                        LIST_3("ACE_SalineIV_250"),
                         };
                     };
 
                 //Zugsani 1
                 class CORPORAL: PRIVATE {
                     backpack = "BWA3_Kitbag_Fleck_Medic";
+                    primaryWeaponOptics[] = {
+                        "BWA3_optic_EOTech552",
+                        "BWA3_optic_EOTech552_green",
+                        "BWA3_optic_EOTech552_tan",
+                        };
 
                     addItemsToVest[] += {
                         "ItemAndroid",
                         "ace_flags_blue",
+                        "ACE_SurgicalKit",
                     };
 
                     addItemsToBackpack[] += {
-                        LIST_20("ACE_Suture"),
-
-                        LIST_30("ACE_packingBandage"),
+                        LIST_30("ACE_Suture"),
 
                         LIST_30("ACE_elasticBandage"),
+                        LIST_30("ACE_elasticBandage"),
 
-                        LIST_20("ACE_quikclot"),
-
-                        LIST_8("ACE_Epinephrine"),
+                        LIST_20("ACE_Epinephrine"),
                         LIST_4("ACE_Painkillers"),
-                        LIST_4("ACE_morphine"),
+                        LIST_8("ACE_morphine"),
 
                         LIST_4("ACE_SalineIV"),
-                        LIST_2("ACE_salineIV_500"),
-                        LIST_2("ACE_SalineIV_250"),
+                        LIST_3("ACE_salineIV_500"),
+                        LIST_3("ACE_SalineIV_250"),
                     };
                   
                 };

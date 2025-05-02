@@ -5,7 +5,7 @@
     oder auch zum Beladen von Kisten verwenden kann.
  */
 
-setDate [2026, 9, 19, 5, 00]; //Datum ändern
+setDate [2026, 9, 4, 3, 45]; //Datum ändern
 
 {
     if (side _x != west) then {
@@ -47,8 +47,6 @@ setDate [2026, 9, 19, 5, 00]; //Datum ändern
         ["BWA3_DM51A1", 20],
         ["ACE_M84", 20],
 
-        ["BWA3_PzF3_Tandem_Loaded", 2],
-
         ["ACE_fieldDressing", 50],
         ["ACE_packingBandage", 20],
         ["ACE_Tourniquet", 8]
@@ -73,3 +71,9 @@ setDate [2026, 9, 19, 5, 00]; //Datum ändern
     } forEach (everyBackpack _x);
 
 } forEach [nh90_01, nh90_02, nh90_03, nh90_04, nh90_05];
+
+[vba_01, nh90_01, true] call ace_cargo_fnc_loadItem;
+[vba_02, nh90_02, true] call ace_cargo_fnc_loadItem;
+[vba_03, nh90_03, true] call ace_cargo_fnc_loadItem;
+[vba_04, nh90_04, true] call ace_cargo_fnc_loadItem;
+[vba_05, nh90_05, true] call ace_cargo_fnc_loadItem;
