@@ -6,9 +6,9 @@ class Loadouts {
     randomizationMode = 2;
     customGear = 300;
     //
-    customGearAllowedCategories[] = {};
+    customGearAllowedCategories[] = {};//STRING
 
-    class AllUnits {
+    class AllPlayable {
         uniform = "";
         vest = "";
         backpack = "";
