@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=1548;
+		nextID=1552;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=126;
+		nextID=139;
 	};
 	class Camera
 	{
-		pos[]={1768.5442,252.19398,695.23425};
-		dir[]={0.88444185,-0.28724766,0.36778226};
-		up[]={0.26523197,0.95785677,0.11029297};
-		aside[]={0.38396415,-1.3268436e-07,-0.92335629};
+		pos[]={17748.9,53.242554,2478.6816};
+		dir[]={-0.44551253,-0.38924402,0.80625033};
+		up[]={-0.18825985,0.92113179,0.34069523};
+		aside[]={0.87527782,-6.693881e-09,0.4836528};
 	};
 };
 binarizationWanted=0;
@@ -391,7 +391,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Scenario";
 		class Attribute0
@@ -2537,7 +2537,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=84;
+		items=87;
 		class Item0
 		{
 			dataType="Layer";
@@ -19674,10 +19674,10 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={12059.204,5.4769669,5037.3071};
-			angle=6.2784519;
+			angle=6.2784553;
 			class Attributes
 			{
-				onActivation="pfh_01 = [flak_01, flak_target_01] call TTT_fnc_doFlakFire;" \n "pfh_02 = [flak_02, flak_target_02] call TTT_fnc_doFlakFire;" \n "pfh_03 = [flak_03, flak_target_03] call TTT_fnc_doFlakFire;" \n "pfh_04 = [flak_04, flak_target_04] call TTT_fnc_doFlakFire;";
+				onActivation="pfh_01 = [flak_01, flak_target_01] call TTT_fnc_doFlakFire;" \n "pfh_02 = [flak_02, flak_target_02] call TTT_fnc_doFlakFire;" \n "pfh_03 = [flak_03, flak_target_03] call TTT_fnc_doFlakFire;" \n "pfh_04 = [flak_04, flak_target_04] call TTT_fnc_doFlakFire;" \n "pfh_05 = [flak_05, flak_target_05] call TTT_fnc_doFlakFire;";
 				sizeA=156.746;
 				sizeB=5180.771;
 				sizeC=5000;
@@ -20523,7 +20523,7 @@ class Mission
 			position[]={17844.986,4.310925,2308.5769};
 			class Attributes
 			{
-				onActivation="[pfh_01] call CBA_fnc_removePerFrameHandler;" \n "[pfh_02] call CBA_fnc_removePerFrameHandler;" \n "[pfh_03] call CBA_fnc_removePerFrameHandler;" \n "[pfh_04] call CBA_fnc_removePerFrameHandler;";
+				onActivation="[pfh_01] call CBA_fnc_removePerFrameHandler;" \n "[pfh_02] call CBA_fnc_removePerFrameHandler;" \n "[pfh_03] call CBA_fnc_removePerFrameHandler;" \n "[pfh_04] call CBA_fnc_removePerFrameHandler;" \n "[pfh_05] call CBA_fnc_removePerFrameHandler;" \n "";
 				sizeA=250;
 				sizeB=250;
 				activationBy="ANYPLAYER";
@@ -20874,6 +20874,208 @@ class Mission
 			};
 			id=1547;
 			type="Land_PowLines_Conc2L_EP1";
+		};
+		class Item84
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={18415.607,503.3118,3536.7402};
+			};
+			name="flak_target_05";
+			id=1548;
+			type="Logic";
+			atlOffset=500.00366;
+		};
+		class Item85
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={20450.391,7.8639307,5702.6631};
+						angles[]={0.0033829133,0,6.2809215};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+						name="flak_01G_4";
+					};
+					id=1550;
+					type="CUP_O_TK_Soldier";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male01PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="iedd_ied_sides";
+							expression="_this setVariable ['iedd_ied_sides',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=4;
+										class Item0
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+										class Item3
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=3;
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=1550;
+						item1=1551;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=1549;
+		};
+		class Item86
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={18425.781,5.282958,3522.6846};
+				angles[]={0.0033829133,0,6.2809215};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+				name="flak_05";
+			};
+			id=1551;
+			type="CUP_O_ZU23_TK";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="iedd_vbied_edit";
+					expression="false";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ttt_w_vehicleshield_addVehicleShield";
+					expression="[[_this, true, true, [true, true], true, false], ttt_w_vehicleshield_fnc_addVehicleShield] call ttt_common_fnc_callGlobalFnc";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 	};
 	class Connections

@@ -352,7 +352,7 @@ class Loadouts {
                         LIST_4("ACE_Painkillers"),
                         LIST_8("ACE_morphine"),
 
-                        LIST_4("ACE_SalineIV"),
+                        LIST_3("ACE_SalineIV"),
                         LIST_3("ACE_salineIV_500"),
                         LIST_3("ACE_SalineIV_250"),
                     };
