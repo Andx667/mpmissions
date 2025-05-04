@@ -361,9 +361,6 @@ class Loadouts {
 
                 //Zugsani 2
                 class SERGEANT: CORPORAL {
-                    addItemsToVest[] += {
-                        "ACE_Personalaidkit",
-                    };
 
                 };
             };

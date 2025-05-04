@@ -354,7 +354,6 @@ class CfgLoadouts {
 
         items[] += {
             "ACE_SurgicalKit",
-            "ACE_PersonalAidKit",
             "ACE_Suture",60,
 
             "ACE_PackingBandage",30,
@@ -397,7 +396,6 @@ class CfgLoadouts {
 
         items[] = {
             "ACE_SurgicalKit",
-            "ACE_PersonalAidKit",
             "ACE_Suture",30,
 
             "ACE_PackingBandage",30,

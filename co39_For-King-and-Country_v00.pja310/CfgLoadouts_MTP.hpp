@@ -567,9 +567,6 @@ class Loadouts {
                 class LIEUTENANT: SERGEANT {
                     backpack = "CUP_B_Predator_Radio_MTP";
 
-                    addItemsToVest[] += {
-                        "ACE_PersonalAidkit",
-                    };
 
                     addItemsToBackpack[] = {
                         LIST_20("ACE_Suture"),

@@ -471,7 +471,6 @@ class Loadouts {
                         LIST_4("ACE_SalineIV"),
                         LIST_2("ACE_salineIV_500"),
                         LIST_2("ACE_SalineIV_250"),
-                        "ACE_PersonalAidkit",
                     };
                 };
 

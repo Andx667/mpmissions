@@ -342,7 +342,6 @@ class Loadouts {
                     addItemsToVest[] += {
                         "ItemAndroid",
                         "ACRE_PRC152",
-                        "ACE_PersonalAidkit",
                     };
 
                     addItemsToBackpack[] += {

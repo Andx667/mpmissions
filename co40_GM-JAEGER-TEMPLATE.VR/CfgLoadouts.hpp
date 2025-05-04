@@ -172,7 +172,6 @@ class CfgLoadouts {
         backpack[] = {"gm_ge_army_backpack_90_flk"};
         items[] += {
             "ACE_SurgicalKit",
-            "ACE_PersonalAidKit",
             "ACE_Suture",60,
 
             "ACE_PackingBandage",30,
