@@ -178,6 +178,35 @@ class Loadouts {
             secondaryWeapon = "CUP_launch_M136";
         };
 
+        class TTT_B_RadioOperator_F: B_Soldier_F {
+            backpack = "ttt_backpack_radio_coyote";
+            
+            addItemsToBackpack[] = {
+                "ACRE_PRC117F",
+                LIST_10("SmokeShellPurple"),
+                "ACE_flags_blue",
+                "ACE_flags_yellow",
+                "ItemcTab",
+            };
+        };
+
+        class B_soldier_exp_F: B_Soldier_F {
+            backpack = "CUP_B_TacticalPack_CCE";
+
+            addItemsToVest[] += {
+                "ACE_Clacker",
+                "ACE_Defusalkit",
+            };
+
+            addItemsToBackpack[] = {
+                LIST_4("Democharge_Remote_Mag"),
+                LIST_3("tsp_breach_block_mag"),
+                LIST_3("tsp_breach_package_mag"),
+                LIST_6("CUP_6Rnd_12Gauge_Pellets_No00_Buck"),
+                "ACE_Wirecutter",
+                };
+        };
+
         class B_soldier_M_F {
             vest = "CUP_V_PMC_CIRAS_OD_Patrol";
             backpack = "CUP_B_TacticalPack_CCE";
@@ -252,7 +281,7 @@ class Loadouts {
                 LIST_5("CUP_1Rnd_HE_M203"),
             };
             addItemsToBackpack[] = {
-                LIST_12("CUP_1Rnd_HE_M203"),
+                LIST_10("CUP_1Rnd_HE_M203"),
                 LIST_5("CUP_1Rnd_HEDP_M203"),
                 LIST_5("1Rnd_Smoke_Grenade_shell"),
                 LIST_5("1Rnd_SmokeRed_Grenade_shell"),
@@ -305,9 +334,8 @@ class Loadouts {
 
                         LIST_4("ACE_Painkillers"),
 
-                        LIST_7("ACE_SalineIV"),
-                        LIST_3("ACE_salineIV_500"),
-                        LIST_3("ACE_SalineIV_250"),
+                        LIST_8("ACE_salineIV_500"),
+                        LIST_8("ACE_SalineIV_250"),
                     };
                 };
 
@@ -350,6 +378,8 @@ class Loadouts {
                     };
 
                     addItemsToBackpack[] += {
+                        "ACE_flags_blue",
+                        "ACE_SpraypaintBlue",
                         LIST_4("ACE_SalineIV"),
                         LIST_2("ACE_salineIV_500"),
                         LIST_2("ACE_SalineIV_250"),
@@ -363,8 +393,6 @@ class Loadouts {
                     addItemsToBackpack[] = {
                         "ACRE_PRC117F",
                         "ACE_Bodybag",
-                        "ACE_flags_blue",
-                        "ACE_SpraypaintBlue",
                         LIST_30("ACE_Suture"),
                         LIST_16("ACE_Tourniquet"),
                         LIST_30("ACE_elasticBandage"),
@@ -380,6 +408,38 @@ class Loadouts {
 
                 };
             };
+        };
+
+        class B_helicrew_F {
+            //vest = "CUP_V_B_BAF_DDPM_Osprey_Mk3_Pilot"; //DDPM
+            vest = "CUP_V_PMC_CIRAS_OD_Veh";
+            backpack = "";
+
+            //primaryWeapon = "CUP_arifle_HK416_CQB_Black";
+            primaryWeapon = "";
+
+            handgunWeapon = "CUP_hgun_Glock17_blk";
+            handgunWeaponMagazine = "CUP_17Rnd_9x19_glock17";
+
+            addItemsToVest[] = {
+                LIST_2("CUP_17Rnd_9x19_glock17"),
+                LIST_3("SmokeShellPurple"),
+                LIST_3("SmokeShellYellow"),
+                "ACE_HandFlare_Green",
+            };
+
+            headgear = "H_CrewHelmetHeli_I_E";
+        };
+        
+        class B_Helipilot_F: B_helicrew_F  {
+            backpack = "B_AssaultPack_blk";
+
+            addItemsToBackpack[] = {
+                "ACRE_PRC117F",
+                "ItemAndroid"
+            }; 
+
+            headgear = "H_PilotHelmetHeli_I_E";
         };
     };
 };
