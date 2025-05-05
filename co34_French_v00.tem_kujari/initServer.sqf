@@ -16,16 +16,25 @@ setDate [2022, 6, 25, 11, 15]; //Datum ändern
         _x setSkill ["general", 0.75];
         _x setSkill ["commanding", 0.75];
         _x setSkill ["courage", 0.75];
-        _x setSkill ["aimingAccuracy", 0.06];
+        _x setSkill ["aimingAccuracy", 0.65];
         _x setSkill ["aimingShake", 0.65];
-        _x setSkill ["aimingSpeed", 0.06];
+        _x setSkill ["aimingSpeed", 0.65];
         _x setSkill ["reloadSpeed", 0.75];
-        _x setSkill ["spotDistance", 0.8];
-        _x setSkill ["spotTime", 0.8];
+        _x setSkill ["spotDistance", 0.85];
+        _x setSkill ["spotTime", 0.85];
         _x enableAI "COVER";
         _x enableAI "AUTOCOMBAT";
     };
 } forEach allUnits;
+
+[
+    [heli_01, mtvr_01], //Werfer
+    [
+        ["B_AssaultPack_blk", 1],
+        ["Toolkit", 1]
+    ],
+    true
+] call ttt_common_fnc_crateFiller;
 
 [
     [ammo_01, ammo_02, ammo_03, ammo_04, ammo_05, ammo_06], //Munition
@@ -86,3 +95,4 @@ setDate [2022, 6, 25, 11, 15]; //Datum ändern
     ],
     false
 ] call ttt_common_fnc_crateFiller;
+

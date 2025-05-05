@@ -14,6 +14,7 @@
 
 // Hier wird das Briefing automatisch eingefügt und ausgeführt
 #include "briefing.sqf"
+#include "comms.sqf"
 
 // Waffe sichern
 // Gegenstück zu [QGVAR(loadoutApplied), [_loadoutTarget, _unitLoadout], _loadoutTarget] call CBA_fnc_targetEvent;
@@ -85,3 +86,8 @@ _player addMPEventHandler ["MPRespawn", {
 		};
 	};
 }];
+
+//Intel
+[intel_01, "Dokumente nehmen", true, ["Geheime Dokumente aus dem Palast", "Miliz Bastion - 139-073."]] call ttt_intel_fnc_addIntel;
+[intel_02, "Dokumente nehmen", true, ["Geheime Dokumente der Miliz 1", "Miliz Feindstärke in der Bastion: Drei Gruppen, 4 HMG."]] call ttt_intel_fnc_addIntel;
+[intel_03, "Dokumente nehmen", true, ["Geheime Dokumente der Miliz 2", "Verstärkung der Armee: 1x BTR-60 und 1x Ural mit jeweils 1x Gruppe stehen bereit."]] call ttt_intel_fnc_addIntel;
