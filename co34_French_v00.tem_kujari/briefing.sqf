@@ -15,14 +15,44 @@
     <execute expression='CODE'>TEXT</execute>           - Code ausführen
  */
 
-player createDiaryRecord ["Diary", [
-    "Auftrag",
-    "Befreien Sie das Regierungszentrum in Pyrgos: <br/>"
-    + "- Vertreiben Sie die Rebellen <br/>"
-    + "- Befreien und versorgen Sie die Zivilisten"
+ player createDiaryRecord ["Diary", [
+    "Hinweise",
+    "Allgemein <br/>"
+    + "<t/>- Funker hat ein 'cTab' um bei Funkausfall mit Adler per Textnachricht zu kommunizieren <br/>"
+    + "<t/>- Breacher haben eine Schrotflinte dabei, Ausrüstung via Taste '4'<br/>"
+    + "<t/>- Nachschub für den Zugsanitäter in der VBT-Kisten (begrenzt) <br/>"
+    //+ "- Ausrüstung <gear unit='1017'>Gruppenführer</gear> <br/>"
+    + "Fähigkeiten Zugsanitäter: <br/>"
+    + "<t/> - Epinephrin: nein <br/>"
+    + "<t/> - Nähen: nein <br/>"
+    + "<t/> - IV: ja, überall <br/>"
+    + "<t/> - PAK: nein <br/>"
+    + "Fähigkeiten Combat Medics: <br/>"
+    + "<t/> - Epinephrin: ja, überall <br/>"
+    + "<t/> - Nähen: ja, Nähte verbrauchen sich, im Hubschrauber oder Flughafen<br/>"
+    + "<t/> - IV: ja, überall <br/>"
+    + "<t/> - PAK: ja, verbraucht sich <br/>"
+]];
+
+
+ player createDiaryRecord ["Diary", [
+    "Durchführung",
+    "<t/> - Infiltration per Boot <br/>"
+    + "<t/> - Angriff auf <marker name='marker_0'>Obj. 1</marker> <br/>"
+    + "<t/> - Weiteres durch OPL vor Ort <br/>"
 ]];
 
 player createDiaryRecord ["Diary", [
-    "Situation",
-    "Nach einem Aufstand der Bevölkerung herrscht pures Chaos auf Altis."
+    "Auftrag",
+    "An die Taskforce 'Grün': <br/>"
+    + "<t/>- Vernichten Sie den Störsender im ehem. Gouverneurspalast <br/>"
+    + "<t/>- Finden Sie dort Intel über den Standort der Milizbastion <br/>"
+    + "<t/>- Zerschlagen Sie den Feind in der Milizbastion <br/>"
+    + "um der Miliz dauerhaft die Operationen in der Region zu erschweren. <br/>"
+]];
+
+player createDiaryRecord ["Diary", [
+    "Lage",
+    "Unterstützt durch die Takistanische Armee hat die Miliz die Kontrolle über die Region übernommen. <br/>"
+    + "Die CSAT unterstützt nun auch offen die Miliz und hat ihr eines ihrer modernen Störsender-Systeme zur Verfügung gestellt. Mit seinen ca. 5km Reichweite verhindert dieses System effektiv die Durchführung von Operationen in unserem Einflussbereich.<br/>"
 ]];
