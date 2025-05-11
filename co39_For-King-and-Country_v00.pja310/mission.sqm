@@ -5,14 +5,14 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1537;
+	toggles=1025;
 	mods[]=
 	{
 		"3denEnhanced"
 	};
 	class ItemIDProvider
 	{
-		nextID=1604;
+		nextID=1614;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=166;
+		nextID=179;
 	};
 	class Camera
 	{
-		pos[]={1334.9304,30.955008,905.50867};
-		dir[]={-0.82991302,-0.53896153,0.14413159};
-		up[]={-0.53101498,0.84232932,0.092221729};
-		aside[]={0.171111,-1.0017538e-07,0.98525703};
+		pos[]={19441.328,16.00075,5967.9492};
+		dir[]={-0.88471633,-0.44729596,0.13116156};
+		up[]={-0.44246003,0.89438605,0.06559588};
+		aside[]={0.14664984,0,0.98918855};
 	};
 };
 binarizationWanted=0;
@@ -1364,7 +1364,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=18189.074;
+														value=18220.428;
 													};
 												};
 												class Item1
@@ -1372,7 +1372,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=4778.1021;
+														value=4342.6675;
 													};
 												};
 												class Item2
@@ -1380,7 +1380,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=3.273;
+														value=3.3304663;
 													};
 												};
 											};
@@ -9895,7 +9895,7 @@ class Mission
 				};
 			};
 			id=1019;
-			atlOffset=0.61787605;
+			atlOffset=1.2317829;
 		};
 		class Item2
 		{
@@ -15641,7 +15641,7 @@ class Mission
 							dataType="Logic";
 							class PositionInfo
 							{
-								position[]={18188.584,3.2732391,4774.7261};
+								position[]={18220.982,3.2732391,4337.2314};
 							};
 							name="r_s_1";
 							id=1286;
@@ -15678,11 +15678,11 @@ class Mission
 							dataType="Comment";
 							class PositionInfo
 							{
-								position[]={18189.074,3.273,4778.1021};
+								position[]={18220.428,3.3304663,4342.6675};
+								angles[]={6.2617369,0,0};
 							};
 							title="R S 1";
 							id=1287;
-							atlOffset=-0.00023913383;
 						};
 						class Item6
 						{
@@ -15709,7 +15709,7 @@ class Mission
 						};
 					};
 					id=1316;
-					atlOffset=-4.2129803;
+					atlOffset=-3.2467351;
 				};
 				class Item1
 				{
@@ -17168,10 +17168,9 @@ class Mission
 							position[]={18406.09,3.5697796,3620.801};
 							class Attributes
 							{
-								onActivation="[r_s_3, r_r_3, r_a_3, EAST, ""CUP_O_Mi17_TK"", 1, configFile >> ""CfgGroups"" >> ""East"" >> ""CUP_O_TK"" >> ""Infantry"" >> ""CUP_O_TK_InfantrySquad"", 2, 80] call ttt_common_fnc_callReinforcements;" \n "" \n "[r_s_5, r_r_5, r_a_5, EAST, ""CUP_O_Mi17_TK"", 1, configFile >> ""CfgGroups"" >> ""East"" >> ""CUP_O_TK"" >> ""Infantry"" >> ""CUP_O_TK_InfantrySquad"", 2, 80] call ttt_common_fnc_callReinforcements;";
+								onActivation="[r_s_3, r_r_3, r_a_3, EAST, ""CUP_O_UH1H_armed_TKA"", 1, configFile >> ""CfgGroups"" >> ""East"" >> ""CUP_O_TK"" >> ""Infantry"" >> ""CUP_O_TK_InfantrySquad"", 2, 80] call ttt_common_fnc_callReinforcements;" \n "" \n "[r_s_5, r_r_5, r_a_5, EAST, ""CUP_O_UH1H_armed_TKA"", 1, configFile >> ""CfgGroups"" >> ""East"" >> ""CUP_O_TK"" >> ""Infantry"" >> ""CUP_O_TK_InfantrySquad"", 2, 80] call ttt_common_fnc_callReinforcements;";
 								sizeA=116.819;
 								sizeB=128.48;
-								timeout[]={8,10,12};
 								activationBy="ANYPLAYER";
 								isServerOnly=1;
 							};
@@ -17258,7 +17257,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={18376.182,3.3953872,3581.5835};
-						angles[]={-0,0,6.2718968};
+						angles[]={0,0,6.2718968};
 					};
 					areaSize[]={75,0,99.386597};
 					flags=1;
@@ -18156,7 +18155,7 @@ class Mission
 				};
 			};
 			id=1319;
-			atlOffset=-2.746851;
+			atlOffset=-2.7473469;
 		};
 		class Item11
 		{
@@ -18981,7 +18980,7 @@ class Mission
 				};
 			};
 			id=1321;
-			atlOffset=-9.7984247;
+			atlOffset=-3.9464931;
 		};
 		class Item12
 		{
@@ -20625,7 +20624,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={12059.204,5.4769669,5037.3071};
-			angle=6.2784543;
+			angle=6.2784519;
 			class Attributes
 			{
 				onActivation="pfh_01 = [flak_01] call ttt_common_fnc_doFlakFire;" \n "pfh_02 = [flak_02] call ttt_common_fnc_doFlakFire;" \n "pfh_03 = [flak_03] call ttt_common_fnc_doFlakFire;" \n "pfh_04 = [flak_04] call ttt_common_fnc_doFlakFire;" \n "pfh_05 = [flak_05] call ttt_common_fnc_doFlakFire;";
