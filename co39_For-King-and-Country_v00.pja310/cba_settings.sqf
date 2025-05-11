@@ -24,7 +24,6 @@ force ttt_medic_backpack_buildTime = 12;                                        
 force ttt_medic_backpack_useAnimation = true;                                                                               //default: true;
 force ttt_medic_backpack_buildAnimation = "Acts_carFixingWheel";                                                            //default: "Acts_carFixingWheel";
 
-
 // Dismantle
 force ttt_dismantle_enable = true; //default false
 force ttt_dismantle_supportedObjects = "['Land_CzechHedgehog_01_old_F']";
@@ -33,3 +32,7 @@ force ttt_dismantle_neededSkill = 1; // 0 = None, 1 = Engineer, 2 = Advanced Eng
 
 //ACE Cookoff
 force ace_cookoff_enableAmmobox = false;
+
+// ACE Repair
+force ace_repair_fullRepairLocation = 3; 
+force ace_repair_egineerSetting_fullRepair = 2;
