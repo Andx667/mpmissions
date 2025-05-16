@@ -155,7 +155,7 @@ class Loadouts {
             vest = "CUP_V_B_Eagle_SPC_AR";
             backpack = "CFP_AssaultPack_Marpat";
 
-            secondaryWeapon = "CUP_launch_Mk153Mod0_blk";
+            secondaryWeapon[] = {"CUP_launch_Mk153Mod0_blk","CUP_launch_Mk153Mod0"};
             secondaryWeaponMagazine = "CUP_SMAW_HEDP_M";
 
             addItemsToBackpack[] = {
@@ -197,6 +197,21 @@ class Loadouts {
                 LIST_2("CUP_7Rnd_45ACP_1911"),
             };
             binoculars = "Binocular";
+        };
+        
+        class TTT_B_RadioOperator_F: B_Soldier_F {
+            vests = "CUP_V_B_Eagle_SPC_RTO";
+            backpack = "CUP_B_Kombat_Radio_Olive";
+
+            addItemsToVes[] += {
+                "ACRE_PRC152",
+            };
+
+            addItemsToBackpack[] = {
+                LIST_2("ACRE_PRC117F"),
+                "ace_flags_blue",
+                "ace_flags_yellow",
+            };
         };
 
         //Crew
@@ -316,10 +331,16 @@ class Loadouts {
                 "SatchelCharge_Remote_Mag",
                 LIST_3("tsp_breach_block_mag"),
                 LIST_3("tsp_breach_package_mag"),
+                "ACE_wirecutter",
+                "ACE_EntrenchingTool",
+                "mts_cutter_folding_saw",
+                LIST_5("ACE_M14"),
             };
 
             class Rank {
                 class SERGEANT {
+                    vest = "CUP_V_B_Eagle_SPC_SL";
+
                     headgear[] = {
                         "CUP_H_LWHv2_MARPAT_comms",
                         "CUP_H_LWHv2_MARPAT_NVG_gog_cov2",
@@ -327,7 +348,8 @@ class Loadouts {
                     };
                     addItemsToVest[] += {
                         "ACE_M26_Clacker",
-        
+                        "ACE_SpraypaintRed",
+                        "ACE_SpraypaintGreen",
                         "ACRE_PRC152",
                     };
                     binoculars = "Binocular";
@@ -390,6 +412,39 @@ class Loadouts {
         
                     };
 
+                };
+            };
+        };
+
+        class B_soldier_repair_F: B_Soldier_F {
+            uniform[] = {
+                //FROG MARPAT
+                "CUP_U_B_USMC_FROG1_WMARPAT",
+                "CUP_U_B_USMC_FROG2_WMARPAT",
+                "CUP_U_B_USMC_FROG3_WMARPAT",
+                "CUP_U_B_USMC_FROG4_WMARPAT",
+            };
+            addItemsToVest[] = {
+                LIST_3("CUP_30Rnd_556x45_Stanag"),
+                LIST_2("CUP_HandGrenade_M67"),
+                LIST_2("SmokeShell"),
+                "SmokeShellGreen",
+            };
+
+            class Rank {
+                class SERGEANT {
+                    vest = "CUP_V_B_Eagle_SPC_SL";
+
+                    headgear[] = {
+                        "CUP_H_LWHv2_MARPAT_comms",
+                        "CUP_H_LWHv2_MARPAT_NVG_gog_cov2",
+                        "CUP_H_LWHv2_MARPAT_comms_cov_fr",
+                    };
+                    addItemsToVest[] += {
+                        "ace_flags_yellow",
+                        "ACRE_PRC152",
+                    };
+                    binoculars = "Binocular";
                 };
             };
         };

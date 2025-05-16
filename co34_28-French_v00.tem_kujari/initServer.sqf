@@ -28,7 +28,7 @@ setDate [2022, 6, 25, 11, 15]; //Datum ändern
 } forEach allUnits;
 
 [
-    [heli_01, mtvr_01], //Werfer
+    [heli_01, mtvr_01],
     [
         ["B_AssaultPack_blk", 1],
         ["Toolkit", 1]
