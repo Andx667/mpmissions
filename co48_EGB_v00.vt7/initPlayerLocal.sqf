@@ -13,7 +13,7 @@
  */
 
 // Hier wird das Briefing automatisch eingefügt und ausgeführt
-#include "briefing.sqf"
+//#include "briefing.sqf"
 
 // Waffe sichern
 // Gegenstück zu [QGVAR(loadoutApplied), [_loadoutTarget, _unitLoadout], _loadoutTarget] call CBA_fnc_targetEvent;

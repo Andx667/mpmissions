@@ -16,13 +16,18 @@
  */
 
 player createDiaryRecord ["Diary", [
-    "Auftrag",
-    "Befreien Sie das Regierungszentrum in Pyrgos: <br/>"
-    + "- Vertreiben Sie die Rebellen <br/>"
-    + "- Befreien und versorgen Sie die Zivilisten"
+    "02 Auftrag",
+    "USMC Platoon"
+    + "landet bei <marker name='MARKER'>TEXT</marker>,<br/>"
+    + "nimmt <marker name='MARKER'>TEXT</marker><br/>"
+    + "nimmt <marker name='MARKER'>TEXT</marker><br/>"
+    + "und richtet sich ein zur zeitlich begrenzten Verteidigung,"
+    + "um, dem USMC einen Brückenkopf zu schaffen für die weitere Intervention in Columbia."
+
+
 ]];
 
 player createDiaryRecord ["Diary", [
-    "Situation",
-    "Nach einem Aufstand der Bevölkerung herrscht pures Chaos auf Altis."
+    "01 Lage",
+    "Truppen des Royal Army Corps of Shahrani haben in Columbia geputscht und die Kontrolle über alle Militäreinrichtungen übernommen."
 ]];

@@ -38,5 +38,19 @@ private _id = [
             //Delay
             3
         ] call CBA_fnc_waitAndExecute;
+
+        if (typeOf ACE_player == "B_soldier_M_F") then {
+            [
+                [
+                "rhs_weap_vhsk2",                   //Classname der zweiten Waffe
+                "",                               //Schalldämpfer oder ähnliches
+                "",                  //Laserpointer / Waffenlicht
+                "rhsusf_acc_eotech_552",                     //Optik
+                ["rhsgref_30rnd_556x45_vhs2", 30],   //Magazin mit Anzahl Kugeln
+                [],                               //Zweites Magazin (z.B. UGL)
+                ""                                 //Zweibein oder ähnliches
+                ]
+            ] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;
+        };
     }
 ] call CBA_fnc_addEventHandler;
