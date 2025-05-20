@@ -46,7 +46,7 @@ class Loadouts {
         "headgear"
     };
 
-    class AllPlayable { //class Blufor
+    class AllUnits { //class Allplayable
             uniform = "BWA3_Uniform_Crye_G3_Fleck";
             vest = "BWA3_Vest_Rifleman_Fleck";
             backpack = "";

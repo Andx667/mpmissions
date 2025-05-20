@@ -26,3 +26,12 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
         _x enableAI "AUTOCOMBAT";
     };
 } forEach allUnits;
+
+{
+    {
+        if (typeof _x == "B_AssaultPack_blk") then {
+            _x addItemCargoGlobal ["ToolKit", 1];
+        };
+    } forEach (everyBackpack _x);
+
+} forEach [vehicle_01];

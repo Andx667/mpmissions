@@ -42,8 +42,8 @@ class Loadouts {
 
     //USMC2014
     class Side {
-        //class BluforPlayers {
-        class BluFor {
+        class BluforPlayers {
+        //class BluFor {
             uniform[] = {
                 //FROG MARPAT
                 //"CUP_U_B_USMC_FROG1_WMARPAT",
@@ -124,7 +124,7 @@ class Loadouts {
         };
 
         class B_soldier_AR_F {
-            vests = "CUP_V_B_Eagle_SPC_AR";
+            vest = "CUP_V_B_Eagle_SPC_AR";
             backpack = "CUP_B_USMC_MOLLE";
 
             primaryWeapon = "CUP_lmg_M249_E2";
@@ -146,6 +146,7 @@ class Loadouts {
 
             addItemsToBackpack[] = {
                 LIST_5("CUP_200Rnd_TE4_Red_Tracer_556x45_M249"),
+                "ACE_SpareBarrel",
             };
 
             binoculars = "Binocular";
@@ -348,9 +349,12 @@ class Loadouts {
                     };
                     addItemsToVest[] += {
                         "ACE_M26_Clacker",
+                        "ACRE_PRC152",
+                    };
+
+                    addItemsToBackpack[] += {
                         "ACE_SpraypaintRed",
                         "ACE_SpraypaintGreen",
-                        "ACRE_PRC152",
                     };
                     binoculars = "Binocular";
                 };
@@ -363,7 +367,7 @@ class Loadouts {
 
             class Rank {
 
-                class Private {
+                class PRIVATE {
                     vest = "CUP_V_B_Eagle_SPC_Corpsman";
                     backpack = "CUP_B_Raid_bag_SSO_Ataka_2_Rug_Swamp";
 
@@ -388,29 +392,25 @@ class Loadouts {
                             LIST_4("ACE_salineIV_500"),
                             LIST_4("ACE_SalineIV_250"),
 
-                            "ACE_Bodybag",
+                            "ACE_Bodybag", 
                     };
                 };
 
-                class Corporal: Private {
+                class CORPORAL: PRIVATE {
                     headgear[] = {
                         "CUP_H_LWHv2_MARPAT_comms",
                         "CUP_H_LWHv2_MARPAT_NVG_gog_cov2",
                         "CUP_H_LWHv2_MARPAT_comms_cov_fr",
                     };
 
-                    addItemsToVest[] = {
+                    addItemsToVest[] += {
                         "ACE_SpraypaintBlue",
                         "ace_flags_blue",
-                        "ACRE_PR152",
+                        "ACRE_PRC152",
                     };
                 };
 
-                class Sergeant: Corporal {
-
-                    addItemsToVest[] = {
-        
-                    };
+                class SERGEANT: CORPORAL {
 
                 };
             };
