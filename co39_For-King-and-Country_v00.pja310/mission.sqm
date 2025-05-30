@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=192;
+		nextID=205;
 	};
 	class Camera
 	{
-		pos[]={18425.498,138.6514,4683.5347};
-		dir[]={-0.67320746,-0.64822727,0.35600507};
-		up[]={-0.57305187,0.7614302,0.30304003};
-		aside[]={0.46750972,-2.6635826e-07,0.8840673};
+		pos[]={1970.8904,479.11328,868.20972};
+		dir[]={0.44118807,-0.28122136,0.85223347};
+		up[]={0.12928864,0.95963937,0.2497444};
+		aside[]={0.88807195,-6.6709617e-08,-0.45974109};
 	};
 };
 binarizationWanted=0;
@@ -18616,13 +18616,14 @@ class Mission
 								position[]={18134.422,4.0004959,4690.0439};
 							};
 							side="East";
-							flags=6;
+							flags=2;
 							class Attributes
 							{
 								init="this addEventHandler [""Reloaded"", { " \n " params [""_unit"", ""_weapon"", ""_muzzle"", ""_newMagazine"", ""_oldMagazine""]; " \n " _unit setVehicleAmmo 1; " \n "}];";
 							};
 							id=1173;
 							type="CUP_O_TK_Soldier";
+							atlOffset=0.72581792;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -18773,13 +18774,14 @@ class Mission
 								position[]={18149.992,4.0004959,4689.5747};
 							};
 							side="East";
-							flags=6;
+							flags=2;
 							class Attributes
 							{
 								init="this addEventHandler [""Reloaded"", { " \n " params [""_unit"", ""_weapon"", ""_muzzle"", ""_newMagazine"", ""_oldMagazine""]; " \n " _unit setVehicleAmmo 1; " \n "}];";
 							};
 							id=1170;
 							type="CUP_O_TK_Soldier";
+							atlOffset=0.72581792;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -20674,14 +20676,14 @@ class Mission
 						position[]={15293.999,124.43229,5213.8389};
 					};
 					side="East";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 						name="flak_01G";
 					};
 					id=1493;
 					type="CUP_O_TK_Soldier";
-					atlOffset=-0.0015399456;
+					atlOffset=1.9558029;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -20866,14 +20868,14 @@ class Mission
 						angles[]={6.1987052,0,6.2560949};
 					};
 					side="East";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 						name="flak_01G_1";
 					};
 					id=1496;
 					type="CUP_O_TK_Soldier";
-					atlOffset=-0.0050735474;
+					atlOffset=1.9571762;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -21059,14 +21061,14 @@ class Mission
 						angles[]={6.2639956,0,0.0056417165};
 					};
 					side="East";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 						name="flak_01G_2";
 					};
 					id=1500;
 					type="CUP_O_TK_Soldier";
-					atlOffset=-0.0073843002;
+					atlOffset=1.581398;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -21252,14 +21254,14 @@ class Mission
 						angles[]={6.2820935,0,0.0033829133};
 					};
 					side="East";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 						name="flak_01G_3";
 					};
 					id=1504;
 					type="CUP_O_TK_Soldier";
-					atlOffset=-0.0022025108;
+					atlOffset=2.0694714;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -21810,7 +21812,7 @@ class Mission
 					};
 					id=1550;
 					type="CUP_O_TK_Soldier";
-					atlOffset=-0.00033116341;
+					atlOffset=-94.72467;
 					class CustomAttributes
 					{
 						class Attribute0

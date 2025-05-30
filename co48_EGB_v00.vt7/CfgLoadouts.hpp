@@ -62,6 +62,7 @@ class Loadouts {
                 "ACRE_SEM52SL",
                 LIST_2("BWA3_15Rnd_9x19_P8"),
                 LIST_4("ACE_Chemlight_IR"),
+                "ACE_IR_Strobe_Item",
                 };
             addItemsToVest[] = {
                 LIST_2("BWA3_DM25"),
@@ -221,6 +222,7 @@ class Loadouts {
             addItemsToBackpack[] += {
                 "ACRE_PRC117F",
                 LIST_10("BWA3_DM32_Purple"),
+                "itc_land_tablet_fdc",
             };
 
         };
@@ -274,6 +276,7 @@ class Loadouts {
         class B_officer_F: B_Soldier_SL_F {
             addItemsToVest[] += {
                 "ACRE_PRC152",
+                "itc_land_tablet_fdc",
                 };
         };
 // San
