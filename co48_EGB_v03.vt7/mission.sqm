@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=33;
+		nextID=38;
 	};
 	class Camera
 	{
 		pos[]={15291.389,21.353867,16720.447};
-		dir[]={0.56542087,-0.59077036,0.57565176};
-		up[]={0.41398087,0.80683148,0.42147067};
-		aside[]={0.71344751,7.7206641e-07,-0.70077008};
+		dir[]={0.56539679,-0.59074509,0.57562727};
+		up[]={0.41395795,0.80685824,0.42144823};
+		aside[]={0.71341807,0,-0.70073867};
 	};
 };
 binarizationWanted=0;
@@ -460,7 +460,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Scenario";
 		class Attribute0
@@ -2127,7 +2127,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="HierDeineSteamIDeintragen";
+											value="76561198014636795 ";
 										};
 									};
 								};
@@ -4597,13 +4597,13 @@ class Mission
 						angles[]={0.0045412821,1.5224783,6.2536163};
 					};
 					side="East";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=863;
 					type="CUP_O_RU_Soldier";
-					atlOffset=-0.00089263916;
+					atlOffset=0.9841938;
 				};
 			};
 			class Attributes
@@ -9600,7 +9600,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={14993.621,4.7100048,15094.832};
-						angles[]={-0,4.8343706,6.2649875};
+						angles[]={0,4.8343706,6.2649875};
 					};
 					side="Civilian";
 					flags=6;
@@ -9671,7 +9671,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={14993.648,6.2196722,15094.781};
-				angles[]={-0,4.8343706,6.2649875};
+				angles[]={0,4.8343706,6.2649875};
 			};
 			side="Civilian";
 			flags=6;
@@ -16528,7 +16528,6 @@ class Mission
 					};
 					id=1912;
 					type="CUP_O_RU_Soldier";
-					atlOffset=-0.0012989044;
 				};
 			};
 			class Attributes

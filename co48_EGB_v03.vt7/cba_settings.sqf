@@ -26,5 +26,5 @@ force ttt_medic_backpack_buildAnimation = "Acts_carFixingWheel";                
 
 
 //
-force ttt_signalpanel_enable = true;                                                //default: false;
-force ttt_signalpanel_allowedBackpacks = '["ttt_backpack_radio_olive"]';   //default: [];
+force ttt_signalpanel_enable = true;                                                   //default: false;
+force ttt_signalpanel_supportedBackpacks = '["ttt_backpack_radio_olive"]';   //default: [];

@@ -46,7 +46,7 @@ class Loadouts {
         "headgear"
     };
 
-    class AllUnits { //class Allplayable
+    class Allplayable { //class Allplayable
             uniform = "BWA3_Uniform_Crye_G3_Fleck";
             vest = "BWA3_Vest_Rifleman_Fleck";
             backpack = "";
@@ -343,6 +343,7 @@ class Loadouts {
                         "ItemAndroid",
                         "ace_flags_blue",
                         "ACE_SurgicalKit",
+                        "ACRE_PRC152"
                     };
 
                     addItemsToBackpack[] += {
