@@ -406,6 +406,7 @@ class Loadouts {
             };
             addItemsToBackpack[] = {
                 "Toolkit",
+                "ace_flags_yellow"
             };
 
             class Rank {
@@ -418,7 +419,6 @@ class Loadouts {
                     };
                     addItemsToBackpack[] += {
                         "ACRE_PRC117F",
-                        "ace_flags_yellow"
                     };
                 };
             };

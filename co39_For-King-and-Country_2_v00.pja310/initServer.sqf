@@ -5,7 +5,7 @@
     oder auch zum Beladen von Kisten verwenden kann.
  */
 
-setDate [2022, 5, 25, 3, 45]; //Datum ändern
+setDate [2022, 5, 27, 10, 00]; //Datum ändern
 
 {
     if (side _x != west) then {
@@ -30,7 +30,7 @@ setDate [2022, 5, 25, 3, 45]; //Datum ändern
 // Kisten befüllen
 // Fhz Basis
 [
-    [quad_01, mtvr_01, mtvr_02, mtvr_03, plane_01, plane_02],
+    [med_veh_01, supply_veh_01, quad_01],
     [
         ["Toolkit", 1],
         ["B_AssaultPack_blk" ,1]

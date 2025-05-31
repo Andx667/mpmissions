@@ -42,6 +42,7 @@
                         [ACE_player, "TTT_blue_emblem"] call BIS_fnc_setUnitInsignia;
                     };
                     case "B_helicrew_F";
+                    case "B_soldier_repair_F";
                     case "B_Helipilot_F": {
                         [ACE_player, "TTT_silver_emblem"] call BIS_fnc_setUnitInsignia;
                     };
