@@ -244,6 +244,64 @@ class Loadouts {
             };
         };
 
+        class B_soldier_AT_F: B_Soldier_F {
+            backpack = "B_AssaultPack_rgr";
+
+            secondaryWeapon[] = {
+                "launch_MRAWS_green_F",
+                "launch_MRAWS_olive_F",
+                "launch_MRAWS_sand_F",
+            };
+            secondaryWeaponMagazine = "MAA_MAAWS_HEDP502";
+
+            addItemsToBackpack[] = {
+                "MAA_MAAWS_HEDP502",
+                "MAA_MAAWS_MT756",
+            };
+
+        };
+
+        class B_soldier_AAT_F: B_Soldier_F {
+            backpack = "NOR_Predator_Backpack";
+
+            addItemsToBackpack[] = {
+                LIST_3("MAA_MAAWS_HEDP502"),
+                LIST_2("MAA_MAAWS_MT756"),
+            };
+        };
+
+        class B_engineer_F: B_Soldier_F {
+            backpack = "NOR_Predator_Backpack";
+
+            addItemsToVest[] += {
+                "ACE_DefusalKit",
+                "ACE_Clacker",
+            };
+            addItemsToBackpack[] += {
+                "ACE_EntrenchingTool",
+                "ACE_SpraypaintGreen",
+                "ACE_SpraypaintRed",
+                "mts_cutter_folding_saw",
+                "ACE_wirecutter",
+                LIST_3("DemoCharge_Remote_Mag"),
+
+            };
+            class Rank {
+
+                class PRIVATE {
+
+                }; 
+
+                class SERGEANT: PRIVATE {
+                    addItemsToVest[] += {
+                        "ACRE_152",
+                    };
+                };
+
+            };
+
+        };
+
         //Pilots
         class B_helicrew_F {
             uniform = "NOR_Combat_Uniform_Gloves";
