@@ -25,6 +25,7 @@ private _id = [
         [
             {//Function
                 [ACE_Player, currentWeapon ACE_Player, true] call ace_safemode_fnc_setWeaponSafety;
+
                 private _place = -1;
                     {
                         if(isPlayer _x && local _x) then {
@@ -39,14 +40,14 @@ private _id = [
             3
         ] call CBA_fnc_waitAndExecute;
 
-        if (typeOf ACE_player == "B_soldier_M_F") then {
+        if (typeOf ACE_player == "B_soldier_exp_F") then {
             [
                 [
-                "rhs_weap_vhsk2",                   //Classname der zweiten Waffe
+                "CUP_sgun_M1014_Entry_vfg",                   //Classname der zweiten Waffe
                 "",                               //Schalldämpfer oder ähnliches
                 "",                  //Laserpointer / Waffenlicht
-                "rhsusf_acc_eotech_552",                     //Optik
-                ["rhsgref_30rnd_556x45_vhs2", 30],   //Magazin mit Anzahl Kugeln
+                "",                     //Optik
+                ["CUP_6Rnd_12Gauge_Pellets_No00_Buck", 6],   //Magazin mit Anzahl Kugeln
                 [],                               //Zweites Magazin (z.B. UGL)
                 ""                                 //Zweibein oder ähnliches
                 ]
@@ -54,3 +55,18 @@ private _id = [
         };
     }
 ] call CBA_fnc_addEventHandler;
+
+//Damit die Insignia auch bei Respawn gesetzt wird
+params ["_player"];
+_player addMPEventHandler ["MPRespawn", {
+	params ["_unit", "_corpse"];
+	private _insignia = [_corpse] call BIS_fnc_getUnitInsignia;
+	[_unit, _insignia] spawn {
+		params ["_unit", "_insignia"];
+		sleep 1;
+		isNil {
+			_unit setVariable ["BIS_fnc_setUnitInsignia_class", nil]; // you can also do [_unit, ""] call BIS_fnc_setUnitInsignia, but this way is faster (plus no network traffic)
+			[_unit, _insignia] call BIS_fnc_setUnitInsignia;
+		};
+	};
+}];

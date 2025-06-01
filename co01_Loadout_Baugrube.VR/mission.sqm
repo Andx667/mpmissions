@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=425;
+		nextID=439;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7714.5591,11.079432,5092.5098};
-		dir[]={0.75056231,-0.56027138,0.35047132};
-		up[]={0.50765592,0.82830048,0.23704699};
-		aside[]={0.42310888,2.7346323e-07,-0.90612364};
+		pos[]={7754.0815,14.83394,5097.6318};
+		dir[]={-0.5843662,-0.41163307,0.6993385};
+		up[]={-0.26394311,0.91134965,0.31587312};
+		aside[]={0.76736575,0,0.64120966};
 	};
 };
 binarizationWanted=0;
@@ -36,13 +36,14 @@ addons[]=
 	"A3_Characters_F_Tank",
 	"ace_explosives",
 	"A3_Characters_F_Orange",
-	"ace_nouniformrestrictions"
+	"ace_nouniformrestrictions",
+	"cfp_uniforms"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=7;
+		items=8;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -91,6 +92,12 @@ class AddonsMetaData
 			name="ACE3 - No Uniform Restrictions";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
+		};
+		class Item7
+		{
+			className="cfp_uniforms";
+			name="cfp_uniforms";
+			author="CFP Team";
 		};
 	};
 };
