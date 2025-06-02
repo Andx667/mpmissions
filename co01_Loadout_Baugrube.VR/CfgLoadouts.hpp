@@ -37,8 +37,14 @@ class Loadouts {
     resetLoadout = 1;
     randomizationMode = 1;
     customGear = 300;
-    //
-    customGearAllowedCategories[] = {};
+    customGearAllowedCategories[] = {
+        "uniform",
+        "vest",
+        "primaryWeapon",
+        "primaryWeaponOptics",
+        "goggles",
+        "headgear"
+    };
 
     class Side {    
         class Blufor { //BluforPlayers
@@ -160,7 +166,7 @@ class Loadouts {
         class B_Soldier_GL_F: B_Soldier_F {
             primaryWeapon[] = {
                 "CUP_arifle_HK416_AGL_Black",
-                //"CUP_arifle_HK416_AGL_Desert",
+                "CUP_arifle_HK416_AGL_Desert",
                 "CUP_arifle_HK416_AGL_Wood",
                 };
             primaryWeaponUnderbarrelMagazine = "CUP_1Rnd_HE_M203";
@@ -177,6 +183,12 @@ class Loadouts {
         };
 
         class B_soldier_exp_F: B_Soldier_GL_F {
+            primaryWeapon[] = {
+                "CUP_arifle_HK416_CQB_Black",
+                "CUP_arifle_HK416_CQB_Desert",
+                "CUP_arifle_HK416_CQB_Wood",
+                };
+            
             backpack = "NOR_Predator_Backpack";
             addItemsToVest[] += {
                 "ACE_DefusalKit",
@@ -210,7 +222,7 @@ class Loadouts {
                 "CUP_arifle_HK416_CQB_Black",
                 "CUP_arifle_HK416_CQB_Desert",
                 "CUP_arifle_HK416_CQB_Wood",
-                }
+                };
             backpack = "B_AssaultPack_rgr";
 
             secondaryWeapon[] = {
@@ -269,10 +281,10 @@ class Loadouts {
         class B_soldier_M_F {
             primaryWeapon[] = {
                 "CUP_arifle_HK417_20",
-                //"CUP_arifle_HK417_20_Desert",
+                "CUP_arifle_HK417_20_Desert",
                 "CUP_arifle_HK417_20_Wood"
                 };
-            primaryWeaponMagazine = "CUP_20Rnd_TE1_Red_Tracer_762x51_HK417";
+            primaryWeaponMagazine = "CUP_20Rnd_762x51_HK417";
             primaryWeaponOptics[] = {
                 "CUP_optic_SB_11_4x20_PM",
                 "CUP_optic_SB_11_4x20_PM_tan",
@@ -281,11 +293,11 @@ class Loadouts {
             primaryWeaponUnderbarrel = "CUP_bipod_Harris_1A2_L_BLK";
 
             addItemsToVest[] += {
-                LIST_8("CUP_20Rnd_TE1_Red_Tracer_762x51_HK417"),
+                LIST_8("CUP_20Rnd_762x51_HK417"),
                 "ACE_Rangecard",
             };
             addItemsToBackpack[] = {
-                LIST_8("CUP_20Rnd_762x51_HK417"),
+                LIST_8("CUP_20Rnd_TE1_Red_Tracer_762x51_HK417"),
             };
             binoculars = "ACE_Yardage450";
         };
@@ -333,9 +345,29 @@ class Loadouts {
             };
         };
 
+        class B_soldier_AA_F: B_Soldier_F {
+            backpack = "";
+            secondaryWeapon = "BWA3_Fliegerfaust";
+            secondaryWeaponMagazine = "BWA3_Fliegerfaust_Mag";
+        };
+
+        class B_soldier_AAA_F: B_Soldier_F {
+            backpack = "NOR_Predator_Backpack";
+
+            addItemsToBackpack[] += {
+                LIST_3("BWA3_Fliegerfaust_Mag"),
+            };
+        };
+
         //Unterstützung
         class B_engineer_F: B_Soldier_F {
             backpack = "NOR_Predator_Backpack";
+
+            primaryWeapon[] = {
+                "CUP_arifle_HK416_CQB_Black",
+                "CUP_arifle_HK416_CQB_Desert",
+                "CUP_arifle_HK416_CQB_Wood",
+                };
 
             addItemsToVest[] += {
                 "ACE_DefusalKit",
@@ -364,8 +396,14 @@ class Loadouts {
         };
 
         class B_soldier_mine_F: B_Soldier_F {
-            handgunWeapon = "ACE_VMH3";
             backpack = "NOR_Predator_Backpack";
+
+            primaryWeapon[] = {
+                "CUP_arifle_HK416_CQB_Black",
+                "CUP_arifle_HK416_CQB_Desert",
+                "CUP_arifle_HK416_CQB_Wood",
+                };
+            handgunWeapon = "ACE_VMH3";
 
             addItemsToVest[] += {
                 "ACE_DefusalKit",
@@ -388,6 +426,58 @@ class Loadouts {
                     };
                 };
             };
+        };
+
+        class B_sniper_F {
+            uniform = "U_B_FullGhillie_lsh";
+            vest = "V_Chestrig_khk";
+            backpack = "B_Kitbag_cbr";
+            headgear = "CUP_H_FR_BeanieGreen";
+            
+            primaryWeapon = "srifle_LRR_camo_F";
+            primaryWeaponMagazine = "ACE_7Rnd_408_305gr_Mag";
+            primaryWeaponOptics = "optic_LRPS";
+
+            addItemsToVest[] += {
+                "ACE_microDAGR",
+                "ACE_Kestrel4500",
+                "ACE_ATragMX",
+                "ACE_Rangecard",
+                LIST_5("ACE_7Rnd_408_305gr_Mag"),
+            };
+
+            addItemsToBackpack[] += {
+                "ACE_Tripod",
+                LIST_5("ACE_7Rnd_408_305gr_Mag"),
+                "ClaymoreDirectionalMine_Remote_Mag",
+                "ACE_Clacker",
+                "ACE_DefusalKit",
+            };
+            binoculars = "ACE_Vector";
+        };
+
+        class B_spotter_F: B_soldier_M_F {
+            uniform = "U_B_FullGhillie_lsh";
+            vest = "V_Chestrig_khk";
+            backpack = "B_Kitbag_cbr";
+            headgear = "CUP_H_FR_BeanieGreen";
+
+            addItemsToVest[] += {
+                "ACE_microDAGR",
+                "ACE_Kestrel4500",
+                "ACE_ATragMX",
+            };
+
+            addItemsToBackpack[] = {
+                "ACE_SpottingScope",
+                "ACE_EntrenchingTool",
+                LIST_5("ACE_7Rnd_408_305gr_Mag"),
+                "ACRE_PRC117F",
+                "ClaymoreDirectionalMine_Remote_Mag",
+                "ACE_Clacker",
+                "ACE_DefusalKit",
+            };
+            binoculars = "ACE_Vector";
         };
 
         //Pilots
@@ -420,8 +510,6 @@ class Loadouts {
             addItemsToBackpack[] = {
                 "ACRE_PRC117F",
             };
-
-
         };
 
         //Führung
@@ -473,6 +561,12 @@ class Loadouts {
         class B_medic_F {
             vest = "CUP_V_CPC_medicalbelt_coy";
             backpack = "NOR_Predator_Backpack";
+
+            primaryWeapon[] = {
+                "CUP_arifle_HK416_CQB_Black",
+                "CUP_arifle_HK416_CQB_Desert",
+                "CUP_arifle_HK416_CQB_Wood",
+            };
             
             class Rank {
 
