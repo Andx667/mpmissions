@@ -475,6 +475,7 @@ class Loadouts {
             addItemsToBackpack[] += {
                 LIST_10("CUP_1Rnd_SmokeRed_M203"),
                 LIST_5("ACE_HuntIR_M203"),
+                "TTT_Spraypaint2",
             };
 
         };
