@@ -55,16 +55,16 @@ class Loadouts {
                 //"NOR_Combat_Uniform_Gloves_Rolled",
                 //"NOR_Combat_Uniform_Rolled",
                 //Gorka
-                "NOR_Gorka_Uniform",
-                "NOR_Gorka_Uniform_Pads",
+                //"NOR_Gorka_Uniform",
+                //"NOR_Gorka_Uniform_Pads",
                 //Winter
-                //"NOR_Gorka_Winter_Uniform",
-                //"NOR_Gorka_Winter_Uniform_Pads",
+                "NOR_Gorka_Winter_Uniform",
+                /"NOR_Gorka_Winter_Uniform_Pads",
                 //Winter mixed
-                //"NOR_Gorka_Mixed_Uniform",
-                //"NOR_Gorka_Mixed_Uniform_Pads",
-                //"NOR_Gorka_Mixed_Alt_Uniform",
-                //"NOR_Gorka_Mixed_Alt_Uniform_Pads",
+                "NOR_Gorka_Mixed_Uniform",
+                "NOR_Gorka_Mixed_Uniform_Pads",
+                "NOR_Gorka_Mixed_Alt_Uniform",
+                "NOR_Gorka_Mixed_Alt_Uniform_Pads",
                 //Grey
                 //"NOR_Gorka_Grey_Uniform",
                 //"NOR_Gorka_Grey_Uniform_Pads",
@@ -80,10 +80,10 @@ class Loadouts {
                 //"NOR_Helmet_Winter_Comms",
                 //"NOR_Helmet_Winter_Comms_cov",
                 //OPSCORE
-                "NOR_Opscore",
-                "NOR_Opscore_Tan",
-                "NOR_Opscore_Multi",
-                //"NOR_Opscore_Winter",
+                //"NOR_Opscore",
+                //"NOR_Opscore_Tan",
+                //"NOR_Opscore_Multi",
+                "NOR_Opscore_Winter",
                 //SF
                 //"NOR_Opscore_SF",
                 //"NOR_Opscore_Tan_SF",
@@ -135,14 +135,14 @@ class Loadouts {
                 "CUP_G_Oakleys_Embr",
                 "CUP_G_PMC_Facewrap_Tan_Glasses_Dark",
                 "CUP_G_PMC_Facewrap_Tan_Glasses_Ember",
-                //"CUP_G_PMC_Facewrap_Winter_Glasses_Dark",
-                //"CUP_G_PMC_Facewrap_Winter_Glasses_Ember",
+                "CUP_G_PMC_Facewrap_Winter_Glasses_Dark",
+                "CUP_G_PMC_Facewrap_Winter_Glasses_Ember",
                 "CUP_G_Grn_Scarf_Shades_GPSCombo_Beard",
                 "CUP_G_Grn_Scarf_Shades_GPSCombo_Beard_Blonde",
                 "CUP_G_Tan_Scarf_Shades_GPSCombo_Beard",
                 "CUP_G_Tan_Scarf_Shades_GPSCombo_Beard_Blonde",
-                //"CUP_G_White_Scarf_Shades_GPSCombo_Beard",
-                //"CUP_G_White_Scarf_Shades_GPSCombo_Beard_Blonde",
+                "CUP_G_White_Scarf_Shades_GPSCombo_Beard",
+                "CUP_G_White_Scarf_Shades_GPSCombo_Beard_Blonde",
                 };
             nvgoggles = "";
 
