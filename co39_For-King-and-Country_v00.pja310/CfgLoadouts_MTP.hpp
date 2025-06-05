@@ -640,6 +640,7 @@ class Loadouts {
                 LIST_3("SmokeShellPurple"),
                 LIST_3("SmokeShellYellow"),
                 "ACE_HandFlare_Green",
+                "ACE_microdagr",
             };
         };
         
