@@ -179,6 +179,7 @@ class Loadouts {
                 LIST_12("CUP_1Rnd_HE_M203"),
                 LIST_5("CUP_1Rnd_SmokeRed_M203"),
                 LIST_5("CUP_1Rnd_Smoke_M203"),
+                //LIST_5("ACE_40mm_Pike"),
             };
         };
 
@@ -209,6 +210,10 @@ class Loadouts {
         class TTT_B_RadioOperator_F: B_Soldier_F {
             backpack = "NOR_Predator_Radio_Backpack";
 
+            addItemsToVest[] += {
+                "ItemAndroid",
+            };
+
             addItemsToBackpack[] = {
                 LIST_2("ACRE_PRC117F"),
                 LIST_8("SmokeShellPurple"),
@@ -222,8 +227,7 @@ class Loadouts {
                 "CUP_arifle_HK416_CQB_Black",
                 "CUP_arifle_HK416_CQB_Desert",
                 "CUP_arifle_HK416_CQB_Wood",
-                };
-            backpack = "B_AssaultPack_rgr";
+            };
 
             secondaryWeapon[] = {
                 "launch_MRAWS_green_F",
@@ -326,7 +330,13 @@ class Loadouts {
             vest = "CFP_FAPC_MG_OGA";
             backpack = "";
 
-            primaryWeapon = "CUP_lmg_FNMAG_RIS_modern";
+            //primaryWeapon = "CUP_lmg_FNMAG_RIS_modern";
+            primaryWeapon[] = {
+                "CUP_lmg_Mk48_od",
+                //"CUP_lmg_Mk48_des",
+                //"CUP_lmg_Mk48_tan",
+                "CUP_lmg_Mk48",
+                };
             primaryWeaponMagazine = "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M";
             primaryWeaponOptics[] = {
                 //"CUP_optic_ACOG_TA648_308_Black",
@@ -334,7 +344,9 @@ class Loadouts {
                 //"CUP_optic_ACOG_TA648_308_Desert",
                 //"CUP_optic_ACOG_TA648_308_od",
                 //"CUP_optic_ACOG_TA648_308_Wdl",
-                ""
+                "CUP_optic_Eotech553_Black",
+                "CUP_optic_Eotech553_Coyote",
+                //"CUP_optic_Eotech553_OD",
                 };
             primaryWeaponUnderbarrel = "";
             primaryWeaponUnderbarrelMagazine = "";

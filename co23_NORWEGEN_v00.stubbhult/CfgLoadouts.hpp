@@ -72,7 +72,6 @@ class Loadouts {
             vest[] = {
                 "CFP_RAV_operator_OGA",
                 };
-            backpack = "B_AssaultPack_cbr";
             headgear[] = {
                 //Regular used by Home Guard
                 //"NOR_Helmet_Comms",
@@ -254,6 +253,7 @@ class Loadouts {
 
             addItemsToVest[] += {
                 "ACE_EntrenchingTool",
+                "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M",
             };
 
             addItemsToBackpack[] = {
@@ -282,13 +282,13 @@ class Loadouts {
         class B_soldier_M_F {
             primaryWeapon[] = {
                 "CUP_arifle_HK417_20",
-                "CUP_arifle_HK417_20_Desert",
+                //"CUP_arifle_HK417_20_Desert",
                 "CUP_arifle_HK417_20_Wood"
                 };
             primaryWeaponMagazine = "CUP_20Rnd_TE1_Red_Tracer_762x51_HK417";
             primaryWeaponOptics[] = {
                 "CUP_optic_SB_11_4x20_PM",
-                "CUP_optic_SB_11_4x20_PM_tan",
+                //"CUP_optic_SB_11_4x20_PM_tan",
                 "CUP_optic_SB_11_4x20_PM_od",
                 };
             primaryWeaponUnderbarrel = "CUP_bipod_Harris_1A2_L_BLK";
@@ -314,7 +314,14 @@ class Loadouts {
 
             primaryWeapon = "CUP_lmg_m249_pip2";
             primaryWeaponMagazine = "CUP_200Rnd_TE1_Red_Tracer_556x45_M249_Pouch";
-            primaryWeaponOptics = "CUP_optic_Eotech553_Black";
+            primaryWeaponOptics[] = {
+                "CUP_optic_Elcan_SpecterDR_black",
+                //"CUP_optic_Elcan_SpecterDR_coyote",
+                "CUP_optic_Elcan_SpecterDR_od",
+                "CUP_optic_Eotech553_Black",
+                //"CUP_optic_Eotech553_Coyote",
+                "CUP_optic_Eotech553_OD",
+            };
             primaryWeaponUnderbarrel = "";
             primaryWeaponUnderbarrelMagazine = "";
 
@@ -327,7 +334,13 @@ class Loadouts {
             vest = "CFP_FAPC_MG_OGA";
             backpack = "";
 
-            primaryWeapon = "CUP_lmg_FNMAG_RIS_modern";
+            //primaryWeapon = "CUP_lmg_FNMAG_RIS_modern";
+            primaryWeapon[] = {
+                "CUP_lmg_Mk48_od",
+                //"CUP_lmg_Mk48_des",
+                //"CUP_lmg_Mk48_tan",
+                "CUP_lmg_Mk48",
+                };
             primaryWeaponMagazine = "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M";
             primaryWeaponOptics[] = {
                 //"CUP_optic_ACOG_TA648_308_Black",
@@ -335,7 +348,9 @@ class Loadouts {
                 //"CUP_optic_ACOG_TA648_308_Desert",
                 //"CUP_optic_ACOG_TA648_308_od",
                 //"CUP_optic_ACOG_TA648_308_Wdl",
-                ""
+                "CUP_optic_Eotech553_Black",
+                "CUP_optic_Eotech553_Coyote",
+                //"CUP_optic_Eotech553_OD",
                 };
             primaryWeaponUnderbarrel = "";
             primaryWeaponUnderbarrelMagazine = "";
