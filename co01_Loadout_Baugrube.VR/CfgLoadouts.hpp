@@ -363,32 +363,34 @@ class Loadouts {
         class B_engineer_F: B_Soldier_F {
             backpack = "NOR_Predator_Backpack";
 
-            primaryWeapon[] = {
-                "CUP_arifle_HK416_CQB_Black",
-                "CUP_arifle_HK416_CQB_Desert",
-                "CUP_arifle_HK416_CQB_Wood",
-                };
+            // primaryWeapon[] = {
+            //     "CUP_arifle_HK416_CQB_Black",
+            //     "CUP_arifle_HK416_CQB_Desert",
+            //     "CUP_arifle_HK416_CQB_Wood",
+            //     };
 
             addItemsToVest[] += {
                 "ACE_DefusalKit",
                 "ACE_Clacker",
+                "ACE_SpraypaintGreen",
+                "ACE_SpraypaintRed",
             };
             addItemsToBackpack[] += {
                 "ACE_EntrenchingTool",
-                "ACE_SpraypaintGreen",
-                "ACE_SpraypaintRed",
                 "mts_cutter_folding_saw",
                 "ACE_wirecutter",
                 LIST_3("DemoCharge_Remote_Mag"),
                 "ACE_VMH3",
                 LIST_12("mts_items_marker_mines"),
                 LIST_12("mts_items_marker_yellow"),
+                LIST_3("ACE_M14"),
             };
             class Rank {
 
                 class PRIVATE {}; 
                 class SERGEANT: PRIVATE {
                     addItemsToVest[] += {
+                        "ItemAndroid",
                         "ACRE_152",
                     };
                 };
@@ -423,6 +425,45 @@ class Loadouts {
                 class SERGEANT: PRIVATE {
                     addItemsToVest[] += {
                         "ACRE_152",
+                    };
+                };
+            };
+        };
+
+    //Fahrzeugbesatzung
+        class B_crew_F {
+            uniform[] = {
+                "NOR_Combat_Uniform",
+                "NOR_Combat_Uniform_Gloves",
+                "NOR_Combat_Uniform_Gloves_Rolled",
+                "NOR_Combat_Uniform_Rolled",
+                };
+            vest = "CUP_V_PMC_CIRAS_Coyote_Veh";
+            headgear = "H_HelmetCrew_I_E";
+
+            primaryWeapon = "CUP_smg_MP7";
+            primaryWeaponMagazine = "CUP_20Rnd_46x30_MP7";
+            primaryWeaponOptics = "";
+            primaryWeaponPointer = "";
+
+            addItemsToVest[] += {
+                LIST_2("CUP_20Rnd_46x30_MP7"),
+            };
+
+            class Rank {
+                class PRIVATE {}; 
+                class SERGEANT: PRIVATE {
+                    addItemsToVest[] += {
+                        "ItemAndroid",
+                        "ACRE_152",
+                    };
+                    binoculars = "Rangefinder";
+                };
+                class LIEUTENANT: SERGEANT {
+                    backpack = "NOR_Predator_Radio_Backpack";
+
+                    addItemsToBackpack[] += {
+                        "ACRE_PRC117F",
                     };
                 };
             };
@@ -651,6 +692,160 @@ class Loadouts {
                         "ACRE_PRC117F"
                     };
                 };
+            };
+        };
+        
+        //Recon
+        class B_recon_F {
+            uniform[] = {
+                //Grey
+                "NOR_Gorka_Grey_Uniform",
+                "NOR_Gorka_Grey_Uniform_Pads",
+                };
+            backpack = "CFP_Kitbag_Drab";
+            headgear[] = {
+                //SF
+                //"NOR_Opscore_SF",
+                //"NOR_Opscore_Tan_SF",
+                //"NOR_Opscore_Winter_SF",
+                //Beanies
+                "CUP_H_PMC_Beanie_Headphones_Black",
+                "CUP_H_PMC_Beanie_Headphones_Khaki",
+                "CUP_H_PMC_Beanie_Headphones_Winter",
+                };
+
+            addItemsToVest[] = {
+                LIST_2("CUP_HandGrenade_M67"),
+                LIST_2("SmokeShell"),
+                "SmokeShellGreen",
+                "ACRE_PRC152",
+                LIST_3("Chemlight_red"),
+                "ACE_mircodagr",
+                LIST_8("CUP_30Rnd_556x45_PMAG_BLACK"),
+            };
+
+            addItemsToBackpack[] = {
+                "NOR_Opscore_Multi_SF",
+            };
+            primaryWeaponOptics[] = {
+                "CUP_optic_Elcan_SpecterDR_KF_RMR",
+                "CUP_optic_Elcan_SpecterDR_KF_RMR_od",
+                "CUP_optic_Elcan_SpecterDR_KF_RMR_coyote",
+                "CUP_optic_Elcan_SpecterDR_KF_RMR_black",
+            };
+            primaryWeaponMuzzle[] = {
+                "CUP_muzzle_snds_G36_black",
+                "CUP_muzzle_snds_G36_desert",
+                "CUP_muzzle_snds_G36_hex",
+                "CUP_muzzle_snds_G36_wood",
+                };
+            primaryWeaponUnderbarrel = "";
+            primaryWeaponUnderbarrelMagazine = "";
+            primaryWeaponPointer = "ACE_DBAL_A3_Red";
+            secondaryWeapon = "";
+            secondaryWeaponMagazine = "";
+
+            binoculars = "ACE_Vector";
+        };
+
+        class B_recon_LAT_F: B_recon_F {
+            secondaryWeapon = "BWA3_RGW90_Loaded";
+        };
+
+        class B_recon_medic_F: B_recon_F {
+            addItemsToBackpack[] = {
+                LIST_30("ACE_Suture"),
+                LIST_16("ACE_Tourniquet"),
+                LIST_10("ACE_packingBandage"),
+                LIST_30("ACE_elasticBandage"),
+                LIST_20("ACE_quikclot"),
+
+                LIST_16("ACE_Epinephrine"),
+                LIST_8("ACE_Painkillers"),
+                LIST_8("ACE_morphine"),
+
+                LIST_8("ACE_SalineIV"),
+                LIST_4("ACE_salineIV_500"),
+                LIST_4("ACE_SalineIV_250"),
+                "ACE_SurgicalKit",
+            };
+        };
+
+        class B_recon_exp_F: B_recon_F {
+            addItemsToVest[] += {
+                "ACE_Defusalkit",
+                "ACE_Clacker",
+            };
+            addItemsToBackpack[] = {
+                "ACE_EntrenchingTool",
+                "ACE_SpraypaintGreen",
+                "ACE_SpraypaintRed",
+                "mts_cutter_folding_saw",
+                "ACE_wirecutter",
+                LIST_3("DemoCharge_Remote_Mag"),
+                "ACE_VMH3",
+                LIST_12("mts_items_marker_mines"),
+                LIST_12("mts_items_marker_yellow"),
+            };
+        };
+        
+        class B_recon_JTAC_F: B_recon_F {
+
+            addItemsToVest[] += {
+                "ItemAndroid",
+            };
+
+            addItemsToBackpack[] += {
+                "ACRE_PRC117F",
+                "Laserbatteries",
+            };
+            binoculars = "Laserdesignator_01_khk_F";
+        };
+
+        class B_recon_TL_F: B_recon_JTAC_F {
+
+        };
+
+        class B_recon_M_F {
+            uniform[] = {
+                //Grey
+                "NOR_Gorka_Grey_Uniform",
+                "NOR_Gorka_Grey_Uniform_Pads",
+            };
+            headgear[] = {
+                //SF
+                //"NOR_Opscore_SF",
+                //"NOR_Opscore_Tan_SF",
+                //"NOR_Opscore_Winter_SF",
+                //Beanies
+                "CUP_H_PMC_Beanie_Headphones_Black",
+                "CUP_H_PMC_Beanie_Headphones_Khaki",
+                "CUP_H_PMC_Beanie_Headphones_Winter",
+            };
+
+            primaryWeapon[] = {
+                "CUP_arifle_HK417_20",
+                "CUP_arifle_HK417_20_Desert",
+                "CUP_arifle_HK417_20_Wood",
+            };
+            primaryWeaponMagazine = "ACE_20Rnd_762x51_M118LR_Mag";
+            primaryWeaponOptics = "CUP_optic_SB_3_12x50_PMII";
+            primaryWeaponMuzzle = "CUP_muzzle_snds_socom762rc";
+            primaryWeaponUnderbarrel[] = {
+                "CUP_bipod_VLTOR_Modpod_black",
+                "CUP_bipod_VLTOR_Modpod_od",
+                "CUP_bipod_VLTOR_Modpod",
+            };
+            primaryWeaponUnderbarrelMagazine = "";
+            primaryWeaponPointer = "ACE_DBAL_A3_Red";
+
+            addItemsToVest[] = {
+                LIST_8("ACE_20Rnd_762x51_M118LR_Mag"),
+                "ACE_Rangecard",
+            };
+            addItemsToBackpack[] = {
+                LIST_8("ACE_20Rnd_762x51_Mag_SD"),
+                "NOR_Opscore_Multi_SF",
             };
         };
     };

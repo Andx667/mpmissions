@@ -118,6 +118,7 @@ class Loadouts {
             primaryWeaponOptics = "CUP_optic_CompM4";
             primaryWeaponUnderbarrel = "";
             primaryWeaponUnderbarrelMagazine = "";
+            primaryWeaponMuzzle = "";
             primaryWeaponPointer = "ACE_DBAL_A3_Red";
             secondaryWeapon = "";
             secondaryWeaponMagazine = "";
@@ -415,6 +416,58 @@ class Loadouts {
                     };
                 };
             };
+        };
+
+            class B_sniper_F {
+            uniform = "U_B_FullGhillie_lsh";
+            vest = "V_Chestrig_khk";
+            backpack = "B_Kitbag_cbr";
+            headgear = "CUP_H_FR_BeanieGreen";
+            
+            primaryWeapon = "srifle_LRR_camo_F";
+            primaryWeaponMagazine = "ACE_7Rnd_408_305gr_Mag";
+            primaryWeaponOptics = "optic_LRPS";
+
+            addItemsToVest[] += {
+                "ACE_microDAGR",
+                "ACE_Kestrel4500",
+                "ACE_ATragMX",
+                "ACE_Rangecard",
+                LIST_5("ACE_7Rnd_408_305gr_Mag"),
+            };
+
+            addItemsToBackpack[] += {
+                "ACE_Tripod",
+                LIST_5("ACE_7Rnd_408_305gr_Mag"),
+                "ClaymoreDirectionalMine_Remote_Mag",
+                "ACE_Clacker",
+                "ACE_DefusalKit",
+            };
+            binoculars = "ACE_Vector";
+        };
+
+        class B_spotter_F: B_soldier_M_F {
+            uniform = "U_B_FullGhillie_lsh";
+            vest = "V_Chestrig_khk";
+            backpack = "B_Kitbag_cbr";
+            headgear = "CUP_H_FR_BeanieGreen";
+
+            addItemsToVest[] += {
+                "ACE_microDAGR",
+                "ACE_Kestrel4500",
+                "ACE_ATragMX",
+            };
+
+            addItemsToBackpack[] = {
+                "ACE_SpottingScope",
+                "ACE_EntrenchingTool",
+                LIST_5("ACE_7Rnd_408_305gr_Mag"),
+                "ACRE_PRC117F",
+                "ClaymoreDirectionalMine_Remote_Mag",
+                "ACE_Clacker",
+                "ACE_DefusalKit",
+            };
+            binoculars = "ACE_Vector";
         };
 
         //Pilots
