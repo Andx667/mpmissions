@@ -349,32 +349,34 @@ class Loadouts {
         class B_engineer_F: B_Soldier_F {
             backpack = "NOR_Predator_Backpack";
 
-            primaryWeapon[] = {
-                "CUP_arifle_HK416_CQB_Black",
-                "CUP_arifle_HK416_CQB_Desert",
-                "CUP_arifle_HK416_CQB_Wood",
-                };
+            // primaryWeapon[] = {
+            //     "CUP_arifle_HK416_CQB_Black",
+            //     "CUP_arifle_HK416_CQB_Desert",
+            //     "CUP_arifle_HK416_CQB_Wood",
+            //     };
 
             addItemsToVest[] += {
                 "ACE_DefusalKit",
                 "ACE_Clacker",
+                "ACE_SpraypaintGreen",
+                "ACE_SpraypaintRed",
             };
             addItemsToBackpack[] += {
                 "ACE_EntrenchingTool",
-                "ACE_SpraypaintGreen",
-                "ACE_SpraypaintRed",
                 "mts_cutter_folding_saw",
                 "ACE_wirecutter",
                 LIST_3("DemoCharge_Remote_Mag"),
                 "ACE_VMH3",
                 LIST_12("mts_items_marker_mines"),
                 LIST_12("mts_items_marker_yellow"),
+                LIST_3("ACE_M14"),
             };
             class Rank {
 
                 class PRIVATE {}; 
                 class SERGEANT: PRIVATE {
                     addItemsToVest[] += {
+                        "ItemAndroid",
                         "ACRE_152",
                     };
                 };
@@ -409,6 +411,7 @@ class Loadouts {
                 class SERGEANT: PRIVATE {
                     addItemsToVest[] += {
                         "ACRE_152",
+                        "ItemAndroid",
                     };
                 };
             };
@@ -582,7 +585,8 @@ class Loadouts {
                     backpack = "NOR_Predator_Radio_Backpack";
 
                     addItemsToBackpack[] += {
-                        "ACRE_PRC117F"
+                        "ACRE_PRC117F",
+                        "ItemAndroid",
                     };
                 };
             };
