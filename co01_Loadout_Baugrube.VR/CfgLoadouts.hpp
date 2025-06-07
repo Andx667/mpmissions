@@ -196,6 +196,8 @@ class Loadouts {
                 //"CUP_arifle_HK416_CQB_Desert",
                 "CUP_arifle_HK416_CQB_Wood",
             };
+            primaryWeaponUnderbarrel = "";
+            primaryWeaponUnderbarrelMagazine = "";
             
             backpack = "NOR_Predator_Backpack";
             addItemsToVest[] += {
@@ -219,13 +221,15 @@ class Loadouts {
 
             addItemsToVest[] += {
                 "ItemAndroid",
+                "ACE_flags_blue",
+                "ACE_flags_yellow",
+                LIST_8("SmokeShellPurple"),
             };
 
             addItemsToBackpack[] = {
-                LIST_2("ACRE_PRC117F"),
-                LIST_8("SmokeShellPurple"),
-                "ACE_flags_blue",
-                "ACE_flags_yellow",
+                "ACRE_PRC117F",
+                "ACRE_VHF30108SPIKE",
+                "ACRE_VHF30108MAST",
             };
         };
 
@@ -336,6 +340,7 @@ class Loadouts {
                 //"CUP_optic_Elcan_SpecterDR_coyote",
                 "CUP_optic_Elcan_SpecterDR_od",
             };
+            primaryWeaponPointer = "";
             primaryWeaponUnderbarrel = "";
             primaryWeaponUnderbarrelMagazine = "";
 
@@ -429,6 +434,7 @@ class Loadouts {
                 "CUP_arifle_HK416_CQB_Wood",
                 };
             handgunWeapon = "ACE_VMH3";
+            handgunWeaponMagazine = "";
 
             addItemsToVest[] += {
                 "ACE_DefusalKit",
@@ -494,13 +500,14 @@ class Loadouts {
 
         class B_sniper_F {
             uniform = "U_B_FullGhillie_lsh";
-            vest = "V_Chestrig_khk";
+            vest = "CUP_V_O_SLA_M23_1_OD";
             backpack = "B_Kitbag_cbr";
             headgear = "CUP_H_FR_BeanieGreen";
             
             primaryWeapon = "srifle_LRR_camo_F";
             primaryWeaponMagazine = "ACE_7Rnd_408_305gr_Mag";
             primaryWeaponOptics = "optic_LRPS";
+            primaryWeaponPointer = "";
 
             addItemsToVest[] += {
                 "ACE_microDAGR",
@@ -522,7 +529,7 @@ class Loadouts {
 
         class B_spotter_F: B_soldier_M_F {
             uniform = "U_B_FullGhillie_lsh";
-            vest = "V_Chestrig_khk";
+            vest = "CUP_V_O_SLA_M23_1_OD";
             backpack = "B_Kitbag_cbr";
             headgear = "CUP_H_FR_BeanieGreen";
 
@@ -530,11 +537,8 @@ class Loadouts {
 
             addItemsToUniform[] += {
                 "ACE_microDAGR",
-            };
-
-            addItemsToVest[] += {
-                "ACE_Kestrel4500",
                 "ACE_ATragMX",
+                "ACE_Kestrel4500",
             };
 
             addItemsToBackpack[] = {
@@ -633,7 +637,6 @@ class Loadouts {
 
         class B_Soldier_SL_F {
             primaryWeaponOptics = "CUP_optic_AIMM_COMPM4_BLK";
-            
             vest[] = {
                 "CFP_LBT6094_operator_OGA",
                 "CFP_CarrierRig_Operator_OGA",
