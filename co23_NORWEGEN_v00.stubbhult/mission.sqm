@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8;
+		nextID=9;
 	};
 	class Camera
 	{
@@ -35,7 +35,7 @@ sourceName="co23_NORWEGEN_v00";
 addons[]=
 {
 	"Flex_CUP_NOR_Faction",
-	"KJW_TwoPrimaryWeapons",
+	"Desert",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Ui_F",
 	"A3_Characters_F",
@@ -68,9 +68,8 @@ class AddonsMetaData
 		};
 		class Item1
 		{
-			className="KJW_TwoPrimaryWeapons";
-			name="KJW_TwoPrimaryWeapons";
-			author="KJW";
+			className="Desert";
+			name="Desert";
 		};
 		class Item2
 		{
@@ -199,7 +198,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
