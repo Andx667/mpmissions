@@ -347,18 +347,19 @@ class Loadouts {
         class B_HeavyGunner_F {
             vest = "CFP_FAPC_MG_OGA";
 
-            //primaryWeapon = "CUP_lmg_FNMAG_RIS_modern";
-            primaryWeapon[] = {
-                "CUP_lmg_Mk48_od",
-                //"CUP_lmg_Mk48_des",
-                //"CUP_lmg_Mk48_tan",
-                "CUP_lmg_Mk48",
-                };
+            primaryWeapon = "CUP_lmg_FNMAG_RIS_modern";
+            // primaryWeapon[] = {
+            //     "CUP_lmg_Mk48_od",
+            //     //"CUP_lmg_Mk48_des",
+            //     //"CUP_lmg_Mk48_tan",
+            //     "CUP_lmg_Mk48",
+            //     };
             primaryWeaponMagazine = "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M";
             primaryWeaponOptics[] = {
-                "CUP_optic_Eotech553_Black",
+                "",
+                //"CUP_optic_Eotech553_Black",
                 //"CUP_optic_Eotech553_Coyote",
-                "CUP_optic_Eotech553_OD",
+                //"CUP_optic_Eotech553_OD",
                 };
             primaryWeaponUnderbarrel = "";
             primaryWeaponUnderbarrelMagazine = "";

@@ -369,7 +369,7 @@ class Loadouts {
             primaryWeaponUnderbarrelMagazine = "";
 
             addItemsToVest[] += {
-                LIST_4("CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M"),
+                LIST_5("CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M"),
                 "ACE_Sparebarrel",
             };
         };
@@ -707,9 +707,9 @@ class Loadouts {
                         LIST_8("ACE_Painkillers"),
                         LIST_8("ACE_morphine"),
 
-                        LIST_8("ACE_SalineIV"),
-                        LIST_4("ACE_salineIV_500"),
-                        LIST_4("ACE_SalineIV_250"),
+                        LIST_10("ACE_SalineIV"),
+                        LIST_5("ACE_salineIV_500"),
+                        LIST_5("ACE_SalineIV_250"),
                         "ACE_SurgicalKit",  
                         "ACE_Bodybag",
                     };

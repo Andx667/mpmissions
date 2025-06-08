@@ -44,6 +44,7 @@
                     case "B_Soldier_A_F";
                     case "B_soldier_UAV_F";
                     case "B_engineer_F";
+                    case "B_soldier_AAA_F";
                     case "B_soldier_mine_F": {
                         (unitBackpack ace_player) setVariable ["ttt_medic_backpack_hasTent", false];
                     };
