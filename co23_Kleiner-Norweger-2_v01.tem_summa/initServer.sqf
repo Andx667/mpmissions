@@ -44,7 +44,7 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
         ["CUP_200Rnd_TE1_Red_Tracer_556x45_M249_Pouch", 12],
         ["CUP_20Rnd_TE1_Red_Tracer_762x51_HK417", 8],
         ["CUP_20Rnd_762x51_HK417", 8],
-        ["CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M", 10],
+        ["CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M", 10]
     ],
     true
 ] call ttt_common_fnc_crateFiller;

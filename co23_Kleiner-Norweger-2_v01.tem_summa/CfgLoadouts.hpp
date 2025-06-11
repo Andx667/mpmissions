@@ -352,20 +352,19 @@ class Loadouts {
         class B_HeavyGunner_F {
             vest = "CFP_FAPC_MG_OGA";
 
-            primaryWeapon = "CUP_lmg_FNMAG_RIS_modern";
-            // primaryWeapon[] = {
-            //     "CUP_lmg_Mk48_od",
-            //     //"CUP_lmg_Mk48_des",
-            //     //"CUP_lmg_Mk48_tan",
-            //     "CUP_lmg_Mk48",
-            //     };
+            //primaryWeapon = "CUP_lmg_FNMAG_RIS_modern";
+            primaryWeapon[] = {
+                "CUP_lmg_Mk48_od",
+                //"CUP_lmg_Mk48_des",
+                //"CUP_lmg_Mk48_tan",
+                "CUP_lmg_Mk48",
+                };
             primaryWeaponMagazine = "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M";
-            primaryWeaponOptics = "";
-            // primaryWeaponOptics[] = {
-            //     "CUP_optic_Eotech553_Black",
-            //     //"CUP_optic_Eotech553_Coyote",
-            //     "CUP_optic_Eotech553_OD",
-            //     };
+            primaryWeaponOptics[] = {
+                "CUP_optic_Eotech553_Black",
+                //"CUP_optic_Eotech553_Coyote",
+                "CUP_optic_Eotech553_OD",
+                };
             primaryWeaponUnderbarrel = "";
             primaryWeaponUnderbarrelMagazine = "";
 
@@ -500,7 +499,7 @@ class Loadouts {
         };
 
         class B_sniper_F {
-            uniform = "U_B_FullGhillie_lsh";
+            //uniform = "U_B_FullGhillie_lsh";
             vest = "CUP_V_O_SLA_M23_1_OD";
             backpack = "B_Kitbag_cbr";
             headgear = "CUP_H_FR_BeanieGreen";
@@ -529,7 +528,7 @@ class Loadouts {
         };
 
         class B_spotter_F: B_soldier_M_F {
-            uniform = "U_B_FullGhillie_lsh";
+            //uniform = "U_B_FullGhillie_lsh";
             vest = "CUP_V_O_SLA_M23_1_OD";
             backpack = "B_Kitbag_cbr";
             headgear = "CUP_H_FR_BeanieGreen";
@@ -621,6 +620,7 @@ class Loadouts {
         //Führung
         class B_Soldier_TL_F: B_Soldier_GL_F {
             primaryWeaponOptics = "CUP_optic_AIMM_COMPM4_BLK";
+            primaryWeaponMagazine = "CUP_30Rnd_556x45_PMAG_BLACK_Tracer_Red";
 
             addItemsToVest[] = {
                 LIST_2("CUP_HandGrenade_M67"),
@@ -638,6 +638,7 @@ class Loadouts {
 
         class B_Soldier_SL_F {
             primaryWeaponOptics = "CUP_optic_AIMM_COMPM4_BLK";
+            primaryWeaponMagazine = "CUP_30Rnd_556x45_PMAG_BLACK_Tracer_Red";
             vest[] = {
                 "CFP_LBT6094_operator_OGA",
                 "CFP_CarrierRig_Operator_OGA",
@@ -708,9 +709,9 @@ class Loadouts {
                         LIST_8("ACE_Painkillers"),
                         LIST_8("ACE_morphine"),
 
-                        LIST_8("ACE_SalineIV"),
-                        LIST_4("ACE_salineIV_500"),
-                        LIST_4("ACE_SalineIV_250"),
+                        LIST_10("ACE_SalineIV"),
+                        LIST_5("ACE_salineIV_500"),
+                        LIST_5("ACE_SalineIV_250"),
                         "ACE_SurgicalKit",  
                         "ACE_Bodybag",
                     };
@@ -726,6 +727,10 @@ class Loadouts {
 
                 class LIEUTENANT: SERGEANT {
                     backpack = "NOR_Predator_Radio_Backpack";
+
+                    addItemsToVest[] += {
+                        "ItemAndroid",
+                    };
 
                     addItemsToBackpack[] = {
                         "ACRE_PRC117F",
@@ -849,9 +854,9 @@ class Loadouts {
                 LIST_8("ACE_Painkillers"),
                 LIST_8("ACE_morphine"),
 
-                LIST_10("ACE_SalineIV"),
-                LIST_5("ACE_salineIV_500"),
-                LIST_5("ACE_SalineIV_250"),
+                LIST_8("ACE_SalineIV"),
+                LIST_4("ACE_salineIV_500"),
+                LIST_4("ACE_SalineIV_250"),
                 "ACE_SurgicalKit",
             };
         };

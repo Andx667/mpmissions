@@ -49,6 +49,40 @@
                         (unitBackpack ace_player) setVariable ["ttt_medic_backpack_hasTent", false];
                     };
                 };
+
+
+                switch (typeOf ACE_player) do {
+                    case "B_Soldier_F";
+                    case "B_soldier_LAT2_F";
+                    case "TTT_B_RadioOperator_F";
+                    case "B_soldier_exp_F";
+                    case "B_soldier_M_F";
+                    case "B_Soldier_AR_F";
+                    case "B_HeavyGunner_F";
+                    case "B_Soldier_A_F";
+                    case "B_Soldier_TL_F";
+                    case "B_Soldier_SL_F": {
+                        [ACE_player, "TTT_green_emblem"] call BIS_fnc_setUnitInsignia;
+                    };
+                    case "B_Officer_F": {
+                        [ACE_player, "TTT_yellow_emblem"] call BIS_fnc_setUnitInsignia;
+                    };
+                    case "B_medic_F": {
+                        [ACE_player, "TTT_white_emblem"] call BIS_fnc_setUnitInsignia;
+                    };
+                    case "B_Soldier_mine_F";
+                    case "B_soldier_exp_F";
+                    case "B_engineer_F": {
+                        [ACE_player, "TTT_blue_emblem"] call BIS_fnc_setUnitInsignia;
+                    };
+                    case "B_helicrew_F";
+                    case "B_Helipilot_F": {
+                        [ACE_player, "TTT_silver_emblem"] call BIS_fnc_setUnitInsignia;
+                    };
+                    default {
+                        [ACE_player, "TTT_green_emblem"] call BIS_fnc_setUnitInsignia;
+                    };
+                };
             },
             //Args
             [],
