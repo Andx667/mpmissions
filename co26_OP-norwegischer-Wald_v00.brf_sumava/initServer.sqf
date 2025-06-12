@@ -57,13 +57,14 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
         ["CUP_1Rnd_Smoke_M203", 5],
         ["CUP_HandGrenade_M67", 12],
         ["SmokeShell", 12],
-        ["SmokeShellGreen", 6]
+        ["SmokeShellGreen", 6],
+        ["ACE_M14", 5]
     ],
     true
 ] call ttt_common_fnc_crateFiller;
 
 [
-    [launchers_01, launchers_02, launchers_03],
+    [launcher_01, launcher_02, launcher_03],
     [
         ["BWA3_RGW90_Loaded", 2]
     ],

@@ -137,6 +137,8 @@ class Loadouts {
                 "CUP_G_Oakleys_Embr",
                 "CUP_G_PMC_Facewrap_Tan_Glasses_Dark",
                 "CUP_G_PMC_Facewrap_Tan_Glasses_Ember",
+                "CUP_G_PMC_Facewrap_Tropical_Glasses_Dark",
+                "CUP_G_PMC_Facewrap_Tropical_Glasses_Ember",
                 //"CUP_G_PMC_Facewrap_Winter_Glasses_Dark",
                 //"CUP_G_PMC_Facewrap_Winter_Glasses_Ember",
                 "CUP_G_Grn_Scarf_Shades_GPSCombo_Beard",
@@ -413,7 +415,7 @@ class Loadouts {
                 "ACE_VMH3",
                 LIST_12("mts_items_marker_mines"),
                 LIST_12("mts_items_marker_yellow"),
-                LIST_3("ACE_M14"),
+                LIST_5("ACE_M14"),
             };
             class Rank {
 
@@ -633,6 +635,7 @@ class Loadouts {
                 LIST_8("CUP_1Rnd_HE_M203"),
                 LIST_8("CUP_30Rnd_556x45_PMAG_BLACK_Tracer_Red"),
                 "ACE_MicroDAGR",
+                "ACE_SpraypaintBlack",
             };
 
             binoculars = "ACE_Vector";
@@ -653,6 +656,7 @@ class Loadouts {
                 "ACRE_PRC152",
                 "ItemAndroid",
                 "ACE_MicroDAGR",
+                "ACE_SpraypaintBlack",
             };
 
             binoculars = "ACE_Vector";
