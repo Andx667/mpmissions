@@ -27,6 +27,16 @@ respawnDialog = 0;
 disabledAI = 1;
 cba_settings_hasSettingsFile = 1;
 
+disableChannels[] =
+{
+    {0, true, true}, //Global
+    {1, true, true}, //Side
+    {2, true, true}, //Command
+    {3, false, true}, //Group
+    {4, false, true}, //Vehicle
+    {5, false, true} //Direct
+};
+
 // - Corpsemanager ------------------------------------------------------------
 corpseManagerMode = 1; // Default: 0
 corpseLimit = 15; // Default: 15

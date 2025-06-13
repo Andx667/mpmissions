@@ -13,7 +13,7 @@
  */
 
 // Hier wird das Briefing automatisch eingefügt und ausgeführt
-#include "briefing.sqf"
+//#include "briefing.sqf"
 
 // Waffe sichern
 // Gegenstück zu [QGVAR(loadoutApplied), [_loadoutTarget, _unitLoadout], _loadoutTarget] call CBA_fnc_targetEvent;
@@ -93,3 +93,18 @@
         ] call CBA_fnc_waitAndExecute;
     }
 ] call CBA_fnc_addEventHandler;
+
+
+params ["_player"];
+_player addMPEventHandler ["MPRespawn", {
+    params ["_unit", "_corpse"];
+    private _insignia = [_corpse] call BIS_fnc_getUnitInsignia;
+    [_unit, _insignia] spawn {
+        params ["_unit", "_insignia"];
+        sleep 1;
+        isNil {
+            _unit setVariable ["BIS_fnc_setUnitInsignia_class", nil]; // you can also do [_unit, ""] call BIS_fnc_setUnitInsignia, but this way is faster (plus no network traffic)
+            [_unit, _insignia] call BIS_fnc_setUnitInsignia;
+        };
+    };
+}];

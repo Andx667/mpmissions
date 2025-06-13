@@ -705,7 +705,7 @@ class Loadouts {
 
                 class PRIVATE {
                     addItemsToVest[] = {
-                        LIST_3("CUP_30Rnd_556x45_Emag"),
+                        LIST_3("CUP_30Rnd_556x45_PMAG_BLACK"),
                         "ACE_flags_blue",
                         "ACE_SpraypaintBlue",
                     };
@@ -777,7 +777,7 @@ class Loadouts {
                 };
 
             addItemsToVest[] = {
-                LIST_3("CUP_30Rnd_556x45_Emag"),
+                LIST_3("CUP_30Rnd_556x45_PMAG_BLACK"),
                 "ACE_flags_yellow",
                 "ACE_SpraypaintYellow",
             };

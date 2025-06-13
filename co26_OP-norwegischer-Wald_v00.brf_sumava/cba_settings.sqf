@@ -24,5 +24,8 @@ force ttt_signalpanel_supportedBackpacks = '["NOR_Predator_Radio_Backpack"]';   
 //ACE Cookoff
 force ace_cookoff_enableAmmobox = false;
 
-force ace_vehiclelock_lockVehicleInventory = true;
-//force ace_vehiclelock_vehicleStartingLockState = 1;
+// ACE Repair
+force ace_repair_engineerSetting_fullRepair = 2;
+force ace_repair_fullRepairLocation = 3;
+
+
