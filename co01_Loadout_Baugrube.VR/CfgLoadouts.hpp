@@ -191,13 +191,13 @@ class Loadouts {
         };
 
         class B_soldier_exp_F: B_Soldier_GL_F {
-            primaryWeapon[] = {
-                "CUP_arifle_HK416_CQB_Black",
-                //"CUP_arifle_HK416_CQB_Desert",
-                "CUP_arifle_HK416_CQB_Wood",
-            };
-            primaryWeaponUnderbarrel = "";
-            primaryWeaponUnderbarrelMagazine = "";
+            // primaryWeapon[] = {
+            //     "CUP_arifle_HK416_CQB_Black",
+            //     //"CUP_arifle_HK416_CQB_Desert",
+            //     "CUP_arifle_HK416_CQB_Wood",
+            // };
+            //primaryWeaponUnderbarrel = "";
+            //primaryWeaponUnderbarrelMagazine = "";
             
             backpack = "NOR_Predator_Backpack";
             addItemsToVest[] += {
@@ -229,7 +229,6 @@ class Loadouts {
             addItemsToBackpack[] = {
                 "ACRE_PRC117F",
                 "ACRE_VHF30108SPIKE",
-                "ACRE_VHF30108MAST",
             };
         };
 
@@ -294,6 +293,7 @@ class Loadouts {
                 LIST_10("ACE_UAVBattery"),
             };
 
+            gps = "B_UavTerminal";
         };
 
         // These dont inherit from the basic rifleman
@@ -410,10 +410,11 @@ class Loadouts {
             class Rank {
 
                 class PRIVATE {}; 
-                class SERGEANT: PRIVATE {
+                class CORPORAL: PRIVATE {};
+                class SERGEANT: CORPORAL {
                     addItemsToVest[] += {
                         "ItemAndroid",
-                        "ACRE_152",
+                        "ACRE_PRC152",
                     };
                 };
             };
@@ -440,9 +441,11 @@ class Loadouts {
             class Rank {
 
                 class PRIVATE {}; 
-                class SERGEANT: PRIVATE {
+                class CORPORAL: PRIVATE {};
+                class SERGEANT: CORPORAL {
                     addItemsToVest[] += {
-                        "ACRE_152",
+                        "ItemAndroid",
+                        "ACRE_PRC152",
                     };
                 };
             };
@@ -488,7 +491,7 @@ class Loadouts {
         };
 
         class B_sniper_F {
-            //uniform = "U_B_FullGhillie_lsh";
+            //uniform[] += {"U_B_FullGhillie_lsh"};
             vest = "V_HarnessO_brn";
             backpack = "B_AssaultPack_cbr";
             headgear[] = {
@@ -514,8 +517,7 @@ class Loadouts {
                 //"CUP_optic_LeupoldMk4_25x50_LRT_WOODLAND",
                 //"CUP_optic_LeupoldMk4_25x50_LRT_SNOW",
                 };
-            primaryWeaponUnderbarrel = "CUP_bipod_Harris_1A2_L_BLK"
-            ;
+            primaryWeaponUnderbarrel = "CUP_bipod_Harris_1A2_L_BLK";
             primaryWeaponPointer = "";
 
             addItemsToVest[] += {
@@ -599,7 +601,6 @@ class Loadouts {
                     addItemsToBackpack[] += {
                         "ACRE_PRC117F",
                         "ACRE_VHF30108SPIKE",
-                        "ACRE_VHF30108MAST",
                     };
                 };
             };
@@ -632,9 +633,58 @@ class Loadouts {
 
             headgear = "H_PilotHelmetHeli_B";
 
+            addItemsToVest[] += {
+                "ACE_MicroDAGR",
+            };
+
             addItemsToBackpack[] = {
                 "ACRE_PRC117F",
             };
+        };
+
+        //Aufklärer
+        class B_Patrol_Soldier_TL_F: B_soldier_M_F {
+            primaryWeaponMuzzle = "CUP_muzzle_snds_socom762rc";
+            backpack = "NOR_Predator_Radio_Backpack";
+
+            addItemsToVest[] += {
+                "ACRE_PRC152",
+                "ItemAndroid",
+                "ACE_MicroDAGR",
+            };
+            addItemsToBackpack[] += {
+                "ACRE_PRC117F",
+                "ACRE_VHF30108SPIKE",
+            };
+            binoculars = "ACE_Vector";
+        };
+
+        class B_Patrol_Soldier_UAV_F: B_soldier_M_F {
+            primaryWeaponMuzzle = "CUP_muzzle_snds_socom762rc";
+
+            backpack = "NOR_Predator_Backpack";
+
+            addItemsToVest[] += {
+                "ItemAndroid",
+                "ACE_MicroDAGR",
+            };
+
+            addItemsToBackpack[] = {
+                "ITC_Land_B_AR2i_Packed",
+                LIST_10("ACE_UAVBattery"),
+            };
+            binoculars = "ACE_Vector";
+            gps = "B_UavTerminal";
+        };
+
+        class B_Patrol_Soldier_M_F: B_soldier_M_F {
+            primaryWeaponMuzzle = "CUP_muzzle_snds_socom762rc";
+
+            addItemsToVest[] += {
+                "ItemAndroid",
+                "ACE_MicroDAGR",
+            };
+            binoculars = "ACE_Vector";
         };
 
         //Führung
@@ -694,7 +744,6 @@ class Loadouts {
             addItemsToBackpack[] += {
                 "ACRE_PRC117F",
                 "ACRE_VHF30108SPIKE",
-                "ACRE_VHF30108MAST",
                 "itc_land_tablet_fdc",
             };
             binoculars = "ACE_Vector";
@@ -819,7 +868,7 @@ class Loadouts {
             };
         };
         
-        //Recon
+        //SOF
         class B_recon_F {
             uniform[] = {
                 //Grey
