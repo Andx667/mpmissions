@@ -223,12 +223,12 @@ class Loadouts {
                 "ItemAndroid",
                 "ACE_flags_blue",
                 "ACE_flags_yellow",
-                LIST_8("SmokeShellPurple"),
             };
 
             addItemsToBackpack[] = {
                 "ACRE_PRC117F",
                 "ACRE_VHF30108SPIKE",
+                LIST_10("SmokeShellPurple"),
             };
         };
 
@@ -688,6 +688,7 @@ class Loadouts {
         };
 
         //Führung
+        //TF mit GL
         class B_Soldier_TL_F: B_Soldier_GL_F {
             primaryWeaponOptics = "CUP_optic_AIMM_COMPM4_BLK";
             primaryWeaponMagazine = "CUP_30Rnd_556x45_PMAG_BLACK_Tracer_Red";
@@ -706,6 +707,18 @@ class Loadouts {
 
             binoculars = "ACE_Vector";
         };
+        //TF mit DMR
+        // class B_Soldier_TL_F: B_Soldier_M_F {
+
+        //     addItemsToVest[] += {
+        //         "ACRE_PRC152",
+        //         "ItemAndroid",
+        //         "ACE_MicroDAGR",
+        //         "ACE_SpraypaintBlack",
+        //     };
+
+        //     binoculars = "ACE_Vector";
+        // };
 
         class B_Soldier_SL_F {
             primaryWeaponOptics = "CUP_optic_AIMM_COMPM4_BLK";
@@ -1004,7 +1017,7 @@ class Loadouts {
             primaryWeaponUnderbarrel[] = {
                 "CUP_bipod_VLTOR_Modpod_black",
                 "CUP_bipod_VLTOR_Modpod_od",
-                "CUP_bipod_VLTOR_Modpod",
+                //"CUP_bipod_VLTOR_Modpod",
             };
             primaryWeaponUnderbarrelMagazine = "";
             primaryWeaponPointer = "ACE_DBAL_A3_Red";
