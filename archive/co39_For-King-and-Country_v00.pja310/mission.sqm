@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=296;
+		nextID=335;
 	};
 	class Camera
 	{
-		pos[]={1315.3575,56.024506,1006.0206};
-		dir[]={-0.033334509,-0.58407593,-0.81101954};
-		up[]={-0.023987131,0.81169665,-0.58358604};
-		aside[]={-0.99916089,-9.9848876e-08,0.041069053};
+		pos[]={18343.676,56.129337,3519.1631};
+		dir[]={0.59009123,-0.59093696,0.55007952};
+		up[]={0.43225342,0.80671686,0.40294385};
+		aside[]={0.68187284,-6.1278115e-08,-0.73147124};
 	};
 };
 binarizationWanted=0;
@@ -453,7 +453,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -5163,7 +5163,7 @@ class Mission
 								class Attribute2
 								{
 									property="ENH_disableAI_path";
-									expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -5296,7 +5296,7 @@ class Mission
 								class Attribute2
 								{
 									property="ENH_disableAI_path";
-									expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -5429,7 +5429,7 @@ class Mission
 								class Attribute2
 								{
 									property="ENH_disableAI_path";
-									expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -5564,7 +5564,7 @@ class Mission
 								class Attribute2
 								{
 									property="ENH_disableAI_path";
-									expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -5699,7 +5699,7 @@ class Mission
 								class Attribute2
 								{
 									property="ENH_disableAI_path";
-									expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -5832,7 +5832,7 @@ class Mission
 								class Attribute2
 								{
 									property="ENH_disableAI_path";
-									expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -5965,7 +5965,7 @@ class Mission
 								class Attribute2
 								{
 									property="ENH_disableAI_path";
-									expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -6098,7 +6098,7 @@ class Mission
 								class Attribute2
 								{
 									property="ENH_disableAI_path";
-									expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -6231,7 +6231,7 @@ class Mission
 								class Attribute2
 								{
 									property="ENH_disableAI_path";
-									expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -17665,12 +17665,12 @@ class Mission
 						class Item4
 						{
 							dataType="Trigger";
-							position[]={18377.332,3.3741093,3571.0144};
+							position[]={18377.332,3.3741093,3571.0139};
 							class Attributes
 							{
-								onActivation="[r_s_3, r_r_3, r_a_3, EAST, ""CUP_O_UH1H_armed_TKA"", 0, configFile >> ""CfgGroups"" >> ""East"" >> ""CUP_O_TK"" >> ""Infantry"" >> ""CUP_O_TK_InfantrySquad"", 2, 80] call ttt_common_fnc_callReinforcements;" \n "" \n "[r_s_5, r_r_5, r_a_5, EAST, ""CUP_O_UH1H_armed_TKA"", 0, configFile >> ""CfgGroups"" >> ""East"" >> ""CUP_O_TK"" >> ""Infantry"" >> ""CUP_O_TK_InfantrySquad"", 2, 80] call ttt_common_fnc_callReinforcements;" \n "" \n "[r_s_8, r_r_8, r_a_8, EAST, ""CUP_O_UH1H_armed_TKA"", 0, configFile >> ""CfgGroups"" >> ""East"" >> ""CUP_O_TK"" >> ""Infantry"" >> ""CUP_O_TK_InfantrySquad"", 2, 80] call ttt_common_fnc_callReinforcements;";
-								sizeA=32.504547;
-								sizeB=70.315323;
+								onActivation="[r_s_3, r_r_3, r_a_3, EAST, ""CUP_O_UH1H_armed_TKA"", 1, configFile >> ""CfgGroups"" >> ""East"" >> ""CUP_O_TK"" >> ""Infantry"" >> ""CUP_O_TK_InfantrySquad"", 1, 80] call ttt_common_fnc_callReinforcements;" \n "" \n "[r_s_5, r_r_5, r_a_5, EAST, ""CUP_O_UH1H_armed_TKA"", 1, configFile >> ""CfgGroups"" >> ""East"" >> ""CUP_O_TK"" >> ""Infantry"" >> ""CUP_O_TK_InfantrySquad"", 1, 80] call ttt_common_fnc_callReinforcements;" \n "" \n "[r_s_8, r_r_8, r_a_8, EAST, ""CUP_O_UH1H_armed_TKA"", 1, configFile >> ""CfgGroups"" >> ""East"" >> ""CUP_O_TK"" >> ""Infantry"" >> ""CUP_O_TK_InfantrySquad"", 1, 80] call ttt_common_fnc_callReinforcements;";
+								sizeA=32.505001;
+								sizeB=70.315002;
 								activationBy="WEST";
 								isServerOnly=1;
 							};
@@ -18010,7 +18010,7 @@ class Mission
 								class Attribute0
 								{
 									property="ENH_disableAI_suppression";
-									expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -18107,7 +18107,7 @@ class Mission
 								class Attribute0
 								{
 									property="ENH_disableAI_suppression";
-									expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -18204,7 +18204,7 @@ class Mission
 								class Attribute0
 								{
 									property="ENH_disableAI_suppression";
-									expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -18299,7 +18299,7 @@ class Mission
 								class Attribute0
 								{
 									property="ENH_disableAI_suppression";
-									expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -18394,7 +18394,7 @@ class Mission
 								class Attribute0
 								{
 									property="ENH_disableAI_suppression";
-									expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -18703,7 +18703,7 @@ class Mission
 								class Attribute0
 								{
 									property="ENH_disableAI_suppression";
-									expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -18798,7 +18798,7 @@ class Mission
 								class Attribute0
 								{
 									property="ENH_disableAI_suppression";
-									expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -18893,7 +18893,7 @@ class Mission
 								class Attribute0
 								{
 									property="ENH_disableAI_suppression";
-									expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -18987,7 +18987,7 @@ class Mission
 								class Attribute0
 								{
 									property="ENH_disableAI_suppression";
-									expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -19081,7 +19081,7 @@ class Mission
 								class Attribute0
 								{
 									property="ENH_disableAI_suppression";
-									expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -19544,7 +19544,7 @@ class Mission
 								class Attribute0
 								{
 									property="ENH_disableAI_suppression";
-									expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -19651,7 +19651,7 @@ class Mission
 								class Attribute0
 								{
 									property="ENH_disableAI_suppression";
-									expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -19746,7 +19746,7 @@ class Mission
 								class Attribute0
 								{
 									property="ENH_disableAI_suppression";
-									expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -19841,7 +19841,7 @@ class Mission
 								class Attribute0
 								{
 									property="ENH_disableAI_suppression";
-									expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -19936,7 +19936,7 @@ class Mission
 								class Attribute0
 								{
 									property="ENH_disableAI_suppression";
-									expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -20030,7 +20030,7 @@ class Mission
 								class Attribute0
 								{
 									property="ENH_disableAI_suppression";
-									expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -20124,7 +20124,7 @@ class Mission
 								class Attribute0
 								{
 									property="ENH_disableAI_suppression";
-									expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -20218,7 +20218,7 @@ class Mission
 								class Attribute0
 								{
 									property="ENH_disableAI_suppression";
-									expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+									expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 									class Value
 									{
 										class data
@@ -20622,14 +20622,13 @@ class Mission
 								position[]={18134.422,4.0004959,4690.0439};
 							};
 							side="East";
-							flags=2;
+							flags=6;
 							class Attributes
 							{
 								init="this addEventHandler [""Reloaded"", { " \n " params [""_unit"", ""_weapon"", ""_muzzle"", ""_newMagazine"", ""_oldMagazine""]; " \n " _unit setVehicleAmmo 1; " \n "}];";
 							};
 							id=1173;
 							type="CUP_O_TK_Soldier";
-							atlOffset=0.72581792;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -20850,14 +20849,13 @@ class Mission
 								position[]={18149.992,4.0004959,4689.5747};
 							};
 							side="East";
-							flags=2;
+							flags=6;
 							class Attributes
 							{
 								init="this addEventHandler [""Reloaded"", { " \n " params [""_unit"", ""_weapon"", ""_muzzle"", ""_newMagazine"", ""_oldMagazine""]; " \n " _unit setVehicleAmmo 1; " \n "}];";
 							};
 							id=1170;
 							type="CUP_O_TK_Soldier";
-							atlOffset=0.72581792;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -22662,7 +22660,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -22796,7 +22794,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -22930,7 +22928,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -23064,7 +23062,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -23197,7 +23195,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -23334,14 +23332,14 @@ class Mission
 						angles[]={0.0010918301,0,0.013544958};
 					};
 					side="East";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 						name="flak_01G";
 					};
 					id=1493;
 					type="CUP_O_TK_Soldier";
-					atlOffset=1.9558029;
+					atlOffset=-0.00020313263;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23527,14 +23525,14 @@ class Mission
 						angles[]={6.1987052,0,6.2560949};
 					};
 					side="East";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 						name="flak_01G_1";
 					};
 					id=1496;
 					type="CUP_O_TK_Soldier";
-					atlOffset=1.9571762;
+					atlOffset=-0.0050735474;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23720,14 +23718,14 @@ class Mission
 						angles[]={6.2639956,0,0.0056417165};
 					};
 					side="East";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 						name="flak_01G_2";
 					};
 					id=1500;
 					type="CUP_O_TK_Soldier";
-					atlOffset=1.581398;
+					atlOffset=-0.0073843002;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23913,14 +23911,14 @@ class Mission
 						angles[]={6.2820935,0,0.0033829133};
 					};
 					side="East";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 						name="flak_01G_3";
 					};
 					id=1504;
 					type="CUP_O_TK_Soldier";
-					atlOffset=2.0694714;
+					atlOffset=-0.0022025108;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -24574,7 +24572,7 @@ class Mission
 					};
 					id=1550;
 					type="CUP_O_TK_Soldier";
-					atlOffset=-94.72467;
+					atlOffset=-2.3841858e-07;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -24772,7 +24770,7 @@ class Mission
 						class Attribute0
 						{
 							property="ENH_disableAI_suppression";
-							expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -24806,7 +24804,7 @@ class Mission
 						class Attribute0
 						{
 							property="ENH_disableAI_suppression";
-							expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -24839,7 +24837,7 @@ class Mission
 						class Attribute0
 						{
 							property="ENH_disableAI_suppression";
-							expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -24959,7 +24957,7 @@ class Mission
 						class Attribute0
 						{
 							property="ENH_disableAI_suppression";
-							expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -25074,7 +25072,7 @@ class Mission
 						class Attribute0
 						{
 							property="ENH_disableAI_suppression";
-							expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -25169,7 +25167,7 @@ class Mission
 						class Attribute0
 						{
 							property="ENH_disableAI_suppression";
-							expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -25263,7 +25261,7 @@ class Mission
 						class Attribute0
 						{
 							property="ENH_disableAI_suppression";
-							expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -25357,7 +25355,7 @@ class Mission
 						class Attribute0
 						{
 							property="ENH_disableAI_suppression";
-							expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -25866,7 +25864,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -26001,7 +25999,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -26108,7 +26106,7 @@ class Mission
 						class Attribute0
 						{
 							property="ENH_disableAI_path";
-							expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -26201,7 +26199,7 @@ class Mission
 						class Attribute0
 						{
 							property="ENH_disableAI_path";
-							expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -26310,7 +26308,7 @@ class Mission
 						class Attribute0
 						{
 							property="ENH_disableAI_suppression";
-							expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -26344,7 +26342,7 @@ class Mission
 						class Attribute0
 						{
 							property="ENH_disableAI_suppression";
-							expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -26377,7 +26375,7 @@ class Mission
 						class Attribute0
 						{
 							property="ENH_disableAI_suppression";
-							expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -26497,7 +26495,7 @@ class Mission
 						class Attribute0
 						{
 							property="ENH_disableAI_suppression";
-							expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -26613,7 +26611,7 @@ class Mission
 						class Attribute0
 						{
 							property="ENH_disableAI_suppression";
-							expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -26708,7 +26706,7 @@ class Mission
 						class Attribute0
 						{
 							property="ENH_disableAI_suppression";
-							expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -26802,7 +26800,7 @@ class Mission
 						class Attribute0
 						{
 							property="ENH_disableAI_suppression";
-							expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -26897,7 +26895,7 @@ class Mission
 						class Attribute0
 						{
 							property="ENH_disableAI_suppression";
-							expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -27163,7 +27161,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -27297,7 +27295,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
 							class Value
 							{
 								class data
@@ -27660,7 +27658,7 @@ class Mission
 			};
 			id=1738;
 			type="CFP_B_GBARMY_Merlin_HC3A_Armed_WDL_01";
-			atlOffset=0.01419735;
+			atlOffset=0.031999588;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -28049,7 +28047,7 @@ class Mission
 			};
 			id=1748;
 			type="vtx_UH60M";
-			atlOffset=-9.5367432e-07;
+			atlOffset=0.003745079;
 			class CustomAttributes
 			{
 				class Attribute0

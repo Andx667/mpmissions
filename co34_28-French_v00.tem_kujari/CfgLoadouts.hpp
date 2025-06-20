@@ -279,6 +279,7 @@ class Loadouts {
 
             addItemsToVest[] += {
                 LIST_5("CUP_1Rnd_HE_M203"),
+                "ACE_SpraypaintBlack",
             };
             addItemsToBackpack[] = {
                 LIST_10("CUP_1Rnd_HE_M203"),
@@ -304,6 +305,7 @@ class Loadouts {
                 "ItemAndroid",
                 LIST_8("CUP_30Rnd_556x45_Emag_Tracer_Red"),
                 "ACE_flags_red",
+                "ACE_SpraypaintBlack",
             };
 
             binoculars = "ACE_Vector";
@@ -439,7 +441,10 @@ class Loadouts {
                 "ItemAndroid"
             }; 
 
-            headgear = "H_PilotHelmetHeli_I_E";
+            headgear[] = {
+                "H_PilotHelmetHeli_I_E",
+                "ttt_helmet_falcon",
+            };
         };
     };
 };

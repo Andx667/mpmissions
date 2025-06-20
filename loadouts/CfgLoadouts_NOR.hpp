@@ -210,6 +210,51 @@ class Loadouts {
                 LIST_3("tsp_breach_block_mag"),
                 LIST_3("tsp_breach_package_mag"),
             };
+
+            goggles[] = {
+                //Winter
+                //"CUP_G_ESS_BLK_Scarf_White_GPS_Beard_Blonde",
+                //"CUP_G_ESS_BLK_Scarf_White_GPS_Beard",
+                //"CUP_G_ESS_BLK_Scarf_Face_White_GPS",
+                //"CUP_G_ESS_BLK_Scarf_White_GPS",
+                //"CUP_G_ESS_BLK_Scarf_White_Beard_Blonde",
+                //"CUP_G_ESS_BLK_Scarf_White_Beard",
+                //"CUP_G_ESS_BLK_Scarf_Face_White",
+                //"CUP_G_ESS_BLK_Scarf_White",
+                //Black
+                //"CUP_G_ESS_BLK_Scarf_Face_Blk",
+                //"CUP_G_ESS_BLK_Scarf_Blk",
+                //"CUP_G_ESS_BLK_Scarf_Blk_Beard_Blonde",
+                //"CUP_G_ESS_BLK_Scarf_Blk_Beard",
+                //Regular
+                "CUP_G_ESS_KHK_Scarf_Tan_GPS_Beard_Blonde",
+                "CUP_G_ESS_BLK_Scarf_Grn_GPS_Beard_Blonde",
+                "CUP_G_ESS_BLK_Scarf_Grn_GPS_Beard",
+                "CUP_G_ESS_KHK_Scarf_Face_Tan_GPS",
+                "CUP_G_ESS_BLK_Scarf_Face_Grn_GPS",
+                "CUP_G_ESS_KHK_Scarf_Tan_GPS",
+                "CUP_G_ESS_BLK_Scarf_Grn_GPS",
+                "CUP_G_ESS_KHK_Scarf_Tan_Beard_Blonde",
+                "CUP_G_ESS_KHK_Scarf_Tan_Beard",
+                "CUP_G_ESS_BLK_Scarf_Grn_Beard_Blonde",
+                "CUP_G_ESS_BLK_Scarf_Grn_Beard",
+                "CUP_G_ESS_KHK_Scarf_Face_Tan",
+                "CUP_G_ESS_BLK_Scarf_Face_Grn",
+                "CUP_G_ESS_KHK_Scarf_Tan",
+                "CUP_G_ESS_BLK_Scarf_Grn",
+                "CUP_G_ESS_KHK",
+                "CUP_G_ESS_KHK_Ember",
+                "CUP_G_ESS_KHK_Dark",
+                "CUP_G_ESS_RGR",
+                "CUP_G_ESS_RGR_Ember",
+                "CUP_G_ESS_RGR_Dark",
+                "CUP_G_ESS_CBR",
+                "CUP_G_ESS_CBR_Ember",
+                "CUP_G_ESS_CBR_Dark",
+                "CUP_G_ESS_BLK",
+                "CUP_G_ESS_BLK_Ember",
+                "CUP_G_ESS_BLK_Dark",
+            };
         };
 
         class B_soldier_LAT2_F: B_Soldier_F {
@@ -407,6 +452,52 @@ class Loadouts {
                 LIST_12("mts_items_marker_yellow"),
                 LIST_5("ACE_M14"),
             };
+
+            goggles[] = {
+                //Winter
+                //"CUP_G_ESS_BLK_Scarf_White_GPS_Beard_Blonde",
+                //"CUP_G_ESS_BLK_Scarf_White_GPS_Beard",
+                //"CUP_G_ESS_BLK_Scarf_Face_White_GPS",
+                //"CUP_G_ESS_BLK_Scarf_White_GPS",
+                //"CUP_G_ESS_BLK_Scarf_White_Beard_Blonde",
+                //"CUP_G_ESS_BLK_Scarf_White_Beard",
+                //"CUP_G_ESS_BLK_Scarf_Face_White",
+                //"CUP_G_ESS_BLK_Scarf_White",
+                //Black
+                //"CUP_G_ESS_BLK_Scarf_Face_Blk",
+                //"CUP_G_ESS_BLK_Scarf_Blk",
+                //"CUP_G_ESS_BLK_Scarf_Blk_Beard_Blonde",
+                //"CUP_G_ESS_BLK_Scarf_Blk_Beard",
+                //Regular
+                "CUP_G_ESS_KHK_Scarf_Tan_GPS_Beard_Blonde",
+                "CUP_G_ESS_BLK_Scarf_Grn_GPS_Beard_Blonde",
+                "CUP_G_ESS_BLK_Scarf_Grn_GPS_Beard",
+                "CUP_G_ESS_KHK_Scarf_Face_Tan_GPS",
+                "CUP_G_ESS_BLK_Scarf_Face_Grn_GPS",
+                "CUP_G_ESS_KHK_Scarf_Tan_GPS",
+                "CUP_G_ESS_BLK_Scarf_Grn_GPS",
+                "CUP_G_ESS_KHK_Scarf_Tan_Beard_Blonde",
+                "CUP_G_ESS_KHK_Scarf_Tan_Beard",
+                "CUP_G_ESS_BLK_Scarf_Grn_Beard_Blonde",
+                "CUP_G_ESS_BLK_Scarf_Grn_Beard",
+                "CUP_G_ESS_KHK_Scarf_Face_Tan",
+                "CUP_G_ESS_BLK_Scarf_Face_Grn",
+                "CUP_G_ESS_KHK_Scarf_Tan",
+                "CUP_G_ESS_BLK_Scarf_Grn",
+                "CUP_G_ESS_KHK",
+                "CUP_G_ESS_KHK_Ember",
+                "CUP_G_ESS_KHK_Dark",
+                "CUP_G_ESS_RGR",
+                "CUP_G_ESS_RGR_Ember",
+                "CUP_G_ESS_RGR_Dark",
+                "CUP_G_ESS_CBR",
+                "CUP_G_ESS_CBR_Ember",
+                "CUP_G_ESS_CBR_Dark",
+                "CUP_G_ESS_BLK",
+                "CUP_G_ESS_BLK_Ember",
+                "CUP_G_ESS_BLK_Dark",
+                "",
+            };
             class Rank {
 
                 class PRIVATE {}; 
@@ -438,6 +529,53 @@ class Loadouts {
                 LIST_3("DemoCharge_Remote_Mag"),
                 LIST_10("ace_marker_flags_orange"),
             };
+
+            goggles[] = {
+                //Winter
+                //"CUP_G_ESS_BLK_Scarf_White_GPS_Beard_Blonde",
+                //"CUP_G_ESS_BLK_Scarf_White_GPS_Beard",
+                //"CUP_G_ESS_BLK_Scarf_Face_White_GPS",
+                //"CUP_G_ESS_BLK_Scarf_White_GPS",
+                //"CUP_G_ESS_BLK_Scarf_White_Beard_Blonde",
+                //"CUP_G_ESS_BLK_Scarf_White_Beard",
+                //"CUP_G_ESS_BLK_Scarf_Face_White",
+                //"CUP_G_ESS_BLK_Scarf_White",
+                //Black
+                //"CUP_G_ESS_BLK_Scarf_Face_Blk",
+                //"CUP_G_ESS_BLK_Scarf_Blk",
+                //"CUP_G_ESS_BLK_Scarf_Blk_Beard_Blonde",
+                //"CUP_G_ESS_BLK_Scarf_Blk_Beard",
+                //Regular
+                "CUP_G_ESS_KHK_Scarf_Tan_GPS_Beard_Blonde",
+                "CUP_G_ESS_BLK_Scarf_Grn_GPS_Beard_Blonde",
+                "CUP_G_ESS_BLK_Scarf_Grn_GPS_Beard",
+                "CUP_G_ESS_KHK_Scarf_Face_Tan_GPS",
+                "CUP_G_ESS_BLK_Scarf_Face_Grn_GPS",
+                "CUP_G_ESS_KHK_Scarf_Tan_GPS",
+                "CUP_G_ESS_BLK_Scarf_Grn_GPS",
+                "CUP_G_ESS_KHK_Scarf_Tan_Beard_Blonde",
+                "CUP_G_ESS_KHK_Scarf_Tan_Beard",
+                "CUP_G_ESS_BLK_Scarf_Grn_Beard_Blonde",
+                "CUP_G_ESS_BLK_Scarf_Grn_Beard",
+                "CUP_G_ESS_KHK_Scarf_Face_Tan",
+                "CUP_G_ESS_BLK_Scarf_Face_Grn",
+                "CUP_G_ESS_KHK_Scarf_Tan",
+                "CUP_G_ESS_BLK_Scarf_Grn",
+                "CUP_G_ESS_KHK",
+                "CUP_G_ESS_KHK_Ember",
+                "CUP_G_ESS_KHK_Dark",
+                "CUP_G_ESS_RGR",
+                "CUP_G_ESS_RGR_Ember",
+                "CUP_G_ESS_RGR_Dark",
+                "CUP_G_ESS_CBR",
+                "CUP_G_ESS_CBR_Ember",
+                "CUP_G_ESS_CBR_Dark",
+                "CUP_G_ESS_BLK",
+                "CUP_G_ESS_BLK_Ember",
+                "CUP_G_ESS_BLK_Dark",
+                "",
+            };
+
             class Rank {
 
                 class PRIVATE {}; 
@@ -468,9 +606,40 @@ class Loadouts {
             primaryWeaponPointer = "";
 
             addItemsToVest[] += {
-                LIST_2("CUP_20Rnd_46x30_MP7"),
             };
 
+            goggles[] = {
+                //Winter
+                //"CUP_G_ESS_BLK_Scarf_Face_White_GPS",
+                //"CUP_G_ESS_BLK_Scarf_White_GPS",
+                //"CUP_G_ESS_BLK_Scarf_Face_White",
+                //"CUP_G_ESS_BLK_Scarf_White",
+                //Black
+                //"CUP_G_ESS_BLK_Scarf_Face_Blk",
+                //"CUP_G_ESS_BLK_Scarf_Blk",
+                //Regular
+                "CUP_G_ESS_KHK_Scarf_Face_Tan_GPS",
+                "CUP_G_ESS_BLK_Scarf_Face_Grn_GPS",
+                "CUP_G_ESS_KHK_Scarf_Tan_GPS",
+                "CUP_G_ESS_BLK_Scarf_Grn_GPS",
+                "CUP_G_ESS_KHK_Scarf_Face_Tan",
+                "CUP_G_ESS_BLK_Scarf_Face_Grn",
+                "CUP_G_ESS_KHK_Scarf_Tan",
+                "CUP_G_ESS_BLK_Scarf_Grn",
+                "CUP_G_ESS_KHK",
+                "CUP_G_ESS_KHK_Ember",
+                "CUP_G_ESS_KHK_Dark",
+                "CUP_G_ESS_RGR",
+                "CUP_G_ESS_RGR_Ember",
+                "CUP_G_ESS_RGR_Dark",
+                "CUP_G_ESS_CBR",
+                "CUP_G_ESS_CBR_Ember",
+                "CUP_G_ESS_CBR_Dark",
+                "CUP_G_ESS_BLK",
+                "CUP_G_ESS_BLK_Ember",
+                "CUP_G_ESS_BLK_Dark",
+                "",
+            };
             class Rank {
                 class PRIVATE {}; 
                 class SERGEANT: PRIVATE {

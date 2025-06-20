@@ -49,7 +49,7 @@ class Loadouts {
     // DDPM = Disruptive Pattern Material
     // DPMT = Disruptive Pattern Material Temperate
     class Side {
-        class BluforPlayers {
+        class Blufor {
             uniform[] = {
                 //MTP / Universal / Modern
                 "CUP_U_B_BAF_MTP_UBACSLONG",
