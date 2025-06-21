@@ -31,152 +31,113 @@
 #define LIST_30(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
 
 class Loadouts {
-    baseDelay = 1;
+    baseDelay = 10;
     perPlayerDelay = 1;
     handleRadios = 1;
     resetLoadout = 1;
     randomizationMode = 1;
     customGear = 300;
-    customGearAllowedCategories[] = {
-        "uniform",
-        "vest",
-        "primaryWeapon",
-        "primaryWeaponOptics",
-        "primaryWeaponUnderbarrel",
-        "goggles",
-        "headgear"
-    };
+    //
+    customGearAllowedCategories[] = {};//STRING
 
-    class Side {    
-        class Blufor { //BluforPlayers
-            uniform[] = {
-                //Regular Uniform
-                "NOR_Combat_Uniform",
-                "NOR_Combat_Uniform_Gloves",
-                "NOR_Combat_Uniform_Gloves_Rolled",
-                "NOR_Combat_Uniform_Rolled",
-                //Gorka
-                "NOR_Gorka_Uniform",
-                "NOR_Gorka_Uniform_Pads",
-                //Winter
-                //"NOR_Gorka_Winter_Uniform",
-                //"NOR_Gorka_Winter_Uniform_Pads",
-                //Winter mixed
-                //"NOR_Gorka_Mixed_Uniform",
-                //"NOR_Gorka_Mixed_Uniform_Pads",
-                //"NOR_Gorka_Mixed_Alt_Uniform",
-                //"NOR_Gorka_Mixed_Alt_Uniform_Pads",
-                };
-            vest[] = {
-                "CFP_LBT6094_operator_OGA",
-                "CFP_CarrierRig_Operator_OGA",
-                "CFP_FAPC_Operator_OGA",
+    class AllPlayable {
+        uniform[] = {
+            //Flecktarn
+            "BWA3_Uniform2_Fleck",
+            "BWA3_Uniform2_sleeves_Fleck",
+            "BWA3_Uniform_Fleck",
+            "BWA3_Uniform_sleeves_Fleck",
+            //"BWA3_Uniform_tee_Fleck",
+            //Tropentarn
+            // "BWA3_Uniform2_Tropen",
+            // "BWA3_Uniform2_sleeves_Tropen",
+            // "BWA3_Uniform_Tropen",
+            // "BWA3_Uniform_sleeves_Tropen",
+            // "BWA3_Uniform_tee_Tropen",
+            //Multitarn
+            // "BWA3_Uniform2_Multi",
+            // "BWA3_Uniform2_sleeves_Multi",
+            // "BWA3_Uniform_Multi",
+            // "BWA3_Uniform_sleeves_Multi",
+            // "BWA3_Uniform_tee_Multi",
             };
-            backpack = "";
-            headgear[] = {
-                //Regular used by Home Guard
-                //"NOR_Helmet_Comms",
-                //"NOR_Helmet_Comms_cov",
-                //"NOR_Helmet_Winter_Comms",
-                //"NOR_Helmet_Winter_Comms_cov",
-                //OPSCORE
-                "NOR_Opscore",
-                "NOR_Opscore_Tan",
-                "NOR_Opscore_Multi",
-                //"NOR_Opscore_Winter",
-                //SF
-                //"NOR_Opscore_SF",
-                //"NOR_Opscore_Tan_SF",
-                //"NOR_Opscore_Winter_SF",
-                };
-
-            addItemsToUniform[] = {
-                "ACE_MapTools",
-                "ACE_Flashlight_XL50",
-                "acex_intelitems_notepad",
-                "ACE_Painkillers",
-                LIST_15("ACE_fieldDressing"),
-                LIST_15("ACE_packingBandage"),
-                LIST_4("ACE_Tourniquet"),
-                LIST_2("CUP_17Rnd_9x19_glock17"),
+        vest[] = {
+            "BWA3_Vest_Rifleman_Fleck",
+            //"BWA3_Vest_Rifleman_Multi",
+            //"BWA3_Vest_Rifleman_Tropen",
             };
-            addItemsToVest[] = {
-                LIST_2("CUP_HandGrenade_M67"),
-                LIST_2("SmokeShell"),
-                "SmokeShellGreen",
-                "ACRE_PRC152",
-                LIST_3("Chemlight_red"),
+        backpack = "";
+        headgear[] = {
+            "BWA3_OpsCore_FastMT_Peltor_Fleck",
+            //"BWA3_OpsCore_FastMT_Peltor_Multi",
+            //"BWA3_OpsCore_FastMT_Tropen",
+            "BWA3_OpsCore_FastMT_Peltor",
+            //"BWA3_M92_Tropen",
+            //"BWA3_M92_Multi",
+            //"BWA3_M92_Fleck",
             };
-            addItemsToBackpack[] = {};
 
-            primaryWeapon[] = {
-                "CUP_arifle_HK416_Black",
-                //"CUP_arifle_HK416_Desert",
-                "CUP_arifle_HK416_Wood",
-                };
-            primaryWeaponMagazine = "CUP_30Rnd_556x45_PMAG_BLACK";
-            primaryWeaponOptics = "CUP_optic_CompM4";
-            primaryWeaponUnderbarrel = "";
-            primaryWeaponUnderbarrelMagazine = "";
-            primaryWeaponPointer = "ACE_DBAL_A3_Red";
-            secondaryWeapon = "";
-            secondaryWeaponMagazine = "";
-            handgunWeapon[] = {
-                "CUP_hgun_Glock17",
-                "CUP_hgun_Glock17_blk",
-                //"CUP_hgun_Glock17_tan",
-                };
-            handgunWeaponMagazine = "CUP_17Rnd_9x19_glock17";
-
-            goggles[] = {
-                "",
-                "CUP_G_Oakleys_Clr",
-                "CUP_G_Oakleys_Drk",
-                "CUP_G_Oakleys_Embr",
-                "CFP_Scarfbeardshades_green",
-                "CFP_Scarfbeardshades_tan",
-                "CUP_G_PMC_Facewrap_Tan_Glasses_Dark",
-                "CUP_G_PMC_Facewrap_Tan_Glasses_Ember",
-                "CUP_G_PMC_Facewrap_Tropical_Glasses_Dark",
-                "CUP_G_PMC_Facewrap_Tropical_Glasses_Ember",
-                "CUP_G_PMC_Facewrap_Black_Glasses_Dark",
-                "CUP_G_PMC_Facewrap_Black_Glasses_Ember",
-                "CFP_Neck_Wrap_Atacs",
-                "CFP_Neck_Wrap_Atacs2",
-                "CFP_Neck_Wrap2",
-                "CFP_Neck_Wrap3",
-                "CUP_G_Grn_Scarf_Shades_GPSCombo_Beard",
-                "CUP_G_Grn_Scarf_Shades_GPSCombo_Beard_Blonde",
-                "CUP_G_Tan_Scarf_Shades_GPSCombo_Beard",
-                "CUP_G_Tan_Scarf_Shades_GPSCombo_Beard_Blonde",
-                "CUP_G_Grn_Scarf_Shades",
-                "CUP_G_Tan_Scarf_Shades",
-                "CUP_G_Grn_Scarf_Shades_Beard",
-                "CUP_G_Grn_Scarf_Shades_Beard_Blonde",
-                "CUP_G_Tan_Scarf_Shades_Beard",
-                "CUP_G_Tan_Scarf_Shades_Beard_Blonde",
-                //"CUP_G_PMC_Facewrap_Winter_Glasses_Dark",
-                //"CUP_G_PMC_Facewrap_Winter_Glasses_Ember",
-                //"CFP_Scarfbeardshades_white",
-                //"CFP_Scarfshades_grey",
-                //"CUP_G_White_Scarf_Shades_Beard",
-                //"CUP_G_White_Scarf_Shades_Beard_Blonde",
-                //"CUP_G_White_Scarf_Shades",
-                //"CUP_G_White_Scarf_Shades_GPSCombo_Beard",
-                //"CUP_G_White_Scarf_Shades_GPSCombo_Beard_Blonde",
-                };
-            nvgoggles = "";
-
-            binoculars = "Binocular";
-            map = "ItemMap";
-            compass = "ItemCompass";
-            watch = "ItemWatch";
-            gps = "";
-            radio = "";
+        addItemsToUniform[] = {
+            "ACE_MapTools",
+            "ACE_Flashlight_XL50",
+            "acex_intelitems_notepad",
+            "ACE_Painkillers",
+            LIST_15("ACE_fieldDressing"),
+            LIST_15("ACE_packingBandage"),
+            LIST_4("ACE_Tourniquet"),
+            LIST_2("CUP_17Rnd_9x19_glock17"),
         };
+        addItemsToVest[] = {
+            LIST_2("BWA3_DM51A1"),
+            LIST_2("BWA3_DM25"),
+            "BWA3_DM32_Green",
+            "ACRE_SEM52SL",
+            "ACE_CableTie",
+        };
+        addItemsToBackpack[] = {};
+
+        primaryWeapon[] = {
+            "BWA3_G36A3",
+            "BWA3_G36A3_green",
+            "BWA3_G36A3_tan",
+            };
+        primaryWeaponMagazine = "BWA3_30Rnd_556x45_G36_AP";
+        primaryWeaponOptics[] = {
+            "BWA3_optic_ZO4x30_MicroT2",
+            "BWA3_optic_ZO4x30_MicroT2_brown",
+            "BWA3_optic_ZO4x30_RSAS",
+            "BWA3_optic_ZO4x30_RSAS_brown",
+            };
+        primaryWeaponMuzzle = "";
+            "BWA3_acc_LLM01_irlaser",
+            "BWA3_acc_LLM01_irlaser_green",
+            "BWA3_acc_LLM01_irlaser_tan",
+            };
+        primaryWeaponUnderbarrel = "";
+        primaryWeaponUnderbarrelMagazine = "";
+        secondaryWeapon = "";
+        secondaryWeaponMagazine = "";
+        handgunWeapon = "BWA3_P8";
+        handgunWeaponMagazine = "BWA3_15Rnd_9x19_P8";
+        primaryWeaponPointer[] = {
+
+
+        goggles[] = {
+            "BWA3_G_Combat_black",
+            "BWA3_G_Combat_clear",
+            "BWA3_G_Combat_orange",
+            };
+        nvgoggles = "";
+
+        binoculars = "Binocular";
+        map = "ItemMap";
+        compass = "ItemCompass";
+        watch = "ItemWatch";
+        gps = "";
+        radio = "";
     };
 
-    class Type {
+   class Type {
         //Rifleman
         class B_Soldier_F {
             addItemsToVest[] += {

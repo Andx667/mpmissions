@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=859;
+		nextID=878;
 	};
 	class MarkerIDProvider
 	{
@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7715.3276,16.930779,5102.5083};
-		dir[]={0.75579649,-0.65452904,-0.019069485};
-		up[]={0.65432084,0.75603676,-0.016509157};
-		aside[]={-0.025222953,-9.3132257e-10,-0.99968195};
+		pos[]={7743.3921,12.135157,5092.46};
+		dir[]={-0.63563627,-0.46502939,0.61625552};
+		up[]={-0.33387968,0.88528758,0.3236995};
+		aside[]={0.69609314,-6.7101792e-07,0.71799201};
 	};
 };
 binarizationWanted=0;
@@ -132,7 +132,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category2
 	{
 		name="Scenario";
 		class Attribute0
@@ -1870,7 +1870,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=10;
+		items=11;
 		class Item0
 		{
 			dataType="Layer";
@@ -7852,6 +7852,16 @@ class Mission
 			};
 			title="Aufklärer";
 			id=857;
+		};
+		class Item10
+		{
+			dataType="Group";
+			side="West";
+			class Attributes
+			{
+			};
+			id=859;
+			atlOffset=-5;
 		};
 	};
 };
