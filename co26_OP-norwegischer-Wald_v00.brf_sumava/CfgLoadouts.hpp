@@ -47,7 +47,7 @@ class Loadouts {
         "headgear"
     };
 
-    class Side {    
+    class Side {
         class Blufor { //BluforPlayers
             uniform[] = {
                 //Regular Uniform
@@ -133,35 +133,16 @@ class Loadouts {
                 "CUP_G_Oakleys_Clr",
                 "CUP_G_Oakleys_Drk",
                 "CUP_G_Oakleys_Embr",
-                "CFP_Scarfbeardshades_green",
-                "CFP_Scarfbeardshades_tan",
                 "CUP_G_PMC_Facewrap_Tan_Glasses_Dark",
                 "CUP_G_PMC_Facewrap_Tan_Glasses_Ember",
                 "CUP_G_PMC_Facewrap_Tropical_Glasses_Dark",
                 "CUP_G_PMC_Facewrap_Tropical_Glasses_Ember",
-                "CUP_G_PMC_Facewrap_Black_Glasses_Dark",
-                "CUP_G_PMC_Facewrap_Black_Glasses_Ember",
-                "CFP_Neck_Wrap_Atacs",
-                "CFP_Neck_Wrap_Atacs2",
-                "CFP_Neck_Wrap2",
-                "CFP_Neck_Wrap3",
+                //"CUP_G_PMC_Facewrap_Winter_Glasses_Dark",
+                //"CUP_G_PMC_Facewrap_Winter_Glasses_Ember",
                 "CUP_G_Grn_Scarf_Shades_GPSCombo_Beard",
                 "CUP_G_Grn_Scarf_Shades_GPSCombo_Beard_Blonde",
                 "CUP_G_Tan_Scarf_Shades_GPSCombo_Beard",
                 "CUP_G_Tan_Scarf_Shades_GPSCombo_Beard_Blonde",
-                "CUP_G_Grn_Scarf_Shades",
-                "CUP_G_Tan_Scarf_Shades",
-                "CUP_G_Grn_Scarf_Shades_Beard",
-                "CUP_G_Grn_Scarf_Shades_Beard_Blonde",
-                "CUP_G_Tan_Scarf_Shades_Beard",
-                "CUP_G_Tan_Scarf_Shades_Beard_Blonde",
-                //"CUP_G_PMC_Facewrap_Winter_Glasses_Dark",
-                //"CUP_G_PMC_Facewrap_Winter_Glasses_Ember",
-                //"CFP_Scarfbeardshades_white",
-                //"CFP_Scarfshades_grey",
-                //"CUP_G_White_Scarf_Shades_Beard",
-                //"CUP_G_White_Scarf_Shades_Beard_Blonde",
-                //"CUP_G_White_Scarf_Shades",
                 //"CUP_G_White_Scarf_Shades_GPSCombo_Beard",
                 //"CUP_G_White_Scarf_Shades_GPSCombo_Beard_Blonde",
                 };
@@ -206,6 +187,7 @@ class Loadouts {
                 LIST_5("CUP_1Rnd_SmokeRed_M203"),
                 LIST_5("CUP_1Rnd_Smoke_M203"),
                 //LIST_5("ACE_40mm_Pike"),
+                "ACE_EntrenchingTool",
             };
         };
 
@@ -217,7 +199,7 @@ class Loadouts {
             // };
             //primaryWeaponUnderbarrel = "";
             //primaryWeaponUnderbarrelMagazine = "";
-            
+
             backpack = "NOR_Predator_Backpack";
             addItemsToVest[] += {
                 "ACE_DefusalKit",
@@ -280,7 +262,7 @@ class Loadouts {
             secondaryWeapon = "BWA3_RGW90_Loaded";
         };
 
-        class TTT_B_RadioOperator_F: B_Soldier_F {            
+        class TTT_B_RadioOperator_F: B_Soldier_F {
             backpack = "NOR_Predator_Radio_Backpack";
 
             addItemsToVest[] += {
@@ -385,6 +367,7 @@ class Loadouts {
             };
             addItemsToBackpack[] = {
                 LIST_8("CUP_20Rnd_TE1_Red_Tracer_762x51_HK417"),
+                "ACE_EntrenchingTool",
             };
             binoculars = "ACE_Yardage450";
         };
@@ -417,8 +400,18 @@ class Loadouts {
             vest = "CFP_FAPC_MG_OGA";
 
             primaryWeapon = "CUP_lmg_FNMAG_RIS_modern";
+            // primaryWeapon[] = {
+            //     "CUP_lmg_Mk48_od",
+            //     //"CUP_lmg_Mk48_des",
+            //     //"CUP_lmg_Mk48_tan",
+            //     "CUP_lmg_Mk48",
+            //     };
             primaryWeaponMagazine = "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M";
-            primaryWeaponOptics = "";
+            primaryWeaponOptics[] = {
+                //"CUP_optic_Eotech553_Black",
+                //"CUP_optic_Eotech553_Coyote",
+                //"CUP_optic_Eotech553_OD",
+                };
             primaryWeaponUnderbarrel = "";
             primaryWeaponUnderbarrelMagazine = "";
 
@@ -457,9 +450,10 @@ class Loadouts {
                 "ACE_wirecutter",
                 LIST_3("DemoCharge_Remote_Mag"),
                 "ACE_VMH3",
-                LIST_12("mts_items_marker_mines"),
-                LIST_12("mts_items_marker_yellow"),
-                LIST_5("ACE_M14"),
+                LIST_4("mts_items_marker_mines"),
+                LIST_8("mts_items_marker_yellow"),
+                LIST_3("ACE_M14"),
+                LIST_2("ClaymoreDirectionalMine_Remote_Mag"),
             };
 
             goggles[] = {
@@ -509,7 +503,7 @@ class Loadouts {
             };
             class Rank {
 
-                class PRIVATE {}; 
+                class PRIVATE {};
                 class CORPORAL: PRIVATE {};
                 class SERGEANT: CORPORAL {
                     addItemsToVest[] += {
@@ -587,7 +581,7 @@ class Loadouts {
 
             class Rank {
 
-                class PRIVATE {}; 
+                class PRIVATE {};
                 class CORPORAL: PRIVATE {};
                 class SERGEANT: CORPORAL {
                     addItemsToVest[] += {
@@ -653,11 +647,12 @@ class Loadouts {
                 "",
             };
             class Rank {
-                class PRIVATE {}; 
+                class PRIVATE {};
                 class SERGEANT: PRIVATE {
                     addItemsToVest[] += {
                         "ItemAndroid",
                         "ACRE_152",
+                        LIST_3("CUP_20Rnd_46x30_MP7"),
                     };
                     binoculars = "Rangefinder";
                 };
@@ -685,7 +680,7 @@ class Loadouts {
                 "CUP_H_PMC_Beanie_Headphones_Khaki",
                 //"CUP_H_PMC_Beanie_Headphones_Winter",
                 };
-            
+
             primaryWeapon[] = {
                 "CUP_srifle_AWM_wdl",
                 "CUP_srifle_AWM_blk",
@@ -797,12 +792,15 @@ class Loadouts {
             primaryWeaponOptics = "";
             primaryWeaponPointer = "";
 
-            headgear = "H_CrewHelmetHeli_B";
+            headgear[] = {
+                "H_CrewHelmetHeli_B",
+                };
 
             addItemsToVest[] = {
                 LIST_2("SmokeShellPurple"),
                 LIST_2("ACE_Chemlight_UltraHiOrange"),
                 LIST_2("CUP_20Rnd_46x30_MP7"),
+                "ItemAndroid",
             };
 
             goggles = "";
@@ -813,15 +811,14 @@ class Loadouts {
 
             headgear[] = {
                 "H_PilotHelmetHeli_B",
-                "ttt_Helmet_Hawk",
-                "ttt_Helmet_Falcon",
-                "ttt_Helmet_Eagle",
                 "ttt_Helmet_Buzzard",
+                "ttt_Helmet_Eagle",
+                "ttt_Helmet_Falcon",
+                "ttt_Helmet_Hawk",
                 };
 
             addItemsToVest[] += {
                 "ACE_MicroDAGR",
-                "ItemAndroid",
             };
 
             addItemsToBackpack[] = {
@@ -965,7 +962,7 @@ class Loadouts {
                 //"CUP_arifle_HK416_CQB_Desert",
                 "CUP_arifle_HK416_CQB_Wood",
             };
-            
+
             class Rank {
 
                 class PRIVATE {
@@ -989,7 +986,7 @@ class Loadouts {
                         LIST_10("ACE_SalineIV"),
                         LIST_5("ACE_salineIV_500"),
                         LIST_5("ACE_SalineIV_250"),
-                        "ACE_SurgicalKit",  
+                        "ACE_SurgicalKit",
                         "ACE_Bodybag",
                     };
                 };
@@ -1067,7 +1064,7 @@ class Loadouts {
                 };
             };
         };
-        
+
         //SOF
         class B_recon_F {
             uniform[] = {
@@ -1157,7 +1154,7 @@ class Loadouts {
                 "ACE_VMH3",
             };
         };
-        
+
         class B_recon_JTAC_F: B_recon_F {
 
             addItemsToVest[] += {
