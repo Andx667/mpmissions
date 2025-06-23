@@ -43,6 +43,7 @@ class Loadouts {
         "headgear",
         "primaryWeapon",
         "primaryWeaponOptics",
+        "goggles",
     };
 
     class Side {
@@ -133,7 +134,12 @@ class Loadouts {
                 // "CUP_H_HIL_HelmetACH_ESS_Headset_TTS",
                 // "CUP_H_HIL_HelmetACH_Headset_TTS",
                 };
-            goggles = "";
+            goggles[] = {
+                "CUP_G_Oakleys_Clr",
+                "CUP_G_Oakleys_Drk",
+                "CUP_G_Oakleys_Embr",
+                ""
+                };
             nvgoggles = "";
             binoculars = "Binocular";
             map = "ItemMap";
@@ -317,6 +323,7 @@ class Loadouts {
 
         //Sani
         class B_medic_F {
+            primaryWeapon[] = {"CUP_arifle_HK416_CQB_Black","CUP_arifle_HK416_CQB_Desert","CUP_arifle_HK416_CQB_Wood"};
             vest = "CUP_V_CPC_medicalbelt_rngr";
 
             class Rank {
@@ -370,6 +377,7 @@ class Loadouts {
                         "ACE_flags_blue",
                         "ACE_SpraypaintBlue",
                     };
+
                 };
 
                 class SERGEANT: CORPORAL {
@@ -387,6 +395,7 @@ class Loadouts {
                         LIST_2("ACE_salineIV_500"),
                         LIST_2("ACE_SalineIV_250"),
                     };
+
                 };
 
                 class LIEUTENANT: SERGEANT {
@@ -407,6 +416,7 @@ class Loadouts {
                         LIST_4("ACE_salineIV_500"),
                         LIST_4("ACE_SalineIV_250"),
                     };
+
                 };
             };
         };

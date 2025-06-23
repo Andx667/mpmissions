@@ -10,8 +10,7 @@ onLoadMission = "";
 // Kurzbeschreibung in der Missionsauswahl
 overviewText = "";
 
-class Header
-{
+class Header {
     gameType = "coop";
     minPlayers = "1";
     maxPlayers = "44";
@@ -40,7 +39,7 @@ class CfgFunctions {
 };
 
 // - Loadouts ----------------------------------------------------------------
-#include "CfgLoadouts_FRA.hpp"
+#include "CfgLoadouts_NOR.hpp"
 
 // - Streamator -------------------------------------------------------------
 class CLib {

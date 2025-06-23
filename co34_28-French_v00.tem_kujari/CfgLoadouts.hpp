@@ -377,7 +377,6 @@ class Loadouts {
                         "ACE_flags_blue",
                         "ACE_SpraypaintBlue",
                     };
-
                 };
 
                 class SERGEANT: CORPORAL {
@@ -416,7 +415,6 @@ class Loadouts {
                         LIST_4("ACE_salineIV_500"),
                         LIST_4("ACE_SalineIV_250"),
                     };
-
                 };
             };
         };
