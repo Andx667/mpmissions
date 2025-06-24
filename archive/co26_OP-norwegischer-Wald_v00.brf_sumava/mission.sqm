@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=5;
+		nextID=6;
 	};
 	class Camera
 	{
-		pos[]={4330.4248,565.55652,8600.0459};
-		dir[]={-0.48285285,-0.57106578,-0.66391617};
-		up[]={-0.33589688,0.82089454,-0.46185312};
-		aside[]={-0.8087604,4.8516085e-08,0.58819324};
+		pos[]={3792.4543,185.64226,8132.3438};
+		dir[]={-0.055603195,-0.48231852,-0.87436873};
+		up[]={-0.0306143,0.8759017,-0.48141429};
+		aside[]={-0.99811971,-3.050538e-06,0.063457243};
 	};
 };
 binarizationWanted=0;
@@ -308,7 +308,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Scenario";
 		class Attribute0
@@ -2482,7 +2482,7 @@ class Mission
 					};
 					id=146;
 					type="CUP_O_RUS_M_Soldier_Ratnik_Autumn";
-					atlOffset=7.6293945e-06;
+					atlOffset=1.5258789e-05;
 				};
 				class Item2
 				{
@@ -2501,7 +2501,7 @@ class Mission
 					};
 					id=147;
 					type="CUP_O_RUS_M_Soldier_LAT_Ratnik_Autumn";
-					atlOffset=7.6293945e-06;
+					atlOffset=1.5258789e-05;
 				};
 				class Item3
 				{
@@ -5781,7 +5781,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				dynamicSimulation=1;
 			};
 			id=376;
 			type="CUP_O_Tigr_M_233114_GREEN_PK_RU";
@@ -5825,6 +5824,7 @@ class Mission
 					};
 					id=381;
 					type="CUP_O_RUS_M_Soldier_VKPO_Summer";
+					atlOffset=4.529953e-06;
 				};
 				class Item1
 				{
@@ -5835,12 +5835,12 @@ class Mission
 						angles[]={0,4.4387565,6.25985};
 					};
 					side="East";
-					flags=4;
 					class Attributes
 					{
 					};
 					id=382;
 					type="CUP_O_RUS_M_Soldier_VKPO_Summer";
+					atlOffset=2.2986257;
 				};
 			};
 			class Attributes
