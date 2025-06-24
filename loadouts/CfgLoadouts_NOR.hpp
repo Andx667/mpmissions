@@ -1020,6 +1020,7 @@ class Loadouts {
                         LIST_8("ACE_SalineIV"),
                         LIST_4("ACE_salineIV_500"),
                         LIST_4("ACE_SalineIV_250"),
+                        "ACE_SurgicalKit",
                     };
 
                 };
