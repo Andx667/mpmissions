@@ -998,7 +998,7 @@ class Loadouts {
                         "ACRE_PRC152",
                     };
                 };
-
+                //Doc
                 class LIEUTENANT: SERGEANT {
                     backpack = "NOR_Predator_Radio_Backpack";
 
