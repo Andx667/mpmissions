@@ -29,6 +29,8 @@
 #define LIST_28(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
 #define LIST_29(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
 #define LIST_30(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_45(var1) LIST_30(var1),LIST_15(var1)
+#define LIST_60(var1) LIST_30(var1),LIST_30(var1)
 
 class Loadouts {
     baseDelay = 1;
@@ -50,36 +52,64 @@ class Loadouts {
     class Side {
         class Blufor {
             uniform[] = {
-
+                "UK3CB_GAF_B_U_CombatSmock_04_DIGI",
+                "UK3CB_GAF_B_U_SF_CombatSmock_07_MULTICAM_OLIVE",
+                "UK3CB_GAF_B_U_SF_CombatSmock_07_MULTICAM",
+                "UK3CB_GAF_B_U_SF_CombatSmock_08_MULTICAM_OLIVE",
+                "UK3CB_GAF_B_U_SF_CombatSmock_08_MULTICAM_TAN",
+                "UK3CB_GAF_B_U_SF_CombatSmock_08_MULTICAM",
+                "UK3CB_GAF_B_U_CombatSmock_02_DIGI",
+                "UK3CB_GAF_B_U_SF_CombatSmock_03_MULTICAM_OLIVE",
+                "UK3CB_GAF_B_U_SF_CombatSmock_03_MULTICAM_TAN",
+                "UK3CB_GAF_B_U_SF_CombatSmock_03_MULTICAM",
+                "UK3CB_GAF_B_U_SF_CombatSmock_04_MULTICAM_OLIVE",
+                "UK3CB_GAF_B_U_SF_CombatSmock_04_MULTICAM_TAN",
+                "UK3CB_GAF_B_U_SF_CombatSmock_04_MULTICAM",
             };
             vest[] = {
-
+                "UK3CB_GAF_B_MBAV_LIGHT_DIGI_OLI",
+                "UK3CB_GAF_B_MBAV_LIGHT_DIGI",
             };
             backpack = "";
             headgear[] = {
-
+                "UK3CB_GAF_B_H_Beret_Army",
             };
 
             addItemsToUniform[] = {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "ACE_Painkillers",
-                LIST_15("ACE_fieldDressing"),
+                "kat_Painkiller",
+                LIST_15("ACE_quikclot"),
                 LIST_15("ACE_packingBandage"),
                 LIST_4("ACE_Tourniquet"),
-                LIST_2(""),
+                LIST_2("kat_chestSeal"),
             };
             addItemsToVest[] = {
+                LIST_2("rhs_mag_m67"),
+                LIST_2("rhs_mag_an_m8hc"),
+                "rhs_mag_m18_green",
+                "ACRE_PRC148"
 
             };
             addItemsToBackpack[] = {};
 
             primaryWeapon[] = {
+                "UK3CB_ACR_Carbine",
             };
-            primaryWeaponOptics = "";
-            primaryWeaponPointer = "";
-            primaryWeaponMagazine = "";
+            primaryWeaponOptics[] = {
+                "rhsusf_acc_su230",
+                "rhsusf_acc_su230_c",
+                "rhsusf_acc_su230_mrds",
+                "rhsusf_acc_su230_mrds_c",
+                "rhsusf_acc_g33_xps3_tan",
+                "rhsusf_acc_g33_xps3",
+                "rhsusf_acc_g33_T1",
+                "rhsusf_acc_T1_high",
+                "rhsusf_acc_EOTECH",
+                };
+            primaryWeaponPointer = "ACE_DBAL_A3_Red";
+            primaryWeaponMagazine = "UK3CB_ACR_30rnd_556x45";
             primaryWeaponUnderbarrel = "";
             primaryWeaponUnderbarrelMagazine = "";
             secondaryWeapon = "";
@@ -276,19 +306,89 @@ class Loadouts {
 
         //Medics
         class B_medic_F {
+            vest[] = {
+                "UK3CB_GAF_B_MBAV_MEDIC_BLK_02",
+                "UK3CB_GAF_B_MBAV_MEDIC_DIGI_OLI_02",
+                "UK3CB_GAF_B_MBAV_MEDIC_DIGI_02",
+                "UK3CB_GAF_B_MBAV_MEDIC_OLI_02",
+                "UK3CB_GAF_B_MBAV_MEDIC_TAN_01",
+            };
+
+            primaryWeapon = "UK3CB_ACR_Crew";
 
             class Rank {
 
-                class PRIVATE {
+                class PRIVATE { //Squad Level Medic
+                    backpack[] = {
+                        "B_AssaultPack_rgr",
+                        };
+
+                    addItemsToVest[] += {
+                        LIST_3("UK3CB_ACR_30rnd_556x45"),
+                        "kat_basicDiagnostic",
+                        "kat_Pulseoximeter",
+                    };
+                    //Fits in a Vanilla Assault_Pack recommended for Squad-Level-Medics
+                    addItemsToBackpack[] = {
+                        LIST_30("ACE_quikclot"),
+                        LIST_30("ACE_packingBandage"),
+                        LIST_12("ACE_tourniquet"),
+
+                        LIST_8("kat_IV_16"),
+                        LIST_4("kat_IO_FAST"),
+
+                        LIST_8("kat_chestSeal"),
+                        LIST_8("kat_larynx"),
+                        LIST_8("kat_ncdKit"),
+
+                        "kat_pocketBVM",
+
+                        LIST_8("ACE_salineIV_250"),
+
+                        LIST_8("kat_TXA"),
+                        LIST_8("ACE_adenosine"),
+                        LIST_8("ACE_epinephrine"),
+                        LIST_8("kat_naloxone"),
+                        LIST_8("kat_nalbuphine"),
+                        LIST_8("kat_Painkiller"),
+                        LIST_8("kat_Penthrox"),
+                    };
 
                 };
 
                 class CORPORAL: PRIVATE {
+                    backpack = "B_TacticalPack_rgr";
 
+                    addItemsToBackpack[] += {
+                        LIST_15("ACE_quikclot"),
+                        LIST_15("ACE_packingBandage"),
+                        LIST_4("ACE_tourniquet"),
+
+                        LIST_4("kat_IV_16"),
+                        LIST_2("kat_IO_FAST"),
+
+                        LIST_4("kat_chestSeal"),
+                        LIST_4("kat_larynx"),
+                        LIST_4("kat_ncdKit"),
+
+                        LIST_4("ACE_salineIV_250"),
+
+                        LIST_4("kat_TXA"),
+                        LIST_4("ACE_adenosine"),
+                        LIST_4("ACE_epinephrine"),
+                        LIST_4("kat_naloxone"),
+                        LIST_4("kat_nalbuphine"),
+                        LIST_4("kat_Painkiller"),
+                        LIST_4("kat_Penthrox"),
+                    };
                 };
 
                 class SERGEANT: CORPORAL {
-
+                    backpack[] = {
+                        "UK3CB_GAF_B_B_RIF_MED_DIGI",
+                        "UK3CB_GAF_B_B_RIF_MED_OLI",
+                        "UK3CB_GAF_B_B_RIF_MED_TAN",
+                    };
                 };
 
                 class LIEUTENANT: SERGEANT {

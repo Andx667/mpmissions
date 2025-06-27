@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=878;
+		nextID=879;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=15;
+		nextID=18;
 	};
 	class Camera
 	{
-		pos[]={7713.8901,32.4366,5077.4951};
-		dir[]={0.41605785,-0.63674104,0.64920294};
-		up[]={0.34357157,0.77107549,0.53609765};
-		aside[]={0.84193951,1.1845987e-07,-0.53957742};
+		pos[]={7755.9395,19.998684,5103.7148};
+		dir[]={-0.80946898,-0.50342792,0.30219513};
+		up[]={-0.47163412,0.86403733,0.17607306};
+		aside[]={0.34974793,8.0850441e-08,0.9368456};
 	};
 };
 binarizationWanted=0;
@@ -42,14 +42,13 @@ addons[]=
 	"ace_explosives",
 	"A3_Characters_F_Orange",
 	"ace_nouniformrestrictions",
-	"cfp_uniforms",
 	"A3_Characters_F_Patrol"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=10;
+		items=9;
 		class Item0
 		{
 			className="KJW_TwoPrimaryWeapons";
@@ -107,12 +106,6 @@ class AddonsMetaData
 		};
 		class Item8
 		{
-			className="cfp_uniforms";
-			name="cfp_uniforms";
-			author="CFP Team";
-		};
-		class Item9
-		{
 			className="A3_Characters_F_Patrol";
 			name="Arma 3 Patrol - Characters and Clothing";
 			author="Bohemia Interactive";
@@ -132,7 +125,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category2
 	{
 		name="Scenario";
 		class Attribute0

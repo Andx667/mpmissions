@@ -998,7 +998,7 @@ class Loadouts {
                         "ACRE_PRC152",
                     };
                 };
-
+                //Doc
                 class LIEUTENANT: SERGEANT {
                     backpack = "NOR_Predator_Radio_Backpack";
 
@@ -1010,12 +1010,12 @@ class Loadouts {
                         "ACRE_PRC117F",
                         "ACE_Bodybag",
                         LIST_30("ACE_Suture"),
-                        LIST_16("ACE_Tourniquet"),
+                        LIST_8("ACE_Tourniquet"),
                         LIST_30("ACE_elasticBandage"),
 
-                        LIST_12("ACE_Epinephrine"),
-                        LIST_6("ACE_Painkillers"),
-                        LIST_6("ACE_morphine"),
+                        LIST_8("ACE_Epinephrine"),
+                        LIST_4("ACE_Painkillers"),
+                        LIST_4("ACE_morphine"),
 
                         LIST_8("ACE_SalineIV"),
                         LIST_4("ACE_salineIV_500"),
