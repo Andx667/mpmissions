@@ -24,7 +24,7 @@
         [
             {
                 [ACE_Player, currentWeapon ACE_Player, true] call ace_safemode_fnc_setWeaponSafety;
-                
+
                 if (typeOf ACE_player == "B_soldier_exp_F") then {
                     [
                         [
@@ -50,12 +50,10 @@
                     case "B_Soldier_SL_F": {
                         [ACE_player, "TTT_green_emblem"] call BIS_fnc_setUnitInsignia;
                     };
+                    case "B_helicrew_F";
+                    case "B_Helipilot_F";
                     case "B_medic_F": {
                         [ACE_player, "TTT_white_emblem"] call BIS_fnc_setUnitInsignia;
-                    };
-                    case "B_helicrew_F";
-                    case "B_Helipilot_F": {
-                        [ACE_player, "TTT_silver_emblem"] call BIS_fnc_setUnitInsignia;
                     };
 
                     default {

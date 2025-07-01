@@ -17,3 +17,6 @@ force ace_medical_treatment_medicIV = 1;
 
 //ACE Cookoff
 force ace_cookoff_enableAmmobox = false;
+
+force ttt_signalpanel_enable = true;                                                //default: false;
+force ttt_signalpanel_supportedBackpacks = '["ttt_backpack_radio_coyote"]';   //default: [];

@@ -28,12 +28,21 @@ setDate [2022, 6, 25, 11, 15]; //Datum ändern
 } forEach allUnits;
 
 [
-    [heli_01, mtvr_01],
+    [heli_01, mtvr_01, heli_02],
     [
-        ["B_AssaultPack_blk", 1],
-        ["Toolkit", 1]
+        ["B_AssaultPack_blk", 1]
     ],
     true
+] call ttt_common_fnc_crateFiller;
+
+[
+    [heli_01, heli_02],
+    [
+        ["CUP_arifle_HK416_CQB_Black", 4],
+        ["CUP_30Rnd_556x45_Emag", 12],
+        ["Democharge_Remote_Mag", 2]
+    ],
+    false
 ] call ttt_common_fnc_crateFiller;
 
 [
@@ -96,3 +105,12 @@ setDate [2022, 6, 25, 11, 15]; //Datum ändern
     false
 ] call ttt_common_fnc_crateFiller;
 
+
+{
+    {
+        // Füllt alle schwarzen Rucksäcke in den Fhz mit einem Werkzeugkasten
+        if (typeof _x == "B_AssaultPack_blk") then {
+            _x addItemCargoGlobal ["ToolKit", 1];
+        };
+    } forEach (everyBackpack _x);
+} forEach [heli_01, mtvr_01, heli_02];

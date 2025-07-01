@@ -35,7 +35,7 @@ class Loadouts {
     perPlayerDelay = 1;
     handleRadios = 0;
     resetLoadout = 1;
-    randomizationMode = 2;
+    randomizationMode = 1;
     customGear = 300;
     //customGear = "(_this select 0) distance2D (getMarkerPos 'respawn') < 50";
     customGearAllowedCategories[] = {
@@ -104,7 +104,7 @@ class Loadouts {
             primaryWeaponOptics[] = {
                 "CUP_optic_MicroT1_OD",
                 "CUP_optic_MicroT1_coyote",
-                "CUP_optic_MicroT1_OD",
+                "CUP_optic_MicroT1",
                 };
             primaryWeaponPointer[] = {
                 "acc_pointer_IR",
@@ -281,6 +281,7 @@ class Loadouts {
 
             addItemsToUniform[] += {
                 "ACE_MicroDAGR",
+                "ACRE_PRC152",
             };
 
             addItemsToVest[] += {
@@ -332,7 +333,7 @@ class Loadouts {
                     backpack = "CFP_AssaultPack_PolygonDesert";
 
                     addItemsToVest[] += {
-                        LIST_8("CUP_30Rnd_556x45_Emag"),
+                        LIST_7("CUP_30Rnd_556x45_Emag"),
                     };
 
                     addItemsToBackpack[] += {
@@ -356,6 +357,8 @@ class Loadouts {
                     addItemsToVest[] = {
                         "ACE_SurgicalKit",
                         LIST_3("CUP_30Rnd_556x45_Emag"),
+                        "ACRE_PRC152",
+                        "ItemAndroid",
                     };
 
                     addItemsToBackpack[] = {
@@ -374,22 +377,13 @@ class Loadouts {
                         LIST_4("ACE_SalineIV_250"),
 
                         "ACE_Bodybag",
-                        "ACE_flags_blue",
-                        "ACE_SpraypaintBlue",
                     };
                 };
 
                 class SERGEANT: CORPORAL {
                     backpack = "CFP_Kitbag_PolygonDesert";
 
-                    addItemsToVest[] += {
-                        "ACRE_PRC152",
-                        "ItemAndroid",
-                    };
-
                     addItemsToBackpack[] += {
-                        "ACE_flags_blue",
-                        "ACE_SpraypaintBlue",
                         LIST_4("ACE_SalineIV"),
                         LIST_2("ACE_salineIV_500"),
                         LIST_2("ACE_SalineIV_250"),
@@ -398,23 +392,7 @@ class Loadouts {
                 };
 
                 class LIEUTENANT: SERGEANT {
-                    backpack = "ttt_backpack_radio_coyote";
 
-                    addItemsToBackpack[] = {
-                        "ACRE_PRC117F",
-                        "ACE_Bodybag",
-                        LIST_30("ACE_Suture"),
-                        LIST_16("ACE_Tourniquet"),
-                        LIST_30("ACE_elasticBandage"),
-
-                        LIST_12("ACE_Epinephrine"),
-                        LIST_6("ACE_Painkillers"),
-                        LIST_6("ACE_morphine"),
-
-                        LIST_8("ACE_SalineIV"),
-                        LIST_4("ACE_salineIV_500"),
-                        LIST_4("ACE_SalineIV_250"),
-                    };
                 };
             };
         };
@@ -435,6 +413,7 @@ class Loadouts {
                 LIST_3("SmokeShellPurple"),
                 LIST_3("SmokeShellYellow"),
                 "ACE_HandFlare_Green",
+                "ACE_MicroDAGR",
             };
 
             headgear = "H_CrewHelmetHeli_I_E";
