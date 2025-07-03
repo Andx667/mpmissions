@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=1159;
+		nextID=1162;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=38;
+		nextID=42;
 	};
 	class Camera
 	{
-		pos[]={8733.5313,519.54089,4736.2974};
-		dir[]={-0.81170386,-0.37361243,0.44905183};
-		up[]={-0.32694167,0.92757475,0.18087089};
-		aside[]={0.48411143,-4.2113243e-08,0.87507516};
+		pos[]={15107.449,205.47374,1724.4087};
+		dir[]={0.33525756,-0.40080798,-0.85262406};
+		up[]={0.14667131,0.91615868,-0.37301251};
+		aside[]={-0.93064457,-1.0163058e-07,-0.3659375};
 	};
 };
 binarizationWanted=0;
@@ -420,7 +420,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Scenario";
 		class Attribute0
@@ -1318,7 +1318,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=233;
+		items=236;
 		class Item0
 		{
 			dataType="Layer";
@@ -4660,7 +4660,7 @@ class Mission
 			};
 			id=147;
 			type="CUP_B_RHIB_HIL";
-			atlOffset=1.1174117;
+			atlOffset=1.1174116;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4719,7 +4719,7 @@ class Mission
 			};
 			id=149;
 			type="CUP_B_RHIB_HIL";
-			atlOffset=1.2597953;
+			atlOffset=1.2597952;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6815,8 +6815,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={12583.033,26.288509,3096.2153};
-				angles[]={0.010000871,0,0.019996032};
+				position[]={12571.109,18.899618,3302.207};
+				angles[]={0.037482351,0,6.1909475};
 			};
 			name="release_02";
 			id=292;
@@ -6838,11 +6838,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={12712.05,18.577978,3280.3542};
+				position[]={12698.627,20.130367,3250.3691};
 			};
 			name="attack_02";
 			id=294;
 			type="Logic";
+			atlOffset=0.64785004;
 		};
 		class Item71
 		{
@@ -6884,8 +6885,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14916.52,15.635752,1674.7188};
-				angles[]={0.012501417,0,6.2058401};
+				position[]={14700.65,13.723165,1805.6914};
+				angles[]={0.015002378,0,0.089758366};
 			};
 			name="spawn_03";
 			id=299;
@@ -8848,13 +8849,13 @@ class Mission
 						angles[]={6.2756844,0,0.0099949092};
 					};
 					side="East";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=470;
 					type="CUP_O_TK_INS_Soldier";
-					atlOffset=-1.4305115e-05;
+					atlOffset=0.72585678;
 				};
 			};
 			class Attributes
@@ -9375,7 +9376,7 @@ class Mission
 			position[]={12726.16,18.615475,3251.8049};
 			class Attributes
 			{
-				onActivation="[spawn_01, release_01, attack_01, EAST, ""CUP_O_Ural_TKA"", 0, configFile >> ""CfgGroups"" >> ""East"" >> ""CUP_O_TK"" >> ""Infantry"" >> ""CUP_O_TK_InfantrySquad"", 2] call ttt_common_fnc_callReinforcements;" \n "" \n "[spawn_02, release_02, attack_02, EAST, ""CUP_O_BTR60_TK"", 2, configFile >> ""CfgGroups"" >> ""East"" >> ""CUP_O_TK"" >> ""Infantry"" >> ""CUP_O_TK_InfantrySquad"", 2] call ttt_common_fnc_callReinforcements;" \n "" \n "[spawn_03, release_03, attack_03, EAST, ""CUP_O_Ural_TKA"", 0, configFile >> ""CfgGroups"" >> ""East"" >> ""CUP_O_TK"" >> ""Infantry"" >> ""CUP_O_TK_InfantrySquad"", 2] call ttt_common_fnc_callReinforcements;" \n "" \n "";
+				onActivation="[spawn_01, release_01, attack_01, EAST, ""CUP_O_Ural_TKA"", 0, configFile >> ""CfgGroups"" >> ""East"" >> ""CUP_O_TK"" >> ""Infantry"" >> ""CUP_O_TK_InfantrySquad"", 2] call ttt_common_fnc_callReinforcements;" \n "" \n "[spawn_02, release_02, attack_02, EAST, ""CUP_O_BTR60_TK"", 2, configFile >> ""CfgGroups"" >> ""East"" >> ""CUP_O_TK"" >> ""Infantry"" >> ""CUP_O_TK_InfantrySquad"", 2] call ttt_common_fnc_callReinforcements;" \n "" \n "[spawn_03, release_03, attack_03, EAST, ""CUP_O_Ural_TKA"", 0, configFile >> ""CfgGroups"" >> ""East"" >> ""CUP_O_TK"" >> ""Infantry"" >> ""CUP_O_TK_InfantrySquad"", 2] call ttt_common_fnc_callReinforcements;" \n "" \n "[spawn_06, release_06, attack_06, EAST, ""CUP_O_BTR60_TK"", 2, configFile >> ""CfgGroups"" >> ""East"" >> ""CUP_O_TK"" >> ""Infantry"" >> ""CUP_O_TK_InfantrySquad"", 2] call ttt_common_fnc_callReinforcements;" \n "";
 				activationBy="ANYPLAYER";
 				isServerOnly=1;
 			};
@@ -17491,13 +17492,13 @@ class Mission
 						angles[]={0.010000871,0,6.2058411};
 					};
 					side="East";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=1072;
 					type="CUP_O_TK_INS_Soldier";
-					atlOffset=2.2888184e-05;
+					atlOffset=0.72802162;
 				};
 			};
 			class Attributes
@@ -17561,13 +17562,13 @@ class Mission
 						angles[]={0.015002378,0,6.2058396};
 					};
 					side="East";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=1075;
 					type="CUP_O_TK_INS_Soldier";
-					atlOffset=2.6702881e-05;
+					atlOffset=0.72807121;
 				};
 			};
 			class Attributes
@@ -17921,13 +17922,13 @@ class Mission
 						angles[]={6.278182,0,0.077345207};
 					};
 					side="East";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=1118;
 					type="CUP_O_TK_INS_Soldier";
-					atlOffset=6.6757202e-06;
+					atlOffset=0.90084839;
 				};
 			};
 			class Attributes
@@ -19727,6 +19728,42 @@ class Mission
 				};
 				nAttributes=3;
 			};
+		};
+		class Item233
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12906.415,17.105,3005.2627};
+				angles[]={6.2506976,0,6.2806721};
+			};
+			name="release_06";
+			id=1159;
+			type="Logic";
+		};
+		class Item234
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={14828.254,12.631653,1876.1768};
+				angles[]={0.012501417,0,6.2058401};
+			};
+			name="spawn_06";
+			id=1160;
+			type="Logic";
+		};
+		class Item235
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12746.837,17.05838,3267.0889};
+				angles[]={0.06739822,0,6.2257481};
+			};
+			name="attack_06";
+			id=1161;
+			type="Logic";
 		};
 	};
 	class Connections
