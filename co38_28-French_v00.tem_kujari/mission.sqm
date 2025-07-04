@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=1197;
+		nextID=1199;
 	};
 	class MarkerIDProvider
 	{
@@ -24,14 +24,14 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={12812.988,150.4276,3177.6274};
-		dir[]={0.91085833,-0.32847616,-0.25021809};
-		up[]={0.31681168,0.94446129,-0.087029859};
-		aside[]={-0.26491514,8.9230889e-07,-0.96436423};
+		pos[]={13961.821,35.768589,7278.2725};
+		dir[]={-0.77749598,-0.62781298,0.038730491};
+		up[]={-0.62704551,0.77833736,0.031235507};
+		aside[]={0.049756408,7.6298602e-07,0.99884278};
 	};
 };
 binarizationWanted=0;
-sourceName="co34_28-French_v00";
+sourceName="co38_28-French_v00";
 addons[]=
 {
 	"KJW_TwoPrimaryWeapons",
@@ -93,13 +93,16 @@ addons[]=
 	"vtx_uh60_acre",
 	"ttt_w_buildingshield",
 	"CUP_Creatures_Military_HIL",
-	"ttt_signs"
+	"ttt_signs",
+	"A3_Structures_F_Exp_Walls_Wired",
+	"emr_main",
+	"ace_logistics_wirecutter"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=49;
+		items=52;
 		class Item0
 		{
 			className="KJW_TwoPrimaryWeapons";
@@ -406,6 +409,27 @@ class AddonsMetaData
 			author="Tactical Training Team";
 			url="https://tacticalteam.de";
 		};
+		class Item49
+		{
+			className="A3_Structures_F_Exp";
+			name="Arma 3 Apex - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item50
+		{
+			className="emr_main";
+			name="Enhanced Movement Rework";
+			author="Simplex Team";
+			url="https://github.com/SceptreOfficial/Enhanced-Movement-Rework";
+		};
+		class Item51
+		{
+			className="ace_logistics_wirecutter";
+			name="ACE3 - Logistics Wire Cutter";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
 	};
 };
 dlcs[]=
@@ -440,7 +464,7 @@ class CustomAttributes
 				class data
 				{
 					singleType="BOOL";
-					value=1;
+					value=0;
 				};
 			};
 		};
@@ -1326,7 +1350,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=229;
+		items=231;
 		class Item0
 		{
 			dataType="Layer";
@@ -16142,8 +16166,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12742.907,20.545317,3201.5359};
-				angles[]={0.02999169,1.3824356,6.2631865};
+				position[]={12742.77,20.563141,3200.9678};
+				angles[]={0.022495884,4.1815729,6.270689};
 			};
 			side="Empty";
 			flags=4;
@@ -16153,7 +16177,6 @@ class Mission
 			};
 			id=562;
 			type="Land_Wreck_BMP2_F";
-			atlOffset=1.9073486e-06;
 		};
 		class Item206
 		{
@@ -20092,6 +20115,38 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item229
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13829.262,15.14788,7341.6724};
+				angles[]={0,4.6366329,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=1197;
+			type="Land_WiredFence_01_16m_F";
+		};
+		class Item230
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13942.398,16.97541,7275.8369};
+				angles[]={0,2.8456221,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=1198;
+			type="Land_WiredFence_01_16m_F";
 		};
 	};
 	class Connections
