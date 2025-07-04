@@ -189,7 +189,7 @@ class Loadouts {
 
             addItemsToBackpack[] = {
                 "ACRE_PRC117F",
-                LIST_10("SmokeShellPurple"),
+                LIST_12("SmokeShellPurple"),
                 "ACE_flags_blue",
                 "ACE_flags_yellow",
                 "ItemcTab",
@@ -249,7 +249,7 @@ class Loadouts {
             };
             backpack = "CUP_B_TacticalPack_CCE";
             primaryWeapon[] = {
-                "LMG_03_F",
+                "CUP_lmg_m249_pip3",
             };
             primaryWeaponMagazine = "CUP_100Rnd_TE4_Red_Tracer_556x45_M249";
             primaryWeaponUnderbarrel = "CUP_bipod_Harris_1A2_L_BLK";
@@ -286,13 +286,14 @@ class Loadouts {
 
             addItemsToVest[] += {
                 LIST_5("CUP_1Rnd_HE_M203"),
-                "ACE_SpraypaintBlack",
+                LIST_7("CUP_30Rnd_556x45_Emag_Tracer_Red"),
             };
             addItemsToBackpack[] = {
                 LIST_10("CUP_1Rnd_HE_M203"),
                 LIST_5("CUP_1Rnd_HEDP_M203"),
                 LIST_5("1Rnd_Smoke_Grenade_shell"),
                 LIST_5("1Rnd_SmokeRed_Grenade_shell"),
+                "ACE_SpraypaintBlack",
             };
 
             binoculars = "ACE_Vector";
@@ -300,6 +301,7 @@ class Loadouts {
 
         class B_Soldier_SL_F {
             vest = "CUP_V_PMC_CIRAS_OD_TL";
+            backpack = "CUP_B_TacticalPack_CCE";
 
             primaryWeaponMagazine = "CUP_30Rnd_556x45_Emag_Tracer_Red";
 
@@ -311,8 +313,12 @@ class Loadouts {
                 "ACRE_PRC152",
                 "ItemAndroid",
                 LIST_8("CUP_30Rnd_556x45_Emag_Tracer_Red"),
+            };
+            addItemsToBackpack[] +={
                 "ACE_flags_red",
                 "ACE_SpraypaintBlack",
+                "ttt_pm_tagging_spraypaint",
+                "ACE_SpraypaintGreen",
             };
 
             binoculars = "ACE_Vector";
@@ -337,10 +343,11 @@ class Loadouts {
                     };
 
                     addItemsToBackpack[] += {
-                        LIST_10("ACE_Tourniquet"),
+                        LIST_12("ACE_Tourniquet"),
                         LIST_30("ACE_packingBandage"),
-                        LIST_10("ACE_elasticBandage"),
                         LIST_30("ACE_quikclot"),
+                        LIST_20("ACE_packingBandage"),
+                        LIST_20("ACE_quikclot"),
 
                         LIST_4("ACE_Painkillers"),
 
@@ -424,7 +431,8 @@ class Loadouts {
 
             addItemsToBackpack[] = {
                 "ACRE_PRC117F",
-                "ItemAndroid"
+                "ItemAndroid",
+                "ttt_common_spraypaintMemes",
             };
 
             headgear[] = {
