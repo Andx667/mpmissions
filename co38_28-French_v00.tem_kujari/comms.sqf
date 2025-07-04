@@ -15,7 +15,8 @@ player createDiaryRecord ["Diary", [
     "Funkkanäle",
     "<br/>"
     + "<t/> Kampfkreis - Channel 1 <br/>"
-    + "<t/> Ground-to-Air - Channel 5 <br/>"
+    + "<t/> Air-to-Air - Channel 6 <br/>"
+    + "<t/> Ground-to-Air - Channel 9 <br/>"
     + "<br/>"
     + "<t/> Fox int - Channel 10 <br/>"
     + "<t/> Fox-1 int - Channel 11 <br/>"

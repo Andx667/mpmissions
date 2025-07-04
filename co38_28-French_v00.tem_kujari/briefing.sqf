@@ -44,7 +44,7 @@
 
 player createDiaryRecord ["Diary", [
     "Auftrag",
-    "An die Taskforce 'Grün': <br/>"
+    "An die Taskforce 'Fox': <br/>"
     + "<t/>- Vernichten Sie den Störsender im ehem. Gouverneurspalast <br/>"
     + "<t/>- Finden Sie dort Intel über den Standort der Milizbastion <br/>"
     + "<t/>- Zerschlagen Sie den Feind in der Milizbastion <br/>"

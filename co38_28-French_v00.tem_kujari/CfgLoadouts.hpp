@@ -186,6 +186,10 @@ class Loadouts {
         class TTT_B_RadioOperator_F: B_Soldier_F {
             backpack = "ttt_backpack_radio_coyote";
 
+            addItemsToVest[] += {
+                "ACRE_PRC152",
+            };
+
             addItemsToBackpack[] = {
                 "ACRE_PRC117F",
                 LIST_12("SmokeShellPurple"),
