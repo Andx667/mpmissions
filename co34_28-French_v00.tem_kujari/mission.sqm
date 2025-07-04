@@ -12,22 +12,22 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=1188;
+		nextID=1197;
 	};
 	class MarkerIDProvider
 	{
-		nextID=1;
+		nextID=3;
 	};
 	class LayerIndexProvider
 	{
-		nextID=47;
+		nextID=52;
 	};
 	class Camera
 	{
-		pos[]={12004.837,69.166908,15047.043};
-		dir[]={0.020085273,-0.84917903,0.52772307};
-		up[]={0.032296583,0.52810496,0.84856468};
-		aside[]={0.99927652,1.8626451e-09,-0.038032714};
+		pos[]={14026.074,125.31583,7111.8809};
+		dir[]={-0.49800143,-0.52970767,0.68660104};
+		up[]={-0.31101233,0.84817839,0.42879698};
+		aside[]={0.80949795,1.7997809e-07,0.58714134};
 	};
 };
 binarizationWanted=0;
@@ -92,13 +92,14 @@ addons[]=
 	"vtx_uh60_config",
 	"vtx_uh60_acre",
 	"ttt_w_buildingshield",
-	"CUP_Creatures_Military_HIL"
+	"CUP_Creatures_Military_HIL",
+	"ttt_signs"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=48;
+		items=49;
 		class Item0
 		{
 			className="KJW_TwoPrimaryWeapons";
@@ -397,6 +398,13 @@ class AddonsMetaData
 		{
 			className="CUP_Creatures_Military_HIL";
 			name="CUP_Creatures_Military_HIL";
+		};
+		class Item48
+		{
+			className="ttt_signs";
+			name="TTT - Signs";
+			author="Tactical Training Team";
+			url="https://tacticalteam.de";
 		};
 	};
 };
@@ -1318,7 +1326,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=225;
+		items=229;
 		class Item0
 		{
 			dataType="Layer";
@@ -7793,8 +7801,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14915.971,5.4749522,7217.7944};
-				angles[]={0.14154701,0,6.2606921};
+				position[]={12728.038,14.333784,5761.3896};
+				angles[]={0.027492445,0,0.052451372};
 			};
 			name="spawn_04";
 			id=489;
@@ -15667,7 +15675,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5286.2422,3.4371228,5705.8042};
+				position[]={5285.6318,2.5585542,5705.731};
 				angles[]={0,5.5364981,0};
 			};
 			side="Empty";
@@ -15676,7 +15684,7 @@ class Mission
 			};
 			id=1106;
 			type="CUP_B_RHIB2Turret_HIL";
-			atlOffset=2.5649998;
+			atlOffset=1.6412503;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17675,8 +17683,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={12812.942,14.851071,5799.9443};
-				angles[]={6.2506976,0,6.2332273};
+				position[]={14914.5,5.3706226,7218.7588};
+				angles[]={0.14154701,0,6.2606921};
 			};
 			name="spawn_07";
 			id=1163;
@@ -19997,6 +20005,91 @@ class Mission
 			{
 			};
 			id=1174;
+		};
+		class Item225
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11993.285,21.801048,15076.658};
+				angles[]={0,3.199506,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=1193;
+			type="ttt_Sign_Large_White";
+		};
+		class Item226
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11983.691,24.736805,15076.934};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1194;
+			type="ttt_Flag_White";
+		};
+		class Item227
+		{
+			dataType="Marker";
+			position[]={5302.2969,6.3400002,5747.2129};
+			name="marker_1";
+			text="Start";
+			type="hd_dot";
+			id=1195;
+			atlOffset=-0.00045871735;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONE";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item228
+		{
+			dataType="Marker";
+			position[]={11924.329,20.76,15080.97};
+			name="marker_2";
+			text="Basis";
+			type="hd_dot";
+			id=1196;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONE";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections

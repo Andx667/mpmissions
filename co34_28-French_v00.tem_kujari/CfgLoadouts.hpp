@@ -39,7 +39,6 @@ class Loadouts {
     customGear = 300;
     //customGear = "(_this select 0) distance2D (getMarkerPos 'respawn') < 50";
     customGearAllowedCategories[] = {
-        "uniform",
         "headgear",
         "primaryWeapon",
         "primaryWeaponOptics",
@@ -251,7 +250,7 @@ class Loadouts {
             primaryWeapon[] = {
                 "CUP_lmg_m249_pip3",
             };
-            primaryWeaponMagazine = "CUP_100Rnd_TE4_Red_Tracer_556x45_M249";
+            primaryWeaponMagazine = "CUP_200Rnd_TE4_Red_Tracer_556x45_M249_Pouch";
             primaryWeaponUnderbarrel = "CUP_bipod_Harris_1A2_L_BLK";
             primaryWeaponOptics[] = {
                 "CUP_optic_Elcan_SpecterDR_KF_black",
@@ -261,10 +260,10 @@ class Loadouts {
             };
 
             addItemsToVest[] += {
-                LIST_2("CUP_100Rnd_TE4_Red_Tracer_556x45_M249"),
+                LIST_2("CUP_200Rnd_TE4_Red_Tracer_556x45_M249_Pouch"),
             };
             addItemsToBackpack[] = {
-                LIST_2("CUP_100Rnd_TE4_Red_Tracer_556x45_M249"),
+                LIST_2("CUP_200Rnd_TE4_Red_Tracer_556x45_M249_Pouch"),
             };
         };
 

@@ -53,7 +53,7 @@ setDate [2022, 6, 25, 11, 15]; //Datum ändern
         ["CUP_30Rnd_556x45_Emag_Tracer_Red", 24],
         ["CUP_20Rnd_TE1_Red_Tracer_762x51_SCAR_bkl", 8],
         ["CUP_20Rnd_762x51_B_SCAR_bkl", 8],
-        ["CUP_100Rnd_TE4_Red_Tracer_556x45_M249", 5],
+        ["CUP_200Rnd_TE4_Red_Tracer_556x45_M249_Pouch", 5],
         ["CUP_6Rnd_12Gauge_Pellets_No00_Buck", 6]
     ],
     true
