@@ -1,4 +1,3 @@
-// brazenly stolen from 1tac
 #define LIST_1(var1) var1
 #define LIST_2(var1) var1,var1
 #define LIST_3(var1) var1,var1,var1
@@ -29,6 +28,8 @@
 #define LIST_28(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
 #define LIST_29(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
 #define LIST_30(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_45(var1) LIST_30(var1),LIST_15(var1)
+#define LIST_60(var1) LIST_30(var1),LIST_30(var1)
 
 class Loadouts {
     baseDelay = 1;
