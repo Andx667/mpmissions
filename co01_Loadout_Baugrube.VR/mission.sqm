@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=887;
+		nextID=891;
 	};
 	class MarkerIDProvider
 	{
@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7740.1816,12.611195,5100.9116};
-		dir[]={-0.71215594,-0.6864503,0.14712201};
-		up[]={-0.67225581,0.72717559,0.13887917};
-		aside[]={0.20231923,3.8402504e-07,0.97933322};
+		pos[]={7741.0933,13.84342,5086.7427};
+		dir[]={-0.022317387,-0.52428812,0.85125035};
+		up[]={-0.013740693,0.85153878,0.52410865};
+		aside[]={0.99965799,1.7667253e-07,0.026208322};
 	};
 };
 binarizationWanted=0;
@@ -284,7 +284,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=5102;
+														value=5104;
 													};
 												};
 												class Item2
@@ -766,7 +766,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=7744;
+														value=7730;
 													};
 												};
 												class Item1
@@ -774,7 +774,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=5102;
+														value=5098;
 													};
 												};
 												class Item2
@@ -1894,7 +1894,7 @@ class Mission
 					dataType="Comment";
 					class PositionInfo
 					{
-						position[]={7735,5,5102};
+						position[]={7735,5,5104};
 					};
 					title="Ärzte";
 					id=544;
@@ -7918,6 +7918,27 @@ class Mission
 					};
 				};
 				nAttributes=4;
+			};
+		};
+	};
+	class Connections
+	{
+		class LinkIDProvider
+		{
+			nextID=1;
+		};
+		class Links
+		{
+			items=1;
+			class Item0
+			{
+				linkID=0;
+				item0=883;
+				item1=701;
+				class CustomData
+				{
+					type="Sync";
+				};
 			};
 		};
 	};

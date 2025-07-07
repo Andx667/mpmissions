@@ -130,6 +130,7 @@ class Loadouts {
                 LIST_2("UK3CB_BAF_SmokeShell"),
                 LIST_2("rhs_mag_m67"),
                 "UK3CB_BAF_SmokeShellGreen",
+                LIST_2("ACE_CableTie"),
             };
             addItemsToBackpack[] = {
 
@@ -190,7 +191,6 @@ class Loadouts {
             addItemsToBackpack[] += {
                 LIST_2("UK3CB_BAF_762_200Rnd_T"),
                 LIST_10("UK3CB_BAF_556_30Rnd"),
-                "ACE_EntrenchingTool",
                 LIST_15("ACE_quikClot"),
                 LIST_15("ACE_packingBandage"),
                 LIST_4("UK3CB_BAF_SmokeShell"),
@@ -216,7 +216,6 @@ class Loadouts {
                 LIST_20("UK3CB_BAF_1Rnd_HE_Grenade_Shell"),
                 LIST_5("UK3CB_BAF_1Rnd_SmokeRed_Grenade_shell"),
                 LIST_5("UK3CB_BAF_1Rnd_Smoke_Grenade_shell"),
-                "ACE_EntrenchingTool",
                 LIST_15("ACE_quikClot"),
                 LIST_15("ACE_packingBandage"),
                 LIST_2("UK3CB_BAF_SmokeShell"),
@@ -228,7 +227,27 @@ class Loadouts {
         };
 
         class B_soldier_exp_F: B_Soldier_F {
+            backpack = "UK3CB_BAF_B_Bergen_MTP_PointMan_H_A";
 
+            addItemsToVest[] += {
+                "ACE_Clacker",
+                "ACE_DefusalKit",
+            };
+
+            addItemsToBackpack[] = {
+                LIST_5("UK3CB_BAF_12G_Pellets"),
+                "ACE_Wirecutter",
+                "mts_cutter_folding_saw",
+                LIST_3("tsp_breach_package_mag"),
+                LIST_3("tsp_breach_block_mag"),
+                LIST_3("UK3CB_BAF_556_30Rnd"),
+                LIST_15("ACE_quikClot"),
+                LIST_15("ACE_packingBandage"),
+                LIST_4("UK3CB_BAF_SmokeShell"),
+                LIST_4("rhs_mag_m67"),
+                "UK3CB_BAF_SmokeShellGreen",
+                "UK3CB_BAF_762_200Rnd_T",
+            };
         };
 
         class B_soldier_LAT2_F: B_Soldier_F {
@@ -299,7 +318,7 @@ class Loadouts {
 
             addItemsToBackpack[] += {
                 LIST_14("UK3CB_BAF_762_L42A1_20Rnd_T"),
-                "ACE_EntrenchingTool",
+
                 LIST_15("ACE_quikClot"),
                 LIST_15("ACE_packingBandage"),
                 LIST_4("UK3CB_BAF_SmokeShell"),
@@ -335,7 +354,7 @@ class Loadouts {
             addItemsToBackpack[] += {
                 LIST_2("UK3CB_BAF_762_200Rnd_T"),
                 "ACE_SpareBarrel",
-                "ACE_EntrenchingTool",
+
                 LIST_15("ACE_quikClot"),
                 LIST_15("ACE_packingBandage"),
                 LIST_4("UK3CB_BAF_SmokeShell"),
@@ -355,6 +374,26 @@ class Loadouts {
 
         //Unterstützung
         class B_engineer_F: B_Soldier_F {
+            backpack = "UK3CB_BAF_B_Bergen_MTP_Engineer_H_A";
+
+            addItemsToVest[] += {
+                "ACE_Clacker",
+                "ACE_DefusalKit",
+            };
+
+            addItemsToBackpack[] = {
+                "ACE_Wirecutter",
+                "mts_cutter_folding_saw",
+                LIST_8("UK3CB_BAF_556_30Rnd"),
+
+                LIST_15("ACE_quikClot"),
+                LIST_15("ACE_packingBandage"),
+                LIST_4("UK3CB_BAF_SmokeShell"),
+                LIST_4("rhs_mag_m67"),
+                "UK3CB_BAF_SmokeShellGreen",
+                LIST_3("tsp_breach_package_mag"),
+                LIST_3("tsp_breach_block_mag"),
+            };
 
             class Rank {
 
@@ -365,6 +404,19 @@ class Loadouts {
 
                 };
                 class SERGEANT: CORPORAL {
+                    vest[] = {
+                        "UK3CB_BAF_V_Osprey_SL_A",
+                        "UK3CB_BAF_V_Osprey_SL_B",
+                    };
+                    addItemsToVest[] += {
+                        "ItemAndroid",
+                        "ACRE_PRC148",
+                    };
+                    addItemsToBackpack[] += {
+                        "ACE_SpraypaintGreen",
+                        "ACE_SpraypaintBlack",
+                        "ACE_SpraypaintRed",
+                    };
 
                 };
             };
@@ -527,7 +579,7 @@ class Loadouts {
             addItemsToBackpack[] = {
                 "ACE_SpareBarrel",
                 LIST_3("UK3CB_BAF_762_200Rnd_T"),
-                "ACE_EntrenchingTool",
+
                 LIST_15("ACE_quikClot"),
                 LIST_15("ACE_packingBandage"),
                 LIST_4("UK3CB_BAF_SmokeShell"),
@@ -544,7 +596,7 @@ class Loadouts {
                 "ItemAndroid",
             };
             addItemsToBackpack[] = {
-                "ACE_EntrenchingTool",
+
                 "ace_flags_red",
                 "ACE_SpraypaintBlack",
                 "ACE_SpraypaintGreen",

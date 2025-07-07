@@ -43,11 +43,11 @@ private _id = [
         if (typeOf ACE_player == "B_soldier_exp_F") then {
             [
                 [
-                "CUP_sgun_M1014_Entry_vfg",                   //Classname der zweiten Waffe
+                "UK3CB_BAF_L128A1",                   //Classname der zweiten Waffe
                 "",                               //Schalldämpfer oder ähnliches
                 "",                  //Laserpointer / Waffenlicht
                 "",                     //Optik
-                ["CUP_6Rnd_12Gauge_Pellets_No00_Buck", 6],   //Magazin mit Anzahl Kugeln
+                ["UK3CB_BAF_12G_Pellets", 8],   //Magazin mit Anzahl Kugeln
                 [],                               //Zweites Magazin (z.B. UGL)
                 ""                                 //Zweibein oder ähnliches
                 ]
