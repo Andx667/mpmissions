@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=891;
+		nextID=893;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=22;
+		nextID=24;
 	};
 	class Camera
 	{
-		pos[]={7741.0933,13.84342,5086.7427};
-		dir[]={-0.022317387,-0.52428812,0.85125035};
-		up[]={-0.013740693,0.85153878,0.52410865};
-		aside[]={0.99965799,1.7667253e-07,0.026208322};
+		pos[]={7729.8716,13.540908,5085.0884};
+		dir[]={0.035015184,-0.50570494,0.862001};
+		up[]={0.020525437,0.86270422,0.50529093};
+		aside[]={0.99918097,-9.867199e-08,-0.040587686};
 	};
 };
 binarizationWanted=0;
@@ -133,7 +133,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category2
 	{
 		name="Scenario";
 		class Attribute0
@@ -160,7 +160,7 @@ class CustomAttributes
 					singleType="ARRAY";
 					class value
 					{
-						items=24;
+						items=26;
 						class Item0
 						{
 							class data
@@ -182,7 +182,7 @@ class CustomAttributes
 										class data
 										{
 											singleType="STRING";
-											value="Medics";
+											value="Zugsani 1";
 										};
 									};
 									class Item2
@@ -766,7 +766,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=7730;
+														value=7744;
 													};
 												};
 												class Item1
@@ -774,7 +774,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=5098;
+														value=5102;
 													};
 												};
 												class Item2
@@ -1364,6 +1364,76 @@ class CustomAttributes
 										class data
 										{
 											singleType="SCALAR";
+											value=892;
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Zugsani 2";
+										};
+									};
+									class Item2
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+									class Item3
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=3;
+												class Item0
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=7735;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=5102;
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=5;
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+						class Item18
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=4;
+									class Item0
+									{
+										class data
+										{
+											singleType="SCALAR";
 											value=561;
 										};
 									};
@@ -1421,7 +1491,7 @@ class CustomAttributes
 								};
 							};
 						};
-						class Item18
+						class Item19
 						{
 							class data
 							{
@@ -1491,7 +1561,7 @@ class CustomAttributes
 								};
 							};
 						};
-						class Item19
+						class Item20
 						{
 							class data
 							{
@@ -1561,7 +1631,7 @@ class CustomAttributes
 								};
 							};
 						};
-						class Item20
+						class Item21
 						{
 							class data
 							{
@@ -1631,7 +1701,7 @@ class CustomAttributes
 								};
 							};
 						};
-						class Item21
+						class Item22
 						{
 							class data
 							{
@@ -1701,7 +1771,7 @@ class CustomAttributes
 								};
 							};
 						};
-						class Item22
+						class Item23
 						{
 							class data
 							{
@@ -1771,7 +1841,7 @@ class CustomAttributes
 								};
 							};
 						};
-						class Item23
+						class Item24
 						{
 							class data
 							{
@@ -1841,6 +1911,76 @@ class CustomAttributes
 								};
 							};
 						};
+						class Item25
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=4;
+									class Item0
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=891;
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Gruppensani";
+										};
+									};
+									class Item2
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+									class Item3
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=3;
+												class Item0
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=7735;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=5098;
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=5;
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
 					};
 				};
 			};
@@ -1871,14 +2011,14 @@ class Mission
 	};
 	class Entities
 	{
-		items=10;
+		items=11;
 		class Item0
 		{
 			dataType="Layer";
 			name="Layer 1";
 			class Entities
 			{
-				items=31;
+				items=32;
 				class Item0
 				{
 					dataType="Comment";
@@ -1886,7 +2026,7 @@ class Mission
 					{
 						position[]={7735,5,5100};
 					};
-					title="Medics";
+					title="Zugsani 1";
 					id=543;
 				};
 				class Item1
@@ -7655,6 +7795,16 @@ class Mission
 					};
 					id=849;
 				};
+				class Item31
+				{
+					dataType="Comment";
+					class PositionInfo
+					{
+						position[]={7735,5,5102};
+					};
+					title="Zugsani 2";
+					id=892;
+				};
 			};
 			id=560;
 		};
@@ -7919,6 +8069,16 @@ class Mission
 				};
 				nAttributes=4;
 			};
+		};
+		class Item10
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={7735,5,5098};
+			};
+			title="Gruppensani";
+			id=891;
 		};
 	};
 	class Connections

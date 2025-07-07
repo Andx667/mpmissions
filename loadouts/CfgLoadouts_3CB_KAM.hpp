@@ -163,11 +163,10 @@ class Loadouts {
             handgunWeaponMagazine = "";
 
             goggles[] = {
-                "UK3CB_BAF_G_Tactical_Black",
-                "UK3CB_BAF_G_Tactical_Yellow",
-                "UK3CB_BAF_G_Tactical_Orange",
-                "UK3CB_BAF_G_Tactical_Clear",
-                "UK3CB_BAF_G_Tactical_Grey",
+                "rhs_googles_black",
+                "rhs_googles_clear",
+                "rhs_googles_orange",
+                "rhs_googles_yellow",
                 "",
                 };
             //nvgoggles = "UK3CB_BAF_HMNVS";
@@ -253,7 +252,6 @@ class Loadouts {
 
         class B_soldier_LAT2_F: B_Soldier_F {
             secondaryWeapon = "UK3CB_BAF_AT4_CS_AP_Launcher";
-            //secondaryWeapon = "UK3CB_BAF_NLAW_Launcher";
         };
 
         class TTT_B_RadioOperator_F: B_Soldier_F {
@@ -282,13 +280,11 @@ class Loadouts {
 
         };
         class B_soldier_AT_F: B_Soldier_F {
-            secondaryWeapon = "UK3CB_BAF_Javelin_Slung_Tube";
 
-            binoculars = "UK3CB_BAF_Javelin_CLU";
         };
 
         class B_soldier_AAT_F: B_Soldier_F {
-            secondaryWeapon = "UK3CB_BAF_Javelin_Slung_Tube";
+
         };
 
         class B_Soldier_A_F: B_Soldier_F {
@@ -296,19 +292,7 @@ class Loadouts {
         };
 
         class B_soldier_UAV_F: B_Soldier_F {
-            addItemsToUniform[] += {
-                "ACE_MicroDAGR",
-            };
-            addItemsToVest[] += {
-                "ACRE_PRC148",
-                "ItemAndroid",
-            };
-            addItemsToBackpack[] = {
-                "ITC_Land_B_AR2i_Packed",
-                LIST_10("ACE_UAVBattery"),
-            };
-            gps = "B_UavTerminal";
-            binoculars = "ACE_Vector";
+
         };
 
         // These dont inherit from the basic rifleman
@@ -347,25 +331,6 @@ class Loadouts {
 
         //Autorifleman
         class B_soldier_AR_F {
-            vest = "UK3CB_BAF_V_Osprey_MG_B";
-
-            primaryWeapon = "UK3CB_BAF_L110A3";
-            primaryWeaponMagazine = "UK3CB_BAF_556_200Rnd_T";
-            primaryWeaponUnderbarrel = "";
-
-            addItemsToVest[] += {
-                LIST_3("UK3CB_BAF_556_200Rnd_T"),
-            };
-
-            addItemsToBackpack[] += {
-                LIST_3("UK3CB_BAF_556_200Rnd_T"),
-                LIST_10("UK3CB_BAF_556_30Rnd"),
-                LIST_15("ACE_quikClot"),
-                LIST_15("ACE_packingBandage"),
-                LIST_4("UK3CB_BAF_SmokeShell"),
-                LIST_4("rhs_mag_m67"),
-                "UK3CB_BAF_SmokeShellGreen",
-            };
 
         };
 
@@ -401,18 +366,10 @@ class Loadouts {
         };
 
         class B_soldier_AA_F: B_Soldier_F {
-            secondaryWeapon = "rhs_weap_fim92";
-            secondaryWeaponMagazine = "rhs_fim92_mag";
 
-            addItemsToBackpack[] = {
-                "rhs_fim92_mag",
-            };
         };
 
         class B_soldier_AAA_F: B_Soldier_F {
-            addItemsToBackpack[] = {
-                LIST_2("rhs_fim92_mag"),
-            };
         };
 
         //Unterstützung
@@ -425,6 +382,7 @@ class Loadouts {
             };
 
             addItemsToBackpack[] = {
+                "ACE_Wirecutter",
                 "mts_cutter_folding_saw",
                 LIST_8("UK3CB_BAF_556_30Rnd"),
 
@@ -437,12 +395,6 @@ class Loadouts {
                 LIST_3("tsp_breach_block_mag"),
             };
 
-            goggles[] += {
-                "rhsusf_oakley_goggles_blk",
-                "rhsusf_oakley_goggles_clr",
-                "rhsusf_oakley_goggles_ylw",
-            };
-
             class Rank {
 
                 class PRIVATE {
@@ -455,9 +407,6 @@ class Loadouts {
                     vest[] = {
                         "UK3CB_BAF_V_Osprey_SL_A",
                         "UK3CB_BAF_V_Osprey_SL_B",
-                    };
-                    addItemsToUniform[] += {
-                        "ACE_MicroDAGR",
                     };
                     addItemsToVest[] += {
                         "ItemAndroid",
@@ -469,46 +418,21 @@ class Loadouts {
                         "ACE_SpraypaintRed",
                     };
 
-                    binoculars = "ACE_Vector";
                 };
             };
         };
 
         class B_soldier_mine_F: B_Soldier_F {
-            backpack = "UK3CB_BAF_B_Bergen_MTP_Sapper_H_A";
-
-            addItemsToBackpack[] = {
-                "ACE_VMH3",
-                LIST_3("DemoCharge_Remote_Mag"),
-                "ACE_SpraypaintGreen",
-                "ACE_SpraypaintRed",
-                LIST_20("ace_marker_flags_orange"),
-            };
-
-            addItemsToVest[] += {
-                "ACE_Clacker",
-                "ACE_DefusalKit",
-            };
 
             class Rank {
+
                 class PRIVATE {
+
                 };
                 class CORPORAL: PRIVATE {
+
                 };
                 class SERGEANT: CORPORAL {
-                    vest[] = {
-                        "UK3CB_BAF_V_Osprey_SL_A",
-                        "UK3CB_BAF_V_Osprey_SL_B",
-                    };
-
-                    addItemsToUniform[] += {
-                        "ACE_MicroDAGR",
-                    };
-                    addItemsToVest[] += {
-                        "ItemAndroid",
-                        "ACRE_PRC148",
-                    };
-                    binoculars = "ACE_Vector";
                 };
             };
         };
@@ -523,17 +447,8 @@ class Loadouts {
             headgear[] = {
                 "UK3CB_BAF_H_CrewHelmet_A",
                 "UK3CB_BAF_H_CrewHelmet_B",
-                //"UK3CB_BAF_H_CrewHelmet_ESS_A",
+                "UK3CB_BAF_H_CrewHelmet_ESS_A",
             };
-
-            goggles[] = {
-                "rhsusf_oakley_goggles_blk",
-                "rhsusf_oakley_goggles_clr",
-                "rhsusf_oakley_goggles_ylw",
-                "rhsusf_shemagh2_gogg_grn",
-                "rhsusf_shemagh2_gogg_od",
-                "rhsusf_shemagh2_gogg_tan",
-                };
 
             addItemsToVest[] += {
                 LIST_3("UK3CB_BAF_556_30Rnd"),
@@ -549,14 +464,11 @@ class Loadouts {
 
                 };
                 class SERGEANT: PRIVATE {
-                    addItemsToUniform[] += {
-                        "ACE_MicroDAGR",
-                    };
                     addItemsToVest[] += {
                         "ItemAndroid",
-                        "ACRE_PRC148",
+                        "ACRE_PRC148"
                     };
-                    binoculars = "ACE_Vector";
+
                 };
                 class LIEUTENANT: SERGEANT {
                     backpack = "UK3CB_BAF_B_Bergen_MTP_SL_L_A";
@@ -590,14 +502,7 @@ class Loadouts {
 
                 };
                 class SERGEANT: CORPORAL {
-                    addItemsToUniform[] += {
-                        "ACE_MicroDAGR",
-                    };
-                    addItemsToVest[] += {
-                        "ItemAndroid",
-                        "ACRE_PRC148",
-                    };
-                    binoculars = "ACE_Vector";
+
                 };
             };
         };
@@ -822,7 +727,6 @@ class Loadouts {
                         LIST_4("ACE_salineIV_500"),
                         LIST_16("kat_IV_16"),
                         LIST_4("kat_IO_FAST"),
-                        LIST_10("ACE_bloodIV"),
                         //H
                         LIST_12("kat_Penthrox"),
                         LIST_12("kat_naloxone"),
@@ -833,51 +737,6 @@ class Loadouts {
                         //Admin
                         "ACE_Bodybag",
                     };
-
-                    goggles[] = {
-                        "UK3CB_G_Tactical_Black",
-                        "UK3CB_G_Tactical_Clear",
-                        "UK3CB_G_Tactical_Black_Gloves_Green",
-                        "UK3CB_G_Tactical_Black_Gloves_Tan",
-                        "UK3CB_G_Tactical_Black_Gloves_Black",
-                        "UK3CB_G_Tactical_Clear_Gloves_Black",
-                        "UK3CB_G_Tactical_Clear_Gloves_Green",
-                        "UK3CB_G_Tactical_Clear_Gloves_Tan",
-                        "UK3CB_G_Tactical_Black_Shemagh_Green",
-                        "UK3CB_G_Tactical_Black_Shemagh_Tan",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Green",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Tan",
-                        "UK3CB_G_Tactical_Black_Shemagh_Green_Gloves_Black",
-                        "UK3CB_G_Tactical_Black_Shemagh_Green_Gloves_Green",
-                        "UK3CB_G_Tactical_Black_Shemagh_Green_Gloves_Tan",
-                        "UK3CB_G_Tactical_Black_Shemagh_Tan_Gloves_Black",
-                        "UK3CB_G_Tactical_Black_Shemagh_Tan_Gloves_Green",
-                        "UK3CB_G_Tactical_Black_Shemagh_Tan_Gloves_Tan",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Green_Gloves_Black",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Green_Gloves_Green",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Green_Gloves_Tan",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Tan_Gloves_Black",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Tan_Gloves_Green",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Tan_Gloves_Tan",
-                        "UK3CB_G_Tactical_Black_Shemagh_Green_Tactical_Gloves_Black",
-                        "UK3CB_G_Tactical_Black_Shemagh_Green_Tactical_Gloves_Green",
-                        "UK3CB_G_Tactical_Black_Shemagh_Green_Tactical_Gloves_Tan",
-                        "UK3CB_G_Tactical_Black_Shemagh_Tan_Tactical_Gloves_Black",
-                        "UK3CB_G_Tactical_Black_Shemagh_Tan_Tactical_Gloves_Green",
-                        "UK3CB_G_Tactical_Black_Shemagh_Tan_Tactical_Gloves_Tan",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Green_Tactical_Gloves_Black",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Green_Tactical_Gloves_Green",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Green_Tactical_Gloves_Tan",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Tan_Tactical_Gloves_Black",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Tan_Tactical_Gloves_Green",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Tan_Tactical_Gloves_Tan",
-                        "UK3CB_G_Tactical_Black_Tactical_Gloves_Green",
-                        "UK3CB_G_Tactical_Black_Tactical_Gloves_Tan",
-                        "UK3CB_G_Tactical_Black_Tactical_Gloves_Black",
-                        "UK3CB_G_Tactical_Clear_Tactical_Gloves_Green",
-                        "UK3CB_G_Tactical_Clear_Tactical_Gloves_Tan",
-                        "UK3CB_G_Tactical_Clear_Tactical_Gloves_Black",
-                        };
                 };
                 //PJ 2
                 class SERGEANT: CORPORAL {
@@ -908,15 +767,13 @@ class Loadouts {
                         "kat_X_AED",
                         LIST_8("kat_IV_16"),
                         LIST_2("kat_IO_FAST"),
-                        LIST_8("ACE_bloodIV"),
                         //H
                         LIST_10("kat_eaca"),
-                        LIST_5("kat_amiodarone"),
-                        LIST_5("kat_fentanyl"),
-                        LIST_5("kat_ketamine"),
-                        LIST_5("kat_atropine"),
-                        LIST_6("ACE_epinephrine"),
-                        LIST_5("kat_lidocaine"),
+                        LIST_10("kat_amiodarone"),
+                        LIST_10("kat_fentanyl"),
+                        LIST_10("kat_ketamine"),
+                        LIST_10("kat_atropine"),
+                        LIST_12("ACE_epinephrine"),
                         //Admin
                         LIST_45("ACE_Suture"),
                     };
@@ -944,19 +801,18 @@ class Loadouts {
                         "kat_BVM",
                         LIST_2("kat_oxygenTank_150"),
                         //C
-                        LIST_2("ACE_salineIV_250"),
+                        LIST_10("ACE_Blood"),
+                        LIST_4("ACE_salineIV_250"),
                         "kat_X_AED",
                         LIST_6("kat_IV_16"),
                         LIST_2("kat_IO_FAST"),
-                        LIST_3("ACE_bloodIV"),
                         //H
-                        LIST_10("kat_eaca"),
-                        LIST_5("kat_amiodarone"),
-                        LIST_5("kat_fentanyl"),
-                        LIST_5("kat_ketamine"),
-                        LIST_5("kat_atropine"),
-                        LIST_6("ACE_epinephrine"),
-                        LIST_5("kat_lidocaine"),
+                        LIST_8("kat_eaca"),
+                        LIST_8("kat_amiodarone"),
+                        LIST_8("kat_fentanyl"),
+                        LIST_8("kat_ketamine"),
+                        LIST_8("kat_atropine"),
+                        LIST_8("ACE_epinephrine"),
                         //Admin
                         LIST_30("ACE_Suture"),
                     };
@@ -965,8 +821,6 @@ class Loadouts {
         };
 
         class B_soldier_repair_F: B_Soldier_F {
-            backpack = "B_AssaultPack_mcamo";
-            addItemsToBackpack[] = {"ToolKit"};
 
             class Rank {
 
@@ -974,19 +828,7 @@ class Loadouts {
 
                 };
                 class SERGEANT: PRIVATE {
-                    backpack = "UK3CB_BAF_B_Bergen_MTP_Radio_L_B";
 
-                    addItemsToUniform[] += {
-                        "ACE_MicroDAGR",
-                    };
-                    addItemsToVest[] += {
-                        "ItemAndroid",
-                        "ACRE_PRC148",
-                    };
-                    addItemsToBackpack[] += {
-                        "ACRE_PRC117F",
-                    };
-                    binoculars = "ACE_Vector";
                 };
             };
         };
