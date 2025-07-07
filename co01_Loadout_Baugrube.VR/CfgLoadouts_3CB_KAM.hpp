@@ -569,10 +569,36 @@ class Loadouts {
         };
 
         class B_sniper_F {
+            handgunWeapon = "UK3CB_BAF_L131A1";
+            handgunWeaponMagazine = "UK3CB_BAF_9_17Rnd";
+
+            uniform[] += {
+                "UK3CB_BAF_U_CombatUniform_MTP_Ghillie_RM",
+            };
+            primaryWeapon[] = {
+                "UK3CB_BAF_L115A3_BL",
+                "UK3CB_BAF_L115A3_BL_Ghillie",
+                "UK3CB_BAF_L115A3",
+                "UK3CB_BAF_L115A3_Ghillie",
+                "UK3CB_BAF_L115A3_DE",
+                "UK3CB_BAF_L115A3_DE_Ghillie",
+            };
+            primaryWeaponOptics[] = {
+                "RKSL_optic_PMII_525",
+                "RKSL_optic_PMII_525_des",
+                "RKSL_optic_PMII_525_wdl",
+            };
+            primaryWeaponMagazine = "UK3CB_BAF_338_5Rnd";
+            primaryWeaponUnderbarrel = "";
 
         };
 
         class B_spotter_F: B_soldier_M_F {
+            primaryWeaponOptics[] = {
+                "RKSL_optic_PMII_312",
+                "RKSL_optic_PMII_312_des",
+                "RKSL_optic_PMII_312_wdl",
+            };
 
         };
 
@@ -835,49 +861,13 @@ class Loadouts {
                     };
 
                     goggles[] = {
+                        // "UK3CB_G_Tactical_Clear",
+                        // "UK3CB_G_Tactical_Clear_Shemagh_Green",
+                        // "UK3CB_G_Tactical_Clear_Shemagh_Tan",
                         "UK3CB_G_Tactical_Black",
-                        "UK3CB_G_Tactical_Clear",
-                        "UK3CB_G_Tactical_Black_Gloves_Green",
-                        "UK3CB_G_Tactical_Black_Gloves_Tan",
-                        "UK3CB_G_Tactical_Black_Gloves_Black",
-                        "UK3CB_G_Tactical_Clear_Gloves_Black",
-                        "UK3CB_G_Tactical_Clear_Gloves_Green",
-                        "UK3CB_G_Tactical_Clear_Gloves_Tan",
                         "UK3CB_G_Tactical_Black_Shemagh_Green",
                         "UK3CB_G_Tactical_Black_Shemagh_Tan",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Green",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Tan",
-                        "UK3CB_G_Tactical_Black_Shemagh_Green_Gloves_Black",
-                        "UK3CB_G_Tactical_Black_Shemagh_Green_Gloves_Green",
-                        "UK3CB_G_Tactical_Black_Shemagh_Green_Gloves_Tan",
-                        "UK3CB_G_Tactical_Black_Shemagh_Tan_Gloves_Black",
-                        "UK3CB_G_Tactical_Black_Shemagh_Tan_Gloves_Green",
-                        "UK3CB_G_Tactical_Black_Shemagh_Tan_Gloves_Tan",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Green_Gloves_Black",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Green_Gloves_Green",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Green_Gloves_Tan",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Tan_Gloves_Black",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Tan_Gloves_Green",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Tan_Gloves_Tan",
-                        "UK3CB_G_Tactical_Black_Shemagh_Green_Tactical_Gloves_Black",
-                        "UK3CB_G_Tactical_Black_Shemagh_Green_Tactical_Gloves_Green",
-                        "UK3CB_G_Tactical_Black_Shemagh_Green_Tactical_Gloves_Tan",
-                        "UK3CB_G_Tactical_Black_Shemagh_Tan_Tactical_Gloves_Black",
-                        "UK3CB_G_Tactical_Black_Shemagh_Tan_Tactical_Gloves_Green",
-                        "UK3CB_G_Tactical_Black_Shemagh_Tan_Tactical_Gloves_Tan",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Green_Tactical_Gloves_Black",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Green_Tactical_Gloves_Green",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Green_Tactical_Gloves_Tan",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Tan_Tactical_Gloves_Black",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Tan_Tactical_Gloves_Green",
-                        "UK3CB_G_Tactical_Clear_Shemagh_Tan_Tactical_Gloves_Tan",
-                        "UK3CB_G_Tactical_Black_Tactical_Gloves_Green",
-                        "UK3CB_G_Tactical_Black_Tactical_Gloves_Tan",
-                        "UK3CB_G_Tactical_Black_Tactical_Gloves_Black",
-                        "UK3CB_G_Tactical_Clear_Tactical_Gloves_Green",
-                        "UK3CB_G_Tactical_Clear_Tactical_Gloves_Tan",
-                        "UK3CB_G_Tactical_Clear_Tactical_Gloves_Black",
-                        };
+                    };
                 };
                 //PJ 2
                 class SERGEANT: CORPORAL {
