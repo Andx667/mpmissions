@@ -329,7 +329,7 @@ class Loadouts {
             };
 
             addItemsToBackpack[] += {
-                LIST_3("UK3CB_BAF_762_200Rnd_T"),
+                "UK3CB_BAF_762_200Rnd_T",
                 "ACE_SpareBarrel",
                 "ACE_EntrenchingTool",
                 LIST_15("ACE_quikClot"),

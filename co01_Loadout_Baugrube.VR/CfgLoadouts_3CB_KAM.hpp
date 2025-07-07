@@ -29,6 +29,8 @@
 #define LIST_28(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
 #define LIST_29(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
 #define LIST_30(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_45(var1) LIST_30(var1),LIST_15(var1)
+#define LIST_60(var1) LIST_30(var1),LIST_30(var1)
 
 class Loadouts {
     baseDelay = 1;
@@ -116,11 +118,13 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "ACE_Painkillers",
-                LIST_15("ACE_fieldDressing"),
+                "kat_Painkiller",
+                LIST_15("ACE_quikclot"),
                 LIST_15("ACE_packingBandage"),
                 LIST_4("ACE_Tourniquet"),
                 "ACRE_PRC343",
+                LIST_2("kat_chestSeal"),
+                "kat_guedel",
             };
             addItemsToVest[] = {
                 LIST_2("UK3CB_BAF_SmokeShell"),
@@ -329,7 +333,7 @@ class Loadouts {
             };
 
             addItemsToBackpack[] += {
-                LIST_3("UK3CB_BAF_762_200Rnd_T"),
+                LIST_2("UK3CB_BAF_762_200Rnd_T"),
                 "ACE_SpareBarrel",
                 "ACE_EntrenchingTool",
                 LIST_15("ACE_quikClot"),
@@ -569,8 +573,47 @@ class Loadouts {
                         "UK3CB_BAF_V_Osprey_Medic_B",
                     };
                     backpack[] = {
+                        //"B_AssaultPack_mcamo",
                         "UK3CB_BAF_B_Bergen_MTP_Medic_L_A",
                         "UK3CB_BAF_B_Bergen_MTP_Medic_L_B",
+                    };
+
+                    addItemsToVest[] += {
+                        //Diagnostic
+                        "kat_basicDiagnostic",
+                        LIST_2("kat_Pulseoximeter"),
+                        //Being a Soldier things
+                        "ACRE_PRC148",
+                        LIST_8("UK3CB_BAF_556_30Rnd"),
+                    };
+                    addItemsToBackpack[] = {
+                        //M
+                        LIST_45("ACE_packingBandage"),
+                        LIST_45("ACE_quikclot"),
+                        LIST_16("ACE_tourniquet"),
+                        //A
+                        LIST_12("kat_chestSeal"),
+                        LIST_12("kat_larynx"),
+                        LIST_12("kat_ncdKit"),
+                        //R
+                        "kat_pocketBVM",
+                        //C
+                        LIST_4("ACE_salineIV_250"),
+                        LIST_4("ACE_salineIV_500"),
+                        LIST_16("kat_IV_16"),
+                        LIST_4("kat_IO_FAST"),
+                        //H
+                        LIST_12("kat_Penthrox"),
+                        LIST_12("kat_naloxone"),
+                        LIST_12("kat_nalbuphine"),
+                        LIST_12("ACE_epinephrine"),
+                        LIST_12("kat_Painkiller"),
+                        LIST_8("ACE_morphine"),
+                        //Admin
+                        "ace_flags_blue",
+                        "ACE_SpraypaintBlue",
+                        LIST_3("UK3CB_BAF_SmokeShellBlue"),
+                        "ACE_Bodybag",
                     };
                 };
                 //PJ 1
@@ -611,24 +654,36 @@ class Loadouts {
                     handgunWeaponMagazine = "UK3CB_BAF_9_17Rnd";
 
                     addItemsToVest[] += {
-                        "ACRE_PRC148",
-                        LIST_8("UK3CB_BAF_556_30Rnd"),
                         "ItemAndroid",
                         LIST_2("UK3CB_BAF_9_17Rnd"),
                         LIST_3("UK3CB_BAF_SmokeShellYellow"),
                     };
 
                     addItemsToBackpack[] = {
+                        //M
+                        LIST_45("ACE_packingBandage"),
+                        LIST_45("ACE_quikclot"),
                         LIST_16("ACE_tourniquet"),
-                        LIST_30("ACE_elasticBandage"),
-                        LIST_30("ACE_packingBandage"),
+                        //A
+                        LIST_12("kat_chestSeal"),
+                        LIST_12("kat_larynx"),
+                        LIST_12("kat_ncdKit"),
+                        //R
+                        "kat_pocketBVM",
+                        //C
+                        LIST_4("ACE_salineIV_250"),
+                        LIST_4("ACE_salineIV_500"),
+                        LIST_16("kat_IV_16"),
+                        LIST_4("kat_IO_FAST"),
+                        //H
+                        LIST_12("kat_Penthrox"),
+                        LIST_12("kat_naloxone"),
+                        LIST_12("kat_nalbuphine"),
+                        LIST_12("ACE_epinephrine"),
+                        LIST_12("kat_Painkiller"),
                         LIST_8("ACE_morphine"),
-                        LIST_16("ACE_epinephrine"),
-                        LIST_8("ACE_painkillers"),
-                        LIST_8("ACE_salineIV_500"),
-                        LIST_8("ACE_salineIV_250"),
-                        LIST_16("ACE_salineIV"),
-                        "ACE_bodyBag"
+                        //Admin
+                        "ACE_Bodybag",
                     };
                 };
                 //PJ 2
@@ -643,18 +698,32 @@ class Loadouts {
                         "ACE_surgicalKit",
                     };
                     addItemsToBackpack[] = {
-                        LIST_8("ACE_tourniquet"),
-                        LIST_30("ACE_suture"),
-                        LIST_30("ACE_suture"),
-                        LIST_30("ACE_elasticBandage"),
-                        LIST_30("ACE_elasticBandage"),
+                        //M
                         LIST_30("ACE_packingBandage"),
-                        LIST_6("ACE_morphine"),
+                        LIST_30("ACE_ElasticBandage"),
+                        //A
+                        LIST_12("kat_aatKit"),
+                        "kat_accuvac",
+                        LIST_6("kat_chestSeal"),
+                        LIST_6("kat_larynx"),
+                        //R
+                        "kat_BVM",
+                        LIST_2("kat_oxygenTank_150"),
+                        //C
+                        LIST_10("ACE_Blood"),
+                        LIST_4("ACE_salineIV_250"),
+                        "kat_X_AED",
+                        LIST_8("kat_IV_16"),
+                        LIST_2("kat_IO_FAST"),
+                        //H
+                        LIST_10("kat_eaca"),
+                        LIST_10("kat_amiodarone"),
+                        LIST_10("kat_fentanyl"),
+                        LIST_10("kat_ketamine"),
+                        LIST_10("kat_atropine"),
                         LIST_12("ACE_epinephrine"),
-                        LIST_8("ACE_painkillers"),
-                        LIST_8("ACE_salineIV_500"),
-                        LIST_8("ACE_salineIV_250"),
-                        LIST_16("ACE_salineIV"),
+                        //Admin
+                        LIST_45("ACE_Suture"),
                     };
                 };
                 //PJ 3
@@ -668,16 +737,32 @@ class Loadouts {
 
                     addItemsToBackpack[] = {
                         "ACRE_PRC117F",
-                        LIST_8("ACE_tourniquet"),
-                        LIST_30("ACE_suture"),
-                        LIST_30("ACE_elasticBandage"),
-                        LIST_10("ACE_packingBandage"),
-                        LIST_4("ACE_morphine"),
+                        //M
+                        LIST_20("ACE_packingBandage"),
+                        LIST_20("ACE_ElasticBandage"),
+                        //A
+                        LIST_4("kat_aatKit"),
+                        "kat_accuvac",
+                        LIST_4("kat_chestSeal"),
+                        LIST_4("kat_larynx"),
+                        //R
+                        "kat_BVM",
+                        LIST_2("kat_oxygenTank_150"),
+                        //C
+                        LIST_10("ACE_Blood"),
+                        LIST_4("ACE_salineIV_250"),
+                        "kat_X_AED",
+                        LIST_6("kat_IV_16"),
+                        LIST_2("kat_IO_FAST"),
+                        //H
+                        LIST_8("kat_eaca"),
+                        LIST_8("kat_amiodarone"),
+                        LIST_8("kat_fentanyl"),
+                        LIST_8("kat_ketamine"),
+                        LIST_8("kat_atropine"),
                         LIST_8("ACE_epinephrine"),
-                        LIST_4("ACE_painkillers"),
-                        LIST_5("ACE_salineIV_500"),
-                        LIST_5("ACE_salineIV_250"),
-                        LIST_10("ACE_salineIV"),
+                        //Admin
+                        LIST_30("ACE_Suture"),
                     };
                 };
             };

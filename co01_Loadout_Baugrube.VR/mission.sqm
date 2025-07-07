@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=884;
+		nextID=887;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=19;
+		nextID=22;
 	};
 	class Camera
 	{
-		pos[]={7763.7847,17.240816,5108.4263};
-		dir[]={-0.86403233,-0.4941417,-0.096291736};
-		up[]={-0.49110135,0.86938137,-0.054730598};
-		aside[]={-0.11075891,3.7252903e-09,0.99384725};
+		pos[]={7740.1816,12.611195,5100.9116};
+		dir[]={-0.71215594,-0.6864503,0.14712201};
+		up[]={-0.67225581,0.72717559,0.13887917};
+		aside[]={0.20231923,3.8402504e-07,0.97933322};
 	};
 };
 binarizationWanted=0;
@@ -214,7 +214,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=5102;
+														value=5100;
 													};
 												};
 												class Item2
@@ -284,7 +284,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=5104;
+														value=5102;
 													};
 												};
 												class Item2
@@ -1871,20 +1871,20 @@ class Mission
 	};
 	class Entities
 	{
-		items=11;
+		items=10;
 		class Item0
 		{
 			dataType="Layer";
 			name="Layer 1";
 			class Entities
 			{
-				items=30;
+				items=31;
 				class Item0
 				{
 					dataType="Comment";
 					class PositionInfo
 					{
-						position[]={7735,5,5102};
+						position[]={7735,5,5100};
 					};
 					title="Medics";
 					id=543;
@@ -1894,7 +1894,7 @@ class Mission
 					dataType="Comment";
 					class PositionInfo
 					{
-						position[]={7735,5,5104};
+						position[]={7735,5,5102};
 					};
 					title="Ärzte";
 					id=544;
@@ -7357,6 +7357,304 @@ class Mission
 					};
 					id=755;
 				};
+				class Item30
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=3;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={7742,5.0014391,5116.0498};
+								angles[]={0,3.0897849,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								isPlayable=1;
+							};
+							id=850;
+							type="B_Patrol_Soldier_TL_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="acre_sys_radio_edenSetup";
+									expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="iedd_ied_sides";
+									expression="_this setVariable ['iedd_ied_sides',_value];";
+									class Value
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=4;
+												class Item0
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=-1;
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=2;
+													};
+												};
+												class Item3
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=3;
+													};
+												};
+											};
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ENH_doStop";
+									expression="if (!is3DEN && _value) then {doStop _this}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=3;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={7744.0059,5.0014391,5116.0581};
+								angles[]={0,3.1512096,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								isPlayable=1;
+							};
+							id=851;
+							type="B_Patrol_Soldier_UAV_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="acre_sys_radio_edenSetup";
+									expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="iedd_ied_sides";
+									expression="_this setVariable ['iedd_ied_sides',_value];";
+									class Value
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=4;
+												class Item0
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=-1;
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=2;
+													};
+												};
+												class Item3
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=3;
+													};
+												};
+											};
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ENH_doStop";
+									expression="if (!is3DEN && _value) then {doStop _this}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=3;
+							};
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={7746,5.0014391,5116.0498};
+								angles[]={0,3.1412003,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								isPlayable=1;
+							};
+							id=852;
+							type="B_Patrol_Soldier_M_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="acre_sys_radio_edenSetup";
+									expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="iedd_ied_sides";
+									expression="_this setVariable ['iedd_ied_sides',_value];";
+									class Value
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=4;
+												class Item0
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=-1;
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=2;
+													};
+												};
+												class Item3
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=3;
+													};
+												};
+											};
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ENH_doStop";
+									expression="if (!is3DEN && _value) then {doStop _this}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=3;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=849;
+				};
 			};
 			id=560;
 		};
@@ -7548,304 +7846,6 @@ class Mission
 		};
 		class Item8
 		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=3;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7742,5.0014391,5116.0498};
-						angles[]={0,3.0897849,0};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=850;
-					type="B_Patrol_Soldier_TL_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="iedd_ied_sides";
-							expression="_this setVariable ['iedd_ied_sides',_value];";
-							class Value
-							{
-								class data
-								{
-									singleType="ARRAY";
-									class value
-									{
-										items=4;
-										class Item0
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=0;
-											};
-										};
-										class Item1
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=-1;
-											};
-										};
-										class Item2
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=2;
-											};
-										};
-										class Item3
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=3;
-											};
-										};
-									};
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ENH_doStop";
-							expression="if (!is3DEN && _value) then {doStop _this}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7744.0059,5.0014391,5116.0581};
-						angles[]={0,3.1512096,0};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=851;
-					type="B_Patrol_Soldier_UAV_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="iedd_ied_sides";
-							expression="_this setVariable ['iedd_ied_sides',_value];";
-							class Value
-							{
-								class data
-								{
-									singleType="ARRAY";
-									class value
-									{
-										items=4;
-										class Item0
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=0;
-											};
-										};
-										class Item1
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=-1;
-											};
-										};
-										class Item2
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=2;
-											};
-										};
-										class Item3
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=3;
-											};
-										};
-									};
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ENH_doStop";
-							expression="if (!is3DEN && _value) then {doStop _this}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7746,5.0014391,5116.0498};
-						angles[]={0,3.1412003,0};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=852;
-					type="B_Patrol_Soldier_M_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="iedd_ied_sides";
-							expression="_this setVariable ['iedd_ied_sides',_value];";
-							class Value
-							{
-								class data
-								{
-									singleType="ARRAY";
-									class value
-									{
-										items=4;
-										class Item0
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=0;
-											};
-										};
-										class Item1
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=-1;
-											};
-										};
-										class Item2
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=2;
-											};
-										};
-										class Item3
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=3;
-											};
-										};
-									};
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ENH_doStop";
-							expression="if (!is3DEN && _value) then {doStop _this}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=849;
-		};
-		class Item9
-		{
 			dataType="Comment";
 			class PositionInfo
 			{
@@ -7854,7 +7854,7 @@ class Mission
 			title="Aufklärer";
 			id=857;
 		};
-		class Item10
+		class Item9
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -7874,7 +7874,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="#votedAdmin";
+							value="76561198014636795";
 						};
 					};
 				};
