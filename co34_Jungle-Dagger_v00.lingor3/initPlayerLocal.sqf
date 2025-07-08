@@ -53,7 +53,8 @@ private _id = [
                 ]
             ] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;
         };
-        if (typeOf ACE_player == "B_HelicopterPilot_F" || typeOf ACE_player == "B_HelicopterPilot_F") then {
+
+        if (typeOf ACE_player == "B_helicrew_F" || typeOf ACE_player == "B_helipilot_F") then {
             [ACE_player] call ace_weaponselect_fnc_putWeaponAway;
         };
     }
