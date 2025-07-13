@@ -30,7 +30,7 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
 ACE_maxWeightCarry = 750; //wie schwer kann man Tragen
 ACE_maxWeightDrag = 1750;  //wie schwer kann man ziehen
 
-// Fahrzeuge allgemein 
+// Fahrzeuge allgemein
 [
     [fhz_log_01, fhz_log_02, fhz_med_01, fhz_med_02],
     [
@@ -40,7 +40,7 @@ ACE_maxWeightDrag = 1750;  //wie schwer kann man ziehen
     true
 ] call ttt_common_fnc_crateFiller;
 
-// Fahrzeuge Med 
+// Fahrzeuge Med
 [
     [fhz_med_01, fhz_med_02],
     [
@@ -119,5 +119,3 @@ ACE_maxWeightDrag = 1750;  //wie schwer kann man ziehen
     vba_02,
     vbt_06
 ];
-
-setRank

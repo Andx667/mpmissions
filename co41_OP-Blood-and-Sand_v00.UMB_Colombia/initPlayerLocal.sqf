@@ -25,13 +25,6 @@ private _id = [
         [
             {//Function
                 [ACE_Player, currentWeapon ACE_Player, true] call ace_safemode_fnc_setWeaponSafety;
-                private _place = -1;
-                    {
-                        if(isPlayer _x && local _x) then {
-                            _place = _forEachIndex;
-                            break;
-                        };
-                    } forEach units player;
             },
             //Args
             [_unit,_loadout],
