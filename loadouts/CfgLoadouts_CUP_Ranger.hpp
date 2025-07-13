@@ -32,10 +32,10 @@
 
 class Loadouts {
     baseDelay = 1;
-    perPlayerDelay = 1;
+    perPlayerDelay = 0;
     handleRadios = 0;
     resetLoadout = 1;
-    randomizationMode = 2;
+    randomizationMode = 1;
     customGear = 300;
     //customGear = "(_this select 0) distance2D (getMarkerPos 'respawn') < 50";
     customGearAllowedCategories[] = {
@@ -74,6 +74,27 @@ class Loadouts {
                 "CUP_U_CRYE_G3C_RGR_MC_US",
                 "CUP_U_CRYE_G3C_Tan_MC_US",
                 "CUP_U_CRYE_G3C_MC_US_V2",
+                "CUP_U_CRYE_RGR_Full",
+                "CUP_U_CRYE_RGR_Roll",
+                "CUP_U_CRYE_RGR_US_Full",
+                "CUP_U_CRYE_RGR_US_Roll",
+                "CFP_75th_CRYEG3_V2",
+                "CFP_75th_CRYEG3_V2b",
+                "CUP_U_CRYE_G3C_ATACSAU",
+                "CUP_U_CRYE_MCAM_NP_Full",
+                "CUP_U_CRYE_MCAM_NP_Roll",
+                "CUP_U_CRYE_MCAM_NP2_Full",
+                "CUP_U_CRYE_MCAM_NP2_Roll",
+                "CUP_U_CRYE_V1_Full",
+                "CUP_U_CRYE_V2_Full",
+                "CUP_U_CRYE_V3_Full",
+                "CUP_U_CRYE_V1_Roll",
+                "CUP_U_CRYE_V2_Roll",
+                "CUP_U_CRYE_V3_Roll",
+                "CUP_U_CRYE_TAN_Full",
+                "CUP_U_CRYE_TAN_Roll",
+                "CUP_U_CRYE_TAN_US_Full",
+                "CUP_U_CRYE_TAN_US_Roll"
                 };
             vest = "CUP_V_B_Ciras_MCam";
 
@@ -249,7 +270,7 @@ class Loadouts {
             //     "CUP_lmg_Mk48_od",
             //     "CUP_lmg_Mk48_tan",
             //     };
-            // primaryWeaponOptics[] = { 
+            // primaryWeaponOptics[] = {
             //      "CUP_optic_Elcan_SpecterDR_black",
             //      "CUP_optic_Elcan_SpecterDR_coyote",
             //      "CUP_optic_Elcan_SpecterDR_od",
@@ -289,7 +310,7 @@ class Loadouts {
                 LIST_3("CUP_100Rnd_TE4_Red_Tracer_556x45_M249"),
                 "ACE_SpareBarrel",
             };
-        };    
+        };
 
         class B_soldier_AT_F: B_Soldier_F {
             primaryWeapon = "CUP_arifle_mk18_black";
@@ -334,7 +355,7 @@ class Loadouts {
         class B_soldier_M_F: B_Soldier_F {
             //MK17 SV
             //primaryWeapon = "CUP_arifle_Mk20";
-            //M110 
+            //M110
             primaryWeapon[] = {
                 "CUP_srifle_M110_black",
                 "CUP_srifle_M110",
@@ -485,5 +506,5 @@ class Loadouts {
                 };
             };
         };
-    }; 
+    };
 };

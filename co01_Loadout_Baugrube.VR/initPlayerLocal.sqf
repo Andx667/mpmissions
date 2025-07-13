@@ -29,10 +29,13 @@ private _id = [
                 private _place = -1;
                     {
                         if(isPlayer _x && local _x) then {
-                            _place = _forEachIndex;
+                            _place = _forEachIndex + 1;
                             break;
                         };
                     } forEach units player;
+
+                private _helmet = ["ttt_Helmet_",_place,"_BW_Flecktarn"] joinString "";
+                player addItemToBackPack _helmet;
             },
             //Args
             [_unit,_loadout],
