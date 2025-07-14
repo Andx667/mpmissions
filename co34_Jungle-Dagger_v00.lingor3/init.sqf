@@ -19,17 +19,5 @@ addMissionEventHandler ["EntityCreated", {
 
     if !(_entity isKindOf "CAManBase") exitWith {};
 
-    if (side _entity != west) then {
-        _entity setSkill ["general", 0.75];
-        _entity setSkill ["commanding", 0.75];
-        _entity setSkill ["courage", 0.75];
-        _entity setSkill ["aimingAccuracy", 0.65];
-        _entity setSkill ["aimingShake", 0.65];
-        _entity setSkill ["aimingSpeed", 0.65];
-        _entity setSkill ["reloadSpeed", 0.75];
-        _entity setSkill ["spotDistance", 0.85];
-        _entity setSkill ["spotTime", 0.85];
-        _entity enableAI "COVER";
-        _entity enableAI "AUTOCOMBAT";
-    };
+    [_entity] call andx_fnc_setAISkill;
 }];

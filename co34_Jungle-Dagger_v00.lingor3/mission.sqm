@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=373;
+		nextID=376;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=4;
+		nextID=5;
 	};
 	class Camera
 	{
-		pos[]={1641.9457,356.38397,7486.0728};
-		dir[]={0.29464975,-0.51395905,0.80562425};
-		up[]={0.17653884,0.85781479,0.48268822};
-		aside[]={0.9391585,-8.6729415e-08,-0.34348902};
+		pos[]={837.63019,184.44472,5888.1772};
+		dir[]={0.80930144,-0.56692404,0.15388808};
+		up[]={0.55696106,0.82375067,0.10590695};
+		aside[]={0.18680644,2.921297e-07,-0.98242646};
 	};
 };
 binarizationWanted=0;
@@ -256,7 +256,7 @@ class CustomAttributes
 					singleType="ARRAY";
 					class value
 					{
-						items=8;
+						items=10;
 						class Item0
 						{
 							class data
@@ -817,6 +817,146 @@ class CustomAttributes
 								};
 							};
 						};
+						class Item8
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=4;
+									class Item0
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=373;
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="STRING";
+											value="ToDo";
+										};
+									};
+									class Item2
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Slotnamen und Nummern" \n "Callsigns";
+										};
+									};
+									class Item3
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=3;
+												class Item0
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=374.41901;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=6186.896;
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=4.8779998;
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+						class Item9
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=4;
+									class Item0
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=374;
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="STRING";
+											value="ToDo";
+										};
+									};
+									class Item2
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Slotnamen und Nummern" \n "Callsigns";
+										};
+									};
+									class Item3
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=3;
+												class Item0
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1036.7004;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=5977.2339;
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=39.278893;
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
 					};
 				};
 			};
@@ -847,7 +987,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=127;
+		items=130;
 		class Item0
 		{
 			dataType="Marker";
@@ -937,7 +1077,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={418.689,1.5651777,6207.6948};
+				position[]={418.689,1.5651779,6207.6948};
 				angles[]={0,2.737165,0};
 			};
 			side="Empty";
@@ -947,7 +1087,7 @@ class Mission
 			};
 			id=7;
 			type="UK3CB_BAF_RHIB_HMG_MTP";
-			atlOffset=0.77200055;
+			atlOffset=0.77200079;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -984,7 +1124,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={402.34299,1.8697278,6210.8491};
+				position[]={402.34299,1.8697281,6210.8491};
 				angles[]={0,2.737165,0};
 			};
 			side="Empty";
@@ -994,7 +1134,7 @@ class Mission
 			};
 			id=8;
 			type="UK3CB_BAF_RHIB_HMG_MTP";
-			atlOffset=0.57800043;
+			atlOffset=0.57800066;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -11752,6 +11892,42 @@ class Mission
 			{
 			};
 			id=364;
+		};
+		class Item127
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={374.41901,4.8779998,6186.896};
+			};
+			title="ToDo";
+			description="Slotnamen und Nummern" \n "Callsigns";
+			id=373;
+			atlOffset=-0.00016069412;
+		};
+		class Item128
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={1036.7004,39.278893,5977.2339};
+			};
+			title="ToDo";
+			description="Slotnamen und Nummern" \n "Callsigns";
+			id=374;
+			atlOffset=0.30007935;
+		};
+		class Item129
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={1002.258,36.667,5923.771};
+			};
+			title="ToDo";
+			description="Briefing";
+			id=375;
+			atlOffset=4.196167e-05;
 		};
 	};
 	class Connections
