@@ -32,7 +32,7 @@
 
 class Loadouts {
     baseDelay = 1;
-    perPlayerDelay = 1;
+    perPlayerDelay = 0;
     handleRadios = 1;
     resetLoadout = 1;
     randomizationMode = 1;

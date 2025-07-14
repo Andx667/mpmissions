@@ -25,17 +25,6 @@ private _id = [
         [
             {//Function
                 [ACE_Player, currentWeapon ACE_Player, true] call ace_safemode_fnc_setWeaponSafety;
-
-                private _place = -1;
-                    {
-                        if(isPlayer _x && local _x) then {
-                            _place = _forEachIndex + 1;
-                            break;
-                        };
-                    } forEach units player;
-
-                private _helmet = ["ttt_Helmet_",_place,"_BW_Flecktarn"] joinString "";
-                player addItemToBackPack _helmet;
             },
             //Args
             [_unit,_loadout],
@@ -43,18 +32,48 @@ private _id = [
             3
         ] call CBA_fnc_waitAndExecute;
 
-        if (typeOf ACE_player == "B_soldier_exp_F") then {
-            [
-                [
-                "UK3CB_BAF_L128A1",                   //Classname der zweiten Waffe
-                "",                               //Schalldämpfer oder ähnliches
-                "",                  //Laserpointer / Waffenlicht
-                "",                     //Optik
-                ["UK3CB_BAF_12G_Pellets", 8],   //Magazin mit Anzahl Kugeln
-                [],                               //Zweites Magazin (z.B. UGL)
-                ""                                 //Zweibein oder ähnliches
-                ]
-            ] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;
+        switch (typeOf ACE_Player) do
+        {
+            case "B_soldier_exp_F":
+                {[
+                    [
+                    "UK3CB_BAF_L128A1",                   //Classname der zweiten Waffe
+                    "",                               //Schalldämpfer oder ähnliches
+                    "",                  //Laserpointer / Waffenlicht
+                    "",                     //Optik
+                    ["UK3CB_BAF_12G_Pellets", 8],   //Magazin mit Anzahl Kugeln
+                    [],                               //Zweites Magazin (z.B. UGL)
+                    ""                                 //Zweibein oder ähnliches
+                    ]
+                ] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;};
+
+            case "B_soldier_M_F":
+                {[
+                    [
+                    "UK3CB_ACR_Crew",                   //Classname der zweiten Waffe
+                    "",                               //Schalldämpfer oder ähnliches
+                    "ACE_DBAL_A3_Red",                  //Laserpointer / Waffenlicht
+                    "rhsusf_acc_EOTECH",                     //Optik
+                    ["UK3CB_ACR_30rnd_556x45", 30],   //Magazin mit Anzahl Kugeln
+                    [],                               //Zweites Magazin (z.B. UGL)
+                    ""                                 //Zweibein oder ähnliches
+                    ]
+                ] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;};
+
+            case "B_Soldier_GL_F":
+                {[
+                    [
+                    "rhs_weap_m32",                   //Classname der zweiten Waffe
+                    "",                               //Schalldämpfer oder ähnliches
+                    "rhsusf_acc_anpeq15side",                  //Laserpointer / Waffenlicht
+                    "",                     //Optik
+                    ["rhsusf_mag_6Rnd_M441_HE", 6],   //Magazin mit Anzahl Kugeln
+                    [],                               //Zweites Magazin (z.B. UGL)
+                    ""                                 //Zweibein oder ähnliches
+                    ]
+                ] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;};
+
+            default {};
         };
     }
 ] call CBA_fnc_addEventHandler;
