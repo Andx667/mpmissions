@@ -53,7 +53,7 @@ private _id = [
                     "UK3CB_ACR_Crew",                   //Classname der zweiten Waffe
                     "",                               //Schalldämpfer oder ähnliches
                     "ACE_DBAL_A3_Red",                  //Laserpointer / Waffenlicht
-                    "rhsusf_acc_EOTECH",                     //Optik
+                    "rhsusf_acc_T1_high",                     //Optik
                     ["UK3CB_ACR_30rnd_556x45", 30],   //Magazin mit Anzahl Kugeln
                     [],                               //Zweites Magazin (z.B. UGL)
                     ""                                 //Zweibein oder ähnliches

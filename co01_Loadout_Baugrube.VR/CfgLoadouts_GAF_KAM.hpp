@@ -42,11 +42,11 @@ class Loadouts {
     customGearAllowedCategories[] = {
         "uniform",
         "vest",
+        "backpack",
         "primaryWeapon",
         "primaryWeaponOptics",
-        "primaryWeaponUnderbarrel",
         "goggles",
-        "headgear"
+        "headgear",
     };
 
     class Side {
@@ -108,7 +108,6 @@ class Loadouts {
                 "ACRE_PRC148",
             };
             addItemsToBackpack[] = {
-                "UK3CB_GAF_B_H_6b27m_DIGI",
             };
 
             primaryWeapon[] = {
@@ -266,17 +265,48 @@ class Loadouts {
 
         //Unterstützung
         class B_engineer_F: B_Soldier_F {
+            backpack[] = {
+                "UK3CB_CHD_B_B_ENG_WDL_ALT",
+                "UK3CB_TKA_O_B_ENG_Khk",
+                //"UK3CB_TKA_O_B_ENG_Tan",
+            };
+
+            headgear[] = {
+                "UK3CB_GAF_B_H_6b27m_DIGI",
+                "UK3CB_GAF_B_H_6b27m_GRN",
+                "UK3CB_GAF_B_H_6b27m_DIGI_NOFLAG",
+            };
+
+            goggles[] = {
+                "",
+                "rhsusf_oakley_goggles_clr",
+                "rhsusf_oakley_goggles_ylw",
+                "rhsusf_oakley_goggles_blk",
+                "rhsusf_shemagh_gogg_grn",
+                "rhsusf_shemagh2_gogg_grn",
+                "rhsusf_shemagh_gogg_od",
+                "rhsusf_shemagh2_gogg_od",
+                "rhsusf_shemagh_gogg_tan",
+                "rhsusf_shemagh2_gogg_tan",
+            };
 
             class Rank {
 
                 class PRIVATE {
+                    addItemsToVest[] += {
+                        "ACE_Clacker",
+                        "ACE_Defusalkit",
+                    };
 
                 };
                 class CORPORAL: PRIVATE {
 
                 };
                 class SERGEANT: CORPORAL {
-
+                    addItemsToVest[] += {
+                        "ACRE_PRC152",
+                        "ACE_SpraypaintBlack",
+                    };
                 };
             };
         };
@@ -397,15 +427,22 @@ class Loadouts {
         class B_Soldier_TL_F {
             backpack[] = {
                 "UK3CB_B_I_Backpack_Radio_Chem_OLI",
-                "UK3CB_B_I_Backpack_Radio_Chem",
+                //"UK3CB_B_I_Backpack_Radio_Chem",
+            };
+            addItemsToUniform[] += {
+                "ACE_microDAGR",
             };
 
             addItemsToVest[] += {
-                "ACE_SpraypaintBlack",
-                "ACE_microDAGR",
-                "ACRE_PRC152",
                 "ItemAndroid",
                 LIST_8("UK3CB_ACR_30rnd_556x45_RT"),
+            };
+
+            addItemsToBackpack[] += {
+                "ACE_SpraypaintBlack",
+                "ACE_SpraypaintRed",
+                "ACE_SpraypaintGreen",
+                "ACRE_PRC152",
             };
             binoculars = "ACE_Vector";
         };
@@ -481,6 +518,7 @@ class Loadouts {
 
                     backpack[] = {
                         "UK3CB_B_TacticalPack_Med_Oli",
+                        "UK3CB_B_US_Medic_Backpack",
                     };
 
                     addItemsToVest[] = {
@@ -522,6 +560,8 @@ class Loadouts {
                         };
                     addItemsToVest[] += {
                         "ACE_surgicalKit",
+                        "ACRE_PRC152",
+                        "ACE_Bodybag",
                     };
                     addItemsToBackpack[] = {
                         //M
@@ -547,7 +587,6 @@ class Loadouts {
                         //Misc
                         LIST_30("ACE_Suture"),
                         LIST_12("kat_eaca"),        //Näht regelmäßig offene Wunden
-                        "ACE_Bodybag",
                         LIST_8("kat_lidocaine"),    //leichtes Schmerzmittel, verbessert AED Chancen um 8%
                         LIST_8("kat_ketamine"),     //starkes Schemrzmittel, hebt HR/BP
                         LIST_8("kat_fentanyl"),     //starkes Schmerzmittel, senkt HR/BP
@@ -557,19 +596,78 @@ class Loadouts {
                 };
 
                 class LIEUTENANT: SERGEANT {
-
+                    backpack[] = {
+                        "UK3CB_B_O_RadioBag_KHK",
+                        "UK3CB_B_O_RadioBag_GRN",
+                        "UK3CB_B_O_RadioBag_TAN",
+                    };
+                    addItemsToBackpack[] = {
+                        "ACRE_PRC117F",
+                       //M
+                        LIST_4("ACE_tourniquet"),
+                        LIST_30("ACE_elasticBandage"),
+                        //A
+                        "kat_accuvac",
+                        LIST_4("kat_chestSeal"),
+                        LIST_4("kat_aatKit"),
+                        LIST_4("kat_larynx"),
+                        //R
+                        "kat_BVM",
+                        "kat_oxygenTank_150",
+                        //C
+                        "kat_X_AED",
+                        LIST_5("kat_IV_16"),
+                        LIST_2("kat_IV_fast"),
+                        LIST_2("ACE_SalineIV250"),
+                        LIST_6("ACE_BloodIV"),
+                        LIST_4("ACE_BloodIV500"),
+                        LIST_4("ACE_BloodIV250"),
+                        //H
+                        //Misc
+                        LIST_20("ACE_Suture"),
+                        LIST_12("kat_eaca"),        //Näht regelmäßig offene Wunden
+                        LIST_8("kat_lidocaine"),    //leichtes Schmerzmittel, verbessert AED Chancen um 8%
+                        LIST_8("kat_ketamine"),     //starkes Schemrzmittel, hebt HR/BP
+                        LIST_8("kat_fentanyl"),     //starkes Schmerzmittel, senkt HR/BP
+                        LIST_8("kat_amiodarone"),   //verbessert AED Chancen um 8-20%, 33% Brachykardie als Nebenwirkung
+                        LIST_6("kat_atropine"),     //Gegenmittel für chemische Symptome, Gegenmittel für Brachykardie
+                    };
                 };
             };
         };
 
         class B_soldier_repair_F: B_Soldier_F {
+            primaryWeapon = "UK3CB_ACR_Crew";
+
+            vest[] = {
+                "UK3CB_GAF_B_MBAV_LIGHT_DIGI",
+                "UK3CB_GAF_B_MBAV_LIGHT_DIGI_OLI",
+            };
 
             class Rank {
 
                 class PRIVATE {
-
+                    addItemsToVest[] += {
+                        LIST_3("UK3CB_ACR_30rnd_556x45"),
+                    };
+                    addItemsToBackpack[] += {
+                        "Tookit",
+                    };
                 };
                 class SERGEANT: PRIVATE {
+                    addItemsToVest[] += {
+                        "ItemAndroid",
+                    };
+                    backpack[] = {
+                        "UK3CB_B_O_RadioBag_KHK",
+                        "UK3CB_B_O_RadioBag_GRN",
+                        "UK3CB_B_O_RadioBag_TAN",
+                    };
+                    addItemsToBackpack[] += {
+                        "ACRE_PRC117F",
+                        "ACE_SpraypaintYellow",
+                        "ace_flags_yellow",
+                    };
 
                 };
             };
