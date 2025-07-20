@@ -34,3 +34,12 @@ if !(isNil "CLib_fnc_loadModules") then {call CLib_fnc_loadModules;};
 
     [_x, "TTT"] call acre_api_fnc_setPreset;
 } forEach ["ACRE_PRC148", "ACRE_PRC152", "ACRE_PRC117F"];
+
+//Setzt KI Skill für Einheiten die Während der Mission erzeugt werden
+addMissionEventHandler ["EntityCreated", {
+	params ["_entity"];
+
+    if !(_entity isKindOf "CAManBase") exitWith {};
+
+    [_entity] call andx_fnc_setAISkill;
+}];

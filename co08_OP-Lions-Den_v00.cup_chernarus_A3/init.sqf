@@ -12,3 +12,12 @@
 
 //Laden von CLib Modulen für den Streamator
 if !(isNil "CLib_fnc_loadModules") then {call CLib_fnc_loadModules;};
+
+//Setzt KI Skill für Einheiten die Während der Mission erzeugt werden
+addMissionEventHandler ["EntityCreated", {
+	params ["_entity"];
+
+    if !(_entity isKindOf "CAManBase") exitWith {};
+
+    [_entity] call andx_fnc_setAISkill;
+}];

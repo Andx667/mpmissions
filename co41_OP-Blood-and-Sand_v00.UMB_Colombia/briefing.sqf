@@ -33,7 +33,7 @@ player createDiaryRecord ["Diary", [
     + "Feindlage:<br/>"
     + "<t/> - In Obj. 1 feindliche Infanterie in Zugstärke, teils gehärtete Stellungen, vermutete Absicht ist es dem mobilen Kräften Zeit zu verschaffen<br/>"
     + "<t/> - In Obj. 2 feindliche Infanterie in Zugstärke, teils gehärtete Stellungen, vermutete Absicht ist es die Stellung zu halten und uns ein weiteres Vorstoßen nicht zu ermöglichen,<br/>"
-    + "<t/> - für Obj.3 sind die Aufklärungsdaten unvollständig, es ist anzunhemen, dass es ähnlich wie in 1 und 2 ist,<br/>"
+    + "<t/> - für Obj. 3 sind die Aufklärungsdaten unvollständig, es ist anzunhemen, dass es ähnlich wie in 1 und 2 ist,<br/>"
     + "<t/> - In der gesamten AO feindliche Reserven motorisiert und mechanisiert in Zugstärke, diese werden versuchen unseren Vorstoß schnellstmöglich aufzuhalten.<br/>"
     + "<br/>"
     + "Eigene Lage:<br/>"
