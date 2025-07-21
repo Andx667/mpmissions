@@ -93,7 +93,7 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "kat_Painkiller",
+                LSIT_2("kat_Painkiller"),
                 LIST_15("ACE_quikclot"),
                 LIST_15("ACE_packingBandage"),
                 LIST_4("ACE_Tourniquet"),
@@ -481,33 +481,34 @@ class Loadouts {
 
                     addItemsToVest[] += {
                         LIST_8("UK3CB_ACR_30rnd_556x45"),
-                        "kat_basicDiagnostic",
                         "kat_Pulseoximeter",
+                        "ACE_SurgicalKit",
                     };
                     //Fits in a Vanilla Assault_Pack recommended for Squad-Level-Medics
                     addItemsToBackpack[] = {
-                        LIST_45("ACE_quikclot"),
-                        LIST_45("ACE_packingBandage"),
+                        //M
+                        LIST_20("ACE_packingBandage"),
+                        LIST_20("ACE_ElasticBandage"),
                         LIST_12("ACE_tourniquet"),
-
-                        LIST_8("kat_IV_16"),
-                        LIST_4("kat_IO_FAST"),
-
-                        LIST_8("kat_chestSeal"),
-                        LIST_8("kat_larynx"),
-                        LIST_8("kat_ncdKit"),
-
-                        LIST_2("kat_pocketBVM"),
-
-                        LIST_8("ACE_salineIV_250"),
-
-                        LIST_8("kat_TXA"),
-                        LIST_8("ACE_adenosine"),
-                        LIST_8("ACE_epinephrine"),
-                        LIST_8("kat_naloxone"),
-                        LIST_8("kat_nalbuphine"),
-                        LIST_8("kat_Painkiller"),
-                        LIST_8("kat_Penthrox"),
+                        //A
+                        LIST_9("kat_chestSeal"),
+                        LIST_9("kat_larynx"),
+                        LIST_9("kat_ncdKit"),
+                        //R
+                        "kat_pocketBVM",
+                        //C
+                        LIST_4("ACE_salineIV_250"),
+                        LIST_4("ACE_salineIV_500"),
+                        LIST_9("kat_IV_16"),
+                        LIST_12("ACE_epinephrine"),
+                        //H
+                        LIST_9("kat_Penthrox"),
+                        LIST_9("kat_naloxone"),
+                        LIST_9("kat_nalbuphine"),
+                        LIST_4("kat_Painkiller"),
+                        LIST_9("ACE_morphine"),
+                        LIST_20("ACE_Suture"),
+                        //Admin
                         LIST_2("ACE_CableTie"),
                         LIST_2("ACE_Chemlight_IR"),
                     };
@@ -523,32 +524,35 @@ class Loadouts {
 
                     addItemsToVest[] = {
                         LIST_3("UK3CB_ACR_30rnd_556x45"),
-                        "kat_basicDiagnostic",
                         "kat_Pulseoximeter",
                         "ACE_SpraypaintBlue",
                         "ace_flags_blue",
+                        "ItemAndroid",
                     };
+                    //14kg
                     addItemsToBackpack[] += {
-                        LIST_25("ACE_quikclot"),
-                        LIST_25("ACE_packingBandage"),
-                        LIST_4("ACE_tourniquet"),
-
-                        LIST_4("kat_IV_16"),
-                        LIST_2("kat_IO_FAST"),
-
-                        LIST_4("kat_chestSeal"),
-                        LIST_4("kat_larynx"),
-                        LIST_4("kat_ncdKit"),
-
-                        LIST_4("ACE_salineIV_250"),
-
-                        LIST_4("kat_TXA"),          //verbindet regelmäßig Wunden
-                        LIST_4("ACE_adenosine"),    //senkt HR/BP
-                        LIST_4("ACE_epinephrine"),  //Hebt HR/BP, hilft beim Aufwachen, verlangsamt Blutung um 15%
-                        LIST_4("kat_naloxone"),     //Opioid Antagonist
-                        LIST_4("kat_nalbuphine"),   //mittleres Schmerzmittel, senkt HR/BP
-                        LIST_4("kat_Painkiller"),   //leichtes Schmerzmittel
-                        LIST_4("kat_Penthrox"),     //mittleres Schmerzmittel
+                        //M
+                        LIST_10("ACE_packingBandage"),
+                        LIST_10("ACE_ElasticBandage"),
+                        LIST_3("ACE_tourniquet"),
+                        //A
+                        LIST_3("kat_chestSeal"),
+                        LIST_3("kat_larynx"),
+                        LIST_3("kat_ncdKit"),
+                        //R
+                        //C
+                        LIST_8("ACE_salineIV"),
+                        LIST_3("kat_IV_16"),
+                        LIST_3("ACE_epinephrine"),
+                        LSIT_9("kat_amiodarone"),
+                        "kat_aed",
+                        //H
+                        LIST_3("kat_Penthrox"),
+                        LIST_3("kat_naloxone"),
+                        LIST_3("kat_nalbuphine"),
+                        LIST_2("kat_Painkiller"),
+                        LIST_9("ACE_morphine"),
+                        LIST_10("ACE_Suture"),
                     };
                 };
 
@@ -559,39 +563,39 @@ class Loadouts {
                         //"UK3CB_GAF_B_B_RIF_MED_TAN",
                         };
                     addItemsToVest[] += {
-                        "ACE_surgicalKit",
                         "ACRE_PRC152",
-                        "ACE_Bodybag",
                     };
                     addItemsToBackpack[] = {
                         //M
-                        LIST_8("ACE_tourniquet"),
+                        LIST_30("ACE_packingBandage"),
                         LIST_30("ACE_elasticBandage"),
                         //A
+                        LIST_6("kat_aatKit"),
                         "kat_accuvac",
-                        LIST_8("kat_chestSeal"),
-                        LIST_8("kat_aatKit"),
-                        LIST_8("kat_larynx"),
+                        LIST_6("kat_chestSeal"),
+                        LIST_6("kat_larynx"),
                         //R
                         "kat_BVM",
-                        LIST_2("kat_oxygenTank_150"),
+                        "kat_oxygenTank_150",
                         //C
-                        "kat_X_AED",
-                        LIST_10("kat_IV_16"),
-                        LIST_4("kat_IV_fast"),
-                        LIST_2("ACE_SalineIV250"),
                         LIST_8("ACE_BloodIV"),
-                        LIST_4("ACE_BloodIV500"),
-                        LIST_4("ACE_BloodIV250"),
+                        LIST_4("ACE_BloodIV_500"),
+                        LIST_4("ACE_BloodIV_250"),
+                        LIST_2("ACE_salineIV_250"),
+                        "kat_X_AED",
+                        LIST_8("kat_IV_16"),
+                        LIST_2("kat_IO_FAST"),
+                        LIST_12("kat_epinephrineIV"),
+                        LIST_8("kat_lidocaine"),
+                        LIST_6("kat_amiodarone"),
                         //H
-                        //Misc
+                        LIST_5("kat_eaca"),
+                        LIST_10("kat_txa"),
+                        LIST_8("kat_fentanyl"),
+                        LIST_8("kat_ketamine"),
+                        LIST_8("kat_atropine"),
+                        //Admin
                         LIST_30("ACE_Suture"),
-                        LIST_12("kat_eaca"),        //Näht regelmäßig offene Wunden
-                        LIST_8("kat_lidocaine"),    //leichtes Schmerzmittel, verbessert AED Chancen um 8%
-                        LIST_8("kat_ketamine"),     //starkes Schemrzmittel, hebt HR/BP
-                        LIST_8("kat_fentanyl"),     //starkes Schmerzmittel, senkt HR/BP
-                        LIST_8("kat_amiodarone"),   //verbessert AED Chancen um 8-20%, 33% Brachykardie als Nebenwirkung
-                        LIST_6("kat_atropine"),     //Gegenmittel für chemische Symptome, Gegenmittel für Brachykardie
                     };
                 };
 
@@ -603,34 +607,36 @@ class Loadouts {
                     };
                     addItemsToBackpack[] = {
                         "ACRE_PRC117F",
-                       //M
-                        LIST_4("ACE_tourniquet"),
-                        LIST_30("ACE_elasticBandage"),
+                        //M
+                        LIST_10("ACE_packingBandage"),
+                        LIST_10("ACE_elasticBandage"),
                         //A
+                        LIST_2("kat_aatKit"),
                         "kat_accuvac",
-                        LIST_4("kat_chestSeal"),
-                        LIST_4("kat_aatKit"),
-                        LIST_4("kat_larynx"),
+                        LIST_3("kat_chestSeal"),
+                        LIST_3("kat_larynx"),
                         //R
                         "kat_BVM",
                         "kat_oxygenTank_150",
                         //C
+                        LIST_5("ACE_BloodIV"),
+                        LIST_3("ACE_BloodIV_500"),
+                        LIST_3("ACE_BloodIV_250"),
+                        "ACE_salineIV_250",
                         "kat_X_AED",
-                        LIST_5("kat_IV_16"),
-                        LIST_2("kat_IV_fast"),
-                        LIST_2("ACE_SalineIV250"),
-                        LIST_6("ACE_BloodIV"),
-                        LIST_4("ACE_BloodIV500"),
-                        LIST_4("ACE_BloodIV250"),
+                        LIST_4("kat_IV_16"),
+                        LIST_2("kat_IO_FAST"),
+                        LIST_12("kat_epinephrineIV"),
+                        LIST_8("kat_lidocaine"),
+                        LIST_6("kat_amiodarone"),
                         //H
-                        //Misc
-                        LIST_20("ACE_Suture"),
-                        LIST_12("kat_eaca"),        //Näht regelmäßig offene Wunden
-                        LIST_8("kat_lidocaine"),    //leichtes Schmerzmittel, verbessert AED Chancen um 8%
-                        LIST_8("kat_ketamine"),     //starkes Schemrzmittel, hebt HR/BP
-                        LIST_8("kat_fentanyl"),     //starkes Schmerzmittel, senkt HR/BP
-                        LIST_8("kat_amiodarone"),   //verbessert AED Chancen um 8-20%, 33% Brachykardie als Nebenwirkung
-                        LIST_6("kat_atropine"),     //Gegenmittel für chemische Symptome, Gegenmittel für Brachykardie
+                        LIST_5("kat_eaca"),
+                        LIST_10("kat_txa"),
+                        LIST_8("kat_fentanyl"),
+                        LIST_8("kat_ketamine"),
+                        LIST_8("kat_atropine"),
+                        //Admin
+                        LIST_10("ACE_Suture"),
                     };
                 };
             };
