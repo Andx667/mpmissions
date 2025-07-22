@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=33;
+		nextID=34;
 	};
 	class Camera
 	{
-		pos[]={7750.2271,19.442066,5087.8521};
-		dir[]={-0.59671593,-0.54004127,0.59353656};
-		up[]={-0.38288555,0.84163851,0.38084549};
-		aside[]={0.70521551,0,0.70899308};
+		pos[]={7729.2114,10.974806,5088.7109};
+		dir[]={-0.29970703,-0.57885236,0.75835848};
+		up[]={-0.2127534,0.81543118,0.53833711};
+		aside[]={0.93000692,4.1851308e-08,0.36754352};
 	};
 };
 binarizationWanted=0;
@@ -42,6 +42,7 @@ addons[]=
 	"ace_explosives",
 	"A3_Characters_F_Orange",
 	"ace_nouniformrestrictions",
+	"cfp_uniforms",
 	"A3_Characters_F_Patrol",
 	"A3_Modules_F_Curator_Curator"
 };
@@ -49,7 +50,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=10;
+		items=11;
 		class Item0
 		{
 			className="KJW_TwoPrimaryWeapons";
@@ -107,12 +108,18 @@ class AddonsMetaData
 		};
 		class Item8
 		{
+			className="cfp_uniforms";
+			name="cfp_uniforms";
+			author="CFP Team";
+		};
+		class Item9
+		{
 			className="A3_Characters_F_Patrol";
 			name="Arma 3 Patrol - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item9
+		class Item10
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";

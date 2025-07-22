@@ -127,12 +127,26 @@ class Loadouts {
     class Type {
         //Rifleman
         class B_Soldier_F {
-
+            addItemsToVest[] += {
+                LIST_8("BWA3_30Rnd_556x45_G36_AP"),
+            };
         };
 
         class B_Soldier_GL_F: B_Soldier_F {
+            primaryWeapon[] = {
+                "BWA3_G36A3_AG40",
+                "BWA3_G36A3_AG40_green",
+                "BWA3_G36A3_AG40_tan",
+                };
             vest = "BWA3_Vest_Grenadier_Fleck";
-
+            addItemsToVest[] += {
+                LIST_8("1Rnd_HE_Grenade_shell"),
+            };
+            addItemsToBackpack[] += {
+                LIST_12("1Rnd_HE_Grenade_shell"),
+                LIST_5("1Rnd_SmokeRed_Grenade_shell"),
+                LIST_5("1Rnd_Smoke_Grenade_shell"),
+            };
         };
 
         class B_soldier_exp_F: B_Soldier_GL_F {
@@ -140,6 +154,7 @@ class Loadouts {
         };
 
         class B_soldier_LAT2_F: B_Soldier_F {
+            secondaryWeapon = "BWA3_RGW90_Loaded";
         };
 
         class TTT_B_RadioOperator_F: B_Soldier_F {
@@ -154,7 +169,13 @@ class Loadouts {
         };
 
         class B_Soldier_A_F: B_Soldier_F {
+            backpack = "BWA3_PatrolPack_Fleck";
 
+            addItemsToBackpack[] = {
+                "ACE_SpareBarrel",
+                LIST_6("BWA3_120Rnd_762x51_Tracer_soft"),
+                "ACE_EntrenchingTool",
+            };
         };
 
         class B_soldier_UAV_F: B_Soldier_F {
@@ -226,14 +247,22 @@ class Loadouts {
         };
 
         class B_soldier_AA_F: B_Soldier_F {
+            secondaryWeapon = "BWA3_Fliegerfaust";
+            secondaryWeaponMagazine = "BWA3_Fliegerfaust_Mag";
+            backpack = "";
 
         };
 
         class B_soldier_AAA_F: B_Soldier_F {
+            backpack = "BWA3_PatrolPack_Fleck";
+            addItemsToBackpack[] = {
+                LIST_3("BWA3_Fliegerfaust_Mag"),
+            };
         };
 
         //Unterstützung
         class B_engineer_F: B_Soldier_F {
+            backpack = "BWA3_PatrolPack_Fleck";
 
             class Rank {
 
@@ -250,6 +279,7 @@ class Loadouts {
         };
 
         class B_soldier_mine_F: B_Soldier_F {
+            backpack = "BWA3_PatrolPack_Fleck";
 
             class Rank {
 
@@ -266,15 +296,42 @@ class Loadouts {
 
         //Fahrzeugbesatzung
         class B_crew_F {
+            uniform = "BWA3_Uniform_Crew_Fleck";
+            vest = "BWA3_Vest_Fleck";
+            backpack = "";
+            headgear = "BWA3_CrewmanKSK_Fleck_Headset";
+
+            primaryWeapon = "BWA3_MP7";
+            primaryWeaponMagazine = "BWA3_20Rnd_46x30_MP7";
+            primaryWeaponOptics = "";
+            primaryWeaponPointer = "";
+
+            goggles[] = {
+                "CUP_G_ESS_BLK",
+                "CUP_G_ESS_BLK_Facewrap_Black",
+                "CUP_G_ESS_BLK_Scarf_Grn",
+                "CUP_G_ESS_BLK_Scarf_Face_Grn",
+                "",
+            };
 
             class Rank {
                 class PRIVATE {
+                    addItemsToVest[] += {
+                        LIST_3("BWA3_20Rnd_46x30_MP7"),
+                    };
 
                 };
                 class SERGEANT: PRIVATE {
+                    addItemsToVest[] += {
+                        "ACRE_PRC152",
+                    };
 
                 };
                 class LIEUTENANT: SERGEANT {
+                    backpack = "CUP_B_Kombat_Radio_Olive";
+                    addItemsToBackpack[] = {
+                        "ACRE_PRC117F",
+                    };
                 };
             };
         };
@@ -332,12 +389,23 @@ class Loadouts {
         class B_Soldier_TL_F {
             vest = "BWA3_Vest_Leader_Fleck";
 
+            addItemsToUniform[] += {
+                "ACE_MicroDAGR",
+            };
+            addItemsToVest[] += {
+                "ItemAndroid",
+                LIST_8("BWA3_30Rnd_556x45_G36_Tracer"),
+            };
+
             binoculars = "ACE_Vector";
 
         };
 
         class B_Soldier_SL_F: B_Soldier_TL_F {
 
+            addItemsToBackpack[] += {
+                "ace_flags_red",
+                };
         };
 
         class B_officer_F: B_Soldier_SL_F {
