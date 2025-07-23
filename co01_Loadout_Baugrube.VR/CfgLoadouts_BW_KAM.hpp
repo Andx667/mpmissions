@@ -44,6 +44,8 @@ class Loadouts {
         "primaryWeapon",
         "primaryWeaponOptics",
         "primaryWeaponUnderbarrel",
+        "primaryWeaponPointer",
+        "primaryWeaponMuzzle",
         "goggles",
         "headgear"
     };
@@ -154,17 +156,27 @@ class Loadouts {
         };
 
         class B_soldier_LAT2_F: B_Soldier_F {
-            secondaryWeapon = "BWA3_RGW90_Loaded";
+            secondaryWeapon = "BWA3_PzF3_Tandem_Loaded";
         };
 
         class TTT_B_RadioOperator_F: B_Soldier_F {
 
         };
         class B_soldier_AT_F: B_Soldier_F {
+            secondaryWeapon = "BWA3_CarlGustav";
+            secondaryWeaponOptics = "BWA3_optic_CarlGustav";
+            secondaryWeaponMagazine = "BWA3_CarlGustav_HEAT"
 
+            backpack = "";
         };
 
         class B_soldier_AAT_F: B_Soldier_F {
+            backpack = "BWA3_PatrolPack_Fleck";
+
+            addItemsToBackpack[] = {
+                LIST_2("BWA3_CarlGustav_HEAT"),
+                LIST_2("BWA3_CarlGustav_HEDP"),
+            };
 
         };
 
@@ -192,7 +204,7 @@ class Loadouts {
 
             primaryWeaponUnderbarrel[] = {
                 "BWA3_bipod_Harris",
-                "BWA3_bipod_Harris_green",
+                //"BWA3_bipod_Harris_green",
                 "BWA3_bipod_Harris_tan",
                 };
 
@@ -205,6 +217,7 @@ class Loadouts {
             addItemsToBackpack[] = {
                 LIST_8("BWA3_20Rnd_762x51_G28_LR"),
             };
+            binoculars = "ACE_Yardage450";
         };
 
         //Autorifleman
@@ -365,11 +378,36 @@ class Loadouts {
 
         //Pilots
         class B_helicrew_F {
+            uniform = "BWA3_Uniform2_Fleck";
+            vest = "BWA3_Vest_Fleck";
+            headgear[] = {
+                "BWA3_CrewHelmet_NH90",
+                "ttt_Helmet_Buzzard",
+                "ttt_Helmet_Eagle",
+                "ttt_Helmet_Falcon",
+            };
+
+            primaryWeapon = "";
+            primaryWeaponMagazine = "";
+            primaryWeaponMuzzle = "";
+            primaryWeaponOptics = "";
+            primaryWeaponPointer = "";
+
+            addItemsToVest[] = {
+                "ACRE_SEM52SL",
+            };
+            goggles = "";
 
         };
 
         class B_Helipilot_F: B_helicrew_F{
-
+            uniform = "BWA3_Uniform_Helipilot";
+            headgear[] += {
+                "BWA3_TopOwl_nvg",
+            };
+            addItemsToBackpack[] += {
+                "ACRE_PRC117F",
+            };
         };
 
         //Aufklärer
@@ -396,6 +434,11 @@ class Loadouts {
                 "ItemAndroid",
                 LIST_8("BWA3_30Rnd_556x45_G36_Tracer"),
             };
+            addItemsToBackpack[] += {
+                "ACE_SprayPaintRed",
+                "ACE_SprayPaintGreen",
+                "ACE_SprayPaintBlack",
+            };
 
             binoculars = "ACE_Vector";
 
@@ -405,7 +448,7 @@ class Loadouts {
 
             addItemsToBackpack[] += {
                 "ace_flags_red",
-                };
+            };
         };
 
         class B_officer_F: B_Soldier_SL_F {
@@ -553,30 +596,148 @@ class Loadouts {
 
         //SOF
         class B_recon_F {
+            uniform = "BWA3_Uniform_Crye_G3_Fleck";
+            vest = "BWA3_Vest_JPC_Rifleman_Fleck";
+            headgear = "BWA3_Booniehat_Fleck";
+
+            primaryWeapon[] = {
+                "BWA3_G38K",
+                "BWA3_G38K_tan"
+            };
+            primaryWeaponMagazine = "";
+            primaryWeaponOptics[] = {
+                "BWA3_optic_ZO4x30_MicroT2",
+                "BWA3_optic_ZO4x30_MicroT2_brown",
+                "BWA3_optic_ZO4x30_RSAS",
+                "BWA3_optic_ZO4x30_RSAS_brown",
+            };
+            primaryWeaponPointer[] = {
+                "BWA3_acc_LLM01_irlaser",
+                "BWA3_acc_LLM01_irlaser_green",
+                "BWA3_acc_LLM01_irlaser_tan",
+            };
+            primaryWeaponMuzzle[] +={
+                "BWA3_muzzle_snds_Rotex_IIIC_tan",
+                "BWA3_muzzle_snds_Rotex_IIIC_green",
+                "BWA3_muzzle_snds_Rotex_IIIC",
+                "BWA3_muzzle_snds_QDSS_tan",
+                "BWA3_muzzle_snds_QDSS_green",
+                "BWA3_muzzle_snds_QDSS",
+            };
+            addItemsToUniform[] += {
+                "ACE_MicroDAGR",
+            };
+            addItemsToVest[] += {
+                LIST_8("BWA3_30Rnd_556x45_G36_AP"),
+                "ItemAndroid",
+            };
+            addItemsToBackpack[] += {
+                "BWA3_OpsCore_FastMT_SOF_Fleck",
+            };
+            binoculars = "ACE_Vector";
 
         };
 
         class B_recon_LAT_F: B_recon_F {
+            secondaryWeapon = "BWA3_RGW90_Loaded";
         };
 
         class B_recon_medic_F: B_recon_F {
+            backpack = "BWA3_Kitbag_Fleck_Medic";
+            primaryWeapon[] = {"BWA3_G38C","BWA3_G38C_tan"};
+            //ToDo
+            addItemsToVest[] += {
+                "ACE_surgicalKit",
+            };
+            addItemsToBackpack[] += {
+                //M
+                LIST_45("ACE_packingBandage"),
+                LIST_45("ACE_elasticBandage"),
+                //A
+                LIST_6("kat_aatKit"),
+                LIST_6("kat_chestSeal"),
+                LIST_6("kat_larynx"),
+                //R
+                "kat_pocketBVM",
+                //C
+                LIST_8("ACE_SalineIV"),
+                LIST_4("ACE_SalineIV_500"),
+                LIST_4("ACE_SalineIV_250"),
+                LIST_8("kat_IV_16"),
+                LIST_2("kat_IO_FAST"),
+                LIST_12("kat_epinephrineIV"),
+                //H
+                LIST_5("kat_eaca"),
+                LIST_10("kat_txa"),
+                LIST_8("kat_fentanyl"),
+                LIST_8("kat_ketamine"),
+                LIST_8("kat_atropine"),
+                //Admin
+                LIST_45("ACE_Suture"),
+            };
 
         };
 
         class B_recon_exp_F: B_recon_F {
-
-        };
-
-        class B_recon_JTAC_F: B_recon_F {
-
-        };
-
-        class B_recon_TL_F: B_recon_JTAC_F {
-
+            backpack = "BWA3_PatrolPack_Fleck";
+            //ToDo
         };
 
         class B_recon_M_F {
+            headgear = "BWA3_Booniehat_Fleck";
+            primaryWeapon = "BWA3_G28";
+            primaryWeaponMagazine = "BWA3_20Rnd_762x51_G28_AP";
+            primaryWeaponOptics[] = {
+                "BWA3_optic_PMII_DMR_MicroT1_front",
+                "BWA3_optic_PMII_DMR_MicroT1_rear",
+            };
 
+            primaryWeaponUnderbarrel[] = {
+                "BWA3_bipod_Harris",
+                //"BWA3_bipod_Harris_green",
+                "BWA3_bipod_Harris_tan",
+            };
+            primaryWeaponMuzzle = "BWA3_muzzle_snds_Rotex_IIA";
+            addItemsToUniform[] += {
+                "ACE_MicroDAGR",
+            };
+            addItemsToVest[] += {
+                LIST_7("BWA3_20Rnd_762x51_G28_AP"),
+                "ACE_Rangecard",
+                "ItemAndroid",
+            };
+            addItemsToBackpack[] = {
+                LIST_8("BWA3_20Rnd_762x51_G28_LR"),
+                "BWA3_OpsCore_FastMT_SOF_Fleck",
+            };
         };
+
+        class B_recon_JTAC_F: B_recon_F {
+            vest = "BWA3_Vest_JPC_Radioman_Fleck";
+            backpack = "CUP_B_Kombat_Radio_Olive";
+
+            addItemsToBackpack[] = {
+                "ACRE_PRC117F",
+                "Laserbatteries",
+                "ACE_Vector",
+            };
+            binoculars = "Laserdesignator_03";
+        };
+
+        class B_recon_TL_F: B_recon_JTAC_F {
+            primaryWeapon[] = {
+                "BWA3_G38K_AG40",
+                "BWA3_G38K_AG40_tan",
+            };
+            vest = "BWA3_Vest_JPC_Leader_Fleck";
+
+            addItemsToBackpack[] += {
+                LIST_15("1Rnd_HE_Grenade_shell"),
+                LIST_5("1Rnd_SmokeRed_Grenade_shell"),
+                LIST_5("1Rnd_Smoke_Grenade_shell"),
+            };
+        };
+
+
     };
 };
