@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=35;
+		nextID=37;
 	};
 	class Camera
 	{
-		pos[]={7738.2495,17.398121,5089.209};
-		dir[]={-0.40498918,-0.47864321,0.77902848};
-		up[]={-0.22077832,0.87800682,0.42468578};
-		aside[]={0.88726741,-5.5879354e-08,0.46125811};
+		pos[]={7750.7886,25.501575,5073.98};
+		dir[]={-0.32663408,-0.47845265,0.81511116};
+		up[]={-0.17797123,0.87811124,0.44412526};
+		aside[]={0.9282518,4.3073669e-09,0.37197074};
 	};
 };
 binarizationWanted=0;
@@ -42,7 +42,6 @@ addons[]=
 	"ace_explosives",
 	"A3_Characters_F_Orange",
 	"ace_nouniformrestrictions",
-	"cfp_uniforms",
 	"A3_Characters_F_Patrol",
 	"A3_Modules_F_Curator_Curator"
 };
@@ -50,7 +49,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=11;
+		items=10;
 		class Item0
 		{
 			className="KJW_TwoPrimaryWeapons";
@@ -108,18 +107,12 @@ class AddonsMetaData
 		};
 		class Item8
 		{
-			className="cfp_uniforms";
-			name="cfp_uniforms";
-			author="CFP Team";
-		};
-		class Item9
-		{
 			className="A3_Characters_F_Patrol";
 			name="Arma 3 Patrol - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item10
+		class Item9
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
@@ -189,7 +182,7 @@ class CustomAttributes
 										class data
 										{
 											singleType="STRING";
-											value="Zugsani 1";
+											value="Sani 2";
 										};
 									};
 									class Item2
@@ -259,7 +252,7 @@ class CustomAttributes
 										class data
 										{
 											singleType="STRING";
-											value="Ärzte";
+											value="Arzt 2";
 										};
 									};
 									class Item2
@@ -1379,7 +1372,7 @@ class CustomAttributes
 										class data
 										{
 											singleType="STRING";
-											value="Zugsani 2";
+											value="Arzt 1";
 										};
 									};
 									class Item2
@@ -1939,7 +1932,7 @@ class CustomAttributes
 										class data
 										{
 											singleType="STRING";
-											value="Gruppensani";
+											value="Sani 1";
 										};
 									};
 									class Item2
@@ -2033,7 +2026,7 @@ class Mission
 					{
 						position[]={7735,5,5100};
 					};
-					title="Zugsani 1";
+					title="Sani 2";
 					id=543;
 				};
 				class Item1
@@ -2043,7 +2036,7 @@ class Mission
 					{
 						position[]={7735,5,5104};
 					};
-					title="Ärzte";
+					title="Arzt 2";
 					id=544;
 				};
 				class Item2
@@ -7809,11 +7802,12 @@ class Mission
 					{
 						position[]={7735,5,5102};
 					};
-					title="Zugsani 2";
+					title="Arzt 1";
 					id=892;
 				};
 			};
 			id=560;
+			atlOffset=-2.4998474;
 		};
 		class Item1
 		{
@@ -8084,7 +8078,7 @@ class Mission
 			{
 				position[]={7735,5,5098};
 			};
-			title="Gruppensani";
+			title="Sani 1";
 			id=891;
 		};
 	};
