@@ -720,6 +720,7 @@ class Loadouts {
                 "ace_flags_red",
                 "ACE_SpraypaintBlack",
                 "ACE_SpraypaintGreen",
+                "ACE_SpraypaintRed",
                 LIST_14("UK3CB_BAF_556_30Rnd_T"),
                 LIST_2("UK3CB_BAF_762_200Rnd_T"),
             };
