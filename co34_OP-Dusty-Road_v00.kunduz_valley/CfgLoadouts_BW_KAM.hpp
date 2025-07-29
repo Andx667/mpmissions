@@ -33,13 +33,13 @@
 
 class Loadouts {
     baseDelay = 1;
-    perPlayerDelay = 1;
+    perPlayerDelay = 0;
     handleRadios = 1;
     resetLoadout = 1;
     randomizationMode = 1;
     customGear = 300;
     customGearAllowedCategories[] = {
-        "uniform",
+        //"uniform",
         "vest",
         "primaryWeapon",
         "primaryWeaponOptics",
@@ -47,21 +47,21 @@ class Loadouts {
         "primaryWeaponPointer",
         "primaryWeaponMuzzle",
         "goggles",
-        "headgear"
+        //"headgear"
     };
 
     class Side {
         class Blufor {
             uniform[] = {
-                "BWA3_Uniform2_Fleck",
-                "BWA3_Uniform2_sleeves_Fleck",
+                //"BWA3_Uniform2_tropen",
+                "BWA3_Uniform2_sleeves_tropen",
             };
             vest[] = {
-                "BWA3_Vest_Rifleman_Fleck",
+                "BWA3_Vest_Rifleman_tropen",
             };
-            backpack = "BWA3_AssaultPack_Fleck";
+            backpack = "BWA3_AssaultPack_tropen";
             headgear[] = {
-                "BWA3_OpsCore_FastMT_Peltor_Fleck",
+                "BWA3_OpsCore_FastMT_Peltor_tropen",
             };
 
             addItemsToUniform[] = {
@@ -72,7 +72,6 @@ class Loadouts {
                 LIST_15("ACE_packingBandage"),
                 LIST_4("ACE_Tourniquet"),
                 LIST_2("kat_chestSeal"),
-                "kat_guedel",
                 LIST_2("kat_Painkiller"),
             };
             addItemsToVest[] = {
@@ -140,19 +139,27 @@ class Loadouts {
                 "BWA3_G36A3_AG40_green",
                 "BWA3_G36A3_AG40_tan",
                 };
-            vest = "BWA3_Vest_Grenadier_Fleck";
+            vest = "BWA3_Vest_Grenadier_tropen";
             addItemsToVest[] += {
-                LIST_8("1Rnd_HE_Grenade_shell"),
+                LIST_6("1Rnd_HE_Grenade_shell"),
             };
             addItemsToBackpack[] += {
-                LIST_12("1Rnd_HE_Grenade_shell"),
+                LIST_14("1Rnd_HE_Grenade_shell"),
                 LIST_5("1Rnd_SmokeRed_Grenade_shell"),
                 LIST_5("1Rnd_Smoke_Grenade_shell"),
             };
         };
 
         class B_soldier_exp_F: B_Soldier_GL_F {
+            addItemsToUniform[] += {
+                "ACE_DefusalKit",
+                "ACE_Clacker",
+            };
 
+            addItemsToBackpack[] += {
+                LIST_3("CUP_6Rnd_12Gauge_Pellets_No00_Buck"),
+                LIST_2("DemoCharge_Remote_Mag"),
+            };
         };
 
         class B_soldier_LAT2_F: B_Soldier_F {
@@ -171,7 +178,7 @@ class Loadouts {
         };
 
         class B_soldier_AAT_F: B_Soldier_F {
-            backpack = "BWA3_PatrolPack_Fleck";
+            backpack = "BWA3_PatrolPack_tropen";
 
             addItemsToBackpack[] = {
                 LIST_2("BWA3_CarlGustav_HEAT"),
@@ -181,7 +188,7 @@ class Loadouts {
         };
 
         class B_Soldier_A_F: B_Soldier_F {
-            backpack = "BWA3_PatrolPack_Fleck";
+            backpack = "BWA3_PatrolPack_tropen";
 
             addItemsToBackpack[] = {
                 "ACE_SpareBarrel",
@@ -191,7 +198,12 @@ class Loadouts {
         };
 
         class B_soldier_UAV_F: B_Soldier_F {
+            backpack = "BWA3_PatrolPack_tropen";
 
+            addItemsToBackpack[] = {
+                LIST_10("ACE_UAVBattery"),
+                "ITC_Land_B_AR2i_Packed",
+            };
         };
 
         // These dont inherit from the basic rifleman
@@ -208,7 +220,7 @@ class Loadouts {
                 "BWA3_bipod_Harris_tan",
                 };
 
-            vest = "BWA3_Vest_Marksman_Fleck";
+            vest = "BWA3_Vest_MachineGunner_Tropen";
 
             addItemsToVest[] += {
                 LIST_7("BWA3_20Rnd_762x51_G28_AP"),
@@ -226,7 +238,7 @@ class Loadouts {
             primaryWeaponMagazine = "BWA3_200Rnd_556x45_Tracer";
 
 
-            vest = "BWA3_Vest_Marksman_Fleck";
+            vest = "BWA3_Vest_MachineGunner_Tropen";
 
             addItemsToVest[] += {
                 LIST_2("BWA3_200Rnd_556x45_Tracer"),
@@ -249,7 +261,7 @@ class Loadouts {
                 "BWA3_optic_ZO4x30i_sand",
             };
 
-            vest = "BWA3_Vest_Marksman_Fleck";
+            vest = "BWA3_Vest_Marksman_tropen";
             addItemsToVest[] += {
                 LIST_2("BWA3_120Rnd_762x51_Tracer_soft"),
             };
@@ -267,7 +279,7 @@ class Loadouts {
         };
 
         class B_soldier_AAA_F: B_Soldier_F {
-            backpack = "BWA3_PatrolPack_Fleck";
+            backpack = "BWA3_PatrolPack_tropen";
             addItemsToBackpack[] = {
                 LIST_3("BWA3_Fliegerfaust_Mag"),
             };
@@ -275,7 +287,7 @@ class Loadouts {
 
         //Unterstützung
         class B_engineer_F: B_Soldier_F {
-            backpack = "BWA3_PatrolPack_Fleck";
+            backpack = "BWA3_PatrolPack_tropen";
 
             goggles[] = {
                 "CUP_G_ESS_KHK_Scarf_Face_Tan",
@@ -301,7 +313,7 @@ class Loadouts {
         };
 
         class B_soldier_mine_F: B_Soldier_F {
-            backpack = "BWA3_PatrolPack_Fleck";
+            backpack = "BWA3_PatrolPack_tropen";
 
             class Rank {
 
@@ -318,10 +330,10 @@ class Loadouts {
 
         //Fahrzeugbesatzung
         class B_crew_F {
-            uniform = "BWA3_Uniform_Crew_Fleck";
-            vest = "BWA3_Vest_Fleck";
+            uniform = "BWA3_Uniform_Crew_tropen";
+            vest = "BWA3_Vest_tropen";
             backpack = "";
-            headgear = "BWA3_CrewmanKSK_Fleck_Headset";
+            headgear = "BWA3_CrewmanKSK_tropen_Headset";
 
             primaryWeapon = "BWA3_MP7";
             primaryWeaponMagazine = "BWA3_20Rnd_46x30_MP7";
@@ -387,8 +399,8 @@ class Loadouts {
 
         //Pilots
         class B_helicrew_F {
-            uniform = "BWA3_Uniform2_Fleck";
-            vest = "BWA3_Vest_Fleck";
+            uniform = "BWA3_Uniform2_tropen";
+            vest = "BWA3_Vest_tropen";
             headgear[] = {
                 "BWA3_CrewHelmet_NH90",
                 "ttt_Helmet_Buzzard",
@@ -433,8 +445,29 @@ class Loadouts {
         };
 
         //Führung
-        class B_Soldier_TL_F {
-            vest = "BWA3_Vest_Leader_Fleck";
+        class B_Soldier_TL_F: B_Soldier_GL_F {
+            vest = "BWA3_Vest_Leader_tropen";
+
+            addItemsToUniform[] += {
+                "ACE_MicroDAGR",
+            };
+            addItemsToVest[] += {
+                "ItemAndroid",
+                "ACRE_PRC152",
+            };
+            addItemsToBackpack[] += {
+                "ACE_SprayPaintRed",
+                "ACE_SprayPaintGreen",
+                "ACE_SprayPaintBlack",
+                "ACE_flags_blue",
+            };
+
+            binoculars = "ACE_Vector";
+
+        };
+
+        class B_Soldier_SL_F {
+            vest = "BWA3_Vest_Leader_tropen";
 
             addItemsToUniform[] += {
                 "ACE_MicroDAGR",
@@ -442,21 +475,25 @@ class Loadouts {
             addItemsToVest[] += {
                 "ItemAndroid",
                 LIST_8("BWA3_30Rnd_556x45_G36_Tracer"),
+                "ACRE_PRC152",
             };
             addItemsToBackpack[] += {
                 "ACE_SprayPaintRed",
                 "ACE_SprayPaintGreen",
                 "ACE_SprayPaintBlack",
+                "ace_flags_red",
             };
-
             binoculars = "ACE_Vector";
 
-        };
-
-        class B_Soldier_SL_F: B_Soldier_TL_F {
-
-            addItemsToBackpack[] += {
-                "ace_flags_red",
+            class Rank {
+                class PRIVATE {};
+                class CORPORAL: PRIVATE {};
+                class SERGEANT: CORPORAL {};
+                class LIEUTENANT: SERGEANT{
+                    addItemsToBackpack[] += {
+                        "ACRE_PRC117F",
+                    };
+                };
             };
         };
 
@@ -470,15 +507,17 @@ class Loadouts {
 
         //Medics
         class B_medic_F {
-            vest = "BWA3_Vest_Medic_Fleck";
+            vest = "BWA3_Vest_Medic_tropen";
 
             class Rank {
 
                 class PRIVATE {
-                    backpack = "BWA3_AssaultPack_Fleck_Medic";
+                    backpack = "BWA3_AssaultPack_tropen_Medic";
                     addItemsToVest[] += {
                         "ACE_SurgicalKit",
                         LIST_8("BWA3_30Rnd_556x45_G36_AP"),
+                        "kat_Pulseoximeter",
+                        "ACE_SpraypaintBlue",
                     };
                     addItemsToBackpack[] = {
                         //M
@@ -486,11 +525,11 @@ class Loadouts {
                         LIST_20("ACE_ElasticBandage"),
                         LIST_12("ACE_tourniquet"),
                         //A
-                        LIST_9("kat_chestSeal"),
                         LIST_9("kat_larynx"),
-                        LIST_9("kat_ncdKit"),
                         //R
                         "kat_pocketBVM",
+                        LIST_9("kat_ncdKit"),
+                        LIST_9("kat_chestSeal"),
                         //C
                         LIST_4("ACE_salineIV_250"),
                         LIST_4("ACE_salineIV_500"),
@@ -503,6 +542,8 @@ class Loadouts {
                         LIST_4("kat_Painkiller"),
                         LIST_9("ACE_morphine"),
                         LIST_20("ACE_Suture"),
+                        //Admin
+                        "ACE_flags_blue",
                     };
                 };
 
@@ -521,7 +562,7 @@ class Loadouts {
                         "ACE_spraypaintblue",
                     };
 
-                    backpack = "BWA3_TacticalPack_Fleck_Medic";
+                    backpack = "BWA3_TacticalPack_tropen_Medic";
 
                     addItemsToBackpack[] += {
                         //M
@@ -548,7 +589,7 @@ class Loadouts {
                 };
 
                 class SERGEANT: CORPORAL {
-                    backpack = "BWA3_Kitbag_Fleck_Medic";
+                    backpack = "BWA3_Kitbag_tropen_Medic";
 
                     addItemsToBackpack[] = {
                         //M
@@ -616,9 +657,9 @@ class Loadouts {
 
         //SOF
         class B_recon_F {
-            uniform = "BWA3_Uniform_Crye_G3_Fleck";
-            vest = "BWA3_Vest_JPC_Rifleman_Fleck";
-            headgear = "BWA3_Booniehat_Fleck";
+            uniform = "BWA3_Uniform_Crye_G3_tropen";
+            vest = "BWA3_Vest_JPC_Rifleman_tropen";
+            headgear = "BWA3_Booniehat_tropen";
 
             primaryWeapon[] = {
                 "BWA3_G38K",
@@ -652,7 +693,7 @@ class Loadouts {
                 "ItemAndroid",
             };
             addItemsToBackpack[] += {
-                "BWA3_OpsCore_FastMT_SOF_Fleck",
+                "BWA3_OpsCore_FastMT_SOF_tropen",
             };
             binoculars = "ACE_Vector";
 
@@ -663,7 +704,7 @@ class Loadouts {
         };
 
         class B_recon_medic_F: B_recon_F {
-            backpack = "BWA3_Kitbag_Fleck_Medic";
+            backpack = "BWA3_Kitbag_tropen_Medic";
             primaryWeapon[] = {"BWA3_G38C","BWA3_G38C_tan"};
             //ToDo
             addItemsToVest[] += {
@@ -699,7 +740,7 @@ class Loadouts {
         };
 
         class B_recon_exp_F: B_recon_F {
-            backpack = "BWA3_PatrolPack_Fleck";
+            backpack = "BWA3_PatrolPack_tropen";
             goggles[] = {
                 "CUP_G_ESS_BLK_Scarf_Face_Blk",
                 "CUP_G_ESS_BLK_Scarf_Blk",
@@ -712,7 +753,7 @@ class Loadouts {
         };
 
         class B_recon_M_F {
-            headgear = "BWA3_Booniehat_Fleck";
+            headgear = "BWA3_Booniehat_tropen";
             primaryWeapon = "BWA3_G28";
             primaryWeaponMagazine = "BWA3_20Rnd_762x51_G28_AP";
             primaryWeaponOptics[] = {
@@ -736,12 +777,12 @@ class Loadouts {
             };
             addItemsToBackpack[] = {
                 LIST_8("BWA3_20Rnd_762x51_G28_LR"),
-                "BWA3_OpsCore_FastMT_SOF_Fleck",
+                "BWA3_OpsCore_FastMT_SOF_tropen",
             };
         };
 
         class B_recon_JTAC_F: B_recon_F {
-            vest = "BWA3_Vest_JPC_Radioman_Fleck";
+            vest = "BWA3_Vest_JPC_Radioman_tropen";
             backpack = "CUP_B_Kombat_Radio_Olive";
 
             addItemsToBackpack[] = {
@@ -757,7 +798,7 @@ class Loadouts {
                 "BWA3_G38K_AG40",
                 "BWA3_G38K_AG40_tan",
             };
-            vest = "BWA3_Vest_JPC_Leader_Fleck";
+            vest = "BWA3_Vest_JPC_Leader_tropen";
 
             addItemsToBackpack[] += {
                 LIST_15("1Rnd_HE_Grenade_shell"),
