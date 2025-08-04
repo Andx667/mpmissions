@@ -167,6 +167,19 @@ class Loadouts {
         };
 
         class TTT_B_RadioOperator_F: B_Soldier_F {
+            backpack = "ttt_backpack_radio_coyote";
+
+            addItemsToUniform[] += {
+                "ACE_key_west",
+            };
+            addItemsToVest[] += {
+                "ItemAndroid",
+                "ACRE_PRC152",
+            };
+            addItemsToBackpack[] += {
+                "ACRE_PRC117F",
+                LIST_10("BWA3_DM32_Purple"),
+            };
 
         };
         class B_soldier_AT_F: B_Soldier_F {
@@ -204,6 +217,7 @@ class Loadouts {
                 LIST_10("ACE_UAVBattery"),
                 "ITC_Land_B_AR2i_Packed",
             };
+            gps = "B_UavTerminal";
         };
 
         // These dont inherit from the basic rifleman
@@ -213,6 +227,7 @@ class Loadouts {
                 "BWA3_optic_PMII_DMR_MicroT1_front",
                 "BWA3_optic_PMII_DMR_MicroT1_rear",
                 };
+            primaryWeaponMagazine = "BWA3_20Rnd_762x51_G28_AP";
 
             primaryWeaponUnderbarrel[] = {
                 "BWA3_bipod_Harris",
@@ -348,6 +363,8 @@ class Loadouts {
                 "",
             };
 
+            addItemsToUniform[] += {"ACE_key_west"};
+
             class Rank {
                 class PRIVATE {
                     addItemsToVest[] += {
@@ -422,12 +439,17 @@ class Loadouts {
         };
 
         class B_Helipilot_F: B_helicrew_F{
-            uniform = "BWA3_Uniform_Helipilot";
+            //uniform = "BWA3_Uniform_Helipilot";
+            uniform = "U_B_HeliPilotCoveralls";
             headgear[] += {
-                "BWA3_TopOwl_nvg",
+                //"BWA3_TopOwl_nvg",
+            };
+            addItemsToUniform[] += {
+                "ACE_key_west",
             };
             addItemsToBackpack[] += {
                 "ACRE_PRC117F",
+
             };
         };
 
@@ -450,20 +472,20 @@ class Loadouts {
 
             addItemsToUniform[] += {
                 "ACE_MicroDAGR",
+                "ACE_key_west",
             };
             addItemsToVest[] += {
                 "ItemAndroid",
-                "ACRE_PRC152",
             };
             addItemsToBackpack[] += {
                 "ACE_SprayPaintRed",
                 "ACE_SprayPaintGreen",
                 "ACE_SprayPaintBlack",
                 "ACE_flags_blue",
+                "ACRE_PRC152",
             };
 
             binoculars = "ACE_Vector";
-
         };
 
         class B_Soldier_SL_F {
@@ -471,6 +493,7 @@ class Loadouts {
 
             addItemsToUniform[] += {
                 "ACE_MicroDAGR",
+                "ACE_key_west",
             };
             addItemsToVest[] += {
                 "ItemAndroid",
@@ -514,7 +537,7 @@ class Loadouts {
                 class PRIVATE {
                     backpack = "BWA3_AssaultPack_tropen_Medic";
                     addItemsToVest[] += {
-                        "ACE_SurgicalKit",
+                        "ACE_surgicalKit",
                         LIST_8("BWA3_30Rnd_556x45_G36_AP"),
                         "kat_Pulseoximeter",
                         "ACE_SpraypaintBlue",

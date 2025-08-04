@@ -9,7 +9,7 @@ setDate [2020, 6, 25, 11, 15]; //Datum ändern
 
 {
     if (side _x != west) then {
-        [_x] call andx_fnc_setAISkill;
+        [_x] call ttt_common_fnc_setAISkill;
 
         _x setBehaviour "SAFE";
         _x setCombatMode "WHITE";
@@ -19,6 +19,10 @@ setDate [2020, 6, 25, 11, 15]; //Datum ändern
         _x enableAI "AUTOCOMBAT";
     };
 } forEach allUnits;
+
+{
+    _x setMaxLoad 10000;
+} forEach [dingo_01, dingo_02, dingo_03, dingo_04, dingo_05];
 
 //Fhz befüllen
 [
