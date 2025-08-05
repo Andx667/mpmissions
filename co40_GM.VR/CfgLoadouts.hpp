@@ -33,26 +33,19 @@
 
 class Loadouts {
     baseDelay = 1;
-    perPlayerDelay = 1;
+    perPlayerDelay = 0;
     handleRadios = 1;
     resetLoadout = 1;
     randomizationMode = 1;
     customGear = 300;
     customGearAllowedCategories[] = {
-        "uniform",
-        "vest",
-        "primaryWeapon",
-        "primaryWeaponOptics",
-        "primaryWeaponUnderbarrel",
-        "goggles",
-        "headgear"
     };
 
     class Side {
         class Blufor {
             uniform[] = {
                 "gm_ge_uniform_soldier_90_flk",
-                "gm_ge_uniform_soldier_rolled_90_flk",
+                //"gm_ge_uniform_soldier_rolled_90_flk",
                 //"gm_ge_uniform_soldier_tshirt_90_flk",
             };
             vest[] = {
@@ -77,6 +70,7 @@ class Loadouts {
                 LIST_2("gm_handgrenade_frag_dm51a1"),
                 LIST_2("gm_smokeshell_wht_dm25"),
                 "gm_ge_facewear_m65",
+                "ACE_EntrenchingTool",
             };
             addItemsToBackpack[] = {};
 
@@ -101,7 +95,9 @@ class Loadouts {
                 //"gm_headgear_foliage_summer_grass_01",
                 //"gm_headgear_foliage_summer_grass_02",
                 //"gm_headgear_foliage_summer_grass_03",
-                //"gm_headgear_foliage_summer_grass_04"
+                //"gm_headgear_foliage_summer_grass_04",
+                //"gm_xx_facewear_scarf_01_flk", //Passt nicht gut zu Splitterschutzweste
+                ""
                 };
             nvgoggles = "";
 
@@ -119,7 +115,6 @@ class Loadouts {
         class B_Soldier_F {
             addItemsToVest[] += {
                 LIST_7("gm_30Rnd_556x45mm_B_DM11_g36_blk"),
-                "ACE_EntrenchingTool",
             };
         };
 
@@ -137,6 +132,11 @@ class Loadouts {
         class B_soldier_exp_F: B_Soldier_F {
             backpack = "gm_ge_army_backpack_90_flk";
             vest = "gm_ge_vest_armor_90_demolition_flk";
+
+            goggles[] += {
+                "gm_ge_facewear_dustglasses",
+                "gm_ge_facewear_dustglasses_relaxed",
+            };
 
             addItemsToVest[] += {
                 "ACE_DefusalKit",
@@ -165,7 +165,7 @@ class Loadouts {
         };
 
         class B_soldier_AAT_F: B_Soldier_F {
-            //backpack = "gm_milan_launcher_weaponBag";
+            backpack = "gm_ge_army_backpack_90_flk";
         };
 
         class B_soldier_AAR_F: B_Soldier_F {
@@ -173,7 +173,6 @@ class Loadouts {
 
             addItemsToBackpack[] += {
                 "ACE_Sparebarrel",
-                "ACE_EntrenchingTool",
                 LIST_5("gm_120Rnd_762x51mm_B_T_DM21A2_mg3_grn"),
             };
         };
@@ -323,8 +322,10 @@ class Loadouts {
 
         //Führung
         class B_Soldier_TL_F {
+            primaryWeaponMagazine = "gm_30Rnd_556x45mm_B_T_DM21_g36_blk";
             addItemsToVest[] += {
                 "ACE_Flags_red",
+                LIST_7("gm_30Rnd_556x45mm_B_T_DM21_g36_blk"),
             };
         };
 
@@ -333,11 +334,13 @@ class Loadouts {
 
            //secondaryWeapon = "gm_p2a1_blk";
 
+           addItemsToUniform[] += {
+                "mts_whistle_FOX40",
+           };
+
             addItemsToVest[] += {
                 "ACRE_SEM52SL",
                 "gm_smokeshell_grn_dm21",
-                LIST_7("gm_30Rnd_556x45mm_B_T_DM21_g36_blk"),
-                "mts_whistle_FOX40",
             };
         };
 
@@ -350,26 +353,57 @@ class Loadouts {
         };
 
         //Medics
-        class B_medic_F {
+        class B_medic_F: B_Soldier_F {
 
             class Rank {
 
                 class PRIVATE {
-                    vest = "gm_ge_vest_armor_90_crew_flk";
+                    //vest = "gm_ge_vest_armor_90_crew_flk";
                     //backpack = "gm_ge_backpack_satchel_80_san";
-
-                    addItemsToVest[] += {
-
-                    };
                 };
 
                 class CORPORAL: PRIVATE {
                     vest = "gm_ge_vest_armor_90_medic_flk";
                     backpack = "gm_ge_army_backpack_90_flk";
+
+                    addItemsToBackpack[] = {};
                 };
 
                 class SERGEANT: CORPORAL {
-
+                    addItemsToVest[] += {
+                        "ACE_surgicalKit",
+                        "kat_basicDiagnostic",
+                    };
+                    addItemsToBackpack[] = {
+                        //M
+                        LIST_45("ACE_packingBandage"),
+                        LIST_45("ACE_elasticBandage"),
+                        LIST_10("ACE_Tourniquet"),
+                        //A
+                        LIST_6("kat_aatKit"),
+                        "kat_suction",
+                        LIST_6("kat_chestSeal"),
+                        LIST_6("kat_larynx"),
+                        //R
+                        "kat_BVM",
+                        "kat_oxygenTank_150",
+                        //C
+                        LIST_12("ACE_SalineIV"),
+                        LIST_6("ACE_SalineIV_500"),
+                        LIST_8("ACE_SalineIV_250"),
+                        LIST_8("kat_IV_16"),
+                        LIST_12("kat_epinephrineIV"),
+                        //H
+                        LIST_5("kat_eaca"),
+                        LIST_10("kat_txa"),
+                        LIST_8("kat_fentanyl"),
+                        LIST_8("kat_ketamine"),
+                        //Admin
+                        "ACE_Bodybag",
+                        LIST_45("ACE_Suture"),
+                        "ACE_SpraypaintBlue",
+                        "ACE_Flags_blue",
+                    };
                 };
 
                 class LIEUTENANT: SERGEANT {

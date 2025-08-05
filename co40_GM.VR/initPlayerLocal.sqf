@@ -11,11 +11,8 @@
     * 0: Player <OBJECT>
     * 1: Did JIP <BOOL>
  */
+params ["_player"];
 
-// Hier wird das Briefing automatisch eingefügt und ausgeführt
-#include "briefing.sqf"
-
-// Waffe sichern
 // Gegenstück zu [QGVAR(loadoutApplied), [_loadoutTarget, _unitLoadout], _loadoutTarget] call CBA_fnc_targetEvent;
 [
     "grad_loadout_loadoutApplied",
@@ -29,8 +26,24 @@
             //Args
             [],
             //Delay
-            2
+            3
         ] call CBA_fnc_waitAndExecute;
+
+        private _groupID = groupID group _unit;
+        switch (_groupID) do {
+            case "Alpha": {
+                [_unit, "TTT_yellow_emblem"] call BIS_fnc_setUnitInsignia;
+            };
+            case "Alpha-1": {
+                [_unit, "TTT_green_emblem"] call BIS_fnc_setUnitInsignia;
+            };
+            case "Alpha-2": {
+                [_unit, "TTT_black_emblem"] call BIS_fnc_setUnitInsignia;
+            };
+            case "Alpha-3": {
+                [_unit, "TTT_red_emblem"] call BIS_fnc_setUnitInsignia;
+            };
+        };
 
         switch (typeOf _unit) do {
             case "B_Soldier_GL_F": {
@@ -46,6 +59,27 @@
                 ]
                 ] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;
             };
+            case "B_soldier_exp_F": {
+                [_unit, "TTT_blue_emblem"] call BIS_fnc_setUnitInsignia;
+            };
+            case "B_medic_F": {
+                if (rank _unit isNotEqualTo "PRIVATE") then {
+                    [_unit, "TTT_white_emblem"] call BIS_fnc_setUnitInsignia;
+                };
+            };
         };
     }
 ] call CBA_fnc_addEventHandler;
+
+_player addMPEventHandler ["MPRespawn", {
+    params ["_unit", "_corpse"];
+    private _insignia = [_corpse] call BIS_fnc_getUnitInsignia;
+    [_unit, _insignia] spawn {
+        params ["_unit", "_insignia"];
+        sleep 1;
+        isNil {
+            _unit setVariable ["BIS_fnc_setUnitInsignia_class", nil]; // you can also do [_unit, ""] call BIS_fnc_setUnitInsignia, but this way is faster (plus no network traffic)
+            [_unit, _insignia] call BIS_fnc_setUnitInsignia;
+        };
+    };
+}];
