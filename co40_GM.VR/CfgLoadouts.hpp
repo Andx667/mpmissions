@@ -146,6 +146,8 @@ class Loadouts {
                 "ACE_wirecutter",
                 "mts_cutter_folding_saw",
                 LIST_6("gm_explosive_petn_charge"),
+                LIST_6("tsp_breach_package_mag"),
+                LIST_6("tsp_breach_block_mag"),
             };
         };
 
@@ -358,8 +360,38 @@ class Loadouts {
             class Rank {
 
                 class PRIVATE {
-                    //vest = "gm_ge_vest_armor_90_crew_flk";
-                    //backpack = "gm_ge_backpack_satchel_80_san";
+                    backpack = "gm_ge_backpack_satchel_80_san";
+
+                    addItemsToVest[] += {
+                        "kat_basicDiagnostic",
+                        "ACE_SurgicalKit"
+                    };
+
+                    addItemsToBackpack[] = {
+                        //M
+                        LIST_30("ACE_elasticBandage"),
+                        LIST_30("ACE_packingBandage"),
+                        LIST_12("ACE_tourniquet"),
+                        //A
+                        LIST_8("kat_larynx"),
+                        LIST_8("kat_chestSeal"),
+                        //R
+                        "kat_pocketBVM",
+                        LIST_6("kat_ncdKit"),
+                        //C
+                        LIST_4("ACE_salineIV_250"),
+                        LIST_4("ACE_salineIV_500"),
+                        LIST_12("kat_IV_16"),
+                        // H
+                        LIST_30("ACE_suture"),
+                        LIST_8("ACE_morphine"),
+                        LIST_8("kat_naloxone"),
+                        LIST_6("kat_nalbuphine"),
+                        LIST_4("kat_phenylephrineAuto"),
+                        LIST_4("ACE_adenosine"),
+                        LIST_6("kat_Penthrox"),
+                        LIST_4("kat_Painkiller"),
+                    };
                 };
 
                 class CORPORAL: PRIVATE {

@@ -46,6 +46,7 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
     [truck_01, truck_02, truck_03, truck_04],
     [
         ["gm_mine_at_dm21", 12], //AT Mine
+        ["gm_g36a1_blk", 1],
 
         ["gm_1Rnd_60mm_heat_dm22_pzf3", 6], //HEAT
         ["gm_1Rnd_60mm_heat_dm32_pzf3", 2], //Bunkerfaust
@@ -174,33 +175,7 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
 {
     {
         switch (typeof _x) do {
-            case "gm_ge_backpack_satchel_80_san": {
-                _x addItemCargoGlobal ["kat_basicDiagnostic", 1];
-                //M
-                _x addItemCargoGlobal ["ACE_elasticBandage", 30];
-                _x addItemCargoGlobal ["ACE_packingBandage", 30];
-                _x addItemCargoGlobal ["ACE_tourniquet", 12];
-                //A
-                _x addItemCargoGlobal ["kat_larynx", 8];
-                _x addItemCargoGlobal ["kat_chestSeal", 8];
-                //R
-                _x addItemCargoGlobal ["kat_pocketBVM", 1];
-                _x addItemCargoGlobal ["kat_ncdKit", 6];
-                //C
-                _x addItemCargoGlobal ["ACE_salineIV_250", 4];
-                _x addItemCargoGlobal ["ACE_salineIV_500", 4];
-                _x addItemCargoGlobal ["kat_IV_16", 12];
-                //H
-                _x addItemCargoGlobal ["ACE_suture", 30];
-                _x addItemCargoGlobal ["ACE_SurgicalKit", 1];
-                _x addItemCargoGlobal ["ACE_morphine", 8];
-                _x addItemCargoGlobal ["kat_naloxone", 8];
-                _x addItemCargoGlobal ["kat_nalbuphine", 6];
-                _x addItemCargoGlobal ["kat_phenylephrineAuto", 4];
-                _x addItemCargoGlobal ["ACE_adenosine", 4];
-                _x addItemCargoGlobal ["kat_Penthrox", 6];
-                _x addItemCargoGlobal ["kat_Painkiller", 4];
-            };
+
             case "B_AssaultPack_blk": {
                 _x addItemCargoGlobal ["gm_repairkit_01", 1];
             };
