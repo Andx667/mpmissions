@@ -50,6 +50,7 @@ setDate [2020, 6, 25, 11, 15]; //Datum ändern
         ["BWA3_DM32_Green", 10],
         ["BWA3_DM25", 20],
         ["BWA3_DM51A1", 20],
+        ["ACE_M14", 4],
 
         //Werfer
         ["BWA3_PzF3_Tandem_Loaded", 1],

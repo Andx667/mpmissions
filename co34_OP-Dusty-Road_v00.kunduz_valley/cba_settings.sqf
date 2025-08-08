@@ -13,7 +13,6 @@ force ace_medical_treatment_locationIV = 0; //überall
 force force ace_medical_treatment_locationMorphine = 0; //überall
 force ace_medical_treatment_locationPAK = 3; //Fhz oder Einrichtung
 force ace_medical_treatment_locationsBoostTraining = false;
-force force ace_medical_treatment_locationSplint = 0; //überall
 force ace_medical_treatment_locationSurgicalKit = 0; //überall
 
 //ACE Cookoff

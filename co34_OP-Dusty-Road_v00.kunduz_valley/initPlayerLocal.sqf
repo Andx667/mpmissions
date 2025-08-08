@@ -55,16 +55,20 @@
                         ""                                 //Zweibein oder ähnliches
                     ]
                 ] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;
-                [_unit, "TTT_blue_emblem"] call BIS_fnc_setUnitInsignia;
+                [_unit, "TTT_black_emblem"] call BIS_fnc_setUnitInsignia;
+                //[_unit, "TTT_blue_emblem"] call BIS_fnc_setUnitInsignia;
             };
             case "B_Helipilot_F";
             case "B_medic_F": {
                 if ((RANK _unit) == "PRIVATE") then {
-                    [_unit, "TTT_brown_emblem"] call BIS_fnc_setUnitInsignia;
-                }
-                else {
+                    //[_unit, "TTT_brown_emblem"] call BIS_fnc_setUnitInsignia;
+                    [_unit, "TTT_black_emblem"] call BIS_fnc_setUnitInsignia;
+                } else {
                     [_unit, "TTT_white_emblem"] call BIS_fnc_setUnitInsignia;
                 };
+            };
+            default {
+                [_unit, "TTT_black_emblem"] call BIS_fnc_setUnitInsignia;
             };
         };
     }

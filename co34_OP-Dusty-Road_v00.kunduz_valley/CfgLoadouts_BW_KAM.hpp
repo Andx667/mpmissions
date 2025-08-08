@@ -113,6 +113,7 @@ class Loadouts {
                 "BWA3_G_Combat_black",
                 "BWA3_G_Combat_clear",
                 "BWA3_G_Combat_orange",
+                ""
                 };
             nvgoggles = "";
 
@@ -159,6 +160,7 @@ class Loadouts {
             addItemsToBackpack[] += {
                 LIST_3("CUP_6Rnd_12Gauge_Pellets_No00_Buck"),
                 LIST_2("DemoCharge_Remote_Mag"),
+                LSIT_2("ACE_M14"),
             };
         };
 
@@ -179,6 +181,8 @@ class Loadouts {
             addItemsToBackpack[] += {
                 "ACRE_PRC117F",
                 LIST_10("BWA3_DM32_Purple"),
+                "ace_flags_blue",
+                "ACE_SprayPaintBlue",
             };
 
         };
@@ -432,7 +436,7 @@ class Loadouts {
             primaryWeaponPointer = "";
 
             addItemsToVest[] = {
-                "ACRE_SEM52SL",
+                //"ACRE_SEM52SL",
             };
             goggles = "";
 
@@ -446,6 +450,7 @@ class Loadouts {
             };
             addItemsToUniform[] += {
                 "ACE_key_west",
+                "ACE_MicroDAGR",
             };
             addItemsToBackpack[] += {
                 "ACRE_PRC117F",
