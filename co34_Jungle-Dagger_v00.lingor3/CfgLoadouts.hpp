@@ -770,10 +770,10 @@ class Loadouts {
                         //R
                         "kat_pocketBVM",
                         //C
-                        LIST_4("ACE_salineIV_250"),
-                        LIST_4("ACE_salineIV_500"),
+                        LIST_6("ACE_salineIV_250"),
+                        LIST_6("ACE_salineIV_500"),
                         LIST_16("kat_IV_16"),
-                        LIST_4("kat_IO_FAST"),
+                        "kat_AED",
                         //H
                         LIST_12("kat_Penthrox"),
                         LIST_12("kat_naloxone"),
