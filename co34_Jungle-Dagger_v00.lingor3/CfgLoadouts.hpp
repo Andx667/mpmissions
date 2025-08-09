@@ -34,7 +34,7 @@
 
 class Loadouts {
     baseDelay = 1;
-    perPlayerDelay = 1;
+    perPlayerDelay = 0;
     handleRadios = 1;
     resetLoadout = 1;
     randomizationMode = 1;
@@ -118,13 +118,12 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                LIST_15("ACE_quikclot"),
+                LIST_15("ACE_elasticBandage"),
                 LIST_15("ACE_packingBandage"),
                 LIST_4("ACE_Tourniquet"),
                 "ACRE_PRC343",
                 LIST_2("kat_chestSeal"),
-                "kat_guedel",
-                "kat_Painkiller",
+                LIST_2("kat_Painkiller"),
             };
             addItemsToVest[] = {
                 LIST_2("UK3CB_BAF_SmokeShell"),
@@ -754,7 +753,7 @@ class Loadouts {
                     addItemsToVest[] += {
                         //Diagnostic
                         "kat_basicDiagnostic",
-                        LIST_2("kat_Pulseoximeter"),
+                        LIST_3("kat_Pulseoximeter"),
                         //Being a Soldier things
                         "ACRE_PRC148",
                         LIST_8("UK3CB_BAF_556_30Rnd"),

@@ -23,7 +23,7 @@ respawnDelay = 5;
 respawnDialog = 0;
 
 // - Misc ---------------------------------------------------------------------
-disabledAI = 1;
+disabledAI = 0;
 cba_settings_hasSettingsFile = 1;
 
 // - Corpsemanager ------------------------------------------------------------
@@ -36,16 +36,10 @@ disposalCheckPeriod = 60; // seconds. Default: 10
 // - CfgFunctions -------------------------------------------------------------
 class CfgFunctions {
     #include "modules\grad-loadout\CfgFunctions.hpp"
-
-    class andx {
-        class AI {
-            class setAISkill {};
-        };
-    };
 };
 
 // - Loadouts ----------------------------------------------------------------
-#include "CfgLoadouts_BAF_KAM.hpp"
+#include "CfgLoadouts.hpp"
 
 // - Streamator -------------------------------------------------------------
 class CLib {

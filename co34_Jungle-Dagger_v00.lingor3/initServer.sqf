@@ -9,7 +9,7 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
 
 {
     if (side _x != west) then {
-        [_x] call andx_fnc_setAISkill;
+        [_x] call ttt_common_fnc_setAISkill;
 
         _x setBehaviour "SAFE";
         _x setCombatMode "WHITE";

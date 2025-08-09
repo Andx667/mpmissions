@@ -12,65 +12,82 @@
     * 1: Did JIP <BOOL>
  */
 
-// Hier wird das Briefing automatisch eingefügt und ausgeführt
-#include "briefing.sqf"
-
 // Waffe sichern
-// Gegenstück zu [QGVAR(loadoutApplied), [_loadoutTarget, _unitLoadout], _loadoutTarget] call CBA_fnc_targetEvent;
+// Gegenstück zu [QGVAR(loadoutApplied), [_loadoutTarget, _targetLoadout], _loadoutTarget] call CBA_fnc_targetEvent;
 private _id = [
     "grad_loadout_loadoutApplied",
     {
-        params ["_unit", "_loadout"];
+        params ["_unit", ""];
 
         [
             {//Function
-                [ACE_Player, currentWeapon ACE_Player, true] call ace_safemode_fnc_setWeaponSafety;
+                params ["_unit"];
+                [_unit, currentWeapon _unit, true] call ace_safemode_fnc_setWeaponSafety;
 
-                private _place = -1;
-                    {
-                        if(isPlayer _x && local _x) then {
-                            _place = _forEachIndex;
-                            break;
-                        };
-                    } forEach units player;
+                private _groupID = groupID group _unit;
+                switch (_groupID) do {
+                    case "Bulldog": {
+                        [_unit, "TTT_yellow_emblem"] call BIS_fnc_setUnitInsignia;
+                    };
+                    case "Bulldog-1": {
+                        [_unit, "TTT_black_emblem"] call BIS_fnc_setUnitInsignia;
+                    };
+                    case "Bulldog-2": {
+                        [_unit, "TTT_red_emblem"] call BIS_fnc_setUnitInsignia;
+                    };
+                    case "Bulldog-3": {
+                        [_unit, "TTT_violet_emblem"] call BIS_fnc_setUnitInsignia;
+                    };
+                    case "Venom": {
+                        [_unit, "TTT_white_emblem"] call BIS_fnc_setUnitInsignia;
+                    };
+                    case "Guardian": {
+                        [_unit, "TTT_white_emblem"] call BIS_fnc_setUnitInsignia;
+                    };
+                };
+
+                switch (typeOf _unit) do {
+                    case "B_soldier_exp_F": {
+                        [
+                            [
+                        "UK3CB_BAF_L128A1",                 //Classname der zweiten Waffe
+                        "",                                 //Schalldämpfer oder ähnliches
+                        "",                                 //Laserpointer / Waffenlicht
+                            "",                             //Optik
+                            ["UK3CB_BAF_12G_Pellets", 8],   //Magazin mit Anzahl Kugeln
+                            [],                             //Zweites Magazin (z.B. UGL)
+                            ""                              //Zweibein oder ähnliches
+                            ]
+                        ] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;
+
+                        private _backpack = unitBackpack _unit;
+                        _backpack setObjectTextureGlobal [1, ""];
+                    };
+                    case "B_helicrew_F";
+                    case "B_helipilot_F": {
+                        [_unit] call ace_weaponselect_fnc_putWeaponAway;
+                    };
+                };
             },
             //Args
-            [_unit,_loadout],
+            [_unit],
             //Delay
             3
         ] call CBA_fnc_waitAndExecute;
-
-        if (typeOf ACE_player == "B_soldier_exp_F") then {
-            [
-                [
-                "UK3CB_BAF_L128A1",                   //Classname der zweiten Waffe
-                "",                               //Schalldämpfer oder ähnliches
-                "",                  //Laserpointer / Waffenlicht
-                "",                     //Optik
-                ["UK3CB_BAF_12G_Pellets", 8],   //Magazin mit Anzahl Kugeln
-                [],                               //Zweites Magazin (z.B. UGL)
-                ""                                 //Zweibein oder ähnliches
-                ]
-            ] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;
-        };
-
-        if (typeOf ACE_player == "B_helicrew_F" || typeOf ACE_player == "B_helipilot_F") then {
-            [ACE_player] call ace_weaponselect_fnc_putWeaponAway;
-        };
     }
 ] call CBA_fnc_addEventHandler;
 
 //Damit die Insignia auch bei Respawn gesetzt wird
 params ["_player"];
 _player addMPEventHandler ["MPRespawn", {
-	params ["_unit", "_corpse"];
-	private _insignia = [_corpse] call BIS_fnc_getUnitInsignia;
-	[_unit, _insignia] spawn {
-		params ["_unit", "_insignia"];
-		sleep 1;
-		isNil {
-			_unit setVariable ["BIS_fnc_setUnitInsignia_class", nil]; // you can also do [_unit, ""] call BIS_fnc_setUnitInsignia, but this way is faster (plus no network traffic)
-			[_unit, _insignia] call BIS_fnc_setUnitInsignia;
-		};
-	};
+    params ["_unit", "_corpse"];
+    private _insignia = [_corpse] call BIS_fnc_getUnitInsignia;
+    [_unit, _insignia] spawn {
+        params ["_unit", "_insignia"];
+        sleep 1;
+        isNil {
+            _unit setVariable ["BIS_fnc_setUnitInsignia_class", nil]; // you can also do [_unit, ""] call BIS_fnc_setUnitInsignia, but this way is faster (plus no network traffic)
+            [_unit, _insignia] call BIS_fnc_setUnitInsignia;
+        };
+    };
 }];
