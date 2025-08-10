@@ -40,7 +40,7 @@ class Loadouts {
     randomizationMode = 1;
     customGear = 300;
     customGearAllowedCategories[] = {
-        "uniform",
+        //"uniform",
         "vest",
         "backpack",
         "primaryWeapon",
@@ -53,7 +53,7 @@ class Loadouts {
     class Side {
         class Blufor {
             uniform[] = {
-                // //DDPM Desert
+                //DDPM Desert
                 // "UK3CB_BAF_U_CombatUniform_DDPM",
                 // "UK3CB_BAF_U_CombatUniform_DDPM_ShortSleeve",
                 // //DPM Jungle
@@ -232,6 +232,7 @@ class Loadouts {
             addItemsToVest[] += {
                 "ACE_Clacker",
                 "ACE_DefusalKit",
+                LIST_3("ACE_M14"),
             };
 
             addItemsToBackpack[] = {
@@ -244,7 +245,8 @@ class Loadouts {
                 LIST_15("ACE_quikClot"),
                 LIST_15("ACE_packingBandage"),
                 LIST_4("UK3CB_BAF_SmokeShell"),
-                LIST_4("rhs_mag_m67"),
+                LIST_2("rhs_mag_m67"),
+                LIST_2("ACE_M14"),
                 "UK3CB_BAF_SmokeShellGreen",
                 "UK3CB_BAF_762_200Rnd_T",
             };
@@ -640,6 +642,7 @@ class Loadouts {
             vest = "UK3CB_BAF_V_Pilot_A";
             backpack = "";
 
+            goggles[] = {""};
 
             headgear = "H_CrewHelmetHeli_I_E";
 
@@ -662,6 +665,10 @@ class Loadouts {
                 "ttt_Helmet_Buzzard",//same has ttt_Helmet_Hawk
                 "ttt_Helmet_Eagle",
                 "ttt_Helmet_Falcon",
+            };
+
+            addItemsToUniform[] += {
+                "ACE_MicroDagr",
             };
 
             addItemsToBackpack[] = {
@@ -754,6 +761,10 @@ class Loadouts {
                         //Diagnostic
                         "kat_basicDiagnostic",
                         LIST_3("kat_Pulseoximeter"),
+                        //Admin
+                        "ace_flags_blue",
+                        "ACE_SpraypaintBlue",
+                        LIST_3("UK3CB_BAF_SmokeShellBlue"),
                         //Being a Soldier things
                         "ACRE_PRC148",
                         LIST_8("UK3CB_BAF_556_30Rnd"),
@@ -761,7 +772,7 @@ class Loadouts {
                     addItemsToBackpack[] = {
                         //M
                         LIST_45("ACE_packingBandage"),
-                        LIST_45("ACE_quikclot"),
+                        LIST_45("ACE_elasticBandage"),
                         LIST_16("ACE_tourniquet"),
                         //A
                         LIST_12("kat_chestSeal"),
@@ -770,9 +781,9 @@ class Loadouts {
                         //R
                         "kat_pocketBVM",
                         //C
-                        LIST_6("ACE_salineIV_250"),
-                        LIST_6("ACE_salineIV_500"),
-                        LIST_16("kat_IV_16"),
+                        LIST_8("ACE_salineIV_250"),
+                        LIST_8("ACE_salineIV_500"),
+                        LIST_12("kat_IV_16"),
                         "kat_AED",
                         //H
                         LIST_12("kat_Penthrox"),
@@ -781,11 +792,6 @@ class Loadouts {
                         LIST_12("ACE_epinephrine"),
                         LIST_12("kat_Painkiller"),
                         LIST_8("ACE_morphine"),
-                        //Admin
-                        "ace_flags_blue",
-                        "ACE_SpraypaintBlue",
-                        LIST_3("UK3CB_BAF_SmokeShellBlue"),
-                        "ACE_Bodybag",
                     };
                 };
                 //PJ 1
@@ -843,11 +849,10 @@ class Loadouts {
                         //R
                         "kat_pocketBVM",
                         //C
-                        LIST_4("ACE_salineIV_250"),
-                        LIST_4("ACE_salineIV_500"),
+                        LIST_6("ACE_bloodIV_250"),
+                        LIST_6("ACE_bloodIV_500"),
                         LIST_16("kat_IV_16"),
-                        LIST_4("kat_IO_FAST"),
-                        LIST_10("ACE_bloodIV"),
+                        LIST_9("ACE_bloodIV"),
                         //H
                         LIST_12("kat_Penthrox"),
                         LIST_12("kat_naloxone"),
@@ -892,14 +897,16 @@ class Loadouts {
                         "kat_BVM",
                         LIST_2("kat_oxygenTank_150"),
                         //C
-                        LIST_10("ACE_Blood"),
-                        LIST_4("ACE_salineIV_250"),
-                        "kat_X_AED",
-                        LIST_8("kat_IV_16"),
-                        LIST_2("kat_IO_FAST"),
+                        LIST_2("ACE_salineIV_250"),
+                        LIST_2("ACE_salineIV_500"),
                         LIST_8("ACE_bloodIV"),
+                        LIST_2("ACE_bloodIV_250"),
+                        "kat_X_AED",
+                        LIST_6("kat_IV_16"),
+                        LIST_2("kat_IO_FAST"),
                         //H
                         LIST_10("kat_eaca"),
+                        LIST_20("kat_TXA"),
                         LIST_5("kat_amiodarone"),
                         LIST_5("kat_fentanyl"),
                         LIST_5("kat_ketamine"),
@@ -931,7 +938,6 @@ class Loadouts {
                         LIST_4("kat_larynx"),
                         //R
                         "kat_BVM",
-                        LIST_2("kat_oxygenTank_150"),
                         //C
                         LIST_2("ACE_salineIV_250"),
                         "kat_X_AED",
@@ -939,7 +945,8 @@ class Loadouts {
                         LIST_2("kat_IO_FAST"),
                         LIST_3("ACE_bloodIV"),
                         //H
-                        LIST_10("kat_eaca"),
+                        LIST_5("kat_eaca"),
+                        LIST_10("kat_TXA"),
                         LIST_5("kat_amiodarone"),
                         LIST_5("kat_fentanyl"),
                         LIST_5("kat_ketamine"),

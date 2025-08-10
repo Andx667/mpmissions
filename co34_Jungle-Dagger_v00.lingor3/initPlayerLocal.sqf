@@ -38,7 +38,7 @@ private _id = [
                     case "Bulldog-3": {
                         [_unit, "TTT_violet_emblem"] call BIS_fnc_setUnitInsignia;
                     };
-                    case "Venom": {
+                    case "Pavehawk": {
                         [_unit, "TTT_white_emblem"] call BIS_fnc_setUnitInsignia;
                     };
                     case "Guardian": {
@@ -50,9 +50,9 @@ private _id = [
                     case "B_soldier_exp_F": {
                         [
                             [
-                        "UK3CB_BAF_L128A1",                 //Classname der zweiten Waffe
-                        "",                                 //Schalldämpfer oder ähnliches
-                        "",                                 //Laserpointer / Waffenlicht
+                            "UK3CB_BAF_L128A1",             //Classname der zweiten Waffe
+                            "",                             //Schalldämpfer oder ähnliches
+                            "",                             //Laserpointer / Waffenlicht
                             "",                             //Optik
                             ["UK3CB_BAF_12G_Pellets", 8],   //Magazin mit Anzahl Kugeln
                             [],                             //Zweites Magazin (z.B. UGL)
@@ -61,10 +61,10 @@ private _id = [
                         ] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;
 
                         private _backpack = unitBackpack _unit;
-                        _backpack setObjectTextureGlobal [1, ""];
+                        _backpack setObjectTextureGlobal [1, ""]; //hide the Shotgun on the backpack
                     };
                     case "B_helicrew_F";
-                    case "B_helipilot_F": {
+                    case "B_Helipilot_F": {
                         [_unit] call ace_weaponselect_fnc_putWeaponAway;
                     };
                 };
@@ -86,7 +86,7 @@ _player addMPEventHandler ["MPRespawn", {
         params ["_unit", "_insignia"];
         sleep 1;
         isNil {
-            _unit setVariable ["BIS_fnc_setUnitInsignia_class", nil]; // you can also do [_unit, ""] call BIS_fnc_setUnitInsignia, but this way is faster (plus no network traffic)
+            _unit setVariable ["BIS_fnc_setUnitInsignia_class", nil];
             [_unit, _insignia] call BIS_fnc_setUnitInsignia;
         };
     };

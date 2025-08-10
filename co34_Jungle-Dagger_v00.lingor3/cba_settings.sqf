@@ -21,13 +21,13 @@ force ace_medical_treatment_medicIV = 1;
 force ace_cookoff_enableAmmobox = false;
 
 //TTT Signalpanel
-force ttt_signalpanel_enable = true;                                                //default: false;
-force ttt_signalpanel_supportedBackpacks = '["UK3CB_BAF_B_Bergen_MTP_JTAC_H_A"]';   //default: '[]';
+force ttt_signalpanel_enable = true;
+force ttt_signalpanel_supportedBackpacks = '["UK3CB_BAF_B_Bergen_MTP_JTAC_H_A"]';
 
 //TTT Medicalpanel
 force ttt_medic_backpack_enable = true;                                                                                     //default: false;
 force ttt_medic_backpack_supportedBackpacks = '["UK3CB_BAF_B_Bergen_MTP_Medic_H_A","UK3CB_BAF_B_Bergen_MTP_Medic_H_B"]';    //default: [];
-force ttt_medic_backpack_additionalItems = '["Land_FirstAidKit_01_open_F","Land_Defibrillator_F"]';                         //default: [];
+force ttt_medic_backpack_additionalItems = '["Land_FirstAidKit_01_open_F"]';                         //default: [];
 force ttt_medic_backpack_buildTime = 6;                                                                                     //default: 20;
 
 //KAM Airway
