@@ -5,14 +5,14 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=517;
+	toggles=513;
 	mods[]=
 	{
 		"3denEnhanced"
 	};
 	class ItemIDProvider
 	{
-		nextID=967;
+		nextID=990;
 	};
 	class MarkerIDProvider
 	{
@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={354.20883,21.079557,6160.1528};
-		dir[]={0.60648012,-0.67603481,0.41868216};
-		up[]={0.5563457,0.73684555,0.38406998};
-		aside[]={0.56815368,1.5058322e-07,-0.82299936};
+		pos[]={1910.6613,152.32454,8205.8438};
+		dir[]={-0.17279404,-0.34513244,0.92252064};
+		up[]={-0.06354209,0.9385494,0.33923751};
+		aside[]={0.98291653,8.6263753e-08,0.18410726};
 	};
 };
 binarizationWanted=0;
@@ -67,13 +67,15 @@ addons[]=
 	"ace_dragging",
 	"ace_explosives",
 	"A3_Characters_F_Mark",
-	"ace_nouniformrestrictions"
+	"ace_nouniformrestrictions",
+	"CUP_CABuildings_Misc",
+	"UK3CB_Factions_MEC_B"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=28;
+		items=30;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -262,6 +264,18 @@ class AddonsMetaData
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
+		class Item28
+		{
+			className="CUP_CABuildings_Misc";
+			name="CUP_CABuildings_Misc";
+		};
+		class Item29
+		{
+			className="UK3CB_Factions_MEC";
+			name="3CB Factions - MEC";
+			author="3 Commando Brigade";
+			url="www.3commandobrigade.com";
+		};
 	};
 };
 dlcs[]=
@@ -271,7 +285,8 @@ dlcs[]=
 	"UK3CB_Factions",
 	"Expansion",
 	"RHS_AFRF",
-	"Mark"
+	"Mark",
+	"UK3CB_Factions_Vehicles"
 };
 randomSeed=9609078;
 class ScenarioData
@@ -307,89 +322,8 @@ class CustomAttributes
 					singleType="ARRAY";
 					class value
 					{
-						items=9;
+						items=8;
 						class Item0
-						{
-							class data
-							{
-								singleType="ARRAY";
-								class value
-								{
-									items=2;
-									class Item0
-									{
-										class data
-										{
-											singleType="STRING";
-											value="3den:373";
-										};
-									};
-									class Item1
-									{
-										class data
-										{
-											singleType="ARRAY";
-											class value
-											{
-												items=3;
-												class Item0
-												{
-													class data
-													{
-														singleType="ARRAY";
-														class value
-														{
-															items=3;
-															class Item0
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=374.41901;
-																};
-															};
-															class Item1
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=6186.896;
-																};
-															};
-															class Item2
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=4.8779998;
-																};
-															};
-														};
-													};
-												};
-												class Item1
-												{
-													class data
-													{
-														singleType="STRING";
-														value="ToDo";
-													};
-												};
-												class Item2
-												{
-													class data
-													{
-														singleType="STRING";
-														value="Slotnamen und Nummern" \n "Callsigns";
-													};
-												};
-											};
-										};
-									};
-								};
-							};
-						};
-						class Item1
 						{
 							class data
 							{
@@ -470,7 +404,7 @@ class CustomAttributes
 								};
 							};
 						};
-						class Item2
+						class Item1
 						{
 							class data
 							{
@@ -551,7 +485,7 @@ class CustomAttributes
 								};
 							};
 						};
-						class Item3
+						class Item2
 						{
 							class data
 							{
@@ -632,7 +566,7 @@ class CustomAttributes
 								};
 							};
 						};
-						class Item4
+						class Item3
 						{
 							class data
 							{
@@ -713,7 +647,7 @@ class CustomAttributes
 								};
 							};
 						};
-						class Item5
+						class Item4
 						{
 							class data
 							{
@@ -794,7 +728,7 @@ class CustomAttributes
 								};
 							};
 						};
-						class Item6
+						class Item5
 						{
 							class data
 							{
@@ -875,7 +809,7 @@ class CustomAttributes
 								};
 							};
 						};
-						class Item7
+						class Item6
 						{
 							class data
 							{
@@ -956,7 +890,7 @@ class CustomAttributes
 								};
 							};
 						};
-						class Item8
+						class Item7
 						{
 							class data
 							{
@@ -1080,7 +1014,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=213;
+		items=229;
 		class Item0
 		{
 			dataType="Marker";
@@ -1170,7 +1104,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={418.689,1.5651817,6207.6948};
+				position[]={418.689,1.565183,6207.6948};
 				angles[]={0,2.737165,0};
 			};
 			side="Empty";
@@ -1180,7 +1114,7 @@ class Mission
 			};
 			id=7;
 			type="UK3CB_BAF_RHIB_HMG_MTP";
-			atlOffset=0.7720046;
+			atlOffset=0.77200592;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1217,7 +1151,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={402.34299,1.8697319,6210.8491};
+				position[]={402.34299,1.8697332,6210.8491};
 				angles[]={0,2.737165,0};
 			};
 			side="Empty";
@@ -1227,7 +1161,7 @@ class Mission
 			};
 			id=8;
 			type="UK3CB_BAF_RHIB_HMG_MTP";
-			atlOffset=0.57800448;
+			atlOffset=0.57800579;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16581,6 +16515,7 @@ class Mission
 			};
 			id=958;
 			type="UK3CB_BAF_MAN_HX58_Transport_Green_MTP_RM";
+			atlOffset=-2.8610229e-05;
 		};
 		class Item209
 		{
@@ -16622,6 +16557,7 @@ class Mission
 					};
 					id=961;
 					type="UK3CB_BAF_Rifleman_MTP";
+					atlOffset=-4.7683716e-07;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16706,6 +16642,7 @@ class Mission
 			{
 			};
 			id=960;
+			atlOffset=-4.7683716e-07;
 		};
 		class Item211
 		{
@@ -16729,6 +16666,7 @@ class Mission
 					};
 					id=963;
 					type="UK3CB_BAF_Rifleman_MTP";
+					atlOffset=4.7683716e-07;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16907,6 +16845,7 @@ class Mission
 			{
 			};
 			id=962;
+			atlOffset=4.7683716e-07;
 		};
 		class Item212
 		{
@@ -17015,16 +16954,426 @@ class Mission
 			};
 			id=965;
 		};
+		class Item213
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1932.5,7.6142516,8717.5};
+				angles[]={0,5.5983047,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=969;
+			type="zed_civil";
+		};
+		class Item214
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1874.6332,7.4842515,8783.9541};
+				angles[]={0,5.5077558,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=970;
+			type="zed_civil";
+		};
+		class Item215
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3283.8374,8.3004427,9521.6982};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						skill=0.44999999;
+						rank="CORPORAL";
+					};
+					id=972;
+					type="UK3CB_ADE_O_TL";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3286.8374,11.478588,9518.6982};
+					};
+					side="East";
+					flags=1;
+					class Attributes
+					{
+						skill=0.40000001;
+					};
+					id=973;
+					type="UK3CB_ADE_O_GL";
+					atlOffset=3.0440159;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=971;
+		};
+		class Item216
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={3340.0073,16.875723,9525.7803};
+				angles[]={0.012996998,3.3529277,0.11844294};
+			};
+			areaSize[]={282.672,0,304.599};
+			flags=1;
+			id=974;
+			type="lambs_wp_TaskPatrol";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="lambs_wp_WaypointCount";
+					expression="_this setVariable ['lambs_wp_WaypointCount', _value, true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=4;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="lambs_wp_enableReinforcement";
+					expression="_this setVariable ['lambs_wp_EnableReinforcement',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="lambs_wp_teleport";
+					expression="_this setVariable ['lambs_wp_Teleport',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="lambs_wp_moveWaypoints";
+					expression="_this setVariable ['lambs_wp_MoveWaypoints',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item217
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1799.3423,1.5561502,8406.0371};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						skill=0.44999999;
+						rank="CORPORAL";
+					};
+					id=976;
+					type="UK3CB_ADE_O_TL";
+					atlOffset=1.1920929e-07;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1802.3423,1.418581,8403.0371};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+					};
+					id=977;
+					type="UK3CB_ADE_O_GL";
+					atlOffset=2.3841858e-07;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=975;
+			atlOffset=1.1920929e-07;
+		};
+		class Item218
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1876.8225,2.458802,8348.1338};
+				angles[]={0.026993545,3.3529277,0.15963046};
+			};
+			areaSize[]={282.672,0,304.599};
+			flags=1;
+			id=978;
+			type="lambs_wp_TaskPatrol";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="lambs_wp_WaypointCount";
+					expression="_this setVariable ['lambs_wp_WaypointCount', _value, true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=4;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="lambs_wp_enableReinforcement";
+					expression="_this setVariable ['lambs_wp_EnableReinforcement',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="lambs_wp_teleport";
+					expression="_this setVariable ['lambs_wp_Teleport',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="lambs_wp_moveWaypoints";
+					expression="_this setVariable ['lambs_wp_MoveWaypoints',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item219
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1056.7448,41.493111,5942.7529};
+				angles[]={-0,1.7944778,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=979;
+			type="UK3CB_BAF_LandRover_Amb_FFR_Green_A_MTP";
+		};
+		class Item220
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1058.8665,41.493111,5949.6406};
+				angles[]={-0,1.7944778,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=980;
+			type="UK3CB_BAF_LandRover_Amb_FFR_Green_A_MTP";
+		};
+		class Item221
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1053.2708,41.493111,5928.7842};
+				angles[]={-0,1.8025399,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=981;
+			type="UK3CB_BAF_LandRover_Amb_FFR_Sand_A_MTP";
+		};
+		class Item222
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1073.0518,40.537518,5935.2017};
+				angles[]={-0,1.7380073,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=982;
+			type="UK3CB_MEC_B_Hilux_Ambulance";
+		};
+		class Item223
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1074.1228,40.768425,5938.9844};
+				angles[]={-0,1.7903774,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=983;
+			type="UK3CB_MEC_B_Van_Transit_Medevac";
+		};
+		class Item224
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1074.8191,40.768425,5942.4219};
+				angles[]={-0,1.7903774,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=984;
+			type="UK3CB_MEC_B_Van_Transit_Medevac";
+		};
+		class Item225
+		{
+			dataType="Trigger";
+			position[]={1925.167,6,8771.6338};
+			class Attributes
+			{
+				onActivation="[r_sp_04, r_rp_04, r_ap_04, EAST, ""UK3CB_ADE_O_Van_Transport"", 0, configFile >> ""CfgGroups"" >> ""East"" >> ""UK3CB_ADE_O"" >> ""Infantry"" >> ""UK3CB_ADE_O_AR_Squad"", 2] call ttt_common_fnc_callReinforcements;" \n "";
+				activationBy="ANYPLAYER";
+				isServerOnly=1;
+			};
+			id=986;
+			type="EmptyDetectorAreaR50";
+		};
+		class Item226
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1345.0377,3.0512555,7567.1724};
+				angles[]={6.2711854,0,0.0049914722};
+			};
+			name="r_sp_05";
+			id=987;
+			type="Logic";
+			atlOffset=2.3841858e-07;
+		};
+		class Item227
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1983.0168,2.97,8567.7197};
+			};
+			name="r_rp_05";
+			id=988;
+			type="Logic";
+		};
+		class Item228
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1943.9631,6,8766.2129};
+			};
+			name="r_ap_05";
+			id=989;
+			type="Logic";
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=31;
+			nextID=33;
 		};
 		class Links
 		{
-			items=31;
+			items=33;
 			class Item0
 			{
 				linkID=0;
@@ -17330,6 +17679,26 @@ class Mission
 				linkID=30;
 				item0=792;
 				item1=790;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item31
+			{
+				linkID=31;
+				item0=974;
+				item1=972;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item32
+			{
+				linkID=32;
+				item0=978;
+				item1=976;
 				class CustomData
 				{
 					type="Sync";

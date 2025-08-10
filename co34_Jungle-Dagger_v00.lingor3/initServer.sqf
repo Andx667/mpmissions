@@ -26,7 +26,7 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
         ["B_AssaultPack_blk", 1],
         ["UK3CB_BAF_L85A2", 4],
         ["UK3CB_BAF_556_30Rnd", 12],
-        ["ACE_NonSteerableParachute", 4]
+        ["B_Parachute", 4]
     ]
 ] call ttt_common_fnc_crateFiller;
 
@@ -115,5 +115,6 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
         ["ACE_epinephrine", 10],
         ["kat_lidocaine", 10],
         ["ACE_Suture", 50]
-    ]
+    ],
+    false
 ] call ttt_common_fnc_crateFiller;
