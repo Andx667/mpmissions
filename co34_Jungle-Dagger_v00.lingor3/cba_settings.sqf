@@ -1,21 +1,22 @@
 // ACE Sanitäter
 force ace_medical_statemachine_cardiacArrestTime = 600;
 
-force ace_medical_treatment_litterCleanupDelay = -1;
-
-force ace_medical_treatment_medicEpinephrine = 1;
+force ace_medical_treatment_locationSurgicalKit = 0;
+force ace_medical_treatment_locationIV = 0;
 force ace_medical_treatment_locationEpinephrine = 0;
+force ace_medical_treatment_locationAdenosine = 0;
+force ace_medical_treatment_locationPAK = 3;
 
-force ace_medical_treatment_consumeSurgicalKit = 2;
-force ace_medical_treatment_medicSurgicalKit = 2;
-force ace_medical_treatment_locationSurgicalKit = 2;
+force ace_medical_treatment_medicPAK = 2;
+force ace_medical_treatment_medicIV = 1;
+force ace_medical_treatment_medicEpinephrine = 1;
+force ace_medical_treatment_medicAdenosine = 1;
+force ace_medical_treatment_medicSurgicalKit = 1;
 
 force ace_medical_treatment_consumePAK = 1;
-force ace_medical_treatment_medicPAK = 2;
-force ace_medical_treatment_locationPAK = 2;
+force ace_medical_treatment_consumeSurgicalKit = 2;
 
-force ace_medical_treatment_locationIV = 2;
-force ace_medical_treatment_medicIV = 1;
+force ace_medical_bleedingCoefficient = 0.5;
 
 //ACE Cookoff
 force ace_cookoff_enableAmmobox = false;
@@ -31,7 +32,6 @@ force ttt_medic_backpack_additionalItems = '["Land_FirstAidKit_01_open_F"]';    
 force ttt_medic_backpack_buildTime = 6;                                                                                     //default: 20;
 
 //KAM Airway
-// KAT - ADV Medical: Airway
 force kat_airway_Accuvac_time = 8;
 force kat_airway_autoTriage = false;
 force kat_airway_block_headTurning_ifAirwayItem = true;

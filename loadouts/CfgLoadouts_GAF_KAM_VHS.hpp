@@ -111,7 +111,7 @@ class Loadouts {
             };
 
             primaryWeapon[] = {
-                "UK3CB_ACR_Carbine",
+                "rhs_weap_vhsd2",
             };
             primaryWeaponOptics[] = {
                 "rhsusf_acc_su230",
@@ -125,7 +125,7 @@ class Loadouts {
                 "rhsusf_acc_EOTECH",
                 };
             primaryWeaponPointer = "ACE_DBAL_A3_Red";
-            primaryWeaponMagazine = "UK3CB_ACR_30rnd_556x45";
+            primaryWeaponMagazine = "rhsgref_30rnd_556x45_vhs2";
             primaryWeaponUnderbarrel = "";
             primaryWeaponUnderbarrelMagazine = "";
             secondaryWeapon = "";
@@ -161,6 +161,7 @@ class Loadouts {
         };
 
         class B_Soldier_GL_F: B_Soldier_F {
+            primaryWeapon = "rhs_weap_vhsd2_bg";
             vest[] = {
                 "UK3CB_GAF_B_MBAV_GRENADIER_DIGI",
                 "UK3CB_GAF_B_MBAV_GRENADIER_DIGI_OLI",
@@ -206,13 +207,19 @@ class Loadouts {
         // These dont inherit from the basic rifleman
         class B_soldier_M_F {
             primaryWeapon[] = {
-                "UK3CB_M14DMR",
-                "UK3CB_M14DMR_BLK",
+                "rhs_weap_m14ebrri",
             };
-            primaryWeaponMagazine = "ACE_20Rnd_762x51_Mag_Tracer";
-            primaryWeaponOptics = "uk3cb_optic_artel_m14";
-            primaryWeaponPointer = "";
-            primaryWeaponUnderbarrel = "";
+            primaryWeaponMagazine = "rhsusf_20Rnd_762x51_m118_special_Mag";
+            primaryWeaponOptics[] = {
+                "rhsusf_acc_LEUPOLDMK4",
+                "rhsusf_acc_LEUPOLDMK4_wd"
+            };
+            primaryWeaponUnderbarrel = "rhsusf_acc_harris_bipod";
+            primaryWeaponMuzzle[] = {
+                "rhsusf_acc_aac_m14dcqd_silencer",
+                "rhsusf_acc_aac_m14dcqd_silencer_d",
+                //"rhsusf_acc_aac_m14dcqd_silencer_wd",
+            };
 
             vest[] = {
                 "UK3CB_GAF_B_MBAV_LIGHT_DIGI",
@@ -221,19 +228,18 @@ class Loadouts {
 
             addItemsToVest[] = {
                 "ACE_Rangetable",
-                LIST_3("ACE_20Rnd_762x51_Mag_Tracer"),
+                LIST_3("rhsusf_20Rnd_762x51_m118_special_Mag"),
             };
             addItemsToBackpack[] = {
-                LIST_8("ACE_20Rnd_762x51_M118LR_Mag"),
-                LIST_6("UK3CB_ACR_30rnd_556x45"),
-                LIST_5("ACE_20Rnd_762x51_Mag_Tracer"),
+                LIST_8("rhsusf_20Rnd_762x51_m118_special_Mag"),
+                LIST_5("rhsusf_20Rnd_762x51_m62_Mag"),
             };
             binoculars = "rhsusf_bino_lerca_1200_black";
         };
 
         //Autorifleman
         class B_soldier_AR_F {
-            primaryWeapon = "rhs_weap_m249_pip_S_para";
+            primaryWeapon = "rhs_weap_minimi_para_railed";
             primaryWeaponMagazine = "rhsusf_200Rnd_556x45_mixed_soft_pouch";
 
             vest[] = {
@@ -329,7 +335,7 @@ class Loadouts {
 
         //Fahrzeugbesatzung
         class B_crew_F {
-            primaryWeapon = "UK3CB_ACR_Crew";
+            primaryWeapon = "rhs_weap_vhsk2";
 
             vest[] = {
                 "UK3CB_GAF_B_MBAV_LIGHT_DIGI",
@@ -337,7 +343,7 @@ class Loadouts {
             };
 
             addItemsToVest[] += {
-                LIST_3("UK3CB_ACR_30rnd_556x45"),
+                LIST_3("rhsgref_30rnd_556x45_vhs2"),
             };
 
             headgear[] = {
@@ -436,7 +442,7 @@ class Loadouts {
 
             addItemsToVest[] += {
                 "ItemAndroid",
-                LIST_8("UK3CB_ACR_30rnd_556x45_RT"),
+                LIST_8("rhsgref_30rnd_556x45_vhs2_RT"),
             };
 
             addItemsToBackpack[] += {
@@ -464,6 +470,7 @@ class Loadouts {
 
         //Medics
         class B_medic_F {
+            primaryWeapon = "rhs_weap_vhsk2";
             vest[] = {
                 //"UK3CB_GAF_B_MBAV_MEDIC_BLK_02",
                 "UK3CB_GAF_B_MBAV_MEDIC_DIGI_OLI_02",
@@ -481,8 +488,8 @@ class Loadouts {
                     };
 
                     addItemsToVest[] += {
-                        LIST_8("UK3CB_ACR_30rnd_556x45"),
-                        "kat_Pulseoximeter",
+                        LIST_8("rhsgref_30rnd_556x45_vhs2"),
+                        LIST_3("kat_Pulseoximeter"),
                         "ACE_SurgicalKit",
                     };
                     //Fits in a Vanilla Assault_Pack recommended for Squad-Level-Medics
@@ -516,16 +523,14 @@ class Loadouts {
                 };
 
                 class CORPORAL: PRIVATE {
-                    primaryWeapon = "UK3CB_ACR_Crew";
-
                     backpack[] = {
                         "UK3CB_B_TacticalPack_Med_Oli",
                         "UK3CB_B_US_Medic_Backpack",
                     };
 
                     addItemsToVest[] = {
-                        LIST_3("UK3CB_ACR_30rnd_556x45"),
-                        "kat_Pulseoximeter",
+                        LIST_3("rhsgref_30rnd_556x45_vhs2"),
+                        LIST_3("kat_Pulseoximeter"),
                         "ACE_SpraypaintBlue",
                         "ace_flags_blue",
                         "ItemAndroid",
@@ -644,7 +649,7 @@ class Loadouts {
         };
 
         class B_soldier_repair_F: B_Soldier_F {
-            primaryWeapon = "UK3CB_ACR_Crew";
+            primaryWeapon = "rhs_weap_vhsk2";
 
             vest[] = {
                 "UK3CB_GAF_B_MBAV_LIGHT_DIGI",
@@ -655,7 +660,7 @@ class Loadouts {
 
                 class PRIVATE {
                     addItemsToVest[] += {
-                        LIST_3("UK3CB_ACR_30rnd_556x45"),
+                        LIST_3("rhsgref_30rnd_556x45_vhs2"),
                     };
                     addItemsToBackpack[] += {
                         "Tookit",
