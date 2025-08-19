@@ -24,7 +24,7 @@ private _id = [
 
         [
             {//Function
-                [ACE_Player, currentWeapon ACE_Player, true] call ace_safemode_fnc_setWeaponSafety;
+                [_unit, currentWeapon _unit, true] call ace_safemode_fnc_setWeaponSafety;
             },
             //Args
             [_unit,_loadout],

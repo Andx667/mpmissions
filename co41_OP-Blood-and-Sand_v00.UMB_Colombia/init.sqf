@@ -41,5 +41,5 @@ addMissionEventHandler ["EntityCreated", {
 
     if !(_entity isKindOf "CAManBase") exitWith {};
 
-    [_entity] call andx_fnc_setAISkill;
+    [_entity] call ttt_common_fnc_setAISkill;
 }];

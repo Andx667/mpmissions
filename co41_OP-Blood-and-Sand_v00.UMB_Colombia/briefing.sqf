@@ -28,7 +28,7 @@ player createDiaryRecord ["Diary", [
 
 player createDiaryRecord ["Diary", [
     "01 Lage",
-    "Truppen des Royal Army Corps of Shahrani haben in Columbia geputscht und die Kontrolle über alle Militäreinrichtungen übernommen.,<br/>"
+    "Truppen des Royal Army Corps of Shahrani haben in Columbia geputscht und die Kontrolle über alle Militäreinrichtungen übernommen.<br/>"
     + "<br/>"
     + "Feindlage:<br/>"
     + "<t/> - In Obj. 1 feindliche Infanterie in Zugstärke, teils gehärtete Stellungen, vermutete Absicht ist es dem mobilen Kräften Zeit zu verschaffen<br/>"

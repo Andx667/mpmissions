@@ -1,12 +1,12 @@
 // - Generelle Einstellungen --------------------------------------------------
 // Name des Missionsbauers
-author = "";
+author = "[TTT] Andx";
 // Missionsname über dem Ladebild
-onLoadName = "";
+onLoadName = "Blood and Sand";
 // Ladebild
 loadScreen = "";
 // Kurzbeschreibung unter dem Ladebild
-onLoadMission = "";
+onLoadMission = "Scotch, Orange, Zitrone, Vermouth, Heering Cherry";
 // Kurzbeschreibung in der Missionsauswahl
 overviewText = "";
 
@@ -24,7 +24,7 @@ respawnDelay = 5;
 respawnDialog = 0;
 
 // - Misc ---------------------------------------------------------------------
-disabledAI = 0;
+disabledAI = 1;
 cba_settings_hasSettingsFile = 1;
 
 disableChannels[] =
@@ -47,11 +47,6 @@ disposalCheckPeriod = 60; // seconds. Default: 10
 // - CfgFunctions -------------------------------------------------------------
 class CfgFunctions {
   #include "modules\grad-loadout\CfgFunctions.hpp"
-    class andx {
-        class AI {
-            class setAISkill {};
-        };
-    };
 };
 
 // - Loadouts ----------------------------------------------------------------
