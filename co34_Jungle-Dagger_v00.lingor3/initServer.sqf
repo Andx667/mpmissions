@@ -41,7 +41,7 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
 
 
 [
-    [vbt_01, vbt_02, vbt_03, vbt_04, vbt_05],
+    [sana_01, sana_02, sana_03, sana_04, sana_05],
     [
         ["ACE_elasticBandage", 80],
         ["ACE_packingBandage", 80],
@@ -52,7 +52,7 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
 ] call ttt_common_fnc_crateFiller;
 
 [
-    [vbs_01, vbs_02, vbs_03],
+    [sanb_01, sanb_02, sanb_03],
     [
         ["ACE_elasticBandage", 80],
         ["ACE_packingBandage", 80],
@@ -80,7 +80,7 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
 ] call ttt_common_fnc_crateFiller;
 
 [
-    [vba_01, heli_01, heli_02],
+    [sanc_01, heli_01, heli_02],
     [
         ["ACE_elasticBandage", 80],
         ["ACE_packingBandage", 80],
@@ -95,9 +95,9 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
 
         ["kat_pocketBVM", 1],
 
-        ["ACE_bloodIV_250", 10],
-        ["ACE_bloodIV_500", 10],
-        ["ACE_bloodIV", 10],
+        ["ACE_bloodIV_250", 6],
+        ["ACE_bloodIV_500", 6],
+        ["ACE_bloodIV", 12],
         ["kat_IV_16", 12],
         ["kat_X_AED", 1],
 

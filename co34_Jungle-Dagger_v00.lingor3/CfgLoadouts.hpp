@@ -90,28 +90,28 @@ class Loadouts {
                 "UK3CB_BAF_H_Mk7_Camo_D",
                 "UK3CB_BAF_H_Mk7_Camo_E",
                 "UK3CB_BAF_H_Mk7_Camo_F",
-                "UK3CB_BAF_H_Mk7_Camo_ESS_B",
-                "UK3CB_BAF_H_Mk7_Camo_ESS_C",
-                "UK3CB_BAF_H_Mk7_Camo_ESS_D",
+                //"UK3CB_BAF_H_Mk7_Camo_ESS_B",
+                //"UK3CB_BAF_H_Mk7_Camo_ESS_C",
+                //"UK3CB_BAF_H_Mk7_Camo_ESS_D",
                 "UK3CB_BAF_H_Mk7_Net_B",
                 "UK3CB_BAF_H_Mk7_Net_C",
                 "UK3CB_BAF_H_Mk7_Net_D",
-                "UK3CB_BAF_H_Mk7_Net_ESS_B",
-                "UK3CB_BAF_H_Mk7_Net_ESS_C",
-                "UK3CB_BAF_H_Mk7_Net_ESS_D",
-                "UK3CB_BAF_H_Mk7_Net_CESS_B",
-                "UK3CB_BAF_H_Mk7_Net_CESS_C",
-                "UK3CB_BAF_H_Mk7_Net_CESS_D",
+                //"UK3CB_BAF_H_Mk7_Net_ESS_B",
+                //"UK3CB_BAF_H_Mk7_Net_ESS_C",
+                //"UK3CB_BAF_H_Mk7_Net_ESS_D",
+                //"UK3CB_BAF_H_Mk7_Net_CESS_B",
+                //"UK3CB_BAF_H_Mk7_Net_CESS_C",
+                //"UK3CB_BAF_H_Mk7_Net_CESS_D",
                 "UK3CB_BAF_H_Mk7_Scrim_A",
                 "UK3CB_BAF_H_Mk7_Scrim_B",
                 "UK3CB_BAF_H_Mk7_Scrim_D",
                 "UK3CB_BAF_H_Mk7_Scrim_E",
                 "UK3CB_BAF_H_Mk7_Scrim_F",
-                "UK3CB_BAF_H_Mk7_Scrim_ESS_A",
-                "UK3CB_BAF_H_Mk7_Scrim_ESS_B",
-                "UK3CB_BAF_H_Mk7_Camo_CESS_B",
-                "UK3CB_BAF_H_Mk7_Camo_CESS_C",
-                "UK3CB_BAF_H_Mk7_Camo_CESS_D",
+                //"UK3CB_BAF_H_Mk7_Scrim_ESS_A",
+                //"UK3CB_BAF_H_Mk7_Scrim_ESS_B",
+                //"UK3CB_BAF_H_Mk7_Camo_CESS_B",
+                //"UK3CB_BAF_H_Mk7_Camo_CESS_C",
+                //"UK3CB_BAF_H_Mk7_Camo_CESS_D",
             };
 
             addItemsToUniform[] = {
@@ -130,9 +130,9 @@ class Loadouts {
                 LIST_2("rhs_mag_m67"),
                 "UK3CB_BAF_SmokeShellGreen",
                 LIST_2("ACE_CableTie"),
+                "UK3CB_BAF_Bayonet_L3A1",
             };
             addItemsToBackpack[] = {
-
             };
 
             primaryWeapon[] = {
@@ -196,6 +196,7 @@ class Loadouts {
                 LIST_4("UK3CB_BAF_SmokeShell"),
                 LIST_4("rhs_mag_m67"),
                 "UK3CB_BAF_SmokeShellGreen",
+                "UK3CB_BAF_H_Beret_PR",
             };
         };
 
@@ -209,7 +210,7 @@ class Loadouts {
             };
 
             addItemsToVest[] += {
-                LIST_8("UK3CB_BAF_1Rnd_HE_Grenade_Shell"),
+                LIST_7("UK3CB_BAF_1Rnd_HE_Grenade_Shell"),
             };
 
             addItemsToBackpack[] = {
@@ -223,6 +224,7 @@ class Loadouts {
                 "UK3CB_BAF_SmokeShellGreen",
                 "UK3CB_BAF_762_200Rnd_T",
                 LIST_8("UK3CB_BAF_556_30Rnd"),
+                "UK3CB_BAF_H_Beret_PR",
             };
         };
 
@@ -249,6 +251,7 @@ class Loadouts {
                 LIST_2("ACE_M14"),
                 "UK3CB_BAF_SmokeShellGreen",
                 "UK3CB_BAF_762_200Rnd_T",
+                "UK3CB_BAF_H_Beret_PR",
             };
         };
 
@@ -277,6 +280,7 @@ class Loadouts {
                 "ace_flags_blue",
                 "ACE_SpraypaintBlue",
                 "UK3CB_BAF_762_200Rnd_T",
+                "UK3CB_BAF_H_Beret_PR",
             };
 
             binoculars = "UK3CB_BAF_Soflam_Laserdesignator";
@@ -307,6 +311,7 @@ class Loadouts {
             addItemsToBackpack[] = {
                 "ITC_Land_B_AR2i_Packed",
                 LIST_10("ACE_UAVBattery"),
+                "UK3CB_BAF_H_Beret_PR",
             };
             gps = "B_UavTerminal";
             binoculars = "ACE_Vector";
@@ -649,8 +654,8 @@ class Loadouts {
             addItemsToVest[] += {
                 LIST_2("UK3CB_BAF_9_17Rnd"),
                 LIST_2("UK3CB_BAF_SmokeShellPurple"),
-                LIST_2("UK3CB_BAF_SmokeShellYellow"),
                 LIST_2("ACE_HandFlare_Green"),
+                "UK3CB_BAF_H_Beret_PR",
             };
 
         };
@@ -672,6 +677,7 @@ class Loadouts {
             };
 
             addItemsToBackpack[] = {
+                "UK3CB_BAF_H_Beret_PR",
                 "ACRE_PRC117F",
             };
         };
@@ -691,6 +697,7 @@ class Loadouts {
 
         //Führung
         class B_Soldier_TL_F {
+            primaryWeaponMagazine = "UK3CB_BAF_556_30Rnd_T";
             vest[] = {
                 "UK3CB_BAF_V_Osprey_SL_A",
                 "UK3CB_BAF_V_Osprey_SL_B",
@@ -701,7 +708,7 @@ class Loadouts {
             };
             addItemsToVest[] = {
                 "ACRE_PRC148",
-                LIST_14("UK3CB_BAF_556_30Rnd_T"),
+                LIST_13("UK3CB_BAF_556_30Rnd_T"),
             };
             addItemsToBackpack[] = {
                 "ACE_SpareBarrel",
@@ -712,6 +719,7 @@ class Loadouts {
                 LIST_4("UK3CB_BAF_SmokeShell"),
                 LIST_4("rhs_mag_m67"),
                 "UK3CB_BAF_SmokeShellGreen",
+                "UK3CB_BAF_H_Beret_PR",
             };
 
             binoculars = "ACE_Vector";
@@ -729,6 +737,7 @@ class Loadouts {
                 "ACE_SpraypaintGreen",
                 LIST_14("UK3CB_BAF_556_30Rnd_T"),
                 LIST_2("UK3CB_BAF_762_200Rnd_T"),
+                "UK3CB_BAF_H_Beret_PR",
             };
         };
 
@@ -759,7 +768,7 @@ class Loadouts {
 
                     addItemsToVest[] += {
                         //Diagnostic
-                        "kat_basicDiagnostic",
+
                         LIST_3("kat_Pulseoximeter"),
                         //Admin
                         "ace_flags_blue",
@@ -773,6 +782,7 @@ class Loadouts {
                         //M
                         LIST_45("ACE_packingBandage"),
                         LIST_45("ACE_elasticBandage"),
+                        LIST_45("ACE_quikclot"),
                         LIST_16("ACE_tourniquet"),
                         //A
                         LIST_12("kat_chestSeal"),
@@ -792,6 +802,7 @@ class Loadouts {
                         LIST_12("ACE_epinephrine"),
                         LIST_12("kat_Painkiller"),
                         LIST_8("ACE_morphine"),
+                        "UK3CB_BAF_H_Beret_PR",
                     };
                 };
                 //PJ 1
@@ -831,7 +842,12 @@ class Loadouts {
                     handgunWeapon = "UK3CB_BAF_L131A1";
                     handgunWeaponMagazine = "UK3CB_BAF_9_17Rnd";
 
-                    addItemsToVest[] += {
+                    addItemsToVest[] = {
+                        //Diagnostic
+
+                        LIST_3("kat_Pulseoximeter"),
+                        //Being a Soldier things
+                        LIST_8("UK3CB_BAF_556_30Rnd"),
                         "ItemAndroid",
                         LIST_2("UK3CB_BAF_9_17Rnd"),
                         LIST_3("UK3CB_BAF_SmokeShellYellow"),
@@ -840,7 +856,7 @@ class Loadouts {
                     addItemsToBackpack[] = {
                         //M
                         LIST_45("ACE_packingBandage"),
-                        LIST_45("ACE_quikclot"),
+                        LIST_45("ACE_elasticBandage"),
                         LIST_16("ACE_tourniquet"),
                         //A
                         LIST_12("kat_chestSeal"),
@@ -862,6 +878,7 @@ class Loadouts {
                         LIST_8("ACE_morphine"),
                         //Admin
                         "ACE_Bodybag",
+                        "UK3CB_BAF_H_Beret_RM_Parade",
                     };
 
                     goggles[] = {
@@ -895,10 +912,10 @@ class Loadouts {
                         LIST_6("kat_larynx"),
                         //R
                         "kat_BVM",
-                        LIST_2("kat_oxygenTank_150"),
+                        "kat_oxygenTank_150",
                         //C
-                        LIST_2("ACE_salineIV_250"),
-                        LIST_2("ACE_salineIV_500"),
+                        "ACE_salineIV_250",
+                        LIST_2("ACE_bloodIV_500"),
                         LIST_8("ACE_bloodIV"),
                         LIST_2("ACE_bloodIV_250"),
                         "kat_X_AED",
@@ -915,6 +932,7 @@ class Loadouts {
                         LIST_5("kat_lidocaine"),
                         //Admin
                         LIST_45("ACE_Suture"),
+                        "UK3CB_BAF_H_Beret_RM_Officer"
                     };
                 };
                 //PJ 3
@@ -939,7 +957,7 @@ class Loadouts {
                         //R
                         "kat_BVM",
                         //C
-                        LIST_2("ACE_salineIV_250"),
+                        "ACE_salineIV_250",
                         "kat_X_AED",
                         LIST_6("kat_IV_16"),
                         LIST_2("kat_IO_FAST"),
@@ -955,6 +973,7 @@ class Loadouts {
                         LIST_5("kat_lidocaine"),
                         //Admin
                         LIST_30("ACE_Suture"),
+                        "UK3CB_BAF_H_Beret_RM_Officer",
                     };
                 };
             };

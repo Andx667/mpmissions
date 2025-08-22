@@ -17,7 +17,7 @@
 private _id = [
     "grad_loadout_loadoutApplied",
     {
-        params ["_unit", ""];
+        params ["_target", ""];
 
         [
             {//Function
@@ -70,7 +70,7 @@ private _id = [
                 };
             },
             //Args
-            [_unit],
+            [_target],
             //Delay
             3
         ] call CBA_fnc_waitAndExecute;
