@@ -24,7 +24,7 @@ params ["_player"];
                 [_unit, currentWeapon _unit, true] call ace_safemode_fnc_setWeaponSafety;
             },
             //Args
-            [],
+            [_unit],
             //Delay
             3
         ] call CBA_fnc_waitAndExecute;

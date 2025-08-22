@@ -29,6 +29,8 @@
 #define LIST_28(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
 #define LIST_29(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
 #define LIST_30(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_45(var1) LIST_30(var1),LIST_15(var1)
+#define LIST_60(var1) LIST_30(var1),LIST_30(var1)
 
 class Loadouts {
     baseDelay = 1;
@@ -63,7 +65,7 @@ class Loadouts {
                 //"BWA3_Vest_Rifleman_Tropen"
                 //"BWA3_Vest_Rifleman_Multi"
             };
-            backpack = "";
+            backpack = "BWA3_AssaultPack_Fleck";
             headgear[] = {
                 "BWA3_OpsCore_FastMT_Peltor",
                 "BWA3_OpsCore_FastMT_Peltor_Fleck",
@@ -92,7 +94,7 @@ class Loadouts {
             primaryWeapon[] = {
                 "BWA3_G36A3",
                 "BWA3_G36A3_green",
-                "BWA3_G36A3_tan"
+                //"BWA3_G36A3_tan"
                 };
             primaryWeaponOptics[] = {
                 "BWA3_optic_ZO4x30_MicroT2",
@@ -103,7 +105,7 @@ class Loadouts {
             primaryWeaponPointer[] = {
                 "BWA3_acc_LLM01_irlaser_tan",
                 "BWA3_acc_LLM01_irlaser_green",
-                "BWA3_acc_LLM01_irlaser_tan"
+                //"BWA3_acc_LLM01_irlaser_tan"
                 };
             primaryWeaponMuzzle = "";
             primaryWeaponUnderbarrel = "";
@@ -143,7 +145,7 @@ class Loadouts {
             primaryWeapon[] = {
                 "BWA3_G36A3_AG40",
                 "BWA3_G36A3_AG40_green",
-                "BWA3_G36A3_AG40_tan",
+                //"BWA3_G36A3_AG40_tan",
                 };
             vest = "BWA3_Vest_Grenadier_Fleck";
             addItemsToVest[] += {
@@ -227,11 +229,10 @@ class Loadouts {
 
         //Autorifleman
         class B_soldier_AR_F {
+            vest = "BWA3_Vest_MachineGunner_Fleck";
+
             primaryWeapon = "BWA3_MG4";
             primaryWeaponMagazine = "BWA3_200Rnd_556x45_Tracer";
-
-
-            vest = "BWA3_Vest_Marksman_Fleck";
 
             addItemsToVest[] += {
                 LIST_2("BWA3_200Rnd_556x45_Tracer"),
@@ -243,18 +244,21 @@ class Loadouts {
 
         //MMG
         class B_HeavyGunner_F {
-            primaryWeapon[] = {"BWA3_MG5","BWA3_MG5_tan"};
+            vest = "BWA3_Vest_MachineGunner_Fleck";
+
+            primaryWeapon[] = {
+                "BWA3_MG5",
+                //"BWA3_MG5_tan"
+                };
             primaryWeaponMagazine = "BWA3_120Rnd_762x51_Tracer_soft";
             primaryWeaponOptics[] = {
                 "BWA3_optic_ZO4x30i",
                 "BWA3_optic_ZO4x30i_MicroT2",
-                "BWA3_optic_ZO4x30i_MicroT2_sand",
+                //"BWA3_optic_ZO4x30i_MicroT2_sand",
                 "BWA3_optic_ZO4x30i_RSAS",
-                "BWA3_optic_ZO4x30i_RSAS_sand",
-                "BWA3_optic_ZO4x30i_sand",
+                //"BWA3_optic_ZO4x30i_RSAS_sand",
+                //"BWA3_optic_ZO4x30i_sand",
             };
-
-            vest = "BWA3_Vest_Marksman_Fleck";
             addItemsToVest[] += {
                 LIST_2("BWA3_120Rnd_762x51_Tracer_soft"),
             };
@@ -440,9 +444,11 @@ class Loadouts {
         //Führung
         class B_Soldier_TL_F {
             vest = "BWA3_Vest_Leader_Fleck";
+            primaryWeaponMagazine = "BWA3_30Rnd_556x45_G36_Tracer";
 
             addItemsToUniform[] += {
                 "ACE_MicroDAGR",
+                "ACE_key_west",
             };
             addItemsToVest[] += {
                 "ItemAndroid",
@@ -492,9 +498,9 @@ class Loadouts {
                         LIST_12("ACE_salineIV"),
                         LIST_6("ACE_salineIV_500"),
                         LIST_6("ACE_salineIV_250"),
-                        LIST_30("ACE_suture"),
-                        LIST_30("ACE_elasticBandage"),
-                        LIST_30("ACE_packingBandage")
+                        LIST_45("ACE_suture"),
+                        LIST_45("ACE_elasticBandage"),
+                        LIST_45("ACE_packingBandage")
                     };
                 };
 
