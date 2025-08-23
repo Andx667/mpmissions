@@ -768,12 +768,12 @@ class Loadouts {
 
                     addItemsToVest[] += {
                         //Diagnostic
-
                         LIST_3("kat_Pulseoximeter"),
                         //Admin
                         "ace_flags_blue",
                         "ACE_SpraypaintBlue",
                         LIST_3("UK3CB_BAF_SmokeShellBlue"),
+                        "ACE_surgicalKit",
                         //Being a Soldier things
                         "ACRE_PRC148",
                         LIST_8("UK3CB_BAF_556_30Rnd"),
@@ -783,25 +783,26 @@ class Loadouts {
                         LIST_45("ACE_packingBandage"),
                         LIST_45("ACE_elasticBandage"),
                         LIST_45("ACE_quikclot"),
-                        LIST_16("ACE_tourniquet"),
+                        LIST_12("ACE_tourniquet"),
                         //A
                         LIST_12("kat_chestSeal"),
                         LIST_12("kat_larynx"),
-                        LIST_12("kat_ncdKit"),
+                        LIST_6("kat_ncdKit"),
                         //R
                         "kat_pocketBVM",
                         //C
-                        LIST_8("ACE_salineIV_250"),
-                        LIST_8("ACE_salineIV_500"),
-                        LIST_12("kat_IV_16"),
+                        LIST_4("ACE_salineIV_250"),
+                        LIST_4("ACE_salineIV_500"),
+                        LIST_6("ACE_salineIV"),
+                        LIST_14("kat_IV_16"),
                         "kat_AED",
                         //H
                         LIST_12("kat_Penthrox"),
-                        LIST_12("kat_naloxone"),
-                        LIST_12("kat_nalbuphine"),
+                        LIST_8("kat_naloxone"),
                         LIST_12("ACE_epinephrine"),
                         LIST_12("kat_Painkiller"),
                         LIST_8("ACE_morphine"),
+                        LIST_5("kat_lidocaine"),
                         "UK3CB_BAF_H_Beret_PR",
                     };
                 };
@@ -844,11 +845,11 @@ class Loadouts {
 
                     addItemsToVest[] = {
                         //Diagnostic
-
                         LIST_3("kat_Pulseoximeter"),
                         //Being a Soldier things
                         LIST_8("UK3CB_BAF_556_30Rnd"),
                         "ItemAndroid",
+                        "ACE_surgicalKit",
                         LIST_2("UK3CB_BAF_9_17Rnd"),
                         LIST_3("UK3CB_BAF_SmokeShellYellow"),
                     };
@@ -872,10 +873,10 @@ class Loadouts {
                         //H
                         LIST_12("kat_Penthrox"),
                         LIST_12("kat_naloxone"),
-                        LIST_12("kat_nalbuphine"),
                         LIST_12("ACE_epinephrine"),
                         LIST_12("kat_Painkiller"),
                         LIST_8("ACE_morphine"),
+                        LIST_5("kat_lidocaine"),
                         //Admin
                         "ACE_Bodybag",
                         "UK3CB_BAF_H_Beret_RM_Parade",
@@ -898,9 +899,6 @@ class Loadouts {
                         "UK3CB_BAF_B_Bergen_MTP_Medic_L_B",
                     };
 
-                    addItemsToVest[] += {
-                        "ACE_surgicalKit",
-                    };
                     addItemsToBackpack[] = {
                         //M
                         LIST_30("ACE_packingBandage"),
@@ -912,7 +910,6 @@ class Loadouts {
                         LIST_6("kat_larynx"),
                         //R
                         "kat_BVM",
-                        "kat_oxygenTank_150",
                         //C
                         "ACE_salineIV_250",
                         LIST_2("ACE_bloodIV_500"),
