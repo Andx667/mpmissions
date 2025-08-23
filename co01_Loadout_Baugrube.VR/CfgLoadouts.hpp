@@ -116,15 +116,26 @@ class Loadouts {
                 "CUP_H_OpsCore_Spray_SF",
                 "CUP_H_OpsCore_Tan_SF",
                 "CUP_H_OpsCore_Green_SF",
+                "CUP_H_OpsCore_Grey_SF",
                 "CFP_OpsC_Cov_Goggles_Off",
                 "CFP_OpsC_Covered",
                 "CFP_OpsC_Covered2",
                 "CFP_OpsC_Painted",
                 "CFP_OpsC_Med",
-                "CFP_OpsC_Uncov_Full",
-                "CFP_OpsC_Uncov_Goggles",
                 "CFP_OpsC_Uncov_Goggle_Off",
                 "CFP_OpsC_Uncovered",
+                "CFP_OpsC_Uncov_Shemagh",
+                "CFP_OpsC_Cov_Goggles_Off_AOR1",
+                "CFP_OpsC_Cov_Goggles_Off_AOR2",
+                "CFP_OpsC_Covered_AOR1",
+                "CFP_OpsC_Covered_AOR2",
+                "CFP_OpsC_Covered2_AOR1",
+                "CFP_OpsC_Covered2_AOR2",
+                "CFP_OpsC_Med_AOR1",
+                "CFP_OpsC_Med_AOR2",
+                //"CFP_OpsC_Uncov_Goggles",
+                //"CFP_OpsC_Uncov_Full",
+                //"CFP_OpsC_Cov_Full",
                 };
 
             addItemsToUniform[] = {
@@ -454,23 +465,25 @@ class Loadouts {
                 "CUP_V_JPC_medicalbelt_mc",
                 "CUP_V_JPC_medicalbelt_rngr",
             };
-            backpack = "CFP_Carryall_Multicam";
+
 
             class Rank {
                 class PRIVATE {
+                    backpack[] = {
+                        "B_AssaultPack_mcamo",
+                        "CFP_AssaultPack_Multicam"
+                    };
                     addItemsToVest[] += {
                         LIST_3("CUP_30Rnd_556x45_PMAG_BLACK_RPL"),
+                        "ACE_SurgicalKit",
                     };
 
                     addItemsToBackpack[] = {
                         LIST_30("ACE_Suture"),
                         LIST_16("ACE_Tourniquet"),
                         LIST_30("ACE_packingBandage"),
-                        LIST_10("ACE_packingBandage"),
                         LIST_30("ACE_elasticBandage"),
-                        LIST_10("ACE_elasticBandage"),
                         LIST_20("ACE_quikclot"),
-                        "ACE_SurgicalKit",
 
                         LIST_16("ACE_Epinephrine"),
                         LIST_8("ACE_Painkillers"),
@@ -479,12 +492,14 @@ class Loadouts {
                         LIST_4("ACE_SalineIV"),
                         LIST_2("ACE_salineIV_500"),
                         LIST_2("ACE_SalineIV_250"),
-
-                        "ACE_Bodybag",
                     };
                 };
 
                 class CORPORAL: PRIVATE {
+                    backpack[] = {
+                        "CFP_Kitbag_MCam_Grn",
+                        "B_Kitbag_mcamo"
+                    };
                     addItemsToVest[] += {
                         "ItemAndroid",
                         "ACRE_PRC152",
@@ -498,13 +513,20 @@ class Loadouts {
                 };
 
                 class SERGEANT: CORPORAL {
+                    backpack[] = {
+                        "CFP_B_USPack_Mcam",
+                        "CFP_B_USPack_OD"
+                    };
                     addItemsToVest[] += {
                         "ace_flags_blue",
                     };
                 };
 
                 class LIEUTENANT: SERGEANT {
-
+                    backpack[] = {
+                        "B_Carryall_mcamo",
+                        "CFP_Carryall_Multicam"
+                    };
                 };
             };
         };

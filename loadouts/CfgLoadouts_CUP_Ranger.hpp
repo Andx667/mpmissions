@@ -44,6 +44,7 @@ class Loadouts {
         "goggles",
         "primaryWeapon",
         "primaryWeaponOptics",
+        "primaryWeaponMuzzle",
     };
 
     class Side {
@@ -63,38 +64,38 @@ class Loadouts {
                 "CFP_75th_CRYE_V3b_Sleeved",
                 "CFP_75th_CRYE_V4_Sleeved",
                 "CFP_75th_CRYE_V4b_Sleeved",
-                //"CUP_U_CRYE_G3C_M81_RGR_US",
-                //"CUP_U_CRYE_G3C_M81_RGR",
-                //"CUP_U_CRYE_G3C_M81_Tan",
                 "CUP_U_CRYE_G3C_MC_US",
-                "CUP_U_CRYE_G3C_MC_V2",
-                "CUP_U_CRYE_G3C_MC_V3",
-                "CUP_U_CRYE_G3C_MC",
-                //"CUP_U_CRYE_G3C_RGR",
                 "CUP_U_CRYE_G3C_RGR_MC_US",
                 "CUP_U_CRYE_G3C_Tan_MC_US",
                 "CUP_U_CRYE_G3C_MC_US_V2",
-                "CUP_U_CRYE_RGR_Full",
-                "CUP_U_CRYE_RGR_Roll",
                 "CUP_U_CRYE_RGR_US_Full",
                 "CUP_U_CRYE_RGR_US_Roll",
                 "CFP_75th_CRYEG3_V2",
                 "CFP_75th_CRYEG3_V2b",
-                "CUP_U_CRYE_G3C_ATACSAU",
-                "CUP_U_CRYE_MCAM_NP_Full",
-                "CUP_U_CRYE_MCAM_NP_Roll",
-                "CUP_U_CRYE_MCAM_NP2_Full",
-                "CUP_U_CRYE_MCAM_NP2_Roll",
                 "CUP_U_CRYE_V1_Full",
                 "CUP_U_CRYE_V2_Full",
                 "CUP_U_CRYE_V3_Full",
                 "CUP_U_CRYE_V1_Roll",
                 "CUP_U_CRYE_V2_Roll",
                 "CUP_U_CRYE_V3_Roll",
-                "CUP_U_CRYE_TAN_Full",
-                "CUP_U_CRYE_TAN_Roll",
                 "CUP_U_CRYE_TAN_US_Full",
                 "CUP_U_CRYE_TAN_US_Roll"
+                //no Flag
+                //"CUP_U_CRYE_G3C_M81_RGR",
+                //"CUP_U_CRYE_G3C_MC_V2",
+                //"CUP_U_CRYE_G3C_MC_V3",
+                //"CUP_U_CRYE_G3C_MC",
+                //"CUP_U_CRYE_TAN_Full",
+                //"CUP_U_CRYE_TAN_Roll",
+                //"CUP_U_CRYE_RGR_Full",
+                //"CUP_U_CRYE_RGR_Roll",
+                //"CUP_U_CRYE_MCAM_NP_Full",
+                //"CUP_U_CRYE_MCAM_NP_Roll",
+                //"CUP_U_CRYE_MCAM_NP2_Full",
+                //"CUP_U_CRYE_MCAM_NP2_Roll",
+                //"CUP_U_CRYE_G3C_ATACSAU",
+                //"CUP_U_CRYE_G3C_RGR",
+                //"CUP_U_CRYE_G3C_M81_Tan",
                 };
             vest = "CUP_V_B_Ciras_MCam";
 
@@ -115,15 +116,26 @@ class Loadouts {
                 "CUP_H_OpsCore_Spray_SF",
                 "CUP_H_OpsCore_Tan_SF",
                 "CUP_H_OpsCore_Green_SF",
+                "CUP_H_OpsCore_Grey_SF",
                 "CFP_OpsC_Cov_Goggles_Off",
                 "CFP_OpsC_Covered",
                 "CFP_OpsC_Covered2",
                 "CFP_OpsC_Painted",
                 "CFP_OpsC_Med",
-                "CFP_OpsC_Uncov_Full",
-                "CFP_OpsC_Uncov_Goggles",
                 "CFP_OpsC_Uncov_Goggle_Off",
                 "CFP_OpsC_Uncovered",
+                "CFP_OpsC_Uncov_Shemagh",
+                "CFP_OpsC_Cov_Goggles_Off_AOR1",
+                "CFP_OpsC_Cov_Goggles_Off_AOR2",
+                "CFP_OpsC_Covered_AOR1",
+                "CFP_OpsC_Covered_AOR2",
+                "CFP_OpsC_Covered2_AOR1",
+                "CFP_OpsC_Covered2_AOR2",
+                "CFP_OpsC_Med_AOR1",
+                "CFP_OpsC_Med_AOR2",
+                //"CFP_OpsC_Uncov_Goggles",
+                //"CFP_OpsC_Uncov_Full",
+                //"CFP_OpsC_Cov_Full",
                 };
 
             addItemsToUniform[] = {
@@ -370,7 +382,7 @@ class Loadouts {
             primaryWeaponOptics[] = {
                 "CUP_optic_LeupoldMk4_10x40_LRT_Desert",
                 "CUP_optic_LeupoldMk4_10x40_LRT_Woodland",
-                "CUP_optic_LeupoldMk4",
+                "CUP_optic_LeupoldMk4"
                 };
             primaryWeaponUnderbarrel = "CUP_bipod_Harris_1A2_L_BLK";
 
@@ -380,6 +392,7 @@ class Loadouts {
                 LIST_2("SmokeShell"),
                 "SmokeShellGreen",
                 LIST_2("CUP_17Rnd_9x19_M17_Black"),
+                "ACE_Rangecard",
             };
 
             addItemsToBackpack[] = {
@@ -452,23 +465,25 @@ class Loadouts {
                 "CUP_V_JPC_medicalbelt_mc",
                 "CUP_V_JPC_medicalbelt_rngr",
             };
-            backpack = "CFP_Carryall_Multicam";
+
 
             class Rank {
                 class PRIVATE {
+                    backpack[] = {
+                        "B_AssaultPack_mcamo",
+                        "CFP_AssaultPack_Multicam"
+                    };
                     addItemsToVest[] += {
                         LIST_3("CUP_30Rnd_556x45_PMAG_BLACK_RPL"),
+                        "ACE_SurgicalKit",
                     };
 
                     addItemsToBackpack[] = {
                         LIST_30("ACE_Suture"),
                         LIST_16("ACE_Tourniquet"),
                         LIST_30("ACE_packingBandage"),
-                        LIST_10("ACE_packingBandage"),
                         LIST_30("ACE_elasticBandage"),
-                        LIST_10("ACE_elasticBandage"),
                         LIST_20("ACE_quikclot"),
-                        "ACE_SurgicalKit",
 
                         LIST_16("ACE_Epinephrine"),
                         LIST_8("ACE_Painkillers"),
@@ -477,12 +492,14 @@ class Loadouts {
                         LIST_4("ACE_SalineIV"),
                         LIST_2("ACE_salineIV_500"),
                         LIST_2("ACE_SalineIV_250"),
-
-                        "ACE_Bodybag",
                     };
                 };
 
                 class CORPORAL: PRIVATE {
+                    backpack[] = {
+                        "CFP_Kitbag_MCam_Grn",
+                        "B_Kitbag_mcamo"
+                    };
                     addItemsToVest[] += {
                         "ItemAndroid",
                         "ACRE_PRC152",
@@ -496,13 +513,20 @@ class Loadouts {
                 };
 
                 class SERGEANT: CORPORAL {
+                    backpack[] = {
+                        "CFP_B_USPack_Mcam",
+                        "CFP_B_USPack_OD"
+                    };
                     addItemsToVest[] += {
                         "ace_flags_blue",
                     };
                 };
 
                 class LIEUTENANT: SERGEANT {
-
+                    backpack[] = {
+                        "B_Carryall_mcamo",
+                        "CFP_Carryall_Multicam"
+                    };
                 };
             };
         };
