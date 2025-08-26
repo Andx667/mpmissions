@@ -19,14 +19,7 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
     };
 } forEach allUnits;
 
-{
-    {
-        if (typeof _x == "B_AssaultPack_blk") then {
-            _x addItemCargoGlobal ["ToolKit", 1];
-        };
-    } forEach (everyBackpack _x);
 
-} forEach [fhz_01, fhz_02, fhz_03];
 
 [
     [fhz_01, fhz_02, fhz_03],
@@ -49,7 +42,18 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
         ["1Rnd_Smoke_Grenade_shell", 5],
 
         ["BWA3_G36A3", 1],
+        ["ACE_Wirecutter", 1],
+        ["ACE_EntrenchingTool", 1],
 
         ["B_AssaultPack_blk", 1]
     ]
 ] call ttt_common_fnc_crateFiller;
+
+{
+    {
+        if (typeof _x == "B_AssaultPack_blk") then {
+            _x addItemCargoGlobal ["ToolKit", 1];
+        };
+    } forEach (everyBackpack _x);
+
+} forEach [fhz_01, fhz_02, fhz_03];

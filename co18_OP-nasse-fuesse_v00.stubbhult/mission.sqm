@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=281;
+		nextID=292;
 	};
 	class LayerIndexProvider
 	{
-		nextID=2;
+		nextID=4;
 	};
 	class Camera
 	{
-		pos[]={5974.7246,269.60764,5190.8833};
-		dir[]={-0.59306633,-0.66055995,0.46056786};
-		up[]={-0.52173096,0.75071788,0.40516847};
-		aside[]={0.61340618,-2.139248e-06,0.78988206};
+		pos[]={6284.5854,388.45804,4754.1787};
+		dir[]={0.0052712504,-0.54520988,0.83842522};
+		up[]={0.0034278664,0.8382569,0.54521984};
+		aside[]={1.0000993,-1.7258855e-06,-0.0062852297};
 	};
 };
 binarizationWanted=0;
@@ -45,13 +45,15 @@ addons[]=
 	"CUP_WheeledVehicles_Ural",
 	"CUP_WheeledVehicles_GAZTigr",
 	"CUP_WaterVehicles_Zubr",
-	"CUP_Creatures_StaticWeapons"
+	"CUP_Creatures_StaticWeapons",
+	"ttt_common",
+	"CUP_Weapons_AmmoBoxes"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=16;
+		items=18;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -147,6 +149,18 @@ class AddonsMetaData
 			className="CUP_Creatures_StaticWeapons";
 			name="CUP_Creatures_StaticWeapons";
 		};
+		class Item16
+		{
+			className="ttt_common";
+			name="TTT - Common";
+			author="Tactical Training Team";
+			url="https://tacticalteam.de";
+		};
+		class Item17
+		{
+			className="CUP_Weapons_AmmoBoxes";
+			name="CUP_Weapons_AmmoBoxes";
+		};
 	};
 };
 dlcs[]=
@@ -154,7 +168,8 @@ dlcs[]=
 	"Mark",
 	"ORANGE",
 	"CUP_Units",
-	"CUP_Vehicles"
+	"CUP_Vehicles",
+	"CUP_Weapons"
 };
 randomSeed=10710128;
 class ScenarioData
@@ -163,7 +178,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Scenario";
 		class Attribute0
@@ -868,7 +883,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=69;
+		items=78;
 		class Item0
 		{
 			dataType="Group";
@@ -887,7 +902,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						description="#1 Zugführer";
+						description="#1 Zugführer@Alpha";
 						isPlayer=1;
 						isPlayable=1;
 					};
@@ -1849,7 +1864,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						description="#7 Gruppenführer";
+						description="#7 Gruppenführer@Alpha-1";
 						isPlayable=1;
 					};
 					id=40;
@@ -2812,7 +2827,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						description="#13 Gruppenführer / Stellv. Zugführer";
+						description="#13 Gruppenführer / Stellv. Zugführer@Alpha-3";
 						isPlayable=1;
 					};
 					id=48;
@@ -6500,7 +6515,6 @@ class Mission
 					};
 					id=165;
 					type="CUP_O_INS_Soldier_AK74";
-					atlOffset=-2.3841858e-07;
 				};
 				class Item2
 				{
@@ -6827,13 +6841,12 @@ class Mission
 						position[]={5367.2554,10.331714,7608.6572};
 					};
 					side="East";
-					flags=4;
 					class Attributes
 					{
 					};
 					id=180;
 					type="CUP_O_INS_Soldier_AK74";
-					atlOffset=-2.3841858e-07;
+					atlOffset=7.7502747;
 				};
 				class Item2
 				{
@@ -7653,7 +7666,7 @@ class Mission
 					};
 					id=215;
 					type="CUP_O_INS_Soldier";
-					atlOffset=0.72581816;
+					atlOffset=0.72581792;
 				};
 			};
 			class Attributes
@@ -7709,12 +7722,13 @@ class Mission
 						position[]={5419.311,3.3072567,7643.0503};
 					};
 					side="East";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=219;
 					type="CUP_O_INS_Soldier";
+					atlOffset=0.72581792;
 				};
 			};
 			class Attributes
@@ -8808,6 +8822,154 @@ class Mission
 			};
 			id=260;
 			atlOffset=4.7683716e-07;
+		};
+		class Item69
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6167.106,31.42012,5152.5342};
+				angles[]={0.051620547,0,6.2498641};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=281;
+			type="ttt_common_sanc_crate";
+			atlOffset=1.9073486e-05;
+		};
+		class Item70
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6172.5293,34.161068,5123.3579};
+				angles[]={0.1973955,0,0.073201545};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=282;
+			type="ttt_common_sanc_crate";
+			atlOffset=6.8664551e-05;
+		};
+		class Item71
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6189.9673,36.996941,5123.1963};
+				angles[]={0.30212593,0,0.19739519};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=283;
+			type="ttt_common_sanc_crate";
+			atlOffset=4.5776367e-05;
+		};
+		class Item72
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5580.8696,4.7289171,5505.5308};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=284;
+			type="CUP_BOX_ChDKZ_Wps_F";
+		};
+		class Item73
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5538.6772,4.7162113,5518.0537};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=285;
+			type="CUP_BOX_ChDKZ_Wps_F";
+		};
+		class Item74
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5524.1426,4.5386996,5474.6226};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=286;
+			type="CUP_BOX_ChDKZ_Support_F";
+		};
+		class Item75
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5196.3979,4.3282251,6626.7495};
+				angles[]={-0,1.5685263,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=287;
+			type="CUP_BOX_ChDKZ_AmmoVeh_F";
+		};
+		class Item76
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5307.748,4.1886802,7605.2334};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=288;
+			type="CUP_BOX_ChDKZ_AmmoVeh_F";
+		};
+		class Item77
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5300.6636,4.1886802,7638.1167};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=290;
+			type="CUP_BOX_ChDKZ_AmmoVeh_F";
 		};
 	};
 	class Connections
