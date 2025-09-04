@@ -118,7 +118,7 @@ class Loadouts {
         class B_Soldier_F {
             vest = "CUP_V_B_Eagle_SPC_Rifleman";
             addItemsToVest[] += {
-                LIST_8("CUP_30Rnd_556x45_Stanag"),
+                LIST_7("CUP_30Rnd_556x45_Stanag"),
             };
         };
 
@@ -134,7 +134,7 @@ class Loadouts {
             };
 
             addItemsToBackpack[] = {
-                LIST_2("CUP_200Rnd_TE4_Red_Tracer_556x45_M249"),
+                LIST_1("CUP_200Rnd_TE4_Red_Tracer_556x45_M249"),
                 "ACE_SpareBarrel",
             };
 
@@ -144,7 +144,7 @@ class Loadouts {
             backpack = "CUP_B_USMC_MOLLE";
 
             addItemsToBackpack[] = {
-                LIST_5("CUP_200Rnd_TE4_Red_Tracer_556x45_M249"),
+                LIST_4("CUP_200Rnd_TE4_Red_Tracer_556x45_M249"),
                 "ACE_SpareBarrel",
             };
 
@@ -271,7 +271,7 @@ class Loadouts {
             primaryWeaponMagazine = "CUP_30Rnd_556x45_Stanag_Tracer_Red";
 
             addItemsToVest[] += {
-                LIST_8("CUP_30Rnd_556x45_Stanag_Tracer_Red");
+                LIST_7("CUP_30Rnd_556x45_Stanag_Tracer_Red");
                 "ACRE_PRC148",
             };
 
