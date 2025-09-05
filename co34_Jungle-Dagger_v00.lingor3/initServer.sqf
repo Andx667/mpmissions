@@ -72,7 +72,6 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
 
         ["kat_Penthrox", 5],
         ["kat_naloxone", 5],
-        ["kat_nalbuphine", 5],
         ["ACE_epinephrine", 10],
         ["ACE_morphine", 5],
         ["ACE_Suture", 45]
@@ -93,7 +92,7 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
         ["kat_aatKit", 12],
         ["kat_accuvac", 1],
 
-        ["kat_pocketBVM", 1],
+        ["kat_BVM", 1],
 
         ["ACE_bloodIV_250", 6],
         ["ACE_bloodIV_500", 6],
@@ -103,7 +102,6 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
 
         ["kat_Penthrox", 5],
         ["kat_naloxone", 5],
-        ["kat_nalbuphine", 5],
         ["ACE_epinephrine", 10],
         ["ACE_morphine", 5],
         ["kat_eaca", 10],
@@ -115,6 +113,5 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
         ["ACE_epinephrine", 10],
         ["kat_lidocaine", 10],
         ["ACE_Suture", 50]
-    ],
-    false
+    ]
 ] call ttt_common_fnc_crateFiller;

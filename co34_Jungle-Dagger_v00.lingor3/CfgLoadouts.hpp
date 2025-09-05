@@ -38,17 +38,17 @@ class Loadouts {
     handleRadios = 1;
     resetLoadout = 1;
     randomizationMode = 1;
-    customGear = 300;
+    customGear = -1;
     customGearAllowedCategories[] = {
         //"uniform",
-        "vest",
-        "backpack",
-        "primaryWeapon",
-        "primaryWeaponOptics",
-        "primaryWeaponUnderbarrel",
-        "primaryWeaponPointer",
-        "goggles",
-        "headgear",
+        //"vest",
+        //"backpack",
+        //"primaryWeapon",
+        //"primaryWeaponOptics",
+        //"primaryWeaponUnderbarrel",
+        //"primaryWeaponPointer",
+        //"goggles",
+        //headgear",
     };
 
     class Side {
@@ -1001,6 +1001,9 @@ class Loadouts {
                         "UK3CB_BAF_B_Bergen_MTP_Medic_L_A",
                         "UK3CB_BAF_B_Bergen_MTP_Medic_L_B",
                     };
+                    addItemsToVest[] += {
+                        "ACRE_PRC148",
+                    };
 
                     addItemsToBackpack[] = {
                         //M
@@ -1020,7 +1023,7 @@ class Loadouts {
                         LIST_2("ACE_bloodIV_250"),
                         "kat_X_AED",
                         LIST_6("kat_IV_16"),
-                        LIST_2("kat_IO_FAST"),
+                        LIST_5("kat_IO_FAST"),
                         //H
                         LIST_10("kat_eaca"),
                         LIST_20("kat_TXA"),
@@ -1060,7 +1063,7 @@ class Loadouts {
                         "ACE_salineIV_250",
                         "kat_X_AED",
                         LIST_6("kat_IV_16"),
-                        LIST_2("kat_IO_FAST"),
+                        LIST_5("kat_IO_FAST"),
                         LIST_3("ACE_bloodIV"),
                         //H
                         LIST_5("kat_eaca"),

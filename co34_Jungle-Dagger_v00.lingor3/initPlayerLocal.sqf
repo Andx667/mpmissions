@@ -11,17 +11,19 @@
     * 0: Player <OBJECT>
     * 1: Did JIP <BOOL>
  */
+params ["_player", "_didJIP"];
 
-// Waffe sichern
 // Gegenstück zu [QGVAR(loadoutApplied), [_loadoutTarget, _targetLoadout], _loadoutTarget] call CBA_fnc_targetEvent;
 private _id = [
     "grad_loadout_loadoutApplied",
     {
-        params ["_target", ""];
+        params ["_target"];
 
         [
-            {//Function
+            //Function
+            {
                 params ["_unit"];
+
                 [_unit, currentWeapon _unit, true] call ace_safemode_fnc_setWeaponSafety;
 
                 private _groupID = groupID group _unit;
@@ -72,13 +74,12 @@ private _id = [
             //Args
             [_target],
             //Delay
-            3
+            5
         ] call CBA_fnc_waitAndExecute;
     }
 ] call CBA_fnc_addEventHandler;
 
 //Damit die Insignia auch bei Respawn gesetzt wird
-params ["_player"];
 _player addMPEventHandler ["MPRespawn", {
     params ["_unit", "_corpse"];
     private _insignia = [_corpse] call BIS_fnc_getUnitInsignia;
