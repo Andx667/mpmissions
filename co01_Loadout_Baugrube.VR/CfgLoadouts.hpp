@@ -241,6 +241,7 @@ class Loadouts {
         class B_soldier_AR_F {
             primaryWeapon = "rhs_weap_minimi_para_railed";
             primaryWeaponMagazine = "rhsusf_200Rnd_556x45_mixed_soft_pouch";
+            primaryWeaponUnderBarrel = "rhsusf_acc_grip4_bipod";
 
             vest[] = {
                 //"UK3CB_GAF_B_MBAV_MG_BLK_01",
@@ -455,6 +456,9 @@ class Loadouts {
         };
 
         class B_Soldier_SL_F: B_Soldier_TL_F {
+            secondaryWeapon = "rhs_weap_m72a7";
+            secondaryWeaponPointer = "rhsusf_acc_anpeq15side";
+
             addItemsToBackpack[] += {
                 "ace_flags_red",
             };
@@ -687,6 +691,10 @@ class Loadouts {
 
         //SOF
         class B_recon_F {
+            primaryWeaponMuzzle[] = {
+                "rhsusf_acc_nt4_black",
+                "rhsusf_acc_nt4_tan",
+                };
 
         };
 
