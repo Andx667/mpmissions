@@ -142,6 +142,7 @@ class Loadouts {
                 "UK3CB_G_Tactical_Black",
                 "UK3CB_G_Tactical_Black_Shemagh_Green",
                 "UK3CB_G_Tactical_Black_Shemagh_Tan",
+                ""
                 };
             nvgoggles = "";
 
@@ -241,6 +242,7 @@ class Loadouts {
         class B_soldier_AR_F {
             primaryWeapon = "rhs_weap_minimi_para_railed";
             primaryWeaponMagazine = "rhsusf_200Rnd_556x45_mixed_soft_pouch";
+            primaryWeaponUnderBarrel = "rhsusf_acc_grip4_bipod";
 
             vest[] = {
                 //"UK3CB_GAF_B_MBAV_MG_BLK_01",
@@ -455,6 +457,9 @@ class Loadouts {
         };
 
         class B_Soldier_SL_F: B_Soldier_TL_F {
+            secondaryWeapon = "rhs_weap_m72a7";
+            secondaryWeaponPointer = "rhsusf_acc_anpeq15side";
+
             addItemsToBackpack[] += {
                 "ace_flags_red",
             };
@@ -687,6 +692,10 @@ class Loadouts {
 
         //SOF
         class B_recon_F {
+            primaryWeaponMuzzle[] = {
+                "rhsusf_acc_nt4_black",
+                "rhsusf_acc_nt4_tan",
+                };
 
         };
 
@@ -714,3 +723,47 @@ class Loadouts {
         };
     };
 };
+
+        // switch (typeOf ACE_Player) do
+        // {
+        //     case "B_soldier_exp_F":
+        //         {[
+        //             [
+        //             "UK3CB_BAF_L128A1",                   //Classname der zweiten Waffe
+        //             "",                               //Schalldämpfer oder ähnliches
+        //             "",                  //Laserpointer / Waffenlicht
+        //             "",                     //Optik
+        //             ["UK3CB_BAF_12G_Pellets", 8],   //Magazin mit Anzahl Kugeln
+        //             [],                               //Zweites Magazin (z.B. UGL)
+        //             ""                                 //Zweibein oder ähnliches
+        //             ]
+        //         ] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;};
+
+        //     case "B_soldier_M_F":
+        //         {[
+        //             [
+        //             "UK3CB_ACR_Crew",                   //Classname der zweiten Waffe
+        //             "",                               //Schalldämpfer oder ähnliches
+        //             "ACE_DBAL_A3_Red",                  //Laserpointer / Waffenlicht
+        //             "rhsusf_acc_T1_high",                     //Optik
+        //             ["UK3CB_ACR_30rnd_556x45", 30],   //Magazin mit Anzahl Kugeln
+        //             [],                               //Zweites Magazin (z.B. UGL)
+        //             ""                                 //Zweibein oder ähnliches
+        //             ]
+        //         ] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;};
+
+        //     case "B_Soldier_GL_F":
+        //         {[
+        //             [
+        //             "rhs_weap_m32",                   //Classname der zweiten Waffe
+        //             "",                               //Schalldämpfer oder ähnliches
+        //             "rhsusf_acc_anpeq15side",                  //Laserpointer / Waffenlicht
+        //             "",                     //Optik
+        //             ["rhsusf_mag_6Rnd_M441_HE", 6],   //Magazin mit Anzahl Kugeln
+        //             [],                               //Zweites Magazin (z.B. UGL)
+        //             ""                                 //Zweibein oder ähnliches
+        //             ]
+        //         ] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;};
+
+        //     default {};
+        // };

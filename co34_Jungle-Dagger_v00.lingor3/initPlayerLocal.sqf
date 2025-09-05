@@ -17,7 +17,7 @@ params ["_player", "_didJIP"];
 private _id = [
     "grad_loadout_loadoutApplied",
     {
-        params ["_target"];
+        params ["_target",""];
 
         [
             //Function

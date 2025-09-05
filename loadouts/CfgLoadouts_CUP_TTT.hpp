@@ -247,6 +247,9 @@ class Loadouts {
         };
 
         class B_soldier_mine_F: B_Soldier_F {
+            uniform = "ttt_Uniform_Blue_BW_Flecktarn";
+            vest = "ttt_Vest_Heavy_Blue_US_Desert";
+            headgear = "ttt_Beret_Bronze";
 
             class Rank {
 
@@ -263,6 +266,20 @@ class Loadouts {
 
         //Fahrzeugbesatzung
         class B_crew_F {
+            uniform = "ttt_Uniform_Bronze_BW_Flecktarn";
+            vest = "ttt_Vest_Crew_Bronze";
+            headgear = "ttt_Beret_Bronze";
+
+            primaryWeapon[] = {
+                "CUP_arifle_ACRC_blk_556",
+                "CUP_arifle_ACRC_snw_556",
+                "CUP_arifle_ACRC_tan_556",
+                "CUP_arifle_ACRC_wdl_556",
+            };
+
+            addItemsToBackpack[] += {
+                "ttt_Helmet_Bronze_Vehiclecrew",
+            };
 
             class Rank {
                 class PRIVATE {
@@ -286,7 +303,12 @@ class Loadouts {
 
         //Mörser
         class B_support_AMort_F: B_Soldier_F {
-
+            primaryWeapon[] = {
+                "CUP_arifle_ACRC_blk_556",
+                "CUP_arifle_ACRC_snw_556",
+                "CUP_arifle_ACRC_tan_556",
+                "CUP_arifle_ACRC_wdl_556",
+            };
         };
 
         class B_support_Mort_F: B_support_AMort_F {
@@ -305,7 +327,9 @@ class Loadouts {
 
         //Pilots
         class B_helicrew_F {
-
+            uniform = "ttt_Uniform_Silver_BW_Flecktarn";
+            vest = "ttt_Vest_Crew_Silver";
+            headgear = "ttt_Beret_Silver";
         };
 
         class B_Helipilot_F: B_helicrew_F{
@@ -314,7 +338,9 @@ class Loadouts {
 
         //Aufklärer
         class B_Patrol_Soldier_TL_F: B_soldier_M_F {
-
+            uniform = "ttt_Uniform_Gold_BW_Flecktarn";
+            vest = "ttt_Vest_Lite_Gold_US_Desert";
+            headgear = "ttt_Beret_Gold";
         };
 
         class B_Patrol_Soldier_UAV_F: B_soldier_M_F {
@@ -353,11 +379,22 @@ class Loadouts {
                 };
 
                 class CORPORAL: PRIVATE {
+                    uniform = "ttt_Uniform_Brown_BW_Flecktarn";
+                    vest = "ttt_Vest_Heavy_Brown_US_Desert";
+                    headgear = "ttt_Beret_Brown";
 
+                    primaryWeapon[] = {
+                        "CUP_arifle_ACRC_blk_556",
+                        "CUP_arifle_ACRC_snw_556",
+                        "CUP_arifle_ACRC_tan_556",
+                        "CUP_arifle_ACRC_wdl_556",
+                    };
                 };
 
                 class SERGEANT: CORPORAL {
-
+                    uniform = "ttt_Uniform_White_BW_Flecktarn";
+                    vest = "ttt_Vest_Crew_White";
+                    headgear = "ttt_Beret_White";
                 };
 
                 class LIEUTENANT: SERGEANT {
@@ -367,6 +404,16 @@ class Loadouts {
         };
 
         class B_soldier_repair_F: B_Soldier_F {
+            uniform = "ttt_Uniform_Silver_BW_Flecktarn";
+            vest = "ttt_Vest_Crew_Silver";
+            headgear = "ttt_Beret_Silver";
+
+            primaryWeapon[] = {
+                "CUP_arifle_ACRC_blk_556",
+                "CUP_arifle_ACRC_snw_556",
+                "CUP_arifle_ACRC_tan_556",
+                "CUP_arifle_ACRC_wdl_556",
+            };
 
             class Rank {
 
@@ -381,7 +428,9 @@ class Loadouts {
 
         //SOF
         class B_recon_F {
-
+            uniform = "ttt_Uniform_Grey_BW_Flecktarn";
+            vest = "ttt_Vest_Lite_Grey_US_Desert";
+            headgear = "ttt_Beret_Gold";
         };
 
         class B_recon_LAT_F: B_recon_F {

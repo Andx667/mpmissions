@@ -12,8 +12,7 @@
     * 1: Did JIP <BOOL>
  */
 
-// Hier wird das Briefing automatisch eingefügt und ausgeführt
-#include "briefing.sqf"
+params ["_player"];
 
 // Waffe sichern
 // Gegenstück zu [QGVAR(loadoutApplied), [_loadoutTarget, _unitLoadout], _loadoutTarget] call CBA_fnc_targetEvent;
@@ -31,55 +30,11 @@ private _id = [
             //Delay
             3
         ] call CBA_fnc_waitAndExecute;
-
-        switch (typeOf ACE_Player) do
-        {
-            case "B_soldier_exp_F":
-                {[
-                    [
-                    "UK3CB_BAF_L128A1",                   //Classname der zweiten Waffe
-                    "",                               //Schalldämpfer oder ähnliches
-                    "",                  //Laserpointer / Waffenlicht
-                    "",                     //Optik
-                    ["UK3CB_BAF_12G_Pellets", 8],   //Magazin mit Anzahl Kugeln
-                    [],                               //Zweites Magazin (z.B. UGL)
-                    ""                                 //Zweibein oder ähnliches
-                    ]
-                ] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;};
-
-            case "B_soldier_M_F":
-                {[
-                    [
-                    "UK3CB_ACR_Crew",                   //Classname der zweiten Waffe
-                    "",                               //Schalldämpfer oder ähnliches
-                    "ACE_DBAL_A3_Red",                  //Laserpointer / Waffenlicht
-                    "rhsusf_acc_T1_high",                     //Optik
-                    ["UK3CB_ACR_30rnd_556x45", 30],   //Magazin mit Anzahl Kugeln
-                    [],                               //Zweites Magazin (z.B. UGL)
-                    ""                                 //Zweibein oder ähnliches
-                    ]
-                ] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;};
-
-            case "B_Soldier_GL_F":
-                {[
-                    [
-                    "rhs_weap_m32",                   //Classname der zweiten Waffe
-                    "",                               //Schalldämpfer oder ähnliches
-                    "rhsusf_acc_anpeq15side",                  //Laserpointer / Waffenlicht
-                    "",                     //Optik
-                    ["rhsusf_mag_6Rnd_M441_HE", 6],   //Magazin mit Anzahl Kugeln
-                    [],                               //Zweites Magazin (z.B. UGL)
-                    ""                                 //Zweibein oder ähnliches
-                    ]
-                ] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;};
-
-            default {};
-        };
     }
 ] call CBA_fnc_addEventHandler;
 
 //Damit die Insignia auch bei Respawn gesetzt wird
-params ["_player"];
+
 _player addMPEventHandler ["MPRespawn", {
 	params ["_unit", "_corpse"];
 	private _insignia = [_corpse] call BIS_fnc_getUnitInsignia;
