@@ -118,7 +118,7 @@ class Loadouts {
         class B_Soldier_F {
             vest = "CUP_V_B_Eagle_SPC_Rifleman";
             addItemsToVest[] += {
-                LIST_7("CUP_30Rnd_556x45_Stanag"),
+                LIST_6("CUP_30Rnd_556x45_Stanag"),
             };
         };
 
@@ -271,7 +271,7 @@ class Loadouts {
             primaryWeaponMagazine = "CUP_30Rnd_556x45_Stanag_Tracer_Red";
 
             addItemsToVest[] += {
-                LIST_7("CUP_30Rnd_556x45_Stanag_Tracer_Red");
+                LIST_6("CUP_30Rnd_556x45_Stanag_Tracer_Red");
                 "ACRE_PRC148",
             };
 
@@ -410,7 +410,25 @@ class Loadouts {
                 };
 
                 class SERGEANT: CORPORAL {
+                    addItemsToBackpack[] = {
+                            LIST_30("ACE_Suture"),
+                            LIST_12("ACE_Tourniquet"),
+                            LIST_30("ACE_packingBandage"),
+                            LIST_30("ACE_elasticBandage"),
+                            LIST_30("ACE_elasticBandage"),
+                            LIST_20("ACE_quikclot"),
 
+                            LIST_12("ACE_Epinephrine"),
+                            LIST_8("ACE_Painkillers"),
+                            LIST_8("ACE_morphine"),
+
+                            LIST_8("ACE_SalineIV"),
+                            LIST_4("ACE_salineIV_500"),
+                            LIST_4("ACE_SalineIV_250"),
+
+                            "ACE_Bodybag",
+                            "ACRE_PRC117F"
+                    };
                 };
             };
         };
