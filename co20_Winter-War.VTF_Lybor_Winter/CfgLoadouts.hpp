@@ -74,7 +74,7 @@ class Loadouts {
                 "CFP_CarrierRig_Operator_OGA",
                 "CFP_FAPC_Operator_OGA",
             };
-            backpack = "";
+            backpack = "NOR_Predator_Backpack";
             headgear[] = {
                 //Regular used by Home Guard
                 //"NOR_Helmet_Comms",
@@ -109,7 +109,9 @@ class Loadouts {
                 "ACRE_PRC152",
                 LIST_3("Chemlight_red"),
             };
-            addItemsToBackpack[] = {};
+            addItemsToBackpack[] = {
+                LIST_8("CUP_30Rnd_556x45_PMAG_BLACK"),
+            };
 
             primaryWeapon[] = {
                 "CUP_arifle_HK416_Black",
@@ -121,7 +123,7 @@ class Loadouts {
             primaryWeaponUnderbarrel = "";
             primaryWeaponUnderbarrelMagazine = "";
             primaryWeaponPointer = "ACE_DBAL_A3_Red";
-            secondaryWeapon = "";
+            secondaryWeapon = "BWA3_RGW90_Loaded";
             secondaryWeaponMagazine = "";
             handgunWeapon[] = {
                 "CUP_hgun_Glock17",
@@ -209,9 +211,11 @@ class Loadouts {
             };
 
             addItemsToBackpack[] += {
-                LIST_8("CUP_6Rnd_12Gauge_Pellets_No00_Buck"),
+                //LIST_8("CUP_6Rnd_12Gauge_Pellets_No00_Buck"),
                 LIST_3("tsp_breach_block_mag"),
                 LIST_3("tsp_breach_package_mag"),
+                LIST_3("Democharge_Mag"),
+                "ACE_Wirecutter",
             };
 
             goggles[] = {

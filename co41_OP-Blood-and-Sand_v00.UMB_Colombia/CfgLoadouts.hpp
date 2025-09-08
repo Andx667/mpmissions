@@ -422,9 +422,9 @@ class Loadouts {
                             LIST_8("ACE_Painkillers"),
                             LIST_8("ACE_morphine"),
 
-                            LIST_8("ACE_SalineIV"),
-                            LIST_4("ACE_salineIV_500"),
-                            LIST_4("ACE_SalineIV_250"),
+                            LIST_6("ACE_SalineIV"),
+                            LIST_3("ACE_salineIV_500"),
+                            LIST_3("ACE_SalineIV_250"),
 
                             "ACE_Bodybag",
                             "ACRE_PRC117F"
