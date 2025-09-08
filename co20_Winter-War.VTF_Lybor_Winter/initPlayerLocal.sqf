@@ -12,8 +12,7 @@
     * 1: Did JIP <BOOL>
  */
 
-// Hier wird das Briefing automatisch eingefügt und ausgeführt
-#include "briefing.sqf"
+params ["_player", "_didJIP"];
 
 // Waffe sichern
 // Gegenstück zu [QGVAR(loadoutApplied), [_loadoutTarget, _unitLoadout], _loadoutTarget] call CBA_fnc_targetEvent;

@@ -11,21 +11,22 @@
     * 0: Player <OBJECT>
     * 1: Did JIP <BOOL>
  */
-params ["_player", "_didJIP"];
+ params ["_player", "_didJIP"];
 
-// Gegenstück zu [QGVAR(loadoutApplied), [_loadoutTarget, _targetLoadout], _loadoutTarget] call CBA_fnc_targetEvent;
-private _id = [
+// Waffe sichern
+// Gegenstück zu [QGVAR(loadoutApplied), [_loadoutTarget, _unitLoadout], _loadoutTarget] call CBA_fnc_targetEvent;
+[
     "grad_loadout_loadoutApplied",
     {
-        params ["_target","_loadout"];
+        params ["_target", "_loadout"];
 
         [
-            //Function
             {
                 params ["_unit"];
 
                 [_unit, currentWeapon _unit, true] call ace_safemode_fnc_setWeaponSafety;
 
+                //Change callsign to mission
                 private _groupID = groupID group _unit;
                 switch (_groupID) do {
                     case "Bulldog": {
@@ -52,18 +53,15 @@ private _id = [
                     case "B_soldier_exp_F": {
                         [
                             [
-                            "UK3CB_BAF_L128A1",             //Classname der zweiten Waffe
+                            "",                             //Classname der zweiten Waffe
                             "",                             //Schalldämpfer oder ähnliches
                             "",                             //Laserpointer / Waffenlicht
                             "",                             //Optik
-                            ["UK3CB_BAF_12G_Pellets", 8],   //Magazin mit Anzahl Kugeln
+                            [""],                         //Magazin mit Anzahl Kugeln
                             [],                             //Zweites Magazin (z.B. UGL)
                             ""                              //Zweibein oder ähnliches
                             ]
                         ] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;
-
-                        private _backpack = unitBackpack _unit;
-                        _backpack setObjectTextureGlobal [1, ""]; //hide the Shotgun on the backpack
                     };
                     case "B_helicrew_F";
                     case "B_Helipilot_F": {
