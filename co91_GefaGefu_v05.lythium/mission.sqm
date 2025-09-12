@@ -1,0 +1,5871 @@
+version=54;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=1.5707964;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	mods[]=
+	{
+		"3denEnhanced"
+	};
+	class ItemIDProvider
+	{
+		nextID=159;
+	};
+	class LayerIndexProvider
+	{
+		nextID=1;
+	};
+	class Camera
+	{
+		pos[]={12006.208,82.022881,2225.7524};
+		dir[]={-0.062793054,-0.67270279,0.73724937};
+		up[]={-0.057088926,0.73991263,0.67027718};
+		aside[]={0.99639797,1.4551915e-08,0.084865019};
+	};
+};
+binarizationWanted=0;
+sourceName="co91_GefaGefu_v05";
+addons[]=
+{
+	"A3_Characters_F",
+	"A3_Characters_F_Tank",
+	"A3_Characters_F_Mark",
+	"ace_explosives",
+	"FIR_PilotCrewPack_US",
+	"ace_gforces",
+	"ace_nouniformrestrictions",
+	"ace_parachute",
+	"cfp_uniforms",
+	"A3_Supplies_F_Heli_Slingload",
+	"ace_cargo",
+	"A3_Structures_F_Civ_InfoBoards",
+	"A3_Structures_F_Mil_Helipads",
+	"ttt_signs",
+	"A3_Modules_F_Curator_Curator",
+	"A3_Ui_F",
+	"KJW_TwoPrimaryWeapons"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=16;
+		class Item0
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Characters_F_Tank";
+			name="Arma 3 Tank - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Characters_F_Mark";
+			name="Arma 3 Marksmen - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="ace_explosives";
+			name="ACE3 - Explosives";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item4
+		{
+			className="FIR_PilotCrewPack_US";
+			name="FIR_PilotCrewPack_US";
+		};
+		class Item5
+		{
+			className="ace_nouniformrestrictions";
+			name="ACE3 - No Uniform Restrictions";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item6
+		{
+			className="ace_parachute";
+			name="ACE3 - Parachute";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item7
+		{
+			className="cfp_uniforms";
+			name="cfp_uniforms";
+			author="CFP Team";
+		};
+		class Item8
+		{
+			className="A3_Supplies_F_Heli";
+			name="Arma 3 Helicopters - Ammoboxes and Supplies";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item9
+		{
+			className="ace_cargo";
+			name="ACE3 - Cargo";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item10
+		{
+			className="A3_Structures_F";
+			name="Arma 3 - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item11
+		{
+			className="A3_Structures_F_Mil";
+			name="Arma 3 - Military Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item12
+		{
+			className="ttt_signs";
+			name="TTT - Signs";
+			author="Tactical Training Team";
+			url="https://tacticalteam.de";
+		};
+		class Item13
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item14
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item15
+		{
+			className="KJW_TwoPrimaryWeapons";
+			name="KJW_TwoPrimaryWeapons";
+			author="KJW";
+		};
+	};
+};
+dlcs[]=
+{
+	"Mark",
+	"Heli"
+};
+randomSeed=13643089;
+class ScenarioData
+{
+	author="&x";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		wavesForced=1;
+		windForced=1;
+		year=2015;
+		month=10;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Entities
+	{
+		items=1;
+		class Item0
+		{
+			dataType="Layer";
+			name="Spawn";
+			class Entities
+			{
+				items=67;
+				class Item0
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=5;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12037.569,26.127522,2257.0364};
+								angles[]={0,0.0052792975,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_ZugF""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#1 Zugführer@Infanterie Zugführung ""Grün""";
+								isPlayable=1;
+							};
+							id=2;
+							type="B_officer_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male05ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12037.553,26.127666,2254.9368};
+								angles[]={0,0.004337071,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_StZugF""];" \n "this setVariable [""helm"", ""2""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#2 Stellv. Zugführer";
+								isPlayable=1;
+							};
+							id=3;
+							type="B_Soldier_SL_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male08ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.02;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12037.533,26.1278,2253.0305};
+								angles[]={0,6.2765274,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Funker""];" \n "this setVariable [""helm"", ""3""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#3 Funker";
+								isPlayable=1;
+							};
+							id=4;
+							type="B_Soldier_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male02ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.04;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12037.521,26.127863,2250.9768};
+								angles[]={0,6.2533493,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_FO""];" \n "this setVariable [""helm"", ""4""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#4 Forward Observer";
+								isPlayable=1;
+							};
+							id=5;
+							type="B_Soldier_TL_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male02ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.97000003;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12037.501,26.207033,2248.9944};
+								angles[]={0,6.2819896,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_JTAC""];" \n "this setVariable [""helm"", ""5""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#5 Joint-Terminal-Attack-Controller";
+								isPlayable=1;
+							};
+							id=6;
+							type="B_Soldier_TL_F";
+							atlOffset=0.078977585;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male03ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.97000003;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=1;
+				};
+				class Item1
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=9;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12040.572,26.130754,2257.01};
+								angles[]={0,0.024253601,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_GF""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#1 Gruppenführer@Infanteriegruppe ""Grün-1""";
+								isPlayable=1;
+							};
+							id=8;
+							type="B_Soldier_SL_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male11ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12039.56,26.127689,2255.0364};
+								angles[]={0,0.065790407,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_TF""];" \n "this setVariable [""helm"", ""2""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#2 Truppführer";
+								isPlayable=1;
+							};
+							id=9;
+							type="B_Soldier_SL_F";
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12039.608,26.127831,2253.0256};
+								angles[]={0,0.0010731372,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_LMG""];" \n "this setVariable [""helm"", ""3""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#3 LMG-Schütze";
+								isPlayable=1;
+							};
+							id=10;
+							type="B_soldier_AR_F";
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12039.603,26.127968,2251.0618};
+								angles[]={0,0.029749103,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Gren""];" \n "this setVariable [""helm"", ""4""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#4 Grenadier";
+								isPlayable=1;
+							};
+							id=11;
+							type="B_Soldier_GL_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male01ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.02;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12039.553,26.128176,2249.0803};
+								angles[]={0,6.2684112,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_AT""];" \n "this setVariable [""helm"", ""5""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#5 AT-Schütze";
+								isPlayable=1;
+							};
+							id=12;
+							type="B_soldier_LAT2_F";
+							atlOffset=-1.9073486e-06;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male11ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.01;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12041.562,26.136414,2255.0256};
+								angles[]={0,6.2756205,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_TF""];" \n "this setVariable [""helm"", ""6""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#6 Truppführer";
+								isPlayable=1;
+							};
+							id=13;
+							type="B_Soldier_TL_F";
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12041.556,26.136526,2252.9875};
+								angles[]={0,0.011231628,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_LMG""];" \n "this setVariable [""helm"", ""7""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#7 LMG-Schütze";
+								isPlayable=1;
+							};
+							id=14;
+							type="B_soldier_AR_F";
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12041.57,26.136747,2251.0051};
+								angles[]={0,6.282547,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Gren""];" \n "this setVariable [""helm"", ""8""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#8 Grenadier";
+								isPlayable=1;
+							};
+							id=15;
+							type="B_Soldier_GL_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male08ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12041.536,26.136671,2249.0471};
+								angles[]={0,0.022801602,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_DMR""];" \n "this setVariable [""helm"", ""9""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#9 DMR-Schütze";
+								isPlayable=1;
+							};
+							id=16;
+							type="B_soldier_M_F";
+							atlOffset=1.9073486e-06;
+						};
+					};
+					class Attributes
+					{
+					};
+					id=7;
+				};
+				class Item2
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=9;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12044.573,26.153147,2256.9778};
+								angles[]={0,0.024253601,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_GF""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#1 Gruppenführer@Infanteriegruppe ""Grün-2""";
+								isPlayable=1;
+							};
+							id=18;
+							type="B_Soldier_SL_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male07ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.97000003;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12043.58,26.147684,2255.0227};
+								angles[]={0,0.065790407,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_TF""];" \n "this setVariable [""helm"", ""2""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#2 Truppführer";
+								isPlayable=1;
+							};
+							id=19;
+							type="B_Soldier_SL_F";
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12043.634,26.148125,2253.009};
+								angles[]={0,0.0010731372,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_LMG""];" \n "this setVariable [""helm"", ""3""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#3 LMG-Schütze";
+								isPlayable=1;
+							};
+							id=20;
+							type="B_soldier_AR_F";
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12043.623,26.148201,2251.0442};
+								angles[]={0,0.029749103,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Gren""];" \n "this setVariable [""helm"", ""4""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#4 Grenadier";
+								isPlayable=1;
+							};
+							id=21;
+							type="B_Soldier_GL_F";
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12043.571,26.148031,2249.0647};
+								angles[]={0,6.2684112,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_AT""];" \n "this setVariable [""helm"", ""5""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#5 AT-Schütze";
+								isPlayable=1;
+							};
+							id=22;
+							type="B_soldier_LAT2_F";
+							atlOffset=1.9073486e-06;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male12ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.01;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12045.583,26.158888,2255.0149};
+								angles[]={0,6.2756205,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_TF""];" \n "this setVariable [""helm"", ""6""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#6 Truppführer";
+								isPlayable=1;
+							};
+							id=23;
+							type="B_Soldier_TL_F";
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12045.579,26.158989,2252.9729};
+								angles[]={0,0.011231628,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_LMG""];" \n "this setVariable [""helm"", ""7""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#7 LMG-Schütze";
+								isPlayable=1;
+							};
+							id=24;
+							type="B_soldier_AR_F";
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12045.592,26.159195,2250.9963};
+								angles[]={0,6.282547,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Gren""];" \n "this setVariable [""helm"", ""8""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#8 Grenadier";
+								isPlayable=1;
+							};
+							id=25;
+							type="B_Soldier_GL_F";
+						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12045.554,26.225506,2249.0237};
+								angles[]={0,0.022801602,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_DMR""];" \n "this setVariable [""helm"", ""9""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#9 DMR-Schütze";
+								isPlayable=1;
+							};
+							id=26;
+							type="B_soldier_M_F";
+							atlOffset=0.066408157;
+						};
+					};
+					class Attributes
+					{
+					};
+					id=17;
+				};
+				class Item3
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=9;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12048.567,26.175589,2256.9446};
+								angles[]={0,0.024253601,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_GF""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#1 Gruppenführer@Infanteriegruppe ""Grün-3""";
+								isPlayable=1;
+							};
+							id=28;
+							type="B_Soldier_SL_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male11ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.94999999;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12047.58,26.170107,2254.9924};
+								angles[]={0,0.065790407,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_TF""];" \n "this setVariable [""helm"", ""2""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#2 Truppführer";
+								isPlayable=1;
+							};
+							id=29;
+							type="B_Soldier_SL_F";
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12047.633,26.170469,2252.9749};
+								angles[]={0,0.0010731372,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_LMG""];" \n "this setVariable [""helm"", ""3""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#3 LMG-Schütze";
+								isPlayable=1;
+							};
+							id=30;
+							type="B_soldier_AR_F";
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12047.626,26.170547,2251.0129};
+								angles[]={0,0.029749103,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Gren""];" \n "this setVariable [""helm"", ""4""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#4 Grenadier";
+								isPlayable=1;
+							};
+							id=31;
+							type="B_Soldier_GL_F";
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12047.577,26.170389,2249.0266};
+								angles[]={0,6.2684112,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_AT""];" \n "this setVariable [""helm"", ""5""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#5 AT-Schütze";
+								isPlayable=1;
+							};
+							id=32;
+							type="B_soldier_LAT2_F";
+							atlOffset=1.9073486e-06;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male08ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12049.579,26.181334,2254.9797};
+								angles[]={0,6.2756205,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_TF""];" \n "this setVariable [""helm"", ""6""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#6 Truppführer";
+								isPlayable=1;
+							};
+							id=33;
+							type="B_Soldier_TL_F";
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12049.575,26.181383,2252.9485};
+								angles[]={0,0.011231628,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_LMG""];" \n "this setVariable [""helm"", ""7""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#7 LMG-Schütze";
+								isPlayable=1;
+							};
+							id=34;
+							type="B_soldier_AR_F";
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12049.593,26.181555,2250.9602};
+								angles[]={0,6.282547,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Gren""];" \n "this setVariable [""helm"", ""8""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#8 Grenadier";
+								isPlayable=1;
+							};
+							id=35;
+							type="B_Soldier_GL_F";
+						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12049.561,26.181465,2248.9934};
+								angles[]={0,0.022801602,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_DMR""];" \n "this setVariable [""helm"", ""9""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#9 DMR-Schütze";
+								isPlayable=1;
+							};
+							id=36;
+							type="B_soldier_M_F";
+							atlOffset=1.9073486e-06;
+						};
+					};
+					class Attributes
+					{
+					};
+					id=27;
+				};
+				class Item4
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=9;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12052.569,26.185291,2256.9143};
+								angles[]={0,6.2808585,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_GF""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#1 Gruppenführer@Schwere Infanteriegruppe ""Grün-4""";
+								isPlayable=1;
+							};
+							id=38;
+							type="B_Soldier_SL_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male10ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.01;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12051.521,26.184685,2254.886};
+								angles[]={0,6.269702,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_MMG""];" \n "this setVariable [""helm"", ""2""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#2 MMG-Schütze [Marksman-DLC]";
+								isPlayable=1;
+							};
+							id=39;
+							type="B_HeavyGunner_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male10ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.95999998;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12051.51,26.184744,2252.9504};
+								angles[]={0,0.0011947158,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_MMGA""];" \n "this setVariable [""helm"", ""3""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#3 MMG-Assistent";
+								isPlayable=1;
+							};
+							id=40;
+							type="B_Soldier_A_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male08ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12051.556,26.184841,2250.9788};
+								angles[]={0,0.013988712,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_MMG""];" \n "this setVariable [""helm"", ""4""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#4 MMG-Schütze [Marksman-DLC]";
+								isPlayable=1;
+							};
+							id=41;
+							type="B_HeavyGunner_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male01ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.01;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12051.518,26.185303,2249.0168};
+								angles[]={0,0.0081598172,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_MMGA""];" \n "this setVariable [""helm"", ""5""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#5 MMG-Assistent";
+								isPlayable=1;
+							};
+							id=42;
+							type="B_Soldier_A_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male12ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12053.559,26.186003,2254.8293};
+								angles[]={0,0.062212206,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_HAT""];" \n "this setVariable [""helm"", ""6""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#6 Schwerer AT-Schütze";
+								isPlayable=1;
+							};
+							id=43;
+							type="B_soldier_AT_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male04ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.98000002;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12053.55,26.186064,2252.9075};
+								angles[]={0,0.026798984,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_HATA""];" \n "this setVariable [""helm"", ""7""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#7 Schwerer AT-Assistent";
+								isPlayable=1;
+							};
+							id=44;
+							type="B_soldier_AAT_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male12ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.01;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12053.521,26.186111,2250.9358};
+								angles[]={0,0.052874744,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_HAT""];" \n "this setVariable [""helm"", ""8""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#8 Schwerer AT-Schütze";
+								isPlayable=1;
+							};
+							id=45;
+							type="B_soldier_AA_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male02ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.95999998;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12053.469,26.186577,2248.9807};
+								angles[]={0,0.015926603,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_HATA""];" \n "this setVariable [""helm"", ""9""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""green""];";
+								description="#9 Schwerer AT-Assistent";
+								isPlayable=1;
+							};
+							id=46;
+							type="B_soldier_AAT_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male12ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.95999998;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=37;
+				};
+				class Item5
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=5;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12033.508,26.12746,2257.0745};
+								angles[]={0,0.04664351,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Blau_Pio_GF""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""blue""];";
+								description="#1 Pionier Truppführer@Pioniertrupp ""Blau""";
+								isPlayable=1;
+							};
+							id=48;
+							type="B_Soldier_SL_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male06ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.99000001;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12033.495,26.127523,2255.0403};
+								angles[]={0,6.2793026,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Blau_Pio""];" \n "this setVariable [""helm"", ""2""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""blue""];";
+								description="#2 Kampfpionier";
+								isPlayable=1;
+							};
+							id=49;
+							type="B_soldier_exp_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male09ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.03;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12033.478,26.127558,2253.0891};
+								angles[]={0,6.2777305,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Blau_Pio""];" \n "this setVariable [""helm"", ""3""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""blue""];";
+								description="#3 Kampfpionier";
+								isPlayable=1;
+							};
+							id=50;
+							type="B_soldier_exp_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male02ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.99000001;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12033.459,26.127594,2251.0754};
+								angles[]={0,6.2605205,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Blau_Pio""];" \n "this setVariable [""helm"", ""4""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""blue""];";
+								description="#4 Kampfpionier";
+								isPlayable=1;
+							};
+							id=51;
+							type="B_soldier_exp_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male10ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.01;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12033.441,26.127768,2249.1008};
+								angles[]={0,6.2617254,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Blau_Pio""];" \n "this setVariable [""helm"", ""5""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""blue""];";
+								description="#5 Kampfpionier";
+								isPlayable=1;
+							};
+							id=52;
+							type="B_soldier_exp_F";
+							atlOffset=-1.9073486e-06;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male05ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.99000001;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=47;
+				};
+				class Item6
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=2;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12029.567,26.123377,2257.1125};
+								angles[]={0,0.015979016,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Gold_TF""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""gold""];";
+								description="#1 Aufklärer Truppführer@Aufklärertrupp ""Gold-1""";
+								isPlayable=1;
+							};
+							id=54;
+							type="B_Soldier_TL_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male12ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.94999999;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12029.549,26.123247,2255.1184};
+								angles[]={0,0.024861081,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Gold_UAV""];" \n "this setVariable [""helm"", ""2""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""gold""];";
+								description="#2 Aufklärer Drohnenbediener";
+								isPlayable=1;
+							};
+							id=55;
+							type="B_soldier_UAV_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male12ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.02;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=53;
+				};
+				class Item7
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=2;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12031.567,26.127357,2257.0881};
+								angles[]={0,0.018875379,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Gold_Spotter""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""gold""];";
+								description="#1 Spotter@Scharfschützentrupp ""Gold-2""";
+								isPlayable=1;
+							};
+							id=57;
+							type="B_spotter_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male02ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.02;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12031.554,26.127396,2255.0715};
+								angles[]={0,0.0090839919,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Gold_Sniper""];" \n "this setVariable [""helm"", ""2""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""gold""];";
+								description="#2 Scharfschütze";
+								isPlayable=1;
+							};
+							id=58;
+							type="B_sniper_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male02ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.95999998;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=56;
+				};
+				class Item8
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=3;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12026.342,26.094385,2259.0315};
+								angles[]={0,0.0054886169,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setVariable [""helm"", ""1""];" \n "this setVariable [""loadout"", ""TTT_Braun_Arzt""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""brown""];";
+								description="#1 Arzt@Beweglicher Arzt-Trupp ""Braun""";
+								isPlayable=1;
+							};
+							id=60;
+							type="B_Soldier_TL_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male03ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.99000001;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12026.287,26.093941,2256.9749};
+								angles[]={0,0.030516384,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""helm"", ""2""];" \n "this setVariable [""loadout"", ""TTT_Braun_Sani""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""brown""];";
+								description="#2 Sanitäter";
+								isPlayable=1;
+							};
+							id=61;
+							type="B_medic_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male01ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.04;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12026.243,26.09358,2255.0139};
+								angles[]={0,0.067657731,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""helm"", ""3""];" \n "this setVariable [""loadout"", ""TTT_Braun_Sani""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""brown""];";
+								description="#3 Sanitäter";
+								isPlayable=1;
+							};
+							id=62;
+							type="B_medic_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male02ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.03;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=59;
+				};
+				class Item9
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=3;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12056.643,26.184263,2258.0862};
+								angles[]={0,4.729373,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								rank="CAPTAIN";
+								init="this setVariable [""loadout"", ""TTT_Bronze_Commander""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""bronze""];";
+								description="#1 Kommandant@Gepanzerte Kräfte ""Bronze-1""";
+								isPlayable=1;
+							};
+							id=64;
+							type="B_Soldier_SL_F";
+							atlOffset=-1.9073486e-06;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male12ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.01;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12058.701,26.184019,2258.0647};
+								angles[]={0,4.7374544,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Bronze_Crew""];" \n "this setVariable [""helm"", ""2""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""bronze""];";
+								description="#2 Richtschütze";
+								isPlayable=1;
+							};
+							id=65;
+							type="B_crew_F";
+							atlOffset=-1.9073486e-06;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male07ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.05;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12060.521,26.183426,2258.054};
+								angles[]={0,4.6634874,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Bronze_Crew""];" \n "this setVariable [""helm"", ""3""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""bronze""];";
+								description="#3 Kraftfahrer";
+								isPlayable=1;
+							};
+							id=66;
+							type="B_crew_F";
+						};
+					};
+					class Attributes
+					{
+					};
+					id=63;
+					atlOffset=-1.9073486e-06;
+				};
+				class Item10
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=3;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12056.646,26.181873,2260.0852};
+								angles[]={0,4.729373,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Bronze_Commander""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""bronze""];";
+								description="#1 Kommandant@Gepanzerte Kräfte ""Bronze-2""";
+								isPlayable=1;
+							};
+							id=68;
+							type="B_Soldier_SL_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male01ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12058.704,26.182081,2260.0647};
+								angles[]={0,4.7374544,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Bronze_Crew""];" \n "this setVariable [""helm"", ""2""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""bronze""];";
+								description="#2 Richtschütze";
+								isPlayable=1;
+							};
+							id=69;
+							type="B_crew_F";
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12060.532,26.182098,2260.0491};
+								angles[]={0,4.6634874,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Bronze_Crew""];" \n "this setVariable [""helm"", ""3""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""bronze""];";
+								description="#3 Kraftfahrer";
+								isPlayable=1;
+							};
+							id=70;
+							type="B_crew_F";
+							atlOffset=1.9073486e-06;
+						};
+					};
+					class Attributes
+					{
+					};
+					id=67;
+				};
+				class Item11
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=3;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12056.662,26.136106,2262.0842};
+								angles[]={0,4.729373,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Bronze_Commander""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""bronze""];";
+								description="#1 Kommandant@Gepanzerte Kräfte ""Bronze-3""";
+								isPlayable=1;
+							};
+							id=72;
+							type="B_Soldier_SL_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male01ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.01;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12058.723,26.141325,2262.0676};
+								angles[]={0,4.7374544,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Bronze_Crew""];" \n "this setVariable [""helm"", ""2""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""bronze""];";
+								description="#2 Richtschütze";
+								isPlayable=1;
+							};
+							id=73;
+							type="B_crew_F";
+							atlOffset=1.9073486e-06;
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12060.552,26.150057,2262.051};
+								angles[]={0,4.6634874,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Bronze_Crew""];" \n "this setVariable [""helm"", ""3""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""bronze""];";
+								description="#3 Kraftfahrer";
+								isPlayable=1;
+							};
+							id=74;
+							type="B_crew_F";
+						};
+					};
+					class Attributes
+					{
+						formation="LINE";
+					};
+					id=71;
+				};
+				class Item12
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=3;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12056.677,26.095089,2264.092};
+								angles[]={0,4.729373,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Bronze_Commander""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""bronze""];";
+								description="#1 Kommandant@Gepanzerte Kräfte ""Bronze-4""";
+								isPlayable=1;
+							};
+							id=76;
+							type="B_Soldier_SL_F";
+							atlOffset=1.9073486e-06;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male11ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.05;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12058.739,26.109446,2264.0657};
+								angles[]={0,4.7374544,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Bronze_Crew""];" \n "this setVariable [""helm"", ""2""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""bronze""];";
+								description="#2 Richtschütze";
+								isPlayable=1;
+							};
+							id=77;
+							type="B_crew_F";
+							atlOffset=1.9073486e-06;
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12060.567,26.117954,2264.0559};
+								angles[]={0,4.6634874,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Bronze_Crew""];" \n "this setVariable [""helm"", ""3""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""bronze""];";
+								description="#3 Kraftfahrer";
+								isPlayable=1;
+							};
+							id=78;
+							type="B_crew_F";
+						};
+					};
+					class Attributes
+					{
+					};
+					id=75;
+					atlOffset=1.9073486e-06;
+				};
+				class Item13
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12056.707,26.046907,2267.1145};
+								angles[]={0,4.7578721,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Platin_Jet""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""platinum""];";
+								description="#1 Jet-Pilot@Luftnahunterstützung ""Platin-1""";
+								isPlayable=1;
+							};
+							id=80;
+							type="B_Pilot_F";
+							atlOffset=1.9073486e-06;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male08ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.01;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=79;
+					atlOffset=1.9073486e-06;
+				};
+				class Item14
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12056.807,26.015593,2269.1125};
+								angles[]={0,4.7747669,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Platin_Jet""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""platinum""];";
+								description="#1 Jet-Pilot@Luftnahunterstützung ""Platin-2""";
+								isPlayable=1;
+							};
+							id=82;
+							type="B_Pilot_F";
+							atlOffset=1.9073486e-06;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male06ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.95999998;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=81;
+					atlOffset=1.9073486e-06;
+				};
+				class Item15
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=6;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12024.341,26.076426,2259.0735};
+								angles[]={0,0.023596851,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Weis_Pilot""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""white""];";
+								description="#1 Co-Pilot@Air MedEvac ""Weiß""";
+								isPlayable=1;
+							};
+							id=84;
+							type="B_Helipilot_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male06ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.03;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12024.291,26.076015,2256.9895};
+								angles[]={0,0.023596851,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Weis_Pilot""];" \n "this setVariable [""helm"", ""2""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""white""];";
+								description="#2 Pilot";
+								isPlayable=1;
+							};
+							id=85;
+							type="B_Helipilot_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male09ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.98000002;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12024.242,26.075737,2255.0413};
+								angles[]={0,0.023596851,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Weis_Arzt""];" \n "this setVariable [""helm"", ""3""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""white""];";
+								description="#3 Arzt (Long Range)";
+								isPlayable=1;
+							};
+							id=86;
+							type="B_medic_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male05ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.04;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12024.198,26.075722,2252.9797};
+								angles[]={0,0.023596851,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Weis_Arzt2""];" \n "this setVariable [""helm"", ""4""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""white""];";
+								description="#4 Arzt";
+								isPlayable=1;
+							};
+							id=87;
+							type="B_medic_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male05ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.99000001;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12024.146,26.075619,2250.97};
+								angles[]={0,0.023596851,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Weis_Sani""];" \n "this setVariable [""helm"", ""5""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""white""];";
+								description="#5 Sanitäter";
+								isPlayable=1;
+							};
+							id=88;
+							type="B_medic_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male03ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.99000001;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12024.102,26.075415,2249.0042};
+								angles[]={0,0.023596851,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Weis_Sani""];" \n "this setVariable [""helm"", ""6""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""white""];";
+								description="#6 Sanitäter";
+								isPlayable=1;
+							};
+							id=89;
+							type="B_medic_F";
+							atlOffset=1.9073486e-06;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male11ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.02;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=83;
+				};
+				class Item16
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=4;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12020.341,26.040609,2259.1731};
+								angles[]={0,0.019678343,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Silber_Pilot""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""silver""];";
+								description="#1 Co-Pilot@Logistik ""Silber-1""";
+								isPlayable=1;
+							};
+							id=91;
+							type="B_Helipilot_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male11ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.03;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12020.294,26.040575,2257.0833};
+								angles[]={0,6.2723374,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Silber_Pilot""];" \n "this setVariable [""helm"", ""2""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""silver""];";
+								description="#2 Pilot";
+								isPlayable=1;
+							};
+							id=92;
+							type="B_Helipilot_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male02ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.98000002;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12020.249,26.040537,2255.0891};
+								angles[]={0,0.017584054,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Silber_Logi""];" \n "this setVariable [""helm"", ""3""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""silver""];";
+								description="#3 Logistiker";
+								isPlayable=1;
+							};
+							id=93;
+							type="B_engineer_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male01ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.97000003;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12020.193,26.040432,2252.9749};
+								angles[]={0,0.011719942,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Silber_Logi""];" \n "this setVariable [""helm"", ""4""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""silver""];";
+								description="#4 Logistiker";
+								isPlayable=1;
+							};
+							id=94;
+							type="B_engineer_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male10ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.97000003;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=90;
+				};
+				class Item17
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=4;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12022.34,26.05847,2259.1301};
+								angles[]={0,0.019678343,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Silber_Pilot""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""silver""];";
+								description="#1 Co-Pilot@Logistik ""Silber-2""";
+								isPlayable=1;
+							};
+							id=96;
+							type="B_Helipilot_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male07ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.01;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12022.294,26.058207,2257.0334};
+								angles[]={0,6.2723374,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Silber_Pilot""];" \n "this setVariable [""helm"", ""2""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""silver""];";
+								description="#2 Pilot";
+								isPlayable=1;
+							};
+							id=97;
+							type="B_Helipilot_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male02ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.98000002;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12022.247,26.058136,2255.1643};
+								angles[]={0,0.062683322,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Silber_Logi""];" \n "this setVariable [""helm"", ""3""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""silver""];";
+								description="#3 Logistiker";
+								isPlayable=1;
+							};
+							id=98;
+							type="B_engineer_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male02ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12022.2,26.058098,2253.0979};
+								angles[]={0,6.260643,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_Silber_Logi""];" \n "this setVariable [""helm"", ""4""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""silver""];";
+								description="#4 Logistiker";
+								isPlayable=1;
+							};
+							id=99;
+							type="B_engineer_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male08ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.01;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=95;
+				};
+				class Item18
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=10;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12044.772,25.944588,2275.3772};
+								angles[]={0,3.1731308,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_zeus""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""yellow""];";
+								name="zeus_01";
+								description="#1 Zeus / Trainer@Zeus";
+								isPlayer=1;
+								isPlayable=1;
+							};
+							id=101;
+							type="B_Competitor_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.95999998;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12042.668,25.941122,2275.4485};
+								angles[]={0,3.1731308,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_zeus""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""yellow""];";
+								name="zeus_02";
+								description="#2 Zeus / Trainer";
+								isPlayable=1;
+							};
+							id=102;
+							type="B_Competitor_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.05;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12040.776,25.937973,2275.5061};
+								angles[]={0,3.1731308,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_zeus""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""yellow""];";
+								name="zeus_03";
+								description="#3 Zeus / Trainer";
+								isPlayable=1;
+							};
+							id=103;
+							type="B_Competitor_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.01;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12038.629,25.936501,2275.5764};
+								angles[]={0,3.1731308,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_zeus""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""yellow""];";
+								name="zeus_04";
+								description="#4 Zeus / Trainer";
+								isPlayable=1;
+							};
+							id=104;
+							type="B_Competitor_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.04;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12036.673,25.936249,2275.634};
+								angles[]={0,3.1731308,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_zeus""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""yellow""];";
+								name="zeus_05";
+								description="#5 Zeus / Trainer";
+								isPlayable=1;
+							};
+							id=105;
+							type="B_Competitor_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.99000001;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12034.747,25.935999,2275.6897};
+								angles[]={0,3.1731308,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_zeus""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""yellow""];";
+								name="zeus_06";
+								description="#6 Zeus / Trainer";
+								isPlayable=1;
+							};
+							id=106;
+							type="B_Competitor_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.99000001;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12032.711,25.935661,2275.7571};
+								angles[]={0,3.1731308,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_zeus""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""yellow""];";
+								name="zeus_07";
+								description="#7 Zeus / Trainer";
+								isPlayable=1;
+							};
+							id=107;
+							type="B_Competitor_F";
+							atlOffset=1.9073486e-06;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.05;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12030.772,25.93535,2275.8176};
+								angles[]={0,3.1731308,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_zeus""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""yellow""];";
+								name="zeus_08";
+								description="#8 Zeus / Trainer";
+								isPlayable=1;
+							};
+							id=108;
+							type="B_Competitor_F";
+							atlOffset=3.2424927e-05;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.03;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12028.76,25.928082,2275.884};
+								angles[]={0,3.1731308,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_zeus""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""yellow""];";
+								name="zeus_09";
+								description="#9 Zeus / Trainer";
+								isPlayable=1;
+							};
+							id=109;
+							type="B_Competitor_F";
+							atlOffset=1.9073486e-06;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.04;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item9
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={12026.719,25.916393,2275.9495};
+								angles[]={0,3.1731308,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								init="this setVariable [""loadout"", ""TTT_zeus""];" \n "this setVariable [""helm"", ""1""];" \n "this setVariable [""tarn"", ""BW_Flecktarn""];" \n "this setVariable [""farbe"", ""yellow""];";
+								name="zeus_10";
+								description="#10 Zeus / Trainer";
+								isPlayable=1;
+							};
+							id=110;
+							type="B_Competitor_F";
+							atlOffset=1.9073486e-06;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.99000001;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=100;
+				};
+				class Item19
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11997.855,27.270725,2261.6174};
+						angles[]={0.00048828125,0.034482639,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						name="container_01";
+					};
+					id=111;
+					type="B_Slingload_01_Cargo_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ammoBox";
+							expression="[_this,_value] call bis_fnc_initAmmoBox;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item20
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11998.179,26.697664,2268.8088};
+						angles[]={0,4.7293816,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=112;
+					type="Land_Noticeboard_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="pictures\teleporter_ca.paa";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isMedicalFacility";
+							expression="_this setVariable [""ace_medical_isMedicalFacility"", _value, true];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item21
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11998.47,26.695572,2272.7932};
+						angles[]={0.0010918301,4.7101178,6.282495};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{[this,""spawn_sammelplatz"",""Ground""] call Redd_fnc_spawner;}";
+						disableSimulation=1;
+					};
+					id=113;
+					type="Land_Noticeboard_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="pictures\fzg_ca.paa";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isMedicalFacility";
+							expression="_this setVariable [""ace_medical_isMedicalFacility"", _value, true];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item22
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11999.266,26.699459,2264.0813};
+						angles[]={0,4.7431502,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						name="nummer_01";
+						disableSimulation=1;
+					};
+					id=114;
+					type="Land_Noticeboard_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="pictures\ausruestung_ca.paa";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isMedicalFacility";
+							expression="_this setVariable [""ace_medical_isMedicalFacility"", _value, true];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item23
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12012.282,25.87742,2278.2227};
+						angles[]={0.00048828125,1.5758733,-0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=115;
+					type="Land_JumpTarget_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isMedicalFacility";
+							expression="_this setVariable [""ace_medical_isMedicalFacility"", _value, true];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item24
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11998.502,29.883278,2268.2893};
+						angles[]={0,0.90114468,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						name="flag_sammelplatz";
+					};
+					id=116;
+					type="ttt_Flag_Logo";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedicalFacility";
+							expression="_this setVariable [""ace_medical_isMedicalFacility"", _value, true];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item25
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12033.51,26.917931,2248.0188};
+						angles[]={0,3.1501446,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=117;
+					type="ttt_Sign_Small_Blue";
+					atlOffset=-1.9073486e-06;
+				};
+				class Item26
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12026.029,26.882404,2247.926};
+						angles[]={0,3.1700637,0.0088094128};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=118;
+					type="ttt_Sign_Small_Brown";
+					atlOffset=1.9073486e-06;
+				};
+				class Item27
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12061.706,26.972408,2258.0129};
+						angles[]={0.00077204045,1.5793546,6.2823396};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=119;
+					type="ttt_Sign_Small_Bronze";
+				};
+				class Item28
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12061.712,26.971247,2260.0305};
+						angles[]={0.016005818,1.5793546,-0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=120;
+					type="ttt_Sign_Small_Bronze";
+				};
+				class Item29
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12061.73,26.938236,2262.092};
+						angles[]={0.016005818,1.5793556,-0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=121;
+					type="ttt_Sign_Small_Bronze";
+				};
+				class Item30
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12061.787,26.907267,2264.0256};
+						angles[]={0.016005818,1.5793546,-0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=122;
+					type="ttt_Sign_Small_Bronze";
+				};
+				class Item31
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12029.487,26.912882,2248.0608};
+						angles[]={0,3.1501534,0.0088094128};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=123;
+					type="ttt_Sign_Small_Gold";
+					atlOffset=1.9073486e-06;
+				};
+				class Item32
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12031.504,26.917728,2248.0383};
+						angles[]={0,3.1501446,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=124;
+					type="ttt_Sign_Small_Gold";
+				};
+				class Item33
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11996.422,26.698889,2264.2053};
+						angles[]={0,1.5387561,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=125;
+					type="ttt_Sign_Small_Grey";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isMedicalFacility";
+							expression="_this setVariable [""ace_medical_isMedicalFacility"", _value, true];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item34
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12037.471,26.918198,2247.9885};
+						angles[]={0,3.1501458,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=126;
+					type="ttt_Sign_Small_Green";
+					atlOffset=-1.9073486e-06;
+				};
+				class Item35
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12040.491,26.921059,2247.9641};
+						angles[]={0,3.1501458,0.0054591573};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=127;
+					type="ttt_Sign_Small_Green";
+				};
+				class Item36
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12044.493,26.943211,2247.9319};
+						angles[]={0,3.1642654,0.0055672699};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=128;
+					type="ttt_Sign_Small_Green";
+					atlOffset=1.9073486e-06;
+				};
+				class Item37
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12048.49,26.965525,2247.8909};
+						angles[]={0,3.1501458,0.0055672699};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=129;
+					type="ttt_Sign_Small_Green";
+					atlOffset=1.9073486e-06;
+				};
+				class Item38
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12052.492,26.976404,2247.8635};
+						angles[]={0.00034526698,3.1501458,0.00059801998};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=130;
+					type="ttt_Sign_Small_Green";
+				};
+				class Item39
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12061.706,26.859154,2267.0325};
+						angles[]={0.016005818,1.6240234,-0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=131;
+					type="ttt_Sign_Small_Platinum";
+				};
+				class Item40
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12061.737,26.836815,2268.9495};
+						angles[]={0.0038291984,1.6240234,0.011875447};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=132;
+					type="ttt_Sign_Small_Platinum";
+				};
+				class Item41
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12020.062,26.829985,2248.012};
+						angles[]={0,3.2071788,0.0087210098};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=133;
+					type="ttt_Sign_Small_Silver";
+				};
+				class Item42
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12022.031,26.847168,2247.9788};
+						angles[]={0,3.2071834,0.0088094128};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=134;
+					type="ttt_Sign_Small_Silver";
+					atlOffset=1.9073486e-06;
+				};
+				class Item43
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12024.336,26.867481,2247.9631};
+						angles[]={0,3.1750748,0.0088094128};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=135;
+					type="ttt_Sign_Small_White";
+					atlOffset=1.9073486e-06;
+				};
+				class Item44
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={12007.558,26.005495,2261.387};
+						angles[]={0.00034526698,0.41117111,0.012756288};
+					};
+					name="redd";
+					id=136;
+					type="ModuleCurator_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="76561198126639841";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleInfo";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item45
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={12007.298,26.002748,2258.8948};
+						angles[]={0,0.82891464,0.012751615};
+					};
+					name="reimchen";
+					id=137;
+					type="ModuleCurator_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="76561198043435836";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Der King | Reimchen";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleInfo";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item46
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={12007.415,26.004084,2260.2102};
+						angles[]={0.00034526698,0.82891464,0.012756288};
+					};
+					name="spec";
+					id=138;
+					type="ModuleCurator_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="76561197981528537";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleInfo";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item47
+				{
+					dataType="Marker";
+					position[]={12037.307,25.935961,2270.761};
+					name="marker_sammelplatz";
+					text="Sammelplatz";
+					type="b_hq";
+					colorName="ColorWEST";
+					id=139;
+				};
+				class Item48
+				{
+					dataType="Marker";
+					position[]={12012.16,40.375423,2278.0469};
+					name="spawn_sammelplatz";
+					text="spawn_sammelplatz";
+					type="Empty";
+					angle=319.92764;
+					id=140;
+					atlOffset=14.4979;
+				};
+				class Item49
+				{
+					dataType="Marker";
+					position[]={12001.758,25.931299,2261.9915};
+					name="teleport_sammelplatz";
+					text="teleport_sammelplatz";
+					type="Empty";
+					angle=188.12047;
+					id=141;
+				};
+				class Item50
+				{
+					dataType="Comment";
+					class PositionInfo
+					{
+						position[]={12078.816,213.48123,2226.5442};
+						angles[]={0,0.0058128717,0};
+					};
+					title="#admin Logged/Voted";
+					id=142;
+					atlOffset=187.25491;
+				};
+				class Item51
+				{
+					dataType="Comment";
+					class PositionInfo
+					{
+						position[]={12072.501,213.49298,2226.802};
+						angles[]={0,0.0058128717,0};
+					};
+					title="HC";
+					id=143;
+					atlOffset=185.02107;
+				};
+				class Item52
+				{
+					dataType="Comment";
+					class PositionInfo
+					{
+						position[]={12050.329,213.21153,2224.2698};
+						angles[]={0,0.0058128717,0};
+					};
+					title="Zeuse";
+					id=144;
+					atlOffset=187.02695;
+				};
+				class Item53
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={12019.917,26.037199,2253.4612};
+						angles[]={0,0.005810502,-0};
+					};
+					name="hc_01";
+					isPlayable=1;
+					id=145;
+					type="HeadlessClient_F";
+					atlOffset=1.9073486e-06;
+				};
+				class Item54
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={12028.159,26.109364,2253.385};
+						angles[]={0,0.0058114561,0.0089703295};
+					};
+					id=146;
+					type="ModuleCurator_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#adminLogged";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item55
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={12024.765,26.079199,2253.3499};
+						angles[]={0,0.0058128717,0.0088094128};
+					};
+					id=147;
+					type="ModuleCurator_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#adminVoted";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item56
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={11998.415,26.13909,2275.7659};
+						angles[]={0.0010918301,1.5678462,6.282495};
+					};
+					id=148;
+					type="ModuleCurator_F";
+					atlOffset=0.23825073;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="zeus_01";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item57
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={11998.425,25.903086,2273.7639};
+						angles[]={0.0010918301,1.5678462,6.282495};
+					};
+					id=149;
+					type="ModuleCurator_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="zeus_02";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item58
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={11998.426,25.90534,2271.7629};
+						angles[]={0.0010918301,1.5678462,6.282495};
+					};
+					id=150;
+					type="ModuleCurator_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="zeus_03";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item59
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={11998.435,25.905964,2269.7668};
+						angles[]={0,1.5678465,0};
+					};
+					id=151;
+					type="ModuleCurator_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="zeus_04";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item60
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={11998.443,25.906641,2267.7649};
+						angles[]={0,1.5678488,0};
+					};
+					id=152;
+					type="ModuleCurator_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="zeus_05";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item61
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={11998.446,25.907314,2265.7659};
+						angles[]={0,1.5678488,0};
+					};
+					id=153;
+					type="ModuleCurator_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="zeus_06";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item62
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={11998.448,25.907988,2263.7678};
+						angles[]={0,1.5678504,0};
+					};
+					id=154;
+					type="ModuleCurator_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="zeus_07";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item63
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={11998.46,25.908663,2261.7668};
+						angles[]={0,1.5678469,0};
+					};
+					id=155;
+					type="ModuleCurator_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="zeus_08";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item64
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={11998.464,25.909613,2259.7629};
+						angles[]={0.00034526698,1.5678819,0};
+					};
+					id=156;
+					type="ModuleCurator_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="zeus_09";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item65
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={11998.47,25.910467,2257.7629};
+						angles[]={0.00034526698,1.5678748,0};
+					};
+					id=157;
+					type="ModuleCurator_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="zeus_10";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item66
+				{
+					dataType="Marker";
+					position[]={12002.527,25.941835,2259.509};
+					name="respawn";
+					text="Respawn";
+					type="Empty";
+					angle=9.3204317;
+					id=158;
+					atlOffset=-1.9073486e-06;
+				};
+			};
+			id=0;
+			atlOffset=0.019863129;
+		};
+	};
+};

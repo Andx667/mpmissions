@@ -124,7 +124,6 @@ class Loadouts {
 
         class B_soldier_AR_F {
             vest = "CUP_V_B_Eagle_SPC_AR";
-            backpack = "CUP_B_USMC_MOLLE";
 
             primaryWeapon = "CUP_lmg_M249_E2";
             primaryWeaponMagazine = "CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
@@ -132,12 +131,6 @@ class Loadouts {
             addItemsToVest[] += {
                 LIST_2("CUP_200Rnd_TE4_Red_Tracer_556x45_M249"),
             };
-
-            addItemsToBackpack[] = {
-                LIST_1("CUP_200Rnd_TE4_Red_Tracer_556x45_M249"),
-                "ACE_SpareBarrel",
-            };
-
         };
 
         class B_soldier_AAR_F: B_Soldier_F {
