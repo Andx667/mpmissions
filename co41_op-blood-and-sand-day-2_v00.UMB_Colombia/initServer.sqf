@@ -24,9 +24,14 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
 ACE_maxWeightCarry = 750; //wie schwer kann man Tragen
 ACE_maxWeightDrag = 1750;  //wie schwer kann man ziehen
 
+{
+    [_x, true] call ace_dragging_fnc_setCarryable;
+    [_x, true] call ace_dragging_fnc_setDraggable;
+} forEach [cargoNet_01, cargoNet_02, cargoNet_03, cargoNet_04];
+
 // Fahrzeuge allgemein
 [
-    [fhz_log_01, fhz_log_02, fhz_med_01, fhz_med_02],
+    [fhz_log_01, fhz_log_02, fhz_med_01, fhz_med_02, heli_01, heli_02, car_01],
     [
         ["B_AssaultPack_blk", 1],
         ["Toolkit", 1]
@@ -52,8 +57,7 @@ ACE_maxWeightDrag = 1750;  //wie schwer kann man ziehen
         ["CUP_200Rnd_TE4_Red_Tracer_556x45_M249", 25],
         ["ACE_20Rnd_762x51_M118LR_Mag", 8],
         ["ACE_20Rnd_762x51_Mag_Tracer", 8]
-    ],
-    true
+    ]
 ] call ttt_common_fnc_crateFiller;
 
 [
@@ -66,50 +70,36 @@ ACE_maxWeightDrag = 1750;  //wie schwer kann man ziehen
         ["CUP_1Rnd_HEDP_M203", 12],
         ["CUP_1Rnd_SmokeRed_M203", 12],
         ["CUP_1Rnd_Smoke_M203", 12]
-    ],
-    true
+    ]
 ] call ttt_common_fnc_crateFiller;
 
 [
     [launcher_01, launcher_02, launcher_03, launcher_04],
     [
-        ["CUP_SMAW_HEAA_M", 4],
-        ["CUP_SMAW_HEDP_M", 4],
-        ["CUP_SMAW_Spotting", 5]
-    ],
-    true
+        ["CUP_launch_M72A6", 3]
+    ]
 ] call ttt_common_fnc_crateFiller;
 
 [
-    [pio_01],
+    [pio_01, pio_02],
     [
-        ["ACE_M14", 10]
+        ["tsp_breach_block_mag", 6],
+        ["tsp_breach_package_mag", 6]
     ],
     false
 ] call ttt_common_fnc_crateFiller;
 
 [
-    [boat_01, boat_02],
+    [weapons_01, weapons_02, weapons_03],
     [
-        ["Tookit", 1]
-    ],
-    true
+        ["CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M", 10],
+        ["ACE_Sparebarrel", 1],
+        ["CUP_SMAW_HEAA_M", 4],
+        ["CUP_SMAW_HEDP_M", 4],
+        ["CUP_SMAW_Spotting", 5]
+    ]
 ] call ttt_common_fnc_crateFiller;
 
 {
-    [_x, fhz_log_02, true] call ace_cargo_fnc_loadItem;
-} forEach [
-    ammo_01, ammo_02, ammo_03, ammo_04, ammo_05, ammo_06, ammo_07, ammo_08, ammo_09, ammo_10, ammo_11,
-    grenades_01, grenades_02, grenades_03, grenades_04, grenades_05, grenades_06, grenades_07, grenades_08, grenades_09, grenades_10, grenades_11,
-    launcher_01, launcher_02, launcher_03, launcher_04,
-    pio_01,
-    vba_01,
-    vbt_01, vbt_02, vbt_03, vbt_04, vbt_05
-];
-
-{
     [_x, fhz_med_02, true] call ace_cargo_fnc_loadItem;
-} forEach [
-    vba_02,
-    vbt_06
-];
+} forEach [vba_02, vbt_06];

@@ -31,7 +31,8 @@ if !(isNil "CLib_fnc_loadModules") then {call CLib_fnc_loadModules;};
     [_x, "TTT", 11, "label", "Alpha-1"] call acre_api_fnc_setPresetChannelField;         // 1. Gruppe
     [_x, "TTT", 12, "label", "Alpha-2"] call acre_api_fnc_setPresetChannelField;         // 2. Gruppe
     [_x, "TTT", 13, "label", "Alpha-3"] call acre_api_fnc_setPresetChannelField;         // 3. Gruppe
-
+    [_x, "TTT", 14, "label", "Mike"] call acre_api_fnc_setPresetChannelField;         // Medics
+    [_x, "TTT", 15, "label", "Lima"] call acre_api_fnc_setPresetChannelField;         // Logistics
     [_x, "TTT"] call acre_api_fnc_setPreset;
 } forEach ["ACRE_PRC148", "ACRE_PRC152", "ACRE_PRC117F"];
 

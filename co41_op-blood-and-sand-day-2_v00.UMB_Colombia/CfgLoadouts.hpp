@@ -29,6 +29,8 @@
 #define LIST_28(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
 #define LIST_29(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
 #define LIST_30(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_45(var1) LIST_30(var1),LIST_15(var1)
+#define LIST_60(var1) LIST_30(var1),LIST_30(var1)
 
 class Loadouts {
     baseDelay = 1;
@@ -54,10 +56,10 @@ class Loadouts {
                 "CUP_U_B_USMC_MCCUU_gloves",
                 "CUP_U_B_USMC_MCCUU_pads",
                 "CUP_U_B_USMC_MCCUU_pads_gloves",
-                "CUP_U_B_USMC_MCCUU_roll",
-                "CUP_U_B_USMC_MCCUU_roll_gloves",
-                "CUP_U_B_USMC_MCCUU_roll_pads",
-                "CUP_U_B_USMC_MCCUU_roll_pads_gloves",
+                //"CUP_U_B_USMC_MCCUU_roll",
+                //"CUP_U_B_USMC_MCCUU_roll_gloves",
+                //"CUP_U_B_USMC_MCCUU_roll_pads",
+                //"CUP_U_B_USMC_MCCUU_roll_pads_gloves",
                 "CUP_U_B_USMC_MCCUU_roll_2",
                 "CUP_U_B_USMC_MCCUU_roll_2_gloves",
                 "CUP_U_B_USMC_MCCUU_roll_2_pads",
@@ -66,7 +68,7 @@ class Loadouts {
                 //DESERT
             };
             vest = "CUP_V_B_Eagle_SPC_Rifleman";
-            backpack = "";
+            backpack = "CFP_AssaultPack_Marpat";
             headgear[] = {
                 "CUP_H_LWHv2_MARPAT",
                 "CUP_H_LWHv2_MARPAT_NVG_gog2_cov2",
@@ -92,8 +94,8 @@ class Loadouts {
 
             primaryWeapon = "CUP_arifle_M16A4_Grip";
             primaryWeaponMagazine = "CUP_30Rnd_556x45_Stanag";
-            primaryWeaponOptics = "CUP_optic_ACOG2";
-            primaryWeaponPointer = "";
+            primaryWeaponOptics = "CUP_optic_ACOG_TA31_KF";
+            primaryWeaponPointer = "CUP_acc_ANPEQ_15_Flashlight_Tan_L";
             primaryWeaponUnderbarrel = "";
             primaryWeaponUnderbarrelMagazine = "";
             secondaryWeapon = "";
@@ -118,7 +120,7 @@ class Loadouts {
         class B_Soldier_F {
             vest = "CUP_V_B_Eagle_SPC_Rifleman";
             addItemsToVest[] += {
-                LIST_6("CUP_30Rnd_556x45_Stanag"),
+                LIST_8("CUP_30Rnd_556x45_Stanag"),
             };
         };
 
@@ -129,6 +131,9 @@ class Loadouts {
             primaryWeaponMagazine = "CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
 
             addItemsToVest[] += {
+                LIST_2("CUP_200Rnd_TE4_Red_Tracer_556x45_M249"),
+            };
+            addItemsToBackpack[] += {
                 LIST_2("CUP_200Rnd_TE4_Red_Tracer_556x45_M249"),
             };
         };
@@ -144,12 +149,20 @@ class Loadouts {
             binoculars = "Binocular";
         };
 
+        class B_soldier_LAT2_F: B_Soldier_F {
+            secondaryWeapon[] = {
+                "CUP_launch_M72A6",
+                "CUP_launch_M72A6_Special",
+                };
+        };
+
         class B_soldier_AT_F: B_Soldier_F {
             vest = "CUP_V_B_Eagle_SPC_AR";
             backpack = "CFP_AssaultPack_Marpat";
 
             secondaryWeapon[] = {"CUP_launch_Mk153Mod0_blk","CUP_launch_Mk153Mod0"};
             secondaryWeaponMagazine = "CUP_SMAW_HEDP_M";
+            secondaryWeaponOptics = "CUP_optic_SMAW_Scope";
 
             addItemsToBackpack[] = {
                 LIST_5("CUP_SMAW_Spotting"),
@@ -167,6 +180,44 @@ class Loadouts {
             };
 
             binoculars = "Binocular";
+        };
+
+        class B_HeavyGunner_F {
+            primaryWeapon = "CUP_lmg_M240_norail";
+            primaryWeaponMagazine = "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M";
+            primaryWeaponOptics = "";
+
+            secondaryWeapon = "dzn_MG_Tripod_M122A1_M240Mount_Carry";
+
+            handgunWeapon = "CUP_hgun_Colt1911";
+            handgunWeaponMagazine = "CUP_7Rnd_45ACP_1911";
+
+            vest = "CUP_V_B_Eagle_SPC_MG";
+
+            addItemsToVest[] += {
+                LIST_2("CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M"),
+                LIST_2("CUP_7Rnd_45ACP_1911")
+            };
+
+            addItemsToBackpack[] += {
+                "ACE_SpareBarrel",
+                LIST_2("CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M"),
+            };
+        };
+
+        class B_Soldier_A_F: B_Soldier_F {
+            backpack = "CUP_B_USMC_MOLLE";
+
+            addItemsToVest[] += {
+                "ACE_EntrenchingTool",
+            };
+            addItemsToBackpack[] += {
+                LIST_6("CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M"),
+                "ACE_SpareBarrel",
+            };
+
+            binoculars = "Binocular";
+
         };
 
         class B_soldier_M_F {
@@ -196,7 +247,7 @@ class Loadouts {
             vests = "CUP_V_B_Eagle_SPC_RTO";
             backpack = "CUP_B_Kombat_Radio_Olive";
 
-            addItemsToVes[] += {
+            addItemsToVest[] += {
                 "ACRE_PRC152",
             };
 
@@ -253,7 +304,7 @@ class Loadouts {
         //Führung
         class B_Soldier_TL_F {
             vest = "CUP_V_B_Eagle_SPC_TL";
-            backpack = "CUP_B_USMC_MOLLE";
+            backpack = "CFP_AssaultPack_Marpat";
             headgear[] = {
                 "CUP_H_LWHv2_MARPAT_comms",
                 "CUP_H_LWHv2_MARPAT_NVG_gog_cov2",
@@ -269,10 +320,12 @@ class Loadouts {
             };
 
             addItemsToBackpack[] = {
-                LIST_20("CUP_1Rnd_HE_M203"),
+                LIST_15("CUP_1Rnd_HE_M203"),
                 LIST_5("CUP_1Rnd_HEDP_M203"),
                 LIST_5("CUP_1Rnd_SmokeRed_M203"),
                 LIST_5("CUP_1Rnd_Smoke_M203"),
+                "ACE_spraypaintRed",
+                "ACE_spraypaintGreen",
             };
 
             binoculars = "Binocular";
@@ -280,17 +333,21 @@ class Loadouts {
 
         class B_Soldier_SL_F: B_Soldier_TL_F {
             vest = "CUP_V_B_Eagle_SPC_SL";
-            backpack = "";
 
             primaryWeapon = "CUP_arifle_M16A4_Grip";
 
             addItemsToVest[] += {
                 "ACRE_PRC152",
                 "ace_flags_red",
-
             };
 
-            addItemsToBackpack[] = {};
+            addItemsToBackpack[] = {
+                "ACE_spraypaintRed",
+                "ACE_spraypaintGreen",
+                "ACE_SpraypaintBlack",
+                LIST_3("SmokeShellGreen"),
+                LIST_3("SmokeShellOrange"),
+            };
         };
 
         class B_officer_F: B_Soldier_SL_F {
@@ -299,6 +356,9 @@ class Loadouts {
 
             vest = "CUP_V_B_Eagle_SPC_Officer";
 
+            addItemsToBackpack[] += {
+                LIST_3("SmokeShellBlue"),
+            };
         };
 
 
@@ -327,7 +387,7 @@ class Loadouts {
                 "ACE_wirecutter",
                 "ACE_EntrenchingTool",
                 "mts_cutter_folding_saw",
-                LIST_5("ACE_M14"),
+                LIST_3("CUP_1Rnd_12Gauge_Pellets_No00_Buck"),
             };
 
             class Rank {
@@ -456,6 +516,35 @@ class Loadouts {
                     };
                     binoculars = "Binocular";
                 };
+            };
+        };
+
+        class B_Helipilot_F {
+            uniform = "U_B_HeliPilotCoveralls";
+            vest = "FIR_pilot_vest";
+            backpack = "B_AssaultPack_blk";
+
+            headgear = "ttt_Helmet_Buzzard";
+
+
+            primaryWeapon = "";
+            primaryWeaponMagazine = "";
+            primaryWeaponOptics = "";
+            primaryWeaponPointer = "";
+
+            handgunWeapon = "CUP_hgun_Colt1911";
+            handgunWeaponMagazine = "CUP_7Rnd_45ACP_1911";
+
+            addItemsToVest[] += {
+                LIST_2("CUP_7Rnd_45ACP_1911"),
+                LIST_2("SmokeShellPurple"),
+                LIST_2("ACE_HandFlare_Green"),
+                "ACRE_PRC152",
+                "ACE_Microdagr",
+            };
+
+            addItemsToBackpack[] += {
+                "ACRE_PRC117F"
             };
         };
     };

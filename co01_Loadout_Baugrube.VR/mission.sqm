@@ -20,21 +20,21 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=47;
+		nextID=50;
 	};
 	class Camera
 	{
-		pos[]={7710.4014,21.943399,5119.1108};
-		dir[]={0.6406135,-0.60750741,-0.46962658};
-		up[]={0.48995414,0.79431397,-0.35917991};
-		aside[]={-0.5912354,-1.4901161e-08,-0.806499};
+		pos[]={7746.3291,11.384685,5120.9961};
+		dir[]={-0.54698122,-0.46275935,-0.69766039};
+		up[]={-0.28552705,0.88647282,-0.36418247};
+		aside[]={-0.78699124,-3.5751145e-07,0.61701685};
 	};
 };
 binarizationWanted=0;
 sourceName="co01_Loadout_Baugrube";
 addons[]=
 {
-	"Desert",
+	"KJW_TwoPrimaryWeapons",
 	"A3_Characters_F",
 	"ttt_common",
 	"A3_Characters_F_Mark",
@@ -53,8 +53,9 @@ class AddonsMetaData
 		items=11;
 		class Item0
 		{
-			className="Desert";
-			name="Desert";
+			className="KJW_TwoPrimaryWeapons";
+			name="KJW_TwoPrimaryWeapons";
+			author="KJW";
 		};
 		class Item1
 		{
@@ -6493,7 +6494,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={7721,5.0014391,5102.0498};
+								position[]={7740,5.0014391,5116.0498};
+								angles[]={0,3.0104544,-0};
 							};
 							side="West";
 							flags=7;
@@ -6588,7 +6590,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={7721,5.0014391,5104.0498};
+								position[]={7740,5.0014391,5118.0498};
+								angles[]={0,3.1834414,-0};
 							};
 							side="West";
 							flags=5;
