@@ -186,6 +186,7 @@ class Loadouts {
             primaryWeapon = "CUP_lmg_M240_norail";
             primaryWeaponMagazine = "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M";
             primaryWeaponOptics = "";
+            primaryWeaponPointer = "";
 
             secondaryWeapon = "dzn_MG_Tripod_M122A1_M240Mount_Carry";
 
@@ -228,6 +229,7 @@ class Loadouts {
             primaryWeaponMagazine = "ACE_20Rnd_762x51_Mag_Tracer";
             primaryWeaponOptics = "CUP_optic_LeupoldMk4";
             primaryWeaponUnderbarrel = "CUP_bipod_Harris_1A2_L_BLK";
+            primaryWeaponPointer = "";
 
             handgunWeapon = "CUP_hgun_Colt1911";
             handgunWeaponMagazine = "CUP_7Rnd_45ACP_1911";
@@ -468,12 +470,11 @@ class Loadouts {
                             LIST_12("ACE_Tourniquet"),
                             LIST_30("ACE_packingBandage"),
                             LIST_30("ACE_elasticBandage"),
-                            LIST_30("ACE_elasticBandage"),
                             LIST_20("ACE_quikclot"),
 
-                            LIST_12("ACE_Epinephrine"),
-                            LIST_8("ACE_Painkillers"),
-                            LIST_8("ACE_morphine"),
+                            LIST_10("ACE_Epinephrine"),
+                            LIST_6("ACE_Painkillers"),
+                            LIST_6("ACE_morphine"),
 
                             LIST_6("ACE_SalineIV"),
                             LIST_3("ACE_salineIV_500"),
