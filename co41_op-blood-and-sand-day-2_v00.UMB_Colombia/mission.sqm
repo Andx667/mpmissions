@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=134;
+		nextID=137;
 	};
 	class Camera
 	{
-		pos[]={15022.072,660.46289,11910.663};
-		dir[]={0.32308102,-0.48535839,0.81244314};
-		up[]={0.17935151,0.87431341,0.45101035};
-		aside[]={0.92923212,-6.9849193e-09,-0.36952382};
+		pos[]={14176.961,113.80221,11269.255};
+		dir[]={0,-0.70710683,0.70710671};
+		up[]={0,0.70710665,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -1369,7 +1369,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=233;
+		items=232;
 		class Item0
 		{
 			dataType="Object";
@@ -12964,12 +12964,13 @@ class Mission
 						position[]={12830.769,4.1728134,11507.13};
 					};
 					side="Independent";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=2112;
 					type="CUP_I_RACS_Soldier";
+					atlOffset=0.7351892;
 				};
 				class Item1
 				{
@@ -12979,12 +12980,12 @@ class Mission
 						position[]={12830.932,4.1728134,11499.442};
 					};
 					side="Independent";
-					flags=4;
 					class Attributes
 					{
 					};
 					id=2114;
 					type="CUP_I_RACS_Soldier";
+					atlOffset=0.7351892;
 				};
 			};
 			class Attributes
@@ -16636,7 +16637,6 @@ class Mission
 					};
 					id=2276;
 					type="CUP_I_RACS_Crew";
-					atlOffset=-2.3841858e-07;
 				};
 				class Item1
 				{
@@ -16647,13 +16647,12 @@ class Mission
 						angles[]={0,2.6209259,0};
 					};
 					side="Independent";
-					flags=4;
 					class Attributes
 					{
 					};
 					id=2277;
 					type="CUP_I_RACS_Crew";
-					atlOffset=-2.3841858e-07;
+					atlOffset=2.6379106;
 				};
 				class Item2
 				{
@@ -16664,13 +16663,13 @@ class Mission
 						angles[]={0,2.6209259,0};
 					};
 					side="Independent";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=2278;
 					type="CUP_I_RACS_Crew";
-					atlOffset=-2.3841858e-07;
+					atlOffset=2.6379106;
 				};
 			};
 			class Attributes
@@ -16792,7 +16791,6 @@ class Mission
 					};
 					id=2281;
 					type="CUP_I_RACS_Crew";
-					atlOffset=-2.3841858e-07;
 				};
 				class Item1
 				{
@@ -16803,13 +16801,13 @@ class Mission
 						angles[]={0,2.7236302,0};
 					};
 					side="Independent";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=2282;
 					type="CUP_I_RACS_Crew";
-					atlOffset=-2.3841858e-07;
+					atlOffset=3.261049;
 				};
 			};
 			class Attributes
@@ -16904,7 +16902,6 @@ class Mission
 					};
 					id=2299;
 					type="CUP_I_RACS_Crew";
-					atlOffset=-2.3841858e-07;
 				};
 				class Item1
 				{
@@ -16915,13 +16912,13 @@ class Mission
 						angles[]={0,1.4663209,0};
 					};
 					side="Independent";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=2300;
 					type="CUP_I_RACS_Crew";
-					atlOffset=-2.3841858e-07;
+					atlOffset=2.4975078;
 				};
 			};
 			class Attributes
@@ -31647,7 +31644,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12861.931,4.1912522,11430.767};
-				angles[]={-0,4.3198385,0};
+				angles[]={0,4.3198385,0};
 			};
 			side="Empty";
 			flags=4;
@@ -31664,7 +31661,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12865.262,4.1912522,11422.898};
-				angles[]={-0,4.3198385,0};
+				angles[]={0,4.3198385,0};
 			};
 			side="Empty";
 			flags=4;
@@ -31681,7 +31678,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12859.282,4.1912522,11437.64};
-				angles[]={-0,4.3198385,0};
+				angles[]={0,4.3198385,0};
 			};
 			side="Empty";
 			flags=4;
@@ -31691,36 +31688,6 @@ class Mission
 			id=2544;
 			type="Land_Razorwire_F";
 			atlOffset=2.3841858e-07;
-		};
-		class Item232
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14178.727,62.97052,11316.044};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-					};
-					id=2546;
-					type="TTT_B_Commanding_Officer_F";
-					atlOffset=-3.4332275e-05;
-				};
-			};
-			class Attributes
-			{
-			};
-			id=2545;
-			atlOffset=-3.4332275e-05;
 		};
 	};
 	class Connections

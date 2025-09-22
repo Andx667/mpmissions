@@ -20,18 +20,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=140;
+		nextID=143;
 	};
 	class Camera
 	{
 		pos[]={16818.254,123.12951,14681.251};
-		dir[]={0.46816289,-0.74011415,-0.48285401};
-		up[]={0.51518661,0.67248434,-0.53135484};
-		aside[]={-0.71798289,1.6058912e-06,-0.69613117};
+		dir[]={0.64858705,-0.24107058,0.72202134};
+		up[]={0.1611193,0.97049564,0.17935999};
+		aside[]={0.74395889,-1.3165409e-06,-0.66830003};
 	};
 };
 binarizationWanted=0;
-sourceName="co41_op-blood-and-sand-day-2-kam_v00";
+sourceName="co42_op-blood-and-sand-day-2-kam_v00";
 addons[]=
 {
 	"CUP_WheeledVehicles_NewM998",
@@ -1369,7 +1369,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=233;
+		items=232;
 		class Item0
 		{
 			dataType="Object";
@@ -13086,12 +13086,13 @@ class Mission
 						position[]={12830.769,4.1728134,11507.13};
 					};
 					side="Independent";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=2112;
 					type="CUP_I_RACS_Soldier";
+					atlOffset=0.7351892;
 				};
 				class Item1
 				{
@@ -13101,12 +13102,12 @@ class Mission
 						position[]={12830.932,4.1728134,11499.442};
 					};
 					side="Independent";
-					flags=4;
 					class Attributes
 					{
 					};
 					id=2114;
 					type="CUP_I_RACS_Soldier";
+					atlOffset=0.7351892;
 				};
 			};
 			class Attributes
@@ -16758,7 +16759,6 @@ class Mission
 					};
 					id=2276;
 					type="CUP_I_RACS_Crew";
-					atlOffset=-2.3841858e-07;
 				};
 				class Item1
 				{
@@ -16769,13 +16769,12 @@ class Mission
 						angles[]={0,2.6209259,0};
 					};
 					side="Independent";
-					flags=4;
 					class Attributes
 					{
 					};
 					id=2277;
 					type="CUP_I_RACS_Crew";
-					atlOffset=-2.3841858e-07;
+					atlOffset=2.6379106;
 				};
 				class Item2
 				{
@@ -16786,13 +16785,13 @@ class Mission
 						angles[]={0,2.6209259,0};
 					};
 					side="Independent";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=2278;
 					type="CUP_I_RACS_Crew";
-					atlOffset=-2.3841858e-07;
+					atlOffset=2.6379106;
 				};
 			};
 			class Attributes
@@ -16914,7 +16913,6 @@ class Mission
 					};
 					id=2281;
 					type="CUP_I_RACS_Crew";
-					atlOffset=-2.3841858e-07;
 				};
 				class Item1
 				{
@@ -16925,13 +16923,13 @@ class Mission
 						angles[]={0,2.7236302,0};
 					};
 					side="Independent";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=2282;
 					type="CUP_I_RACS_Crew";
-					atlOffset=-2.3841858e-07;
+					atlOffset=3.261049;
 				};
 			};
 			class Attributes
@@ -17026,7 +17024,6 @@ class Mission
 					};
 					id=2299;
 					type="CUP_I_RACS_Crew";
-					atlOffset=-2.3841858e-07;
 				};
 				class Item1
 				{
@@ -17037,13 +17034,13 @@ class Mission
 						angles[]={0,1.4663209,0};
 					};
 					side="Independent";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=2300;
 					type="CUP_I_RACS_Crew";
-					atlOffset=-2.3841858e-07;
+					atlOffset=2.4975078;
 				};
 			};
 			class Attributes
@@ -31813,36 +31810,6 @@ class Mission
 			id=2544;
 			type="Land_Razorwire_F";
 			atlOffset=2.3841858e-07;
-		};
-		class Item232
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14178.727,62.97052,11316.044};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-					};
-					id=2546;
-					type="TTT_B_Commanding_Officer_F";
-					atlOffset=-3.4332275e-05;
-				};
-			};
-			class Attributes
-			{
-			};
-			id=2545;
-			atlOffset=-3.4332275e-05;
 		};
 	};
 	class Connections
