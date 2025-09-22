@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=1105;
+		nextID=1106;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=18;
+		nextID=19;
 	};
 	class Camera
 	{
-		pos[]={3881.5093,168.5948,9375.1953};
-		dir[]={-0.81518745,-0.36782977,-0.44744211};
-		up[]={-0.32245982,0.92988783,-0.17699271};
-		aside[]={-0.48117766,-1.4418038e-07,0.87665176};
+		pos[]={882.06146,217.02058,5830.5444};
+		dir[]={-0.58966792,-0.43031183,-0.68346792};
+		up[]={-0.28109735,0.9026792,-0.32581204};
+		aside[]={-0.75715339,1.7811544e-08,0.65324098};
 	};
 };
 binarizationWanted=0;
@@ -303,7 +303,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -1306,7 +1306,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={418.689,1.5651857,6207.6948};
+				position[]={418.689,1.5651861,6207.6948};
 				angles[]={0,2.737165,0};
 			};
 			side="Empty";
@@ -1316,7 +1316,7 @@ class Mission
 			};
 			id=7;
 			type="UK3CB_BAF_RHIB_HMG_MTP";
-			atlOffset=0.77200854;
+			atlOffset=0.77200902;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1353,7 +1353,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={402.34299,1.8697358,6210.8491};
+				position[]={402.34299,1.8697363,6210.8491};
 				angles[]={0,2.737165,0};
 			};
 			side="Empty";
@@ -1363,7 +1363,7 @@ class Mission
 			};
 			id=8;
 			type="UK3CB_BAF_RHIB_HMG_MTP";
-			atlOffset=0.57800841;
+			atlOffset=0.57800889;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1410,7 +1410,7 @@ class Mission
 			};
 			id=9;
 			type="UK3CB_BAF_RHIB_HMG_MTP";
-			atlOffset=0.59500015;
+			atlOffset=0.59500027;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8741,13 +8741,13 @@ class Mission
 						angles[]={0.012000273,4.8604889,0};
 					};
 					side="East";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 					};
 					id=323;
 					type="UK3CB_ADE_O_RIF_1";
-					atlOffset=1.6111164;
+					atlOffset=2.8610229e-06;
 				};
 			};
 			class Attributes
@@ -13603,13 +13603,13 @@ class Mission
 						angles[]={6.2192731,0,0.047963165};
 					};
 					side="East";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 					};
 					id=786;
 					type="UK3CB_ADE_O_RIF_1";
-					atlOffset=0.8401947;
+					atlOffset=-0.00081253052;
 				};
 			};
 			class Attributes
@@ -13769,13 +13769,12 @@ class Mission
 						angles[]={6.2671909,0,0};
 					};
 					side="East";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 					};
 					id=789;
 					type="UK3CB_ADE_O_RIF_1";
-					atlOffset=0.73513603;
 				};
 			};
 			class Attributes
@@ -14103,12 +14102,12 @@ class Mission
 						position[]={1898.6241,7.8738594,8781.167};
 					};
 					side="East";
+					flags=4;
 					class Attributes
 					{
 					};
 					id=806;
 					type="UK3CB_ADE_O_RIF_1";
-					atlOffset=1.8724203;
 				};
 				class Item1
 				{
@@ -14118,13 +14117,12 @@ class Mission
 						position[]={1898.6241,7.8738594,8781.167};
 					};
 					side="East";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 					};
 					id=807;
 					type="UK3CB_ADE_O_RIF_1";
-					atlOffset=1.8724203;
 				};
 			};
 			class Attributes
@@ -14717,17 +14715,18 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={379.5,4.9968271,6177.5498};
+						position[]={380.5,4.9964967,6177.5498};
+						angles[]={0.00059801998,0,0};
 					};
 					side="West";
-					flags=5;
+					flags=4;
 					class Attributes
 					{
-						description="#5 Runner";
+						description="#4 Combat Medical Technician (Medic)";
 						isPlayable=1;
 					};
-					id=905;
-					type="B_Soldier_F";
+					id=906;
+					type="B_medic_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14739,7 +14738,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="Male04ENG";
+									value="Male09ENG";
 								};
 							};
 						};
@@ -14752,7 +14751,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=1.04;
+									value=1.01;
 								};
 							};
 						};
@@ -14838,17 +14837,16 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={380.5,4.9964967,6177.5498};
-						angles[]={0.00059801998,0,0};
+						position[]={379.5,4.9968271,6177.5498};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="#4 Combat Medical Technician (Medic)";
+						description="#5 Combat Medical Technician (Medic)";
 						isPlayable=1;
 					};
-					id=906;
+					id=1105;
 					type="B_medic_F";
 					class CustomAttributes
 					{
@@ -14861,7 +14859,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="Male09ENG";
+									value="Male04ENG";
 								};
 							};
 						};
@@ -14874,7 +14872,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=1.01;
+									value=1.04;
 								};
 							};
 						};
@@ -19686,7 +19684,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1799.3423,1.5561528,8406.0371};
+						position[]={1799.3423,1.5561533,8406.0371};
 					};
 					side="East";
 					flags=7;
@@ -19697,7 +19695,7 @@ class Mission
 					};
 					id=976;
 					type="UK3CB_ADE_O_TL";
-					atlOffset=2.7418137e-06;
+					atlOffset=3.2186508e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19782,7 +19780,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1802.3423,1.4185836,8403.0371};
+						position[]={1802.3423,1.4185841,8403.0371};
 					};
 					side="East";
 					flags=5;
@@ -19792,14 +19790,14 @@ class Mission
 					};
 					id=977;
 					type="UK3CB_ADE_O_GL";
-					atlOffset=2.8610229e-06;
+					atlOffset=3.3378601e-06;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=975;
-			atlOffset=2.7418137e-06;
+			atlOffset=3.2186508e-06;
 		};
 		class Item208
 		{
@@ -22562,7 +22560,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={1813.5,4.9696083,9849};
-				angles[]={0.00059801998,0,-0};
+				angles[]={0.00059801998,0,0};
 			};
 			areaSize[]={200,-1,200};
 			flags=1;

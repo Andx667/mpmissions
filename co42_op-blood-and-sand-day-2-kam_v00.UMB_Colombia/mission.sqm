@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=2548;
+		nextID=2550;
 	};
 	class MarkerIDProvider
 	{
@@ -20,18 +20,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=134;
+		nextID=140;
 	};
 	class Camera
 	{
-		pos[]={15022.072,660.46289,11910.663};
-		dir[]={0.32308102,-0.48535839,0.81244314};
-		up[]={0.17935151,0.87431341,0.45101035};
-		aside[]={0.92923212,-6.9849193e-09,-0.36952382};
+		pos[]={16818.254,123.12951,14681.251};
+		dir[]={0.46816289,-0.74011415,-0.48285401};
+		up[]={0.51518661,0.67248434,-0.53135484};
+		aside[]={-0.71798289,1.6058912e-06,-0.69613117};
 	};
 };
 binarizationWanted=0;
-sourceName="co41_op-blood-and-sand-day-2_v00";
+sourceName="co41_op-blood-and-sand-day-2-kam_v00";
 addons[]=
 {
 	"CUP_WheeledVehicles_NewM998",
@@ -11170,7 +11170,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=3;
+				items=4;
 				class Item0
 				{
 					dataType="Object";
@@ -11465,6 +11465,128 @@ class Mission
 							};
 						};
 						nAttributes=1;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={16886,33.260033,14581.05};
+						angles[]={0,5.4301033,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="#39a Junior Corpsman";
+						isPlayable=1;
+					};
+					id=2549;
+					type="B_medic_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male08ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="iedd_ied_sides";
+							expression="_this setVariable ['iedd_ied_sides',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=4;
+										class Item0
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+										class Item3
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=3;
+											};
+										};
+									};
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="ENH_doStop";
+							expression="if (!is3DEN && _value) then {doStop _this}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=5;
 					};
 				};
 			};
@@ -31647,7 +31769,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12861.931,4.1912522,11430.767};
-				angles[]={-0,4.3198385,0};
+				angles[]={0,4.3198385,0};
 			};
 			side="Empty";
 			flags=4;
@@ -31664,7 +31786,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12865.262,4.1912522,11422.898};
-				angles[]={-0,4.3198385,0};
+				angles[]={0,4.3198385,0};
 			};
 			side="Empty";
 			flags=4;
@@ -31681,7 +31803,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12859.282,4.1912522,11437.64};
-				angles[]={-0,4.3198385,0};
+				angles[]={0,4.3198385,0};
 			};
 			side="Empty";
 			flags=4;

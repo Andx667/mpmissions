@@ -802,13 +802,14 @@ class Loadouts {
                         LIST_14("kat_IV_16"),
                         "kat_AED",
                         //H
-                        LIST_12("kat_Penthrox"),
+                        LIST_6("kat_Penthrox"),
                         LIST_8("kat_naloxone"),
                         LIST_12("ACE_epinephrine"),
-                        LIST_12("kat_Painkiller"),
+                        LIST_6("kat_Painkiller"),
                         LIST_8("ACE_morphine"),
                         LIST_5("kat_lidocaine"),
                         "UK3CB_BAF_H_Beret_PR",
+                        LIST_30("ACE_Suture"),
                     };
                 };
             };
@@ -922,7 +923,6 @@ class Loadouts {
                         //M
                         LIST_45("ACE_packingBandage"),
                         LIST_45("ACE_elasticBandage"),
-                        LIST_45("ACE_quikclot"),
                         LIST_12("ACE_tourniquet"),
                         //A
                         LIST_12("kat_chestSeal"),
@@ -937,10 +937,10 @@ class Loadouts {
                         LIST_14("kat_IV_16"),
                         "kat_AED",
                         //H
-                        LIST_12("kat_Penthrox"),
+                        LIST_6("kat_Penthrox"),
                         LIST_8("kat_naloxone"),
                         LIST_12("ACE_epinephrine"),
-                        LIST_12("kat_Painkiller"),
+                        LIST_6("kat_Painkiller"),
                         LIST_8("ACE_morphine"),
                         LIST_5("kat_lidocaine"),
                         "UK3CB_BAF_H_Beret_PR",
@@ -971,9 +971,9 @@ class Loadouts {
                         LIST_45("ACE_elasticBandage"),
                         LIST_16("ACE_tourniquet"),
                         //A
-                        LIST_12("kat_chestSeal"),
-                        LIST_12("kat_larynx"),
-                        LIST_12("kat_ncdKit"),
+                        LIST_10("kat_chestSeal"),
+                        LIST_10("kat_larynx"),
+                        LIST_10("kat_ncdKit"),
                         //R
                         "kat_pocketBVM",
                         //C
@@ -982,15 +982,16 @@ class Loadouts {
                         LIST_16("kat_IV_16"),
                         LIST_9("ACE_bloodIV"),
                         //H
-                        LIST_12("kat_Penthrox"),
+                        LIST_6("kat_Penthrox"),
                         LIST_12("kat_naloxone"),
                         LIST_12("ACE_epinephrine"),
-                        LIST_12("kat_Painkiller"),
+                        LIST_6("kat_Painkiller"),
                         LIST_8("ACE_morphine"),
                         LIST_5("kat_lidocaine"),
                         //Admin
                         "ACE_Bodybag",
                         "UK3CB_BAF_H_Beret_RM_Parade",
+                        LIST_30("ACE_Suture"),
                     };
 
                 };
