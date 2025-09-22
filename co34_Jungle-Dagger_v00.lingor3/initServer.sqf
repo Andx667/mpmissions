@@ -113,5 +113,6 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
         ["ACE_epinephrine", 10],
         ["kat_lidocaine", 10],
         ["ACE_Suture", 50]
-    ]
+    ],
+    false
 ] call ttt_common_fnc_crateFiller;
