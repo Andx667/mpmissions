@@ -27,7 +27,7 @@
                 switch (typeOf ACE_player) do {
                     case "B_Soldier_F";
                     case "B_soldier_LAT2_F";
-                    case "TTT_B_RadioOperator_F";
+                    case "B_W_RadioOperator_F";
                     case "B_soldier_exp_F";
                     case "B_soldier_M_F";
                     case "B_Soldier_AR_F";

@@ -156,7 +156,7 @@ class Loadouts {
             secondaryWeaponMagazine = "gm_1Rnd_60mm_heat_dm22_pzf3";
         };
 
-        class TTT_B_RadioOperator_F: B_Soldier_F {
+        class B_W_RadioOperator_F: B_Soldier_F {
             backpack = "gm_ge_backpack_sem35_oli";
 
             addItemsToVest[] += {

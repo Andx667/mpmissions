@@ -262,7 +262,7 @@ class Loadouts {
             secondaryWeapon = "BWA3_RGW90_Loaded";
         };
 
-        class TTT_B_RadioOperator_F: B_Soldier_F {
+        class B_W_RadioOperator_F: B_Soldier_F {
             backpack = "NOR_Predator_Radio_Backpack";
 
             addItemsToVest[] += {

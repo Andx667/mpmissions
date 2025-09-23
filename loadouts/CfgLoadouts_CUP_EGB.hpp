@@ -63,7 +63,7 @@ class Loadouts {
                 LIST_2("BWA3_DM25"),
                 LIST_2("BWA3_DM51A1"),
                 LIST_2("ACE_M84"),
-                
+
                 };
             addItemsToBackpack[] = {
 
@@ -104,13 +104,13 @@ class Loadouts {
             radio = "";
         };
 
- 
+
     };
 
     class Type {
 
         class B_Soldier_F {
-            
+
             primaryWeapon[] = {
                 "BWA3_G36KA3",
                 "BWA3_G36KA3_green",
@@ -134,7 +134,7 @@ class Loadouts {
                 LIST_2("ACE_Cabletie"),
             };
         };
-        
+
         class B_soldier_AR_F  {
             vest = "BWA3_Vest_MachineGunner_Fleck";
             primaryWeapon = "BWA3_MG4";
@@ -170,7 +170,7 @@ class Loadouts {
 
             addItemsToVest[] += {
                 LIST_7("BWA3_20Rnd_762x51_G28_Tracer"),
-                
+
             };
             addItemsToBackpack[] += {
                 LIST_8("BWA3_20Rnd_762x51_G28_LR"),
@@ -205,7 +205,7 @@ class Loadouts {
             secondaryWeapon = "BWA3_PzF3_Tandem_Loaded";
         };
 
-        class TTT_B_RadioOperator_F: B_Soldier_F {
+        class B_W_RadioOperator_F: B_Soldier_F {
             backpack = "ttt_backpack_radio_olive";
 
             addItemsToBackpack[] += {
@@ -350,7 +350,7 @@ class Loadouts {
                         LIST_2("ACE_salineIV_500"),
                         LIST_2("ACE_SalineIV_250"),
                     };
-                  
+
                 };
 
                 //Zugsani 2
@@ -365,7 +365,7 @@ class Loadouts {
             uniform = "BWA3_Uniform_Helipilot";
             vest = "FIR_pilot_vest";
             backpack = "";
-            
+
             primaryWeapon = "";
             handgunWeapon[] ={
                 "BWA3_P8",

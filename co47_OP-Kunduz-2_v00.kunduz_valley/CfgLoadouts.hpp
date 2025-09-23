@@ -165,7 +165,7 @@ class Loadouts {
             secondaryWeapon = "BWA3_PzF3_Tandem_Loaded";
         };
 
-        class TTT_B_RadioOperator_F: B_Soldier_F {
+        class B_W_RadioOperator_F: B_Soldier_F {
 
         };
         class B_soldier_AT_F: B_Soldier_F {

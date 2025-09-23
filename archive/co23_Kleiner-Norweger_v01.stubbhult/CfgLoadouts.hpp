@@ -46,7 +46,7 @@ class Loadouts {
         "headgear"
     };
 
-    class Side {    
+    class Side {
         class Blufor { //BluforPlayers
             uniform[] = {
                 //Regular Uniform
@@ -198,7 +198,7 @@ class Loadouts {
             };
             primaryWeaponUnderbarrel = "";
             primaryWeaponUnderbarrelMagazine = "";
-            
+
             backpack = "NOR_Predator_Backpack";
             addItemsToVest[] += {
                 "ACE_DefusalKit",
@@ -216,7 +216,7 @@ class Loadouts {
             secondaryWeapon = "BWA3_RGW90_Loaded";
         };
 
-        class TTT_B_RadioOperator_F: B_Soldier_F {            
+        class B_W_RadioOperator_F: B_Soldier_F {
             backpack = "NOR_Predator_Radio_Backpack";
 
             addItemsToVest[] += {
@@ -417,7 +417,7 @@ class Loadouts {
             };
             class Rank {
 
-                class PRIVATE {}; 
+                class PRIVATE {};
                 class SERGEANT: PRIVATE {
                     addItemsToVest[] += {
                         "ItemAndroid",
@@ -452,7 +452,7 @@ class Loadouts {
             };
             class Rank {
 
-                class PRIVATE {}; 
+                class PRIVATE {};
                 class SERGEANT: PRIVATE {
                     addItemsToVest[] += {
                         "ACRE_152",
@@ -482,7 +482,7 @@ class Loadouts {
             };
 
             class Rank {
-                class PRIVATE {}; 
+                class PRIVATE {};
                 class SERGEANT: PRIVATE {
                     addItemsToVest[] += {
                         "ItemAndroid",
@@ -505,7 +505,7 @@ class Loadouts {
             vest = "CUP_V_O_SLA_M23_1_OD";
             backpack = "B_Kitbag_cbr";
             headgear = "CUP_H_FR_BeanieGreen";
-            
+
             primaryWeapon = "srifle_LRR_camo_F";
             primaryWeaponMagazine = "ACE_7Rnd_408_305gr_Mag";
             primaryWeaponOptics = "optic_LRPS";
@@ -690,7 +690,7 @@ class Loadouts {
                 //"CUP_arifle_HK416_CQB_Desert",
                 "CUP_arifle_HK416_CQB_Wood",
             };
-            
+
             class Rank {
 
                 class PRIVATE {
@@ -714,7 +714,7 @@ class Loadouts {
                         LIST_10("ACE_SalineIV"),
                         LIST_5("ACE_salineIV_500"),
                         LIST_5("ACE_SalineIV_250"),
-                        "ACE_SurgicalKit",  
+                        "ACE_SurgicalKit",
                         "ACE_Bodybag",
                     };
                 };
@@ -782,7 +782,7 @@ class Loadouts {
                 };
             };
         };
-        
+
         //Recon
         class B_recon_F {
             uniform[] = {
@@ -872,7 +872,7 @@ class Loadouts {
                 "ACE_VMH3",
             };
         };
-        
+
         class B_recon_JTAC_F: B_recon_F {
 
             addItemsToVest[] += {

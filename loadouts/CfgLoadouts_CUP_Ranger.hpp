@@ -349,7 +349,7 @@ class Loadouts {
             };
         };
 
-        class TTT_B_RadioOperator_F: B_Soldier_F {
+        class B_W_RadioOperator_F: B_Soldier_F {
             backpack = "CUP_B_Kombat_Radio_Olive";
 
             addItemsToVest[] += {

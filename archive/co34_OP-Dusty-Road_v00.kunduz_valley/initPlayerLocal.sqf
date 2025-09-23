@@ -35,7 +35,7 @@
             case "B_soldier_M_F";
             case "B_Soldier_F";
             case "B_soldier_UAV_F";
-            case "TTT_B_RadioOperator_F";
+            case "B_W_RadioOperator_F";
             case "B_officer_F": {
                 [_unit, "TTT_black_emblem"] call BIS_fnc_setUnitInsignia;
             };

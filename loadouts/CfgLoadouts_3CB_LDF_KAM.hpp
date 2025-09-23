@@ -155,7 +155,7 @@ class Loadouts {
         class B_soldier_LAT2_F: B_Soldier_F {
         };
 
-        class TTT_B_RadioOperator_F: B_Soldier_F {
+        class B_W_RadioOperator_F: B_Soldier_F {
             backpack = "UK3CB_LDF_I_B_RadioBag_GEO";
             addItemsToBackpack[] += {
                 LIST_2("ACRE_PRC117F"),

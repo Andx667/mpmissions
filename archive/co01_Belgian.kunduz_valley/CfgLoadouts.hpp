@@ -193,7 +193,7 @@ class Loadouts {
             };
         };
 
-        class TTT_B_RadioOperator_F: B_W_Soldier_F {
+        class B_W_RadioOperator_F: B_W_Soldier_F {
             backpack = "CUP_B_Kombat_Radio_Olive";
 
             addItemsToVest[] += {
@@ -275,7 +275,7 @@ class Loadouts {
                         LIST_3("CUP_30Rnd_556x45_Stanag_Mk16"),
                         "ACE_SurgicalKit",
                     };
-        
+
                     addItemsToBackpack[] = {
                         LIST_30("ACE_Suture"),
                         LIST_30("ACE_Suture"),

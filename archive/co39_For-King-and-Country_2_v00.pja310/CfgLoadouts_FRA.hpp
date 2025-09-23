@@ -77,7 +77,7 @@ class Loadouts {
 
                 // "CUP_U_B_BAF_DDPM_UBACSTSHIRT",
                 // "CUP_U_B_BAF_DDPM_UBACSTSHIRT_Gloves",
-                // "CUP_U_B_BAF_DDPM_UBACSTSHIRTKNEE"  
+                // "CUP_U_B_BAF_DDPM_UBACSTSHIRTKNEE"
 
                 //DPM / Wald
                 // "CUP_U_B_BAF_DPM_UBACSLONG",
@@ -193,12 +193,12 @@ class Loadouts {
             secondaryWeaponMagazine = "";
         };
 
-        class B_Soldier_GL_F: B_Soldier_F { 
-            primaryWeapon = "CUP_arifle_L85A2_GL"; 
+        class B_Soldier_GL_F: B_Soldier_F {
+            primaryWeapon = "CUP_arifle_L85A2_GL";
             vest = "CUP_V_B_BAF_MTP_Osprey_Mk4_Grenadier"; //MTP
             //vest = "CUP_V_B_BAF_DDPM_Osprey_Mk3_Grenadier"; //DDPM
             //vest = "CUP_V_B_BAF_DPM_Osprey_Mk3_Grenadier"; //DPM
-            
+
             addItemsToBackpack[] = {
                 LIST_20("CUP_1Rnd_HE_M203"),
                 LIST_5("CUP_1Rnd_HEDP_M203"),
@@ -207,7 +207,7 @@ class Loadouts {
             };
         };
 
-        class TTT_B_RadioOperator_F: B_Soldier_F {
+        class B_W_RadioOperator_F: B_Soldier_F {
             backpack = "CUP_B_Predator_Radio_MTP";
 
             //pistole?
@@ -441,7 +441,7 @@ class Loadouts {
             };
             addItemsToBackpack[] = {
                 LIST_5("CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M"),
-                
+
             };
 
             binoculars = "ACE_Vector";
@@ -463,15 +463,15 @@ class Loadouts {
             //vest = "CUP_V_B_BAF_DDPM_Osprey_Mk3_Officer"; //DDPM
             //vest = "CUP_V_B_BAF_DPM_Osprey_Mk3_Officer"; //DPM
 
-            primaryWeapon = "CUP_arifle_L85A2_GL"; 
+            primaryWeapon = "CUP_arifle_L85A2_GL";
 
             handgunWeapon = "CUP_hgun_Glock17_blk";
-            handgunWeaponMagazine = "CUP_17Rnd_9x19_glock17";   
+            handgunWeaponMagazine = "CUP_17Rnd_9x19_glock17";
 
             addItemsToVest[] += {
                 LIST_2("CUP_17Rnd_9x19_glock17"),
             };
-            
+
             addItemsToBackpack[] += {
                 LIST_10("CUP_1Rnd_SmokeRed_M203"),
                 LIST_5("ACE_HuntIR_M203"),
@@ -479,15 +479,15 @@ class Loadouts {
 
         };
 
-        class TTT_B_JTAC_F: TTT_B_RadioOperator_F {   
+        class TTT_B_JTAC_F: B_W_RadioOperator_F {
             vest = "CUP_V_B_BAF_MTP_Osprey_Mk4_Officer"; //MTP
             //vest = "CUP_V_B_BAF_DDPM_Osprey_Mk3_Officer"; //DDPM
             //vest = "CUP_V_B_BAF_DPM_Osprey_Mk3_Officer"; //DPM
 
-            primaryWeapon = "CUP_arifle_L85A2_GL"; 
+            primaryWeapon = "CUP_arifle_L85A2_GL";
 
             handgunWeapon = "CUP_hgun_Glock17_blk";
-            handgunWeaponMagazine = "CUP_17Rnd_9x19_glock17";  
+            handgunWeaponMagazine = "CUP_17Rnd_9x19_glock17";
             binoculars = "CUP_SOFLAM";
 
             addItemsToVest[] += {
@@ -504,7 +504,7 @@ class Loadouts {
 
         };
 
-        class TTT_B_FO_F: TTT_B_RadioOperator_F {
+        class TTT_B_FO_F: B_W_RadioOperator_F {
             binoculars = "ACE_Vector";
 
             addItemsToVest[] += {
@@ -531,7 +531,7 @@ class Loadouts {
             class Rank {
                 class CORPORAL {
                     addItemsToVest[] = {
-                        LIST_3("CUP_30Rnd_556x45_Stanag_L85"), 
+                        LIST_3("CUP_30Rnd_556x45_Stanag_L85"),
                         LIST_2("CUP_17Rnd_9x19_glock17"),
                         "ace_flags_blue",
                         "ItemAndroid",
@@ -607,7 +607,7 @@ class Loadouts {
                 class CORPORAL {
 
                 };
-            
+
                 class SERGEANT: CORPORAL {
                     backpack = "CUP_B_Predator_Radio_MTP";
 
@@ -641,14 +641,14 @@ class Loadouts {
                 "ACE_HandFlare_Green",
             };
         };
-        
+
         class B_Helipilot_F: B_helicrew_F  {
             headgear = "CUP_H_BAF_Helmet_Pilot";
 
             backpack = "CUP_B_Predator_Radio_MTP";
             addItemsToBackpack[] = {
                 "ACRE_PRC117F",
-            }; 
+            };
         };
     };
 };

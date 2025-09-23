@@ -255,7 +255,7 @@ class Loadouts {
             //secondaryWeapon = "UK3CB_BAF_NLAW_Launcher";
         };
 
-        class TTT_B_RadioOperator_F: B_Soldier_F {
+        class B_W_RadioOperator_F: B_Soldier_F {
             vest[] = {
                 "UK3CB_BAF_V_Osprey_SL_A",
                 "UK3CB_BAF_V_Osprey_SL_B",

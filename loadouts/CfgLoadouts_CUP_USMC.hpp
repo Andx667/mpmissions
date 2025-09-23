@@ -188,8 +188,8 @@ class Loadouts {
 
             handgunWeapon = "CUP_hgun_Colt1911";
             handgunWeaponMagazine = "CUP_7Rnd_45ACP_1911";
-            
-            addItemsToVest[] += {                
+
+            addItemsToVest[] += {
                 LIST_7("ACE_20Rnd_762x51_Mag_Tracer"),
                 "ACE_Rangecard",
             };
@@ -199,8 +199,8 @@ class Loadouts {
             };
             binoculars = "Binocular";
         };
-        
-        class TTT_B_RadioOperator_F: B_Soldier_F {
+
+        class B_W_RadioOperator_F: B_Soldier_F {
             vests = "CUP_V_B_Eagle_SPC_RTO";
             backpack = "CUP_B_Kombat_Radio_Olive";
 
@@ -242,7 +242,7 @@ class Loadouts {
                 };
 
                 class Corporal: Private {
-                    
+
                 };
 
                 class Sergeant: Corporal {
@@ -306,10 +306,10 @@ class Loadouts {
             handgunWeaponMagazine = "CUP_7Rnd_45ACP_1911";
 
             vest = "CUP_V_B_Eagle_SPC_Officer";
-            
+
         };
 
-    
+
         class B_soldier_exp_F: B_Soldier_F {
             uniform[] = {
                 //FROG MARPAT
@@ -361,7 +361,7 @@ class Loadouts {
             };
         };
 
-        
+
         //Medics
         class B_medic_F {
 
@@ -392,7 +392,7 @@ class Loadouts {
                             LIST_4("ACE_salineIV_500"),
                             LIST_4("ACE_SalineIV_250"),
 
-                            "ACE_Bodybag", 
+                            "ACE_Bodybag",
                     };
                 };
 

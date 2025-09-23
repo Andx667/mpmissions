@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=941;
+		nextID=945;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=52;
+		nextID=53;
 	};
 	class Camera
 	{
-		pos[]={7732.1162,16.863361,5096.5532};
-		dir[]={-0.23168568,-0.77890807,0.58278906};
-		up[]={-0.28774807,0.6271379,0.72380811};
-		aside[]={0.92926967,-2.0395964e-07,0.36942789};
+		pos[]={7732.8545,12.326306,5119.1177};
+		dir[]={0.0035041545,-0.52127451,-0.85340023};
+		up[]={0.0021411339,0.85338223,-0.52127719};
+		aside[]={-1.0000049,-1.307526e-07,-0.0041061821};
 	};
 };
 binarizationWanted=0;
@@ -36,7 +36,7 @@ addons[]=
 {
 	"KJW_TwoPrimaryWeapons",
 	"A3_Characters_F",
-	"ttt_common",
+	"A3_Characters_F_Enoch",
 	"A3_Characters_F_Mark",
 	"A3_Characters_F_Tank",
 	"ace_explosives",
@@ -64,10 +64,10 @@ class AddonsMetaData
 		};
 		class Item2
 		{
-			className="ttt_common";
-			name="TTT - Common";
-			author="Tactical Training Team";
-			url="https://tacticalteam.de";
+			className="A3_Characters_F_Enoch";
+			name="Arma 3 Contact Platform - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 		class Item3
 		{
@@ -115,6 +115,7 @@ class AddonsMetaData
 };
 dlcs[]=
 {
+	"Enoch",
 	"Mark",
 	"ORANGE"
 };
@@ -2473,7 +2474,7 @@ class Mission
 					side="West";
 					class Entities
 					{
-						items=5;
+						items=6;
 						class Item0
 						{
 							dataType="Object";
@@ -2846,18 +2847,142 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
+								position[]={7732,5.0014391,5112.0498};
+								angles[]={0,3.0549195,0};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								rank="CORPORAL";
+								description="3: Radio Operator";
+								isPlayable=1;
+							};
+							id=941;
+							type="B_W_RadioOperator_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male04ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.94999999;
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="acre_sys_radio_edenSetup";
+									expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="iedd_ied_sides";
+									expression="_this setVariable ['iedd_ied_sides',_value];";
+									class Value
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=4;
+												class Item0
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=-1;
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=2;
+													};
+												};
+												class Item3
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=3;
+													};
+												};
+											};
+										};
+									};
+								};
+								class Attribute4
+								{
+									property="ENH_doStop";
+									expression="if (!is3DEN && _value) then {doStop _this}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=5;
+							};
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
 								position[]={7733,5.0014391,5112.0498};
 								angles[]={0,3.0799999,0};
 							};
 							side="West";
-							flags=5;
+							flags=4;
 							class Attributes
 							{
+								rank="CORPORAL";
 								description="5: Forward Observer";
 								isPlayable=1;
 							};
-							id=707;
-							type="TTT_B_FO_F";
+							id=942;
+							type="B_W_RadioOperator_F";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -2963,24 +3088,24 @@ class Mission
 								nAttributes=5;
 							};
 						};
-						class Item4
+						class Item5
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={7732,5.0014391,5112.0498};
-								angles[]={0,3.0549195,0};
+								position[]={7734,5.0014391,5112.0498};
+								angles[]={-0,3.0799999,0};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
-								rank="CORPORAL";
-								description="3: Radio Operator";
+								rank="SERGEANT";
+								description="6: JTAC";
 								isPlayable=1;
 							};
-							id=940;
-							type="TTT_B_RadioOperator_F";
+							id=944;
+							type="B_W_RadioOperator_F";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -2992,7 +3117,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="Male04ENG";
+											value="Male06ENG";
 										};
 									};
 								};
@@ -3005,7 +3130,7 @@ class Mission
 										class data
 										{
 											singleType="SCALAR";
-											value=0.94999999;
+											value=0.95999998;
 										};
 									};
 								};

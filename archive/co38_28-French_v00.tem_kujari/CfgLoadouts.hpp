@@ -183,7 +183,7 @@ class Loadouts {
             secondaryWeapon = "CUP_launch_M136";
         };
 
-        class TTT_B_RadioOperator_F: B_Soldier_F {
+        class B_W_RadioOperator_F: B_Soldier_F {
             backpack = "ttt_backpack_radio_coyote";
 
             addItemsToVest[] += {
