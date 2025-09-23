@@ -165,9 +165,44 @@ class Loadouts {
             secondaryWeapon = "BWA3_PzF3_Tandem_Loaded";
         };
 
+        //Radio Operator / FO /JTAC
         class B_W_RadioOperator_F: B_Soldier_F {
+            class Rank {
+                class PRIVATE {
+                    backpack = "";
+
+                    addItemsToBackpack[] += {
+                        LIST_2(""), //LR Radio
+                        LIST_10(""), //Purple Smoke
+                        "ACE_flags_blue",
+                        "ACE_flags_yellow",
+                    };
+                };
+               //FO
+                class CORPORAL: PRIVATE {
+                    backpack = "";
+
+                    addItemsToUniform[] += {
+                        "ACE_microdagr",
+                    };
+
+                    addItemsToBackpack[] += {
+                        "", //Funkgerät
+                    };
+
+                    binoculars = "ACE_Vector";
+                };
+                //JTAC
+                class SERGEANT: CORPORAL {
+
+                };
+                class LIEUTENANT: SERGEANT {
+
+                };
+            };
 
         };
+
         class B_soldier_AT_F: B_Soldier_F {
             secondaryWeapon = "BWA3_CarlGustav";
             secondaryWeaponOptics = "BWA3_optic_CarlGustav";
@@ -500,10 +535,6 @@ class Loadouts {
         };
 
         class B_officer_F: B_Soldier_SL_F {
-
-        };
-
-        class TTT_B_FO_F: B_Soldier_F {
 
         };
 

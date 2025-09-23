@@ -269,19 +269,45 @@ class Loadouts {
         };
 
         class B_W_RadioOperator_F: B_Soldier_F {
-            backpack = "NOR_Predator_Radio_Backpack";
+            class Rank {
+                class PRIVATE {
+                    backpack = "NOR_Predator_Radio_Backpack";
 
-            addItemsToVest[] += {
-                "ItemAndroid",
-                "ACE_flags_blue",
-                "ACE_flags_yellow",
+                    addItemsToVest[] += {
+                        "ItemAndroid",
+                        "ACE_flags_blue",
+                        "ACE_flags_yellow",
+                    };
+
+                    addItemsToBackpack[] = {
+                        "ACRE_PRC117F",
+                        "ACRE_VHF30108SPIKE",
+                        LIST_10("SmokeShellPurple"),
+                    };
+                };
+                class CORPORAL: PRIVATE {
+
+                    addItemsToVest[] = {
+                        "ACE_MicroDAGR",
+                        "ACRE_PRC152",
+                        "ItemAndroid",
+                    };
+
+                    addItemsToBackpack[] = {
+                        "ACRE_PRC117F",
+                        "ACRE_VHF30108SPIKE",
+                        "itc_land_tablet_fdc",
+                    };
+                    binoculars = "ACE_Vector";
+                };
+                class SERGEANT: CORPORAL {
+
+                };
+                class LIEUTENANT: SERGEANT {
+
+                };
             };
 
-            addItemsToBackpack[] = {
-                "ACRE_PRC117F",
-                "ACRE_VHF30108SPIKE",
-                LIST_10("SmokeShellPurple"),
-            };
         };
 
         class B_soldier_AT_F: B_Soldier_F {
@@ -945,23 +971,6 @@ class Loadouts {
 
         class B_officer_F: B_Soldier_SL_F {
 
-        };
-
-        class TTT_B_FO_F: B_Soldier_F {
-            backpack = "NOR_Predator_Radio_Backpack";
-
-            addItemsToVest[] += {
-                "ACE_MicroDAGR",
-                "ACRE_PRC152",
-                "ItemAndroid",
-            };
-
-            addItemsToBackpack[] += {
-                "ACRE_PRC117F",
-                "ACRE_VHF30108SPIKE",
-                "itc_land_tablet_fdc",
-            };
-            binoculars = "ACE_Vector";
         };
 
         //Medics

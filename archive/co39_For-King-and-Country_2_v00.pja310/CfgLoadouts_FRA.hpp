@@ -479,44 +479,6 @@ class Loadouts {
 
         };
 
-        class TTT_B_JTAC_F: B_W_RadioOperator_F {
-            vest = "CUP_V_B_BAF_MTP_Osprey_Mk4_Officer"; //MTP
-            //vest = "CUP_V_B_BAF_DDPM_Osprey_Mk3_Officer"; //DDPM
-            //vest = "CUP_V_B_BAF_DPM_Osprey_Mk3_Officer"; //DPM
-
-            primaryWeapon = "CUP_arifle_L85A2_GL";
-
-            handgunWeapon = "CUP_hgun_Glock17_blk";
-            handgunWeaponMagazine = "CUP_17Rnd_9x19_glock17";
-            binoculars = "CUP_SOFLAM";
-
-            addItemsToVest[] += {
-                "Laserbatteries",
-                LIST_2("CUP_17Rnd_9x19_glock17"),
-                "ACRE_PRC152",
-                "ACE_Microdagr",
-                "ItemAndroid",
-            };
-            addItemsToBackpack[] = {
-                LIST_15("CUP_1Rnd_SmokeRed_M203"),
-                "ACRE_PRC117F",
-            };
-
-        };
-
-        class TTT_B_FO_F: B_W_RadioOperator_F {
-            binoculars = "ACE_Vector";
-
-            addItemsToVest[] += {
-                "ACE_Microdagr",
-                "ItemAndroid",
-                "ACRE_PRC152",
-            };
-            addItemsToBackpack[] = {
-                "ACRE_PRC117F",
-            };
-        };
-
         // Medics
         class B_medic_F {
             vest = "CUP_V_B_BAF_MTP_Osprey_Mk4_Medic"; //MTP

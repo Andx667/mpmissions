@@ -927,24 +927,7 @@ class Loadouts {
 
         class B_officer_F: B_Soldier_SL_F {
 
-        };
-
-        class TTT_B_FO_F: B_Soldier_F {
-            backpack = "NOR_Predator_Radio_Backpack";
-
-            addItemsToVest[] += {
-                "ACE_MicroDAGR",
-                "ACRE_PRC152",
-                "ItemAndroid",
-            };
-
-            addItemsToBackpack[] += {
-                "ACRE_PRC117F",
-                "ACRE_VHF30108SPIKE",
-                "itc_land_tablet_fdc",
-            };
-            binoculars = "ACE_Vector";
-        };
+        }
 
         //Medics
         class B_medic_F {

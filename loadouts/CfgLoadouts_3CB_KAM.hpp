@@ -254,31 +254,55 @@ class Loadouts {
             secondaryWeapon = "UK3CB_BAF_AT4_CS_AP_Launcher";
         };
 
+        //Radio Operator / FO /JTAC
         class B_W_RadioOperator_F: B_Soldier_F {
-            vest[] = {
-                "UK3CB_BAF_V_Osprey_SL_A",
-                "UK3CB_BAF_V_Osprey_SL_B",
-            };
-            backpack = "UK3CB_BAF_B_Bergen_MTP_JTAC_H_A";
+            class Rank {
+                class PRIVATE {
+                    vest[] = {
+                        "UK3CB_BAF_V_Osprey_SL_A",
+                        "UK3CB_BAF_V_Osprey_SL_B",
+                    };
+                    backpack = "UK3CB_BAF_B_Bergen_MTP_JTAC_H_A";
+                    addItemsToVest[] += {
+                        "ACRE_PRC148",
+                        "Laserbatteries",
+                        "ItemAndroid",
+                    };
+                    addItemsToBackpack[] = {
+                        "ACRE_PRC117F",
+                        LIST_15("UK3CB_BAF_SmokeShellPurple"),
+                        LIST_4("UK3CB_BAF_556_30Rnd"),
+                        "ace_flags_blue",
+                        "ACE_SpraypaintBlue",
+                        "UK3CB_BAF_762_200Rnd_T",
+                    };
+                    binoculars = "UK3CB_BAF_Soflam_Laserdesignator";
+                };
+               //FO
+                class CORPORAL: PRIVATE {
 
-            addItemsToVest[] += {
-                "ACRE_PRC148",
-                "Laserbatteries",
-                "ItemAndroid",
-            };
+                    addItemsToUniform[] += {
+                        "ACE_microdagr",
+                    };
 
-            addItemsToBackpack[] = {
-                "ACRE_PRC117F",
-                LIST_15("UK3CB_BAF_SmokeShellPurple"),
-                LIST_4("UK3CB_BAF_556_30Rnd"),
-                "ace_flags_blue",
-                "ACE_SpraypaintBlue",
-                "UK3CB_BAF_762_200Rnd_T",
-            };
+                    addItemsToBackpack[] += {
+                        "", //Funkgerät
+                    };
 
-            binoculars = "UK3CB_BAF_Soflam_Laserdesignator";
+                    binoculars = "ACE_Vector";
+                };
+                //JTAC
+                class SERGEANT: CORPORAL {
+
+                };
+                class LIEUTENANT: SERGEANT {
+
+                };
+            };
 
         };
+
+
         class B_soldier_AT_F: B_Soldier_F {
 
         };
@@ -606,10 +630,6 @@ class Loadouts {
         };
 
         class B_officer_F: B_Soldier_SL_F {
-
-        };
-
-        class TTT_B_FO_F: B_Soldier_F {
 
         };
 

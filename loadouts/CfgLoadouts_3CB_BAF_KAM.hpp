@@ -255,29 +255,41 @@ class Loadouts {
             //secondaryWeapon = "UK3CB_BAF_NLAW_Launcher";
         };
 
+        //Radio Operator / FO /JTAC
         class B_W_RadioOperator_F: B_Soldier_F {
-            vest[] = {
-                "UK3CB_BAF_V_Osprey_SL_A",
-                "UK3CB_BAF_V_Osprey_SL_B",
-            };
-            backpack = "UK3CB_BAF_B_Bergen_MTP_JTAC_H_A";
+            class Rank {
+                class PRIVATE {
+                    backpack = "";
 
-            addItemsToVest[] += {
-                "ACRE_PRC148",
-                "Laserbatteries",
-                "ItemAndroid",
-            };
+                    addItemsToBackpack[] += {
+                        LIST_2(""), //LR Radio
+                        LIST_10(""), //Purple Smoke
+                        "ACE_flags_blue",
+                        "ACE_flags_yellow",
+                    };
+                };
+               //FO
+                class CORPORAL: PRIVATE {
+                    backpack = "";
 
-            addItemsToBackpack[] = {
-                "ACRE_PRC117F",
-                LIST_15("UK3CB_BAF_SmokeShellPurple"),
-                LIST_4("UK3CB_BAF_556_30Rnd"),
-                "ace_flags_blue",
-                "ACE_SpraypaintBlue",
-                "UK3CB_BAF_762_200Rnd_T",
-            };
+                    addItemsToUniform[] += {
+                        "ACE_microdagr",
+                    };
 
-            binoculars = "UK3CB_BAF_Soflam_Laserdesignator";
+                    addItemsToBackpack[] += {
+                        "", //Funkgerät
+                    };
+
+                    binoculars = "ACE_Vector";
+                };
+                //JTAC
+                class SERGEANT: CORPORAL {
+
+                };
+                class LIEUTENANT: SERGEANT {
+
+                };
+            };
 
         };
         class B_soldier_AT_F: B_Soldier_F {
@@ -727,10 +739,6 @@ class Loadouts {
         };
 
         class B_officer_F: B_Soldier_SL_F {
-
-        };
-
-        class TTT_B_FO_F: B_Soldier_F {
 
         };
 

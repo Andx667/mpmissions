@@ -169,7 +169,7 @@ class Loadouts {
             secondaryWeapon = "";
         };
 
-        //Radio Operator
+        //Radio Operator / FO /JTAC
         class B_W_RadioOperator_F: B_Soldier_F {
             class Rank {
                 class PRIVATE {

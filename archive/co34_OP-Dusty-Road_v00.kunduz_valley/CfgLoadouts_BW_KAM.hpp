@@ -529,10 +529,6 @@ class Loadouts {
 
         };
 
-        class TTT_B_FO_F: B_Soldier_F {
-
-        };
-
         //Medics
         class B_medic_F {
             vest = "BWA3_Vest_Medic_tropen";
