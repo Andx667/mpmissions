@@ -54,17 +54,6 @@ class Loadouts {
             uniform[] = {
                 "UK3CB_GAF_B_U_CombatSmock_04_DIGI",
                 "UK3CB_GAF_B_U_CombatSmock_02_DIGI",
-                // "UK3CB_GAF_B_U_SF_CombatSmock_07_MULTICAM_OLIVE",
-                // "UK3CB_GAF_B_U_SF_CombatSmock_07_MULTICAM",
-                // "UK3CB_GAF_B_U_SF_CombatSmock_08_MULTICAM_OLIVE",
-                // "UK3CB_GAF_B_U_SF_CombatSmock_08_MULTICAM_TAN",
-                // "UK3CB_GAF_B_U_SF_CombatSmock_08_MULTICAM",
-                // "UK3CB_GAF_B_U_SF_CombatSmock_03_MULTICAM_OLIVE",
-                // "UK3CB_GAF_B_U_SF_CombatSmock_03_MULTICAM_TAN",
-                // "UK3CB_GAF_B_U_SF_CombatSmock_03_MULTICAM",
-                // "UK3CB_GAF_B_U_SF_CombatSmock_04_MULTICAM_OLIVE",
-                // "UK3CB_GAF_B_U_SF_CombatSmock_04_MULTICAM_TAN",
-                // "UK3CB_GAF_B_U_SF_CombatSmock_04_MULTICAM",
             };
             vest[] = {
                 "UK3CB_GAF_B_MBAV_RIFLEMAN_DIGI",
@@ -138,10 +127,10 @@ class Loadouts {
             goggles[] = {
                 "UK3CB_G_Tactical_Clear",
                 "UK3CB_G_Tactical_Clear_Shemagh_Green",
-                "UK3CB_G_Tactical_Clear_Shemagh_Tan",
+                //"UK3CB_G_Tactical_Clear_Shemagh_Tan",
                 "UK3CB_G_Tactical_Black",
                 "UK3CB_G_Tactical_Black_Shemagh_Green",
-                "UK3CB_G_Tactical_Black_Shemagh_Tan",
+                //"UK3CB_G_Tactical_Black_Shemagh_Tan",
                 ""
                 };
             nvgoggles = "";
@@ -218,8 +207,8 @@ class Loadouts {
             primaryWeaponUnderbarrel = "rhsusf_acc_harris_bipod";
             primaryWeaponMuzzle[] = {
                 "rhsusf_acc_aac_m14dcqd_silencer",
-                "rhsusf_acc_aac_m14dcqd_silencer_d",
-                //"rhsusf_acc_aac_m14dcqd_silencer_wd",
+                //"rhsusf_acc_aac_m14dcqd_silencer_d",
+                "rhsusf_acc_aac_m14dcqd_silencer_wd",
             };
 
             vest[] = {
@@ -694,9 +683,34 @@ class Loadouts {
         class B_recon_F {
             primaryWeaponMuzzle[] = {
                 "rhsusf_acc_nt4_black",
-                "rhsusf_acc_nt4_tan",
+                //"rhsusf_acc_nt4_tan",
                 };
-
+            uniform[] = {
+                "UK3CB_GAF_B_U_SF_CombatSmock_07_MULTICAM_OLIVE",
+                "UK3CB_GAF_B_U_SF_CombatSmock_07_MULTICAM",
+                "UK3CB_GAF_B_U_SF_CombatSmock_08_MULTICAM_OLIVE",
+                "UK3CB_GAF_B_U_SF_CombatSmock_08_MULTICAM_TAN",
+                "UK3CB_GAF_B_U_SF_CombatSmock_08_MULTICAM",
+                "UK3CB_GAF_B_U_SF_CombatSmock_03_MULTICAM_OLIVE",
+                "UK3CB_GAF_B_U_SF_CombatSmock_03_MULTICAM_TAN",
+                "UK3CB_GAF_B_U_SF_CombatSmock_03_MULTICAM",
+                "UK3CB_GAF_B_U_SF_CombatSmock_04_MULTICAM_OLIVE",
+                "UK3CB_GAF_B_U_SF_CombatSmock_04_MULTICAM_TAN",
+                "UK3CB_GAF_B_U_SF_CombatSmock_04_MULTICAM",
+            };
+            headgear[] = {
+                //"UK3CB_GAF_B_H_Opscore_Mar_OLI_01",
+                //"UK3CB_GAF_B_H_Opscore_Mar_OLI_02",
+                //"UK3CB_GAF_B_H_Opscore_Mar_TAN_01",
+                //"UK3CB_GAF_B_H_Opscore_Mar_TAN_02",
+                "rhsusf_opscore_fg_pelt",
+                "rhsusf_opscore_fg_pelt_cam",
+                "rhsusf_opscore_fg_pelt_nsw",
+                "rhsusf_opscore_paint_pelt_nsw_cam",
+                "rhsusf_opscore_mar_fg_pelt",
+                "rhsusf_opscore_rg_cover_pelt",
+                "rhsusf_opscore_paint_pelt",
+            };
         };
 
         class B_recon_LAT_F: B_recon_F {
@@ -718,7 +732,7 @@ class Loadouts {
 
         };
 
-        class B_recon_M_F {
+        class B_recon_M_F: B_recon_F {
 
         };
     };
