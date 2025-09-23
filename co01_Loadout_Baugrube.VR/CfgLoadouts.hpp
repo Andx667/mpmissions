@@ -176,7 +176,11 @@ class Loadouts {
         };
 
         class B_W_RadioOperator_F: B_Soldier_F {
-
+            backpack[] = {
+                "UK3CB_B_O_RadioBag_KHK",
+                "UK3CB_B_O_RadioBag_GRN",
+                "UK3CB_B_O_RadioBag_TAN",
+            };
         };
         class B_soldier_AT_F: B_Soldier_F {
 
