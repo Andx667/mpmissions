@@ -51,14 +51,14 @@ class Loadouts {
     class Side {
         class Blufor {
             uniform[] = {
-                "ttt_Uniform_Black_BW_Flecktarn",
+                "ttt_Uniform_green_BW_Flecktarn",
             };
             vest[] = {
-                "ttt_Vest_Heavy_Black_US_Desert",
+                "ttt_Vest_Heavy_green_US_Desert",
             };
             backpack = "B_AssaultPack_rgr";
             headgear[] = {
-                "ttt_Beret_Black",
+                "ttt_Beret_green",
             };
 
             addItemsToUniform[] = {
@@ -77,43 +77,43 @@ class Loadouts {
             addItemsToBackpack[] = {};
 
             primaryWeapon[] = {
-                "CUP_arifle_ACR_blk_556",
-                "CUP_arifle_ACR_snw_556",
-                "CUP_arifle_ACR_tan_556",
-                "CUP_arifle_ACR_wdl_556",
+                "arifle_MSBS65_black_F",
+                "arifle_MSBS65_F",
+                "arifle_MSBS65_camo_F",
+                "arifle_MSBS65_sand_F",
             };
             primaryWeaponOptics[] = {
-                "CUP_optic_HensoldtZO_RDS_od",
-                "CUP_optic_HensoldtZO_RDS_hex",
-                "CUP_optic_HensoldtZO_RDS_desert",
-                "CUP_optic_HensoldtZO_RDS_coyote",
-                "CUP_optic_HensoldtZO_RDS",
+                "optic_Arco_arid_F",
+                "optic_Arco_blk_F",
+                "optic_Arco_lush_F",
+                "optic_Arco",
+                "optic_MRCO",
+                "optic_Hamr",
+                "optic_Hamr_khk_F",
+                "optic_ERCO_blk_F",
+                "optic_ERCO_khk_F",
+                "optic_ERCO_snd_F",
                 };
             primaryWeaponPointer[] = {
-                "CUP_acc_ANPEQ_15_Flashlight_Black_L",
-                "CUP_acc_ANPEQ_15_Flashlight_OD_L",
-                "CUP_acc_ANPEQ_15_Flashlight_Tan_L",
-                "CUP_acc_ANPEQ_15_Top_Flashlight_Black_L",
-                "CUP_acc_ANPEQ_15_Top_Flashlight_OD_L",
-                "CUP_acc_ANPEQ_15_Top_Flashlight_Tan_L",
+                "ACE_DBAL_A3_Red",
                 };
-            primaryWeaponMagazine = "CUP_30Rnd_556x45_PMAG_BLACK_PULL";
+            primaryWeaponMagazine = "";
             primaryWeaponUnderbarrel = "";
             primaryWeaponUnderbarrelMagazine = "";
             secondaryWeapon = "";
             secondaryWeaponMagazine = "";
             handgunWeapon[] = {
-                "CUP_hgun_Glock17",
-                "CUP_hgun_Glock17_blk",
-                "CUP_hgun_Glock17_tan",
+                "hgun_P07_khk_F",
+                "hgun_P07_blk_F",
+                "hgun_P07_F",
                 };
             handgunWeaponMagazine = "";
 
             goggles[] = {
                 "",
-                "CUP_G_Oakleys_Clr",
-                "CUP_G_Oakleys_Drk",
-                "CUP_G_Oakleys_Embr",
+                "BWA3_G_Combat_black",
+                "BWA3_G_Combat_clear",
+                "BWA3_G_Combat_orange",
                 };
             nvgoggles = "";
 
@@ -134,23 +134,33 @@ class Loadouts {
 
         class B_Soldier_GL_F: B_Soldier_F {
             primaryWeapon[] = {
-                "CUP_arifle_ACR_EGLM_blk_556",
-                "CUP_arifle_ACR_EGLM_snw_556",
-                "CUP_arifle_ACR_EGLM_tan_556",
-                "CUP_arifle_ACR_EGLM_wdl_556",
+                "arifle_MSBS65_GL_F",
+                "arifle_MSBS65_GL_black_F",
+                "arifle_MSBS65_GL_camo_F",
+                "arifle_MSBS65_GL_sand_F",
                 };
 
         };
 
         class B_soldier_exp_F: B_Soldier_F {
+            primaryWeapon[] = {
+                "arifle_MSBS65_UBS_F",
+                "arifle_MSBS65_UBS_black_F",
+                "arifle_MSBS65_UBS_camo_F",
+                "arifle_MSBS65_UBS_sand_F",
+            };
 
         };
 
         class B_soldier_LAT2_F: B_Soldier_F {
-            secondaryWeapon = "CUP_launch_NLAW";
+            secondaryWeapon = "launch_NLAW_F";
         };
 
         class B_W_RadioOperator_F: B_Soldier_F {
+            backpack = "ttt_backpack_radio_green_us_desert";
+            goggles[] += {
+                "G_Aviator",
+            };
 
         };
         class B_soldier_AT_F: B_Soldier_F {
@@ -159,7 +169,7 @@ class Loadouts {
                 "launch_MRAWS_olive_F",
                 "launch_MRAWS_sand_F",
                 };
-            secondaryWeaponOptics = "CUP_acc_ANPEQ_15_Black";
+            secondaryWeaponOptics = "";
             secondaryWeaponMagazine = "";
 
         };
@@ -179,17 +189,21 @@ class Loadouts {
         // These dont inherit from the basic rifleman
         class B_soldier_M_F {
             primaryWeapon[] = {
-                "CUP_arifle_ACR_DMR_wdl_556",
-                "CUP_arifle_ACR_DMR_tan_556",
-                "CUP_arifle_ACR_DMR_snw_556",
-                "CUP_arifle_ACR_DMR_blk_556",
+                "arifle_MSBS65_Mark_F",
+                "arifle_MSBS65_Mark_black_F",
+                "arifle_MSBS65_Mark_camo_F",
+                "arifle_MSBS65_Mark_sand_F",
             };
             primaryWeaponOptics[] = {
-                "CUP_optic_SB_11_4x20_PM_od",
-                "CUP_optic_SB_11_4x20_PM_tan",
-                "CUP_optic_SB_11_4x20_PM",
+                "optic_SOS",
+                "optic_SOS_khk_F",
             };
-            primaryWeaponUnderbarrel = "CUP_bipod_Harris_1A2_L_BLK";
+            primaryWeaponUnderbarrel[] = {
+                "bipod_01_F_blk",
+                "bipod_01_F_mtp",
+                "bipod_01_F_snd",
+                "bipod_01_F_khk",
+                };
 
             addItemsToVest[] += {
                 "ACE_RangeCard",
@@ -198,26 +212,23 @@ class Loadouts {
 
         //Autorifleman
         class B_soldier_AR_F {
-            primaryWeapon = "CUP_lmg_m249_pip3";
+            primaryWeapon[] = {
+                "LMG_03_F",
+                };
             primaryWeaponMagazine = "";
+
 
         };
 
         //MMG
         class B_HeavyGunner_F {
             primaryWeapon[] = {
-                "CUP_lmg_Mk48_wdl",
-                "CUP_lmg_Mk48_tan",
-                "CUP_lmg_Mk48_od",
-                "CUP_lmg_Mk48_des",
-                "CUP_lmg_Mk48",
-            };
-            primaryWeaponOptics[] = {
-                "CUP_optic_ACOG_TA648_308_RDS_Wdl",
-                "CUP_optic_ACOG_TA648_308_RDS_od",
-                "CUP_optic_ACOG_TA648_308_RDS_Desert",
-                "CUP_optic_ACOG_TA648_308_RDS_coyo",
-                "CUP_optic_ACOG_TA648_308_RDS_Black",
+                "MMG_02_black_F",
+                "MMG_02_camo_F",
+                "MMG_02_sand_F",
+                };
+            primaryWeaponOptics[] += {
+                "",
             };
 
         };
@@ -231,6 +242,9 @@ class Loadouts {
 
         //Unterstützung
         class B_engineer_F: B_Soldier_F {
+            uniform = "ttt_Uniform_Blue_BW_Flecktarn";
+            vest = "ttt_Vest_Heavy_Blue_US_Desert";
+            headgear = "ttt_Beret_Blue";
 
             class Rank {
 
@@ -249,7 +263,7 @@ class Loadouts {
         class B_soldier_mine_F: B_Soldier_F {
             uniform = "ttt_Uniform_Blue_BW_Flecktarn";
             vest = "ttt_Vest_Heavy_Blue_US_Desert";
-            headgear = "ttt_Beret_Bronze";
+            headgear = "ttt_Beret_Blue";
 
             class Rank {
 
@@ -271,10 +285,9 @@ class Loadouts {
             headgear = "ttt_Beret_Bronze";
 
             primaryWeapon[] = {
-                "CUP_arifle_ACRC_blk_556",
-                "CUP_arifle_ACRC_snw_556",
-                "CUP_arifle_ACRC_tan_556",
-                "CUP_arifle_ACRC_wdl_556",
+                "SMG_03C_black",
+                "SMG_03C_camo",
+                "SMG_03C_khaki",
             };
 
             addItemsToBackpack[] += {
@@ -303,12 +316,6 @@ class Loadouts {
 
         //Mörser
         class B_support_AMort_F: B_Soldier_F {
-            primaryWeapon[] = {
-                "CUP_arifle_ACRC_blk_556",
-                "CUP_arifle_ACRC_snw_556",
-                "CUP_arifle_ACRC_tan_556",
-                "CUP_arifle_ACRC_wdl_556",
-            };
         };
 
         class B_support_Mort_F: B_support_AMort_F {
@@ -383,21 +390,23 @@ class Loadouts {
                     vest = "ttt_Vest_Heavy_Brown_US_Desert";
                     headgear = "ttt_Beret_Brown";
 
-                    primaryWeapon[] = {
-                        "CUP_arifle_ACRC_blk_556",
-                        "CUP_arifle_ACRC_snw_556",
-                        "CUP_arifle_ACRC_tan_556",
-                        "CUP_arifle_ACRC_wdl_556",
-                    };
+                    backpack = "ttt_backpack_medic_rgr_02";
                 };
 
                 class SERGEANT: CORPORAL {
                     uniform = "ttt_Uniform_White_BW_Flecktarn";
                     vest = "ttt_Vest_Crew_White";
                     headgear = "ttt_Beret_White";
+
+                    primaryWeapon[] = {
+                        "SMG_03C_black",
+                        "SMG_03C_camo",
+                        "SMG_03C_khaki",
+                    };
                 };
 
                 class LIEUTENANT: SERGEANT {
+                    backpack = "ttt_backpack_radio_white_us_desert";
 
                 };
             };
@@ -409,10 +418,9 @@ class Loadouts {
             headgear = "ttt_Beret_Silver";
 
             primaryWeapon[] = {
-                "CUP_arifle_ACRC_blk_556",
-                "CUP_arifle_ACRC_snw_556",
-                "CUP_arifle_ACRC_tan_556",
-                "CUP_arifle_ACRC_wdl_556",
+                "SMG_03C_black",
+                "SMG_03C_camo",
+                "SMG_03C_khaki",
             };
 
             class Rank {
@@ -430,13 +438,27 @@ class Loadouts {
         class B_recon_F {
             uniform = "ttt_Uniform_Grey_BW_Flecktarn";
             vest = "ttt_Vest_Lite_Grey_US_Desert";
-            headgear = "ttt_Beret_Gold";
+            headgear = "ttt_Beret_Grey";
+
+            primaryWeapon[] = {
+                "arifle_SPAR_01_blk_F",
+                "arifle_SPAR_01_khk_F",
+                "arifle_SPAR_01_snd_F",
+            };
+
+            primaryWeaponMuzzle[] += {
+                "muzzle_snds_M",
+                "muzzle_snds_m_khk_F",
+                "muzzle_snds_m_snd_F",
+            };
         };
 
         class B_recon_LAT_F: B_recon_F {
+            secondaryWeapon = "BWA3_RGW90_Loaded";
         };
 
         class B_recon_medic_F: B_recon_F {
+            backpack = "ttt_backpack_medic_rgr_02";
 
         };
 
@@ -445,6 +467,7 @@ class Loadouts {
         };
 
         class B_recon_JTAC_F: B_recon_F {
+            backpack = "ttt_backpack_radio_grey_us_desert";
 
         };
 
@@ -452,8 +475,32 @@ class Loadouts {
 
         };
 
-        class B_recon_M_F {
-
+        class B_recon_M_F: B_recon_F {
+            primaryWeapon[] = {
+                "arifle_SPAR_03_blk_F",
+                "arifle_SPAR_03_khk_F",
+                "arifle_SPAR_03_snd_F",
+            };
+            primaryWeaponOptics[] = {
+                "optic_SOS",
+                "optic_SOS_khk_F",
+            };
+            primaryWeaponUnderbarrel[] = {
+                "bipod_01_F_blk",
+                "bipod_01_F_mtp",
+                "bipod_01_F_snd",
+                "bipod_01_F_khk",
+            };
+            primaryWeaponMuzzle[] = {
+                "muzzle_snds_B",
+                "muzzle_snds_B_khk_F",
+                "muzzle_snds_B_snd_F",
+                "muzzle_snds_B_arid_F",
+                "muzzle_snds_B_lush_F",
+            };
+            addItemsToVest[] += {
+                "ACE_RangeCard",
+            };
         };
     };
 };
