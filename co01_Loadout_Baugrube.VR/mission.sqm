@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=53;
+		nextID=54;
 	};
 	class Camera
 	{
-		pos[]={7730.2095,17.495085,5120.2344};
-		dir[]={0.051793203,-0.6927458,-0.71931964};
-		up[]={0.049751006,0.72118175,-0.69095701};
-		aside[]={-0.99741781,-3.7252903e-09,-0.071817115};
+		pos[]={7729.0474,26.907867,5132.1255};
+		dir[]={-0.029776633,-0.80269444,-0.59564674};
+		up[]={-0.04007699,0.59639049,-0.80169332};
+		aside[]={-0.99875283,0,0.049928077};
 	};
 };
 binarizationWanted=0;
@@ -42,13 +42,14 @@ addons[]=
 	"ace_explosives",
 	"A3_Characters_F_Orange",
 	"ace_nouniformrestrictions",
+	"cfp_uniforms",
 	"A3_Characters_F_Patrol"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=9;
+		items=10;
 		class Item0
 		{
 			className="KJW_TwoPrimaryWeapons";
@@ -105,6 +106,12 @@ class AddonsMetaData
 			url="https://ace3.acemod.org/";
 		};
 		class Item8
+		{
+			className="cfp_uniforms";
+			name="cfp_uniforms";
+			author="CFP Team";
+		};
+		class Item9
 		{
 			className="A3_Characters_F_Patrol";
 			name="Arma 3 Patrol - Characters and Clothing";
@@ -2297,7 +2304,7 @@ class Mission
 			name="Layer 1";
 			class Entities
 			{
-				items=33;
+				items=32;
 				class Item0
 				{
 					dataType="Comment";
@@ -3093,7 +3100,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={7734,5.0014391,5112.0498};
-								angles[]={-0,3.0799999,0};
+								angles[]={0,3.0799999,0};
 							};
 							side="West";
 							flags=4;
@@ -7197,7 +7204,7 @@ class Mission
 					side="West";
 					class Entities
 					{
-						items=8;
+						items=9;
 						class Item0
 						{
 							dataType="Object";
@@ -8072,6 +8079,129 @@ class Mission
 								nAttributes=5;
 							};
 						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={7724,5.0014391,5120.0498};
+								angles[]={0,3.1053073,0};
+							};
+							side="West";
+							flags=5;
+							class Attributes
+							{
+								rank="CORPORAL";
+								description="5: Recon Paramedic";
+								isPlayable=1;
+							};
+							id=937;
+							type="B_recon_medic_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male04ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.05;
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="acre_sys_radio_edenSetup";
+									expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="iedd_ied_sides";
+									expression="_this setVariable ['iedd_ied_sides',_value];";
+									class Value
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=4;
+												class Item0
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=-1;
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=2;
+													};
+												};
+												class Item3
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=3;
+													};
+												};
+											};
+										};
+									};
+								};
+								class Attribute4
+								{
+									property="ENH_doStop";
+									expression="if (!is3DEN && _value) then {doStop _this}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=5;
+							};
+						};
 					};
 					class Attributes
 					{
@@ -8385,142 +8515,6 @@ class Mission
 					};
 					title="Arzt 1";
 					id=892;
-				};
-				class Item32
-				{
-					dataType="Group";
-					side="West";
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7724,5.0014391,5120.0498};
-								angles[]={0,3.1053073,0};
-							};
-							side="West";
-							flags=7;
-							class Attributes
-							{
-								rank="CORPORAL";
-								description="5: Recon Paramedic";
-								isPlayable=1;
-							};
-							id=937;
-							type="B_recon_medic_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="Male04ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=1.05;
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="acre_sys_radio_edenSetup";
-									expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
-										};
-									};
-								};
-								class Attribute3
-								{
-									property="iedd_ied_sides";
-									expression="_this setVariable ['iedd_ied_sides',_value];";
-									class Value
-									{
-										class data
-										{
-											singleType="ARRAY";
-											class value
-											{
-												items=4;
-												class Item0
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=0;
-													};
-												};
-												class Item1
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=-1;
-													};
-												};
-												class Item2
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=2;
-													};
-												};
-												class Item3
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=3;
-													};
-												};
-											};
-										};
-									};
-								};
-								class Attribute4
-								{
-									property="ENH_doStop";
-									expression="if (!is3DEN && _value) then {doStop _this}";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=5;
-							};
-						};
-					};
-					class Attributes
-					{
-					};
-					id=934;
 				};
 			};
 			id=560;

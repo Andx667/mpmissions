@@ -302,6 +302,7 @@ class Loadouts {
 
                 };
                 class LIEUTENANT: SERGEANT {
+                    backpack = "ttt_backpack_radio_bronze_us_desert";
                 };
             };
         };
@@ -348,13 +349,15 @@ class Loadouts {
             uniform = "ttt_Uniform_Gold_BW_Flecktarn";
             vest = "ttt_Vest_Lite_Gold_US_Desert";
             headgear = "ttt_Beret_Gold";
+
+            backpack = "ttt_backpack_radio_gold_us_desert";
         };
 
-        class B_Patrol_Soldier_UAV_F: B_soldier_M_F {
+        class B_Patrol_Soldier_UAV_F: B_Patrol_Soldier_TL_F {
 
         };
 
-        class B_Patrol_Soldier_M_F: B_soldier_M_F {
+        class B_Patrol_Soldier_M_F: B_Patrol_Soldier_TL_F {
 
         };
 
@@ -429,6 +432,7 @@ class Loadouts {
 
                 };
                 class SERGEANT: PRIVATE {
+                    backpack = "ttt_backpack_radio_silver_us_desert";
 
                 };
             };

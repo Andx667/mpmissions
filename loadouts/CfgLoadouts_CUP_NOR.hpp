@@ -929,7 +929,7 @@ class Loadouts {
 
         };
 
-        class TTT_B_FO_F: B_Soldier_F {
+        class B_W_RadioOperator_F: B_Soldier_F {
             backpack = "NOR_Predator_Radio_Backpack";
 
             addItemsToVest[] += {
