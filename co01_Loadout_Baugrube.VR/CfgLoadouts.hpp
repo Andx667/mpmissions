@@ -45,7 +45,10 @@ class Loadouts {
         "primaryWeaponOptics",
         "primaryWeaponUnderbarrel",
         "primaryWeaponPointer",
+        "primaryWeaponMuzzle",
+        "handgunweapon",
         "goggles",
+        "backpack",
         //"headgear"
     };
 
@@ -98,7 +101,6 @@ class Loadouts {
                 "CUP_optic_HensoldtZO_low_RDS",
                 "CUP_optic_HensoldtZO_low_RDS_coyote",
                 "CUP_optic_HensoldtZO_low_RDS_desert",
-                "CUP_optic_HensoldtZO_low_RDS_hex",
                 "CUP_optic_HensoldtZO_low_RDS_od",
                 };
             primaryWeaponPointer[] = {
@@ -132,7 +134,6 @@ class Loadouts {
                 "CFP_Neck_Wrap2",
                 "CFP_Neck_Wrap_Atacs2",
                 "CFP_Neck_Wrap_Atacs",
-
                 };
             nvgoggles = "";
 
@@ -152,7 +153,7 @@ class Loadouts {
 
             addItemsToVest[] += {
                 LIST_8("CUP_30Rnd_556x45_PMAG_BLACK_RPL"),
-                "ItemMicroDagr",
+
             };
 
         };
@@ -198,6 +199,18 @@ class Loadouts {
                 "CFP_Oakley_Goggles_MCam",
                 "CFP_Oakley_Goggles_Olv",
                 ""
+            };
+
+            addItemsToVest[] += {
+                "ACE_Clacker",
+                "ACE_Defusalkit",
+                "ACE_wirecutter",
+            };
+
+            addItemsToBackpack[] = {
+                LIST_3("tsp_breach_block_mag"),
+                LIST_2("tsp_breach_package_mag"),
+                LIST_2("ACE_M84"),
             };
 
         };
@@ -251,7 +264,16 @@ class Loadouts {
         };
 
         class B_soldier_UAV_F: B_Soldier_F {
+            backpack[] = {
+                "B_Kitbag_cbr",
+                "B_Kitbag_rgr",
+                "B_Kitbag_tan",
+            };
 
+            addItemsToBackpack[] = {
+                LIST_6("ACE_UAVBattery"),
+                "ITC_Land_B_AR2i_Packed",
+            };
         };
 
         // These dont inherit from the basic rifleman
@@ -276,7 +298,7 @@ class Loadouts {
             addItemsToVest[] += {
                 "ACE_RangeCard",
                 LIST_6("CUP_20Rnd_762x51_HK417"),
-                "ItemMicroDagr",
+
             };
 
             addItemsToBackpack[] += {
@@ -293,7 +315,7 @@ class Loadouts {
 
             addItemsToVest[] += {
                 LIST_2("CUP_100Rnd_TE4_Red_Tracer_556x45_M249"),
-                "ItemMicroDagr",
+
             };
 
             addItemsToBackpack[] = {
@@ -322,7 +344,7 @@ class Loadouts {
 
             addItemsToVest[] += {
                 LIST_2("CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M"),
-                "ItemMicroDagr",
+
             };
 
             addItemsToBackpack[] = {
@@ -389,7 +411,10 @@ class Loadouts {
 
                 };
                 class SERGEANT: CORPORAL {
-
+                    addItemsToVest[] += {
+                        "ACRE_PRC152",
+                        "ItemAndroid",
+                    };
                 };
             };
         };
@@ -398,6 +423,8 @@ class Loadouts {
             uniform = "ttt_Uniform_Blue_BW_Flecktarn";
             vest = "ttt_Vest_Heavy_Blue_US_Desert";
             headgear = "ttt_Beret_Blue";
+
+            secondaryWeapon = "ACE_VMH3";
 
             goggles[] += {
                 "CUP_G_ESS_BLK_Dark",
@@ -418,15 +445,30 @@ class Loadouts {
                 "CUP_G_ESS_BLK_Scarf_Face_Grn",
                 "CUP_G_ESS_KHK_Scarf_Face_Tan",
             };
+
             class Rank {
 
                 class PRIVATE {
+                    addItemsToVest[] += {
+                        "ACE_Clacker",
+                        "ACE_Defusalkit",
+                    };
+
+                    addItemsToBackpack[] = {
+                        LIST_3("DemoCharge_Remote_Mag"),
+                        LIST_10("ace_marker_flags_orange"),
+                        "ACE_SpraypaintRed",
+                    };
 
                 };
                 class CORPORAL: PRIVATE {
 
                 };
                 class SERGEANT: CORPORAL {
+                    addItemsToVest[] += {
+                        "ACRE_PRC152",
+                        "ItemAndroid",
+                    };
                 };
             };
         };
@@ -467,7 +509,10 @@ class Loadouts {
 
                 };
                 class SERGEANT: PRIVATE {
-
+                    addItemsToVest[] += {
+                        "ACRE_PRC152",
+                        "ItemAndroid",
+                    };
                 };
                 class LIEUTENANT: SERGEANT {
                     backpack = "ttt_backpack_radio_bronze_us_desert";
@@ -491,6 +536,11 @@ class Loadouts {
                 "U_B_FullGhillie_sard",
                 "U_B_T_FullGhillie_tna_F",
             };
+
+            addItemsToVest[] += {
+                "ACRE_PRC152",
+                "ItemAndroid",
+            };
         };
 
         class B_spotter_F: B_soldier_M_F {
@@ -512,13 +562,27 @@ class Loadouts {
         class B_support_Mort_F: B_support_AMort_F {
             class Rank {
                 class PRIVATE {
-
+                    addItemsToBackpack[] = {
+                        "ACE_PlottingBoard",
+                    };
                 };
                 class CORPORAL: PRIVATE {
 
                 };
                 class SERGEANT: CORPORAL {
                     backpack = "ttt_backpack_radio_coyote";
+
+                    addItemsToUniform[] += {
+                        "ACE_microdagr",
+                    };
+
+                    addItemsToVest[] += {
+                        "ItemAndroid",
+                    };
+
+                    addItemsToBackpack[] += {
+                        "ACRE_PRC117F"
+                    };
                 };
             };
         };
@@ -553,6 +617,14 @@ class Loadouts {
 
             backpack = "ttt_backpack_radio_coyote";
 
+            primaryWeaponMuzzle[] = {
+                "CUP_muzzle_snds_socom762rc",
+            };
+            primaryWeaponOptics[] += {
+                "CUP_optic_SB_3_12x50_PMII",
+                "CUP_optic_SB_3_12x50_PMII_Tan",
+            };
+
             addItemsToUniform[] += {
                 "ACE_Microdagr",
             };
@@ -571,6 +643,10 @@ class Loadouts {
                 "B_Kitbag_tan",
             };
 
+            addItemsToBackpack[] = {
+                LIST_6("ACE_UAVBattery"),
+                "ITC_Land_B_AR2i_Packed",
+            };
         };
 
         class B_Patrol_Soldier_M_F: B_Patrol_Soldier_TL_F {
@@ -594,21 +670,24 @@ class Loadouts {
             addItemsToVest[]  += {
                 "ItemAndroid",
                 LIST_8("CUP_30Rnd_556x45_PMAG_OD_RPL_Tracer_Red"),
-                "SmokeShellGreen",
+                LIST_2("ACE_CableTie"),
             };
 
             addItemsToBackpack[] += {
                 "ACE_spraypaintRed",
                 "ACE_spraypaintGreen",
                 "ACE_spraypaintBlack",
-                "Ace_flags_red",
+                LIST_5("SmokeShellGreen")
             };
 
             binoculars = "ACE_Vector";
         };
 
         class B_Soldier_SL_F: B_Soldier_TL_F {
-
+            addItemsToBackpack[] += {
+                "Ace_flags_red",
+                LIST_5("SmokeShellYellow"),
+            };
         };
 
         class B_officer_F: B_Soldier_SL_F {
@@ -619,15 +698,13 @@ class Loadouts {
             backpack = "ttt_backpack_radio_green_us_desert"
 
             addItemsToVest[] += {
-
+                "ItemAndroid",
             };
 
             addItemsToBackpack[] += {
                 "ACRE_PRC117F",
                 "ACRE_VHF30108SPIKE",
             };
-
-            binoculars = "ACE_Vector";
 
             class Rank {
 
@@ -638,9 +715,6 @@ class Loadouts {
                 class CORPORAL: PRIVATE {
                     addItemsToUniform[] += {
                         "ACE_Microdagr",
-                    };
-                    addItemsToVest[] += {
-                        "ItemAndroid",
                     };
 
                     binoculars = "ACE_Vector";
@@ -653,8 +727,23 @@ class Loadouts {
 
                     binoculars = "Laserdesignator_03";
 
+                    addItemsToBackpack[] += {
+                        LIST_5("SmokeShellPurple"),
+                        LIST_5("SmokeShellOrange"),
+                    };
+
                     goggles[] += {
                         "G_Aviator",
+                        "",
+                        "CUP_G_Tan_Scarf_Shades",
+                        "CUP_G_Grn_Scarf_Shades",
+                        "CUP_G_Oakleys_Embr",
+                        "CUP_G_Oakleys_Drk",
+                        "CUP_G_Oakleys_Clr",
+                        "CFP_Neck_Wrap3",
+                        "CFP_Neck_Wrap2",
+                        "CFP_Neck_Wrap_Atacs2",
+                        "CFP_Neck_Wrap_Atacs",
                     };
                 };
             };
@@ -760,11 +849,20 @@ class Loadouts {
                 "CUP_arifle_HK416_CQB_Wood",
             };
 
+            primaryWeaponMagazine = "CUP_30Rnd_556x45_PMAG_BLACK_RPL";
+
             primaryWeaponMuzzle[] += {
                 "CUP_muzzle_snds_M16",
                 "CUP_muzzle_snds_M16_coyote",
                 "CUP_muzzle_snds_M16_desert",
                 "CUP_muzzle_snds_M16_camo",
+            };
+
+            addItemsToVest[] += {
+                LIST_8("CUP_30Rnd_556x45_PMAG_BLACK_RPL"),
+                LIST_2("ACE_M84"),
+                LIST_2("ACE_CableTie"),
+                "SmokeShellGreen",
             };
 
             goggles[] += {
@@ -779,10 +877,28 @@ class Loadouts {
 
         class B_recon_LAT_F: B_recon_F {
             secondaryWeapon = "BWA3_RGW90_Loaded";
+            binoculars = "ACE_MX2A";
         };
 
         class B_recon_medic_F: B_recon_F {
-            backpack = "ttt_backpack_medic_rgr_02";
+            backpack[] = {
+                "ttt_backpack_medic_rgr_02",
+                "ttt_backpack_medic_tan_02"
+            };
+
+            class Rank {
+                class CORPORAL {
+
+                };
+
+                class SERGEANT: CORPORAL {
+
+                };
+
+                class LIEUTENANT: SERGEANT {
+
+                };
+            };
         };
 
         class B_recon_exp_F: B_recon_F {
@@ -792,7 +908,20 @@ class Loadouts {
                 "B_Kitbag_tan",
             };
 
-            glasses[] = {
+            addItemsToVest[] += {
+                "ACE_Clacker",
+                "ACE_Defusalkit",
+            };
+
+            addItemsToBackpack[] = {
+                "ACE_entrenchingTool",
+                "ACE_Wirecutter",
+                LIST_3("DemoCharge_Remote_Mag"),
+                "SatchelCharge_Remote_Mag",
+                LIST_3("tsp_breach_block_mag"),
+            };
+
+            goggles[] += {
                 "CUP_G_ESS_BLK_Facewrap_Black",
                 "CUP_G_ESS_RGR_Facewrap_Ranger",
                 "CUP_G_ESS_RGR_Facewrap_Skull",
@@ -803,7 +932,6 @@ class Loadouts {
                 "CUP_G_ESS_KHK_Scarf_Face_Tan",
                 ""
             };
-
         };
 
         class B_recon_JTAC_F: B_recon_F {
@@ -813,11 +941,25 @@ class Loadouts {
                 "Laserbatteries",
             };
 
-            binoculars = "CUP_SOFLAM";
+            addItemsToVest[] += {
+                "itc_land_tablet_rover",
+            };
+
+            addItemsToBackpack[] = {
+                "ACRE_PRC117F",
+                LIST_6("SmokeShellPurple"),
+                LIST_6("SmokeShellOrange"),
+            };
+
+            binoculars = "Laserdesignator_03";
         };
 
         class B_recon_TL_F: B_recon_JTAC_F {
+            binoculars = "ACE_Vector";
 
+            addItemsToBackpack[] += {
+                "ACRE_VHF30108SPIKE",
+            };
         };
 
         class B_recon_M_F: B_recon_F {
@@ -826,7 +968,7 @@ class Loadouts {
                 "CUP_arifle_HK417_20_Desert",
                 "CUP_arifle_HK417_20_Wood",
             };
-            primaryWeaponMagazine = "CUP_20Rnd_762x51_HK417";
+            primaryWeaponMagazine = "CUP_20Rnd_TE1_Red_Tracer_762x51_HK417";
             primaryWeaponOptics[] = {
                 "optic_SOS",
                 "optic_SOS_khk_F",
@@ -840,14 +982,18 @@ class Loadouts {
             primaryWeaponMuzzle[] = {
                 "CUP_muzzle_snds_socom762rc",
             };
-            addItemsToVest[] += {
+            addItemsToVest[] = {
                 "ACE_RangeCard",
-                LIST_6("CUP_20Rnd_762x51_HK417"),
+                LIST_6("CUP_20Rnd_TE1_Red_Tracer_762x51_HK417"),
+                LIST_2("ACE_M84"),
+                LIST_2("ACE_CableTie"),
+                "SmokeShellGreen",
             };
 
             addItemsToBackpack[] += {
                 LIST_6("ACE_20Rnd_762x51_M118LR_Mag")
             };
+            binoculars = "ACE_Vector";
         };
     };
 };

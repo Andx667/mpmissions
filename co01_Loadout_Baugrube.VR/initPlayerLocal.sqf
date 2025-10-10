@@ -39,6 +39,7 @@ private _id = [
 
                 [_unit, currentWeapon _unit, true] call ace_safemode_fnc_setWeaponSafety;
 
+                //Add TTT Helmet based on position in Squad
                 private _place = -1;
 
                 {
