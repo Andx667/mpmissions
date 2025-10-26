@@ -420,7 +420,7 @@ class Loadouts {
                 "ACE_Wirecutter",
                 "mts_cutter_folding_saw",
                 LIST_3("ACE_M14"),
-            };
+            };k
 
             class Rank {
 
