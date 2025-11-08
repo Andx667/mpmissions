@@ -134,6 +134,7 @@ class Loadouts {
 
             addItemsToVest[] += {
                 LIST_2("CUP_200Rnd_TE4_Red_Tracer_556x45_M249"),
+                "ACE_SpareBarrel",
             };
         };
 
@@ -143,6 +144,7 @@ class Loadouts {
             addItemsToBackpack[] = {
                 LIST_4("CUP_200Rnd_TE4_Red_Tracer_556x45_M249"),
                 "ACE_SpareBarrel",
+                "ACE_EntrenchingTool",
             };
 
             binoculars = "Binocular";
