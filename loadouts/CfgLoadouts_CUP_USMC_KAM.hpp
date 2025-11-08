@@ -300,7 +300,14 @@ class Loadouts {
                 "ace_flags_red",
             };
 
-            addItemsToBackpack[] = {};
+            addItemsToBackpack[] = {
+                "ACE_spraypaintRed",
+                "ACE_spraypaintGreen",
+                "ACE_SpraypaintBlack",
+                LIST_3("SmokeShellGreen"),
+                LIST_3("SmokeShellOrange"),
+                LIST_3("ace_flags_purple"),
+            };
         };
 
         class B_officer_F: B_Soldier_SL_F {
@@ -327,6 +334,7 @@ class Loadouts {
             addItemsToVest[] += {
                 "ACE_DefusalKit",
                 "ACE_Clacker",
+                LIST_4("ACE_M84"),
             };
 
             addItemsToBackpack[] = {
