@@ -21,3 +21,7 @@ force ttt_medic_backpack_enable = true;                                         
 force ttt_medic_backpack_supportedBackpacks = '["CUP_B_Raid_bag_SSO_Ataka_2_Rug_Swamp"]';                                                           //default: [];
 force ttt_medic_backpack_additionalItems = '["Land_FirstAidKit_01_open_F"]';  //default: [];
 force ttt_medic_backpack_buildTime = 6;                                                                                     //default: 20;
+
+//TTT Signalplane
+force ttt_signalpanel_enable = true;                             //default: false;
+force ttt_signalpanel_supportedBackpacks = '["CUP_B_Kombat_Radio_Olive"]';   //default: '[]';

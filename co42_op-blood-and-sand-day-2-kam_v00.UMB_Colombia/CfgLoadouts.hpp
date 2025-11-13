@@ -139,10 +139,8 @@ class Loadouts {
         };
 
         class B_soldier_AAR_F: B_Soldier_F {
-            backpack = "CUP_B_USMC_MOLLE";
-
             addItemsToBackpack[] = {
-                LIST_4("CUP_200Rnd_TE4_Red_Tracer_556x45_M249"),
+                LIST_3("CUP_200Rnd_TE4_Red_Tracer_556x45_M249"),
                 "ACE_SpareBarrel",
                 "ACE_EntrenchingTool",
             };
