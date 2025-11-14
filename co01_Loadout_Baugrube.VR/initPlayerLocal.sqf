@@ -14,18 +14,6 @@
 
 params ["_player"];
 
-private _place = -1;
-
-{
-    if(isPlayer _x && local _x) then {
-        _place = _forEachIndex + 1;
-        break;
-    };
-} forEach units _player;
-
-private _helmet = ["ttt_Helmet_",_place,"_BW_Flecktarn"] joinString "";
-_player addItemToBackpack _helmet;
-
 // Waffe sichern
 // Gegenstück zu [QGVAR(loadoutApplied), [_loadoutTarget, _unitLoadout], _loadoutTarget] call CBA_fnc_targetEvent;
 private _id = [
