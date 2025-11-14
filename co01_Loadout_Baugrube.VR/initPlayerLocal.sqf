@@ -40,16 +40,7 @@ private _id = [
                 [_unit, currentWeapon _unit, true] call ace_safemode_fnc_setWeaponSafety;
 
                 //Add TTT Helmet based on position in Squad
-                private _place = -1;
-
-                {
-                    if(isPlayer _x && local _x) then {
-                        _place = _forEachIndex + 1;
-                        break;
-                    };
-                } forEach units _unit;
-
-                private _helmet = ["ttt_Helmet_",_place,"_BW_Flecktarn"] joinString "";
+                private _helmet = ["ttt_Helmet_",groupID _unit,"_BW_Flecktarn"] joinString "";
                 _unit addItemToBackpack _helmet;
             },
             //Args

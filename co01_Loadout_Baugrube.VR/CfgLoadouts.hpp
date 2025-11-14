@@ -39,7 +39,7 @@ class Loadouts {
     randomizationMode = 1;
     customGear = 300;
     customGearAllowedCategories[] = {
-        "uniform",
+        //"uniform",
         //"vest",
         "primaryWeapon",
         "primaryWeaponOptics",
@@ -315,9 +315,9 @@ class Loadouts {
         //Autorifleman
         class B_soldier_AR_F {
             primaryWeapon[] = {
-                "CUP_lmg_L110A1",
+                "BWA3_MG4",
                 };
-            primaryWeaponMagazine = "CUP_100Rnd_TE4_Red_Tracer_556x45_M249";
+            primaryWeaponMagazine = "BWA3_200Rnd_556x45_Tracer";
             primaryWeaponPointer[] = {
                 "CUP_acc_ANPEQ_15_Flashlight_Tan_L",
                 "CUP_acc_ANPEQ_15_Flashlight_OD_L",
@@ -325,12 +325,12 @@ class Loadouts {
             };
 
             addItemsToVest[] += {
-                LIST_2("CUP_100Rnd_TE4_Red_Tracer_556x45_M249"),
-
+                LIST_2("BWA3_200Rnd_556x45_Tracer"),
+                "BWA3_optic_NSV600",
             };
 
             addItemsToBackpack[] = {
-                LIST_2("CUP_100Rnd_TE4_Red_Tracer_556x45_M249"),
+                LIST_2("BWA3_200Rnd_556x45_Tracer"),
             };
         };
 
@@ -1006,13 +1006,14 @@ class Loadouts {
                 LIST_2("ACE_CableTie"),
                 "SmokeShellGreen",
                 "BWA3_optic_IRV600",
+                "BWA3_optic_NSV600",
             };
 
             goggles[] += {
                 "CUP_G_PMC_Facewrap_Tropical_Glasses_Ember",
                 "CUP_G_PMC_Facewrap_Tropical_Glasses_Dark",
-                //"CUP_G_PMC_Facewrap_Tan_Glasses_Ember",
-                //"CUP_G_PMC_Facewrap_Tan_Glasses_Dark",
+                "CUP_G_PMC_Facewrap_Tan_Glasses_Ember",
+                "CUP_G_PMC_Facewrap_Tan_Glasses_Dark",
                 "CUP_G_PMC_Facewrap_Black_Glasses_Ember",
                 "CUP_G_PMC_Facewrap_Black_Glasses_Dark",
             };
