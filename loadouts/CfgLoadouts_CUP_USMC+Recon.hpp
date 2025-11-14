@@ -34,11 +34,12 @@
 
 class Loadouts {
     baseDelay = 1;
-    perPlayerDelay = 0;
+    perPlayerDelay = 1;
     handleRadios = 1;
     resetLoadout = 1;
     randomizationMode = 1;
     customGear = 300;
+    //
     customGearAllowedCategories[] = {};//STRING
 
     //USMC2014
@@ -56,10 +57,10 @@ class Loadouts {
                 "CUP_U_B_USMC_MCCUU_gloves",
                 "CUP_U_B_USMC_MCCUU_pads",
                 "CUP_U_B_USMC_MCCUU_pads_gloves",
-                //"CUP_U_B_USMC_MCCUU_roll",
-                //"CUP_U_B_USMC_MCCUU_roll_gloves",
-                //"CUP_U_B_USMC_MCCUU_roll_pads",
-                //"CUP_U_B_USMC_MCCUU_roll_pads_gloves",
+                "CUP_U_B_USMC_MCCUU_roll",
+                "CUP_U_B_USMC_MCCUU_roll_gloves",
+                "CUP_U_B_USMC_MCCUU_roll_pads",
+                "CUP_U_B_USMC_MCCUU_roll_pads_gloves",
                 "CUP_U_B_USMC_MCCUU_roll_2",
                 "CUP_U_B_USMC_MCCUU_roll_2_gloves",
                 "CUP_U_B_USMC_MCCUU_roll_2_pads",
@@ -68,7 +69,7 @@ class Loadouts {
                 //DESERT
             };
             vest = "CUP_V_B_Eagle_SPC_Rifleman";
-            backpack = "CFP_AssaultPack_Marpat";
+            backpack = "";
             headgear[] = {
                 "CUP_H_LWHv2_MARPAT",
                 "CUP_H_LWHv2_MARPAT_NVG_gog2_cov2",
@@ -80,12 +81,12 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                LIST_2("kat_Painkiller"),
+                LIST_15("ACE_quikclot"),
                 LIST_15("ACE_packingBandage"),
-                LIST_15("ACE_elasticBandage"),
                 LIST_4("ACE_Tourniquet"),
-                LIST_2("kat_chestseal"),
-                LIST_2("ACE_CableTie"),
+                LIST_2("kat_chestSeal"),
+                "kat_guedel",
+                "kat_Painkiller",
             };
             addItemsToVest[] = {
                 LIST_2("CUP_HandGrenade_M67"),
@@ -96,8 +97,8 @@ class Loadouts {
 
             primaryWeapon = "CUP_arifle_M16A4_Grip";
             primaryWeaponMagazine = "CUP_30Rnd_556x45_Stanag";
-            primaryWeaponOptics = "CUP_optic_ACOG_TA31_KF";
-            primaryWeaponPointer = "CUP_acc_ANPEQ_15_Flashlight_Tan_L";
+            primaryWeaponOptics = "CUP_optic_ACOG2";
+            primaryWeaponPointer = "";
             primaryWeaponUnderbarrel = "";
             primaryWeaponUnderbarrelMagazine = "";
             secondaryWeapon = "";
@@ -149,20 +150,12 @@ class Loadouts {
             binoculars = "Binocular";
         };
 
-        class B_soldier_LAT2_F: B_Soldier_F {
-            secondaryWeapon[] = {
-                "CUP_launch_M72A6",
-                "CUP_launch_M72A6_Special",
-                };
-        };
-
         class B_soldier_AT_F: B_Soldier_F {
             vest = "CUP_V_B_Eagle_SPC_AR";
             backpack = "CFP_AssaultPack_Marpat";
 
             secondaryWeapon[] = {"CUP_launch_Mk153Mod0_blk","CUP_launch_Mk153Mod0"};
             secondaryWeaponMagazine = "CUP_SMAW_HEDP_M";
-            secondaryWeaponOptics = "CUP_optic_SMAW_Scope";
 
             addItemsToBackpack[] = {
                 LIST_5("CUP_SMAW_Spotting"),
@@ -182,45 +175,6 @@ class Loadouts {
             binoculars = "Binocular";
         };
 
-        class B_HeavyGunner_F {
-            primaryWeapon = "CUP_lmg_M240_norail";
-            primaryWeaponMagazine = "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M";
-            primaryWeaponOptics = "";
-            primaryWeaponPointer = "";
-
-            secondaryWeapon = "dzn_MG_Tripod_M122A1_M240Mount_Carry";
-
-            handgunWeapon = "CUP_hgun_Colt1911";
-            handgunWeaponMagazine = "CUP_7Rnd_45ACP_1911";
-
-            vest = "CUP_V_B_Eagle_SPC_MG";
-
-            addItemsToVest[] += {
-                LIST_2("CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M"),
-                LIST_2("CUP_7Rnd_45ACP_1911")
-            };
-
-            addItemsToBackpack[] += {
-                "ACE_SpareBarrel",
-                LIST_2("CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M"),
-            };
-        };
-
-        class B_Soldier_A_F: B_Soldier_F {
-            backpack = "CUP_B_USMC_MOLLE";
-
-            addItemsToVest[] += {
-                "ACE_EntrenchingTool",
-            };
-            addItemsToBackpack[] += {
-                LIST_6("CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M"),
-                "ACE_SpareBarrel",
-            };
-
-            binoculars = "Binocular";
-
-        };
-
         class B_soldier_M_F {
             vest = "CUP_V_B_Eagle_SPC_DMR";
             backpack = "CFP_AssaultPack_Marpat";
@@ -229,7 +183,6 @@ class Loadouts {
             primaryWeaponMagazine = "ACE_20Rnd_762x51_Mag_Tracer";
             primaryWeaponOptics = "CUP_optic_LeupoldMk4";
             primaryWeaponUnderbarrel = "CUP_bipod_Harris_1A2_L_BLK";
-            primaryWeaponPointer = "";
 
             handgunWeapon = "CUP_hgun_Colt1911";
             handgunWeaponMagazine = "CUP_7Rnd_45ACP_1911";
@@ -249,7 +202,7 @@ class Loadouts {
             vests = "CUP_V_B_Eagle_SPC_RTO";
             backpack = "CUP_B_Kombat_Radio_Olive";
 
-            addItemsToVest[] += {
+            addItemsToVes[] += {
                 "ACRE_PRC152",
             };
 
@@ -306,7 +259,7 @@ class Loadouts {
         //Führung
         class B_Soldier_TL_F {
             vest = "CUP_V_B_Eagle_SPC_TL";
-            backpack = "CFP_AssaultPack_Marpat";
+            backpack = "CUP_B_USMC_MOLLE";
             headgear[] = {
                 "CUP_H_LWHv2_MARPAT_comms",
                 "CUP_H_LWHv2_MARPAT_NVG_gog_cov2",
@@ -317,17 +270,15 @@ class Loadouts {
             primaryWeaponMagazine = "CUP_30Rnd_556x45_Stanag_Tracer_Red";
 
             addItemsToVest[] += {
-                LIST_6("CUP_30Rnd_556x45_Stanag_Tracer_Red");
+                LIST_8("CUP_30Rnd_556x45_Stanag_Tracer_Red");
                 "ACRE_PRC148",
             };
 
             addItemsToBackpack[] = {
-                LIST_15("CUP_1Rnd_HE_M203"),
+                LIST_20("CUP_1Rnd_HE_M203"),
                 LIST_5("CUP_1Rnd_HEDP_M203"),
                 LIST_5("CUP_1Rnd_SmokeRed_M203"),
                 LIST_5("CUP_1Rnd_Smoke_M203"),
-                "ACE_spraypaintRed",
-                "ACE_spraypaintGreen",
             };
 
             binoculars = "Binocular";
@@ -359,9 +310,6 @@ class Loadouts {
 
             vest = "CUP_V_B_Eagle_SPC_Officer";
 
-            addItemsToBackpack[] += {
-                LIST_3("SmokeShellBlue"),
-            };
         };
 
 
@@ -391,7 +339,7 @@ class Loadouts {
                 "ACE_wirecutter",
                 "ACE_EntrenchingTool",
                 "mts_cutter_folding_saw",
-                LIST_3("CUP_1Rnd_12Gauge_Pellets_No00_Buck"),
+                LIST_5("ACE_M14"),
             };
 
             class Rank {
@@ -425,45 +373,42 @@ class Loadouts {
 
                 class PRIVATE {
                     vest = "CUP_V_B_Eagle_SPC_Corpsman";
-                    backpack = "CUP_B_Raid_bag_SSO_Ataka_2_Rug_Swamp";
+                    backpack = "CUP_B_USMC_MOLLE_WDL";
 
                     addItemsToVest[] = {
-                            LIST_3("CUP_30Rnd_556x45_Stanag"),
-                            "ACE_SurgicalKit",
-                            "kat_basicDiagnostic",
-                            LIST_3("kat_Pulseoximeter"),
-                            };
+                        LIST_3("CUP_30Rnd_556x45_Stanag_Tracer_Red"),
+                        "kat_basicDiagnostic",
+                        LIST_2("kat_Pulseoximeter"),
+                    };
 
                     addItemsToBackpack[] = {
-                            //M
-                            LIST_16("ACE_Tourniquet"),
-                            LIST_45("ACE_elasticBandage"),
-                            LIST_15("ACE_elasticBandage"),
-                            //A
-                            LIST_8("kat_chestSeal"),
-                            LIST_8("kat_ncdKit"),
-                            LIST_8("kat_larynx"),
-                            //R
-                            "kat_pocketBVM",
-                            //C
-                            LIST_16("kat_IV_16"),
-                            LIST_8("ACE_SalineIV"),
-                            LIST_4("ACE_salineIV_500"),
-                            LIST_4("ACE_SalineIV_250"),
-                            LIST_16("ACE_Epinephrine"),
-                            LIST_8("kat_lidocaine"),
-                            "kat_AED",
-                            //H
-                            //P
-                            LIST_6("kat_Painkiller"),
-                            LIST_6("ACE_morphine"),
-                            LIST_6("kat_naloxone"),
-                            LIST_8("kat_Penthrox"),
-                            //A
-                            //W
-                            LIST_30("ACE_Suture"),
-                            //S
-                            "ACE_Bodybag",
+                        //M
+                        LIST_45("ACE_packingBandage"),
+                        LIST_45("ACE_quikclot"),
+                        LIST_16("ACE_tourniquet"),
+                        //A
+                        LIST_12("kat_chestSeal"),
+                        LIST_12("kat_larynx"),
+                        LIST_12("kat_ncdKit"),
+                        //R
+                        "kat_pocketBVM",
+                        //C
+                        LIST_4("ACE_salineIV_250"),
+                        LIST_4("ACE_salineIV_500"),
+                        LIST_16("kat_IV_16"),
+                        LIST_4("kat_IO_FAST"),
+                        //H
+                        LIST_12("kat_Penthrox"),
+                        LIST_12("kat_naloxone"),
+                        LIST_12("kat_nalbuphine"),
+                        LIST_12("ACE_epinephrine"),
+                        LIST_12("kat_Painkiller"),
+                        LIST_8("ACE_morphine"),
+                        //Admin
+                        "ace_flags_blue",
+                        "ACE_SpraypaintBlue",
+                        LIST_3("UK3CB_BAF_SmokeShellBlue"),
+                        "ACE_Bodybag",
                     };
                 };
 
@@ -482,49 +427,7 @@ class Loadouts {
                 };
 
                 class SERGEANT: CORPORAL {
-                    addItemsToBackpack[] = {
-                            //M
-                            LIST_8("ACE_Tourniquet"),
-                            LIST_30("ACE_elasticBandage"),
-                            LIST_6("kat_EACA"),
-                            LIST_12("kat_TXA"),
-                            //A
-                            LIST_6("kat_chestSeal"),
-                            LIST_6("kat_aatKit"),
-                            LIST_6("kat_larynx"),
-                            //R
-                            "kat_BVM",
-                            "kat_oxygenTank_150",
-                            //C
-                            LIST_10("kat_IV_16"),
-                            LIST_2("kat_IO_FAST"),
-                            LIST_6("ACE_bloodIV"),
-                            LIST_3("ACE_bloodIV_250"),
-                            LIST_3("ACE_bloodIV_500"),
-                            LIST_16("ACE_Epinephrine"),
-                            LIST_8("kat_epinephrineIV"),
-                            LIST_8("kat_lidocaine"),
-                            LIST_4("kat_amiodarone"),
-                            LIST_4("kat_atropine"),
-                            "kat_AED",
-                            LIST_6("kat_nitroglycerin"),
-                            LIST_6("kat_norepinephrine"),
-                            LIST_6("kat_phenylephrine"),
-                            //H
-                            //P
-                            LIST_4("kat_Painkiller"),
-                            LIST_6("ACE_morphine"),
-                            LIST_6("kat_naloxone"),
-                            LIST_4("kat_Penthrox"),
-                            LIST_8("kat_fentanyl"),
-                            //Aadmin
-                            "ACE_Bodybag",
-                            "ACE_salineIV_250",
-                            //W
-                            LIST_30("ACE_Suture"),
-                            //S
 
-                    };
                 };
             };
         };
@@ -562,33 +465,51 @@ class Loadouts {
             };
         };
 
-        class B_Helipilot_F {
-            uniform = "U_B_HeliPilotCoveralls";
-            vest = "FIR_pilot_vest";
-            backpack = "B_AssaultPack_blk";
+        class B_spotter_F {
+            primaryWeapon = "CUP_arifle_M4A3_black";
+            primaryWeaponOptics = "CUP_optic_ACOG2";
 
-            headgear = "ttt_Helmet_Buzzard";
+            handgunWeapon = "CUP_hgun_M9";
+            handgunWeaponMagazine = "CUP_15Rnd_9x19_M9";
 
+            vest = "CUP_V_B_Eagle_SPC_TL";
+            backpack = "CUP_B_USMC_MOLLE";
 
-            primaryWeapon = "";
-            primaryWeaponMagazine = "";
-            primaryWeaponOptics = "";
-            primaryWeaponPointer = "";
+            headgear = "CUP_H_FR_BoonieMARPAT";
 
-            handgunWeapon = "CUP_hgun_Colt1911";
-            handgunWeaponMagazine = "CUP_7Rnd_45ACP_1911";
-
-            addItemsToVest[] += {
-                LIST_2("CUP_7Rnd_45ACP_1911"),
-                LIST_2("SmokeShellPurple"),
-                LIST_2("ACE_HandFlare_Green"),
-                "ACRE_PRC152",
-                "ACE_Microdagr",
+            addItemsToVest[] = {
+                LIST_5("CUP_30Rnd_556x45_Stanag"),
             };
-
-            addItemsToBackpack[] += {
-                "ACRE_PRC117F"
+            addItemsToBackpack[] = {
+                "ACRE_PRC117F",
+                LIST_5("CUP_5Rnd_762x51_M24"),
+                "ACE_SpottingScope",
             };
+            binoculars = "Binocular";
+        };
+
+        class B_sniper_F {
+            primaryWeapon = "CUP_srifle_M40A3";
+            primaryWeaponOptics = "CUP_optic_LeupoldMk4";
+            primaryWeaponUnderbarrel = "CUP_bipod_Harris_1A2_L_BLK";
+            primaryWeaponMagazine = "CUP_5Rnd_762x51_M24";
+
+            handgunWeapon = "CUP_hgun_M9";
+            handgunWeaponMagazine = "CUP_15Rnd_9x19_M9";
+
+            vest = "CUP_V_B_Eagle_SPC_DMR";
+            backpack = "CUP_B_USMC_MOLLE";
+
+            headgear = "CUP_H_FR_BoonieMARPAT";
+
+            addItemsToVest[] = {
+                LIST_5("CUP_5Rnd_762x51_M24"),
+                "ACE_Rangetable",
+            };
+            addItemsToBackpack[] = {
+                "ACE_Tripod",
+            };
+            binoculars = "Binocular";
         };
     };
 };
