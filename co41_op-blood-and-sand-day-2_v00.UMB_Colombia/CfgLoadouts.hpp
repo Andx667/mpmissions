@@ -84,6 +84,7 @@ class Loadouts {
                 LIST_15("ACE_fieldDressing"),
                 LIST_15("ACE_packingBandage"),
                 LIST_4("ACE_Tourniquet"),
+                LIST_2("ACE_CableTie"),
             };
             addItemsToVest[] = {
                 LIST_2("CUP_HandGrenade_M67"),
@@ -348,7 +349,6 @@ class Loadouts {
                 "ACE_SpraypaintBlack",
                 LIST_3("SmokeShellGreen"),
                 LIST_3("SmokeShellOrange"),
-                LIST_3("ace_flags_purple"),
             };
         };
 
@@ -427,7 +427,7 @@ class Loadouts {
                     backpack = "CUP_B_Raid_bag_SSO_Ataka_2_Rug_Swamp";
 
                     addItemsToVest[] = {
-                            LIST_3("CUP_30Rnd_556x45_Stanag_Tracer_Red"),
+                            LIST_3("CUP_30Rnd_556x45_Stanag"),
                             "ACE_SurgicalKit",
                         };
 
