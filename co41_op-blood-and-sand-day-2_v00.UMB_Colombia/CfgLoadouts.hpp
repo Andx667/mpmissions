@@ -122,6 +122,7 @@ class Loadouts {
             vest = "CUP_V_B_Eagle_SPC_Rifleman";
             addItemsToVest[] += {
                 LIST_8("CUP_30Rnd_556x45_Stanag"),
+                LIST_2("ACE_M84"),
             };
         };
 

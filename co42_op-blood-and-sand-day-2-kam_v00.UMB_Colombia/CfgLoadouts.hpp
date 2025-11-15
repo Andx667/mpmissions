@@ -91,6 +91,7 @@ class Loadouts {
                 LIST_2("CUP_HandGrenade_M67"),
                 LIST_2("SmokeShell"),
                 "SmokeShellGreen",
+                LIST_2("ACE_M84"),
                 };
             addItemsToBackpack[] = {};
 
@@ -349,7 +350,6 @@ class Loadouts {
                 "ACE_SpraypaintBlack",
                 LIST_3("SmokeShellGreen"),
                 LIST_3("SmokeShellOrange"),
-                LIST_3("ace_flags_purple"),
             };
         };
 
@@ -523,7 +523,6 @@ class Loadouts {
                             //W
                             LIST_30("ACE_Suture"),
                             //S
-
                     };
                 };
             };
