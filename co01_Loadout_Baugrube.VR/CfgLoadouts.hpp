@@ -573,10 +573,23 @@ class Loadouts {
             };
 
             goggles[] = {
+                "CUP_G_ESS_BLK_Dark",
+                "CUP_G_ESS_BLK_Ember",
                 "CUP_G_ESS_BLK",
+                "CUP_G_ESS_CBR_Dark",
+                "CUP_G_ESS_CBR_Ember",
                 "CUP_G_ESS_CBR",
+                "CUP_G_ESS_RGR_Dark",
+                "CUP_G_ESS_RGR_Ember",
                 "CUP_G_ESS_RGR",
+                "CUP_G_ESS_KHK_Dark",
+                "CUP_G_ESS_KHK_Ember",
                 "CUP_G_ESS_KHK",
+                "CUP_G_ESS_BLK_Scarf_Blk",
+                "CUP_G_ESS_BLK_Scarf_Grn",
+                "CUP_G_ESS_KHK_Scarf_Tan",
+                "CUP_G_ESS_BLK_Scarf_Face_Grn",
+                "CUP_G_ESS_KHK_Scarf_Face_Tan",
                 ""
             };
 
