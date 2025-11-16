@@ -168,7 +168,7 @@ class Loadouts {
                 "CUP_arifle_HK416_AGL_Black",
                 "CUP_arifle_HK416_AGL_Desert",
                 "CUP_arifle_HK416_AGL_Wood",
-                };
+            };
 
             addItemsToBackpack[] += {
                 LIST_16("CUP_1Rnd_HE_M203"),
@@ -300,12 +300,11 @@ class Loadouts {
                 "bipod_01_F_mtp",
                 "bipod_01_F_snd",
                 "bipod_01_F_khk",
-                };
+            };
 
             addItemsToVest[] += {
                 "ACE_RangeCard",
                 LIST_6("CUP_20Rnd_762x51_HK417"),
-
             };
 
             addItemsToBackpack[] += {
@@ -343,7 +342,7 @@ class Loadouts {
                 "CUP_lmg_Mk48_od",
                 "CUP_lmg_Mk48_des",
                 "CUP_lmg_Mk48",
-                };
+            };
             primaryWeaponOptics[] += {
                 "CUP_optic_ACOG_TA648_308_RDS_Black",
                 "CUP_optic_ACOG_TA648_308_RDS_coyo",
