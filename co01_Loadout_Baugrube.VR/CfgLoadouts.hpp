@@ -213,9 +213,10 @@ class Loadouts {
             };
 
             addItemsToBackpack[] = {
-                LIST_3("tsp_breach_block_mag"),
+                LIST_2("tsp_breach_block_mag"),
                 LIST_2("tsp_breach_package_mag"),
-                LIST_2("ACE_M84"),
+                LIST_4("ACE_M84"),
+                LIST_3("CUP_6Rnd_12Gauge_Pellets_No00_Buck"),
             };
 
         };
@@ -490,6 +491,7 @@ class Loadouts {
                     addItemsToVest[] += {
                         "ACE_Clacker",
                         "ACE_Defusalkit",
+                        "iedd_item_notebook",
                     };
 
                     addItemsToBackpack[] = {
@@ -517,21 +519,33 @@ class Loadouts {
         };
 
         class B_soldier_UGV_02_Demining_F: B_soldier_mine_F {
-            uniform = "ttt_Uniform_Blue_BW_Flecktarn";
-            vest = "ttt_Vest_Heavy_Blue_US_Desert";
-            headgear = "ttt_Beret_Blue";
-            //backpack = "B_UGV_02_Demining_backpack_F";
+            //uniform = "ttt_Uniform_Blue_BW_Flecktarn";
+            //vest = "ttt_Vest_Heavy_Blue_US_Desert";
+            //headgear = "ttt_Beret_Blue";
+            backpack = "B_UGV_02_Demining_backpack_F";
 
             handgunWeapon = "ACE_VMH3";
             handgunWeaponMagazine = "";
 
-            addItemsToVest[] += {
-                "ACE_UAVBattery",
-                "ACE_Defusalkit",
-                "ACE_Clacker",
+            class Rank {
+
+                class PRIVATE {
+                    addItemsToVest[] += {
+                        //"ACE_UAVBattery",
+                        "ACE_Defusalkit",
+                        "ACE_Clacker",
+                    };
+
+                    addItemsToBackpack[] = {};
+                };
+                class CORPORAL: PRIVATE {
+
+                };
+                class SERGEANT: CORPORAL {
+
+                };
             };
 
-            addItemsToBackpack[] = {};
 
             gps = "B_UavTerminal";
         };
@@ -1057,11 +1071,12 @@ class Loadouts {
             };
 
             addItemsToBackpack[] = {
-                "ACE_entrenchingTool",
                 "ACE_Wirecutter",
                 LIST_3("DemoCharge_Remote_Mag"),
-                "SatchelCharge_Remote_Mag",
+                LIST_3("tsp_breach_package_mag"),
                 LIST_3("tsp_breach_block_mag"),
+                LIST_3("CUP_6Rnd_12Gauge_Pellets_No00_Buck"),
+                LIST_4("ACE_M84"),
             };
 
             goggles[] += {

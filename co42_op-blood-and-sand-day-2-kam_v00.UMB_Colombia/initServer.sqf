@@ -69,7 +69,8 @@ ACE_maxWeightDrag = 1750;  //wie schwer kann man ziehen
         ["CUP_1Rnd_HE_M203", 50],
         ["CUP_1Rnd_HEDP_M203", 12],
         ["CUP_1Rnd_SmokeRed_M203", 12],
-        ["CUP_1Rnd_Smoke_M203", 12]
+        ["CUP_1Rnd_Smoke_M203", 12],
+        ["ACE_M84", 16]
     ]
 ] call ttt_common_fnc_crateFiller;
 

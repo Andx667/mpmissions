@@ -29,6 +29,7 @@ private _id = [
                 [_unit, currentWeapon _unit, true] call ace_safemode_fnc_setWeaponSafety;
 
                 switch (typeOf _unit) do {
+                    case "B_recon_exp_F";
                     case "B_soldier_exp_F": {
                         [
                             [
