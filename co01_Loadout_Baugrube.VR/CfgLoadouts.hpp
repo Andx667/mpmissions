@@ -73,11 +73,12 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "ACE_Painkillers",
-                LIST_15("ACE_fieldDressing"),
+                LIST_2("kat_Painkiller"),
+                LIST_15("ACE_elasticBandage"),
                 LIST_15("ACE_packingBandage"),
                 LIST_4("ACE_Tourniquet"),
                 LIST_2("CUP_17Rnd_9x19_glock17"),
+                LIST_2("kat_chestSeal"),
                 "ACE_IR_Strobe_Item",
             };
             addItemsToVest[] = {
@@ -916,23 +917,79 @@ class Loadouts {
 
             class Rank {
 
+                //Bravo (Gruppe)
                 class PRIVATE {
-
+                    addItemsToBackpack[] += {
+                        //M
+                        LIST_30("ACE_quikclot"),
+                        LIST_30("ACE_packingBandage"),
+                        LIST_30("ACE_elasticBandage"),
+                        LIST_8("ACE_tourniquet"),
+                        //A
+                        //R
+                        LIST_4("kat_ncdKit"),
+                        LIST_8("kat_chestSeal"),
+                        //C
+                        LIST_4("ACE_epinephrine"),
+                        //H
+                        //P
+                        LIST_8("kat_Painkiller"),
+                        //A
+                        //W
+                        //S
+                    };
                 };
 
+                //Bravo (Zug)
                 class CORPORAL: PRIVATE {
                     uniform = "ttt_Uniform_Brown_BW_Flecktarn";
                     vest = "ttt_Vest_Heavy_Brown_US_Desert";
                     headgear = "ttt_Beret_Brown";
+                    backpack = "ttt_backpack_medic_rgr_02";
 
                     addItemsToVest[] = {
                         "ItemAndroid",
                         LIST_3("CUP_30Rnd_556x45_PMAG_BLACK_RPL"),
+                        "kat_basicDiagnostic",
+                        LIST_3("kat_Pulseoximeter"),
+                        "ACE_surgicalKit",
                     };
 
-                    backpack = "ttt_backpack_medic_rgr_02";
+                    addItemsToBackpack[] += {
+                        //M
+                        LIST_15("ACE_quikclot"),
+                        LIST_15("ACE_packingBandage"),
+                        LIST_15("ACE_elasticBandage"),
+                        //A
+                        LIST_6("kat_larynx"),
+                        LIST_6("kat_suction"),
+                        //R
+                        "kat_pocketBVM",
+                        LIST_8("kat_chestSeal"),
+                        //C
+                        LIST_9("kat_IV_16"),
+                        LIST_6("ACE_salineIV"),
+                        LIST_3("ACE_salineIV_500"),
+                        LIST_3("ACE_salineIV_250"),
+                        LIST_12("ACE_epinephrine"),
+                        "kat_AED",
+                        LIST_8("kat_lidocaine"),
+                        //H
+                        //P
+                        LIST_8("ACE_morphine"),
+                        LIST_4("kat_naloxone"),
+                        LIST_8("kat_Penthrox"),
+                        LIST_4("kat_Painkiller"),
+                        //A
+                        //W
+                        LIST_45("ACE_suture"),
+                        //S
+                        "ace_flags_blue",
+                        "ACE_SpraypaintBlue",
+                    };
                 };
 
+                //Charlie (Zug)
                 class SERGEANT: CORPORAL {
                     uniform = "ttt_Uniform_White_BW_Flecktarn";
                     vest = "ttt_Vest_Crew_White";
@@ -950,9 +1007,14 @@ class Loadouts {
                     addItemsToVest[] = {
                         LIST_2("50Rnd_570x28_SMG_03"),
                         "ItemAndroid",
+                        "kat_basicDiagnostic",
+                        LIST_3("kat_Pulseoximeter"),
+                        "ACE_surgicalKit",
+
                     };
                 };
 
+                //Charlie (Kompanie)
                 class LIEUTENANT: SERGEANT {
                     backpack = "ttt_backpack_radio_white_us_desert";
 
@@ -1057,8 +1119,46 @@ class Loadouts {
             };
 
             class Rank {
-                class CORPORAL {
+                class PRIVATE;
+                class CORPORAL: PRIVATE {
+                    addItemsToVest[] += {
+                        "ACE_SurgicalKit",
+                        "kat_Pulseoximeter",
+                    };
 
+                    addItemsToBackpack[] = {
+                        //M
+                        LIST_45("ACE_elasticBandage"),
+                        LIST_45("ACE_packingBandage"),
+                        LIST_45("ACE_quikclot"),
+                        LIST_12("ACE_tourniquet"),
+                        LIST_12("kat_TXA"),
+                        LIST_6("kat_EACA"),
+                        //A
+                        LIST_12("kat_larynx"),
+                        LIST_6("kat_suction"),
+                        //R
+                        LIST_12("kat_chestSeal"),
+                        LIST_12("kat_aatKit"),
+                        "kat_pocketBVM",
+                        //C
+                        LIST_18("kat_IV_16"),
+                        LIST_6("KAT_Empty_bloodIV_250"),
+                        LIST_6("KAT_Empty_bloodIV_500"),
+                        LIST_12("ACE_epinephrine"),
+                        LIST_6("kat_phenylephrineAuto"),
+                        LIST_4("ACE_salineIV"),
+                        LIST_2("ACE_salineIV_250"),
+                        LIST_2("ACE_salineIV_500"),
+                        //H
+                        //P
+                        LIST_6("ACE_morphine"),
+                        LIST_6("kat_naloxone"),
+                        //A
+                        //W
+                        LIST_45("ACE_Suture"),
+                        //S
+                    };
                 };
 
                 class SERGEANT: CORPORAL {
