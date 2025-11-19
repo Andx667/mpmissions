@@ -124,6 +124,7 @@ class Loadouts {
             addItemsToVest[] += {
                 LIST_8("CUP_30Rnd_556x45_Stanag"),
             };
+            binoculars = "Binocular";
         };
 
         class B_soldier_AR_F {
@@ -227,6 +228,8 @@ class Loadouts {
                     };
 
                     vest = "CUP_V_B_Eagle_SPC_Crew";
+
+                    headgear = "CUP_H_CVC";
 
                     handgunWeapon = "CUP_hgun_Colt1911";
                     handgunWeaponMagazine = "CUP_7Rnd_45ACP_1911";
@@ -563,6 +566,14 @@ class Loadouts {
         };
 
         class B_helicrew_F {
+            primaryWeapon = "";
+            primaryWeaponOptics = "";
+            primaryWeaponUnderbarrel = "";
+            primaryWeaponMagazine = "";
+
+            handgunWeapon = "CUP_hgun_Colt1911";
+            handgunWeaponMagazine = "CUP_7Rnd_45ACP_1911";
+
             uniform = "CUP_U_B_USArmy_PilotOverall";
             vest = "CUP_V_B_PilotVest";
 
