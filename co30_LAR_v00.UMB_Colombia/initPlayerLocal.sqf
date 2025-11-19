@@ -7,49 +7,46 @@
     Soll ein Skript nur für nicht-JIPs ausgeführt werden, können JIPs mit dem
     didJIP Befehl gefiltert werden.
 
-    * Arguments
-    * 0 Player <OBJECT>
-    * 1 Did JIP <BOOL>
+    * Arguments:
+    * 0: Player <OBJECT>
+    * 1: Did JIP <BOOL>
  */
- params ["_player", "_didJIP"];
+ params ["_player", ""];
 
 // Waffe sichern
 // Gegenstück zu [QGVAR(loadoutApplied), [_loadoutTarget, _unitLoadout], _loadoutTarget] call CBA_fnc_targetEvent;
-[
+private _id = [
     "grad_loadout_loadoutApplied",
     {
         params ["_target", "_loadout"];
+
         [
             {
-                params ["_unit"];
+                params ["_unit", "_loadout"];
 
                 [_unit, currentWeapon _unit, true] call ace_safemode_fnc_setWeaponSafety;
 
                 //Change callsign to mission
                 private _groupID = groupID group _unit;
                 switch (_groupID) do {
-                    case "Bulldog" {
-                        [_unit, "TTT_yellow_emblem"] call BIS_fnc_setUnitInsignia;
+                    case "Victor-1";
+                    case "Victor-2";
+                    case "Victor-3";
+                    case "Victor-4": {
+                        [_unit, "TTT_bronze_emblem"] call BIS_fnc_setUnitInsignia;
                     };
-                    case "Bulldog-1" {
+                    case "Alpha-1";
+                    case "Alpha-2": {
                         [_unit, "TTT_black_emblem"] call BIS_fnc_setUnitInsignia;
                     };
-                    case "Bulldog-2" {
+                    case "Bravo-1";
+                    case "Bravo-2": {
                         [_unit, "TTT_red_emblem"] call BIS_fnc_setUnitInsignia;
-                    };
-                    case "Bulldog-3" {
-                        [_unit, "TTT_violet_emblem"] call BIS_fnc_setUnitInsignia;
-                    };
-                    case "Pavehawk" {
-                        [_unit, "TTT_white_emblem"] call BIS_fnc_setUnitInsignia;
-                    };
-                    case "Guardian" {
-                        [_unit, "TTT_white_emblem"] call BIS_fnc_setUnitInsignia;
                     };
                 };
             },
             //Args
-            [_target],
+            [_target, _loadout],
             //Delay
             3
         ] call CBA_fnc_waitAndExecute;
