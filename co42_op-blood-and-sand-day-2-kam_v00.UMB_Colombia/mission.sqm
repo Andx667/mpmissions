@@ -5,14 +5,14 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=1537;
 	mods[]=
 	{
 		"3denEnhanced"
 	};
 	class ItemIDProvider
 	{
-		nextID=2561;
+		nextID=2562;
 	};
 	class MarkerIDProvider
 	{
@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={16911.027,45.162685,14583.549};
-		dir[]={-0.41899183,-0.84374964,-0.33548784};
-		up[]={-0.65863353,0.53673452,-0.52736855};
-		aside[]={-0.62503392,8.4051862e-07,0.78060967};
+		pos[]={14069.397,526.24323,11198.852};
+		dir[]={-0.26325276,-0.71617991,0.64649701};
+		up[]={-0.27009609,0.69791168,0.66329944};
+		aside[]={0.92624092,-1.1351658e-06,0.37716642};
 	};
 };
 binarizationWanted=0;
@@ -13058,13 +13058,12 @@ class Mission
 						position[]={12830.769,4.1728134,11507.13};
 					};
 					side="Independent";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 					};
 					id=2112;
 					type="CUP_I_RACS_Soldier";
-					atlOffset=0.7351892;
 				};
 				class Item1
 				{
@@ -13074,12 +13073,12 @@ class Mission
 						position[]={12830.932,4.1728134,11499.442};
 					};
 					side="Independent";
+					flags=4;
 					class Attributes
 					{
 					};
 					id=2114;
 					type="CUP_I_RACS_Soldier";
-					atlOffset=0.7351892;
 				};
 			};
 			class Attributes
@@ -16731,6 +16730,7 @@ class Mission
 					};
 					id=2276;
 					type="CUP_I_RACS_Crew";
+					atlOffset=-2.3841858e-07;
 				};
 				class Item1
 				{
@@ -16741,12 +16741,13 @@ class Mission
 						angles[]={0,2.6209259,0};
 					};
 					side="Independent";
+					flags=4;
 					class Attributes
 					{
 					};
 					id=2277;
 					type="CUP_I_RACS_Crew";
-					atlOffset=2.6379106;
+					atlOffset=-2.3841858e-07;
 				};
 				class Item2
 				{
@@ -16757,13 +16758,13 @@ class Mission
 						angles[]={0,2.6209259,0};
 					};
 					side="Independent";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 					};
 					id=2278;
 					type="CUP_I_RACS_Crew";
-					atlOffset=2.6379106;
+					atlOffset=-2.3841858e-07;
 				};
 			};
 			class Attributes
@@ -16872,6 +16873,7 @@ class Mission
 					};
 					id=2281;
 					type="CUP_I_RACS_Crew";
+					atlOffset=-2.3841858e-07;
 				};
 				class Item1
 				{
@@ -16882,13 +16884,13 @@ class Mission
 						angles[]={0,2.7236302,0};
 					};
 					side="Independent";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 					};
 					id=2282;
 					type="CUP_I_RACS_Crew";
-					atlOffset=3.261049;
+					atlOffset=-2.3841858e-07;
 				};
 			};
 			class Attributes
@@ -16983,6 +16985,7 @@ class Mission
 					};
 					id=2299;
 					type="CUP_I_RACS_Crew";
+					atlOffset=-2.3841858e-07;
 				};
 				class Item1
 				{
@@ -16993,13 +16996,13 @@ class Mission
 						angles[]={0,1.4663209,0};
 					};
 					side="Independent";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 					};
 					id=2300;
 					type="CUP_I_RACS_Crew";
-					atlOffset=2.4975078;
+					atlOffset=-2.3841858e-07;
 				};
 			};
 			class Attributes
@@ -19695,7 +19698,7 @@ class Mission
 					angle=0.33777359;
 					class Attributes
 					{
-						onActivation="[r_s_05, r_r_05, r_a_05, resistance, ""CUP_I_LAV25M240_RACS"", 2, configFile >> ""CfgGroups"" >> ""Indep"" >> ""CUP_I_RACS"" >> ""Infantry_Wdl"" >> ""CUP_I_RACS_InfantrySquad_Wdl""] call ttt_common_fnc_callReinforcements;" \n "" \n "[r_s_06, r_r_06, r_a_05, resistance, ""CUP_I_M113A1_RACS_URB"", 2, configFile >> ""CfgGroups"" >> ""Indep"" >> ""CUP_I_RACS"" >> ""Infantry_Wdl"" >> ""CUP_I_RACS_InfantrySquad_Wdl""] call ttt_common_fnc_callReinforcements;" \n "" \n "[r_s_07, r_r_07, r_a_05, resistance, ""CUP_I_M113A1_RACS_URB"", 2, configFile >> ""CfgGroups"" >> ""Indep"" >> ""CUP_I_RACS"" >> ""Infantry_Wdl"" >> ""CUP_I_RACS_InfantrySquad_Wdl""] call ttt_common_fnc_callReinforcements;";
+						onActivation="[r_s_05, r_r_05, r_a_05, resistance, ""CUP_I_LAV25M240_RACS"", 2, configFile >> ""CfgGroups"" >> ""Indep"" >> ""CUP_I_RACS"" >> ""Infantry_Wdl"" >> ""CUP_I_RACS_InfantrySquad_Wdl""] call ttt_common_fnc_callReinforcements;" \n "" \n "[r_s_06, r_r_06, r_a_05, resistance, ""CUP_I_M113A1_RACS_URB"", 1, configFile >> ""CfgGroups"" >> ""Indep"" >> ""CUP_I_RACS"" >> ""Infantry_Wdl"" >> ""CUP_I_RACS_InfantrySquad_Wdl""] call ttt_common_fnc_callReinforcements;" \n "" \n "[r_s_07, r_r_07, r_a_05, resistance, ""CUP_I_M113A1_RACS_URB"", 2, configFile >> ""CfgGroups"" >> ""Indep"" >> ""CUP_I_RACS"" >> ""Infantry_Wdl"" >> ""CUP_I_RACS_InfantrySquad_Wdl""] call ttt_common_fnc_callReinforcements;";
 						activationBy="ANYPLAYER";
 						isServerOnly=1;
 					};
@@ -19719,8 +19722,8 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={17434,23.241907,13446};
-						angles[]={6.2307582,0,6.241281};
+						position[]={17340.801,25.271385,13473.033};
+						angles[]={0.0090825874,0,6.2806249};
 					};
 					name="r_r_05";
 					id=780;
@@ -24693,8 +24696,8 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={16897.422,18.826937,13439.673};
-						angles[]={6.2307582,0,6.241281};
+						position[]={16900.883,18.744423,13442.285};
+						angles[]={0.011601241,0,6.2705135};
 					};
 					name="r_r_06";
 					id=2551;
@@ -24702,7 +24705,7 @@ class Mission
 				};
 			};
 			id=820;
-			atlOffset=9.7893963;
+			atlOffset=9.6999817;
 		};
 		class Item131
 		{
@@ -29360,14 +29363,14 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={13818,37,11537};
-				angles[]={0,1.4760764,0};
+				position[]={13843.232,37,11650.736};
+				angles[]={0,1.658563,0};
 			};
-			areaSize[]={274.99146,0,138.146};
+			areaSize[]={390.50195,0,153.31197};
 			flags=1;
 			id=2452;
 			type="lambs_wp_TaskPatrol";
-			atlOffset=1.6662598;
+			atlOffset=12.03355;
 			class CustomAttributes
 			{
 				class Attribute0

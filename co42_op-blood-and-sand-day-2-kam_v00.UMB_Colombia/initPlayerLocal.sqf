@@ -84,12 +84,19 @@ private _id = [
 _player addMPEventHandler ["MPRespawn", {
     params ["_unit", "_corpse"];
     private _insignia = [_corpse] call BIS_fnc_getUnitInsignia;
-    [_unit, _insignia] spawn {
-        params ["_unit", "_insignia"];
-        sleep 1;
-        isNil {
-            _unit setVariable ["BIS_fnc_setUnitInsignia_class", nil];
-            [_unit, _insignia] call BIS_fnc_setUnitInsignia;
-        };
-    };
-}];
+
+        [
+            //Function
+            {
+                params ["_unit", "_insignia"];
+
+                _unit setVariable ["BIS_fnc_setUnitInsignia_class", nil];
+                [_unit, _insignia] call BIS_fnc_setUnitInsignia;
+            },
+            //Args
+            [_unit, _insignia],
+            //Delay
+            1
+        ] call CBA_fnc_waitAndExecute;
+    }
+];
