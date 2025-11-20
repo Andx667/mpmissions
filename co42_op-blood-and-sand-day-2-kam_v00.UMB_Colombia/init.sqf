@@ -10,6 +10,9 @@
     https://community.bistudio.com/wiki/Initialization_Order
  */
 
+ACE_maxWeightCarry = 2000; //wie schwer kann man Tragen
+ACE_maxWeightDrag = 2000;  //wie schwer kann man ziehen
+
 //Laden von CLib Modulen für den Streamator
 if !(isNil "CLib_fnc_loadModules") then {call CLib_fnc_loadModules;};
 

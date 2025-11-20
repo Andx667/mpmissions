@@ -100,3 +100,28 @@ ACE_maxWeightDrag = 1750;  //wie schwer kann man ziehen
         ["CUP_SMAW_Spotting", 5]
     ]
 ] call ttt_common_fnc_crateFiller;
+
+
+[
+    [backup_01, backup_02],
+    [
+        ["CUP_200Rnd_TE4_Red_Tracer_556x45_M249", 9],
+        ["ACE_SpareBarrel", 3],
+        ["ACE_EntrenchingTool", 3],
+        ["CFP_AssaultPack_Marpat", 3],
+        ["CUP_launch_M72A6", 2]
+    ], 
+    true
+] call ttt_common_fnc_crateFiller;
+
+
+[
+    [backup_03],
+    [
+        ["CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M", 6],
+        ["ACE_SpareBarrel", 1],
+        ["ACE_EntrenchingTool", 1],
+        ["CUP_B_USMC_MOLLE", 1]
+    ],
+    true
+] call ttt_common_fnc_crateFiller;

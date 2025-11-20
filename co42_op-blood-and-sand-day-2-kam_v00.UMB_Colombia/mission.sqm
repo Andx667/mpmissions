@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=2557;
+		nextID=2561;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=146;
+		nextID=149;
 	};
 	class Camera
 	{
-		pos[]={15393.48,44.574665,12877.375};
-		dir[]={0.49664795,-0.54517645,0.67555094};
-		up[]={0.32293379,0.83826119,0.43926358};
-		aside[]={0.80579561,9.7882003e-07,-0.59239513};
+		pos[]={16911.027,45.162685,14583.549};
+		dir[]={-0.41899183,-0.84374964,-0.33548784};
+		up[]={-0.65863353,0.53673452,-0.52736855};
+		aside[]={-0.62503392,8.4051862e-07,0.78060967};
 	};
 };
 binarizationWanted=0;
@@ -74,13 +74,14 @@ addons[]=
 	"ace_concertina_wire",
 	"A3_Structures_F_Orange_Signs_Mines",
 	"A3_Structures_F_Exp_Military_Fortifications",
-	"CFP_B_USMC_DES"
+	"CFP_B_USMC_DES",
+	"A3_Supplies_F_Exp_Ammoboxes"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=40;
+		items=41;
 		class Item0
 		{
 			className="CUP_WheeledVehicles_NewM998";
@@ -331,6 +332,13 @@ class AddonsMetaData
 			name="CFP_B_USMC_DES";
 			author="CFP Team";
 		};
+		class Item40
+		{
+			className="A3_Supplies_F_Exp";
+			name="Arma 3 Apex - Ammoboxes and Supplies";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 dlcs[]=
@@ -351,7 +359,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -1385,7 +1393,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=235;
+		items=238;
 		class Item0
 		{
 			dataType="Object";
@@ -24716,6 +24724,7 @@ class Mission
 			};
 			id=2312;
 			type="vtx_UH60M_SLICK";
+			atlOffset=0.00048613548;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -26633,7 +26642,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={885.85132,5.9359837,18421.992};
-				angles[]={-0,5.6675191,-0};
+				angles[]={0,5.6675191,0};
 			};
 			side="Empty";
 			flags=4;
@@ -31612,7 +31621,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={16888.781,35.527588,14637.126};
-				angles[]={-0,5.8957758,0};
+				angles[]={0,5.8957758,0};
 			};
 			side="Empty";
 			flags=4;
@@ -31772,6 +31781,54 @@ class Mission
 				};
 				nAttributes=2;
 			};
+		};
+		class Item235
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16905.836,33.447319,14579.86};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="backup_01";
+			};
+			id=2557;
+			type="Box_T_NATO_Wps_F";
+		};
+		class Item236
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16908.398,33.445301,14577.245};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="backup_03";
+			};
+			id=2559;
+			type="Box_T_NATO_WpsSpecial_F";
+		};
+		class Item237
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16906.984,33.447319,14578.557};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="backup_02";
+			};
+			id=2560;
+			type="Box_T_NATO_Wps_F";
 		};
 	};
 	class Connections
