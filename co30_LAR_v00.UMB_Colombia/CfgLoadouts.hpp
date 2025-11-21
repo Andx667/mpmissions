@@ -444,6 +444,7 @@ class Loadouts {
                             LIST_6("kat_chestSeal"),
                             LIST_6("kat_aatKit"),
                             LIST_6("kat_larynx"),
+                            "kat_accuvac",
                             //R
                             "kat_BVM",
                             "kat_oxygenTank_150",
@@ -458,7 +459,7 @@ class Loadouts {
                             LIST_8("kat_lidocaine"),
                             LIST_4("kat_amiodarone"),
                             LIST_4("kat_atropine"),
-                            "kat_AED",
+                            "kat_X_AED",
                             LIST_6("kat_nitroglycerin"),
                             LIST_6("kat_norepinephrine"),
                             LIST_6("kat_phenylephrine"),
