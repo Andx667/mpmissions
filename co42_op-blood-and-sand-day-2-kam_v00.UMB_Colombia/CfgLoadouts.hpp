@@ -392,6 +392,7 @@ class Loadouts {
                 "ACE_EntrenchingTool",
                 "mts_cutter_folding_saw",
                 LIST_3("CUP_1Rnd_12Gauge_Pellets_No00_Buck"),
+                LIST_4("ACE_M84")
             };
 
             class Rank {

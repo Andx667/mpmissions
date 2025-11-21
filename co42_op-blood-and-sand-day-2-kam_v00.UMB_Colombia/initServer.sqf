@@ -31,10 +31,9 @@ ACE_maxWeightDrag = 1750;  //wie schwer kann man ziehen
 
 // Fahrzeuge allgemein
 [
-    [fhz_log_01, fhz_log_02, fhz_med_01, fhz_med_02, fhz_med_03, heli_01, heli_02, car_01],
+    [fhz_log_01, fhz_log_02, fhz_med_01, fhz_med_02, fhz_med_03, heli_01, heli_02, heli_03, heli_04, car_01],
     [
-        ["B_AssaultPack_blk", 1],
-        ["Toolkit", 1]
+        ["B_AssaultPack_blk", 1]
     ],
     true
 ] call ttt_common_fnc_crateFiller;
@@ -222,3 +221,12 @@ ACE_maxWeightDrag = 1750;  //wie schwer kann man ziehen
     ],
     true
 ] call ttt_common_fnc_crateFiller;
+
+{
+    {
+        // Füllt alle schwarzen Rucksäcke in den Fhz mit einem Werkzeugkasten
+        if (typeof _x == "B_AssaultPack_blk") then {
+            _x addItemCargoGlobal ["ToolKit", 1];
+        };
+    } forEach (everyBackpack _x);
+} forEach [fhz_log_01, fhz_log_02, fhz_med_01, fhz_med_02, fhz_med_03, heli_01, heli_02, heli_03, heli_04, car_01];
