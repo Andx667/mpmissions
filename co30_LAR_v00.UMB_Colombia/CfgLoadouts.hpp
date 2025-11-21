@@ -69,7 +69,7 @@ class Loadouts {
                 //DESERT
             };
             vest = "CUP_V_B_Eagle_SPC_Rifleman";
-            backpack = "";
+            backpack = "CFP_AssaultPack_Marpat";
             headgear[] = {
                 "CUP_H_LWHv2_MARPAT",
                 "CUP_H_LWHv2_MARPAT_NVG_gog2_cov2",
@@ -85,18 +85,20 @@ class Loadouts {
                 LIST_15("ACE_packingBandage"),
                 LIST_4("ACE_Tourniquet"),
                 LIST_2("kat_chestSeal"),
-                "kat_Painkiller",
+                LIST_2("kat_Painkiller"),
+                LIST_2("ACE_CableTie"),
             };
             addItemsToVest[] = {
                 LIST_2("CUP_HandGrenade_M67"),
                 LIST_2("SmokeShell"),
                 "SmokeShellGreen",
+                LIST_2("ACE_M84")
                 };
             addItemsToBackpack[] = {};
 
             primaryWeapon = "CUP_arifle_M16A4_Grip";
             primaryWeaponMagazine = "CUP_30Rnd_556x45_Stanag";
-            primaryWeaponOptics = "CUP_optic_ACOG2";
+            primaryWeaponOptics = "CUP_optic_ACOG_TA31_KF";
             primaryWeaponPointer = "";
             primaryWeaponUnderbarrel = "";
             primaryWeaponUnderbarrelMagazine = "";
@@ -108,7 +110,7 @@ class Loadouts {
             goggles = "";
             nvgoggles = "";
 
-            binoculars = "";
+            binoculars = "Binocular";
             map = "ItemMap";
             compass = "ItemCompass";
             watch = "ItemWatch";
@@ -124,12 +126,11 @@ class Loadouts {
             addItemsToVest[] += {
                 LIST_8("CUP_30Rnd_556x45_Stanag"),
             };
-            binoculars = "Binocular";
+
         };
 
         class B_soldier_AR_F {
             vest = "CUP_V_B_Eagle_SPC_AR";
-            backpack = "";
 
             primaryWeapon = "CUP_lmg_M249_E2";
             primaryWeaponMagazine = "CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
@@ -137,6 +138,9 @@ class Loadouts {
             addItemsToVest[] += {
                 LIST_2("CUP_200Rnd_TE4_Red_Tracer_556x45_M249"),
                 "ACE_SpareBarrel",
+            };
+            addItemsToBackpack[] += {
+                LIST_2("CUP_200Rnd_TE4_Red_Tracer_556x45_M249"),
             };
         };
 
@@ -147,7 +151,14 @@ class Loadouts {
                 "ACE_EntrenchingTool",
             };
 
-            binoculars = "Binocular";
+
+        };
+
+        class B_soldier_LAT2_F: B_Soldier_F {
+            secondaryWeapon[] = {
+                "CUP_launch_M72A6",
+                "CUP_launch_M72A6_Special",
+                };
         };
 
         class B_soldier_AT_F: B_Soldier_F {
@@ -156,6 +167,7 @@ class Loadouts {
 
             secondaryWeapon[] = {"CUP_launch_Mk153Mod0_blk","CUP_launch_Mk153Mod0"};
             secondaryWeaponMagazine = "CUP_SMAW_HEDP_M";
+            secondaryWeaponOptics = "CUP_optic_SMAW_Scope";
 
             addItemsToBackpack[] = {
                 LIST_5("CUP_SMAW_Spotting"),
@@ -172,7 +184,46 @@ class Loadouts {
                 "CUP_SMAW_Spotting",
             };
 
-            binoculars = "Binocular";
+
+        };
+
+        class B_HeavyGunner_F {
+            primaryWeapon = "CUP_lmg_M240_norail";
+            primaryWeaponMagazine = "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M";
+            primaryWeaponOptics = "";
+            primaryWeaponPointer = "";
+
+            secondaryWeapon = "dzn_MG_Tripod_M122A1_M240Mount_Carry";
+
+            handgunWeapon = "CUP_hgun_Colt1911";
+            handgunWeaponMagazine = "CUP_7Rnd_45ACP_1911";
+
+            vest = "CUP_V_B_Eagle_SPC_MG";
+
+            addItemsToVest[] += {
+                LIST_2("CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M"),
+                LIST_2("CUP_7Rnd_45ACP_1911")
+            };
+
+            addItemsToBackpack[] += {
+                "ACE_SpareBarrel",
+                LIST_2("CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M"),
+            };
+        };
+
+        class B_Soldier_A_F: B_Soldier_F {
+            backpack = "CUP_B_USMC_MOLLE";
+
+            addItemsToVest[] += {
+                "ACE_EntrenchingTool",
+            };
+            addItemsToBackpack[] += {
+                LIST_6("CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M"),
+                "ACE_SpareBarrel",
+            };
+
+
+
         };
 
         class B_soldier_M_F {
@@ -183,6 +234,7 @@ class Loadouts {
             primaryWeaponMagazine = "ACE_20Rnd_762x51_Mag_Tracer";
             primaryWeaponOptics = "CUP_optic_LeupoldMk4";
             primaryWeaponUnderbarrel = "CUP_bipod_Harris_1A2_L_BLK";
+            primaryWeaponPointer = "";
 
             handgunWeapon = "CUP_hgun_Colt1911";
             handgunWeaponMagazine = "CUP_7Rnd_45ACP_1911";
@@ -195,14 +247,14 @@ class Loadouts {
                 LIST_8("ACE_20Rnd_762x51_M118LR_Mag"),
                 LIST_2("CUP_7Rnd_45ACP_1911"),
             };
-            binoculars = "Binocular";
+
         };
 
         class B_W_RadioOperator_F: B_Soldier_F {
             vests = "CUP_V_B_Eagle_SPC_RTO";
             backpack = "CUP_B_Kombat_Radio_Olive";
 
-            addItemsToVes[] += {
+            addItemsToVest[] += {
                 "ACRE_PRC152",
             };
 
@@ -249,7 +301,7 @@ class Loadouts {
                         "ACRE_PRC152"
                     };
 
-                    binoculars = "Binocular";
+
                 };
 
                 class Lieutenant: Sergeant {
@@ -263,7 +315,7 @@ class Loadouts {
         //Führung
         class B_Soldier_TL_F {
             vest = "CUP_V_B_Eagle_SPC_TL";
-            backpack = "CUP_B_USMC_MOLLE";
+            backpack = "CFP_AssaultPack_Marpat";
             headgear[] = {
                 "CUP_H_LWHv2_MARPAT_comms",
                 "CUP_H_LWHv2_MARPAT_NVG_gog_cov2",
@@ -274,18 +326,20 @@ class Loadouts {
             primaryWeaponMagazine = "CUP_30Rnd_556x45_Stanag_Tracer_Red";
 
             addItemsToVest[] += {
-                LIST_8("CUP_30Rnd_556x45_Stanag_Tracer_Red");
+                LIST_6("CUP_30Rnd_556x45_Stanag_Tracer_Red");
                 "ACRE_PRC148",
             };
 
             addItemsToBackpack[] = {
-                LIST_20("CUP_1Rnd_HE_M203"),
+                LIST_15("CUP_1Rnd_HE_M203"),
                 LIST_5("CUP_1Rnd_HEDP_M203"),
                 LIST_5("CUP_1Rnd_SmokeRed_M203"),
                 LIST_5("CUP_1Rnd_Smoke_M203"),
+                "ACE_spraypaintRed",
+                "ACE_spraypaintGreen",
             };
 
-            binoculars = "Binocular";
+
         };
 
         class B_Soldier_SL_F: B_Soldier_TL_F {
@@ -304,7 +358,6 @@ class Loadouts {
                 "ACE_SpraypaintBlack",
                 LIST_3("SmokeShellGreen"),
                 LIST_3("SmokeShellOrange"),
-                LIST_3("ace_flags_purple"),
             };
         };
 
@@ -314,6 +367,9 @@ class Loadouts {
 
             vest = "CUP_V_B_Eagle_SPC_Officer";
 
+            addItemsToBackpack[] += {
+                LIST_3("SmokeShellBlue"),
+            };
         };
 
 
@@ -364,7 +420,7 @@ class Loadouts {
                         "ACE_SpraypaintRed",
                         "ACE_SpraypaintGreen",
                     };
-                    binoculars = "Binocular";
+
                 };
             };
         };
@@ -514,7 +570,7 @@ class Loadouts {
                         "ace_flags_yellow",
                         "ACRE_PRC152",
                     };
-                    binoculars = "Binocular";
+
                 };
             };
         };
@@ -539,7 +595,7 @@ class Loadouts {
                 LIST_5("CUP_5Rnd_762x51_M24"),
                 "ACE_SpottingScope",
             };
-            binoculars = "Binocular";
+
         };
 
         class B_sniper_F {
@@ -563,14 +619,14 @@ class Loadouts {
             addItemsToBackpack[] = {
                 "ACE_Tripod",
             };
-            binoculars = "Binocular";
+
         };
 
         class B_helicrew_F {
             primaryWeapon = "";
-            primaryWeaponOptics = "";
-            primaryWeaponUnderbarrel = "";
             primaryWeaponMagazine = "";
+            primaryWeaponOptics = "";
+            primaryWeaponPointer = "";
 
             handgunWeapon = "CUP_hgun_Colt1911";
             handgunWeaponMagazine = "CUP_7Rnd_45ACP_1911";
@@ -586,7 +642,7 @@ class Loadouts {
             backpack = "B_AssaultPack_blk";
 
             addItemsToBackpack[] += {
-                "ACRE_PRC117F",
+                "ACRE_PRC117F"
             };
         };
     };
