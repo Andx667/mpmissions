@@ -16,8 +16,6 @@ force ace_medical_treatment_medicSurgicalKit = 1;
 force ace_medical_treatment_consumePAK = 1;
 force ace_medical_treatment_consumeSurgicalKit = 2;
 
-force ace_medical_bleedingCoefficient = 0.5;
-
 //ACE Cookoff
 force ace_cookoff_enableAmmobox = false;
 
@@ -25,13 +23,13 @@ force ace_cookoff_enableAmmobox = false;
 force ttt_signalpanel_enable = true;
 force ttt_signalpanel_supportedBackpacks = '["UK3CB_BAF_B_Bergen_MTP_JTAC_H_A"]';
 
-//TTT Medicalpanel
-force ttt_medic_backpack_enable = true;                                                                                     //default: false;
-force ttt_medic_backpack_supportedBackpacks = '["UK3CB_BAF_B_Bergen_MTP_Medic_H_A","UK3CB_BAF_B_Bergen_MTP_Medic_H_B"]';    //default: [];
-force ttt_medic_backpack_additionalItems = '["Land_FirstAidKit_01_open_F"]';                         //default: [];
-force ttt_medic_backpack_buildTime = 6;                                                                                     //default: 20;
+//TTT Medicalpane
+force ttt_medic_backpack_enable = true;                                                             //default: false;
+force ttt_medic_backpack_supportedBackpacks = '["UK3CB_BAF_B_Bergen_MTP_Medic_H_A","UK3CB_BAF_B_Bergen_MTP_Medic_H_B"]'; //default: [];
+force ttt_medic_backpack_additionalItems = '["Land_FirstAidKit_01_open_F"]'; //default: [];
+force ttt_medic_backpack_buildTime = 6;                                                             //default: 20;
 
-//KAM Airway
+// KAT - ADV Medical: Airway
 force kat_airway_Accuvac_time = 8;
 force kat_airway_autoTriage = false;
 force kat_airway_block_headTurning_ifAirwayItem = true;
@@ -46,7 +44,7 @@ force kat_airway_medLvl_Accuvac = 1; //Medic
 force kat_airway_medLvl_Guedeltubus = 1; //Medic
 force kat_airway_medLvl_Larynxtubus = 1; //Medic
 force kat_airway_medLvl_Suction = 1; //Medic
-force kat_airway_occlusion_cooldownPeriod = 6;
+force kat_airway_occlusion_cooldownPeriod = 60;
 force kat_airway_occlusion_repeatTimer = 60;
 force kat_airway_probability_headturning = 50;
 force kat_airway_probability_obstruction = 15;
@@ -58,9 +56,9 @@ force kat_airway_string_exit = "";
 force kat_airway_Suction_reuse = true;
 force kat_airway_Suction_time = 12;
 
-//KAM Breathing
+// KAT - ADV Medical: Breathing
 force kat_breathing_advPtxChance = 5;
-force kat_breathing_advPtxEnable = false;
+force kat_breathing_advPtxEnable = true;
 force kat_breathing_arrestPneumothorax_interval = 30;
 force kat_breathing_availOxyMask = "'kat_mask_solr'";
 force kat_breathing_BVMOxygen_Multiplier = 1;
@@ -79,8 +77,8 @@ force kat_breathing_inspectChest_enable = 2;
 force kat_breathing_inspectChest_medLvl = 1;
 force kat_breathing_inspectChest_time = 6;
 force kat_breathing_locationProvideOxygen = 3; //facilities and vehicles
-force kat_breathing_medLvl_BVM = 1; //medics
-force kat_breathing_medLvl_BVM_Oxygen = 1; //medics
+force kat_breathing_medLvl_BVM = 0; //alle
+force kat_breathing_medLvl_BVM_Oxygen = 0; //alle
 force kat_breathing_medLvl_Chestseal = 0; //anyone
 force kat_breathing_medLvl_hemopneumothoraxTreatment = 1; //Doctor
 force kat_breathing_medLvl_NasalCannula = 1; //Medics
@@ -89,7 +87,7 @@ force kat_breathing_medLvl_Pulseoximeter = 0; //anyone
 force kat_breathing_mildValue = 75;
 force kat_breathing_NasalCannula_time = 3;
 force kat_breathing_paco2Active = false;
-force kat_breathing_PneumothoraxAlwaysVisible = false;
+force kat_breathing_PneumothoraxAlwaysVisible = true;
 force kat_breathing_PneumothoraxArrest = true;
 force kat_breathing_pneumothoraxChance = 5;
 force kat_breathing_pneumothoraxDamageThreshold = 0.4;
@@ -113,7 +111,7 @@ force kat_breathing_Stable_spo2 = 85;
 force kat_breathing_staminaLossAtLowSPO2 = true;
 force kat_breathing_stethoscopeListeningTime = 15;
 force kat_breathing_stethoscopeSoundVolume = 2;
-force kat_breathing_TensionHemothoraxAlwaysVisible = false;
+force kat_breathing_TensionHemothoraxAlwaysVisible = true;
 
 // KAT - ADV Medical: Chemical
 force kat_chemical_availGasmask = "'G_AirPurifyingRespirator_01_F', 'kat_mask_M50', 'kat_mask_M04'";
@@ -138,7 +136,7 @@ force kat_circulation_AdvRhythm_Hardcore_Enable = false;
 force kat_circulation_AdvRhythm_hardcoreDeteriorationChance = 10;
 force kat_circulation_AdvRhythm_HTHold = true;
 force kat_circulation_AdvRhythm_PEAChance = 50;
-force kat_circulation_AdvRhythm_PEAEnabled = false;
+force kat_circulation_AdvRhythm_PEAEnabled = true;
 force kat_circulation_AdvRhythm_VTChance = 50;
 force kat_circulation_AED_duringCpr = false;
 force kat_circulation_AED_MaxChance = 80;
@@ -163,9 +161,9 @@ force kat_circulation_CPR_ChanceInterval = 15;
 force kat_circulation_CPR_MaxChance_Default = 20;
 force kat_circulation_CPR_MaxChance_Doctor = 40;
 force kat_circulation_CPR_MaxChance_RegularMedic = 30;
-force kat_circulation_CPR_MinChance_Default = 10;
-force kat_circulation_CPR_MinChance_Doctor = 20;
-force kat_circulation_CPR_MinChance_RegularMedic = 15;
+force kat_circulation_CPR_MinChance_Default = 15;
+force kat_circulation_CPR_MinChance_Doctor = 25;
+force kat_circulation_CPR_MinChance_RegularMedic = 20;
 force kat_circulation_CPR_OxygenationPeriod = 15;
 force kat_circulation_Defibrillator_DistanceLimit = 6;
 force kat_circulation_DefibrillatorPads_AttachTime = 6;
@@ -187,7 +185,7 @@ force kat_circulation_treatmentTime_StethHR = 8;
 force kat_circulation_useLocation_AED = 0; //everywhere
 
 //KAM Feedback
-force kat_feedback_effectLowSpO2 = 90;
+force kat_feedback_effectLowSpO2 = 85;
 
 //KAM Hypothermia
 force kat_hypothermia_hypothermiaActive = false;
@@ -275,7 +273,7 @@ force kat_pharma_coagulation_time_medium = 30;
 force kat_pharma_coagulation_time_minor = 15;
 force kat_pharma_coagulation_tourniquetBlock = true;
 force kat_pharma_eacaClearTrauma = true; //match ACE Stitch
-force kat_pharma_ivCheckLimbDamage = false;
+force kat_pharma_ivCheckLimbDamage = true;
 force kat_pharma_IVdrop = 600;
 force kat_pharma_IVdropEnable = false;
 force kat_pharma_IVflowControl = false;

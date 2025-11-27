@@ -122,7 +122,7 @@ class Loadouts {
                 LIST_15("ACE_elasticBandage"),
                 LIST_15("ACE_packingBandage"),
                 LIST_4("ACE_Tourniquet"),
-                "ACRE_PRC343",
+                "ACRE_PRC148",
                 LIST_2("kat_chestSeal"),
                 LIST_2("kat_Painkiller"),
             };
@@ -790,7 +790,7 @@ class Loadouts {
                         LIST_12("kat_larynx"),
                         LIST_6("kat_ncdKit"),
                         //R
-                        "kat_pocketBVM",
+                        LIST_3("kat_pocketBVM"),
                         //C
                         LIST_4("ACE_salineIV_250"),
                         LIST_4("ACE_salineIV_500"),
@@ -971,7 +971,7 @@ class Loadouts {
                         LIST_10("kat_larynx"),
                         LIST_10("kat_ncdKit"),
                         //R
-                        "kat_pocketBVM",
+                        LIST_3("kat_pocketBVM"),
                         //C
                         LIST_6("ACE_bloodIV_250"),
                         LIST_6("ACE_bloodIV_500"),
@@ -1012,7 +1012,7 @@ class Loadouts {
                         LIST_6("kat_chestSeal"),
                         LIST_6("kat_larynx"),
                         //R
-                        "kat_BVM",
+                        LIST_3("kat_BVM"),
                         //C
                         "ACE_salineIV_250",
                         LIST_2("ACE_bloodIV_500"),
@@ -1055,7 +1055,7 @@ class Loadouts {
                         LIST_4("kat_chestSeal"),
                         LIST_4("kat_larynx"),
                         //R
-                        "kat_BVM",
+                        LIST_3("kat_BVM"),
                         //C
                         "ACE_salineIV_250",
                         "kat_X_AED",

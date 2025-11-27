@@ -29,7 +29,7 @@ private _id = [
 
                 //Add TTT Helmet based on position in Squad
                 private _helmet = ["ttt_Helmet_",groupID _unit,"_BW_Flecktarn"] joinString "";
-                _unit addItemToBackpack _helmet;
+                //_unit addItemToBackpack _helmet;
 
                switch (typeOf _unit) do {
                     case "B_soldier_exp_F": {
@@ -46,7 +46,7 @@ private _id = [
                         ] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;
                     };
                     case "B_soldier_UGV_02_Demining_F": {
-                        _unit addHeadGear _helmet;
+                        //_unit addHeadGear _helmet;
                     };
                     case "B_helicrew_F";
                     case "B_Helipilot_F": {
