@@ -783,7 +783,7 @@ class Loadouts {
             primaryWeaponMuzzle = "";
             primaryWeaponUnderbarrel = "";
 
-            vest = "USP_CRYE_JPC_FS";
+            vest = "USP_CRYE_CPC_FS";
             backpack = "";
 
             class Rank {
