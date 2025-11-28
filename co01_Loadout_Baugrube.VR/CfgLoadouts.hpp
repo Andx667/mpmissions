@@ -83,7 +83,10 @@ class Loadouts {
                 "USP_G3C_OR_VQ_MC",
             };
             vest[] = {
-                "USP_CRYE_JPC_ASLT"
+                "USP_CRYE_JPC_ASLTB_RGR",
+                "USP_CRYE_JPC_ASLTB",
+                "USP_CRYE_JPC_ASLTB_KHK",
+                "USP_CRYE_JPC_ASLTB_CBR"
             };
             backpack[] = {
                 // "USP_ZIPON_PACK_CPC_MC",
@@ -99,16 +102,10 @@ class Loadouts {
                 "USP_OPSCORE_FASTMTC_C",
                 "USP_OPSCORE_FASTMTC_CM",
                 "USP_OPSCORE_FASTMTC_CMW",
-                "USP_OPSCORE_FASTMTC_CMG",
-                "USP_OPSCORE_FASTMTC_CMGS",
-                "USP_OPSCORE_FASTMTC_CMGSW",
                 "USP_OPSCORE_FASTMTC_CMS",
                 "USP_OPSCORE_FASTMTC_CMSW",
                 "USP_OPSCORE_FASTMTC_CW",
-                "USP_OPSCORE_FASTMTC_CG",
                 "USP_OPSCORE_FASTMTC_CGW",
-                "USP_OPSCORE_FASTMTC_CGS",
-                "USP_OPSCORE_FASTMTC_CGSW",
                 "USP_OPSCORE_FASTMTC_CS",
                 "USP_OPSCORE_FASTMTC_CSW"
             };
@@ -171,7 +168,12 @@ class Loadouts {
 
         //Grenadier
         class B_Soldier_GL_F: B_Soldier_F {
-            vest = "USP_CRYE_JPC_GRB";
+            vest[] = {
+                "USP_CRYE_JPC_GRB_RGR",
+                "USP_CRYE_JPC_GRB",
+                "USP_CRYE_JPC_GRB_KHK",
+                "USP_CRYE_JPC_GRB_CBR"
+            };
 
             primaryWeapon[] = {
             };
@@ -187,7 +189,12 @@ class Loadouts {
 
         //Marksman
         class B_soldier_M_F {
-            vest = "USP_CRYE_JPC_DMB";
+            vest[] = {
+                "USP_CRYE_JPC_DMB_CBR",
+                "USP_CRYE_JPC_DMB_KHK",
+                "USP_CRYE_JPC_DMB_RGR",
+                "USP_CRYE_JPC_DMB"
+            };
             primaryWeapon[] = {
             };
             primaryWeaponOptics = "";
@@ -463,7 +470,12 @@ class Loadouts {
 
         //Autorifleman
         class B_soldier_AR_F {
-            vest = "USP_CRYE_JPC_MGB";
+            vest[] = {
+                "USP_CRYE_JPC_MGB_RGR",
+                "USP_CRYE_JPC_MGB",
+                "USP_CRYE_JPC_MGB_KHK",
+                "USP_CRYE_JPC_MGB_CBR"
+            };
 
             primaryWeapon[] = {
             };
@@ -509,16 +521,32 @@ class Loadouts {
         //Unterstützung
         //Pionier
         class B_engineer_F: B_Soldier_F {
+            vest[] = {
+                "USP_CRYE_CPC_COMMS_BELT",
+                "USP_CRYE_CPC_COMMS_BELT_MC",
+                "USP_CRYE_CPC_COMMS_BELT_RGR"
+            };
+
+            backpack[] = {
+                "USP_REEBOW_3DAP_ACC1_MC",
+                "USP_REEBOW_3DAP_ACC10_MC",
+                "USP_REEBOW_3DAP_ACC6_MC",
+                "USP_REEBOW_3DAP_ACC7_MC"
+            };
+
+            headgear[] = {
+                "USP_OPSCORE_FASTMTC_CMG",
+                "USP_OPSCORE_FASTMTC_CMGS",
+                "USP_OPSCORE_FASTMTC_CMGSW",
+                "USP_OPSCORE_FASTMTC_CG",
+                "USP_OPSCORE_FASTMTC_CGW",
+                "USP_OPSCORE_FASTMTC_CGS",
+                "USP_OPSCORE_FASTMTC_CGSW",
+            };
 
             class Rank {
 
                 class PRIVATE {
-                    backpack[] = {
-                        "USP_REEBOW_3DAP_ACC1_MC",
-                        "USP_REEBOW_3DAP_ACC10_MC",
-                        "USP_REEBOW_3DAP_ACC6_MC",
-                        "USP_REEBOW_3DAP_ACC7_MC"
-                    };
 
                 };
                 class CORPORAL: PRIVATE {
@@ -600,7 +628,18 @@ class Loadouts {
                         "USP_G3C_RS2_CU_VQ_MC"
                     };
 
-                    vest = "USP_CRYE_CPC_LEAD_BELT_MC";
+                    vest[] ={
+                        "USP_CRYE_CPC_LEAD_BELT",
+                        "USP_CRYE_CPC_LEAD_BELT_MC",
+                        "USP_CRYE_CPC_LEAD_BELT_RGR"
+                    };
+
+                    headgear[] = {
+                        "USP_OPSCORE_FASTMTC_CGT",
+                        "USP_OPSCORE_FASTMTC_CGTW",
+                        "USP_OPSCORE_FASTMTC_CMGT",
+                        "USP_OPSCORE_FASTMTC_CMGTW"
+                    };
                 };
             };
         };
@@ -608,6 +647,29 @@ class Loadouts {
         //EOD
         class B_soldier_mine_F: B_Soldier_F {
             handgunWeapon = "ACE_VMH3";
+
+            vest[] = {
+                "USP_CRYE_CPC_COMMS_BELT",
+                "USP_CRYE_CPC_COMMS_BELT_MC",
+                "USP_CRYE_CPC_COMMS_BELT_RGR"
+            };
+
+            backpack[] = {
+                "USP_REEBOW_3DAP_ACC1_MC",
+                "USP_REEBOW_3DAP_ACC10_MC",
+                "USP_REEBOW_3DAP_ACC6_MC",
+                "USP_REEBOW_3DAP_ACC7_MC"
+            };
+
+            headgear[] = {
+                "USP_OPSCORE_FASTMTC_CMG",
+                "USP_OPSCORE_FASTMTC_CMGS",
+                "USP_OPSCORE_FASTMTC_CMGSW",
+                "USP_OPSCORE_FASTMTC_CG",
+                "USP_OPSCORE_FASTMTC_CGW",
+                "USP_OPSCORE_FASTMTC_CGS",
+                "USP_OPSCORE_FASTMTC_CGSW",
+            };
 
             addItemsToVest[] += {
                 "ACE_DefusalKit",
@@ -697,7 +759,17 @@ class Loadouts {
                         "USP_G3C_RS2_CU_OR_VQ_MC",
                         "USP_G3C_RS2_CU_VQ_MC"
                     };
-                    vest = "USP_CRYE_CPC_LEAD_BELT_MC";
+                    vest[] ={
+                        "USP_CRYE_CPC_LEAD_BELT",
+                        "USP_CRYE_CPC_LEAD_BELT_MC",
+                        "USP_CRYE_CPC_LEAD_BELT_RGR"
+                    };
+                    headgear[] = {
+                        "USP_OPSCORE_FASTMTC_CGT",
+                        "USP_OPSCORE_FASTMTC_CGTW",
+                        "USP_OPSCORE_FASTMTC_CMGT",
+                        "USP_OPSCORE_FASTMTC_CMGTW"
+                    };
                 };
             };
         };
@@ -738,7 +810,12 @@ class Loadouts {
 
         //Mörser
         class B_support_AMort_F: B_Soldier_F {
-            vest = "USP_CRYE_JPC_FS";
+            vest[] = {
+                "USP_CRYE_CPC_COMMS_BELT",
+                "USP_CRYE_CPC_COMMS_BELT_MC",
+                "USP_CRYE_CPC_COMMS_BELT_RGR"
+            };
+
             backpack[] = {
                 "USP_PATROL_PACK",
                 "USP_PATROL_PACK_CB",
@@ -761,6 +838,7 @@ class Loadouts {
         };
 
         class B_support_Mort_F: B_support_AMort_F {
+
             class Rank {
                 class PRIVATE {
 
@@ -844,7 +922,12 @@ class Loadouts {
                         "USP_G3C_RS2_CU_VQ_MC"
                     };
 
-                    vest = "USP_CRYE_CPC_LEAD_BELT_MC";
+                    vest[] ={
+                        "USP_CRYE_CPC_LEAD_BELT",
+                        "USP_CRYE_CPC_LEAD_BELT_MC",
+                        "USP_CRYE_CPC_LEAD_BELT_RGR"
+                    };
+
                     backpack[] = {
                         "USP_TACTICAL_PACK_CCT",
                         "USP_TACTICAL_PACK_CCT2",
@@ -978,12 +1061,17 @@ class Loadouts {
         //Führung
         class B_Soldier_TL_F {
             primaryWeaponMagazine = ""; //Tracer instead of regular ball
-            vest = "USP_CRYE_JPC_TL";
+            vest[] = {
+                "USP_CRYE_JPC_TL_RGR",
+                "USP_CRYE_JPC_TL",
+                "USP_CRYE_JPC_TL_KHK",
+                "USP_CRYE_JPC_TL_CBR"
+            };
             backpack[] = {
                 "USP_ZIPON_PANEL_CPC_RF2_MC",
                 "USP_ZIPON_PANEL_CPC_RF2_SM_MC",
                 "USP_ZIPON_PANEL_CPC_RF2_SMK_MC",
-                "USP_ZIPON_PANEL_CPC_RF2_SMK_SM_MC",
+                "USP_ZIPON_PANEL_CPC_RF2_SMK_SM_MC"
             };
 
             addItemsToUniform[] += {
@@ -1199,37 +1287,33 @@ class Loadouts {
 
         //Logistik
         class B_soldier_repair_F: B_Soldier_F {
+            vest[] = {
+                "USP_CRYE_CPC_COMMS_BELT",
+                "USP_CRYE_CPC_COMMS_BELT_MC",
+                "USP_CRYE_CPC_COMMS_BELT_RGR"
+            };
+
+            backpack[] = {
+                "USP_PATROL_PACK",
+                "USP_PATROL_PACK_CB",
+                "USP_PATROL_PACK_CB_FH",
+                "USP_PATROL_PACK_CB_FH_RP",
+                "USP_PATROL_PACK_CB_FH_RP_ZT",
+                "USP_PATROL_PACK_CB_FH_ZT",
+                "USP_PATROL_PACK_CB_RP",
+                "USP_PATROL_PACK_CB_RP_ZT",
+                "USP_PATROL_PACK_CB_ZT",
+                "USP_PATROL_PACK_FH",
+                "USP_PATROL_PACK_FH_ZT",
+                "USP_PATROL_PACK_ZT"
+            };
 
             class Rank {
 
                 class PRIVATE {
-                    backpack[] = {
-                        "USP_PATROL_PACK",
-                        "USP_PATROL_PACK_CB",
-                        "USP_PATROL_PACK_CB_FH",
-                        "USP_PATROL_PACK_CB_FH_RP",
-                        "USP_PATROL_PACK_CB_FH_RP_ZT",
-                        "USP_PATROL_PACK_CB_FH_ZT",
-                        "USP_PATROL_PACK_CB_RP",
-                        "USP_PATROL_PACK_CB_RP_ZT",
-                        "USP_PATROL_PACK_CB_ZT",
-                        "USP_PATROL_PACK_FH",
-                        "USP_PATROL_PACK_FH_ZT",
-                        "USP_PATROL_PACK_ZT"
-                    };
 
                 };
                 class SERGEANT: PRIVATE {
-                    backpack[] = {
-                        "USP_TACTICAL_PACK_CCT",
-                        "USP_TACTICAL_PACK_CCT2",
-                        "USP_TACTICAL_PACK_CCT3",
-                        "USP_TACTICAL_PACK_CCT4",
-                        "USP_TACTICAL_PACK_CCT5",
-                        "USP_TACTICAL_PACK_CCT6",
-                        "USP_TACTICAL_PACK_CCT7",
-                        "USP_TACTICAL_PACK_CCT8"
-                    };
                     uniform[] = {
                         // "USP_G3C_RS_MCW",
                         // "USP_G3C_RS_CU_MCW",
@@ -1304,6 +1388,23 @@ class Loadouts {
                         "USP_G3C_RS2_CU_OR_VQ_MC",
                         "USP_G3C_RS2_CU_VQ_MC"
                     };
+
+                    vest[] ={
+                        "USP_CRYE_CPC_LEAD_BELT",
+                        "USP_CRYE_CPC_LEAD_BELT_MC",
+                        "USP_CRYE_CPC_LEAD_BELT_RGR"
+                    };
+
+                    backpack[] = {
+                        "USP_TACTICAL_PACK_CCT",
+                        "USP_TACTICAL_PACK_CCT2",
+                        "USP_TACTICAL_PACK_CCT3",
+                        "USP_TACTICAL_PACK_CCT4",
+                        "USP_TACTICAL_PACK_CCT5",
+                        "USP_TACTICAL_PACK_CCT6",
+                        "USP_TACTICAL_PACK_CCT7",
+                        "USP_TACTICAL_PACK_CCT8"
+                    };
                 };
             };
         };
@@ -1311,14 +1412,42 @@ class Loadouts {
         //SOF
         class B_recon_F {
             uniform[] = {
-                "USP_SOFTSHELL_G3C_MC",
-                "USP_SOFTSHELL_G3C_MC_M81",
-                "USP_SOFTSHELL_G3C_MC_MCT",
-                "USP_SOFTSHELL_G3C_MC_MCW",
-                "USP_SOFTSHELL_G3C_MC_RGR",
-                "USP_SOFTSHELL_G3C_RGR_M81",
-                "USP_SOFTSHELL_G3C_RGR_MCT",
-                "USP_SOFTSHELL_G3C_RGR_MCW"
+                // "USP_SOFTSHELL_G3C_MC",
+                // "USP_SOFTSHELL_G3C_MC_M81",
+                // "USP_SOFTSHELL_G3C_MC_MCT",
+                // "USP_SOFTSHELL_G3C_MC_MCW",
+                // "USP_SOFTSHELL_G3C_MC_RGR",
+                // "USP_SOFTSHELL_G3C_RGR_M81",
+                // "USP_SOFTSHELL_G3C_RGR_MC",
+                // "USP_SOFTSHELL_G3C_RGR_MCT",
+                // "USP_SOFTSHELL_G3C_RGR_MCW",
+                "USP_SOFTSHELL_G3C_KP_MC",
+                "USP_SOFTSHELL_G3C_KP_MC_M81",
+                "USP_SOFTSHELL_G3C_KP_MC_MCT",
+                "USP_SOFTSHELL_G3C_KP_MC_MCW",
+                "USP_SOFTSHELL_G3C_KP_MC_RGR",
+                "USP_SOFTSHELL_G3C_KP_RGR_M81",
+                "USP_SOFTSHELL_G3C_KP_RGR_MC",
+                "USP_SOFTSHELL_G3C_KP_RGR_MCT",
+                "USP_SOFTSHELL_G3C_KP_RGR_MCW",
+                "USP_SOFTSHELL_G3C_KP_OR_MC",
+                "USP_SOFTSHELL_G3C_KP_OR_MC_M81",
+                "USP_SOFTSHELL_G3C_KP_OR_MC_MCT",
+                "USP_SOFTSHELL_G3C_KP_OR_MC_MCW",
+                "USP_SOFTSHELL_G3C_KP_OR_MC_RGR",
+                "USP_SOFTSHELL_G3C_KP_OR_RGR_M81",
+                "USP_SOFTSHELL_G3C_KP_OR_RGR_MC",
+                "USP_SOFTSHELL_G3C_KP_OR_RGR_MCT",
+                "USP_SOFTSHELL_G3C_KP_OR_RGR_MCW",
+                "USP_SOFTSHELL_G3C_KP_MX_MC",
+                "USP_SOFTSHELL_G3C_KP_MX_MC_M81",
+                "USP_SOFTSHELL_G3C_KP_MX_MC_MCT",
+                "USP_SOFTSHELL_G3C_KP_MX_MC_MCW",
+                "USP_SOFTSHELL_G3C_KP_MX_MC_RGR",
+                "USP_SOFTSHELL_G3C_KP_MX_RGR_M81",
+                "USP_SOFTSHELL_G3C_KP_MX_RGR_MC",
+                "USP_SOFTSHELL_G3C_KP_MX_RGR_MCT",
+                "USP_SOFTSHELL_G3C_KP_MX_RGR_MCW",
             };
 
             vest[] = {

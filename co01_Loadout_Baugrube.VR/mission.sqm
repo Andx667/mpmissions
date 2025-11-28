@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7736.8623,18.278431,5094.2031};
-		dir[]={-0.15399781,-0.61506313,0.77329296};
-		up[]={-0.12012813,0.78847784,0.60321796};
-		aside[]={0.9807415,0,0.19531025};
+		pos[]={7726.5718,9.710516,5104.0493};
+		dir[]={0.8072955,-0.46616992,0.36188644};
+		up[]={0.42538601,0.88469547,0.19068798};
+		aside[]={0.40905255,-1.9179424e-08,-0.91251343};
 	};
 };
 binarizationWanted=0;
@@ -126,7 +126,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category2
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -6285,6 +6285,14 @@ class Mission
 						description="1: Survivor";
 						isPlayer=1;
 						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam";
+								isBackpack=0;
+							};
+						};
 					};
 					id=701;
 					type="B_Survivor_F";
