@@ -179,9 +179,13 @@ class Loadouts {
     class Type {
         //Rifleman
         class B_Soldier_F {
+            handgunWeapon = "CUP_hgun_Glock17_blk";
+            handgunWeaponMagazine = "CUP_17Rnd_9x19_glock17";
+
             addItemsToVest[] = {
                 LIST_8("CUP_30Rnd_556x45_Stanag_L85"),
                 "ACRE_PRC152",
+                LIST_2("CUP_17Rnd_9x19_glock17")
             };
             addItemsToBackpack[] = {
                 "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M",
@@ -209,8 +213,6 @@ class Loadouts {
 
         class B_W_RadioOperator_F: B_Soldier_F {
             backpack = "CUP_B_Predator_Radio_MTP";
-
-            //pistole?
 
             addItemsToBackpack[] = {
                 LIST_2("ACRE_PRC117F"),
@@ -562,13 +564,18 @@ class Loadouts {
             //headgear = "CUP_H_BAF_DDPM_Mk6_CREW_PRR"; //DDPM
             //headgear = "CUP_H_BAF_DPM_Mk6_CREW_PRR"; //DPM
 
+            handgunWeapon = "";
+            handgunWeaponMagazine = "";
+
             addItemsToVest[] = {
-                LIST_3("CUP_20Rnd_762x51_L129_M"),
+                LIST_3("CUP_30Rnd_556x45_Stanag_L85"),
             };
 
             class Rank {
                 class CORPORAL {
-
+                    addItemsToVest[] += {
+                        "ACRE_PRC148",
+                    };
                 };
 
                 class SERGEANT: CORPORAL {
