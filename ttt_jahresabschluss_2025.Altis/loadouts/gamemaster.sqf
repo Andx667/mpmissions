@@ -20,6 +20,6 @@ player addVest "V_Rangemaster_belt";
 
 comment "Add items to containers";
 player addItemToUniform "ACRE_PRC152";
-player addItemToUniform "ItemAndroid"
+player addItemToUniform "ItemAndroid";
 
-
+player addHeadGear "ttt_Beret_Logo";

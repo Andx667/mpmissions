@@ -16,11 +16,11 @@ removeGoggles player;
 
 comment "Add containers";
 player forceAddUniform "ttt_Uniform_Red_BW_Flecktarn";
-player addVest "ttt_Vest_Lite_Red_US_Desert";
+player addVest "V_Rangemaster_belt";
 
 comment "Add items to containers";
 player addItemToUniform "ACRE_PRC152";
-player addItemToUniform "ItemAndroid"
+player addItemToUniform "ItemAndroid";
 
 
 player addHeadGear "ttt_Beret_Red";
