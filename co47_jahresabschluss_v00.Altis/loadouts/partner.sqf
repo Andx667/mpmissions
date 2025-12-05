@@ -23,5 +23,5 @@ player addItemToUniform "ACRE_PRC152";
 player addItemToUniform "ItemAndroid";
 
 
-player addHeadGear "ttt_Beret_Logo";
+player addHeadGear "H_Beret_blk";
 
