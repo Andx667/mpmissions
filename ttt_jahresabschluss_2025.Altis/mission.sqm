@@ -1,0 +1,2646 @@
+version=54;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1025;
+	mods[]=
+	{
+		"3denEnhanced"
+	};
+	class ItemIDProvider
+	{
+		nextID=66;
+	};
+	class LayerIndexProvider
+	{
+		nextID=3;
+	};
+	class Camera
+	{
+		pos[]={5482.5767,64.873772,14995.17};
+		dir[]={-0.55556124,-0.65604824,0.51089954};
+		up[]={-0.48290697,0.75470895,0.44408527};
+		aside[]={0.67692083,1.5243131e-07,0.7360962};
+	};
+};
+binarizationWanted=0;
+sourceName="ttt_jahresabschluss_2025";
+addons[]=
+{
+	"A3_Characters_F_Orange",
+	"A3_Modules_F_Curator_Curator",
+	"A3_Characters_F",
+	"A3_Data_F_Exp_A_Virtual",
+	"A3_Ui_F",
+	"acre_api",
+	"ttt_signs",
+	"A3_Structures_F_Argo_Commercial_Billboards",
+	"A3_Structures_F_Mark_VR_Shapes",
+	"A3_Props_F_Exp_Military_Camps",
+	"KJW_TwoPrimaryWeapons"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=11;
+		class Item0
+		{
+			className="A3_Characters_F_Orange";
+			name="Arma 3 Orange - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Data_F_Exp_A";
+			name="Arma 3 Nexus Update - Main Configuration";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item5
+		{
+			className="acre_api";
+			name="ACRE2 - API";
+			author="ACRE2Team";
+			url="https://github.com/IDI-Systems/acre2";
+		};
+		class Item6
+		{
+			className="ttt_signs";
+			name="TTT - Signs";
+			author="Tactical Training Team";
+			url="https://tacticalteam.de";
+		};
+		class Item7
+		{
+			className="A3_Structures_F_Argo";
+			name="Arma 3 Malden - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item8
+		{
+			className="A3_Structures_F_Mark";
+			name="Arma 3 Marksmen - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item9
+		{
+			className="A3_Props_F_Exp";
+			name="Arma 3 Apex - Decorative and Mission Objects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item10
+		{
+			className="KJW_TwoPrimaryWeapons";
+			name="KJW_TwoPrimaryWeapons";
+			author="KJW";
+		};
+	};
+};
+dlcs[]=
+{
+	"ORANGE",
+	"Argo",
+	"Mark",
+	"Expansion"
+};
+randomSeed=5177107;
+class ScenarioData
+{
+	author="&x";
+};
+class CustomAttributes
+{
+	class Category1
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="mts_zeus_comments_3DENComments";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+					class value
+					{
+						items=9;
+						class Item0
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=2;
+									class Item0
+									{
+										class data
+										{
+											singleType="STRING";
+											value="3den:55";
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=3;
+												class Item0
+												{
+													class data
+													{
+														singleType="ARRAY";
+														class value
+														{
+															items=3;
+															class Item0
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=5439.2852;
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=15006.417;
+																};
+															};
+															class Item2
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=27.339001;
+																};
+															};
+														};
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="STRING";
+														value="PRAE";
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														singleType="STRING";
+														value="";
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=2;
+									class Item0
+									{
+										class data
+										{
+											singleType="STRING";
+											value="3den:56";
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=3;
+												class Item0
+												{
+													class data
+													{
+														singleType="ARRAY";
+														class value
+														{
+															items=3;
+															class Item0
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=5446.6548;
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=15002.01;
+																};
+															};
+															class Item2
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=27.339001;
+																};
+															};
+														};
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="STRING";
+														value="GRAD";
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														singleType="STRING";
+														value="";
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=2;
+									class Item0
+									{
+										class data
+										{
+											singleType="STRING";
+											value="3den:57";
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=3;
+												class Item0
+												{
+													class data
+													{
+														singleType="ARRAY";
+														class value
+														{
+															items=3;
+															class Item0
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=5455.3809;
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=15001.583;
+																};
+															};
+															class Item2
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=27.299999;
+																};
+															};
+														};
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="STRING";
+														value="GrpW";
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														singleType="STRING";
+														value="";
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+						class Item3
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=2;
+									class Item0
+									{
+										class data
+										{
+											singleType="STRING";
+											value="3den:58";
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=3;
+												class Item0
+												{
+													class data
+													{
+														singleType="ARRAY";
+														class value
+														{
+															items=3;
+															class Item0
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=5463.9941;
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=15005.024;
+																};
+															};
+															class Item2
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=27.299999;
+																};
+															};
+														};
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Weiß";
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														singleType="STRING";
+														value="";
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+						class Item4
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=2;
+									class Item0
+									{
+										class data
+										{
+											singleType="STRING";
+											value="3den:59";
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=3;
+												class Item0
+												{
+													class data
+													{
+														singleType="ARRAY";
+														class value
+														{
+															items=3;
+															class Item0
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=5468.311;
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=15010.03;
+																};
+															};
+															class Item2
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=27.299999;
+																};
+															};
+														};
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Blau";
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														singleType="STRING";
+														value="";
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+						class Item5
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=2;
+									class Item0
+									{
+										class data
+										{
+											singleType="STRING";
+											value="3den:60";
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=3;
+												class Item0
+												{
+													class data
+													{
+														singleType="ARRAY";
+														class value
+														{
+															items=3;
+															class Item0
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=5471.916;
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=15016.28;
+																};
+															};
+															class Item2
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=27.299999;
+																};
+															};
+														};
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Orange";
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														singleType="STRING";
+														value="";
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+						class Item6
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=2;
+									class Item0
+									{
+										class data
+										{
+											singleType="STRING";
+											value="3den:61";
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=3;
+												class Item0
+												{
+													class data
+													{
+														singleType="ARRAY";
+														class value
+														{
+															items=3;
+															class Item0
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=5472.79;
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=15023.29;
+																};
+															};
+															class Item2
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=27.299999;
+																};
+															};
+														};
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Rot";
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														singleType="STRING";
+														value="";
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+						class Item7
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=2;
+									class Item0
+									{
+										class data
+										{
+											singleType="STRING";
+											value="3den:62";
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=3;
+												class Item0
+												{
+													class data
+													{
+														singleType="ARRAY";
+														class value
+														{
+															items=3;
+															class Item0
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=5470.0591;
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=15029.731;
+																};
+															};
+															class Item2
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=27.339001;
+																};
+															};
+														};
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Schwarz";
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														singleType="STRING";
+														value="";
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+						class Item8
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=2;
+									class Item0
+									{
+										class data
+										{
+											singleType="STRING";
+											value="3den:63";
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=3;
+												class Item0
+												{
+													class data
+													{
+														singleType="ARRAY";
+														class value
+														{
+															items=3;
+															class Item0
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=5465.063;
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=15037.804;
+																};
+															};
+															class Item2
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=27.341;
+																};
+															};
+														};
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Gelb";
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														singleType="STRING";
+														value="";
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		wavesForced=1;
+		windForced=1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=40;
+		class Item0
+		{
+			dataType="Layer";
+			name="Base";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Layer";
+					name="Players";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Group";
+							side="Civilian";
+							class Entities
+							{
+								items=2;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={5394.7231,34.008472,15022.521};
+										angles[]={0,1.1676275,0};
+									};
+									side="Civilian";
+									flags=7;
+									class Attributes
+									{
+										init="this setVariable [""loadout"", ""zeus""];";
+										description="46: Zeus@Gamemaster";
+										isPlayable=1;
+									};
+									id=3;
+									type="C_Journalist_01_War_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="acre_sys_radio_edenSetup";
+											expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0.97000003;
+												};
+											};
+										};
+										nAttributes=2;
+									};
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={5393.9492,34.090424,15023.813};
+										angles[]={0,0.68822259,0};
+									};
+									side="Civilian";
+									flags=5;
+									class Attributes
+									{
+										init="this setVariable [""loadout"", ""zeus""];";
+										description="47: Zeus@Gamemaster";
+										isPlayable=1;
+									};
+									id=4;
+									type="C_Journalist_01_War_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="acre_sys_radio_edenSetup";
+											expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0.97000003;
+												};
+											};
+										};
+										nAttributes=2;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=2;
+						};
+					};
+					id=1;
+				};
+				class Item1
+				{
+					dataType="Layer";
+					name="Modules";
+					class Entities
+					{
+						items=13;
+						class Item0
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={5395.3569,33.914051,15007.099};
+								angles[]={6.2126365,0,6.2805109};
+							};
+							name="curator_adminVoted";
+							id=6;
+							type="ModuleCurator_F";
+							atlOffset=3.8146973e-06;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ModuleCurator_F_Owner";
+									expression="_this setVariable ['Owner',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="#adminVoted";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="ModuleCurator_F_Forced";
+									expression="_this setVariable ['Forced',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0;
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ModuleCurator_F_Name";
+									expression="_this setVariable ['Name',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="ModuleCurator_F_Addons";
+									expression="_this setVariable ['Addons',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=3;
+										};
+									};
+								};
+								nAttributes=4;
+							};
+						};
+						class Item1
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={5391.3413,33.950806,15007.097};
+								angles[]={6.2698536,4.6983042,6.2778587};
+							};
+							name="curator_einstein";
+							id=7;
+							type="ModuleCurator_F";
+							atlOffset=-3.8146973e-06;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ModuleCurator_F_Owner";
+									expression="_this setVariable ['Owner',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="76561198078774591";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="ModuleCurator_F_Forced";
+									expression="_this setVariable ['Forced',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0;
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ModuleCurator_F_Name";
+									expression="_this setVariable ['Name',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="ModuleCurator_F_Addons";
+									expression="_this setVariable ['Addons',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=3;
+										};
+									};
+								};
+								nAttributes=4;
+							};
+						};
+						class Item2
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={5393.3516,33.880833,15006.146};
+								angles[]={6.2698488,0,6.2232571};
+							};
+							name="hc_1";
+							isPlayable=1;
+							id=8;
+							type="HeadlessClient_F";
+						};
+						class Item3
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={5393.3511,33.951809,15008.11};
+								angles[]={6.2765174,0,6.2805333};
+							};
+							name="curator_adminLogged";
+							id=9;
+							type="ModuleCurator_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ModuleCurator_F_Owner";
+									expression="_this setVariable ['Owner',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="#adminLogged";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="ModuleCurator_F_Forced";
+									expression="_this setVariable ['Forced',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0;
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ModuleCurator_F_Name";
+									expression="_this setVariable ['Name',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="ModuleCurator_F_Addons";
+									expression="_this setVariable ['Addons',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=3;
+										};
+									};
+								};
+								nAttributes=4;
+							};
+						};
+						class Item4
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={5391.3262,33.923492,15005.042};
+								angles[]={6.2698536,0,6.2778587};
+							};
+							isPlayable=1;
+							description="48: Streamator";
+							id=10;
+							type="VirtualSpectator_F";
+							atlOffset=-3.8146973e-06;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="AllowFreeCamera";
+									expression="_this setVariable ['AllowFreeCamera', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="WhitelistedSides";
+									expression="_this setVariable ['WhitelistedSides', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="ARRAY";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ShowFocusInfo";
+									expression="_this setVariable ['ShowFocusInfo', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="AllowAi";
+									expression="_this setVariable ['AllowAi', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								class Attribute4
+								{
+									property="Allow3PPCamera";
+									expression="_this setVariable ['Allow3PPCamera', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=5;
+							};
+						};
+						class Item5
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={5393.3242,33.855587,15004.128};
+								angles[]={6.2698488,0,6.2232571};
+							};
+							isPlayable=1;
+							description="49: Streamator";
+							id=11;
+							type="VirtualSpectator_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="AllowFreeCamera";
+									expression="_this setVariable ['AllowFreeCamera', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="WhitelistedSides";
+									expression="_this setVariable ['WhitelistedSides', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="ARRAY";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ShowFocusInfo";
+									expression="_this setVariable ['ShowFocusInfo', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="AllowAi";
+									expression="_this setVariable ['AllowAi', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								class Attribute4
+								{
+									property="Allow3PPCamera";
+									expression="_this setVariable ['Allow3PPCamera', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=5;
+							};
+						};
+						class Item6
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={5395.3442,33.769028,15005.046};
+								angles[]={6.2126365,0,6.2805109};
+							};
+							isPlayable=1;
+							description="50: Streamator";
+							id=12;
+							type="VirtualSpectator_F";
+							atlOffset=3.8146973e-06;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="AllowFreeCamera";
+									expression="_this setVariable ['AllowFreeCamera', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="WhitelistedSides";
+									expression="_this setVariable ['WhitelistedSides', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="ARRAY";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ShowFocusInfo";
+									expression="_this setVariable ['ShowFocusInfo', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="AllowAi";
+									expression="_this setVariable ['AllowAi', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								class Attribute4
+								{
+									property="Allow3PPCamera";
+									expression="_this setVariable ['Allow3PPCamera', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=5;
+							};
+						};
+						class Item7
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={5391.8394,33.958893,15009.493};
+								angles[]={6.2765174,0,0.0066682254};
+							};
+							name="curator_zeus_1";
+							id=13;
+							type="ModuleCurator_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ModuleCurator_F_Owner";
+									expression="_this setVariable ['Owner',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="zeus_1";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="ModuleCurator_F_Forced";
+									expression="_this setVariable ['Forced',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0;
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ModuleCurator_F_Name";
+									expression="_this setVariable ['Name',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="ModuleCurator_F_Addons";
+									expression="_this setVariable ['Addons',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=3;
+										};
+									};
+								};
+								nAttributes=4;
+							};
+						};
+						class Item8
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={5395.0176,33.95657,15009.491};
+								angles[]={6.2765174,0,6.2805333};
+							};
+							name="curator_zeus_2";
+							id=14;
+							type="ModuleCurator_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ModuleCurator_F_Owner";
+									expression="_this setVariable ['Owner',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="zeus_2";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="ModuleCurator_F_Forced";
+									expression="_this setVariable ['Forced',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0;
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ModuleCurator_F_Name";
+									expression="_this setVariable ['Name',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="ModuleCurator_F_Addons";
+									expression="_this setVariable ['Addons',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=3;
+										};
+									};
+								};
+								nAttributes=4;
+							};
+						};
+						class Item9
+						{
+							dataType="Marker";
+							position[]={5403.291,34.057098,15023.648};
+							name="respawn";
+							type="Empty";
+							id=15;
+						};
+						class Item10
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={5390.2192,33.956669,15007.087};
+								angles[]={6.2698536,4.6983042,6.2778587};
+							};
+							name="curator_andx";
+							id=16;
+							type="ModuleCurator_F";
+							atlOffset=-3.8146973e-06;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ModuleCurator_F_Owner";
+									expression="_this setVariable ['Owner',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="76561198014636795";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="ModuleCurator_F_Forced";
+									expression="_this setVariable ['Forced',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0;
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ModuleCurator_F_Name";
+									expression="_this setVariable ['Name',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="ModuleCurator_F_Addons";
+									expression="_this setVariable ['Addons',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=3;
+										};
+									};
+								};
+								nAttributes=4;
+							};
+						};
+						class Item11
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={5393.3501,33.971729,15011.099};
+								angles[]={6.2765183,0,6.2805324};
+							};
+							id=17;
+							type="acre_api_nameChannels";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="acre_api_nameChannels_Channel_1";
+									expression="_this setVariable ['Channel_1',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Gelb";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="acre_api_nameChannels_Channel_2";
+									expression="_this setVariable ['Channel_2',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Schwarz";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="acre_api_nameChannels_Channel_3";
+									expression="_this setVariable ['Channel_3',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="acre_api_nameChannels_Channel_4";
+									expression="_this setVariable ['Channel_4',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute4
+								{
+									property="acre_api_nameChannels_Channel_5";
+									expression="_this setVariable ['Channel_5',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute5
+								{
+									property="acre_api_nameChannels_SideSelect";
+									expression="_this setVariable ['SideSelect',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1;
+										};
+									};
+								};
+								class Attribute6
+								{
+									property="acre_api_nameChannels_Channel_6";
+									expression="_this setVariable ['Channel_6',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Blau";
+										};
+									};
+								};
+								class Attribute7
+								{
+									property="acre_api_nameChannels_Channel_7";
+									expression="_this setVariable ['Channel_7',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Weiß";
+										};
+									};
+								};
+								class Attribute8
+								{
+									property="acre_api_nameChannels_Channel_8";
+									expression="_this setVariable ['Channel_8',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="GrpW";
+										};
+									};
+								};
+								class Attribute9
+								{
+									property="acre_api_nameChannels_Channel_9";
+									expression="_this setVariable ['Channel_9',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="GRAD";
+										};
+									};
+								};
+								class Attribute10
+								{
+									property="acre_api_nameChannels_Channel_10";
+									expression="_this setVariable ['Channel_10',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="PRAE";
+										};
+									};
+								};
+								nAttributes=11;
+							};
+						};
+						class Item12
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={5400.3447,38.033836,15023.51};
+								angles[]={0,3.7066779,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								name="ttt_teleporter";
+							};
+							id=18;
+							type="ttt_Flag_Logo";
+						};
+					};
+					id=5;
+					atlOffset=0.01171875;
+				};
+			};
+			id=0;
+			atlOffset=0.0055465698;
+		};
+		class Item1
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5459.1309,30.12986,15038.587};
+				angles[]={0,0.1466943,-0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+				name="o_screen_1";
+			};
+			id=19;
+			type="Land_Billboard_03_blank_F";
+			atlOffset=0.83514977;
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5444.6196,27.42275,15029.036};
+				angles[]={0,5.4070454,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_screen_2";
+			};
+			id=20;
+			type="Land_Billboard_03_blank_F";
+			atlOffset=1.9073486e-06;
+		};
+		class Item3
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5439.7144,27.86623,15006.559};
+				angles[]={0,2.0943952,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_gameCube_1";
+			};
+			id=21;
+			type="Land_VR_Shape_01_cube_1m_F";
+			atlOffset=0.027374268;
+		};
+		class Item4
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5446.5503,27.838999,15004.016};
+				angles[]={0,1.7453293,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_gameCube_2";
+			};
+			id=22;
+			type="Land_VR_Shape_01_cube_1m_F";
+			atlOffset=0.00014305115;
+		};
+		class Item5
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5453.8438,27.799999,15003.965};
+				angles[]={0,1.3962634,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_gameCube_3";
+			};
+			id=23;
+			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item6
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5460.7144,27.799999,15006.41};
+				angles[]={0,1.0471976,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_gameCube_4";
+			};
+			id=24;
+			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item7
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5466.3335,27.799999,15011.059};
+				angles[]={0,0.69813168,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_gameCube_5";
+			};
+			id=25;
+			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item8
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5470.0254,27.799999,15017.35};
+				angles[]={0,0.34906584,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_gameCube_6";
+			};
+			id=26;
+			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item9
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5471.3428,27.799999,15024.523};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_gameCube_7";
+			};
+			id=27;
+			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item10
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5470.1265,27.81599,15031.714};
+				angles[]={0,6.1086521,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_gameCube_8";
+			};
+			id=28;
+			type="Land_VR_Shape_01_cube_1m_F";
+			atlOffset=0.048000336;
+		};
+		class Item11
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5466.5234,28.041071,15038.056};
+				angles[]={0,5.7595863,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_gameCube_9";
+			};
+			id=29;
+			type="Land_VR_Shape_01_cube_1m_F";
+			atlOffset=0.20051765;
+		};
+		class Item12
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5438.7329,30.292732,15013.236};
+				angles[]={0,4.5289679,-0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+				name="o_screen_3";
+			};
+			id=30;
+			type="Land_Billboard_03_blank_F";
+			atlOffset=0.99802208;
+		};
+		class Item13
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5446.2158,31.284988,15035.15};
+				angles[]={0,4.1541281,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="o_screen_4";
+				disableSimulation=1;
+			};
+			id=31;
+			type="Land_TripodScreen_01_large_F";
+		};
+		class Item14
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5442.1099,30.217417,15030.239};
+						angles[]={0,2.0331514,0};
+					};
+					side="West";
+					flags=3;
+					class Attributes
+					{
+						description="Gamemaster@Gamemaster";
+						isPlayer=1;
+						isPlayable=1;
+					};
+					id=35;
+					type="B_officer_F";
+					atlOffset=4.405899;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.94999999;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5443.083,30.217096,15031.549};
+						angles[]={0,2.2547035,0};
+					};
+					side="West";
+					flags=1;
+					class Attributes
+					{
+						description="Schiedsrichter";
+						isPlayable=1;
+					};
+					id=36;
+					type="B_officer_F";
+					atlOffset=4.4031658;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male08ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=34;
+			atlOffset=4.405899;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Gamemaster";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item15
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5411.4375,38.217804,15009.602};
+				angles[]={6.2821665,5.8888469,0.0024474862};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=37;
+			type="ttt_Flag_Black";
+		};
+		class Item16
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5414.2632,38.217804,15013.192};
+				angles[]={0,5.8888483,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=38;
+			type="ttt_Flag_Blue";
+		};
+		class Item17
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5417.4556,38.217804,15016.485};
+				angles[]={0,5.8888483,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=39;
+			type="ttt_Flag_Bronze";
+		};
+		class Item18
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5422.2124,38.218208,15022.059};
+				angles[]={0,5.8888483,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=41;
+			type="ttt_Flag_Gold";
+		};
+		class Item19
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5425.0005,38.217804,15025.823};
+				angles[]={0,5.8888483,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=42;
+			type="ttt_Flag_Green";
+		};
+		class Item20
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5427.8613,38.217804,15029.517};
+				angles[]={0,5.8888483,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=43;
+			type="ttt_Flag_Grey";
+		};
+		class Item21
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5484.4287,29.087061,14983.228};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=44;
+			type="ttt_Flag_Logo";
+			atlOffset=-2.189743;
+		};
+		class Item22
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5507.2856,29.225748,15011.228};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=45;
+			type="ttt_Flag_Logo";
+			atlOffset=-2.0510559;
+		};
+		class Item23
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5431.0908,38.22216,15032.64};
+				angles[]={0,5.8888483,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=46;
+			type="ttt_Flag_Orange";
+		};
+		class Item24
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5441.3213,38.484413,15045.374};
+				angles[]={0,5.8888483,-0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=47;
+			type="ttt_Flag_Platinum";
+			atlOffset=0.26660919;
+		};
+		class Item25
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5444.5,38.219437,15049.171};
+				angles[]={0,5.8888483,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=48;
+			type="ttt_Flag_Red";
+		};
+		class Item26
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5447.5181,38.222687,15052.765};
+				angles[]={0,5.8888483,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=49;
+			type="ttt_Flag_Silver";
+		};
+		class Item27
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5451.8452,38.217804,15058.208};
+				angles[]={0,5.8888483,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=50;
+			type="ttt_Flag_Violet";
+		};
+		class Item28
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5454.9312,38.217804,15062.105};
+				angles[]={0,5.8888483,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=51;
+			type="ttt_Flag_White";
+		};
+		class Item29
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5457.7622,38.217804,15065.703};
+				angles[]={0,5.8888483,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=52;
+			type="ttt_Flag_Yellow";
+		};
+		class Item30
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5438.4961,38.1828,15042.331};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=54;
+			type="ttt_Flag_Logo";
+			atlOffset=3.2445164;
+		};
+		class Item31
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={5465.1519,28.594467,15035.456};
+			};
+			title="PRAE";
+			id=55;
+			atlOffset=1.2550011;
+		};
+		class Item32
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={5468.3193,27.338856,15029.651};
+			};
+			title="GRAD";
+			id=56;
+		};
+		class Item33
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={5469.689,27.299999,15023.773};
+			};
+			title="GrpW";
+			id=57;
+		};
+		class Item34
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={5471.2485,27.299999,15017.028};
+			};
+			title="Weiß";
+			id=58;
+		};
+		class Item35
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={5467.2827,27.299999,15010.72};
+			};
+			title="Blau";
+			id=59;
+		};
+		class Item36
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={5461.6177,27.299999,15005.656};
+			};
+			title="Orange";
+			id=60;
+		};
+		class Item37
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={5454.1626,27.299999,15002.881};
+			};
+			title="Rot";
+			id=61;
+		};
+		class Item38
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={5446.8848,27.338856,15003.014};
+			};
+			title="Schwarz";
+			id=62;
+		};
+		class Item39
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={5438.3877,24.910887,15007.248};
+				angles[]={-0,0,0.34673536};
+			};
+			title="Gelb";
+			id=63;
+		};
+	};
+};

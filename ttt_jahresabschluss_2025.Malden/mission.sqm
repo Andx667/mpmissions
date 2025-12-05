@@ -1,0 +1,1422 @@
+version=54;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=2;
+	mods[]=
+	{
+		"3denEnhanced"
+	};
+	class ItemIDProvider
+	{
+		nextID=113;
+	};
+	class LayerIndexProvider
+	{
+		nextID=24;
+	};
+	class Camera
+	{
+		pos[]={4625.8389,422.69742,6530.1567};
+		dir[]={0.82706851,-0.49785095,-0.26096377};
+		up[]={0.47477758,0.86726266,-0.1498059};
+		aside[]={-0.30090514,0,-0.95365411};
+	};
+};
+binarizationWanted=0;
+sourceName="ttt_jahresabschluss_2025";
+addons[]=
+{
+	"A3_Characters_F_Orange",
+	"A3_Modules_F_Curator_Curator",
+	"A3_Characters_F",
+	"A3_Data_F_Exp_A_Virtual",
+	"A3_Ui_F",
+	"acre_api",
+	"ttt_signs",
+	"A3_Structures_F_Argo_Commercial_Billboards",
+	"A3_Structures_F_Mark_VR_Shapes"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=9;
+		class Item0
+		{
+			className="A3_Characters_F_Orange";
+			name="Arma 3 Orange - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Data_F_Exp_A";
+			name="Arma 3 Nexus Update - Main Configuration";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item5
+		{
+			className="acre_api";
+			name="ACRE2 - API";
+			author="ACRE2Team";
+			url="https://github.com/IDI-Systems/acre2";
+		};
+		class Item6
+		{
+			className="ttt_signs";
+			name="TTT - Signs";
+			author="Tactical Training Team";
+			url="https://tacticalteam.de";
+		};
+		class Item7
+		{
+			className="A3_Structures_F_Argo";
+			name="Arma 3 Malden - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item8
+		{
+			className="A3_Structures_F_Mark";
+			name="Arma 3 Marksmen - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+dlcs[]=
+{
+	"ORANGE",
+	"Argo",
+	"Mark"
+};
+randomSeed=14764470;
+class ScenarioData
+{
+	author="EinStein";
+	disabledAI=1;
+};
+class CustomAttributes
+{
+	class Category1
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+					class value
+					{
+						items=1;
+						class Item0
+						{
+							class data
+							{
+								singleType="STRING";
+								value="None";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
+	class Category2
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="mts_zeus_comments_3DENComments";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+				};
+			};
+		};
+		nAttributes=1;
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		wavesForced=1;
+		windForced=1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=13;
+		class Item0
+		{
+			dataType="Layer";
+			name="Base";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Layer";
+					name="Players";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Group";
+							side="Civilian";
+							class Entities
+							{
+								items=2;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={4637.2808,412.3555,6525.75};
+										angles[]={0,1.1676275,0};
+									};
+									side="Civilian";
+									flags=7;
+									class Attributes
+									{
+										init="this setVariable [""loadout"", ""zeus""];";
+										description="46: Zeus@Gamemaster";
+										isPlayable=1;
+									};
+									id=7;
+									type="C_Journalist_01_War_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="acre_sys_radio_edenSetup";
+											expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0.97000003;
+												};
+											};
+										};
+										nAttributes=2;
+									};
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={4636.5068,412.34784,6527.043};
+										angles[]={0,0.68822259,0};
+									};
+									side="Civilian";
+									flags=5;
+									class Attributes
+									{
+										init="this setVariable [""loadout"", ""zeus""];";
+										description="47: Zeus@Gamemaster";
+										isPlayable=1;
+									};
+									id=8;
+									type="C_Journalist_01_War_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="acre_sys_radio_edenSetup";
+											expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0.97000003;
+												};
+											};
+										};
+										nAttributes=2;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=6;
+							atlOffset=96.5;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="groupID";
+									expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Gamemaster";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+					};
+					id=5;
+					atlOffset=96.5;
+				};
+				class Item1
+				{
+					dataType="Layer";
+					name="Modules";
+					class Entities
+					{
+						items=13;
+						class Item0
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={4632.3345,412.7229,6513.3594};
+								angles[]={6.101995,0,0.0039967569};
+							};
+							name="curator_adminVoted";
+							id=10;
+							type="ModuleCurator_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ModuleCurator_F_Owner";
+									expression="_this setVariable ['Owner',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="#adminVoted";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="ModuleCurator_F_Forced";
+									expression="_this setVariable ['Forced',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0;
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ModuleCurator_F_Name";
+									expression="_this setVariable ['Name',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="ModuleCurator_F_Addons";
+									expression="_this setVariable ['Addons',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=3;
+										};
+									};
+								};
+								nAttributes=4;
+							};
+						};
+						class Item1
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={4628.3188,412.67154,6513.3564};
+								angles[]={6.101995,4.6983042,0.0039967569};
+							};
+							name="curator_einstein";
+							id=11;
+							type="ModuleCurator_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ModuleCurator_F_Owner";
+									expression="_this setVariable ['Owner',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="76561198078774591";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="ModuleCurator_F_Forced";
+									expression="_this setVariable ['Forced',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0;
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ModuleCurator_F_Name";
+									expression="_this setVariable ['Name',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="ModuleCurator_F_Addons";
+									expression="_this setVariable ['Addons',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=3;
+										};
+									};
+								};
+								nAttributes=4;
+							};
+						};
+						class Item2
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={4630.3291,412.70822,6512.4063};
+								angles[]={6.101995,0,0.0039967569};
+							};
+							name="hc_1";
+							isPlayable=1;
+							id=12;
+							type="HeadlessClient_F";
+						};
+						class Item3
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={4630.3286,412.6843,6514.3701};
+								angles[]={6.101995,0,0.0039967569};
+							};
+							name="curator_adminLogged";
+							id=13;
+							type="ModuleCurator_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ModuleCurator_F_Owner";
+									expression="_this setVariable ['Owner',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="#adminLogged";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="ModuleCurator_F_Forced";
+									expression="_this setVariable ['Forced',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0;
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ModuleCurator_F_Name";
+									expression="_this setVariable ['Name',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="ModuleCurator_F_Addons";
+									expression="_this setVariable ['Addons',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=3;
+										};
+									};
+								};
+								nAttributes=4;
+							};
+						};
+						class Item4
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={4628.3037,412.68228,6511.3018};
+								angles[]={0.034382988,0,6.0727506};
+							};
+							isPlayable=1;
+							description="48: Streamator";
+							id=14;
+							type="VirtualSpectator_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="AllowFreeCamera";
+									expression="_this setVariable ['AllowFreeCamera', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="WhitelistedSides";
+									expression="_this setVariable ['WhitelistedSides', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="ARRAY";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ShowFocusInfo";
+									expression="_this setVariable ['ShowFocusInfo', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="AllowAi";
+									expression="_this setVariable ['AllowAi', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								class Attribute4
+								{
+									property="Allow3PPCamera";
+									expression="_this setVariable ['Allow3PPCamera', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=5;
+							};
+						};
+						class Item5
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={4630.3018,412.70786,6510.3877};
+								angles[]={6.1020026,0,0.0039968039};
+							};
+							isPlayable=1;
+							description="49: Streamator";
+							id=15;
+							type="VirtualSpectator_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="AllowFreeCamera";
+									expression="_this setVariable ['AllowFreeCamera', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="WhitelistedSides";
+									expression="_this setVariable ['WhitelistedSides', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="ARRAY";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ShowFocusInfo";
+									expression="_this setVariable ['ShowFocusInfo', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="AllowAi";
+									expression="_this setVariable ['AllowAi', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								class Attribute4
+								{
+									property="Allow3PPCamera";
+									expression="_this setVariable ['Allow3PPCamera', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=5;
+							};
+						};
+						class Item6
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={4632.3218,412.7337,6511.3066};
+								angles[]={6.1020026,0,0.0039968039};
+							};
+							isPlayable=1;
+							description="50: Streamator";
+							id=16;
+							type="VirtualSpectator_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="AllowFreeCamera";
+									expression="_this setVariable ['AllowFreeCamera', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="WhitelistedSides";
+									expression="_this setVariable ['WhitelistedSides', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="ARRAY";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ShowFocusInfo";
+									expression="_this setVariable ['ShowFocusInfo', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="AllowAi";
+									expression="_this setVariable ['AllowAi', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								class Attribute4
+								{
+									property="Allow3PPCamera";
+									expression="_this setVariable ['Allow3PPCamera', _value];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=5;
+							};
+						};
+						class Item7
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={4628.8169,412.64725,6515.7529};
+								angles[]={6.101995,0,0.0039967569};
+							};
+							name="curator_zeus_1";
+							id=17;
+							type="ModuleCurator_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ModuleCurator_F_Owner";
+									expression="_this setVariable ['Owner',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="zeus_1";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="ModuleCurator_F_Forced";
+									expression="_this setVariable ['Forced',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0;
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ModuleCurator_F_Name";
+									expression="_this setVariable ['Name',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="ModuleCurator_F_Addons";
+									expression="_this setVariable ['Addons',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=3;
+										};
+									};
+								};
+								nAttributes=4;
+							};
+						};
+						class Item8
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={4631.9951,412.6879,6515.751};
+								angles[]={6.101995,0,0.0039967569};
+							};
+							name="curator_zeus_2";
+							id=18;
+							type="ModuleCurator_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ModuleCurator_F_Owner";
+									expression="_this setVariable ['Owner',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="zeus_2";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="ModuleCurator_F_Forced";
+									expression="_this setVariable ['Forced',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0;
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ModuleCurator_F_Name";
+									expression="_this setVariable ['Name',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="ModuleCurator_F_Addons";
+									expression="_this setVariable ['Addons',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=3;
+										};
+									};
+								};
+								nAttributes=4;
+							};
+						};
+						class Item9
+						{
+							dataType="Marker";
+							position[]={4614.5244,412.65195,6520.8652};
+							name="respawn";
+							type="Empty";
+							id=19;
+						};
+						class Item10
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={4627.1968,412.65729,6513.3467};
+								angles[]={6.1020026,4.6983042,0.0039968039};
+							};
+							name="curator_andx";
+							id=20;
+							type="ModuleCurator_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ModuleCurator_F_Owner";
+									expression="_this setVariable ['Owner',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="76561198014636795";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="ModuleCurator_F_Forced";
+									expression="_this setVariable ['Forced',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0;
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ModuleCurator_F_Name";
+									expression="_this setVariable ['Name',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="ModuleCurator_F_Addons";
+									expression="_this setVariable ['Addons',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=3;
+										};
+									};
+								};
+								nAttributes=4;
+							};
+						};
+						class Item11
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={4630.3276,412.646,6517.3594};
+								angles[]={6.1020026,0,0.0039968039};
+							};
+							id=21;
+							type="acre_api_nameChannels";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="acre_api_nameChannels_Channel_1";
+									expression="_this setVariable ['Channel_1',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Reserve-1";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="acre_api_nameChannels_Channel_2";
+									expression="_this setVariable ['Channel_2',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Zugfunk";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="acre_api_nameChannels_Channel_3";
+									expression="_this setVariable ['Channel_3',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Versorgungsfunk";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="acre_api_nameChannels_Channel_4";
+									expression="_this setVariable ['Channel_4',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Gelb";
+										};
+									};
+								};
+								class Attribute4
+								{
+									property="acre_api_nameChannels_Channel_5";
+									expression="_this setVariable ['Channel_5',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Schwarz";
+										};
+									};
+								};
+								class Attribute5
+								{
+									property="acre_api_nameChannels_SideSelect";
+									expression="_this setVariable ['SideSelect',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1;
+										};
+									};
+								};
+								class Attribute6
+								{
+									property="acre_api_nameChannels_Channel_6";
+									expression="_this setVariable ['Channel_6',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Rot";
+										};
+									};
+								};
+								class Attribute7
+								{
+									property="acre_api_nameChannels_Channel_7";
+									expression="_this setVariable ['Channel_7',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Grün";
+										};
+									};
+								};
+								class Attribute8
+								{
+									property="acre_api_nameChannels_Channel_8";
+									expression="_this setVariable ['Channel_8',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Weiß";
+										};
+									};
+								};
+								class Attribute9
+								{
+									property="acre_api_nameChannels_Channel_9";
+									expression="_this setVariable ['Channel_9',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Silber";
+										};
+									};
+								};
+								class Attribute10
+								{
+									property="acre_api_nameChannels_Channel_10";
+									expression="_this setVariable ['Channel_10',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Reserve-2";
+										};
+									};
+								};
+								nAttributes=11;
+							};
+						};
+						class Item12
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4615.8257,416.58871,6522.7246};
+								angles[]={0,3.7066779,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								name="ttt_teleporter";
+							};
+							id=22;
+							type="ttt_Flag_Logo";
+						};
+					};
+					id=9;
+					atlOffset=0.047393799;
+				};
+			};
+			id=4;
+			atlOffset=4.5256805;
+		};
+		class Item1
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4647.397,414.04559,6543.7246};
+				angles[]={0,0.53667128,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_screen_1";
+			};
+			id=25;
+			type="Land_Billboard_03_blank_F";
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4656.0732,414.40619,6535.3818};
+				angles[]={0,0.95496231,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_screen_2";
+			};
+			id=27;
+			type="Land_Billboard_03_blank_F";
+		};
+		class Item3
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4653.5942,413.23984,6526.106};
+				angles[]={0,5.1122441,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_gameCube_1";
+			};
+			id=46;
+			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item4
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4650.7104,413.03729,6529.8296};
+				angles[]={0,5.1122441,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_gameCube_2";
+			};
+			id=103;
+			type="Land_VR_Shape_01_cube_1m_F";
+			atlOffset=3.0517578e-05;
+		};
+		class Item5
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4647.063,412.81943,6534.2656};
+				angles[]={0.14367923,3.8950152,6.1470628};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_gameCube_3";
+			};
+			id=104;
+			type="Land_VR_Shape_01_cube_1m_F";
+			atlOffset=-3.0517578e-05;
+		};
+		class Item6
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4641.9346,412.70099,6537.1611};
+				angles[]={0,0.35343626,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_gameCube_4";
+			};
+			id=105;
+			type="Land_VR_Shape_01_cube_1m_F";
+			atlOffset=-0.001953125;
+		};
+		class Item7
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4636.0894,412.70782,6535.8413};
+				angles[]={0,3.5343263,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_gameCube_5";
+			};
+			id=106;
+			type="Land_VR_Shape_01_cube_1m_F";
+			atlOffset=-0.043182373;
+		};
+		class Item8
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4631.9673,412.75702,6531.1519};
+				angles[]={0,3.779304,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_gameCube_6";
+			};
+			id=107;
+			type="Land_VR_Shape_01_cube_1m_F";
+			atlOffset=-0.082763672;
+		};
+		class Item9
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4632.8613,412.82336,6526.1885};
+				angles[]={0,4.3427744,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_gameCube_7";
+			};
+			id=108;
+			type="Land_VR_Shape_01_cube_1m_F";
+			atlOffset=-0.066925049;
+		};
+		class Item10
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4634.2549,412.88699,6522.0225};
+				angles[]={0,4.3427744,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_gameCube_8";
+			};
+			id=109;
+			type="Land_VR_Shape_01_cube_1m_F";
+			atlOffset=-0.10897827;
+		};
+		class Item11
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4637.8643,412.94058,6518.8643};
+				angles[]={0,4.3427744,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_gameCube_9";
+			};
+			id=110;
+			type="Land_VR_Shape_01_cube_1m_F";
+			atlOffset=-0.13537598;
+		};
+		class Item12
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4634.6582,414.67587,6515.5469};
+				angles[]={0,3.6915436,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="o_screen_3";
+			};
+			id=112;
+			type="Land_Billboard_03_blank_F";
+		};
+	};
+};
