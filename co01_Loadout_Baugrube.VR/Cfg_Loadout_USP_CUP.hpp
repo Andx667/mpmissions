@@ -26,9 +26,9 @@ class Loadouts {
     randomizationMode = 1;
     customGear = 300;
     customGearAllowedCategories[] = {
-        "uniform",
-        "vest",
-        "backpack",
+        //"uniform",
+        //"vest",
+        //"backpack",
         "headgear",
         "primaryWeapon",
         "primaryWeaponOptics",
@@ -752,7 +752,7 @@ class Loadouts {
         };
 
         //SOF
-        class B_recon_F {
+        class B_recon_F: B_Soldier_F {
             uniform[] = {
                 "USP_SOFTSHELL_G3C_KP_MC",
                 "USP_SOFTSHELL_G3C_KP_MC_MCW",
@@ -784,9 +784,14 @@ class Loadouts {
             };
 
             backpack[] = {
-                "USP_REEBOW_3DAP_ACC5_MC",
+                "USP_REEBOW_3DAP_ACC3_CBR",
+                "USP_REEBOW_3DAP_ACC3_MC",
+                "USP_REEBOW_3DAP_ACC3_MCT",
+                "USP_REEBOW_3DAP_ACC3_RGR",
+                "USP_REEBOW_3DAP_ACC8_CBR",
                 "USP_REEBOW_3DAP_ACC8_MC",
-                "USP_REEBOW_3DAP_ACC9_MC",
+                "USP_REEBOW_3DAP_ACC8_MCT",
+                "USP_REEBOW_3DAP_ACC8_RGR"
             };
 
             headgear[] = {
@@ -822,21 +827,21 @@ class Loadouts {
             };
             addItemsToBackpack[] = {};
 
-            primaryWeapon[] = {
-            };
-            primaryWeaponOptics[] = {
-                "",
-            };
-            primaryWeaponPointer = "";
-            primaryWeaponMagazine = "";
-            primaryWeaponMuzzle = "";
-            primaryWeaponUnderbarrel = "";
-            primaryWeaponUnderbarrelMagazine = "";
-            secondaryWeapon = "";
-            secondaryWeaponMagazine = "";
-            handgunWeapon[] = {
-                };
-            handgunWeaponMagazine = "";
+            // primaryWeapon[] = {
+            // };
+            // primaryWeaponOptics[] = {
+            //     "",
+            // };
+            // primaryWeaponPointer = "";
+            // primaryWeaponMagazine = "";
+            // primaryWeaponMuzzle = "";
+            // primaryWeaponUnderbarrel = "";
+            // primaryWeaponUnderbarrelMagazine = "";
+            // secondaryWeapon = "";
+            // secondaryWeaponMagazine = "";
+            // handgunWeapon[] = {
+            //     };
+            // handgunWeaponMagazine = "";
 
             goggles[] = {
                 "USP_RAID_BLK",
@@ -852,7 +857,10 @@ class Loadouts {
 
         class B_recon_medic_F: B_recon_F {
             vest = "USP_CRYE_CPC_MEDIC_BELT_MC";
-            backpack = "USP_45L_RUCKSACK_MC";
+            backpack[] = {
+                "USP_45L_RUCKSACK_MC",
+                "USP_45L_RUCKSACK_GRN",
+                "USP_45L_RUCKSACK_TAN"};
 
             headgear[] = {
                 "USP_OPSCORE_FASTMT_FCV_OD_CMT",
@@ -914,8 +922,19 @@ class Loadouts {
         class B_recon_JTAC_F: B_recon_F {
             backpack[] = {
                 "USP_REEBOW_3DAP_ACC2_MC",
+                "USP_REEBOW_3DAP_ACC2_RGR",
+                "USP_REEBOW_3DAP_ACC2_CBR",
+                "USP_REEBOW_3DAP_ACC2_MCT",
+            
+                "USP_REEBOW_3DAP_ACC5_CBR",
+                "USP_REEBOW_3DAP_ACC5_MCT",
                 "USP_REEBOW_3DAP_ACC5_MC",
-                "USP_REEBOW_3DAP_ACC9_MC"
+                "USP_REEBOW_3DAP_ACC5_RGR",
+
+                "USP_REEBOW_3DAP_ACC9_CBR",
+                "USP_REEBOW_3DAP_ACC9_MC",
+                "USP_REEBOW_3DAP_ACC9_MCT",
+                "USP_REEBOW_3DAP_ACC9_RGR"
             };
 
             headgear[] = {
