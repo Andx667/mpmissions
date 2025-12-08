@@ -88,7 +88,7 @@ class Loadouts {
 
             // Equipment from CUP Rangers file
             addItemsToUniform[] = {
-                "ACRE_PRC343",
+                "ACRE_PRC148",
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
@@ -140,10 +140,10 @@ class Loadouts {
             };
             
             primaryWeaponMuzzle[] = {
-                "CUP_muzzle_snds_M16",
-                "CUP_muzzle_snds_M16_coyote",
-                "CUP_muzzle_snds_M16_desert",
-                "CUP_muzzle_snds_M16_camo"
+                // "CUP_muzzle_snds_M16",
+                // "CUP_muzzle_snds_M16_coyote",
+                // "CUP_muzzle_snds_M16_desert",
+                // "CUP_muzzle_snds_M16_camo"
             };
             
             primaryWeaponUnderbarrel = "";
@@ -302,7 +302,9 @@ class Loadouts {
             };
 
             goggles[] += {
-                "USP_WRISTMAP"
+                "USP_WRISTMAP",
+                "G_Bandanna_aviator",
+                "G_Aviator"
             };
 
             class Rank {
@@ -752,7 +754,7 @@ class Loadouts {
         };
 
         //SOF
-        class B_recon_F: B_Soldier_F {
+        class B_recon_F {
             uniform[] = {
                 "USP_SOFTSHELL_G3C_KP_MC",
                 "USP_SOFTSHELL_G3C_KP_MC_MCW",
@@ -812,36 +814,63 @@ class Loadouts {
                 "USP_OPSCORE_FASTMT_FCV_FULL_C"
             };
 
-            addItemsToUniform[] = {
-                "ACE_MapTools",
-                "ACE_Flashlight_XL50",
-                "acex_intelitems_notepad",
-                "ACE_Painkillers",
-                LIST_15("ACE_fieldDressing"),
-                LIST_15("ACE_packingBandage"),
-                LIST_4("ACE_Tourniquet"),
-                LIST_2(""),
-                LIST_2(""),
+            // Weapons from CUP Rangers file
+            primaryWeapon[] = {
+                "CUP_arifle_M4A1_SOMMOD_black",
+                "CUP_arifle_M4A1_SOMMOD_tan",
+                "CUP_arifle_M4A1_SOMMOD_green",
+                "CUP_arifle_M4A1_SOMMOD_Grip_black",
+                "CUP_arifle_M4A1_SOMMOD_Grip_tan",
+                "CUP_arifle_M4A1_SOMMOD_Grip_green"
             };
-            addItemsToVest[] = {
+            
+            primaryWeaponMagazine = "CUP_30Rnd_556x45_PMAG_BLACK_RPL";
+            
+            primaryWeaponOptics[] = {
+                "CUP_optic_Elcan_SpecterDR_RMR_black",
+                "CUP_optic_Elcan_SpecterDR_RMR_coyote",
+                "CUP_optic_Elcan_SpecterDR_RMR",
+                "CUP_optic_Elcan_SpecterDR_RMR_od",
+                "CUP_optic_MicroT1",
+                "CUP_optic_MicroT1_coyote",
+                "CUP_optic_Eotech553_Black",
+                "CUP_optic_Eotech553_Coyote",
+                "CUP_optic_Eotech553_OD"
             };
-            addItemsToBackpack[] = {};
+            
+            primaryWeaponPointer[] = {
+                "CUP_acc_ANPEQ_15_Flashlight_Black_L",
+                "CUP_acc_ANPEQ_15_Flashlight_OD_L",
+                "CUP_acc_ANPEQ_15_Flashlight_Tan_L",
+                "CUP_acc_ANPEQ_15_Top_Flashlight_Black_L",
+                "CUP_acc_ANPEQ_15_Top_Flashlight_OD_L",
+                "CUP_acc_ANPEQ_15_Top_Flashlight_Tan_L"
+            };
+            
+            primaryWeaponMuzzle[] = {
+                "CUP_muzzle_snds_M16",
+                "CUP_muzzle_snds_M16_coyote",
+                "CUP_muzzle_snds_M16_desert",
+                "CUP_muzzle_snds_M16_camo"
+            };
+            
+            primaryWeaponUnderbarrel = "";
+            primaryWeaponUnderbarrelMagazine = "";
+            
+            secondaryWeapon = "";
+            secondaryWeaponMagazine = "";
+            
+            handgunWeapon = "CUP_hgun_M17_Black";
+            handgunWeaponMagazine = "CUP_17Rnd_9x19_M17_Black";
 
-            // primaryWeapon[] = {
-            // };
-            // primaryWeaponOptics[] = {
-            //     "",
-            // };
-            // primaryWeaponPointer = "";
-            // primaryWeaponMagazine = "";
-            // primaryWeaponMuzzle = "";
-            // primaryWeaponUnderbarrel = "";
-            // primaryWeaponUnderbarrelMagazine = "";
-            // secondaryWeapon = "";
-            // secondaryWeaponMagazine = "";
-            // handgunWeapon[] = {
-            //     };
-            // handgunWeaponMagazine = "";
+            addItemsToVest[] += {
+                LIST_8("CUP_30Rnd_556x45_PMAG_BLACK_RPL"),
+            };
+            addItemsToBackpack[] = {
+                LIST_4("CUP_30Rnd_556x45_PMAG_BLACK_RPL"),
+                LIST_2("CUP_HandGrenade_M67"),
+                LIST_2("SmokeShell"),
+            };
 
             goggles[] = {
                 "USP_RAID_BLK",
@@ -849,10 +878,11 @@ class Loadouts {
                 "USP_RAID_BLK3",
                 ""
             };
+            gps = "ItemAndroid";
         };
 
         class B_recon_LAT_F: B_recon_F {
-            secondaryWeapon = "";
+            secondaryWeapon = "CUP_launch_M136";
         };
 
         class B_recon_medic_F: B_recon_F {
@@ -912,10 +942,15 @@ class Loadouts {
             addItemsToVest[] += {
                 "ACE_Clacker",
                 "ACE_DefusalKit",
+                LIST_6("ACE_M84"),
             };
 
             addItemsToBackpack[] += {
-
+                LIST_3("tsp_breach_block_mag"),
+                LIST_3("tsp_breach_package_mag"),
+                LIST_3("DemoCharge_Remote_Mag"),
+                LIST_5("ACE_M14"),
+                "ACE_EntrenchingTool",
             };
         };
 
@@ -949,12 +984,14 @@ class Loadouts {
             };
 
             addItemsToVest[] += {
-                "", //BFT
-                "", //SR Radio
+
             };
 
             addItemsToBackpack[] += {
                 "Laserbatteries",
+                "ACRE_VHF30108SPIKE",
+                "ACRE_PRC117F",
+                LIST_10("SmokeShellPurple"),
             };
 
             binoculars = "Laserdesignator_03";
@@ -969,14 +1006,38 @@ class Loadouts {
                 "USP_BOONIE_HAT_MC"
             };
 
-            primaryWeapon = "";
-            primaryWeaponMagazine = "";
-            primaryWeaponMuzzle = "";
-            primaryWeaponOptics = "";
-            primaryWeaponUnderbarrel = "";
+            primaryWeapon[] = {
+                "CUP_srifle_RSASS_Black",
+                "CUP_srifle_RSASS_Jungle",
+                //"CUP_srifle_RSASS_Sand",
+                //"CUP_srifle_RSASS_Winter",
+                "CUP_srifle_RSASS_WDLNet",
+                "CUP_srifle_RSASS_WDL"
+            };
+            primaryWeaponMagazine = "CUP_20Rnd_762x51_B_M110"; //CUP_20Rnd_TE1_Red_Tracer_762x51_M110
+            primaryWeaponMuzzle = "CUP_muzzle_snds_socom762rc";
+            primaryWeaponOptics[] = {
+                "optic_AMS_khk", //MM DLC
+                //"optic_AMS_snd", //MM DLC
+                "optic_AMS",     //MM DLC
+
+            };
+            primaryWeaponUnderbarrel = "CUP_bipod_Harris_1A2_L_BLK";
 
             addItemsToUniform[] += {
                 "ACE_Rangecard",
+            };
+            addItemsToVest[] = {
+                LIST_8("CUP_20Rnd_762x51_B_M110"),
+                LIST_2("CUP_HandGrenade_M67"),
+                LIST_2("SmokeShell"),
+                "SmokeShellGreen",
+                LIST_2("CUP_17Rnd_9x19_M17_Black"),
+                "ACRE_PRC148",
+            };
+            addItemsToBackpack[] = {
+                LIST_16("CUP_20Rnd_TE1_Red_Tracer_762x51_M110"),
+                LIST_8("CUP_20Rnd_762x51_B_M110"),
             };
         };
     };
