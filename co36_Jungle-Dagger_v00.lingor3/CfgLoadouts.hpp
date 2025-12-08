@@ -201,7 +201,7 @@ class Loadouts {
                 LIST_3("UK3CB_BAF_SmokeShell"),
                 LIST_3("rhs_mag_m67"),
                 "UK3CB_BAF_SmokeShellGreen",
-                "UK3CB_BAF_H_Beret_PR",
+                
                 LIST_3("ace_m84")
             };
         };
@@ -230,7 +230,7 @@ class Loadouts {
                 "UK3CB_BAF_SmokeShellGreen",
                 "UK3CB_BAF_762_200Rnd_T",
                 LIST_8("UK3CB_BAF_556_30Rnd"),
-                "UK3CB_BAF_H_Beret_PR",
+                
             };
         };
 
@@ -257,7 +257,7 @@ class Loadouts {
                 LIST_2("ACE_M14"),
                 "UK3CB_BAF_SmokeShellGreen",
                 "UK3CB_BAF_762_200Rnd_T",
-                "UK3CB_BAF_H_Beret_PR",
+                
             };
         };
 
@@ -285,7 +285,7 @@ class Loadouts {
                 "ace_flags_blue",
                 "ACE_SpraypaintBlue",
                 "UK3CB_BAF_762_200Rnd_T",
-                "UK3CB_BAF_H_Beret_PR",
+                
             };
 
             binoculars = "UK3CB_BAF_Soflam_Laserdesignator";
@@ -317,7 +317,7 @@ class Loadouts {
             addItemsToBackpack[] = {
                 "ITC_Land_B_AR2i_Packed",
                 LIST_10("ACE_UAVBattery"),
-                "UK3CB_BAF_H_Beret_PR",
+                
             };
             gps = "B_UavTerminal";
             binoculars = "ACE_Vector";
@@ -663,7 +663,7 @@ class Loadouts {
                 LIST_2("UK3CB_BAF_9_17Rnd"),
                 LIST_2("UK3CB_BAF_SmokeShellPurple"),
                 LIST_2("ACE_HandFlare_Green"),
-                "UK3CB_BAF_H_Beret_PR",
+                
             };
 
         };
@@ -685,7 +685,7 @@ class Loadouts {
             };
 
             addItemsToBackpack[] = {
-                "UK3CB_BAF_H_Beret_PR",
+                
                 "ACRE_PRC117F",
             };
         };
@@ -727,7 +727,7 @@ class Loadouts {
                 LIST_4("UK3CB_BAF_SmokeShell"),
                 LIST_4("rhs_mag_m67"),
                 "UK3CB_BAF_SmokeShellGreen",
-                "UK3CB_BAF_H_Beret_PR",
+                
             };
 
             binoculars = "ACE_Vector";
@@ -745,7 +745,7 @@ class Loadouts {
                 "ACE_SpraypaintGreen",
                 LIST_14("UK3CB_BAF_556_30Rnd_T"),
                 LIST_2("UK3CB_BAF_762_200Rnd_T"),
-                "UK3CB_BAF_H_Beret_PR",
+                
             };
             gps = "ItemAndroid";
         };
@@ -808,7 +808,7 @@ class Loadouts {
                         LIST_6("kat_Painkiller"),
                         LIST_8("ACE_morphine"),
                         LIST_5("kat_lidocaine"),
-                        "UK3CB_BAF_H_Beret_PR",
+                        
                         LIST_30("ACE_Suture"),
                     };
                 };
@@ -943,7 +943,7 @@ class Loadouts {
                         LIST_6("kat_Painkiller"),
                         LIST_8("ACE_morphine"),
                         LIST_5("kat_lidocaine"),
-                        "UK3CB_BAF_H_Beret_PR",
+                        
                     };
                 };
                 //PJ 1
@@ -989,7 +989,6 @@ class Loadouts {
                         LIST_5("kat_lidocaine"),
                         //Admin
                         "ACE_Bodybag",
-                        "UK3CB_BAF_H_Beret_RM_Parade",
                         LIST_30("ACE_Suture"),
                     };
                     gps = "ItemAndroid";
@@ -1036,7 +1035,6 @@ class Loadouts {
                         LIST_5("kat_lidocaine"),
                         //Admin
                         LIST_45("ACE_Suture"),
-                        "UK3CB_BAF_H_Beret_RM_Officer"
                     };
                 };
                 //PJ 3
@@ -1077,7 +1075,6 @@ class Loadouts {
                         LIST_5("kat_lidocaine"),
                         //Admin
                         LIST_30("ACE_Suture"),
-                        "UK3CB_BAF_H_Beret_RM_Officer",
                     };
                 };
             };
