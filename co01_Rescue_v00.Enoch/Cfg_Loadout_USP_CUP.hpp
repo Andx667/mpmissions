@@ -585,7 +585,7 @@ class Loadouts {
             };
 
             binoculars = "ACE_Vector";
-            gps = "ItemAndroid";
+            gps = "";
         };
 
         // Squad Leader
