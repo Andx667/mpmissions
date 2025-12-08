@@ -20,18 +20,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=22;
+		nextID=24;
 	};
 	class Camera
 	{
-		pos[]={381.37985,10.89712,6192.8184};
-		dir[]={-0.0019602054,-0.5424583,-0.84010184};
-		up[]={-0.001265673,0.84007841,-0.54245871};
-		aside[]={-1.0000139,6.844266e-08,0.0023340483};
+		pos[]={1079.942,70.534233,5970.1519};
+		dir[]={0.83114135,-0.53310317,-0.15834288};
+		up[]={0.52370179,0.8460412,-0.099770501};
+		aside[]={-0.18715309,-2.5122426e-07,-0.98237324};
 	};
 };
 binarizationWanted=0;
-sourceName="co34_Jungle-Dagger_v00";
+sourceName="co36_Jungle-Dagger_v00";
 addons[]=
 {
 	"A3_Ui_F",
@@ -1315,7 +1315,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={418.689,1.5651867,6207.6948};
+				position[]={418.689,1.5651873,6207.6948};
 				angles[]={0,2.737165,0};
 			};
 			side="Empty";
@@ -1325,7 +1325,7 @@ class Mission
 			};
 			id=7;
 			type="UK3CB_BAF_RHIB_HMG_MTP";
-			atlOffset=0.77200961;
+			atlOffset=0.77201021;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1349,7 +1349,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={402.34299,1.8697369,6210.8491};
+				position[]={402.34299,1.8697375,6210.8491};
 				angles[]={0,2.737165,0};
 			};
 			side="Empty";
@@ -1359,7 +1359,7 @@ class Mission
 			};
 			id=8;
 			type="UK3CB_BAF_RHIB_HMG_MTP";
-			atlOffset=0.57800949;
+			atlOffset=0.57801008;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12208,6 +12208,23 @@ class Mission
 					};
 					id=589;
 					type="UK3CB_ADC_C_SPOT_CHR";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
@@ -12237,6 +12254,23 @@ class Mission
 					id=591;
 					type="UK3CB_ADC_C_WORKER";
 					atlOffset=2.3841858e-07;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
@@ -12266,6 +12300,23 @@ class Mission
 					};
 					id=593;
 					type="UK3CB_ADC_C_VILL";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
@@ -12387,6 +12438,19 @@ class Mission
 						};
 						class Attribute4
 						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
 							property="ENH_doStop";
 							expression="if (!is3DEN && _value) then {doStop _this}";
 							class Value
@@ -12398,7 +12462,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=5;
+						nAttributes=6;
 					};
 				};
 			};
@@ -12522,6 +12586,19 @@ class Mission
 						};
 						class Attribute4
 						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
 							property="ENH_doStop";
 							expression="if (!is3DEN && _value) then {doStop _this}";
 							class Value
@@ -12533,7 +12610,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=5;
+						nAttributes=6;
 					};
 				};
 			};
@@ -12657,6 +12734,19 @@ class Mission
 						};
 						class Attribute4
 						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
 							property="ENH_doStop";
 							expression="if (!is3DEN && _value) then {doStop _this}";
 							class Value
@@ -12668,7 +12758,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=5;
+						nAttributes=6;
 					};
 				};
 			};
@@ -12869,7 +12959,20 @@ class Mission
 								};
 							};
 						};
-						nAttributes=4;
+						class Attribute4
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=5;
 					};
 				};
 			};
@@ -12991,7 +13094,20 @@ class Mission
 								};
 							};
 						};
-						nAttributes=4;
+						class Attribute4
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=5;
 					};
 				};
 			};
@@ -13113,7 +13229,20 @@ class Mission
 								};
 							};
 						};
-						nAttributes=4;
+						class Attribute4
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=5;
 					};
 				};
 			};
@@ -13346,6 +13475,23 @@ class Mission
 					};
 					id=778;
 					type="UK3CB_ADC_C_SPOT_CHR";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
@@ -13375,6 +13521,23 @@ class Mission
 					id=780;
 					type="UK3CB_ADC_C_WORKER";
 					atlOffset=4.7683716e-07;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
@@ -13495,7 +13658,20 @@ class Mission
 								};
 							};
 						};
-						nAttributes=4;
+						class Attribute4
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=5;
 					};
 				};
 			};
@@ -19131,7 +19307,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1799.3423,1.5561539,8406.0371};
+						position[]={1799.3423,1.5561545,8406.0371};
 					};
 					side="East";
 					flags=7;
@@ -19142,7 +19318,7 @@ class Mission
 					};
 					id=976;
 					type="UK3CB_ADE_O_TL";
-					atlOffset=3.8146973e-06;
+					atlOffset=4.4107437e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19227,7 +19403,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1802.3423,1.4185847,8403.0371};
+						position[]={1802.3423,1.4185853,8403.0371};
 					};
 					side="East";
 					flags=5;
@@ -19237,14 +19413,14 @@ class Mission
 					};
 					id=977;
 					type="UK3CB_ADE_O_GL";
-					atlOffset=3.9339066e-06;
+					atlOffset=4.529953e-06;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=975;
-			atlOffset=3.8146973e-06;
+			atlOffset=4.4107437e-06;
 		};
 		class Item205
 		{
