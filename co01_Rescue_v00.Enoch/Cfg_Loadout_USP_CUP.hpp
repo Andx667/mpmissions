@@ -335,7 +335,8 @@ class Loadouts {
                     };
 
                     addItemsToBackpack[] += {
-                        LIST_2("ACRE_PRC117F"),
+                        "ACRE_PRC117F",
+                        "ACRE_GSM",
                         LIST_10("SmokeShellPurple"),
                         "ACE_flags_blue",
                         "ACE_flags_yellow"
@@ -1072,11 +1073,6 @@ class Loadouts {
                 "USP_REEBOW_3DAP_ACC2_RGR",
                 "USP_REEBOW_3DAP_ACC2_CBR",
                 "USP_REEBOW_3DAP_ACC2_MCT",
-            
-                "USP_REEBOW_3DAP_ACC5_CBR",
-                "USP_REEBOW_3DAP_ACC5_MCT",
-                "USP_REEBOW_3DAP_ACC5_MC",
-                "USP_REEBOW_3DAP_ACC5_RGR",
 
                 "USP_REEBOW_3DAP_ACC9_CBR",
                 "USP_REEBOW_3DAP_ACC9_MC",

@@ -48,3 +48,9 @@ class CLib {
     useCompressedFunction = 0;
     useFallbackRemoteExecution = 0;
 };
+
+class CfgDebriefingSections {
+    #if __has_include("\z\ace\addons\killtracker\killtracker.inc")
+        #include "\z\ace\addons\killtracker\killtracker.inc"
+    #endif
+ };
