@@ -37,7 +37,7 @@ player addAction [
 		missionNamespace setVariable ["currentSlide", ((missionNamespace getVariable ["currentSlide", 0]) +1)];
 		private _slideToDisplay = ["pictures\presentation\slide_", (missionNamespace getVariable ["currentSlide", 0]), ".paa"] joinString "";
 		{_x setObjectTextureGlobal [0, _slideToDisplay];} forEach allScreens;
-	}, [], -65, false, true, "", "(groupId group player == 'Gamemaster') && (player getVariable ['menu',0] == 1) && (missionNamespace getVariable ['currentSlide', 0] < 43)", 1
+	}, [], -65, false, true, "", "(groupId group player == 'Gamemaster') && (player getVariable ['menu',0] == 1) && (missionNamespace getVariable ['currentSlide', 0] < 46)", 1
 ];
 
 player addAction [
@@ -57,7 +57,7 @@ player addAction [
 		missionNamespace setVariable ["currentSlide", ((missionNamespace getVariable ["currentSlide", 0]) +5)];
 		private _slideToDisplay = ["pictures\presentation\slide_", (missionNamespace getVariable ["currentSlide", 0]), ".paa"] joinString "";
 		{_x setObjectTextureGlobal [0, _slideToDisplay];} forEach allScreens;
-	}, [], -67, false, true, "", "(groupId group player == 'Gamemaster') && (player getVariable ['menu',0] == 1) && (missionNamespace getVariable ['currentSlide', 0] < 38)", 1
+	}, [], -67, false, true, "", "(groupId group player == 'Gamemaster') && (player getVariable ['menu',0] == 1) && (missionNamespace getVariable ['currentSlide', 0] < 41)", 1
 ];
 
 player addAction [
@@ -67,7 +67,7 @@ player addAction [
 		missionNamespace setVariable ["currentSlide", ((missionNamespace getVariable ["currentSlide", 0]) -5)];
 		private _slideToDisplay = ["pictures\presentation\slide_", (missionNamespace getVariable ["currentSlide", 0]), ".paa"] joinString "";
 		{_x setObjectTextureGlobal [0, _slideToDisplay];} forEach allScreens;
-	}, [], -68, false, true, "", "(groupId group player == 'Gamemaster') && (player getVariable ['menu',0] == 1) && (missionNamespace getVariable ['currentSlide', 0] > 6)", 1
+	}, [], -68, false, true, "", "(groupId group player == 'Gamemaster') && (player getVariable ['menu',0] == 1) && (missionNamespace getVariable ['currentSlide', 0] > 5)", 1
 ];
 
 player addAction [
@@ -77,7 +77,7 @@ player addAction [
 		missionNamespace setVariable ["currentSlide", ((missionNamespace getVariable ["currentSlide", 0]) +10)];
 		private _slideToDisplay = ["pictures\presentation\slide_", (missionNamespace getVariable ["currentSlide", 0]), ".paa"] joinString "";
 		{_x setObjectTextureGlobal [0, _slideToDisplay];} forEach allScreens;
-	}, [], -69, false, true, "", "(groupId group player == 'Gamemaster') && (player getVariable ['menu',0] == 1) && (missionNamespace getVariable ['currentSlide', 0] < 33)", 1
+	}, [], -69, false, true, "", "(groupId group player == 'Gamemaster') && (player getVariable ['menu',0] == 1) && (missionNamespace getVariable ['currentSlide', 0] < 36)", 1
 ];
 
 player addAction [
@@ -116,3 +116,7 @@ player addAction [
 		missionNamespace setVariable ["intermezzo", false];
 	}, [], -65, false, true, "", "(groupId group player == 'Gamemaster') && (player getVariable ['menu',0] == 2) && (missionNamespace getVariable ['intermezzo', false])", 1
 ];
+
+
+//cTab Template
+["maps.plan-ops.fr#170",0,"TTT Trivia Night","TTT Trivia Night","https://maps.plan-ops.fr/MessageTemplates/Details/170?t=mv40G6SZFWsiXD7SpEyvkL4dc8lDupVKBa4awrizYHk",[["TTT Trivia Night","",[]],["Frage","",[["","1",1]]],["Antwort","",[["","",8]]]]] call ctab_fnc_registerMessageTemplate;
