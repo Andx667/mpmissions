@@ -586,7 +586,7 @@ class Loadouts {
             };
 
             binoculars = "ACE_Vector";
-            gps = "";
+            gps = "ItemAndroid";
         };
 
         // Squad Leader
@@ -938,6 +938,7 @@ class Loadouts {
                 "USP_GPNVG18_TAN",
                 "USP_GPNVG18_TAN2"
             };
+            map = "ItemMap";
         };
 
         class B_recon_LAT_F: B_recon_F {
