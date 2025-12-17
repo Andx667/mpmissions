@@ -28,13 +28,13 @@ class Loadouts {
     randomizationMode = 1;
     customGear = 300;
     customGearAllowedCategories[] = {
-        "uniform",
-        "vest",
-        "backpack",
-        "headgear",
-        "primaryWeapon",
+        //"uniform",
+        //"vest",
+        //"backpack",
+        //"headgear",
+        //"primaryWeapon",
         "primaryWeaponOptics",
-        "primaryWeaponUnderbarrel",
+        //"primaryWeaponUnderbarrel",
         "primaryWeaponMuzzle",
         "goggles"
     };
@@ -1049,9 +1049,9 @@ class Loadouts {
             };
 
             addItemsToBackpack[] += {
-                LIST_3("tsp_breach_block_mag"),
-                LIST_3("tsp_breach_package_mag"),
-                LIST_3("DemoCharge_Remote_Mag"),
+                LIST_2("tsp_breach_block_mag"),
+                LIST_2("tsp_breach_package_mag"),
+                LIST_6("DemoCharge_Remote_Mag"),
                 LIST_5("ACE_M14"),
                 "ACE_EntrenchingTool"
             };

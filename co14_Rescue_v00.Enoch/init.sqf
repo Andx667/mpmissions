@@ -12,3 +12,17 @@
 
 //Laden von CLib Modulen für den Streamator
 if !(isNil "CLib_fnc_loadModules") then {call CLib_fnc_loadModules;};
+
+["ace_grenades_flashbangedAI", {
+    params ["_unit", "_strength", "_grenadePosASL"];
+    if (isPlayer _unit || _unit getVariable ["ttt_flashbangSurrenderResisted", false]) exitWith {};
+
+    if (_strength > 0.5) exitWith {
+        if (vehicle _unit != _unit) then {moveOut _unit};
+        if (currentWeapon _unit != "") then {
+            [_unit] call ace_common_fnc_throwWeapon;
+        };
+        [_unit, true] remoteExecCall ["ACE_captives_fnc_setSurrendered", _unit];
+    };
+    _unit setVariable ["ttt_flashbangSurrenderResisted", true];
+}] call CBA_fnc_addEventHandler;
