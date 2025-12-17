@@ -662,7 +662,7 @@ class Loadouts {
                         //R
                         LIST_4("kat_chestSeal"),
                         LIST_4("kat_ncdKit"),
-                        LIST_2("kat_pocketBVM");
+                        LIST_2("kat_pocketBVM"),
                         //C                        
                         LIST_4("ACE_SalineIV"),
                         LIST_2("ACE_salineIV_500"),
