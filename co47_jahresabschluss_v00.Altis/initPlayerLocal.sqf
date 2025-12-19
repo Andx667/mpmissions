@@ -37,7 +37,7 @@ player addAction [
 		missionNamespace setVariable ["currentSlide", ((missionNamespace getVariable ["currentSlide", 0]) +1)];
 		private _slideToDisplay = ["pictures\presentation\slide_", (missionNamespace getVariable ["currentSlide", 0]), ".paa"] joinString "";
 		{_x setObjectTextureGlobal [0, _slideToDisplay];} forEach allScreens;
-	}, [], -65, false, true, "", "(groupId group player == 'Gamemaster') && (player getVariable ['menu',0] == 1) && (missionNamespace getVariable ['currentSlide', 0] < 46)", 1
+	}, [], -65, false, true, "", "(groupId group player == 'Gamemaster') && (player getVariable ['menu',0] == 1) && (missionNamespace getVariable ['currentSlide', 0] < 45)", 1
 ];
 
 player addAction [
