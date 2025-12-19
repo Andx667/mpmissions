@@ -3,7 +3,7 @@
 	description: adds Powerpoint-Actions to Gamemaster
 */
 
-allScreens = [o_screen_1, o_screen_2, o_screen_3, o_screen_4];
+allScreens = [o_screen_1, o_screen_2, o_screen_3, o_screen_4, o_screen_5];
 
 player addAction [
 	"<t size='2' color='#7CFC00' >Foliensteuerung</t>", 
