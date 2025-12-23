@@ -355,9 +355,8 @@ class Loadouts {
             primaryWeaponMuzzle = "";
             primaryWeaponUnderbarrel = "";
 
-            uniform = "U_Tank_green_F";
-            vest = "UK3CB_AAF_B_V_CREW_Vest_DIGI_GRN";
-            headgear = "H_HelmetCrew_I";
+            uniform = "";
+            vest = "";
 
             class Rank {
                 class PRIVATE {
@@ -399,7 +398,7 @@ class Loadouts {
                 class SERGEANT: CORPORAL {
                     backpack = "";
 
-                    addItemsToBackpack[] += {
+                    addItemsToBackpack[] + {
                         "", //LR Radio
                     };
                 };

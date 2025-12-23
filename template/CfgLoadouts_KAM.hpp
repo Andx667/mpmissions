@@ -388,7 +388,7 @@ class Loadouts {
                 class SERGEANT: CORPORAL {
                     backpack = "";
 
-                    addItemsToBackpack[] + {
+                    addItemsToBackpack[] += {
                         "", //LR Radio
                     };
                 };
