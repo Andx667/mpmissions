@@ -673,6 +673,7 @@ class Loadouts {
                         //P
                         LIST_8("kat_Painkiller"),
                         LIST_8("kat_Penthrox"),
+                        LIST_8("ACE_Morphine"),
                         //A
                         //W
                         //S

@@ -5,7 +5,7 @@
     oder auch zum Beladen von Kisten verwenden kann.
  */
 
-setDate [2016, 6, 25, 11, 15]; //Datum ändern
+setDate [2020, 6, 25, 18, 00]; //Datum ändern
 
 {
     if (side _x != west) then {
@@ -13,15 +13,7 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
         _x setCombatMode "WHITE";
         _x setSpeedMode "LIMITED";
 
-        _x setSkill ["general", 0.75];
-        _x setSkill ["commanding", 0.75];
-        _x setSkill ["courage", 0.75];
-        _x setSkill ["aimingAccuracy", 0.5];
-        _x setSkill ["aimingShake", 0.35];
-        _x setSkill ["aimingSpeed", 0.5];
-        _x setSkill ["reloadSpeed", 0.75];
-        _x setSkill ["spotDistance", 0.8];
-        _x setSkill ["spotTime", 0.8];
+        [_x, "Veteran"] call ttt_common_fnc_setAISkillLevel;
         _x enableAI "COVER";
         _x enableAI "AUTOCOMBAT";
     };
