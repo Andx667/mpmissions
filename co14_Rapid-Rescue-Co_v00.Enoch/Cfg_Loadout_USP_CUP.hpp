@@ -33,10 +33,10 @@ class Loadouts {
         //"backpack",
         //"headgear",
         //"primaryWeapon",
-        "primaryWeaponOptics",
+        //"primaryWeaponOptics",
         //"primaryWeaponUnderbarrel",
-        "primaryWeaponMuzzle",
-        "goggles"
+        //"primaryWeaponMuzzle",
+        //"goggles"
     };
 
     class Side {
@@ -93,11 +93,13 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "ACE_Painkillers",
-                LIST_15("ACE_elasticBandage"),
-                LIST_15("ACE_packingBandage"),
+                LIST_2("KAT_Painkiller"),
+                LIST_10("ACE_elasticBandage"),
+                LIST_10("ACE_packingBandage"),
+                LIST_10("ACE_Quikclot"),
                 LIST_4("ACE_Tourniquet"),
-                LIST_2("ACE_CableTie")
+                LIST_2("ACE_CableTie"),
+                LIST_2("KAT_chestSeal")
             };
             
             addItemsToVest[] = {
@@ -489,9 +491,7 @@ class Loadouts {
         class B_soldier_UAV_F: B_Soldier_F {
             backpack[] = {
                 "USP_REEBOW_3DAP_MC",
-                "USP_REEBOW_3DAP_ACC2_MC",
                 "USP_REEBOW_3DAP_ACC3_MC",
-                "USP_REEBOW_3DAP_ACC5_MC",
                 "USP_REEBOW_3DAP_ACC8_MC"
             };
 
@@ -586,7 +586,7 @@ class Loadouts {
             };
 
             binoculars = "ACE_Vector";
-            gps = "ItemAndroid";
+            gps = "";
         };
 
         // Squad Leader
@@ -1094,7 +1094,7 @@ class Loadouts {
             };
 
             addItemsToVest[] += {
-
+                "ACRE_PRC152"
             };
 
             addItemsToBackpack[] += {
@@ -1129,6 +1129,11 @@ class Loadouts {
             };
             primaryWeaponMagazine = "CUP_20Rnd_762x51_B_M110"; //CUP_20Rnd_TE1_Red_Tracer_762x51_M110
             primaryWeaponMuzzle = "CUP_muzzle_snds_socom762rc";
+            primaryWeaponPointer[] = {
+                "CUP_acc_ANPEQ_15_Flashlight_Black_L",
+                "CUP_acc_ANPEQ_15_Flashlight_OD_L",
+                "CUP_acc_ANPEQ_15_Flashlight_Tan_L"
+            };
             primaryWeaponOptics[] = {
                 "optic_AMS_khk", //MM DLC
                 //"optic_AMS_snd", //MM DLC

@@ -1,9 +1,6 @@
 //ACE Medical Treatment
 force ace_medical_treatment_allowSelfStitch = 1;
 
-//ACE Cookoff
-force ace_cookoff_enableAmmobox = false;
-
 //KAT ADVANCED MEDICAL
 // KAT - ADV Medical: Airway
 force force kat_airway_Accuvac_time = 8;

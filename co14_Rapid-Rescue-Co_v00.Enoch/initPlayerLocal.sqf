@@ -32,25 +32,42 @@ private _id = [
                 //_unit addItemToBackpack _helmet;
 
                switch (typeOf _unit) do {
-                    case "B_soldier_exp_F": {
-                        [
-                            [
-                            "CUP_sgun_M1014_Entry",                             //Classname der zweiten Waffe
-                            "",                             //Schalldämpfer oder ähnliches
-                            "",                             //Laserpointer / Waffenlicht
-                            "",                             //Optik
-                            ["CUP_6Rnd_12Gauge_Pellets_No00_Buck", 6],                         //Magazin mit Anzahl Kugeln
-                            [],                             //Zweites Magazin (z.B. UGL)
-                            ""                              //Zweibein oder ähnliches
-                            ]
-                        ] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;
+                    case "B_recon_F";
+                    case "B_recon_LAT_F";
+                    case "B_recon_medic_F";
+                    case "B_recon_exp_F";
+                    case "B_recon_TL_F";
+                    case "B_recon_JTAC_F";
+                    case "B_recon_M_F": {
+                        [_unit, "TTT_grau_emblem"] call BIS_fnc_setUnitInsignia;
                     };
-                    case "B_soldier_UGV_02_Demining_F": {
-                        //_unit addHeadGear _helmet;
+                    case "B_Soldier_SL_F";
+                    case "B_soldier_AR_F";
+                    case "B_medic_F";
+                    case "B_Soldier_TL_F";
+                    case "B_Soldier_GL_F": {
+                        [_unit, "TTT_green_emblem"] call BIS_fnc_setUnitInsignia;
                     };
-                    case "B_helicrew_F";
-                    case "B_Helipilot_F": {
-                        [_unit] call ace_weaponselect_fnc_putWeaponAway;
+                    case "B_soldier_UAV_F": {
+                        [_unit, "TTT_yellow_emblem"] call BIS_fnc_setUnitInsignia;
+                    };
+                };
+
+                switch (groupID group _unit) do {
+                    case "GREY": {
+                        _success = [["ACRE_PRC152", 10], ["ACRE_PRC148", 11], ["ACRE_PRC117F", 4] ] call acre_api_fnc_setupRadios;
+                    };
+                    case "Fox 1-9";
+                    case "Fox 1-3";
+                    case "Fox 1-1": {
+                        _success = [["ACRE_PRC152", 10], ["ACRE_PRC148", 11] ] call acre_api_fnc_setupRadios;
+                    };
+                    case "Fox 2-7";
+                    case "Fox 2-2": {
+                        _success = [["ACRE_PRC152", 10], ["ACRE_PRC148", 12] ] call acre_api_fnc_setupRadios;
+                    };
+                    default {
+                        _success = [["ACRE_PRC152", 10], ["ACRE_PRC148", 14] ] call acre_api_fnc_setupRadios;
                     };
                 };
             },

@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=975;
+		nextID=982;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=71;
+		nextID=75;
 	};
 	class Camera
 	{
-		pos[]={7736.2212,8.810441,5104.7544};
-		dir[]={-0.87886053,-0.46381176,-0.11172761};
-		up[]={-0.4601087,0.88593376,-0.058492608};
-		aside[]={-0.12611282,0,0.99201602};
+		pos[]={7734.0894,13.38523,5095.2959};
+		dir[]={0.3938092,-0.65312511,0.64679354};
+		up[]={0.33965886,0.75725001,0.55785686};
+		aside[]={0.85413474,0,-0.52005172};
 	};
 };
 binarizationWanted=0;
@@ -42,13 +42,14 @@ addons[]=
 	"ace_explosives",
 	"A3_Characters_F_Orange",
 	"ace_nouniformrestrictions",
+	"cfp_uniforms",
 	"A3_Characters_F_Patrol"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=9;
+		items=10;
 		class Item0
 		{
 			className="KJW_TwoPrimaryWeapons";
@@ -105,6 +106,12 @@ class AddonsMetaData
 			url="https://ace3.acemod.org/";
 		};
 		class Item8
+		{
+			className="cfp_uniforms";
+			name="cfp_uniforms";
+			author="CFP Team";
+		};
+		class Item9
 		{
 			className="A3_Characters_F_Patrol";
 			name="Arma 3 Patrol - Characters and Clothing";
@@ -6203,7 +6210,6 @@ class Mission
 				};
 			};
 			id=560;
-			atlOffset=-2.4998474;
 		};
 		class Item1
 		{
