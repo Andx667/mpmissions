@@ -12,7 +12,7 @@ setDate [2025, 8, 21, 18, 00]; //Datum ändern
     _x setCombatMode "YELLOW";
     _x setSpeedMode "LIMITED";
 
-    [_x, "Veteran"] call ttt_common_fnc_setAISkillLevel;
+    [_x, "Recruit"] call ttt_common_fnc_setAISkillLevel;
 
     _x enableAI "COVER";
     _x enableAI "AUTOCOMBAT";
