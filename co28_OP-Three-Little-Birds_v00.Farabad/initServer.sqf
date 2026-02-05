@@ -21,7 +21,7 @@ setDate [2026, 6, 20, 4, 0]; //Datum ändern
 } forEach allUnits;
 
 [
-    [heli_01, heli_02, heli_03, heli_04],
+    [heli_01, heli_02, heli_03, heli_04, log_01],
     [
         ["KAT_Painkiller", 10],
         ["ACE_elasticBandage", 50],
@@ -53,7 +53,8 @@ setDate [2026, 6, 20, 4, 0]; //Datum ändern
         ["ACE_Epinephrine", 10],
         ["kat_IV_16", 10],
         ["ACE_Morphine", 10],
-        ["ACE_Suture", 10]
+        ["ACE_Suture", 10],
+        ["Tookit", 1]
     ],
     true
 ] call ttt_common_fnc_crateFiller;

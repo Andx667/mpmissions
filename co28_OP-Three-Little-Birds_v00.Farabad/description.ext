@@ -4,9 +4,9 @@ author = "[TTT] Andx, [TTT] Freddy Bacon";
 // Missionsname über dem Ladebild
 onLoadName = "OP Three Little Birds";
 // Ladebild
-loadScreen = "";
+loadScreen = "images\ThreeLittleBirds.paa";
 // Kurzbeschreibung unter dem Ladebild
-onLoadMission = "";
+onLoadMission = "Rise up this morning, smile with the rising sun<br/>Three little birds pitch by my doorstep";
 // Kurzbeschreibung in der Missionsauswahl
 overviewText = "";
 
@@ -39,7 +39,7 @@ class CfgFunctions {
 };
 
 // - Loadouts ----------------------------------------------------------------
-#include "CfgLoadouts_KAM.hpp"
+#include "CfgLoadouts.hpp"
 
 // - Streamator -------------------------------------------------------------
 class CLib {

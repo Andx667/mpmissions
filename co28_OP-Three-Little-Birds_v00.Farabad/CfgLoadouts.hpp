@@ -586,7 +586,7 @@ class Loadouts {
             };
 
             binoculars = "ACE_Vector";
-            gps = "";
+            gps = "ItemAndroid";
         };
 
         // Squad Leader
@@ -620,7 +620,8 @@ class Loadouts {
                 "ACE_flags_red",
                 "ACE_SpraypaintBlack",
                 "ACE_SpraypaintGreen",
-                "ACE_SpraypaintRed"
+                "ACE_SpraypaintRed",
+                LIST_3("SmokeShellPurple")
             };
         };
 
@@ -661,7 +662,7 @@ class Loadouts {
                         LIST_4("kat_larynx"),
                         //R
                         LIST_4("kat_chestSeal"),
-                        LIST_4("kat_ncdKit"),
+                        LIST_4("kat_aatKit"),
                         LIST_2("kat_pocketBVM"),
                         //C                        
                         LIST_4("ACE_SalineIV"),
