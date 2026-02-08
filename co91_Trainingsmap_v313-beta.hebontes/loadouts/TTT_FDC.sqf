@@ -27,21 +27,21 @@ _unit addHandgunItem "16Rnd_9x21_Mag";
 
 comment "Add containers";
 if (_farbe == "platinum") then {
-	_farbe = "green";
+    _farbe = "green";
 };
 _unit forceAddUniform (["TTT_Uniform", _farbe, _tarn] joinString "_");
 
 if (_farbe == "silver" || _farbe == "white" || _farbe == "bronze" || _farbe == "platinum") then {
-	_unit addVest (["TTT_Vest_Lite", "green", "US_Desert"] joinString "_");
+    _unit addVest (["TTT_Vest_Lite", "green", "US_Desert"] joinString "_");
 } else {
-	_unit addVest (["TTT_Vest_Lite", _farbe, "US_Desert"] joinString "_");
+    _unit addVest (["TTT_Vest_Lite", _farbe, "US_Desert"] joinString "_");
 };
 
 
 if (_farbe == "brown" || _farbe == "yellow" || _farbe == "gold" || _farbe == "grey" || _farbe == "green" || _farbe == "silver" || _farbe == "white") then {
-	_unit addBackpack (["TTT_backpack_radio", _farbe, "US_Desert"] joinString "_");
+    _unit addBackpack (["TTT_backpack_radio", _farbe, "US_Desert"] joinString "_");
 } else {
-	_unit addBackpack "TTT_backpack_radio_base_coyote";
+    _unit addBackpack "TTT_backpack_radio_base_coyote";
 };
 
 comment "Add binoculars";

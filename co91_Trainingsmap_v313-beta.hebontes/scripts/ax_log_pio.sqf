@@ -5,7 +5,7 @@ params ["_containers"];
 [
     [_containers],
     [
-	  ["DemoCharge_Remote_Mag", 30],
-	  ["SatchelCharge_Remote_Mag", 10]
+      ["DemoCharge_Remote_Mag", 30],
+      ["SatchelCharge_Remote_Mag", 10]
     ]
 ] call ttt_common_fnc_crateFiller;
