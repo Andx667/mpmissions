@@ -6,7 +6,7 @@
 
 // W-Teleporter
 {
-    _x call ttt_w_teleporter_fnc_addAction;
+    [_x] call ttt_teleport_fnc_addActions;
 } forEach [
     flag_Infanterie_Gefechtsschiessbahn,
     flag_Infanterie_Schulschiessbahn,
@@ -143,7 +143,3 @@ laptopHangar_1 addAction ["Gruppe - Kette", {
 laptopHangar_1 addAction ["Gruppe - Reihe", {
     boardHangar_1 setObjectTextureGlobal [0, "formationen\09_gruppe_schutzenreihe.paa"];
 }, [], 1, false, true, "", "", 5];
-
-
-//deconstruct czeh hedgehog
-[] call compile preprocessFileLineNumbers "scripts\ax_deconstruct.sqf";
