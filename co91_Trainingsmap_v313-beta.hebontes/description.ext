@@ -9,12 +9,7 @@
 #include "reim_text\dialog.hpp"
 #include "VVS\menu.h"
 
-/*------Functions------*/    
-#include "modules\grad-fortifications\grad_fortifications.hpp"
-
-class CfgFunctions 
-{
-    #include "modules\grad-fortifications\cfgFunctions.hpp"
+class CfgFunctions {
     #include "redd_actions\CfgFunctions.hpp"
     #include "reddZugSB\CfgFunctions.hpp"
     #include "reddCasSB\CfgFunctions.hpp"
@@ -48,7 +43,6 @@ class CfgSounds {
 };
 
 class Header {
-
     gameType = "coop";
     minPlayers = "1";
     maxPlayers = "92";
