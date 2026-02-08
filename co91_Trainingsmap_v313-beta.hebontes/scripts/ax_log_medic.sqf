@@ -1,10 +1,6 @@
 // Fills given object with a list of items
 
 params ["_containers"];
-
-// Kisten befüllen skipt laden
-reim_fnc_crateFiller = compile preProcessFileLineNumbers "scripts\r_crate.sqf";
-
 // Kiste befüllen
 [
 	[_containers],
@@ -66,4 +62,4 @@ reim_fnc_crateFiller = compile preProcessFileLineNumbers "scripts\r_crate.sqf";
 		["kat_amiodarone", 30],
 		["kat_atropine", 30]
 	]
-] call reim_fnc_crateFiller;
+] call ttt_common_fnc_crateFiller;

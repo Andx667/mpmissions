@@ -1,10 +1,6 @@
 //Fills given object with a list of Items
 
 params ["_containers"];
-
-//Kisten befüllen skipt laden
-reim_fnc_crateFiller = compile preProcessFileLineNumbers "scripts\r_crate.sqf";
-
 //Kiste befüllen
 [
     [_containers],
@@ -63,4 +59,4 @@ reim_fnc_crateFiller = compile preProcessFileLineNumbers "scripts\r_crate.sqf";
 	  ["ACE_Vector", 10],
 	  ["ACE_microDAGR", 10]
     ]
-] call reim_fnc_crateFiller;
+] call ttt_common_fnc_crateFiller;

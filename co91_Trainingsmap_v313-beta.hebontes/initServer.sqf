@@ -81,9 +81,6 @@ CivHQ = createCenter CIVILIAN;
 	
 } forEach [fort_01];
 
-//Kisten befüllen skipt laden
-reim_fnc_crateFiller = compile preProcessFileLineNumbers "scripts\r_crate.sqf";
-
 //Kisten befüllen
 [
 	[crate_etool],
@@ -91,7 +88,7 @@ reim_fnc_crateFiller = compile preProcessFileLineNumbers "scripts\r_crate.sqf";
 		["ACE_EntrenchingTool", 32],
 		["mts_cutter_folding_saw", 32]
 	]
-] call reim_fnc_crateFiller;
+] call ttt_common_fnc_crateFiller;
 
 [
 	[crate_wirecutter],
@@ -99,14 +96,14 @@ reim_fnc_crateFiller = compile preProcessFileLineNumbers "scripts\r_crate.sqf";
 		["ACE_Wirecutter", 32],
 		["UK3CB_CHD_B_B_ENG_WDL_ALT", 32]
 	]
-] call reim_fnc_crateFiller;
+] call ttt_common_fnc_crateFiller;
 
 [
 	[crate_toolkit],
 	[
 		["Toolkit", 32]
 	]
-] call reim_fnc_crateFiller;
+] call ttt_common_fnc_crateFiller;
 
 [
 	[crate_flags],
@@ -120,7 +117,7 @@ reim_fnc_crateFiller = compile preProcessFileLineNumbers "scripts\r_crate.sqf";
 		["mts_items_marker_yellow", 40],
 		["mts_items_marker_mine", 40]
 	]
-] call reim_fnc_crateFiller;
+] call ttt_common_fnc_crateFiller;
 
 [
 	[crate_m112],
@@ -129,21 +126,21 @@ reim_fnc_crateFiller = compile preProcessFileLineNumbers "scripts\r_crate.sqf";
 		["rhs_weap_M590_5RD", 16],
 		["rhsusf_5Rnd_00Buck", 50]
 	]
-] call reim_fnc_crateFiller;
+] call ttt_common_fnc_crateFiller;
 
 [
 	[crate_vmh3],
 	[
 		["ACE_VMH3", 64]
 	]
-] call reim_fnc_crateFiller;
+] call ttt_common_fnc_crateFiller;
 
 [
 	[crate_beret],
 	[
 		["PBW_barett_pi", 16]
 	]
-] call reim_fnc_crateFiller;
+] call ttt_common_fnc_crateFiller;
 
 [
 	[fhz_01, fhz_02, fhz_03, fhz_04, fhz_05, fhz_06],
@@ -153,4 +150,4 @@ reim_fnc_crateFiller = compile preProcessFileLineNumbers "scripts\r_crate.sqf";
 		["Toolkit", 1],
 		["B_Carryall_khk", 1]
 	]
-] call reim_fnc_crateFiller;
+] call ttt_common_fnc_crateFiller;
