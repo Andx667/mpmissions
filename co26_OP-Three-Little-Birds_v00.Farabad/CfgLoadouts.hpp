@@ -621,7 +621,7 @@ class Loadouts {
                 "ACE_SpraypaintBlack",
                 "ACE_SpraypaintGreen",
                 "ACE_SpraypaintRed",
-                LIST_3("SmokeShellPurple")
+                LIST_5("SmokeShellPurple")
             };
         };
 
@@ -823,6 +823,7 @@ class Loadouts {
             };
 
             gps = "ItemAndroid";
+            nvg = "ACE_NVG_Wide_Black";
         };
 
         //SOF
