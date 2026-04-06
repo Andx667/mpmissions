@@ -58,6 +58,12 @@ class Loadouts {
                 //Gorka
                 //"NOR_Gorka_Uniform",
                 //"NOR_Gorka_Uniform_Pads",
+                "NOR_Heavy_Uniform_Snow",
+                //"NOR_Heavy_Uniform_MC",
+                "NOR_Heavy_Uniform_Snow_Mixed",
+                "NOR_Heavy_Uniform_Snow_Alt",
+                //"NOR_Heavy_Uniform_Alt",
+                //"NOR_Heavy_Uniform",
                 //Winter
                 "NOR_Gorka_Winter_Uniform",
                 "NOR_Gorka_Winter_Uniform_Pads",
@@ -77,8 +83,8 @@ class Loadouts {
                 //Regular used by Home Guard
                 //"NOR_Helmet_Comms",
                 //"NOR_Helmet_Comms_cov",
-                //"NOR_Helmet_Winter_Comms",
-                //"NOR_Helmet_Winter_Comms_cov",
+                "NOR_Helmet_Winter_Comms",
+                "NOR_Helmet_Winter_Comms_cov",
                 //OPSCORE
                 "NOR_Opscore",
                 "NOR_Opscore_Tan",
