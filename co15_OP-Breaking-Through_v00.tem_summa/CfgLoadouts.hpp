@@ -43,63 +43,36 @@ class Loadouts {
         class Blufor {
             // Uniforms from USP file
             uniform[] = {
-                "USP_RUGBY_G3C_KP2_MX_BLK_AMCU",
-                "USP_RUGBY_G3C_KP2_MX_BLK_MC",
-                "USP_RUGBY_G3C_KP2_MX_BLK_MCB",
-                "USP_RUGBY_G3C_KP2_MX_BLK_MCD",
-                "USP_RUGBY_G3C_KP2_MX_BLK_MCT",
-                "USP_RUGBY_G3C_KP2_MX_BLK_MCW",
-                "USP_RUGBY_G3C_KP2_MX_CBR_AMCU",
-                "USP_RUGBY_G3C_KP2_MX_CBR_MC",
-                "USP_RUGBY_G3C_KP2_MX_CBR_MCB",
-                "USP_RUGBY_G3C_KP2_MX_CBR_MCD",
-                "USP_RUGBY_G3C_KP2_MX_CBR_MCT",
-                "USP_RUGBY_G3C_KP2_MX_CBR_MCW",
-                "USP_RUGBY_G3C_KP2_MX_GRY_AMCU",
-                "USP_RUGBY_G3C_KP2_MX_GRY_MC",
-                "USP_RUGBY_G3C_KP2_MX_GRY_MCB",
-                "USP_RUGBY_G3C_KP2_MX_GRY_MCD",
-                "USP_RUGBY_G3C_KP2_MX_GRY_MCT",
-                "USP_RUGBY_G3C_KP2_MX_GRY_MCW",
-                "USP_RUGBY_G3C_KP2_MX_RGR_AMCU",
-                "USP_RUGBY_G3C_KP2_MX_RGR_MC",
-                "USP_RUGBY_G3C_KP2_MX_RGR_MCB",
-                "USP_RUGBY_G3C_KP2_MX_RGR_MCD",
-                "USP_RUGBY_G3C_KP2_MX_RGR_MCT",
-                "USP_RUGBY_G3C_KP2_MX_RGR_MCW"
+                "USP_G3C_MC",
+                "USP_G3C_CU_MC",
+                "USP_G3C_CU_KP_MC",
+                "USP_G3C_CU_KP_MX_MC",
+                "USP_G3C_CU_KP_OR_MC",
+                "USP_G3C_CU_MX_MC",
+                "USP_G3C_CU_OR_MC",
+                "USP_G3C_KP_MC",
+                "USP_G3C_KP_MX_MC",
+                "USP_G3C_KP_OR_MC",
+                "USP_G3C_MX_MC",
+                "USP_G3C_MX_VQ_MC",
+                "USP_G3C_OR_MC",
+                "USP_G3C_OR_VQ_MC"
             };
             
             // Vests from USP file
             vest[] = {
-                "USP_VEST_STRANDHOGG2_AOR1",
-                "USP_VEST_STRANDHOGG2_AOR2",
-                "USP_VEST_STRANDHOGG2_ATXAU",
-                "USP_VEST_STRANDHOGG2_ATXFG",
-                "USP_VEST_STRANDHOGG2",
-                "USP_VEST_STRANDHOGG2_CBR",
-                "USP_VEST_STRANDHOGG2_MC",
-                //"USP_VEST_STRANDHOGG2_MCA",
-                "USP_VEST_STRANDHOGG2_MCD",
-                "USP_VEST_STRANDHOGG2_MCB",
-                "USP_VEST_STRANDHOGG2_MCT",
-                "USP_VEST_STRANDHOGG2_RGR"
+                "USP_CRYE_JPC_ASLTB_RGR",
+                "USP_CRYE_JPC_ASLTB",
+                "USP_CRYE_JPC_ASLTB_KHK",
+                "USP_CRYE_JPC_ASLTB_CBR"
             };
             
             // Backpacks from USP file
             backpack[] = {
-                "USP_HYDRATION_PACK_3CD",
-                "USP_HYDRATION_PACK_AOR1",
-                "USP_HYDRATION_PACK_AOR2",
-                "USP_HYDRATION_PACK_BLK",
-                "USP_HYDRATION_PACK_CBR",
-                "USP_HYDRATION_PACK_GRY",
-                "USP_HYDRATION_PACK_M81",
-                "USP_HYDRATION_PACK_MC",
-                //"USP_HYDRATION_PACK_MCA",
-                "USP_HYDRATION_PACK_MCB",
-                "USP_HYDRATION_PACK_MCD",
-                "USP_HYDRATION_PACK_MCT",
-                "USP_HYDRATION_PACK_RGR"
+                "USP_ZIPON_PANEL_CPC_MC",
+                "USP_ZIPON_PANEL_CPC_SM_MC",
+                "USP_ZIPON_PANEL_CPC_SMK_MC",
+                "USP_ZIPON_PANEL_CPC_SMK_SM_MC"
             };
             
             // Headgear from USP file
