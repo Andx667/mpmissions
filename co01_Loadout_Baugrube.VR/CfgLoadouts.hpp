@@ -43,76 +43,72 @@ class Loadouts {
         class Blufor {
             // Uniforms from USP file
             uniform[] = {
-                "USP_RUGBY_G3C_KP2_MX_BLK_AMCU",
-                "USP_RUGBY_G3C_KP2_MX_BLK_MC",
-                "USP_RUGBY_G3C_KP2_MX_BLK_MCB",
-                "USP_RUGBY_G3C_KP2_MX_BLK_MCD",
-                "USP_RUGBY_G3C_KP2_MX_BLK_MCT",
-                "USP_RUGBY_G3C_KP2_MX_BLK_MCW",
-                "USP_RUGBY_G3C_KP2_MX_CBR_AMCU",
-                "USP_RUGBY_G3C_KP2_MX_CBR_MC",
-                "USP_RUGBY_G3C_KP2_MX_CBR_MCB",
-                "USP_RUGBY_G3C_KP2_MX_CBR_MCD",
-                "USP_RUGBY_G3C_KP2_MX_CBR_MCT",
-                "USP_RUGBY_G3C_KP2_MX_CBR_MCW",
-                "USP_RUGBY_G3C_KP2_MX_GRY_AMCU",
-                "USP_RUGBY_G3C_KP2_MX_GRY_MC",
-                "USP_RUGBY_G3C_KP2_MX_GRY_MCB",
-                "USP_RUGBY_G3C_KP2_MX_GRY_MCD",
-                "USP_RUGBY_G3C_KP2_MX_GRY_MCT",
-                "USP_RUGBY_G3C_KP2_MX_GRY_MCW",
-                "USP_RUGBY_G3C_KP2_MX_RGR_AMCU",
-                "USP_RUGBY_G3C_KP2_MX_RGR_MC",
-                "USP_RUGBY_G3C_KP2_MX_RGR_MCB",
-                "USP_RUGBY_G3C_KP2_MX_RGR_MCD",
-                "USP_RUGBY_G3C_KP2_MX_RGR_MCT",
-                "USP_RUGBY_G3C_KP2_MX_RGR_MCW"
+                // "USP_G3C_MC",
+                // "USP_G3C_CU_MC",
+                // "USP_G3C_CU_KP_MC",
+                // "USP_G3C_CU_KP_MX_MC",
+                // "USP_G3C_CU_KP_OR_MC",
+                // "USP_G3C_CU_MX_MC",
+                // "USP_G3C_CU_OR_MC",
+                // "USP_G3C_KP_MC",
+                // "USP_G3C_KP_MX_MC",
+                // "USP_G3C_KP_OR_MC",
+                // "USP_G3C_MX_MC",
+                // "USP_G3C_MX_VQ_MC",
+                // "USP_G3C_OR_MC",
+                // "USP_G3C_OR_VQ_MC"
+                "USP_G3C_MCW",
+                "USP_G3C_CU_MCW",
+                "USP_G3C_CU_KP_MCW",
+                "USP_G3C_CU_KP_MX_MCW",
+                "USP_G3C_CU_KP_OR_MCW",
+                "USP_G3C_CU_MX_MCW",
+                "USP_G3C_CU_OR_MCW",
+                "USP_G3C_KP_MCW",
+                "USP_G3C_KP_MX_MCW",
+                "USP_G3C_KP_OR_MCW",
+                "USP_G3C_MX_MCW",
+                "USP_G3C_MX_VQ_MCW",
+                "USP_G3C_OR_MCW",
+                "USP_G3C_OR_VQ_MC"
             };
             
             // Vests from USP file
             vest[] = {
-                "USP_VEST_STRANDHOGG2_AOR1",
-                "USP_VEST_STRANDHOGG2_AOR2",
-                "USP_VEST_STRANDHOGG2_ATXAU",
-                "USP_VEST_STRANDHOGG2_ATXFG",
-                "USP_VEST_STRANDHOGG2",
-                "USP_VEST_STRANDHOGG2_CBR",
-                "USP_VEST_STRANDHOGG2_MC",
-                //"USP_VEST_STRANDHOGG2_MCA",
-                "USP_VEST_STRANDHOGG2_MCD",
-                "USP_VEST_STRANDHOGG2_MCB",
-                "USP_VEST_STRANDHOGG2_MCT",
-                "USP_VEST_STRANDHOGG2_RGR"
+                "USP_CRYE_JPC_ASLTB_RGR",
+                "USP_CRYE_JPC_ASLTB",
+                "USP_CRYE_JPC_ASLTB_KHK",
+                "USP_CRYE_JPC_ASLTB_CBR"
             };
             
             // Backpacks from USP file
             backpack[] = {
-                "USP_HYDRATION_PACK_3CD",
-                "USP_HYDRATION_PACK_AOR1",
-                "USP_HYDRATION_PACK_AOR2",
-                "USP_HYDRATION_PACK_BLK",
-                "USP_HYDRATION_PACK_CBR",
-                "USP_HYDRATION_PACK_GRY",
-                "USP_HYDRATION_PACK_M81",
-                "USP_HYDRATION_PACK_MC",
-                //"USP_HYDRATION_PACK_MCA",
-                "USP_HYDRATION_PACK_MCB",
-                "USP_HYDRATION_PACK_MCD",
-                "USP_HYDRATION_PACK_MCT",
-                "USP_HYDRATION_PACK_RGR"
+                "USP_ZIPON_PANEL_CPC_MC",
+                "USP_ZIPON_PANEL_CPC_SM_MC",
+                "USP_ZIPON_PANEL_CPC_SMK_MC",
+                "USP_ZIPON_PANEL_CPC_SMK_SM_MC"
             };
             
             // Headgear from USP file
             headgear[] = {
-                "USP_OPSCORE_FASTMTC_C",
-                "USP_OPSCORE_FASTMTC_CM",
-                "USP_OPSCORE_FASTMTC_CMW",
-                "USP_OPSCORE_FASTMTC_CMS",
-                "USP_OPSCORE_FASTMTC_CMSW",
-                "USP_OPSCORE_FASTMTC_CW",
-                "USP_OPSCORE_FASTMTC_CGW",
-                "USP_OPSCORE_FASTMTC_CS",
-                "USP_OPSCORE_FASTMTC_CSW"
+                // "USP_OPSCORE_FASTMTC_C",
+                // "USP_OPSCORE_FASTMTC_CM",
+                // "USP_OPSCORE_FASTMTC_CMW",
+                // "USP_OPSCORE_FASTMTC_CMS",
+                // "USP_OPSCORE_FASTMTC_CMSW",
+                // "USP_OPSCORE_FASTMTC_CW",
+                // "USP_OPSCORE_FASTMTC_CGW",
+                // "USP_OPSCORE_FASTMTC_CS",
+                // "USP_OPSCORE_FASTMTC_CSW",
+                "USP_OPSCORE_FASTMT_OD_C",
+                "USP_OPSCORE_FASTMT_OD_CM",
+                "USP_OPSCORE_FASTMT_OD_CMW",
+                "USP_OPSCORE_FASTMT_OD_CMS",
+                "USP_OPSCORE_FASTMT_OD_CMSW",
+                "USP_OPSCORE_FASTMT_OD_CW",
+                "USP_OPSCORE_FASTMT_OD_CGW",
+                "USP_OPSCORE_FASTMT_OD_CS",
+                "USP_OPSCORE_FASTMT_OD_CSW"
             };
 
             // Equipment from CUP Rangers file
@@ -120,11 +116,13 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "ACE_Painkillers",
-                LIST_15("ACE_elasticBandage"),
-                LIST_15("ACE_packingBandage"),
+                LIST_2("KAT_Painkiller"),
+                LIST_10("ACE_elasticBandage"),
+                LIST_10("ACE_packingBandage"),
+                LIST_10("ACE_Quikclot"),
                 LIST_4("ACE_Tourniquet"),
-                LIST_2("ACE_CableTie")
+                LIST_2("ACE_CableTie"),
+                LIST_2("KAT_chestSeal")
             };
             
             addItemsToVest[] = {
@@ -171,10 +169,10 @@ class Loadouts {
             };
             
             primaryWeaponMuzzle[] = {
-                // "CUP_muzzle_snds_M16",
-                // "CUP_muzzle_snds_M16_coyote",
-                // "CUP_muzzle_snds_M16_desert",
-                // "CUP_muzzle_snds_M16_camo"
+                "CUP_muzzle_snds_M16",
+                "CUP_muzzle_snds_M16_coyote",
+                "CUP_muzzle_snds_M16_desert",
+                "CUP_muzzle_snds_M16_camo"
             };
             
             primaryWeaponUnderbarrel = "";
@@ -210,8 +208,7 @@ class Loadouts {
             };
 
             binoculars = "Binocular";
-            //map = "ItemMap";
-            map = "";
+            map = "ItemMap";
             compass = "ItemCompass";
             watch = "ItemWatch";
             gps = "";
@@ -324,7 +321,7 @@ class Loadouts {
 
         // Light Anti Tank
         class B_soldier_LAT2_F: B_Soldier_F {
-            secondaryWeapon = "";
+            secondaryWeapon = "CUP_launch_M72A6";
         };
 
         // Radio Operator / FO / JTAC
@@ -351,18 +348,26 @@ class Loadouts {
             class Rank {
                 class PRIVATE {
                     backpack[] = {
-                        "USP_TACTICAL_PACK_CCT",
-                        "USP_TACTICAL_PACK_CCT2",
-                        "USP_TACTICAL_PACK_CCT3",
-                        "USP_TACTICAL_PACK_CCT4",
-                        "USP_TACTICAL_PACK_CCT5",
-                        "USP_TACTICAL_PACK_CCT6",
-                        "USP_TACTICAL_PACK_CCT7",
-                        "USP_TACTICAL_PACK_CCT8"
+                        // "USP_TACTICAL_PACK_CCT",
+                        // "USP_TACTICAL_PACK_CCT2",
+                        // "USP_TACTICAL_PACK_CCT3",
+                        // "USP_TACTICAL_PACK_CCT4",
+                        // "USP_TACTICAL_PACK_CCT5",
+                        // "USP_TACTICAL_PACK_CCT6",
+                        // "USP_TACTICAL_PACK_CCT7",
+                        // "USP_TACTICAL_PACK_CCT8"
+                        "USP_TACTICAL_PACK_MCT_CCT",
+                        "USP_TACTICAL_PACK_MCT_CCT2",
+                        "USP_TACTICAL_PACK_MCT_CCT3",
+                        "USP_TACTICAL_PACK_MCT_CCT4",
+                        "USP_TACTICAL_PACK_MCT_CCT5",
+                        "USP_TACTICAL_PACK_MCT_CCT6",
+                        "USP_TACTICAL_PACK_MCT_CCT7",
                     };
 
                     addItemsToBackpack[] += {
-                        LIST_2("ACRE_PRC117F"),
+                        "ACRE_PRC117F",
+                        "ACRE_GSM",
                         LIST_10("SmokeShellPurple"),
                         "ACE_flags_blue",
                         "ACE_flags_yellow"
@@ -371,16 +376,26 @@ class Loadouts {
 
                 class CORPORAL: PRIVATE {
                     headgear[] += {
-                        "USP_BASEBALL_CAPB_C",
-                        "USP_BASEBALL_CAPB_CG",
-                        "USP_BASEBALL_CAPB_CGS",
-                        "USP_BASEBALL_CAPB_CS",
-                        "USP_BASEBALL_CAPB_CT3",
-                        "USP_BASEBALL_CAP_CG",
-                        "USP_BASEBALL_CAP_C",
-                        "USP_BASEBALL_CAP_CGS",
-                        "USP_BASEBALL_CAP_CS",
-                        "USP_BASEBALL_CAP_CT3"
+                        // "USP_BASEBALL_CAPB_C",
+                        // "USP_BASEBALL_CAPB_CG",
+                        // "USP_BASEBALL_CAPB_CGS",
+                        // "USP_BASEBALL_CAPB_CS",
+                        // "USP_BASEBALL_CAPB_CT3",
+                        // "USP_BASEBALL_CAP_CG",
+                        // "USP_BASEBALL_CAP_C",
+                        // "USP_BASEBALL_CAP_CGS",
+                        // "USP_BASEBALL_CAP_CS",
+                        // "USP_BASEBALL_CAP_CT3"
+                        "USP_BASEBALL_CAPB_C_OD",
+                        "USP_BASEBALL_CAPB_CG_OD",
+                        "USP_BASEBALL_CAPB_CGS_OD",
+                        "USP_BASEBALL_CAPB_CS_OD",
+                        "USP_BASEBALL_CAPB_CT3_OD",
+                        "USP_BASEBALL_CAP_CG_OD",
+                        "USP_BASEBALL_CAP_C_OD",
+                        "USP_BASEBALL_CAP_CGS_OD",
+                        "USP_BASEBALL_CAP_CS_OD",
+                        "USP_BASEBALL_CAP_CT3_OD"
                     };
                     
                     addItemsToUniform[] += {
@@ -515,9 +530,7 @@ class Loadouts {
         class B_soldier_UAV_F: B_Soldier_F {
             backpack[] = {
                 "USP_REEBOW_3DAP_MC",
-                "USP_REEBOW_3DAP_ACC2_MC",
                 "USP_REEBOW_3DAP_ACC3_MC",
-                "USP_REEBOW_3DAP_ACC5_MC",
                 "USP_REEBOW_3DAP_ACC8_MC"
             };
 
@@ -612,7 +625,7 @@ class Loadouts {
             };
 
             binoculars = "ACE_Vector";
-            gps = "ItemAndroid";
+            gps = "";
         };
 
         // Squad Leader
@@ -627,10 +640,14 @@ class Loadouts {
             };
 
             backpack[] = {
-                "USP_ZIPON_PANEL_CPC_RF2_MC",
-                "USP_ZIPON_PANEL_CPC_RF2_SM_MC",
-                "USP_ZIPON_PANEL_CPC_RF2_SMK_MC",
-                "USP_ZIPON_PANEL_CPC_RF2_SMK_SM_MC"
+                // "USP_ZIPON_PANEL_CPC_RF2_MC",
+                // "USP_ZIPON_PANEL_CPC_RF2_SM_MC",
+                // "USP_ZIPON_PANEL_CPC_RF2_SMK_MC",
+                // "USP_ZIPON_PANEL_CPC_RF2_SMK_SM_MC",
+                "USP_ZIPON_PANEL_CPC_RF2_RGR",
+                "USP_ZIPON_PANEL_CPC_RF2_SM_RGR",
+                "USP_ZIPON_PANEL_CPC_RF2_SMK_RGR",
+                "USP_ZIPON_PANEL_CPC_RF2_SMK_SM_RGR"
             };
 
             addItemsToVest[] = {
@@ -688,7 +705,7 @@ class Loadouts {
                         //R
                         LIST_4("kat_chestSeal"),
                         LIST_4("kat_ncdKit"),
-                        LIST_2("kat_pocketBVM");
+                        LIST_2("kat_pocketBVM"),
                         //C                        
                         LIST_4("ACE_SalineIV"),
                         LIST_2("ACE_salineIV_500"),
@@ -699,6 +716,7 @@ class Loadouts {
                         //P
                         LIST_8("kat_Painkiller"),
                         LIST_8("kat_Penthrox"),
+                        LIST_8("ACE_Morphine"),
                         //A
                         //W
                         //S
@@ -814,14 +832,22 @@ class Loadouts {
                     };
 
                     backpack[] = {
-                        "USP_TACTICAL_PACK_CCT",
-                        "USP_TACTICAL_PACK_CCT2",
-                        "USP_TACTICAL_PACK_CCT3",
-                        "USP_TACTICAL_PACK_CCT4",
-                        "USP_TACTICAL_PACK_CCT5",
-                        "USP_TACTICAL_PACK_CCT6",
-                        "USP_TACTICAL_PACK_CCT7",
-                        "USP_TACTICAL_PACK_CCT8"
+                        // "USP_TACTICAL_PACK_CCT",
+                        // "USP_TACTICAL_PACK_CCT2",
+                        // "USP_TACTICAL_PACK_CCT3",
+                        // "USP_TACTICAL_PACK_CCT4",
+                        // "USP_TACTICAL_PACK_CCT5",
+                        // "USP_TACTICAL_PACK_CCT6",
+                        // "USP_TACTICAL_PACK_CCT7",
+                        // "USP_TACTICAL_PACK_CCT8"
+                        "USP_TACTICAL_PACK_MCT_CCT",
+                        "USP_TACTICAL_PACK_MCT_CCT2",
+                        "USP_TACTICAL_PACK_MCT_CCT3",
+                        "USP_TACTICAL_PACK_MCT_CCT4",
+                        "USP_TACTICAL_PACK_MCT_CCT5",
+                        "USP_TACTICAL_PACK_MCT_CCT6",
+                        "USP_TACTICAL_PACK_MCT_CCT7",
+                        "USP_TACTICAL_PACK_MCT_CCT8"
                     };
                 };
             };
@@ -964,6 +990,7 @@ class Loadouts {
                 "USP_GPNVG18_TAN",
                 "USP_GPNVG18_TAN2"
             };
+            map = "ItemMap";
         };
 
         class B_recon_LAT_F: B_recon_F {
@@ -1074,9 +1101,9 @@ class Loadouts {
             };
 
             addItemsToBackpack[] += {
-                LIST_3("tsp_breach_block_mag"),
-                LIST_3("tsp_breach_package_mag"),
-                LIST_3("DemoCharge_Remote_Mag"),
+                LIST_2("tsp_breach_block_mag"),
+                LIST_2("tsp_breach_package_mag"),
+                LIST_6("DemoCharge_Remote_Mag"),
                 LIST_5("ACE_M14"),
                 "ACE_EntrenchingTool"
             };
@@ -1099,11 +1126,6 @@ class Loadouts {
                 "USP_REEBOW_3DAP_ACC2_RGR",
                 "USP_REEBOW_3DAP_ACC2_CBR",
                 "USP_REEBOW_3DAP_ACC2_MCT",
-            
-                "USP_REEBOW_3DAP_ACC5_CBR",
-                "USP_REEBOW_3DAP_ACC5_MCT",
-                "USP_REEBOW_3DAP_ACC5_MC",
-                "USP_REEBOW_3DAP_ACC5_RGR",
 
                 "USP_REEBOW_3DAP_ACC9_CBR",
                 "USP_REEBOW_3DAP_ACC9_MC",
@@ -1123,7 +1145,7 @@ class Loadouts {
             };
 
             addItemsToVest[] += {
-
+                "ACRE_PRC152"
             };
 
             addItemsToBackpack[] += {
@@ -1158,6 +1180,11 @@ class Loadouts {
             };
             primaryWeaponMagazine = "CUP_20Rnd_762x51_B_M110"; //CUP_20Rnd_TE1_Red_Tracer_762x51_M110
             primaryWeaponMuzzle = "CUP_muzzle_snds_socom762rc";
+            primaryWeaponPointer[] = {
+                "CUP_acc_ANPEQ_15_Flashlight_Black_L",
+                "CUP_acc_ANPEQ_15_Flashlight_OD_L",
+                "CUP_acc_ANPEQ_15_Flashlight_Tan_L"
+            };
             primaryWeaponOptics[] = {
                 "optic_AMS_khk", //MM DLC
                 //"optic_AMS_snd", //MM DLC

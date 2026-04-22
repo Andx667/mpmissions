@@ -93,18 +93,20 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "ACE_Painkillers",
-                LIST_15("ACE_elasticBandage"),
-                LIST_15("ACE_packingBandage"),
+                LIST_2("KAT_Painkiller"),
+                LIST_10("ACE_elasticBandage"),
+                LIST_10("ACE_packingBandage"),
+                LIST_10("ACE_Quikclot"),
                 LIST_4("ACE_Tourniquet"),
-                LIST_2("ACE_CableTie")
+                LIST_2("ACE_CableTie"),
+                LIST_2("KAT_chestSeal")
             };
             
             addItemsToVest[] = {
                 LIST_2("CUP_HandGrenade_M67"),
                 LIST_2("SmokeShell"),
                 LIST_2("CUP_17Rnd_9x19_M17_Black"),
-                LIST_2("ACE_M84"),
+                //LIST_2("ACE_M84"),
                 "ACRE_PRC148"
             };
             
@@ -183,8 +185,7 @@ class Loadouts {
             };
 
             binoculars = "Binocular";
-            //map = "ItemMap";
-            map = "";
+            map = "ItemMap";
             compass = "ItemCompass";
             watch = "ItemWatch";
             gps = "";
@@ -335,7 +336,8 @@ class Loadouts {
                     };
 
                     addItemsToBackpack[] += {
-                        LIST_2("ACRE_PRC117F"),
+                        "ACRE_PRC117F",
+                        "ACRE_GSM",
                         LIST_10("SmokeShellPurple"),
                         "ACE_flags_blue",
                         "ACE_flags_yellow"
@@ -487,19 +489,53 @@ class Loadouts {
         // UAV Operator
         class B_soldier_UAV_F: B_Soldier_F {
             backpack[] = {
-                "USP_REEBOW_3DAP_MC",
-                "USP_REEBOW_3DAP_ACC2_MC",
-                "USP_REEBOW_3DAP_ACC3_MC",
-                "USP_REEBOW_3DAP_ACC5_MC",
-                "USP_REEBOW_3DAP_ACC8_MC"
+                "USP_45L_RUCKSACK_MC",
+                "USP_45L_RUCKSACK_GRN",
+                "USP_45L_RUCKSACK_TAN"
+                // "USP_REEBOW_3DAP_MC",
+                // "USP_REEBOW_3DAP_ACC3_MC",
+                // "USP_REEBOW_3DAP_ACC8_MC"
             };
 
             addItemsToBackpack[] = {
-                LIST_10("ACE_UAVBattery"),
-                "ITC_Land_B_AR2i_Packed"
+
             };
 
             gps = "B_UavTerminal";
+
+            class Rank {
+                class Private {
+                    addItemsToBackpack[] = {
+                        LIST_5("ttt_B_UAFPV_PG7VL_AT_CASE"),
+                    };
+                };
+
+                class Corporal: Private {
+                    addItemsToBackpack[] = {
+                        LIST_2("ITC_Land_B_AR2i_Packed"),
+                        LIST_10("ACE_UAVBattery")
+                    };
+                };
+
+                class Sergeant: Corporal {
+                    addItemsToVest[] = {
+                        "ACRE_PRC152",
+                        LIST_2("CUP_HandGrenade_M67"),
+                        LIST_2("SmokeShell"),
+                        "SmokeShellGreen",
+                        LIST_2("CUP_17Rnd_9x19_M17_Black"),
+                        LIST_2("ACE_M84")
+                    };
+
+                    addItemsToBackpack[] += {
+                        "ACE_flags_red",
+                        "ACE_SpraypaintBlack",
+                        "ACE_SpraypaintGreen",
+                        "ACE_SpraypaintRed",
+                        "ItemCTab"
+                    };
+                };
+            };
         };
 
         // Autorifleman
@@ -511,7 +547,7 @@ class Loadouts {
                 "USP_CRYE_JPC_MGB_CBR"
             };
 
-            primaryWeapon = "CUP_lmg_m249_pip4";
+            primaryWeapon[] = {"CUP_lmg_m249_pip4","CUP_lmg_m249_pip3"};
             primaryWeaponMagazine = "CUP_100Rnd_TE4_Red_Tracer_556x45_M249";
             primaryWeaponOptics[] = {
                 "CUP_optic_Elcan_SpecterDR_black",
@@ -653,15 +689,15 @@ class Loadouts {
                     addItemsToBackpack[] = {
                         //M
                         LIST_16("ACE_Tourniquet"),
-                        LIST_30("ACE_packingBandage"),
-                        LIST_30("ACE_elasticBandage"),
+                        LIST_60("ACE_packingBandage"),
+                        LIST_60("ACE_elasticBandage"),
                         LIST_30("ACE_quikclot"),
                         //A
                         LIST_4("kat_larynx"),
                         //R
                         LIST_4("kat_chestSeal"),
                         LIST_4("kat_ncdKit"),
-                        LIST_2("kat_pocketBVM");
+                        LIST_2("kat_pocketBVM"),
                         //C                        
                         LIST_4("ACE_SalineIV"),
                         LIST_2("ACE_salineIV_500"),
@@ -672,10 +708,11 @@ class Loadouts {
                         //P
                         LIST_8("kat_Painkiller"),
                         LIST_8("kat_Penthrox"),
+                        LIST_8("ACE_Morphine"),
                         //A
                         //W
                         //S
-                        LIST_30("ACE_Suture")
+                        LIST_60("ACE_Suture")
                     };
                 };
 
@@ -705,7 +742,8 @@ class Loadouts {
                     addItemsToBackpack[] += {
                         LIST_4("ACE_SalineIV"),
                         LIST_2("ACE_salineIV_500"),
-                        LIST_2("ACE_SalineIV_250")
+                        LIST_2("ACE_SalineIV_250"),
+                        LIST_3("kat_aatKit")
                     };
                 };
 
@@ -937,6 +975,7 @@ class Loadouts {
                 "USP_GPNVG18_TAN",
                 "USP_GPNVG18_TAN2"
             };
+            map = "ItemMap";
         };
 
         class B_recon_LAT_F: B_recon_F {
@@ -1047,9 +1086,9 @@ class Loadouts {
             };
 
             addItemsToBackpack[] += {
-                LIST_3("tsp_breach_block_mag"),
-                LIST_3("tsp_breach_package_mag"),
-                LIST_3("DemoCharge_Remote_Mag"),
+                LIST_2("tsp_breach_block_mag"),
+                LIST_2("tsp_breach_package_mag"),
+                LIST_6("DemoCharge_Remote_Mag"),
                 LIST_5("ACE_M14"),
                 "ACE_EntrenchingTool"
             };
@@ -1072,11 +1111,6 @@ class Loadouts {
                 "USP_REEBOW_3DAP_ACC2_RGR",
                 "USP_REEBOW_3DAP_ACC2_CBR",
                 "USP_REEBOW_3DAP_ACC2_MCT",
-            
-                "USP_REEBOW_3DAP_ACC5_CBR",
-                "USP_REEBOW_3DAP_ACC5_MCT",
-                "USP_REEBOW_3DAP_ACC5_MC",
-                "USP_REEBOW_3DAP_ACC5_RGR",
 
                 "USP_REEBOW_3DAP_ACC9_CBR",
                 "USP_REEBOW_3DAP_ACC9_MC",
@@ -1096,7 +1130,7 @@ class Loadouts {
             };
 
             addItemsToVest[] += {
-
+                "ACRE_PRC152"
             };
 
             addItemsToBackpack[] += {
@@ -1131,6 +1165,11 @@ class Loadouts {
             };
             primaryWeaponMagazine = "CUP_20Rnd_762x51_B_M110"; //CUP_20Rnd_TE1_Red_Tracer_762x51_M110
             primaryWeaponMuzzle = "CUP_muzzle_snds_socom762rc";
+            primaryWeaponPointer[] = {
+                "CUP_acc_ANPEQ_15_Flashlight_Black_L",
+                "CUP_acc_ANPEQ_15_Flashlight_OD_L",
+                "CUP_acc_ANPEQ_15_Flashlight_Tan_L"
+            };
             primaryWeaponOptics[] = {
                 "optic_AMS_khk", //MM DLC
                 //"optic_AMS_snd", //MM DLC
