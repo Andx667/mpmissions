@@ -5,7 +5,7 @@
     oder auch zum Beladen von Kisten verwenden kann.
  */
 
-setDate [2026, 4, 22, 16, 55];
+setDate [2026, 5, 1, 15, 00];
 
 {
     if (side _x != west) then {
@@ -61,7 +61,8 @@ setDate [2026, 4, 22, 16, 55];
         ["CUP_1Rnd_HE_M203", 10],
         ["CUP_1Rnd_Smoke_M203", 5],
         ["CUP_HandGrenade_M67", 10],
-        ["SmokeShell", 10]
+        ["SmokeShell", 10],
+        ["ACE_M14", 10]
     ],
     true
 ] call ttt_common_fnc_crateFiller; 
