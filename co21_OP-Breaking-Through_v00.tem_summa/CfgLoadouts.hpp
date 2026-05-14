@@ -655,7 +655,8 @@ class Loadouts {
                 "ACE_flags_red",
                 "ACE_SpraypaintBlack",
                 "ACE_SpraypaintGreen",
-                "ACE_SpraypaintRed"
+                "ACE_SpraypaintRed",
+                "ItemCTab"
             };
         };
 
