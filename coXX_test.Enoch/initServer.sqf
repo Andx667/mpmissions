@@ -132,3 +132,6 @@ setDate [2026, 6, 25, 11, 15]; //Datum ändern
         };
     } forEach (everyBackpack _x);
 } forEach [boxer_01,boxer_02,boxer_03,boxer_04,boxer_05, boxer_06];
+
+
+//San Kisten einladen

@@ -393,6 +393,10 @@ class Loadouts {
             };
             primaryWeaponPointer = "";
 
+            addItemsToVest[] += {
+                LIST_3("BWA3_20Rnd_46x30_MP7"),
+            };
+
             goggles[] = {
                 "CUP_G_ESS_BLK",
                 "CUP_G_ESS_BLK_Facewrap_Black",
@@ -403,19 +407,22 @@ class Loadouts {
 
             class Rank {
                 class PRIVATE {
-                    addItemsToVest[] += {
-                        LIST_3("BWA3_20Rnd_46x30_MP7"),
-                    };
 
                 };
-                class SERGEANT: PRIVATE {
+
+                class CORPORAL: PRIVATE {
+
+                };
+                class SERGEANT: CORPORAL {
                     addItemsToVest[] += {
                         "ACRE_PRC152",
                     };
 
+                    gps = "ItemAndroid";
                 };
                 class LIEUTENANT: SERGEANT {
                     backpack = "CUP_B_Kombat_Radio_Olive";
+                    
                     addItemsToBackpack[] = {
                         "ACRE_PRC117F",
                     };
