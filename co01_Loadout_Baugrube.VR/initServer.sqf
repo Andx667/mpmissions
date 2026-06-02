@@ -26,3 +26,4 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
         _x enableAI "AUTOCOMBAT";
     };
 } forEach allUnits;
+

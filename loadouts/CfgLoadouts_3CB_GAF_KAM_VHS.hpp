@@ -88,7 +88,6 @@ class Loadouts {
                 LIST_4("ACE_Tourniquet"),
                 LIST_2("kat_chestSeal"),
                 "UK3CB_BHP_9_13Rnd",
-                "kat_guedel",
             };
             addItemsToVest[] = {
                 LIST_2("rhs_mag_m67"),

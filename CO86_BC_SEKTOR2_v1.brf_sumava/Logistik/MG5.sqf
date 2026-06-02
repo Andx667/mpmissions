@@ -1,0 +1,12 @@
+_box = _this select 0;
+
+clearItemCargoGlobal _box;
+clearMagazineCargoGlobal _box;
+clearWeaponCargoGlobal _box;
+clearBackpackCargoGlobal _box;
+
+_box addAction ["<t color='#d12313'>Kiste Löschen</t>", "deleteVehicle (_this select 0)", nil, 99, false, true, "", ""];
+[_box, true, [0, 2, 0], 45, true] call ace_dragging_fnc_setDraggable;
+[_box, true, [0, 2, 1], 10, true] call ace_dragging_fnc_setCarryable;
+
+_box addItemCargoGlobal ["BWA3_120Rnd_762x51_Tracer_soft", 40];

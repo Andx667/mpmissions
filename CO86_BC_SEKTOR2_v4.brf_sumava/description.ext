@@ -1,0 +1,83 @@
+//--------- onLoad ---------
+
+OnLoadName = "UNCERTAIN TIMES CAMPAIGN";
+OnLoadMission = "SEKTOR 2";
+author="BerlinerCoach";
+loadScreen =  "Pictures\sektor2.jpg";
+
+//--------- Header ---------
+
+class Header {
+    gameType = "coop";
+    minPlayers = "1";
+    maxPlayers = "88";
+};
+
+//--------- Params ---------
+
+class Params {
+    class ttt_main_medicalSettings {
+        title = "TTT Medic Settings";
+        values[] = {0, 1, 2};
+        texts[] = {"KAM Standard", "KAM Einfach", "KAM Training"};
+        default = 0;
+    };
+};
+
+//--------- Respawn ---------
+
+respawn = BASE;
+respawnDelay = 10;
+respawnDialog = false;
+
+//--------- GARBAGE COLLECTOR (dead KI) ---------
+
+corpseLimit = 75;
+corpseRemovalMinTime = 900;
+corpseRemovalMaxTime = 1800;
+
+//--------- Fortification Tool ---------
+
+class ACEX_Fortify_Presets {
+    class BC_MyPreset {
+        displayName = "SILBER";
+        objects[] = {
+           	{"Land_HBarrier_01_big_4_green_F", 20},
+	        {"Land_HBarrier_01_big_tower_green_F", 8},
+	        {"Land_RepairDepot_01_green_F", 1},
+	        {"Land_CampingChair_V2_F", 6},
+	        {"RoadCone_F", 10}
+        };
+    };
+};
+
+//--------- LOBBY WITHOUT KI ---------
+
+disabledAI = 1;
+
+//--------- CBA-SETTINGS ON---------
+
+cba_settings_hasSettingsFile = 1;
+
+//--------- KILLTRACKER ---------
+
+class CfgDebriefingSections {
+    #if __has_include("\z\ace\addons\killtracker\killtracker.inc")
+      #include "\z\ace\addons\killtracker\killtracker.inc"
+    #endif
+};
+
+//--------- STREAMATOR ---------
+
+class CLib {
+    Modules[] = {"CLib", "Streamator"};
+    useExperimentalAutoload = 0;
+    useCompressedFunction = 0;
+    useFallbackRemoteExecution = 0;
+    FrameGraphSize = 128;
+};
+
+
+
+
+
