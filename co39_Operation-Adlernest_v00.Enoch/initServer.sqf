@@ -97,9 +97,9 @@ setDate [2026, 6, 25, 11, 15]; //Datum ändern
             _x addItemCargoGlobal ["BWA3_DM25", 12];
             _x addItemCargoGlobal ["tsp_breach_package_mag", 5];
             _x addItemCargoGlobal ["tsp_breach_block_auto_mag", 5];
-            _x addItemCargoGlobal ["tsp_breach_popper_auto_mag", 3];
             _x addItemCargoGlobal ["ACE_wirecutter", 1];
             _x addItemCargoGlobal ["mts_cutter_folding_saw", 1];
+            _x addItemCargoGlobal ["ACE_Clacker", 1];
         };
         //MG5 Hilf für ZgF
         if (typeof _x == "BWA3_PatrolPack_Fleck") then {
