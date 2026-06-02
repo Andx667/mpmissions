@@ -17,3 +17,11 @@ force ace_medical_treatment_medicIV = 1;
 
 //ACE Cookoff
 force ace_cookoff_enableAmmobox = false;
+
+force ttt_medic_backpack_enable = true;                                                             //default: false;
+force ttt_medic_backpack_supportedBackpacks = '["ttt_backpack_medic_rgr_01"]';                                   //default: [];
+force ttt_medic_backpack_facilityObject = "Land_MedicalTent_01_floor_dark_F";                       //default: "Land_MedicalTent_01_floor_dark_F";
+force ttt_medic_backpack_additionalItems = '["Land_FirstAidKit_01_open_F"]'; //default: [];
+force ttt_medic_backpack_buildTime = 4;                                                             //default: 20;
+force ttt_medic_backpack_useAnimation = true;                                                       //default: true;
+force ttt_medic_backpack_buildAnimation = "Acts_carFixingWheel";                                    //default: "Acts_carFixingWheel";

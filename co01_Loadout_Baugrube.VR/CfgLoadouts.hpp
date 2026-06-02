@@ -380,8 +380,8 @@ class Loadouts {
             backpack = "";
             headgear = "BWA3_CrewmanKSK_Fleck_Headset";
 
-            primaryWeapon = "BWA3_MP7";
-            primaryWeaponMagazine = "BWA3_20Rnd_46x30_MP7";
+            // primaryWeapon = "BWA3_MP7";
+            // primaryWeaponMagazine = "BWA3_20Rnd_46x30_MP7";
             primaryWeaponOptics = "";
             primaryWeaponPointer = "";
 

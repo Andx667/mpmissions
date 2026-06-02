@@ -5,7 +5,7 @@
     oder auch zum Beladen von Kisten verwenden kann.
  */
 
-setDate [2026, 6, 25, 11, 15]; //Datum ändern
+setDate [2026, 6, 25, 11, 00]; //Datum ändern
 
 {
     if (side _x != west) then {
@@ -72,7 +72,8 @@ setDate [2026, 6, 25, 11, 15]; //Datum ändern
     [boxer_01, boxer_06],
     [
         ["BWA3_PatrolPack_Fleck", 1],
-        ["BWA3_MG5_tan_ZO4x30i_pointer", 1]
+        ["BWA3_MG5_tan_ZO4x30i_pointer", 1],
+        ["ITC_Land_B_AR2i_Packed", 1]
     ],
     false
  ] call ttt_common_fnc_crateFiller;
@@ -80,7 +81,7 @@ setDate [2026, 6, 25, 11, 15]; //Datum ändern
  [//Grp Boxer
     [boxer_02, boxer_03, boxer_04, boxer_05],
     [
-        ["ace_guznbag", 1],
+        ["ace_gunbag", 1],
         ["BWA3_MG4_ZO4x30_pointer", 1],
         ["BWA3_200Rnd_556x45_Tracer", 10]
     ],
@@ -120,18 +121,30 @@ setDate [2026, 6, 25, 11, 15]; //Datum ändern
             private _items = [
                 "BWA3_optic_ZO4x30i_MicroT2",
                 "CUP_acc_LLM_black",
-                "BWA3_muzzle_snds_Rotex_IIA",
+                "CUP_muzzle_snds_socom762rc",
                 "BWA3_bipod_Harris"
             ];
             private _magazines = [
-                "BWA3_20Rnd_762x51_G28_LR"
+                ["BWA3_20Rnd_762x51_G28_LR", 20]
                 ];
             _x setVariable ["ace_gunbag_gunbagWeapon", [_weapon , _items, _magazines], true];
-            _x addItemCargoGlobal ["BWA3_20Rnd_762x51_G28_LR", 3];
+            _x addItemCargoGlobal ["BWA3_20Rnd_762x51_G28_LR", 5];
             _x addItemCargoGlobal ["ACE_Rangecard", 1];
+            _x addItemCargoGlobal ["ACE_Yardage450", 1];
         };
     } forEach (everyBackpack _x);
 } forEach [boxer_01,boxer_02,boxer_03,boxer_04,boxer_05, boxer_06];
 
 
 //San Kisten einladen
+[sanb_01, boxer_02, true] call ace_cargo_fnc_loadItem;
+[sanb_02, boxer_03, true] call ace_cargo_fnc_loadItem;
+[sanb_03, boxer_04, true] call ace_cargo_fnc_loadItem;
+[sanc_01, boxer_01, true] call ace_cargo_fnc_loadItem;
+[sanc_02, boxer_01, true] call ace_cargo_fnc_loadItem;
+
+//Mehr Munition für die Boxer
+{
+    _x addMagazinesTurret ["CUP_200Rnd_TE1_Red_Tracer_127x99_M", [0], 5];
+    _x setVariable ["ace_rearm_scriptedLoadout", true, true];
+} foreach [boxer_01, boxer_02, boxer_03, boxer_04, boxer_05, boxer_06]
