@@ -379,7 +379,7 @@ class Loadouts {
 
         //Fahrzeugbesatzung
         class B_crew_F {
-            uniform = "BWA3_Uniform_Crew_Fleck";
+            //uniform = "BWA3_Uniform_Crew_Fleck";
             vest = "BWA3_Vest_Fleck";
             backpack = "";
             headgear = "BWA3_CrewmanKSK_Fleck_Headset";
@@ -396,7 +396,7 @@ class Loadouts {
 
             addItemsToVest[] += {
                 //LIST_3("BWA3_20Rnd_46x30_MP7"),
-                LIST_3("BWA3_30Rnd_556x45_G36"),
+                LIST_3("BWA3_30Rnd_556x45_G36_AP"),
             };
 
             goggles[] = {
@@ -427,6 +427,7 @@ class Loadouts {
                     
                     addItemsToBackpack[] = {
                         "ACRE_PRC117F",
+                        "ACE_flags_purple"
                     };
                 };
             };
@@ -532,6 +533,9 @@ class Loadouts {
                 "ACE_SprayPaintRed",
                 "ACE_SprayPaintGreen",
                 "ACE_SprayPaintBlack",
+                "ACE_flags_red",
+                "ACE_flags_green",
+                "ACE_flags_purple",
                 LIST_15("1Rnd_HE_Grenade_shell"),
                 LIST_5("1Rnd_SmokeRed_Grenade_shell"),
                 LIST_5("1Rnd_Smoke_Grenade_shell")
@@ -557,7 +561,8 @@ class Loadouts {
                 "ACE_SprayPaintGreen",
                 "ACE_SprayPaintBlack",
                 "ace_flags_red",
-                "ACE_flags_green"
+                "ACE_flags_green",
+                "ACE_flags_purple"
             };
         };
 

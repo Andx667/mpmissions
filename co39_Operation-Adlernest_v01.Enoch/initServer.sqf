@@ -143,6 +143,13 @@ setDate [2026, 6, 25, 11, 00]; //Datum ändern
 [sanc_01, boxer_01, true] call ace_cargo_fnc_loadItem;
 [sanc_02, boxer_01, true] call ace_cargo_fnc_loadItem;
 
+
+//treibstofftanks
+[fuel_01, boxer_01, true] call ace_cargo_fnc_loadItem;
+[fuel_02, boxer_02, true] call ace_cargo_fnc_loadItem;
+[fuel_03, boxer_03, true] call ace_cargo_fnc_loadItem;
+[fuel_04, boxer_04, true] call ace_cargo_fnc_loadItem;
+
 //Mehr Munition für die Boxer
 {
     _x addMagazinesTurret ["CUP_200Rnd_TE1_Red_Tracer_127x99_M", [0], 5];
