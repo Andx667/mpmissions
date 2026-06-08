@@ -127,9 +127,27 @@ class Loadouts {
 
             goggles[] = {
                 "",
-                "BWA3_G_Combat_black",
-                "BWA3_G_Combat_clear",
-                "BWA3_G_Combat_orange",
+                // "BWA3_G_Combat_black",
+                // "BWA3_G_Combat_clear",
+                // "BWA3_G_Combat_orange"
+                "USP_MFRAME_BLK",
+                "USP_MFRAME_BLK2",
+                "USP_MFRAME_BLK3",
+                "USP_MFRAME_TAN",
+                "USP_MFRAME_TAN2",
+                "USP_MFRAME_TAN3",
+                "USP_MFRAME_SMG1_BLK",
+                "USP_MFRAME_SMG1_BLK2",
+                "USP_MFRAME_SMG1_TAN",
+                "USP_MFRAME_SMG1_TAN2",
+                "USP_MFRAME_SMG2_BLK",
+                "USP_MFRAME_SMG2_BLK2",
+                "USP_MFRAME_SMG2_TAN",
+                "USP_MFRAME_SMG2_TAN2",
+                "USP_MFRAME_SMG3_BLK",
+                "USP_MFRAME_SMG3_BLK2",
+                "USP_MFRAME_SMG3_TAN",
+                "USP_MFRAME_SMG3_TAN2"
                 };
             nvgoggles = "";
 
@@ -294,6 +312,7 @@ class Loadouts {
                 "BWA3_bipod_Harris_green",
                 "BWA3_bipod_Harris_tan",
                 };
+            primaryWeaponMuzzle = "BWA3_muzzle_snds_Rotex_IIA"
 
             vest[] = {
                 //"BWA3_Vest_Marksman_Fleck"
@@ -645,6 +664,9 @@ class Loadouts {
                 "BWA3_Vest_Medic_Multi",
                 //"BWA3_Vest_Medic_Tropen"
                 };
+            goggles[] += {
+                "G_Respirator_blue_F"
+            };
 
             class Rank {
 
