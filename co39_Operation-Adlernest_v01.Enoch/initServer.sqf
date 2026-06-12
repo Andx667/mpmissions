@@ -154,4 +154,10 @@ setDate [2026, 6, 25, 11, 00]; //Datum ändern
 {
     _x addMagazinesTurret ["CUP_200Rnd_TE1_Red_Tracer_127x99_M", [0], 5];
     _x setVariable ["ace_rearm_scriptedLoadout", true, true];
-} foreach [boxer_01, boxer_02, boxer_03, boxer_04, boxer_05, boxer_06]
+} foreach [boxer_01, boxer_03, boxer_05];
+
+//Mehr Munition für die Boxer
+{
+    _x addMagazinesTurret ["CUP_32Rnd_40mm_MK19_M", [0], 5];
+    _x setVariable ["ace_rearm_scriptedLoadout", true, true];
+} foreach [boxer_02, boxer_04, boxer_06];
