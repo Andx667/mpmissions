@@ -62,3 +62,25 @@ _player addMPEventHandler ["MPRespawn", {
         };
     };
 }];
+
+[
+    "ace_wardrobe_itemChangedBegin",
+    {
+        params ["_replaceData", "_extendedInfo"];
+
+        private _player = _replaceData get "player";
+        private _insignia = [_player] call BIS_fnc_getUnitInsignia;
+        _player setVariable ["BIS_fnc_setUnitInsignia_class", _insignia];
+    }
+] call CBA_fnc_addEventHandler;
+
+[
+    "ace_wardrobe_itemChangedEnd",
+    {
+        params ["_replaceData", "_extendedInfo"];
+
+        private _player = _replaceData get "player";
+        private _insignia = _player getVariable ["BIS_fnc_setUnitInsignia_class", ""];
+        [_player, _insignia] call BIS_fnc_setUnitInsignia;
+    }
+] call CBA_fnc_addEventHandler;

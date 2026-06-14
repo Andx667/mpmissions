@@ -5,7 +5,7 @@
     oder auch zum Beladen von Kisten verwenden kann.
  */
 
-setDate [2016, 6, 25, 11, 15]; //Datum ändern
+setDate [2026, 6, 20, 17, 30]; //Datum ändern
 
 {
     if (side _x != west) then {
@@ -21,8 +21,42 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
 } forEach allUnits;
 
 {
-    // [_x, "Land_BagBunker_01_large_green_F", 1] call grad_fortifications_fnc_addFort;
+    [_x, "Land_BagBunker_01_small_green_F", 1] call grad_fortifications_fnc_addFort;
     [_x, "Land_BagFence_01_corner_green_F", 10] call grad_fortifications_fnc_addFort;
     [_x, "Land_BagFence_01_long_green_F", 10] call grad_fortifications_fnc_addFort;
     [_x, "Land_Razorwire_F", 3] call grad_fortifications_fnc_addFort;
 } forEach [dingo_01, dingo_02, dingo_03, dingo_04, dingo_05];
+
+
+[
+    [ammo_01, ammo_02, ammo_03, ammo_04],
+    [
+        ["BWA3_30Rnd_556x45_G36_AP", 50],
+        ["BWA3_15Rnd_9x19_P8", 10],
+        ["BWA3_200Rnd_556x45_Tracer", 10],
+        ["BWA3_20Rnd_762x51_G28_AP", 10],
+        ["BWA3_20Rnd_762x51_G28_LR", 10]
+    ]
+] call ttt_common_fnc_crateFiller;
+
+[
+    [gren_01, gren_02, gren_03, gren_04],
+    [
+        ["BWA3_DM32_Green", 10],
+        ["BWA3_DM25", 20],
+        ["BWA3_DM51A1", 20],
+        ["1Rnd_HE_Grenade_shell", 20],
+        ["1Rnd_SmokeRed_Grenade_shell", 10],
+        ["1Rnd_Smoke_Grenade_shell", 10]
+    ]
+] call ttt_common_fnc_crateFiller;
+
+[
+    [mines_01],
+    [
+        ["ACE_FlareTripMine_Mag_Red", 10],
+        ["ACE_FlareTripMine_Mag_Green", 10],
+        ["ACE_FlareTripMine_Mag", 10],
+        ["ACE_DefusalKit", 1]
+    ]
+] call ttt_common_fnc_crateFiller;
