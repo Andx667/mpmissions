@@ -273,6 +273,7 @@ class Loadouts {
                 "ACE_SpareBarrel",
                 LIST_6("BWA3_120Rnd_762x51_Tracer_soft"),
                 "ACE_EntrenchingTool",
+                LIST_3("ACE_Sandbag_empty")
             };
             binoculars = "Binocular";
         };
@@ -312,7 +313,7 @@ class Loadouts {
                 "BWA3_bipod_Harris_green",
                 "BWA3_bipod_Harris_tan",
                 };
-            primaryWeaponMuzzle = "BWA3_muzzle_snds_Rotex_IIA"
+            primaryWeaponMuzzle = "BWA3_muzzle_snds_Rotex_IIA";
 
             vest[] = {
                 //"BWA3_Vest_Marksman_Fleck"
@@ -508,13 +509,6 @@ class Loadouts {
             };
         };
 
-        class B_sniper_F {
-
-        };
-
-        class B_spotter_F: B_soldier_M_F {
-
-        };
 
         //Mörser
         class B_support_AMort_F: B_Soldier_F {
@@ -537,8 +531,11 @@ class Loadouts {
 
         //Pilots
         class B_helicrew_F {
-            uniform = "BWA3_Uniform2_Fleck";
-            vest = "BWA3_Vest_Fleck";
+            vest[] = {
+                //"BWA3_Vest_Fleck"
+                "BWA3_Vest_Multi",
+                //"BWA3_Vest_Tropen"
+                };
             headgear[] = {
                 "BWA3_CrewHelmet_NH90",
                 "ttt_Helmet_Buzzard",
@@ -561,6 +558,7 @@ class Loadouts {
 
         class B_Helipilot_F: B_helicrew_F{
             uniform = "BWA3_Uniform_Helipilot";
+            vest = "FIR_pilot_vest";
             headgear[] += {
                 "BWA3_TopOwl_nvg",
             };
@@ -570,18 +568,73 @@ class Loadouts {
         };
 
         //Aufklärer
-        class B_Patrol_Soldier_TL_F: B_soldier_M_F {
-
-        };
-
-        class B_Patrol_Soldier_UAV_F: B_soldier_M_F {
-
-        };
-
         class B_Patrol_Soldier_M_F: B_soldier_M_F {
+            primaryWeapon = "BWA3_G28";
+            primaryWeaponOptics[] = {
+                "BWA3_optic_PMII_DMR_MicroT1_front",
+                "BWA3_optic_PMII_DMR_MicroT1_rear",
+                };
+
+            primaryWeaponUnderbarrel[] = {
+                "BWA3_bipod_Harris",
+                "BWA3_bipod_Harris_green",
+                "BWA3_bipod_Harris_tan",
+                };
+            primaryWeaponMuzzle = "BWA3_muzzle_snds_Rotex_IIA";
+        };
+
+        class B_Patrol_Soldier_UAV_F: B_Patrol_Soldier_M_F {
 
         };
 
+        class B_Patrol_Soldier_TL_F: B_Patrol_Soldier_M_F {
+
+        };
+
+        class B_sniper_F {
+            primaryWeapon = "BWA3_G29";
+            primaryWeaponOptics[] = {
+                "BWA3_optic_M5Xi_Tremor3_MicroT2",
+                "BWA3_optic_M5Xi_MSR_MicroT2",
+                };
+            primaryWeaponUnderbarrel[] = {
+                "BWA3_bipod_Harris",
+                "BWA3_bipod_Harris_green",
+                "BWA3_bipod_Harris_tan",
+                };
+            primaryWeaponMuzzle = "BWA3_muzzle_snds_Rotex_Monoblock";
+            primaryWeaponMagazine = "BWA3_10Rnd_86x70_G29";
+
+            uniform[] = {
+                //"BWA3_Uniform_Ghillie_Fleck",
+                "BWA3_Uniform_Ghillie_Multi",
+                //"BWA3_Uniform_Ghillie_Tropen"
+            };
+
+            vest[] = {
+                //"BWA3_Vest_Marksman_Fleck"
+                "BWA3_Vest_Marksman_Multi",
+                //"BWA3_Vest_Marksman_Tropen"
+                };
+
+            addItemsToVest[] += {
+                LIST_7("BWA3_20Rnd_762x51_G28_AP"),
+                "ACE_Rangecard",
+            };
+            addItemsToBackpack[] = {
+                LIST_8("BWA3_20Rnd_762x51_G28_LR"),
+            };
+            binoculars = "ACE_Yardage450";
+
+        };
+
+        class B_spotter_F: B_Patrol_Soldier_M_F {
+            uniform[] = {
+                //"BWA3_Uniform_Ghillie_Fleck",
+                "BWA3_Uniform_Ghillie_Multi",
+                //"BWA3_Uniform_Ghillie_Tropen"
+            };
+        };
         //Führung
         class B_Soldier_TL_F {
             vest[] = {
@@ -664,9 +717,6 @@ class Loadouts {
                 "BWA3_Vest_Medic_Multi",
                 //"BWA3_Vest_Medic_Tropen"
                 };
-            goggles[] += {
-                "G_Respirator_blue_F"
-            };
 
             class Rank {
 
@@ -846,6 +896,27 @@ class Loadouts {
 
         //SOF
         class B_recon_F {
+            uniform[] = {
+                "USP_G3C_MTN",
+                "USP_G3C_RS_MTN",
+                "USP_G3C_RS2_MTN",
+                //"USP_G3C_IST_MTN"
+                };
+            primaryWeapon[] = {
+                "BWA3_G38C",
+                "BWA3_G38C_tan"
+            };
+            vest[] = {
+                "BWA3_Vest_JPC_Rifleman_Multi",
+                //"BWA3_Vest_JPC_Rifleman_Fleck",
+                //"BWA3_Vest_JPC_Rifleman_Tropen"
+            };
+            headgear[] = {
+                "BWA3_OpsCore_FastMT_SOF_Multi",
+                //"BWA3_OpsCore_FastMT_SOF_Fleck",
+                //"BWA3_OpsCore_FastMT_SOF_Tropen"
+            };
+
 
         };
 
@@ -853,7 +924,20 @@ class Loadouts {
         };
 
         class B_recon_medic_F: B_recon_F {
+            backpack = "ttt_backpack_medic_rgr_01";
 
+            class Rank {
+
+                class PRIVATE {
+
+                };
+                class CORPORAL: PRIVATE {
+
+                };
+                class SERGEANT: CORPORAL {
+
+                };
+            };
         };
 
         class B_recon_exp_F: B_recon_F {
@@ -861,15 +945,52 @@ class Loadouts {
         };
 
         class B_recon_JTAC_F: B_recon_F {
+            vest[] = {
+                "BWA3_Vest_JPC_Radioman_Multi",
+                //"BWA3_Vest_JPC_Radioman_Fleck",
+                //"BWA3_Vest_JPC_Radioman_Tropen"
+            };
+            goggles[] += {
+                "G_Aviator"
+            };
 
         };
 
         class B_recon_TL_F: B_recon_JTAC_F {
-
+            vest[] = {
+                "BWA3_Vest_JPC_Leader_Multi",
+                //"BWA3_Vest_JPC_Leader_Fleck",
+                //"BWA3_Vest_JPC_Leader_Tropen"
+            };
         };
 
-        class B_recon_M_F {
+        class B_recon_M_F: B_recon_F {
+            primaryWeapon = "BWA3_G28";
+            primaryWeaponOptics[] = {
+                "BWA3_optic_PMII_DMR_MicroT1_front",
+                "BWA3_optic_PMII_DMR_MicroT1_rear",
+                };
 
+            primaryWeaponUnderbarrel[] = {
+                "BWA3_bipod_Harris",
+                "BWA3_bipod_Harris_green",
+                "BWA3_bipod_Harris_tan",
+                };
+            primaryWeaponMuzzle = "BWA3_muzzle_snds_Rotex_IIA";
+            
+            headgear[] += {
+                "BWA3_Booniehat_Multi",
+                //"BWA3_Booniehat_Fleck",
+                //"BWA3_Booniehat_Tropen"
+            };
+
+            addItemsToVest[] = {
+                LIST_7("BWA3_20Rnd_762x51_G28_AP"),
+                "ACE_Rangecard",
+            };
+            addItemsToBackpack[] = {
+                LIST_8("BWA3_20Rnd_762x51_G28_LR"),
+            };
         };
     };
 };

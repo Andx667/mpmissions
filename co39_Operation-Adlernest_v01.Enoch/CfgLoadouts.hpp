@@ -136,7 +136,7 @@ class Loadouts {
         };
     };
     class Type {
-//Rifleman
+        //Rifleman
         class B_Soldier_F {
             addItemsToVest[] += {
                 LIST_8("BWA3_30Rnd_556x45_G36_AP"),

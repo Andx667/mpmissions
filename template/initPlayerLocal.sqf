@@ -13,6 +13,7 @@
  */
  params ["_player", "_didJIP"];
 
+
 // Waffe sichern
 // Gegenstück zu [QGVAR(loadoutApplied), [_loadoutTarget, _unitLoadout], _loadoutTarget] call CBA_fnc_targetEvent;
 [
@@ -28,23 +29,21 @@
                 //Change callsign to mission
                 private _groupID = groupID group _unit;
                 switch (_groupID) do {
-                    case "Bulldog" {
+                    case "Adler-Auf";
+                    case "Adler": {
                         [_unit, "TTT_yellow_emblem"] call BIS_fnc_setUnitInsignia;
                     };
-                    case "Bulldog-1" {
+                    case "Adler-1-Auf";
+                    case "Adler-1": {
                         [_unit, "TTT_black_emblem"] call BIS_fnc_setUnitInsignia;
                     };
-                    case "Bulldog-2" {
+                    case "Adler-2-Auf";
+                    case "Adler-2": {
                         [_unit, "TTT_red_emblem"] call BIS_fnc_setUnitInsignia;
                     };
-                    case "Bulldog-3" {
+                    case "Adler-3-Auf";
+                    case "Adler-3": {
                         [_unit, "TTT_violet_emblem"] call BIS_fnc_setUnitInsignia;
-                    };
-                    case "Pavehawk" {
-                        [_unit, "TTT_white_emblem"] call BIS_fnc_setUnitInsignia;
-                    };
-                    case "Guardian" {
-                        [_unit, "TTT_white_emblem"] call BIS_fnc_setUnitInsignia;
                     };
                 };
             },
