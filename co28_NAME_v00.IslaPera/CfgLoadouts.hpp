@@ -94,8 +94,7 @@ class Loadouts {
                 LIST_2("BWA3_DM25"),
                 LIST_2("BWA3_DM51A1"),
                 "ACRE_SEM52SL",
-                "BWA3_DM32_Green",
-                "BWA3_optic_NSV600"
+                "BWA3_DM32_Green"
             };
             addItemsToBackpack[] = {};
 
@@ -151,7 +150,7 @@ class Loadouts {
                 "USP_MFRAME_SMG3_TAN",
                 "USP_MFRAME_SMG3_TAN2"
                 };
-            nvgoggles = "USP_PVS31_TAN";
+            nvgoggles = "ACE_NVG_Wide_Black";
 
             binoculars = "";
             map = "ItemMap";
@@ -166,6 +165,10 @@ class Loadouts {
         class B_Soldier_F { //Rifleman
             addItemsToVest[] += {
                 LIST_8("BWA3_30Rnd_556x45_G36_AP"),
+            };
+
+            addItemToVest[] += {
+                "BWA3_optic_NSV600"
             };
             addItemsToBackpack[] = {
                 "ACE_EntrenchingTool",
@@ -281,7 +284,7 @@ class Loadouts {
                 "ACE_EntrenchingTool",
                 LIST_3("ACE_Sandbag_empty")
             };
-            binoculars = "Binocular";
+            binoculars = "Rangefinder";
         };
 
         class B_soldier_UAV_F: B_Soldier_F { //Drohnenbediener
@@ -668,7 +671,8 @@ class Loadouts {
             };
             addItemsToVest[] += {
                 LIST_8("BWA3_30Rnd_556x45_G36_Tracer"),
-                "ACRE_PRC152"
+                "ACRE_PRC152",
+                "BWA3_optic_NSV600"
             };
             addItemsToBackpack[] += {
                 "ACE_SprayPaintRed",
@@ -735,7 +739,7 @@ class Loadouts {
                         "ACE_surgicalKit",
                     };
 
-                    addItemsToBackpack[] += {
+                    addItemsToBackpack[] = {
                         //M
                         LIST_30("ACE_packingBandage"),
                         LIST_30("ACE_elasticBandage"),
@@ -987,7 +991,10 @@ class Loadouts {
                 "BWA3_bipod_Harris_green",
                 "BWA3_bipod_Harris_tan",
                 };
-            primaryWeaponMuzzle = "BWA3_muzzle_snds_Rotex_IIA";
+            primaryWeaponMuzzle[] = {
+                "BWA3_muzzle_snds_Rotex_IIA",
+                "CUP_muzzle_snds_socom762rc"
+            };
             
             headgear[] += {
                 "BWA3_Booniehat_Multi",
