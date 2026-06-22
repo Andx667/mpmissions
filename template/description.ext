@@ -48,3 +48,13 @@ class CLib {
     useCompressedFunction = 0;
     useFallbackRemoteExecution = 0;
 };
+
+// - Params -------------------------------------------------------------------
+class Params {
+    class medical_system {
+        title = "Sanitäts System";
+        values[] = {0, 1, 2};
+        texts[] = {"Standard", "Einfach", "Training"};
+        default = 0;
+    };
+};
