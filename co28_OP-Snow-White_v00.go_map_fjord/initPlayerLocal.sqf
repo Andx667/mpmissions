@@ -28,22 +28,22 @@
                 //Change callsign to mission
                 private _groupID = groupID group _unit;
                 switch (_groupID) do {
-                    case "Bulldog" {
+                    case "Bulldog": {
                         [_unit, "TTT_yellow_emblem"] call BIS_fnc_setUnitInsignia;
                     };
-                    case "Bulldog-1" {
+                    case "Bulldog-1": {
                         [_unit, "TTT_black_emblem"] call BIS_fnc_setUnitInsignia;
                     };
-                    case "Bulldog-2" {
+                    case "Bulldog-2": {
                         [_unit, "TTT_red_emblem"] call BIS_fnc_setUnitInsignia;
                     };
-                    case "Bulldog-3" {
+                    case "Bulldog-3": {
                         [_unit, "TTT_violet_emblem"] call BIS_fnc_setUnitInsignia;
                     };
-                    case "Pavehawk" {
+                    case "Pavehawk": {
                         [_unit, "TTT_white_emblem"] call BIS_fnc_setUnitInsignia;
                     };
-                    case "Guardian" {
+                    case "Guardian": {
                         [_unit, "TTT_white_emblem"] call BIS_fnc_setUnitInsignia;
                     };
                 };

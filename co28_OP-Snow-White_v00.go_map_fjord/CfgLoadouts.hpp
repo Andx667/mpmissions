@@ -103,7 +103,7 @@ class Loadouts {
                 LIST_2("kat_Painkiller"),
                 LIST_10("ACE_elasticBandage"),
                 LIST_10("ACE_packingBandage"),
-                LIST_10("ACE_quickClot"),
+                LIST_10("ACE_quikClot"),
                 LIST_4("ACE_Tourniquet"),
                 LIST_2("CUP_17Rnd_9x19_glock17"),
                 LIST_2("kat_chestSeal"),
@@ -937,7 +937,7 @@ class Loadouts {
             addItemsToBackpack[] += {
                 "ACRE_PRC117F",
                 "ACRE_VHF30108SPIKE",
-                "itc_land_tablet_fdc",
+                //"itc_land_tablet_fdc",
             };
             binoculars = "ACE_Vector";
             gps = "ItemAndroid";

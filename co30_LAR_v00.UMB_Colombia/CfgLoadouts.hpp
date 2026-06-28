@@ -46,6 +46,12 @@ class Loadouts {
     class Side {
         //class BluforPlayers {
         class BluFor {
+
+        };
+    };
+
+    class Type {
+        class B_Survivor_F {
             uniform[] = {
                 //FROG MARPAT
                 //"CUP_U_B_USMC_FROG1_WMARPAT",
@@ -117,19 +123,16 @@ class Loadouts {
             watch = "ItemWatch";
             gps = "";
             radio = "";
-        };
-    };
-
-    class Type {
+        }
         //Rifleman
-        class B_Soldier_F {
+        class B_Soldier_F: B_Survivor_F {
             vest = "CUP_V_B_Eagle_SPC_Rifleman";
             addItemsToVest[] += {
                 LIST_8("CUP_30Rnd_556x45_Stanag"),
             };
         };
 
-        class B_soldier_AR_F {
+        class B_soldier_AR_F: B_Survivor_F {
             vest = "CUP_V_B_Eagle_SPC_AR";
             backpack = "CFP_AssaultPack_Marpat";
 
@@ -190,7 +193,7 @@ class Loadouts {
 
         };
 
-        class B_HeavyGunner_F {
+        class B_HeavyGunner_F: B_Survivor_F {
             primaryWeapon = "CUP_lmg_M240_norail";
             primaryWeaponMagazine = "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M";
             primaryWeaponOptics = "";
@@ -229,7 +232,7 @@ class Loadouts {
 
         };
 
-        class B_soldier_M_F {
+        class B_soldier_M_F: B_Survivor_F {
             vest = "CUP_V_B_Eagle_SPC_DMR";
             backpack = "CFP_AssaultPack_Marpat";
 
@@ -269,7 +272,7 @@ class Loadouts {
         };
 
         //Crew
-        class B_crew_F {
+        class B_crew_F: B_Survivor_F  {
 
             class Rank {
 
@@ -319,7 +322,7 @@ class Loadouts {
         };
 
         //Führung
-        class B_Soldier_TL_F {
+        class B_Soldier_TL_F: B_Survivor_F {
             vest = "CUP_V_B_Eagle_SPC_TL";
             backpack = "CFP_AssaultPack_Marpat";
             headgear[] = {
@@ -433,7 +436,7 @@ class Loadouts {
 
 
         //Medics
-        class B_medic_F {
+        class B_medic_F: B_Survivor_F {
 
             class Rank {
 
@@ -633,7 +636,7 @@ class Loadouts {
 
         };
 
-        class B_helicrew_F {
+        class B_helicrew_F: B_Survivor_F {
             primaryWeapon = "";
             primaryWeaponMagazine = "";
             primaryWeaponOptics = "";
