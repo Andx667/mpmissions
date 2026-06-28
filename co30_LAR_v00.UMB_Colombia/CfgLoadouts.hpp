@@ -69,7 +69,7 @@ class Loadouts {
                 //DESERT
             };
             vest = "CUP_V_B_Eagle_SPC_Rifleman";
-            backpack = "CFP_AssaultPack_Marpat";
+            backpack = "";
             headgear[] = {
                 "CUP_H_LWHv2_MARPAT",
                 "CUP_H_LWHv2_MARPAT_NVG_gog2_cov2",
@@ -81,18 +81,19 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                LIST_15("ACE_quikclot"),
-                LIST_15("ACE_packingBandage"),
+                LIST_10("ACE_quikclot"),
+                LIST_10("ACE_packingBandage"),
+                LIST_10("ACE_elasticBandage"),
                 LIST_4("ACE_Tourniquet"),
                 LIST_2("kat_chestSeal"),
                 LIST_2("kat_Painkiller"),
                 LIST_2("ACE_CableTie"),
             };
             addItemsToVest[] = {
-                LIST_2("CUP_HandGrenade_M67"),
+                LIST_3("CUP_HandGrenade_M67"),
                 LIST_2("SmokeShell"),
                 "SmokeShellGreen",
-                LIST_2("ACE_M84")
+                //LIST_2("ACE_M84")
                 };
             addItemsToBackpack[] = {};
 
@@ -126,11 +127,11 @@ class Loadouts {
             addItemsToVest[] += {
                 LIST_8("CUP_30Rnd_556x45_Stanag"),
             };
-
         };
 
         class B_soldier_AR_F {
             vest = "CUP_V_B_Eagle_SPC_AR";
+            backpack = "CFP_AssaultPack_Marpat";
 
             primaryWeapon = "CUP_lmg_M249_E2";
             primaryWeaponMagazine = "CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
@@ -145,6 +146,8 @@ class Loadouts {
         };
 
         class B_soldier_AAR_F: B_Soldier_F {
+            backpack = "CFP_AssaultPack_Marpat";
+
             addItemsToBackpack[] = {
                 LIST_3("CUP_200Rnd_TE4_Red_Tracer_556x45_M249"),
                 "ACE_SpareBarrel",
@@ -297,17 +300,20 @@ class Loadouts {
                 };
 
                 class Sergeant: Corporal {
+                    backpack = "CUP_B_Kombat_Radio_Olive";
+
                     addItemsToVest[] += {
                         "ACRE_PRC152"
                     };
 
+                    addItemsToBackpack[] += {
+                        "ACRE_PRC117F",
+                    };
 
                 };
 
                 class Lieutenant: Sergeant {
-                    addItemsToBackpack[] += {
-                        "ACRE_PRC117F",
-                    };
+
                 };
             };
         };
@@ -326,7 +332,7 @@ class Loadouts {
             primaryWeaponMagazine = "CUP_30Rnd_556x45_Stanag_Tracer_Red";
 
             addItemsToVest[] += {
-                LIST_6("CUP_30Rnd_556x45_Stanag_Tracer_Red");
+                LIST_8("CUP_30Rnd_556x45_Stanag_Tracer_Red");
                 "ACRE_PRC148",
             };
 
@@ -433,7 +439,7 @@ class Loadouts {
 
                 class PRIVATE {
                     vest = "CUP_V_B_Eagle_SPC_Corpsman";
-                    backpack = "CUP_B_Raid_bag_SSO_Ataka_2_Rug_Swamp";
+                    backpack = "ttt_backpack_medic_rgr_03";
 
                     addItemsToVest[] = {
                             LIST_3("CUP_30Rnd_556x45_Stanag"),
@@ -452,12 +458,12 @@ class Loadouts {
                             LIST_8("kat_ncdKit"),
                             LIST_8("kat_larynx"),
                             //R
-                            "kat_pocketBVM",
+                            LIST_3("kat_pocketBVM"),
                             //C
                             LIST_16("kat_IV_16"),
-                            LIST_8("ACE_SalineIV"),
-                            LIST_4("ACE_salineIV_500"),
-                            LIST_4("ACE_SalineIV_250"),
+                            LIST_12("ACE_SalineIV"),
+                            LIST_6("ACE_salineIV_500"),
+                            LIST_6("ACE_SalineIV_250"),
                             LIST_16("ACE_Epinephrine"),
                             LIST_8("kat_lidocaine"),
                             "kat_AED",
@@ -469,7 +475,7 @@ class Loadouts {
                             LIST_8("kat_Penthrox"),
                             //A
                             //W
-                            LIST_30("ACE_Suture"),
+                            LIST_60("ACE_Suture"),
                             //S
                             "ACE_Bodybag",
                     };
@@ -532,6 +538,11 @@ class Loadouts {
                             //W
                             LIST_30("ACE_Suture"),
                             //S
+                    };
+
+                    headgear[] = {
+                        "H_PilotHelmetHeli_I_E",
+                        "H_PilotHelmetHeli_B",
                     };
                 };
             };
@@ -634,7 +645,18 @@ class Loadouts {
             uniform = "CUP_U_B_USArmy_PilotOverall";
             vest = "CUP_V_B_PilotVest";
 
-            headgear = "CUP_H_SPH4";
+            addItemsToVest[] = {
+                LIST_2("CUP_7Rnd_45ACP_1911"),
+            };
+
+            headgear[] = {
+                "CFP_SOARCREW_BLUE",
+                "CFP_SOARCREW_STACHE",
+                "CFP_SOARCREW_RED",
+                "CFP_SOARCREW_SKULL",
+                "FIR_HGU56P_Skull_Death",
+                "FIR_HGU56P_Skull"
+            };
 
         };
 
@@ -643,6 +665,11 @@ class Loadouts {
 
             addItemsToBackpack[] += {
                 "ACRE_PRC117F"
+            };
+
+            headgear[] = {
+                "H_PilotHelmetHeli_I_E",
+                "H_PilotHelmetHeli_B",
             };
         };
     };

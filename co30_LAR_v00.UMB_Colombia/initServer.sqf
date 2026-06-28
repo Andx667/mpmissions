@@ -25,8 +25,8 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
     [fhz_01, fhz_02, fhz_03, fhz_04, fhz_05],
     [
         //Ammo
-        ["CUP_30Rnd_556x45_Stanag", 30],
-        ["CUP_200Rnd_TE4_Red_Tracer_556x45_M249", 12],
+        ["CUP_30Rnd_556x45_Stanag", 60],
+        ["CUP_200Rnd_TE4_Red_Tracer_556x45_M249", 16],
         //Grenades
         ["CUP_HandGrenade_M67", 18],
         ["SmokeShell", 18],
@@ -51,6 +51,7 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
     [
         ["CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M", 12],
         ["dzn_MG_Tripod_M122A1_M240Mount_Carry", 1],
+        ["CUP_lmg_M240_norail", 1],
         ["ACE_SpareBarrel", 2],
         ["CUP_B_USMC_MOLLE", 1]
     ],
