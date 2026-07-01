@@ -1,0 +1,58 @@
+player setRank "PRIVATE";
+
+comment "Exported from Arsenal by Andx";
+
+comment "[!] UNIT MUST BE LOCAL [!]";
+if (!local player) exitWith {};
+
+comment "Remove existing items";
+removeAllWeapons player;
+removeAllItems player;
+removeAllAssignedItems player;
+removeUniform player;
+removeVest player;
+removeBackpack player;
+removeHeadgear player;
+removeGoggles player;
+
+comment "Add weapons";
+player addWeapon "CUP_arifle_HK417_20";
+player addPrimaryWeaponItem "ACE_DBAL_A3_Red";
+player addPrimaryWeaponItem "CUP_optic_SB_3_12x50_PMII";
+player addPrimaryWeaponItem "CUP_muzzle_snds_socom762rc";
+player addPrimaryWeaponItem "CUP_bipod_VLTOR_Modpod_black";
+player addPrimaryWeaponItem "ACE_20Rnd_762x51_M118LR_Mag";
+player addWeapon "CUP_hgun_Glock17";
+player addHandgunItem "CUP_17Rnd_9x19_glock17";
+
+comment "Add containers";
+player forceAddUniform "NOR_Gorka_Grey_Uniform";
+player addVest "CFP_LBT6094_operator_OGA";
+player addBackpack "CFP_Kitbag_Drab";
+
+comment "Add binoculars";
+player addWeapon "Binocular";
+
+comment "Add items to containers";
+player addItemToUniform "ACE_MapTools";
+player addItemToUniform "ACE_Flashlight_XL50";
+player addItemToUniform "acex_intelitems_notepad";
+player addItemToUniform "ACE_Painkillers";
+for "_i" from 1 to 15 do {player addItemToUniform "ACE_fieldDressing";};
+for "_i" from 1 to 15 do {player addItemToUniform "ACE_packingBandage";};
+for "_i" from 1 to 4 do {player addItemToUniform "ACE_Tourniquet";};
+for "_i" from 1 to 2 do {player addItemToUniform "CUP_17Rnd_9x19_glock17";};
+for "_i" from 1 to 8 do {player addItemToVest "ACE_20Rnd_762x51_M118LR_Mag";};
+player addItemToVest "ACE_Rangecard";
+for "_i" from 1 to 8 do {player addItemToBackpack "ACE_20Rnd_762x51_Mag_SD";};
+player addItemToBackpack "NOR_Opscore_Multi_SF";
+
+player addHeadgear "CUP_H_PMC_Beanie_Headphones_Black";
+player addGoggles "CUP_G_Oakleys_Clr";
+
+comment "Add items";
+player linkItem "ItemMap";
+player linkItem "ItemCompass";
+player linkItem "ItemWatch";
+
+[ACE_player, currentWeapon ACE_player, true] call ace_safemode_fnc_setWeaponSafety;
