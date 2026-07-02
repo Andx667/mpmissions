@@ -18,8 +18,14 @@ force ace_medical_stateMachine_cardiacArrestTime = 1200; //20 Minuten Lifetime
 
 //ACE Cookoff
 force ace_cookoff_enableAmmobox = false;
+force ace_cookoff_probabilityCoef = 0;
 
 // ACE Repair
-ace_repair_engineerSetting_fullRepair = 2;
-ace_repair_fullRepairLocation = 0;
-ace_repair_fullRepairRequiredItems = ["ace_repair_anyToolKit"];
+force ace_repair_engineerSetting_Repair = 0;
+force ace_repair_engineerSetting_fullRepair = 2;
+force ace_repair_fullRepairLocation = 0;
+force ace_repair_repairDamageThreshold_engineer = 0;
+force ace_repair_repairDamageThreshold = 0.7;
+
+
+

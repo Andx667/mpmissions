@@ -547,6 +547,16 @@ class Loadouts {
                         "H_PilotHelmetHeli_I_E",
                         "H_PilotHelmetHeli_B",
                     };
+
+                    goggles[] = {
+                        "CUP_G_Scarf_Face_Tan",
+                        "CFP_Shemagh_Face_Tan",
+                        "G_Bandanna_oli",
+                        "USP_SHEMAGH_NECK7_CBR",
+                        "USP_SHEMAGH_SFL_RGR"
+                    };
+
+                    nvgoggles = "kat_Armband_Doctor_NVG";
                 };
             };
         };
@@ -665,6 +675,10 @@ class Loadouts {
 
         class B_Helipilot_F: B_helicrew_F {
             backpack = "B_AssaultPack_blk";
+
+            addItemsToVest[] += {
+                "ACE_MicroDAGR",
+            };
 
             addItemsToBackpack[] += {
                 "ACRE_PRC117F"
