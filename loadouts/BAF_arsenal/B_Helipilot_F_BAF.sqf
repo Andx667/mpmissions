@@ -31,7 +31,7 @@ comment "Add items to containers";
 player addItemToUniform "ACE_MapTools";
 player addItemToUniform "ACE_Flashlight_XL50";
 player addItemToUniform "acex_intelitems_notepad";
-player addItemToUniform "ACE_Painkillers";
+player addItemToUniform "kat_Painkiller";
 for "_i" from 1 to 10 do {player addItemToUniform "ACE_elasticBandage";};
 for "_i" from 1 to 10 do {player addItemToUniform "ACE_packingBandage";};
 for "_i" from 1 to 10 do {player addItemToUniform "ACE_quikclot";};

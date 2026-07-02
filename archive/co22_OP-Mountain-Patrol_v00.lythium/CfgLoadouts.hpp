@@ -98,7 +98,7 @@ class CfgLoadouts {
             "ACE_fieldDressing", 15,
             "ACE_Tourniquet", 4,
             "ACE_CableTie", 2,
-            "ACE_Painkillers", 1,
+            "kat_Painkiller", 1,
             "ACE_MapTools",
             "ACE_Flashlight_XL50",
             //"ACE_IR_Strobe_Item",
@@ -362,7 +362,7 @@ class CfgLoadouts {
             "ACE_SalineIV",16,
             "ACE_SalineIV_500",8,
             "ACE_SalineIV_250",8,
-            "ACE_Painkillers",8,
+            "kat_Painkiller",8,
             "ACE_Morphine",8,
             "ACE_Epinephrine",8,
             "ACE_SpraypaintBlue",
@@ -411,7 +411,7 @@ class CfgLoadouts {
             "ACE_SalineIV_500",6,
             "ACE_SalineIV_250",6,
 
-            "ACE_Painkillers",8,
+            "kat_Painkiller",8,
             "ACE_Morphine",8,
             "ACE_Epinephrine",8,
 

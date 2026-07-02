@@ -128,7 +128,7 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "ACE_Painkillers",
+                "kat_Painkiller",
                 LIST_10("ACE_elasticBandage"),
                 LIST_10("ACE_packingBandage"),
                 LIST_10("ACE_quikclot"),

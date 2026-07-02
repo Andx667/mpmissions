@@ -14,7 +14,7 @@ reim_fnc_crateFiller = compile preProcessFileLineNumbers "scripts\r_crate.sqf";
 		["ACE_elasticBandage", 90],
 		["ACE_packingBandage", 90],
 
-		["ACE_Painkillers", 27],
+		["kat_Painkiller", 27],
 		["ACE_Morphine", 27],
 		["ACE_Epinephrine", 27],
 		["ACE_Adenopsine", 27],

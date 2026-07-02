@@ -27,7 +27,7 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
         ["ACE_fieldDressing", 90],
         ["ACE_packingBandage", 90],
         ["ACE_Tourniquet", 24],
-        ["ACE_Painkillers", 6],
+        ["kat_Painkiller", 6],
 
         ["BWA3_15Rnd_9x19_P8", 8],
         ["BWA3_30Rnd_556x45_G36_AP", 40],

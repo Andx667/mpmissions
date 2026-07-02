@@ -9,7 +9,7 @@ params ["_containers"];
       ["ACE_quikclot", 90],
       ["ACE_packingBandage", 90],
       ["ACE_morphine", 27],
-      ["ACE_painkillers", 27],
+      ["kat_Painkiller", 27],
       ["ACE_tourniquet", 54],
 
       ["HandGrenade", 60],

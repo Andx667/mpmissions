@@ -10,7 +10,7 @@ params ["_containers"];
         ["ACE_packingBandage", 90],
         ["ACE_quickClot", 90],
 
-        ["ACE_Painkillers", 27],
+        ["kat_Painkiller", 27],
         ["kat_Painkiller", 27],
         ["ACE_morphine", 27],
         ["ACE_epinephrine", 27],

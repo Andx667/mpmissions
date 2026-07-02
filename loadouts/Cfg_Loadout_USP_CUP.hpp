@@ -93,7 +93,7 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "ACE_Painkillers",
+                "kat_Painkiller",
                 LIST_15("ACE_elasticBandage"),
                 LIST_15("ACE_packingBandage"),
                 LIST_4("ACE_Tourniquet"),

@@ -55,7 +55,7 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "ACE_Painkillers",
+                "kat_Painkiller",
                 LIST_15("ACE_fieldDressing"),
                 LIST_15("ACE_packingBandage"),
                 LIST_4("ACE_Tourniquet"),
@@ -322,7 +322,7 @@ class Loadouts {
                         LIST_10("ACE_elasticBandage"),
                         LIST_30("ACE_quikclot"),
 
-                        LIST_4("ACE_Painkillers"),
+                        LIST_4("kat_Painkiller"),
 
                         LIST_7("ACE_SalineIV"),
                         LIST_3("ACE_salineIV_500"),
@@ -353,7 +353,7 @@ class Loadouts {
                         LIST_30("ACE_elasticBandage"),
 
                         LIST_20("ACE_Epinephrine"),
-                        LIST_4("ACE_Painkillers"),
+                        LIST_4("kat_Painkiller"),
                         LIST_8("ACE_morphine"),
 
                         LIST_3("ACE_SalineIV"),
