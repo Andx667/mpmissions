@@ -43,11 +43,11 @@ private _id = [
                     case "Bravo-2": {
                         [_unit, "TTT_red_emblem"] call BIS_fnc_setUnitInsignia;
                     };
-                    case "November": {
-                        [_unit, "TTT_white_emblem"] call BIS_fnc_setUnitInsignia;
+                    case "Lima": {
+                        [_unit, "TTT_silver_emblem"] call BIS_fnc_setUnitInsignia;
                     };
                     case "Mike": {
-                        [_unit, "TTT_silver_emblem"] call BIS_fnc_setUnitInsignia;
+                        [_unit, "TTT_white_emblem"] call BIS_fnc_setUnitInsignia;
                     };
                     case "Doc": {
                         [_unit, "TTT_brown_emblem"] call BIS_fnc_setUnitInsignia;

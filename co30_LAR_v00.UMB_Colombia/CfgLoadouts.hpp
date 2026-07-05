@@ -311,6 +311,7 @@ class Loadouts {
 
                     addItemsToBackpack[] += {
                         "ACRE_PRC117F",
+                        "ACE_ChalkWhite"
                     };
 
                 };
