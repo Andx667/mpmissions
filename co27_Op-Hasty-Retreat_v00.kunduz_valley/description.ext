@@ -2,9 +2,9 @@
 // Name des Missionsbauers
 author = "[TTT] Andx";
 // Missionsname über dem Ladebild
-onLoadName = "OP Adlernest";
+onLoadName = "";
 // Ladebild
-loadScreen = "images\op_adlernest.paa";
+loadScreen = "";
 // Kurzbeschreibung unter dem Ladebild
 onLoadMission = "";
 // Kurzbeschreibung in der Missionsauswahl
@@ -23,7 +23,7 @@ respawnDelay = 5;
 respawnDialog = 0;
 
 // - Misc ---------------------------------------------------------------------
-disabledAI = 0;
+disabledAI = 1;
 cba_settings_hasSettingsFile = 1;
 
 // - Corpsemanager ------------------------------------------------------------
@@ -49,4 +49,12 @@ class CLib {
     useFallbackRemoteExecution = 0;
 };
 
-
+// - Params -------------------------------------------------------------------
+class Params {
+    class medical_system {
+        title = "Sanitäts System";
+        values[] = {0, 1, 2};
+        texts[] = {"Standard", "Einfach", "Training"};
+        default = 0;
+    };
+};
