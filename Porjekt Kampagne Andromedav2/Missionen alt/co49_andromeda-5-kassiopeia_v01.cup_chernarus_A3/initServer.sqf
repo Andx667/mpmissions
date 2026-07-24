@@ -1,0 +1,323 @@
+/*
+	author = Andx + Karl Baker
+	description = 
+*/
+
+///////////////////
+// Datum
+///////////////////
+setDate [2020, 9, 16, 9, 0];
+
+///////////////////
+// KI Skill
+///////////////////
+
+{
+	if (side _x != west) then {						
+		_x setBehaviour "AWARE";
+		_x setCombatMode "WHITE";
+        _x setSpeedMode "LIMITED";
+		
+        //1 ist Profi, 0 ist Noob
+		_x setSkill ["general", 0.75];				
+		_x setSkill ["commanding", 0.75];
+		_x setSkill ["courage", 0.75];
+		_x setSkill ["aimingAccuracy", 0.5];
+		_x setSkill ["aimingShake", 0.5];
+		_x setSkill ["aimingSpeed", 0.9];
+		_x setSkill ["reloadSpeed", 0.8];
+		_x setSkill ["spotDistance", 1];
+		_x setSkill ["spotTime", 1];
+        
+        _x enableAI "COVER";
+        _x enableAI "AUTOCOMBAT";        
+	};
+} forEach allUnits;
+
+
+
+///////////////////
+// Skript laden um Kisten/Fhz zu befüllen
+///////////////////
+reim_fnc_crateFiller = compile preProcessFileLineNumbers "scripts\r_crate.sqf";
+
+///////////////////
+// Fahrzeuge
+///////////////////
+
+// Fahrzeuge Schwarz
+[
+    [coyote_01, coyote_02, coyote_03, coyote_04],
+    [
+        ["UK3CB_BAF_127_100Rnd", 5],
+        ["UK3CB_BAF_762_200Rnd_T", 5],
+        ["ACE_EntrenchingTool", 4],
+        ["dzn_MG_Tripod_M122A1_M240Mount_Carry", 2],
+        ["B_AssaultPack_blk", 1],
+        ["ACE_TacticalLadder_Pack", 1]
+    ]
+] call reim_fnc_crateFiller;
+
+// Fahrzeug Blau 
+[
+    [dingo_01],
+    [
+        ["BWA3_G82_Hensoldt", 1],
+        ["BWA3_10Rnd_127x99_G82", 3],
+        ["B_UGV_02_Demining_backpack_F", 1],
+        ["B_UavTerminal", 1],
+        ["B_AssaultPack_blk", 1],
+        ["ACE_TacticalLadder_Pack", 1],
+        ["mts_items_marker_yellow", 20],
+        ["mts_items_marker_mines", 20],
+        ["ACE_UAVBattery", 6]
+    ]
+] call reim_fnc_crateFiller;
+
+// Helikopter Platin
+[
+    [heli_01],
+    [
+        ["B_AssaultPack_blk", 1]
+    ]
+] call reim_fnc_crateFiller;
+
+// Helikopter Weiß
+[
+    [heli_02],
+    [   
+        ["B_AssaultPack_blk", 1],
+        ["B_Parachute", 12],
+        ["ACE_Rope12", 1],
+        ["ACE_Rope36", 1]
+    ]
+] call reim_fnc_crateFiller;
+
+// Helikopter Silber
+[
+    [heli_03],
+    [
+        ["B_AssaultPack_blk", 1],
+        ["B_Parachute", 23],
+        ["UK3CB_BAF_762_200Rnd_T", 12],
+        ["ACE_Rope12", 1],
+        ["ACE_Rope36", 1]
+    ]
+] call reim_fnc_crateFiller;
+
+// CDF Log Fhz
+[
+    [log_01, log_02, log_03],
+    [
+        ["B_AssaultPack_blk", 1]
+    ]
+] call reim_fnc_crateFiller;
+
+///////////////////
+// Rucksäcke in Fahrzeugen + ACE Cargo Space
+///////////////////
+
+{	
+	{
+		//Reperatur und Abschlepp
+		if (typeof _x == "B_AssaultPack_blk") then
+		{
+			_x addItemCargoGlobal ["Toolkit", 1];
+			_x addItemCargoGlobal ["ACE_Rope12", 1];
+            _x addItemCargoGlobal ["ACE_Rope6", 1];
+		};
+	} forEach (everyBackpack _x);
+
+    // ACE Cargo
+    [_x, 4] call ace_cargo_fnc_setSpace;
+
+} forEach [coyote_01, coyote_02, coyote_03, coyote_04, dingo_01, heli_01, heli_02, heli_03, log_01, log_02, log_03];
+
+///////////////////
+// Nachschubkisten
+///////////////////
+
+//Infanterie Munition 
+[
+    [munition_01, munition_02, munition_03, munition_04, munition_05, munition_06, munition_07, munition_08, munition_09, munition_10, munition_11, munition_12],
+    [
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 30],
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 30],
+        ["rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote", 10],
+        ["UK3CB_BAF_762_L42A1_20Rnd_T", 13],
+        ["16Rnd_9x21_Mag", 9]
+    ]
+] call reim_fnc_crateFiller;
+
+//UGV Ersatz
+[
+    [ugv_01],
+    [
+        ["B_UGV_02_Demining_backpack_F", 1],
+        ["B_UavTerminal", 1],
+        ["ACE_UAVBattery", 6]
+    ]
+] call reim_fnc_crateFiller;
+
+// Infanterie Granaten
+[
+    [granaten_01, granaten_02, granaten_03, granaten_04, granaten_05, granaten_06, granaten_07, granaten_08, granaten_09, granaten_10, granaten_11, granaten_12],
+    [
+        ["rhs_mag_M433_HEDP", 22],
+        ["ACE_HuntIR_M203", 6],
+        ["1Rnd_Smoke_Grenade_shell", 10],
+        ["1Rnd_SmokeRed_Grenade_shell", 15],
+        ["1Rnd_SmokeOrange_Grenade_shell", 10],
+
+        ["ACE_M84", 18],
+        ["rhs_mag_m67", 18],
+        ["SmokeShell", 18],
+
+        ["SmokeShellGreen", 9],
+        ["SmokeShellBlue", 6],
+        ["SmokeShellRed", 6],
+
+        ["SmokeShellOrange", 5],
+        ["SmokeShellPurple", 5],
+        ["SmokeShellYellow", 5]
+    ]
+] call reim_fnc_crateFiller;
+
+// Werfer 
+[
+    [werfer_01, werfer_02, werfer_03],
+    [
+        ["rhs_mag_maaws_HEDP", 4],
+        ["rhs_mag_maaws_HEAT", 2]
+    ]
+] call reim_fnc_crateFiller;
+
+// Piloten 
+[
+    [piloten_01],
+    [
+        ["50Rnd_570x28_SMG_03", 24],
+        ["ACE_Handflare_Green", 12],
+        ["SmokeShellOrange", 6],
+        ["B_Parachute", 5]
+    ]
+] call reim_fnc_crateFiller;
+
+// Markiermittel 
+// Mehrfachnennung ist gewollt
+[
+    [marker_01],
+    [
+        ["ACE_SpraypaintGreen", 4],
+        ["ACE_SpraypaintRed", 4],
+        ["ACE_SpraypaintBlack", 4],
+        ["ACE_SpraypaintBlue", 4],
+
+        ["ace_marker_flags_green", 20],
+        ["ace_marker_flags_red", 20],
+        ["ace_marker_flags_yellow", 20],
+
+        ["ace_marker_flags_black", 20],
+        ["ace_marker_flags_red", 20],
+        ["ace_marker_flags_purple", 20],
+        ["ace_marker_flags_orange", 20],
+
+        ["ace_marker_flags_orange", 20],
+
+        ["mts_items_flag_blue", 4],
+        ["mts_items_flag_red", 4]
+    ]
+] call reim_fnc_crateFiller;
+
+// VBA
+[
+    [vba_01, vba_02, vba_03, vba_04, vba_05],
+    [
+        ["ACE_tourniquet", 12],
+		["ACE_morphine", 24],
+		["ACE_epinephrine", 36],
+		["ACE_adenosine", 24],
+		["ACE_elasticBandage",72],
+		["ACE_quikclot", 72],
+		["ACE_packingBandage", 72],
+		["ACE_salineIV", 12],
+		["ACE_salineIV_500", 24],
+		["ACE_salineIV_250", 36],
+        ["ACE_surgicalKit", 18],
+        ["ACE_bodyBag", 2],
+        ["V1_adv_ace_AED", 1]
+    ]
+] call reim_fnc_crateFiller;
+
+// Infanterie VBS
+[
+    [vbs_01, vbs_02, vbs_03, vbs_04],
+    [
+        ["ACE_tourniquet", 12],
+        ["ACE_morphine", 12],
+        ["ACE_adenosine", 10],
+        ["ACE_quikclot", 32],
+        ["ACE_packingBandage", 30],
+        ["ACE_surgicalKit", 9],
+        ["ACE_bodyBag", 1]
+    ]
+] call reim_fnc_crateFiller;
+
+// Infanterie VBT
+[
+    [vbt_01, vbt_02, vbt_03, vbt_04, vbt_05, vbt_06, vbt_07, vbt_08, vbt_09, vbt_10, vbt_11, vbt_12],
+    [
+        ["ACE_fieldDressing", 150],
+        ["ACE_packingBandage",75],
+        ["ACE_quikclot", 20],
+        ["V1_ItemPainkiller", 80],
+        ["ACE_tourniquet", 30]
+    ]
+] call reim_fnc_crateFiller;
+
+// Pionierbedarf
+[
+    [explosives_01, explosives_02, explosives_03],
+    [
+        ["DemoCharge_Remote_Mag", 12],
+        ["tsp_frameCharge_mag", 12],
+        ["SLAMDirectionalMine_Wire_Mag", 5],
+        ["ATMine_Range_Mag", 5],
+
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 8],
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 24],
+
+        ["ACE_M84", 8],
+        ["rhs_mag_m67", 8],
+        ["SmokeShell", 8],
+        ["SmokeShellGreen", 8],
+        ["ACE_M14", 6]
+    ]
+] call reim_fnc_crateFiller;
+
+// Fahrzeugmunition
+[
+    [vehicle_ammo_01, vehicle_ammo_02, vehicle_ammo_03],
+    [
+        ["UK3CB_BAF_127_100Rnd", 15],
+        ["UK3CB_BAF_762_200Rnd_T", 15]
+    ]
+] call reim_fnc_crateFiller;
+
+//Advanced Slingload setUp 
+ASL_HEAVY_LIFTING_ENABLED = true; 
+ASL_SET_MASS = 5000;                          
+ASL_SUPPORTED_VEHICLES_OVERRIDE = ["UK3CB_BAF_Merlin_HC3_18_GPMG_DPMW"];  
+
+///////////////////
+// Mission
+///////////////////
+
+reim_fnc_explosive = compile preProcessFileLineNumbers "scripts\fn_explosive.sqf";
+[] spawn {
+	sleep 10;
+	{
+		private _houseArray = nearestTerrainObjects [_x, ["HOUSE"], 5]; 
+		(_houseArray select 0) hideObjectGlobal true;
+	} forEach [helper_1,helper_2,helper_3];
+};

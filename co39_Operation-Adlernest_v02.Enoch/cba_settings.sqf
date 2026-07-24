@@ -30,3 +30,7 @@ force ttt_medic_backpack_additionalItems = '["Land_FirstAidKit_01_open_F"]'; //d
 force ttt_medic_backpack_buildTime = 6;                                                             //default: 20;
 force ttt_medic_backpack_useAnimation = true;                                                       //default: true;
 force ttt_medic_backpack_buildAnimation = "Acts_carFixingWheel";                                    //default: "Acts_carFixingWheel";
+
+force ttt_dronepanel_enable = true;                                                                    //default: false;
+force ttt_dronepanel_supportedBackpacks = '["CUP_B_GER_Pack_Flecktarn"]';                                          //default: '[]';
+force ttt_dronepanel_tarpColor = 1;                                                                    //default: 2; (0 = Black, 1 = Green, 2 = Red, 3 = Yellow)
