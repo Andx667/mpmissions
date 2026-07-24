@@ -46,9 +46,8 @@ class Loadouts {
         "goggles",
     };
 
-    class Side {
-        class BluFor {
-        //class BluforPlayers {
+    class Type {
+        class B_Survivor_F {
             uniform[] = {
                 //CCE = Wüste
                 // "CUP_U_B_HIL_ACU_CCE",
@@ -77,10 +76,12 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "kat_Painkiller",
-                LIST_15("ACE_fieldDressing"),
-                LIST_15("ACE_packingBandage"),
-                LIST_4("ACE_Tourniquet"),
+                LIST_10("ACE_elasticBandage"),
+                LIST_10("ACE_packingBandage"),
+                LIST_10("ACE_quikClot"),
+                LIST_2("kat_chestSeal"),
+                LIST_4("ACE_tourniquet"),
+                LIST_2("kat_Painkiller"),
                 };
             addItemsToVest[] = {
                 LIST_2("CUP_HandGrenade_M67"),
@@ -149,10 +150,7 @@ class Loadouts {
             radio = "";
         };
 
-    };
-
-    class Type {
-        class B_Soldier_F {
+        class B_Soldier_F: B_Survivor_F {
             vest = "CUP_V_PMC_CIRAS_OD_Patrol";
             addItemsToVest[] += {
                 LIST_8("CUP_30Rnd_556x45_Emag"),
@@ -219,7 +217,7 @@ class Loadouts {
                 };
         };
 
-        class B_soldier_M_F {
+        class B_soldier_M_F: B_Survivor_F {
             vest = "CUP_V_PMC_CIRAS_OD_Patrol";
             backpack[] = {
                 //"CUP_B_TacticalPack_CCE",
@@ -249,7 +247,7 @@ class Loadouts {
             binoculars = "ACE_Yardage450";
         };
 
-        class B_Soldier_AR_F {
+        class B_Soldier_AR_F: B_Survivor_F {
             vest[] = {
                 "CFP_FAPC_MG_OGA_OD",
                 "CFP_CarrierRig_Gunner_OGA_OD",
@@ -280,8 +278,14 @@ class Loadouts {
             };
         };
 
+        class B_soldier_UAV_F: B_Soldier_F {
+            backpack = "";
+            addItemsToBackpack[] = {
+            };
+        };
+
         //Führung
-        class B_Soldier_TL_F {
+        class B_Soldier_TL_F: B_Survivor_F {
             vest = "CUP_V_PMC_CIRAS_OD_Grenadier";
             backpack[] = {
                 //"CUP_B_TacticalPack_CCE",
@@ -312,7 +316,7 @@ class Loadouts {
             binoculars = "ACE_Vector";
         };
 
-        class B_Soldier_SL_F {
+        class B_Soldier_SL_F: B_Survivor_F {
             vest = "CUP_V_PMC_CIRAS_OD_TL";
 
             primaryWeaponMagazine = "CUP_30Rnd_556x45_Emag_Tracer_Red";
@@ -323,129 +327,187 @@ class Loadouts {
 
             addItemsToVest[] = {
                 "ACRE_PRC152",
-                "ItemAndroid",
+                
                 LIST_8("CUP_30Rnd_556x45_Emag_Tracer_Red"),
                 "ACE_flags_red",
                 "ACE_SpraypaintBlack",
             };
 
             binoculars = "ACE_Vector";
+            gps = "ItemAndroid";
         };
 
         class B_officer_F: B_Soldier_SL_F {
 
         };
 
+        class B_crew_F: B_Survivor_F {
+            vest = "CUP_V_PMC_CIRAS_OD_Veh";
+            backpack = "";
+            headgear = "ttt_Helmet_Bronze_Vehiclecrew";
+        };
+
         //Sani
-        class B_medic_F {
-            primaryWeapon[] = {"CUP_arifle_HK416_CQB_Black","CUP_arifle_HK416_CQB_Desert","CUP_arifle_HK416_CQB_Wood"};
-            vest = "CUP_V_CPC_medicalbelt_rngr";
+        //Medics
+        class B_medic_F: B_Soldier_F {
+            vest = "CUP_V_PMC_CIRAS_OD_Veh";
 
             class Rank {
 
-                class PRIVATE {
-                    backpack[] = {
-                        //"CFP_AssaultPack_PolygonDesert",
-                        "CFP_AssaultPack_PolygonWoodland"
-                    };
-
+                class PRIVATE { //Squad Level Medic
+                    backpack = "CUP_B_TacticalPack_TTS";
                     addItemsToVest[] += {
-                        LIST_8("CUP_30Rnd_556x45_Emag"),
+                        //"kat_basicDiagnostic",
+                        LIST_3("kat_Pulseoximeter"),
+                        "ACE_surgicalKit",
                     };
 
                     addItemsToBackpack[] += {
-                        LIST_10("ACE_Tourniquet"),
+                        //M
                         LIST_30("ACE_packingBandage"),
-                        LIST_10("ACE_elasticBandage"),
-                        LIST_30("ACE_quikclot"),
-
-                        LIST_4("kat_Painkiller"),
-
-                        LIST_8("ACE_salineIV_500"),
-                        LIST_8("ACE_SalineIV_250"),
-                        "ACE_flags_blue",
-                        "ACE_SpraypaintBlue",
-                    };
-                };
-
-                class CORPORAL: PRIVATE {
-                    backpack[] = {
-                        // "CUP_B_TacticalPack_CCE",
-                        "CUP_B_TacticalPack_TTS",
-                    };
-
-                    addItemsToVest[] = {
-                        "ACE_SurgicalKit",
-                        LIST_3("CUP_30Rnd_556x45_Emag"),
-                    };
-
-                    addItemsToBackpack[] = {
-                        LIST_30("ACE_Suture"),
-                        LIST_16("ACE_Tourniquet"),
-                        LIST_10("ACE_packingBandage"),
                         LIST_30("ACE_elasticBandage"),
-                        LIST_20("ACE_quikclot"),
-
-                        LIST_16("ACE_Epinephrine"),
-                        LIST_8("kat_Painkiller"),
-                        LIST_8("ACE_morphine"),
-
-                        LIST_8("ACE_SalineIV"),
+                        LIST_12("ACE_tourniquet"),
+                        //A
+                        LIST_8("kat_chestSeal"),
+                        LIST_8("kat_larynx"),
+                        LIST_6("kat_ncdKit"),
+                        //R
+                        LIST_3("kat_pocketBVM"),
+                        //C
+                        LIST_4("ACE_salineIV_250"),
                         LIST_4("ACE_salineIV_500"),
-                        LIST_4("ACE_SalineIV_250"),
-
-                        "ACE_Bodybag",
-                        "ACE_flags_blue",
-                        "ACE_SpraypaintBlue",
+                        LIST_8("kat_IV_16"),
+                        LIST_12("ACE_epinephrine"),
+                        LIST_4("ACE_adenosine"),
+                        //H
+                        LIST_6("kat_Penthrox"),
+                        LIST_8("kat_naloxone"),
+                        LIST_4("kat_Painkiller"),
+                        LIST_8("ACE_morphine"),
+                        LIST_60("ACE_suture"),
+                        //Admin
+                        LIST_2("ACE_Chemlight_IR"),
                     };
-
                 };
 
-                class SERGEANT: CORPORAL {
-                    backpack[] = {
-                        // "CFP_Kitbag_PolygonDesert",
-                        "CFP_Kitbag_PolygonWoodland",
-                    };
+                class CORPORAL: PRIVATE { //Platoon Level Medic
+                    backpack = "CUP_B_TacticalPack_TTS";
 
                     addItemsToVest[] += {
-                        "ACRE_PRC152",
-                        "ItemAndroid",
+                        LIST_3("kat_Pulseoximeter"),
+                        "ace_flags_blue",
+                        "ACE_SpraypaintBlue",
                     };
 
                     addItemsToBackpack[] += {
-                        "ACE_flags_blue",
-                        "ACE_SpraypaintBlue",
-                        LIST_4("ACE_SalineIV"),
-                        LIST_2("ACE_salineIV_500"),
-                        LIST_2("ACE_SalineIV_250"),
+                        //A
+                        LIST_2("kat_larynx"),
+                        LIST_2("kat_ncdKit"),
+                        //C
+                        LIST_5("ACE_salineIV"),
+                        LIST_9("kat_amiodarone"),
+                        "kat_aed",
+                        //HIGH-TECH
+                        LIST_8("kat_lidocaine"),
                     };
-
                 };
 
-                class LIEUTENANT: SERGEANT {
-                    backpack = "ttt_backpack_radio_coyote";
+                class SERGEANT: CORPORAL { //Company Level Medic
+                    backpack = "ttt_backpack_medic_rgr_02";//BWA3_Kitbag_Fleck_Medic
 
-                    addItemsToBackpack[] = {
-                        "ACRE_PRC117F",
-                        "ACE_Bodybag",
-                        LIST_30("ACE_Suture"),
-                        LIST_16("ACE_Tourniquet"),
-                        LIST_30("ACE_elasticBandage"),
-
-                        LIST_12("ACE_Epinephrine"),
-                        LIST_6("kat_Painkiller"),
-                        LIST_6("ACE_morphine"),
-
-                        LIST_8("ACE_SalineIV"),
-                        LIST_4("ACE_salineIV_500"),
-                        LIST_4("ACE_SalineIV_250"),
+                    addItemsToVest[] += {
                     };
 
+                    addItemsToBackpack[] = {
+                        //M
+                        LIST_45("ACE_packingBandage"),
+                        LIST_45("ACE_elasticBandage"),
+                        //A
+                        LIST_6("kat_aatKit"),
+                        "kat_accuvac",
+                        LIST_6("kat_chestSeal"),
+                        LIST_5("kat_larynx"),
+                        //R
+                        LIST_3("kat_BVM"),
+                        "kat_oxygenTank_150",
+                        //C
+                        LIST_8("ACE_BloodIV"),
+                        LIST_3("ACE_BloodIV_500"),
+                        LIST_3("ACE_BloodIV_250"),
+                        "ACE_salineIV_250",
+                        "kat_X_AED",
+                        LIST_10("kat_IV_16"),
+                        LIST_2("kat_IO_FAST"),
+                        LIST_12("kat_epinephrineIV"),
+                        LIST_12("ACE_epinephrine"),
+                        LIST_10("kat_lidocaine"),
+                        LIST_6("kat_amiodarone"),
+                        LIST_6("kat_atropine"),
+                        //H
+                        LIST_6("kat_eaca"),
+                        LIST_12("kat_txa"),
+                        LIST_6("kat_fentanyl"),
+                        LIST_6("kat_ketamine"),
+                        LIST_6("kat_naloxone"),
+                        LIST_6("kat_nitroglycerin"),
+                        LIST_6("kat_norepinephrine"),
+                        LIST_6("kat_phenylephrine"),
+                        //Admin
+                        LIST_45("ACE_suture"),
+                        "ACE_PersonalAidKit"
+                    };
+                };
+
+                class LIEUTENANT: SERGEANT { //Battalion Level Medic
+
+                    addItemsToVest[] += {
+                        "ace_flags_blue",
+                        "ACE_SpraypaintBlue",
+                        "kat_Pulseoximeter",
+                    };
+
+                    addItemsToBackpack[] = {
+                        //M
+                        LIST_30("ACE_packingBandage"),
+                        LIST_30("ACE_elasticBandage"),
+                        //A
+                        LIST_6("kat_aatKit"),
+                        "kat_accuvac",
+                        LIST_6("kat_chestSeal"),
+                        LIST_5("kat_larynx"),
+                        //R
+                        LIST_3("kat_BVM"),
+                        "kat_oxygenTank_150",
+                        //C
+                        LIST_8("ACE_BloodIV"),
+                        LIST_4("ACE_BloodIV_500"),
+                        LIST_4("ACE_BloodIV_250"),
+                        "ACE_salineIV_250",
+                        "kat_X_AED",
+                        LIST_10("kat_IV_16"),
+                        LIST_2("kat_IO_FAST"),
+                        LIST_12("kat_epinephrineIV"),
+                        LIST_12("ACE_epinephrine"),
+                        LIST_10("kat_lidocaine"),
+                        LIST_6("kat_amiodarone"),
+                        LIST_6("kat_atropine"),
+                        //H
+                        LIST_6("kat_eaca"),
+                        LIST_12("kat_txa"),
+                        LIST_6("kat_fentanyl"),
+                        LIST_6("kat_ketamine"),
+                        LIST_6("kat_naloxone"),
+                        LIST_6("kat_nitroglycerin"),
+                        LIST_6("kat_norepinephrine"),
+                        LIST_6("kat_phenylephrine"),
+                        //Admin
+                        LIST_45("ACE_suture"),
+                    };
                 };
             };
         };
 
-        class B_helicrew_F {
+        class B_helicrew_F: B_Survivor_F {
             //vest = "CUP_V_B_BAF_DDPM_Osprey_Mk3_Pilot"; //DDPM
             vest = "CUP_V_PMC_CIRAS_OD_Veh";
             backpack = "";
@@ -471,13 +533,14 @@ class Loadouts {
 
             addItemsToBackpack[] = {
                 "ACRE_PRC117F",
-                "ItemAndroid"
+
             };
 
             headgear[] = {
                 "H_PilotHelmetHeli_I_E",
                 "ttt_helmet_falcon",
             };
+            gps = "ItemAndroid";
         };
     };
 };

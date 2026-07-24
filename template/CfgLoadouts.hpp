@@ -50,8 +50,8 @@ class Loadouts {
         "goggles"
     };
 
-    class Side {
-        class Blufor {
+    class Type {
+        class B_Survivor_F {
             uniform[] = {
             };
             vest[] = {
@@ -103,11 +103,8 @@ class Loadouts {
             gps = "";
             radio = "";
         };
-    };
-
-    class Type {
         //Rifleman
-        class B_Soldier_F {
+        class B_Soldier_F: B_Survivor_F {
             addItemsToVest[] = {
                 LIST_8(""),
             };
@@ -131,7 +128,7 @@ class Loadouts {
         };
 
         //Marksman
-        class B_soldier_M_F {
+        class B_soldier_M_F: B_Survivor_F {
             primaryWeapon[] = {
             };
             primaryWeaponOptics = "";
@@ -227,7 +224,7 @@ class Loadouts {
         };
 
         //MMG
-        class B_HeavyGunner_F {
+        class B_HeavyGunner_F: B_Survivor_F {
             primaryWeapon[] = {
 
             };
@@ -269,7 +266,7 @@ class Loadouts {
         };
 
         //Autorifleman
-        class B_soldier_AR_F {
+        class B_soldier_AR_F: B_Survivor_F {
             primaryWeapon[] = {
             };
             primaryWeaponMagazine = "";
@@ -337,7 +334,7 @@ class Loadouts {
         };
 
         //Fahrzeugbesatzung
-        class B_crew_F {
+        class B_crew_F: B_Survivor_F {
             primaryWeapon = "";
             primaryWeaponMagazine = "";
             primaryWeaponOptics = "";
@@ -396,7 +393,7 @@ class Loadouts {
         };
 
         //Pilots
-        class B_helicrew_F {
+        class B_helicrew_F: B_Survivor_F {
 
         };
 
@@ -405,7 +402,7 @@ class Loadouts {
         };
 
         //Aufklärer
-        class B_sniper_F {
+        class B_sniper_F: B_Survivor_F {
             primaryWeapon = "";
             primaryWeaponMagazine = "";
             primaryWeaponOptics = "";
@@ -494,7 +491,7 @@ class Loadouts {
         };
 
         //Führung
-        class B_Soldier_TL_F {
+        class B_Soldier_TL_F: B_Survivor_F {
             primaryWeaponMagazine = ""; //Tracer instead of regular ball
 
             addItemsToUniform[] += {
@@ -525,7 +522,7 @@ class Loadouts {
         };
 
         //Medics
-        class B_medic_F {
+        class B_medic_F: B_Survivor_F {
             vest = "";
 
             class Rank {
@@ -625,7 +622,7 @@ class Loadouts {
         };
 
         //SOF
-        class B_recon_F {
+        class B_recon_F: B_Survivor_F {
             uniform[] = {
             };
             vest[] = {
@@ -720,7 +717,7 @@ class Loadouts {
 
         };
 
-        class B_recon_M_F {
+        class B_recon_M_F: B_Survivor_F {
             primaryWeapon = "";
             primaryWeaponMagazine = "";
             primaryWeaponMuzzle = "";
