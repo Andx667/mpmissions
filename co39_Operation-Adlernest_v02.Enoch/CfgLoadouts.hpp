@@ -50,8 +50,8 @@ class Loadouts {
         "headgear"
     };
 
-    class Side {
-        class Blufor {
+    class Type {
+        class B_Survivor_F {
             uniform[] = {
                 "BWA3_Uniform_Fleck",
                 //"BWA3_Uniform_sleeves_Fleck", //handled by AWX
@@ -134,10 +134,9 @@ class Loadouts {
             gps = "";
             radio = "";
         };
-    };
-    class Type {
+
         //Rifleman
-        class B_Soldier_F {
+        class B_Soldier_F: B_Survivor_F {
             addItemsToVest[] += {
                 LIST_8("BWA3_30Rnd_556x45_G36_AP"),
             };
@@ -246,7 +245,7 @@ class Loadouts {
         };
 
         // These dont inherit from the basic rifleman
-        class B_soldier_M_F {
+        class B_soldier_M_F: B_Survivor_F {
             //primaryWeapon = "BWA3_G28";
             primaryWeapon[] = {
                 "BWA3_G27",
@@ -280,7 +279,7 @@ class Loadouts {
         };
 
         //Autorifleman
-        class B_soldier_AR_F {
+        class B_soldier_AR_F: B_Survivor_F {
             vest = "BWA3_Vest_MachineGunner_Fleck";
 
             primaryWeapon = "BWA3_MG4";
@@ -295,7 +294,7 @@ class Loadouts {
         };
 
         //MMG
-        class B_HeavyGunner_F {
+        class B_HeavyGunner_F: B_Survivor_F {
             vest = "BWA3_Vest_MachineGunner_Fleck";
 
             primaryWeapon[] = {
@@ -378,7 +377,7 @@ class Loadouts {
         };
 
         //Fahrzeugbesatzung
-        class B_crew_F {
+        class B_crew_F: B_Survivor_F {
             //uniform = "BWA3_Uniform_Crew_Fleck";
             vest = "BWA3_Vest_Fleck";
             backpack = "";
@@ -433,7 +432,7 @@ class Loadouts {
             };
         };
 
-        class B_sniper_F {
+        class B_sniper_F: B_Survivor_F {
 
         };
 
@@ -508,7 +507,7 @@ class Loadouts {
         };
 
         //Führung
-        class B_Soldier_TL_F {
+        class B_Soldier_TL_F: B_Survivor_F {
             vest = "BWA3_Vest_Leader_Fleck";
             primaryWeapon[] = {
                 //"BWA3_G36KA3",

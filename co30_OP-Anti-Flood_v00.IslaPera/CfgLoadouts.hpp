@@ -53,6 +53,12 @@ class Loadouts {
     class Side {
         //class BluforPlayers {//
         class BluFor {
+
+        };
+    };
+    class Type {
+
+        class B_Survivor_F {
             uniform[] = {
                 //"BWA3_Uniform_Fleck",
                 //"BWA3_Uniform_sleeves_Fleck", //handled by AWX
@@ -159,10 +165,8 @@ class Loadouts {
             gps = "";
             radio = "";
         };
-    };
-    class Type {
         
-        class B_Soldier_F { //Rifleman
+        class B_Soldier_F: B_Survivor_F { //Rifleman
             addItemsToVest[] += {
                 LIST_8("BWA3_30Rnd_556x45_G36_AP"),
             };
@@ -320,7 +324,7 @@ class Loadouts {
         };
 
         // These dont inherit from the basic rifleman
-        class B_soldier_M_F { //DMR / ZF
+        class B_soldier_M_F: B_Survivor_F { //DMR / ZF
             //primaryWeapon = "BWA3_G28";
             primaryWeapon[] = {
                 "BWA3_G27",
@@ -358,7 +362,7 @@ class Loadouts {
             binoculars = "ACE_Yardage450";
         };
 
-        class B_soldier_AR_F { //Autorifleman / MG4
+        class B_soldier_AR_F: B_Survivor_F { //Autorifleman / MG4
             vest[] ={
                 //"BWA3_Vest_MachineGunner_Fleck"
                 "BWA3_Vest_MachineGunner_Multi",
@@ -377,7 +381,7 @@ class Loadouts {
         };
 
 
-        class B_HeavyGunner_F { //MMG / MG5
+        class B_HeavyGunner_F: B_Survivor_F { //MMG / MG5
             vest[] = {
                 //"BWA3_Vest_MachineGunner_Fleck"
                 "BWA3_Vest_MachineGunner_Multi",
@@ -457,7 +461,7 @@ class Loadouts {
             };
         };
 
-        class B_crew_F {         //Fahrzeugbesatzung
+        class B_crew_F: B_Survivor_F {         //Fahrzeugbesatzung
             //uniform = "BWA3_Uniform_Crew_Fleck";
             vest[] = {
                 //"BWA3_Vest_Fleck",
@@ -536,7 +540,7 @@ class Loadouts {
         };
 
         //Pilots
-        class B_helicrew_F { //Crew
+        class B_helicrew_F: B_Survivor_F { //Crew
             vest[] = {
                 //"BWA3_Vest_Fleck"
                 "BWA3_Vest_Multi",
@@ -597,7 +601,7 @@ class Loadouts {
 
         };
 
-        class B_sniper_F {
+        class B_sniper_F: B_Survivor_F {
             primaryWeapon = "BWA3_G29";
             primaryWeaponOptics[] = {
                 "BWA3_optic_M5Xi_Tremor3_MicroT2",
@@ -642,7 +646,7 @@ class Loadouts {
             };
         };
         //Führung
-        class B_Soldier_TL_F {
+        class B_Soldier_TL_F: B_Survivor_F {
             vest[] = {
                 //"BWA3_Vest_Leader_Fleck"
                 "BWA3_Vest_Leader_Multi",
@@ -902,7 +906,7 @@ class Loadouts {
         };
 
         //SOF
-        class B_recon_F {
+        class B_recon_F: B_Survivor_F {
             uniform[] = {
                 "USP_G3C_MTN",
                 "USP_G3C_RS_MTN",
