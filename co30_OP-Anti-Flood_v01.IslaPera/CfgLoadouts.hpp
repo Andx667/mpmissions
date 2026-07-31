@@ -374,6 +374,7 @@ class Loadouts {
 
             addItemsToVest[] += {
                 LIST_2("BWA3_200Rnd_556x45_Tracer"),
+                "BWA3_optic_NSV600"
             };
             addItemsToBackpack[] = {
                 LIST_2("BWA3_200Rnd_556x45_Tracer"),
@@ -741,6 +742,7 @@ class Loadouts {
                         //"kat_basicDiagnostic",
                         LIST_3("kat_Pulseoximeter"),
                         "ACE_surgicalKit",
+                        "BWA3_optic_NSV600"
                     };
 
                     addItemsToBackpack[] = {
