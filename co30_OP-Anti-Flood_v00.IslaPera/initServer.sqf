@@ -37,9 +37,9 @@ setDate [2026, 6, 5, 18, 10]; //Datum ändern
 [
     [ammo_01, ammo_02, ammo_03, ammo_04],
     [
-        ["BWA3_30Rnd_556x45_G36_AP", 50],
-        ["BWA3_20Rnd_762x51_G28_AP", 10],
-        ["BWA3_20Rnd_762x51_G28_LR", 10]
+        ["BWA3_30Rnd_556x45_G36_AP", 50]
+        //["BWA3_20Rnd_762x51_G28_AP", 10],
+        //["BWA3_20Rnd_762x51_G28_LR", 10]
     ]
 ] call ttt_common_fnc_crateFiller;
 
