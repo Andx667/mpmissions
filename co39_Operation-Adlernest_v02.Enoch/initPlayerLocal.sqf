@@ -24,27 +24,6 @@
                 params ["_unit"];
 
                 [_unit, currentWeapon _unit, true] call ace_safemode_fnc_setWeaponSafety;
-
-                //Change callsign to mission
-                private _groupID = groupID group _unit;
-                switch (_groupID) do {
-                    case "Adler-Auf";
-                    case "Adler": {
-                        [_unit, "TTT_yellow_emblem"] call BIS_fnc_setUnitInsignia;
-                    };
-                    case "Adler-1-Auf";
-                    case "Adler-1": {
-                        [_unit, "TTT_black_emblem"] call BIS_fnc_setUnitInsignia;
-                    };
-                    case "Adler-2-Auf";
-                    case "Adler-2": {
-                        [_unit, "TTT_red_emblem"] call BIS_fnc_setUnitInsignia;
-                    };
-                    case "Adler-3-Auf";
-                    case "Adler-3": {
-                        [_unit, "TTT_violet_emblem"] call BIS_fnc_setUnitInsignia;
-                    };
-                };
             },
             //Args
             [_target],
@@ -53,17 +32,3 @@
         ] call CBA_fnc_waitAndExecute;
     }
 ] call CBA_fnc_addEventHandler;
-
-//Damit die Insignia auch bei Respawn gesetzt wird
-_player addMPEventHandler ["MPRespawn", {
-    params ["_unit", "_corpse"];
-    private _insignia = [_corpse] call BIS_fnc_getUnitInsignia;
-    [_unit, _insignia] spawn {
-        params ["_unit", "_insignia"];
-        sleep 1;
-        isNil {
-            _unit setVariable ["BIS_fnc_setUnitInsignia_class", nil];
-            [_unit, _insignia] call BIS_fnc_setUnitInsignia;
-        };
-    };
-}];

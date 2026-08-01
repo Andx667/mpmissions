@@ -41,7 +41,7 @@ class CfgFunctions {
 // - Loadouts ----------------------------------------------------------------
 #include "CfgLoadouts.hpp"
 
-// - Streamator -------------------------------------------------------------
+// - Streamator --------------------------------------------------------------
 class CLib {
     Modules[] = {"CLib", "Streamator"};
     useExperimentalAutoload = 0;
@@ -57,4 +57,11 @@ class Params {
         texts[] = {"Standard", "Einfach", "Training"};
         default = 0;
     };
+};
+
+// - ACE Killtracker -----------------------------------------------------------
+class CfgDebriefingSections {
+    #if __has_include("\z\ace\addons\killtracker\killtracker.inc")
+        #include "\z\ace\addons\killtracker\killtracker.inc"
+    #endif
 };

@@ -41,13 +41,13 @@ class Loadouts {
     customGear = 300;
     customGearAllowedCategories[] = {
         //"uniform",
-        "vest",
-        "primaryWeapon",
-        "primaryWeaponOptics",
-        "primaryWeaponUnderbarrel",
-        "primaryWeaponPointer",
-        "goggles",
-        "headgear"
+        // "vest",
+        // "primaryWeapon",
+        // "primaryWeaponOptics",
+        // "primaryWeaponUnderbarrel",
+        // "primaryWeaponPointer",
+        // "goggles",
+        // "headgear"
     };
 
     class Type {
@@ -121,10 +121,28 @@ class Loadouts {
 
             goggles[] = {
                 "",
-                "BWA3_G_Combat_black",
-                "BWA3_G_Combat_clear",
-                "BWA3_G_Combat_orange",
-                };
+                // "BWA3_G_Combat_black",
+                // "BWA3_G_Combat_clear",
+                // "BWA3_G_Combat_orange"
+                "USP_MFRAME_BLK",
+                "USP_MFRAME_BLK2",
+                "USP_MFRAME_BLK3",
+                "USP_MFRAME_TAN",
+                "USP_MFRAME_TAN2",
+                "USP_MFRAME_TAN3",
+                "USP_MFRAME_SMG1_BLK",
+                "USP_MFRAME_SMG1_BLK2",
+                "USP_MFRAME_SMG1_TAN",
+                "USP_MFRAME_SMG1_TAN2",
+                "USP_MFRAME_SMG2_BLK",
+                "USP_MFRAME_SMG2_BLK2",
+                "USP_MFRAME_SMG2_TAN",
+                "USP_MFRAME_SMG2_TAN2",
+                "USP_MFRAME_SMG3_BLK",
+                "USP_MFRAME_SMG3_BLK2",
+                "USP_MFRAME_SMG3_TAN",
+                "USP_MFRAME_SMG3_TAN2"
+            };
             nvgoggles = "";
 
             binoculars = "";
