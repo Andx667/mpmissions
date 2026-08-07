@@ -584,12 +584,18 @@ class Loadouts {
         };
 
         class B_officer_F: B_Soldier_SL_F {
+            handgunWeapon = "BWA3_P2A1";
+            handgunWeaponMagazine = "BWA3_1Rnd_Flare_Multistar_Green";
 
+            addItemsToBackpack[] += {
+                LIST_10("BWA3_1Rnd_Flare_Multistar_Green"),
+                LIST_10("BWA3_1Rnd_Flare_Multistar_Red")
+            };
         };
 
         //Medics
         class B_medic_F: B_Soldier_F {
-            vest = "BWA3_Vest_Medic_Fleck";
+            vest = "BWA3_Vest_Medic_Fleck"; 
 
             class Rank {
 

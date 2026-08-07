@@ -73,7 +73,9 @@ setDate [2026, 6, 25, 11, 00]; //Datum ändern
     [
         ["BWA3_PatrolPack_Fleck", 1],
         ["BWA3_MG5_tan_ZO4x30i_pointer", 1],
-        ["ITC_Land_B_AR2i_Packed", 1]
+        ["ITC_Land_B_AR2i_Packed", 1],
+        ["BWA3_1Rnd_Flare_Multistar_Green", 10],
+        ["BWA3_1Rnd_Flare_Multistar_Red", 10]
     ],
     false
  ] call ttt_common_fnc_crateFiller;
