@@ -255,6 +255,11 @@ class Loadouts {
         class B_soldier_UAV_F: B_Soldier_F {
             backpack = "CUP_B_GER_Pack_Flecktarn";
 
+            addItemsToVest[] += {
+                "AN_PRC152",
+                "ItemAndroid",
+            };
+
             addItemsToBackpack[] = {
                 LIST_10("ACE_UAVBattery"),
                 "ITC_Land_B_AR2i_Packed"
@@ -433,9 +438,13 @@ class Loadouts {
 
                 };
                 class SERGEANT: CORPORAL {
+                    addItemsToUniform[] += {
+                        "ACE_MicroDagr",
+                    };
                     addItemsToVest[] += {
                         "ACRE_PRC152",
                     };
+                    binoculars = "ACE_Vector";
 
                     gps = "ItemAndroid";
                 };

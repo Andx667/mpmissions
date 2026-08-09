@@ -102,6 +102,7 @@ setDate [2026, 6, 25, 11, 00]; //Datum ändern
             _x addItemCargoGlobal ["tsp_breach_block_auto_mag", 5];
             _x addItemCargoGlobal ["ACE_wirecutter", 1];
             _x addItemCargoGlobal ["mts_cutter_folding_saw", 1];
+            _x addItemCargoGlobal ["DemoCharge_Remote_Mag", 3];
             _x addItemCargoGlobal ["ACE_Clacker", 1];
         };
         //MG5 Hilf für ZgF
