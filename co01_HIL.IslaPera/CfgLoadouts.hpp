@@ -293,7 +293,7 @@ class Loadouts {
         };
 
         class B_soldier_M_F: B_Survivor_F {
-            vest = "CUP_V_PMC_CIRAS_OD_Patrol";
+            vest = "USP_EAGLE_CIRAS_LOAD";
 
             primaryWeapon[] = {
                 //"CUP_arifle_Mk20",
@@ -303,14 +303,19 @@ class Loadouts {
             primaryWeaponMagazine = "CUP_20Rnd_TE1_Red_Tracer_762x51_SCAR_wdl";
             primaryWeaponUnderbarrel = "CUP_bipod_Harris_1A2_L_BLK";
             primaryWeaponOptics[] = {
+                //"optic_SOS_khk_F",
+                //"optic_SOS",
                 "CUP_optic_SB_11_4x20_PM_od",
                 //"CUP_optic_SB_11_4x20_PM_tan",
                 //"CUP_optic_SB_11_4x20_PM"
             };
+            handgunWeapon = "CUP_hgun_Glock17_blk";
+            handgunWeaponMagazine = "CUP_17Rnd_9x19_glock17";
 
             addItemsToVest[] += {
                 LIST_6("CUP_20Rnd_TE1_Red_Tracer_762x51_SCAR_wdl"),
                 "ACE_Rangecard",
+                LIST_2("CUP_17Rnd_9x19_glock17"),
             };
             addItemsToBackpack[] = {
                 LIST_8("CUP_20Rnd_762x51_B_SCAR_wdl"),
@@ -326,16 +331,11 @@ class Loadouts {
                 "CFP_LBT6094_MG_OGA_OD",
                 "CFP_RAV_MG_OGA_OD",
             };
-            backpack[] = {
-                //"CUP_B_TacticalPack_CCE",
-                //"CUP_B_TacticalPack_TTS",
-                "USP_REEBOW_3DAP_ACC3_MCT"
-            };
+
             primaryWeapon[] = {
                 "CUP_lmg_m249_pip3",
             };
-            primaryWeaponMagazine = "CUP_100Rnd_TE4_Red_Tracer_556x45_M249";
-            primaryWeaponUnderbarrel = "CUP_bipod_Harris_1A2_L_BLK";
+            primaryWeaponMagazine = "CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
             primaryWeaponOptics[] = {
                 "CUP_optic_Elcan_SpecterDR_KF_black",
                 "CUP_optic_Elcan_SpecterDR_KF_coyote",
@@ -344,10 +344,10 @@ class Loadouts {
             };
 
             addItemsToVest[] += {
-                LIST_2("CUP_100Rnd_TE4_Red_Tracer_556x45_M249"),
+                LIST_4("CUP_200Rnd_TE4_Red_Tracer_556x45_M249"),
             };
             addItemsToBackpack[] = {
-                LIST_6("CUP_100Rnd_TE4_Red_Tracer_556x45_M249"),
+                LIST_3("CUP_100Rnd_TE4_Red_Tracer_556x45_M249"),
             };
         };
 
@@ -356,12 +356,13 @@ class Loadouts {
             addItemsToBackpack[] = {
                 "ITC_Land_B_AR2i_Packed",
                 LIST_10("ACE_UAVBattery"),
+                "tt_drone_tarp_Yellow"
             };
         };
 
         //Führung
         class B_Soldier_TL_F: B_Survivor_F {
-            vest = "CUP_V_JPC_weaponsbelt_rngr";
+            vest = "USP_CRYE_CPC_WEAPON_BELT_RGR";
             backpack[] = {
                 //"CUP_B_TacticalPack_CCE",
                 //"CUP_B_TacticalPack_TTS"
@@ -398,25 +399,23 @@ class Loadouts {
 
             addItemsToVest[] += {
                 LIST_6("CUP_1Rnd_HE_M203"),
-                LIST_4("CUP_30Rnd_556x45_Emag_Tracer_Red")
+                LIST_8("CUP_30Rnd_556x45_Emag_Tracer_Red")
             };
             addItemsToBackpack[] = {
-                LIST_12("CUP_1Rnd_HE_M203"),
-                LIST_5("CUP_1Rnd_HEDP_M203"),
+                LIST_14("CUP_1Rnd_HE_M203"),
                 LIST_5("1Rnd_Smoke_Grenade_shell"),
                 LIST_5("1Rnd_SmokeRed_Grenade_shell"),
                 "ACE_SpraypaintRed",
                 "ACE_SpraypaintGreen",
                 "ACE_Flags_red",
                 "ACE_Flags_green",
-                LIST_6("CUP_30Rnd_556x45_Emag_Tracer_Red")
             };
 
             binoculars = "ACE_Vector";
         };
 
         class B_Soldier_SL_F: B_Survivor_F {
-            vest = "CUP_V_JPC_tlbelt_rngr";
+            vest = "USP_CRYE_CPC_LEAD_BELT_RGR";
             backpack[] = {
                 "USP_ZIPON_PANEL_CPC_MCT",
                 "USP_ZIPON_PANEL_CPC_SM_MCT",
@@ -440,13 +439,9 @@ class Loadouts {
 
             primaryWeaponMagazine = "CUP_30Rnd_556x45_Emag_Tracer_Red";
 
-            addItemsToUniform[] += {
-                "ACE_MicroDAGR",
-            };
-
             addItemsToVest[] += {
                 "ACRE_PRC152",
-                LIST_6("CUP_30Rnd_556x45_Emag_Tracer_Red"),
+                LIST_8("CUP_30Rnd_556x45_Emag_Tracer_Red"),
             };
 
             addItemsToBackpack[] = {
@@ -524,7 +519,7 @@ class Loadouts {
         //Sani
         //Medics
         class B_medic_F: B_Soldier_F {
-            vest = "CUP_V_JPC_medicalbelt_rngr";
+            vest = "USP_CRYE_CPC_MEDIC_BELT_RGR";
             addItemsToBackpack[] = {};
 
             headgear[] += {
@@ -562,7 +557,7 @@ class Loadouts {
                         //Admin
                         "ACE_surgicalKit",
                         LIST_3("kat_Pulseoximeter"),
-                        LIST_60("ACE_suture"),
+                        LIST_30("ACE_suture"),
                     };
                 };
 
@@ -587,6 +582,7 @@ class Loadouts {
                         "kat_aed",
                         //HIGH-TECH
                         LIST_8("kat_lidocaine"),
+                        LIST_30("ACE_suture"),
                     };
                 };
 
@@ -628,8 +624,12 @@ class Loadouts {
                         LIST_6("kat_norepinephrine"),
                         LIST_6("kat_phenylephrine"),
                         //Admin
-                        LIST_45("ACE_suture"),
-                        "ACE_PersonalAidKit"
+                        LIST_30("ACE_suture"),
+                        LIST_30("ACE_suture"),
+                        "ACE_PersonalAidKit",
+                        "tt_medic_tarp_Red",
+                        "tt_medic_tarp_Yellow",
+                        "tt_medic_tarp_Green"
                     };
                 };
 

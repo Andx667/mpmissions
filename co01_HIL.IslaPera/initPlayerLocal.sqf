@@ -68,3 +68,34 @@ _player addMPEventHandler ["MPRespawn", {
         };
     };
 }];
+
+
+[
+    intel_01,
+    "Verdächtige Dokumente untersuchen",
+    true,
+    [
+        "Verdächtige Dokumente aus Obj. 1",
+        "Die Dokumente deuten darauf hin, dass einige Bewohner von der Insel verschleppt wurden. Es gibt Listen mit Namen und Adressen, die meisten davon abgehakt."
+    ]
+] call ttt_common_fnc_addIntel;
+
+[
+    intel_02,
+    "Massengrab untersuchen",
+    false,
+    [
+        "Massengrab in Obj. 2",
+        "Es scheint als sind dies einige der Menschen die auf den Listen standen."
+    ]
+] call ttt_common_fnc_addIntel;
+
+[
+    intel_03,
+    "Geld untersuchen",
+    true,
+    [
+        "Fremde Währung in Obj. 3",
+        'Die Geldscheine sid ganz offensichtlich russische Rubel. Auf einem kleinen Zettel steht "Für Dimitri von Esmeralda".'
+    ]
+] call ttt_common_fnc_addIntel;

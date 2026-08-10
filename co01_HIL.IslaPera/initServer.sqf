@@ -34,7 +34,7 @@ boxer_01 setMaxLoad 10000;
         // --- Medication ---
         ["kat_Painkiller",          24],
         // --- Grenades ---
-        ["CUP_HandGrenade_M67",     15],
+        ["CUP_HandGrenade_M67",     30],
         ["SmokeShell",              15],
         ["SmokeShellGreen",          9],
         ["SmokeShellPurple",         6],
