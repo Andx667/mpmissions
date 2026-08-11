@@ -217,11 +217,7 @@ class Loadouts {
             vest = "USP_EAGLE_CIRAS_LOAD";
 
             addItemsToVest[] += {
-                LIST_6("CUP_30Rnd_556x45_Emag"),
-            };
-
-            addItemsToBackpack[] = {
-                LIST_6("CUP_30Rnd_556x45_Emag"),
+                LIST_12("CUP_30Rnd_556x45_Emag"),
             };
         };
 
@@ -296,18 +292,19 @@ class Loadouts {
             vest = "USP_EAGLE_CIRAS_LOAD";
 
             primaryWeapon[] = {
-                //"CUP_arifle_Mk20",
+                "CUP_arifle_Mk20",
                 //"CUP_arifle_Mk20_black",
-                "CUP_arifle_Mk20_woodland",
+                //"CUP_arifle_Mk20_woodland",
             };
             primaryWeaponMagazine = "CUP_20Rnd_TE1_Red_Tracer_762x51_SCAR_wdl";
             primaryWeaponUnderbarrel = "CUP_bipod_Harris_1A2_L_BLK";
             primaryWeaponOptics[] = {
                 //"optic_SOS_khk_F",
                 //"optic_SOS",
-                "CUP_optic_SB_11_4x20_PM_od",
+                //"CUP_optic_SB_11_4x20_PM_od",
                 //"CUP_optic_SB_11_4x20_PM_tan",
                 //"CUP_optic_SB_11_4x20_PM"
+                "BWA3_optic_PMII_ShortdotCC"
             };
             handgunWeapon = "CUP_hgun_Glock17_blk";
             handgunWeaponMagazine = "CUP_17Rnd_9x19_glock17";
@@ -335,7 +332,7 @@ class Loadouts {
             primaryWeapon[] = {
                 "CUP_lmg_m249_pip3",
             };
-            primaryWeaponMagazine = "CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
+            primaryWeaponMagazine = "CUP_100Rnd_TE4_Red_Tracer_556x45_M249";
             primaryWeaponOptics[] = {
                 "CUP_optic_Elcan_SpecterDR_KF_black",
                 "CUP_optic_Elcan_SpecterDR_KF_coyote",
@@ -344,10 +341,10 @@ class Loadouts {
             };
 
             addItemsToVest[] += {
-                LIST_4("CUP_200Rnd_TE4_Red_Tracer_556x45_M249"),
+                LIST_4("CUP_100Rnd_TE4_Red_Tracer_556x45_M249"),
             };
             addItemsToBackpack[] = {
-                LIST_3("CUP_100Rnd_TE4_Red_Tracer_556x45_M249"),
+                LIST_6("CUP_100Rnd_TE4_Red_Tracer_556x45_M249"),
             };
         };
 

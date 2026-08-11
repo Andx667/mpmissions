@@ -22,7 +22,7 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
 
 //Fhz allgemein
 [
-    [fhz_01, fhz_02, fhz_03, fhz_04, fhz_05],
+    [fhz_01, fhz_02, fhz_03, fhz_04],
     [
         //Ammo
         ["CUP_30Rnd_556x45_Stanag", 60],
@@ -54,7 +54,7 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
 ] call ttt_common_fnc_crateFiller;
 
 [
-    [fhz_01, fhz_03, fhz_05],
+    [fhz_02],
     [
         ["CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M", 12],
         ["dzn_MG_Tripod_M122A1_M240Mount_Carry", 1],
@@ -66,7 +66,7 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
 ] call ttt_common_fnc_crateFiller;
 
 [
-    [fhz_03, fhz_05],
+    [fhz_02],
     [
         ["CUP_srifle_M107_LeupoldMk4", 1],
         ["CUP_10Rnd_127x99_M107", 10]
@@ -75,10 +75,8 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
 ] call ttt_common_fnc_crateFiller;
 
 [
-    [fhz_02, fhz_04, fhz_05],
+    [fhz_01],
     [
-        ["CUP_B_USMC_MOLLE", 1],
-        ["CUP_launch_MAAWS_Scope", 1],
         ["CUP_MAAWS_HEDP_M", 4],
         ["CUP_MAAWS_HEAT_M", 8]
     ],
@@ -150,7 +148,7 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
             _x addItemCargoGlobal ["ToolKit", 1];
         };
     } forEach (everyBackpack _x);
-} forEach [fhz_01, fhz_02, fhz_03, fhz_04, fhz_05, heli_01, heli_02];
+} forEach [fhz_01, fhz_02, fhz_03, fhz_04];
 
 
 {
@@ -158,4 +156,4 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
     _x addMagazinesTurret ["CUP_150Rnd_TE1_Red_Tracer_25mm_M242_HE", [0], 4];
     _x addMagazinesTurret ["CUP_400Rnd_TE4_Red_Tracer_762x51_M240_M", [0], 4];
     _x setVariable ["ace_rearm_scriptedLoadout", true, true];
-} forEach [fhz_01, fhz_02, fhz_03, fhz_04, fhz_05]
+} forEach [fhz_01, fhz_02]

@@ -167,6 +167,20 @@ class Loadouts {
                 };
         };
 
+        class B_soldier_LAT_F: B_Soldier_F {
+            vest = "CUP_V_B_Eagle_SPC_Rifleman";
+            backpack = "CFP_AssaultPack_Marpat";
+
+            secondaryWeapon = "CUP_launch_MAAWS";
+            secondaryWeaponOptics = "CUP_optic_MAAWS_Scope";
+            secondaryWeaponMagazine = "CUP_MAAWS_HEDP_M";
+
+            addItemsToBackpack[] = {
+                "CUP_MAAWS_HEDP_M",
+                "CUP_MAAWS_HEAT_M",
+            };
+        };
+
         class B_soldier_AT_F: B_Soldier_F {
             vest = "CUP_V_B_Eagle_SPC_AR";
             backpack = "CFP_AssaultPack_Marpat";
@@ -347,6 +361,8 @@ class Loadouts {
                 LIST_5("CUP_1Rnd_Smoke_M203"),
                 "ACE_spraypaintRed",
                 "ACE_spraypaintGreen",
+                "ACE_Flags_red",
+                "ACE_Flags_green"
             };
 
 
@@ -359,7 +375,7 @@ class Loadouts {
 
             addItemsToVest[] += {
                 "ACRE_PRC152",
-                "ace_flags_red",
+
             };
 
             addItemsToBackpack[] = {
@@ -368,6 +384,8 @@ class Loadouts {
                 "ACE_SpraypaintBlack",
                 LIST_3("SmokeShellGreen"),
                 LIST_3("SmokeShellOrange"),
+                "ACE_Flags_red",
+                "ACE_Flags_green"
             };
         };
 
