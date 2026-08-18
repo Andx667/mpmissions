@@ -29,7 +29,13 @@
 #define LIST_28(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
 #define LIST_29(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
 #define LIST_30(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
+#define LIST_45(var1) LIST_30(var1),LIST_15(var1)
+#define LIST_60(var1) LIST_30(var1),LIST_30(var1)
 
+// Merged from CfgLoadouts_CUP_USMC.hpp, CfgLoadouts_CUP_USMC_KAM.hpp and CfgLoadouts_CUP_USMC+Recon.hpp
+// (KAM and +Recon were near-identical; +Recon additionally had B_spotter_F/B_sniper_F, kept below).
+// Where the plain CUP_USMC.hpp variant collided with the KAM variant, the difference is noted as a comment
+// at the relevant spot and the KAM version (more complete medical detail) was kept active.
 class Loadouts {
     baseDelay = 1;
     perPlayerDelay = 1;
@@ -42,8 +48,12 @@ class Loadouts {
 
     //USMC2014
     class Side {
-        class BluforPlayers {
-        //class BluFor {
+        class BluFor {
+        };
+    };
+
+    class Type {
+        class B_Survivor_F {
             uniform[] = {
                 //FROG MARPAT
                 //"CUP_U_B_USMC_FROG1_WMARPAT",
@@ -79,10 +89,13 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "kat_Painkiller",
-                LIST_15("ACE_fieldDressing"),
+                LIST_15("ACE_quikclot"),
                 LIST_15("ACE_packingBandage"),
+                LIST_15("ACE_elasticBandage"),
                 LIST_4("ACE_Tourniquet"),
+                LIST_2("kat_chestSeal"),
+                "kat_guedel",
+                LIST_2("kat_Painkiller"),
             };
             addItemsToVest[] = {
                 LIST_2("CUP_HandGrenade_M67"),
@@ -112,18 +125,19 @@ class Loadouts {
             gps = "";
             radio = "";
         };
-    };
 
-    class Type {
+        // Es fehlt eine eigene B_Soldier_GL_F (Grenadier) Klasse, die in fast allen anderen Loadout-Dateien
+        // definiert ist - diese Rolle bekommt hier nur die Grundausstattung ohne Unterlaufmunition laut TTT-Wiki
+        // (B_soldier_exp_F deckt Pionier/EOD dagegen bereits gut ab)
         //Rifleman
-        class B_Soldier_F {
+        class B_Soldier_F: B_Survivor_F {
             vest = "CUP_V_B_Eagle_SPC_Rifleman";
             addItemsToVest[] += {
                 LIST_8("CUP_30Rnd_556x45_Stanag"),
             };
         };
 
-        class B_soldier_AR_F {
+        class B_soldier_AR_F: B_Survivor_F {
             vest = "CUP_V_B_Eagle_SPC_AR";
             backpack = "";
 
@@ -171,7 +185,7 @@ class Loadouts {
             binoculars = "Binocular";
         };
 
-        class B_soldier_M_F {
+        class B_soldier_M_F: B_Survivor_F {
             vest = "CUP_V_B_Eagle_SPC_DMR";
             backpack = "CFP_AssaultPack_Marpat";
 
@@ -198,7 +212,7 @@ class Loadouts {
             vests = "CUP_V_B_Eagle_SPC_RTO";
             backpack = "CUP_B_Kombat_Radio_Olive";
 
-            addItemsToVes[] += {
+            addItemsToVest[] += {
                 "ACRE_PRC152",
             };
 
@@ -210,7 +224,7 @@ class Loadouts {
         };
 
         //Crew
-        class B_crew_F {
+        class B_crew_F: B_Survivor_F {
 
             class Rank {
 
@@ -253,7 +267,7 @@ class Loadouts {
         };
 
         //Führung
-        class B_Soldier_TL_F {
+        class B_Soldier_TL_F: B_Survivor_F {
             vest = "CUP_V_B_Eagle_SPC_TL";
             backpack = "CUP_B_USMC_MOLLE";
             headgear[] = {
@@ -266,7 +280,7 @@ class Loadouts {
             primaryWeaponMagazine = "CUP_30Rnd_556x45_Stanag_Tracer_Red";
 
             addItemsToVest[] += {
-                LIST_8("CUP_30Rnd_556x45_Stanag_Tracer_Red");
+                LIST_8("CUP_30Rnd_556x45_Stanag_Tracer_Red"),
                 "ACRE_PRC148",
             };
 
@@ -280,9 +294,10 @@ class Loadouts {
             binoculars = "Binocular";
         };
 
+        // Kollision: die alte CfgLoadouts_CUP_USMC.hpp hatte hier zusätzlich "backpack = "";" (kein Rucksack statt
+        // dem geerbten CUP_B_USMC_MOLLE von B_Soldier_TL_F) - nicht übernommen, da die KAM-Variante den Rucksack behält
         class B_Soldier_SL_F: B_Soldier_TL_F {
             vest = "CUP_V_B_Eagle_SPC_SL";
-            backpack = "";
 
             primaryWeapon = "CUP_arifle_M16A4_Grip";
 
@@ -297,7 +312,8 @@ class Loadouts {
                 "ACE_SpraypaintBlack",
                 LIST_3("SmokeShellGreen"),
                 LIST_3("SmokeShellOrange"),
-                LIST_3("ace_flags_purple"),};
+                LIST_3("ace_flags_purple"),
+            };
         };
 
         class B_officer_F: B_Soldier_SL_F {
@@ -363,36 +379,56 @@ class Loadouts {
 
 
         //Medics
-        class B_medic_F {
+        // Kollision: die alte CfgLoadouts_CUP_USMC.hpp verwendete hier statt "CUP_B_USMC_MOLLE_WDL" den Rucksack
+        // "CUP_B_Raid_bag_SSO_Ataka_2_Rug_Swamp" und ein einfacheres (nicht kat_-basiertes) Sanitätspaket:
+        // LIST_30(ACE_Suture), LIST_16(ACE_Tourniquet), LIST_30(ACE_packingBandage), LIST_30(ACE_elasticBandage) x2,
+        // LIST_20(ACE_quikclot), LIST_16(ACE_Epinephrine), LIST_8(kat_Painkiller), LIST_8(ACE_morphine),
+        // LIST_8(ACE_SalineIV), LIST_4(ACE_salineIV_500), LIST_4(ACE_SalineIV_250), ACE_Bodybag, ACE_SurgicalKit.
+        // Die KAM-Variante (unten) wurde als aktive Version beibehalten, da sie die detailliertere/aktuellere
+        // KAM-Sanitätsausstattung nutzt.
+        class B_medic_F: B_Soldier_F {
 
             class Rank {
 
                 class PRIVATE {
                     vest = "CUP_V_B_Eagle_SPC_Corpsman";
-                    backpack = "CUP_B_Raid_bag_SSO_Ataka_2_Rug_Swamp";
+                    backpack = "CUP_B_USMC_MOLLE_WDL";
 
                     addItemsToVest[] = {
-                            LIST_3("CUP_30Rnd_556x45_Stanag_Tracer_Red"),
-                            "ACE_SurgicalKit",
-                        };
+                        LIST_3("CUP_30Rnd_556x45_Stanag_Tracer_Red"),
+                        "kat_basicDiagnostic",
+                        LIST_2("kat_Pulseoximeter"),
+                        "ACE_SurgicalKit",
+                    };
 
                     addItemsToBackpack[] = {
-                            LIST_30("ACE_Suture"),
-                            LIST_16("ACE_Tourniquet"),
-                            LIST_30("ACE_packingBandage"),
-                            LIST_30("ACE_elasticBandage"),
-                            LIST_30("ACE_elasticBandage"),
-                            LIST_20("ACE_quikclot"),
-
-                            LIST_16("ACE_Epinephrine"),
-                            LIST_8("kat_Painkiller"),
-                            LIST_8("ACE_morphine"),
-
-                            LIST_8("ACE_SalineIV"),
-                            LIST_4("ACE_salineIV_500"),
-                            LIST_4("ACE_SalineIV_250"),
-
-                            "ACE_Bodybag",
+                        //M
+                        LIST_45("ACE_packingBandage"),
+                        LIST_45("ACE_quikclot"),
+                        LIST_16("ACE_tourniquet"),
+                        //A
+                        LIST_12("kat_chestSeal"),
+                        LIST_12("kat_larynx"),
+                        LIST_12("kat_ncdKit"),
+                        //R
+                        "kat_pocketBVM",
+                        //C
+                        LIST_4("ACE_salineIV_250"),
+                        LIST_4("ACE_salineIV_500"),
+                        LIST_16("kat_IV_16"),
+                        LIST_4("kat_IO_FAST"),
+                        //H
+                        LIST_12("kat_Penthrox"),
+                        LIST_12("kat_naloxone"),
+                        LIST_12("kat_nalbuphine"),
+                        LIST_12("ACE_epinephrine"),
+                        LIST_12("kat_Painkiller"),
+                        LIST_8("ACE_morphine"),
+                        //Admin
+                        "ace_flags_blue",
+                        "ACE_SpraypaintBlue",
+                        LIST_3("UK3CB_BAF_SmokeShellBlue"),
+                        "ACE_Bodybag",
                     };
                 };
 
@@ -447,6 +483,53 @@ class Loadouts {
                     binoculars = "Binocular";
                 };
             };
+        };
+
+        class B_spotter_F: B_Survivor_F {
+            primaryWeapon = "CUP_arifle_M4A3_black";
+            primaryWeaponOptics = "CUP_optic_ACOG2";
+
+            handgunWeapon = "CUP_hgun_M9";
+            handgunWeaponMagazine = "CUP_15Rnd_9x19_M9";
+
+            vest = "CUP_V_B_Eagle_SPC_TL";
+            backpack = "CUP_B_USMC_MOLLE";
+
+            headgear = "CUP_H_FR_BoonieMARPAT";
+
+            addItemsToVest[] = {
+                LIST_5("CUP_30Rnd_556x45_Stanag"),
+            };
+            addItemsToBackpack[] = {
+                "ACRE_PRC117F",
+                LIST_5("CUP_5Rnd_762x51_M24"),
+                "ACE_SpottingScope",
+            };
+            binoculars = "Binocular";
+        };
+
+        class B_sniper_F: B_Survivor_F {
+            primaryWeapon = "CUP_srifle_M40A3";
+            primaryWeaponOptics = "CUP_optic_LeupoldMk4";
+            primaryWeaponUnderbarrel = "CUP_bipod_Harris_1A2_L_BLK";
+            primaryWeaponMagazine = "CUP_5Rnd_762x51_M24";
+
+            handgunWeapon = "CUP_hgun_M9";
+            handgunWeaponMagazine = "CUP_15Rnd_9x19_M9";
+
+            vest = "CUP_V_B_Eagle_SPC_DMR";
+            backpack = "CUP_B_USMC_MOLLE";
+
+            headgear = "CUP_H_FR_BoonieMARPAT";
+
+            addItemsToVest[] = {
+                LIST_5("CUP_5Rnd_762x51_M24"),
+                "ACE_Rangetable",
+            };
+            addItemsToBackpack[] = {
+                "ACE_Tripod",
+            };
+            binoculars = "Binocular";
         };
     };
 };

@@ -42,8 +42,12 @@ class Loadouts {
 
     //USMC2014
     class Side {
-        //class BluforPlayers {
         class BluFor {
+        };
+    };
+
+    class Type {
+        class B_Survivor_F {
             uniform[] = {
                 "CUP_U_B_AFU_ACU_Gloves_M14",
                 "CUP_U_B_AFU_ACU_Kneepad_Gloves_M14",
@@ -68,10 +72,12 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "kat_Painkiller",
-                LIST_15("ACE_fieldDressing"),
+                LIST_2("kat_Painkiller"),
+                LIST_15("ACE_elasticBandage"),
                 LIST_15("ACE_packingBandage"),
+                LIST_15("ACE_quikclot"),
                 LIST_4("ACE_Tourniquet"),
+                LIST_2("kat_chestSeal"),
             };
             addItemsToVest[] = {
                 LIST_2("CUP_HandGrenade_M67"),
@@ -105,9 +111,10 @@ class Loadouts {
             gps = "";
             radio = "";
         };
-    };
 
-    class Type {
+        // Anders als in fast allen übrigen Loadout-Dateien fehlen hier eigene Klassen für B_medic_F (Sanitäter),
+        // B_Soldier_TL_F/SL_F (Truppführer/Gruppenführer), B_W_RadioOperator_F (Funker) und B_engineer_F (Pionier) -
+        // diese Rollen bekommen nur die Grundausstattung ohne die von der TTT-Wiki geforderte Spezialausrüstung
         //CUP_lmg_PKM_B50_vfg
         //CUP_srifle_SVD
         //CUP_srifle_SVD_des
@@ -119,10 +126,10 @@ class Loadouts {
 
 
         //Rifleman
-        class B_Soldier_F {
+        class B_Soldier_F: B_Survivor_F {
         };
 
-        class B_soldier_AR_F {
+        class B_soldier_AR_F: B_Survivor_F {
         };
 
         class B_soldier_AAR_F: B_Soldier_F {
@@ -134,11 +141,11 @@ class Loadouts {
         class B_soldier_AAT_F: B_Soldier_F {
         };
 
-        class B_soldier_M_F {
+        class B_soldier_M_F: B_Survivor_F {
         };
 
         //Führung
-        class B_Soldier_TL_F {
+        class B_Soldier_TL_F: B_Survivor_F {
             vest = "";
             backpack = "";
             headgear[] = {
@@ -151,7 +158,7 @@ class Loadouts {
             primaryWeaponMagazine = "";
 
             addItemsToVest[] += {
-                LIST_8("");
+                LIST_8(""),
                 "ACRE_PRC148",
             };
 
@@ -185,11 +192,11 @@ class Loadouts {
             handgunWeaponMagazine = "";
 
             vest = "";
-            
+
         };
-        
+
         //Medics
-        class B_medic_F {
+        class B_medic_F: B_Soldier_F {
 
             class Rank {
 
@@ -232,14 +239,14 @@ class Loadouts {
                     addItemsToVest[] = {
                         "ACE_SpraypaintBlue",
                         "ace_flags_blue",
-                        "ACRE_PR152",
+                        "ACRE_PRC152",
                     };
                 };
 
                 class Sergeant: Corporal {
 
                     addItemsToVest[] = {
-        
+
                     };
 
                 };

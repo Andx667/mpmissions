@@ -41,6 +41,11 @@ class Loadouts {
 
     class Side {
         class Blufor {
+        };
+    };
+
+    class Type {
+        class B_Survivor_F {
             // Uniforms from USP file
             uniform[] = {
                 "USP_G3C_MC",
@@ -192,11 +197,9 @@ class Loadouts {
             gps = "";
             radio = "";
         };
-    };
 
-    class Type {
         // Rifleman
-        class B_Soldier_F {
+        class B_Soldier_F: B_Survivor_F {
             addItemsToVest[] += {
                 LIST_8("CUP_30Rnd_556x45_PMAG_BLACK_RPL")
             };
@@ -281,7 +284,9 @@ class Loadouts {
             binoculars = "ACE_Yardage450";
         };
 
-        // Breacher
+        // Breacher - es gibt keine eigenen B_engineer_F (Pionier) oder B_soldier_mine_F (EOD) Klassen in dieser
+        // Datei; diese Rollen bekommen nur die Grundausstattung ohne ACE_VMH3 (Minendetektor), ACE_EntrenchingTool
+        // oder Sprengmittel laut TTT-Wiki Pionier/EOD-Minimalliste
         class B_soldier_exp_F: B_Soldier_F {
             backpack = "USP_PACK_BREACHER_MC";
 
@@ -504,7 +509,7 @@ class Loadouts {
         };
 
         // Autorifleman
-        class B_soldier_AR_F {
+        class B_soldier_AR_F: B_Survivor_F {
             vest[] = {
                 "USP_CRYE_JPC_MGB_RGR",
                 "USP_CRYE_JPC_MGB",
@@ -803,7 +808,7 @@ class Loadouts {
         };
 
         //SOF
-        class B_recon_F {
+        class B_recon_F: B_Survivor_F {
             uniform[] = {
                 "USP_SOFTSHELL_G3C_KP_MC",
                 "USP_SOFTSHELL_G3C_KP_MC_MCW",

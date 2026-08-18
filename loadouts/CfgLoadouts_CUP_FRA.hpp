@@ -48,7 +48,11 @@ class Loadouts {
 
     class Side {
         class BluFor {
-        //class BluforPlayers {
+        };
+    };
+
+    class Type {
+        class B_Survivor_F {
             uniform[] = {
                 //CCE = Wüste
                 "CUP_U_B_HIL_ACU_CCE",
@@ -77,10 +81,12 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "kat_Painkiller",
-                LIST_15("ACE_fieldDressing"),
+                LIST_2("kat_Painkiller"),
+                LIST_15("ACE_elasticBandage"),
                 LIST_15("ACE_packingBandage"),
+                LIST_15("ACE_quikclot"),
                 LIST_4("ACE_Tourniquet"),
+                LIST_2("kat_chestSeal"),
                 };
             addItemsToVest[] = {
                 LIST_2("CUP_HandGrenade_M67"),
@@ -149,10 +155,7 @@ class Loadouts {
             radio = "";
         };
 
-    };
-
-    class Type {
-        class B_Soldier_F {
+        class B_Soldier_F: B_Survivor_F {
             vest = "CUP_V_PMC_CIRAS_OD_Patrol";
             addItemsToVest[] += {
                 LIST_8("CUP_30Rnd_556x45_Emag"),
@@ -196,6 +199,9 @@ class Loadouts {
             };
         };
 
+        // Es gibt keine eigenen B_engineer_F (Pionier) oder B_soldier_mine_F (EOD) Klassen in dieser Datei - diese
+        // Rolle deckt beides ab, aber es fehlt gegenüber der TTT-Wiki Pionier/EOD-Minimalliste ACE_VMH3
+        // (Minendetektor) und ACE_EntrenchingTool
         class B_soldier_exp_F: B_Soldier_F {
             backpack = "CUP_B_TacticalPack_CCE";
 
@@ -213,7 +219,7 @@ class Loadouts {
                 };
         };
 
-        class B_soldier_M_F {
+        class B_soldier_M_F: B_Survivor_F {
             vest = "CUP_V_PMC_CIRAS_OD_Patrol";
             backpack = "CUP_B_TacticalPack_CCE";
             primaryWeapon[] = {
@@ -240,7 +246,7 @@ class Loadouts {
             binoculars = "ACE_Yardage450";
         };
 
-        class B_Soldier_AR_F {
+        class B_Soldier_AR_F: B_Survivor_F {
             vest[] = {
                 "CFP_FAPC_MG_OGA_OD",
                 "CFP_CarrierRig_Gunner_OGA_OD",
@@ -269,7 +275,7 @@ class Loadouts {
         };
 
         //Führung
-        class B_Soldier_TL_F {
+        class B_Soldier_TL_F: B_Survivor_F {
             vest = "CUP_V_PMC_CIRAS_OD_Grenadier";
             backpack = "CUP_B_TacticalPack_CCE";
 
@@ -297,7 +303,7 @@ class Loadouts {
             binoculars = "ACE_Vector";
         };
 
-        class B_Soldier_SL_F {
+        class B_Soldier_SL_F: B_Survivor_F {
             vest = "CUP_V_PMC_CIRAS_OD_TL";
 
             primaryWeaponMagazine = "CUP_30Rnd_556x45_Emag_Tracer_Red";
@@ -322,7 +328,7 @@ class Loadouts {
         };
 
         //Sani
-        class B_medic_F {
+        class B_medic_F: B_Soldier_F {
             primaryWeapon[] = {"CUP_arifle_HK416_CQB_Black","CUP_arifle_HK416_CQB_Desert","CUP_arifle_HK416_CQB_Wood"};
             vest = "CUP_V_CPC_medicalbelt_rngr";
 
@@ -421,7 +427,7 @@ class Loadouts {
             };
         };
 
-        class B_helicrew_F {
+        class B_helicrew_F: B_Survivor_F {
             //vest = "CUP_V_B_BAF_DDPM_Osprey_Mk3_Pilot"; //DDPM
             vest = "CUP_V_PMC_CIRAS_OD_Veh";
             backpack = "";

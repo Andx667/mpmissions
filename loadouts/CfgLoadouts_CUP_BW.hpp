@@ -171,7 +171,7 @@ class Loadouts {
                 LIST_8("BWA3_30Rnd_556x45_G36_AP"),
             };
 
-            addItemToVest[] += {
+            addItemsToVest[] += {
                 "BWA3_optic_NSV600"
             };
             addItemsToBackpack[] = {
@@ -204,6 +204,8 @@ class Loadouts {
             };
         };
 
+        // TTT-Wiki Breacher (Minimal) verlangt zusätzlich ACE_wirecutter, ACE_Clacker, ACE_DefusalKit sowie
+        // Breaching Block/Packaged Charge - trägt hier nur die Grenadier-Ausrüstung ohne jegliches Breacher-Werkzeug
         class B_soldier_exp_F: B_Soldier_GL_F { //Breacher
 
         };
@@ -252,7 +254,7 @@ class Loadouts {
         class B_soldier_AT_F: B_Soldier_F { //AT
             secondaryWeapon = "BWA3_CarlGustav";
             secondaryWeaponOptics = "BWA3_optic_CarlGustav";
-            secondaryWeaponMagazine = "BWA3_CarlGustav_HEAT"
+            secondaryWeaponMagazine = "BWA3_CarlGustav_HEAT";
 
             //backpack = "";
             addItemsToBackpack[] = {
@@ -412,8 +414,11 @@ class Loadouts {
         };
 
         //Unterstützung
+        // TTT-Wiki Pionier (Minimal) verlangt ACE_VMH3 (Minendetektor), ACE_DefusalKit, ACE_Clacker,
+        // ACE_EntrenchingTool, Klappsäge, Drahtschneider und Sprengmittel - hier trägt der Pionier gar keine
+        // Sonderausrüstung (kein addItemsToVest/Backpack in dieser Klasse)
         class B_engineer_F: B_Soldier_F { //Pionier
-            backpack[] = {  
+            backpack[] = {
                 //"BWA3_PatrolPack_Fleck",
                 "BWA3_PatrolPack_Multi",
                 //"BWA3_PatrolPack_Tropen"
@@ -442,8 +447,10 @@ class Loadouts {
             };
         };
 
+        // TTT-Wiki EOD (Minimal) verlangt ACE_VMH3 (Minendetektor), ACE_DefusalKit, ACE_Clacker,
+        // ACE_EntrenchingTool, Klappsäge und Sprengmittel - hier trägt EOD gar keine Sonderausrüstung
         class B_soldier_mine_F: B_Soldier_F { //EOD
-            backpack[] = {  
+            backpack[] = {
                 //"BWA3_PatrolPack_Fleck",
                 "BWA3_PatrolPack_Multi",
                 //"BWA3_PatrolPack_Tropen"

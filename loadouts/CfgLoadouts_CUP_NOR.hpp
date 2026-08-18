@@ -48,7 +48,12 @@ class Loadouts {
     };
 
     class Side {
-        class Blufor { //BluforPlayers
+        class Blufor {
+        };
+    };
+
+    class Type {
+        class B_Survivor_F {
             uniform[] = {
                 //Regular Uniform
                 "NOR_Combat_Uniform",
@@ -94,11 +99,13 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "kat_Painkiller",
-                LIST_15("ACE_fieldDressing"),
+                LIST_2("kat_Painkiller"),
+                LIST_15("ACE_elasticBandage"),
                 LIST_15("ACE_packingBandage"),
+                LIST_15("ACE_quikclot"),
                 LIST_4("ACE_Tourniquet"),
                 LIST_2("CUP_17Rnd_9x19_glock17"),
+                LIST_2("kat_chestSeal"),
             };
             addItemsToVest[] = {
                 LIST_2("CUP_HandGrenade_M67"),
@@ -155,11 +162,9 @@ class Loadouts {
             gps = "";
             radio = "";
         };
-    };
 
-    class Type {
         //Rifleman
-        class B_Soldier_F {
+        class B_Soldier_F: B_Survivor_F {
             addItemsToVest[] += {
                 LIST_8("CUP_30Rnd_556x45_PMAG_BLACK"),
             };
@@ -343,7 +348,7 @@ class Loadouts {
         };
 
         // These dont inherit from the basic rifleman
-        class B_soldier_M_F {
+        class B_soldier_M_F: B_Survivor_F {
             vest[] = {
                 "CFP_RAV_operator_OGA",
             };
@@ -373,7 +378,7 @@ class Loadouts {
         };
 
         //Autorifleman
-        class B_soldier_AR_F {
+        class B_soldier_AR_F: B_Survivor_F {
             vest[] = {
                 "CFP_RAV_MG_OGA",
                 "CFP_LBT6094_MG_OGA",
@@ -396,7 +401,7 @@ class Loadouts {
             };
         };
 
-        class B_HeavyGunner_F {
+        class B_HeavyGunner_F: B_Survivor_F {
             vest = "CFP_FAPC_MG_OGA";
 
             primaryWeapon = "CUP_lmg_FNMAG_RIS_modern";
@@ -593,7 +598,7 @@ class Loadouts {
         };
 
     //Fahrzeugbesatzung
-        class B_crew_F {
+        class B_crew_F: B_Survivor_F {
             uniform[] = {
                 "NOR_Combat_Uniform",
                 "NOR_Combat_Uniform_Gloves",
@@ -651,7 +656,7 @@ class Loadouts {
                 class SERGEANT: PRIVATE {
                     addItemsToVest[] += {
                         "ItemAndroid",
-                        "ACRE_152",
+                        "ACRE_PRC152",
                         LIST_3("CUP_20Rnd_46x30_MP7"),
                     };
                     binoculars = "Rangefinder";
@@ -666,7 +671,7 @@ class Loadouts {
             };
         };
 
-        class B_sniper_F {
+        class B_sniper_F: B_Survivor_F {
             //uniform[] += {"U_B_FullGhillie_lsh"};
             vest = "V_HarnessO_brn";
             backpack = "B_AssaultPack_cbr";
@@ -783,7 +788,7 @@ class Loadouts {
         };
 
         //Pilots
-        class B_helicrew_F {
+        class B_helicrew_F: B_Survivor_F {
             uniform = "NOR_Combat_Uniform_Gloves";
             vest = "FIR_pilot_vest";
 
@@ -904,7 +909,7 @@ class Loadouts {
         //     binoculars = "ACE_Vector";
         // };
 
-        class B_Soldier_SL_F {
+        class B_Soldier_SL_F: B_Survivor_F {
             primaryWeaponOptics = "CUP_optic_AIMM_COMPM4_BLK";
             primaryWeaponMagazine = "CUP_30Rnd_556x45_PMAG_BLACK_Tracer_Red";
             vest[] = {
@@ -947,7 +952,7 @@ class Loadouts {
         };
 
         //Medics
-        class B_medic_F {
+        class B_medic_F: B_Soldier_F {
             uniform[] = {
                 "NOR_Combat_Uniform",
                 "NOR_Combat_Uniform_Gloves",
@@ -1067,7 +1072,7 @@ class Loadouts {
         };
 
         //SOF
-        class B_recon_F {
+        class B_recon_F: B_Survivor_F {
             uniform[] = {
                 //Grey
                 "NOR_Gorka_Grey_Uniform",
@@ -1091,7 +1096,7 @@ class Loadouts {
                 "SmokeShellGreen",
                 "ACRE_PRC152",
                 LIST_3("Chemlight_red"),
-                "ACE_mircodagr",
+                "ACE_microdagr",
                 LIST_8("CUP_30Rnd_556x45_PMAG_BLACK"),
             };
 
@@ -1173,7 +1178,7 @@ class Loadouts {
 
         };
 
-        class B_recon_M_F {
+        class B_recon_M_F: B_Survivor_F {
             uniform[] = {
                 //Grey
                 "NOR_Gorka_Grey_Uniform",

@@ -51,6 +51,11 @@ class Loadouts {
     // DPMT = Disruptive Pattern Material Temperate
     class Side {
         class Blufor {
+        };
+    };
+
+    class Type {
+        class B_Survivor_F {
             uniform[] = {
                 //MTP / Universal / Modern
                 "CUP_U_B_BAF_MTP_UBACSLONG",
@@ -128,7 +133,7 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "kat_Painkiller",
+                LIST_2("kat_Painkiller"),
                 LIST_10("ACE_elasticBandage"),
                 LIST_10("ACE_packingBandage"),
                 LIST_10("ACE_quikclot"),
@@ -179,11 +184,9 @@ class Loadouts {
             gps = "";
             radio = "";
         };
-    };
 
-    class Type {
         //Rifleman
-        class B_Soldier_F {
+        class B_Soldier_F: B_Survivor_F {
             addItemsToVest[] = {
                 LIST_8("CUP_30Rnd_556x45_Stanag_L85"),
                 "ACRE_PRC152",
@@ -317,7 +320,7 @@ class Loadouts {
         };
 
         //Engineers
-        class B_engineer_F {
+        class B_engineer_F: B_Soldier_F {
             vest = "CUP_V_B_BAF_MTP_Osprey_Mk4_Engineer"; //MTP
             //vest = "CUP_V_B_BAF_DDPM_Osprey_Mk3_Engineer"; //DDPM
             //vest = "CUP_V_B_BAF_DPM_Osprey_Mk3_Engineer"; //DPM
@@ -364,7 +367,7 @@ class Loadouts {
             };
         };
 
-        class B_soldier_exp_F {
+        class B_soldier_exp_F: B_Soldier_F {
 
             vest = "CUP_V_B_BAF_MTP_Osprey_Mk4_Engineer"; //MTP
             //vest = "CUP_V_B_BAF_DDPM_Osprey_Mk3_Engineer"; //DDPM
@@ -395,7 +398,7 @@ class Loadouts {
             };
         };
 
-        class B_soldier_mine_F {
+        class B_soldier_mine_F: B_Soldier_F {
             vest = "CUP_V_B_BAF_MTP_Osprey_Mk4_Engineer"; //MTP
             //vest = "CUP_V_B_BAF_DDPM_Osprey_Mk3_Engineer"; //DDPM
             //vest = "CUP_V_B_BAF_DPM_Osprey_Mk3_Engineer"; //DPM
@@ -431,7 +434,7 @@ class Loadouts {
         };
 
         // Logistics
-        class B_soldier_repair_F {
+        class B_soldier_repair_F: B_Soldier_F {
             backpack = "CUP_B_Motherlode_MTP";
 
             addItemsToVest[] = {
@@ -459,7 +462,7 @@ class Loadouts {
         };
 
         //Führung
-        class B_Soldier_TL_F {
+        class B_Soldier_TL_F: B_Survivor_F {
             backpack = "CUP_B_Motherlode_MTP";
 
             primaryWeaponMagazine = "CUP_30Rnd_556x45_Stanag_L85_Tracer_Red";
@@ -512,7 +515,7 @@ class Loadouts {
         };
 
         // Medics
-        class B_medic_F {
+        class B_medic_F: B_Soldier_F {
             vest = "CUP_V_B_BAF_MTP_Osprey_Mk4_Medic"; //MTP
             //vest = "CUP_V_B_BAF_DDPM_Osprey_Mk3_Medic"; //DDPM
             //vest = "CUP_V_B_BAF_DPM_Osprey_Mk3_Medic"; //DPM
@@ -693,7 +696,7 @@ class Loadouts {
         };
 
         // Fahrzeugbesatzung
-        class B_crew_F {
+        class B_crew_F: B_Survivor_F {
             vest = "CUP_V_B_BAF_MTP_Osprey_Mk4_Crewman"; //MTP
             //vest = "CUP_V_B_BAF_DDPM_Osprey_Mk3_Crewman"; //DDPM
             //vest = "CUP_V_B_BAF_DPM_Osprey_Mk3_Crewman"; //DPM
@@ -730,7 +733,7 @@ class Loadouts {
             };
         };
 
-        class B_sniper_F {
+        class B_sniper_F: B_Survivor_F {
             primaryWeapon[] = {
                 "CUP_srifle_AWM_wdl",
                 "CUP_srifle_AWM_blk",
@@ -753,7 +756,7 @@ class Loadouts {
             headgear = "CUP_H_BAF_MTP_Mk7_PRR_SCRIM_B";
         };
 
-        class B_helicrew_F {
+        class B_helicrew_F: B_Survivor_F {
             //vest = "CUP_V_B_BAF_DDPM_Osprey_Mk3_Pilot"; //DDPM
             vest = "CUP_V_B_BAF_DPM_Osprey_Mk3_Pilot"; //DPM
             backpack = "";
@@ -810,7 +813,7 @@ class Loadouts {
             };
         };
         //SOF
-        class B_recon_F {
+        class B_recon_F: B_Survivor_F {
             uniform = "CUP_U_B_BAF_MTP_UBACSSEAL";
         };
 
@@ -833,7 +836,7 @@ class Loadouts {
 
         };
 
-        class B_recon_M_FB_recon_F {
+        class B_recon_M_F: B_recon_F {
 
         };
     };

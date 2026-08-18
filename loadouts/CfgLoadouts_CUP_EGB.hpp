@@ -44,6 +44,11 @@ class Loadouts {
 
     class Side {
         class Blufor {
+        };
+    };
+
+    class Type {
+        class B_Survivor_F {
             uniform = "BWA3_Uniform_Crye_G3_Fleck";
             vest = "BWA3_Vest_Rifleman_Fleck";
             backpack = "BWA3_AssaultPack_Fleck";
@@ -52,10 +57,12 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "kat_Painkiller",
-                LIST_15("ACE_fieldDressing"),
+                LIST_2("kat_Painkiller"),
+                LIST_15("ACE_elasticBandage"),
                 LIST_15("ACE_packingBandage"),
+                LIST_15("ACE_quikclot"),
                 LIST_4("ACE_Tourniquet"),
+                LIST_2("kat_chestSeal"),
                 "ACRE_SEM52SL",
                 LIST_2("BWA3_15Rnd_9x19_P8"),
                 };
@@ -104,12 +111,10 @@ class Loadouts {
             radio = "";
         };
 
-
-    };
-
-    class Type {
-
-        class B_Soldier_F {
+        // Anders als in den meisten übrigen Loadout-Dateien fehlen hier eigene Klassen für B_engineer_F (Pionier),
+        // B_soldier_mine_F (EOD) und B_soldier_exp_F (Breacher) komplett - diese Rollen bekommen nur die
+        // Grundausstattung ohne die von der TTT-Wiki geforderten Werkzeuge/Sprengmittel (ACE_VMH3, ACE_DefusalKit, ACE_Clacker, ...)
+        class B_Soldier_F: B_Survivor_F {
 
             primaryWeapon[] = {
                 "BWA3_G36KA3",
@@ -135,7 +140,7 @@ class Loadouts {
             };
         };
 
-        class B_soldier_AR_F  {
+        class B_soldier_AR_F: B_Survivor_F {
             vest = "BWA3_Vest_MachineGunner_Fleck";
             primaryWeapon = "BWA3_MG4";
             primaryWeaponMagazine = "BWA3_200Rnd_556x45_Tracer";
@@ -150,7 +155,7 @@ class Loadouts {
 
         };
 
-        class B_soldier_M_F {
+        class B_soldier_M_F: B_Survivor_F {
             vest = "BWA3_Vest_Marksman_Fleck";
             primaryWeapon = "BWA3_G28";
             primaryWeaponMagazine = "BWA3_20Rnd_762x51_G28_Tracer";
@@ -216,7 +221,7 @@ class Loadouts {
         };
 
 //Führung
-        class B_Soldier_TL_F {
+        class B_Soldier_TL_F: B_Survivor_F {
             vest = "BWA3_Vest_Leader_Fleck";
             backpack = "";
 
@@ -265,7 +270,7 @@ class Loadouts {
                 };
         };
 // San
-        class B_Medic_F {
+        class B_Medic_F: B_Soldier_F {
             vest = "BWA3_Vest_Medic_Fleck";
 
             primaryWeapon[] = {
@@ -361,7 +366,7 @@ class Loadouts {
         };
 
         //Piloten
-        class B_helicrew_F {
+        class B_helicrew_F: B_Survivor_F {
             uniform = "BWA3_Uniform_Helipilot";
             vest = "FIR_pilot_vest";
             backpack = "";

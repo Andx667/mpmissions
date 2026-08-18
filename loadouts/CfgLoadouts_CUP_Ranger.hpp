@@ -49,6 +49,11 @@ class Loadouts {
 
     class Side {
         class Blufor {
+        };
+    };
+
+    class Type {
+        class B_Survivor_F {
             uniform[] = {
                 "CFP_75th_CRYE_V1b_Full",
                 "CFP_75th_CRYE_V2_Full",
@@ -143,10 +148,12 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "kat_Painkiller",
-                LIST_15("ACE_fieldDressing"),
+                LIST_2("kat_Painkiller"),
+                LIST_15("ACE_elasticBandage"),
                 LIST_15("ACE_packingBandage"),
-                LIST_4("ACE_Tourniquet")
+                LIST_15("ACE_quikclot"),
+                LIST_4("ACE_Tourniquet"),
+                LIST_2("kat_chestSeal")
             };
             addItemsToVest[] = {
                 LIST_2("CUP_HandGrenade_M67"),
@@ -221,11 +228,11 @@ class Loadouts {
             gps = "";
             radio = "";
         };
-    };
 
-    class Type {
-
-        class B_Soldier_F {
+        // Es gibt keine eigenen Klassen für B_engineer_F (Pionier), B_soldier_mine_F (EOD) oder B_soldier_exp_F
+        // (Breacher) in dieser Datei - diese Rollen bekommen nur die Grundausstattung ohne die von der TTT-Wiki
+        // geforderten Werkzeuge/Sprengmittel (ACE_VMH3, ACE_DefusalKit, ACE_Clacker, ...)
+        class B_Soldier_F: B_Survivor_F {
 
             addItemsToVest[] += {
                 LIST_8("CUP_30Rnd_556x45_PMAG_BLACK_RPL"),
@@ -401,7 +408,7 @@ class Loadouts {
         };
 
         //Führung
-        class B_Soldier_TL_F {
+        class B_Soldier_TL_F: B_Survivor_F {
             primaryWeapon = "CUP_arifle_mk18_black";
             primaryWeaponMagazine = "CUP_30Rnd_556x45_PMAG_OD_RPL_Tracer_Red";
 
@@ -458,7 +465,7 @@ class Loadouts {
         };
 
         //Sani
-        class B_medic_F {
+        class B_medic_F: B_Soldier_F {
             vest[] = {
                 "CUP_V_CPC_medicalbelt_mc",
                 "CUP_V_CPC_medicalbelt_rngr",

@@ -51,6 +51,11 @@ class Loadouts {
 
     class Side {
         class Blufor {
+        };
+    };
+
+    class Type {
+        class B_Survivor_F {
             uniform[] = {
                 "UK3CB_GAF_B_U_CombatSmock_04_DIGI",
                 "UK3CB_GAF_B_U_CombatSmock_02_DIGI",
@@ -82,9 +87,10 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                LSIT_2("kat_Painkiller"),
+                LIST_2("kat_Painkiller"),
                 LIST_15("ACE_quikclot"),
                 LIST_15("ACE_packingBandage"),
+                LIST_15("ACE_elasticBandage"),
                 LIST_4("ACE_Tourniquet"),
                 LIST_2("kat_chestSeal"),
                 "UK3CB_BHP_9_13Rnd",
@@ -141,11 +147,9 @@ class Loadouts {
             gps = "";
             radio = "";
         };
-    };
 
-    class Type {
         //Rifleman
-        class B_Soldier_F {
+        class B_Soldier_F: B_Survivor_F {
 
         };
 
@@ -229,7 +233,7 @@ class Loadouts {
         };
 
         // These dont inherit from the basic rifleman
-        class B_soldier_M_F {
+        class B_soldier_M_F: B_Survivor_F {
             primaryWeapon[] = {
                 "rhs_weap_m14ebrri",
             };
@@ -262,7 +266,7 @@ class Loadouts {
         };
 
         //Autorifleman
-        class B_soldier_AR_F {
+        class B_soldier_AR_F: B_Survivor_F {
             primaryWeapon = "rhs_weap_minimi_para_railed";
             primaryWeaponMagazine = "rhsusf_200Rnd_556x45_mixed_soft_pouch";
             primaryWeaponUnderBarrel = "rhsusf_acc_grip4_bipod";
@@ -284,7 +288,7 @@ class Loadouts {
         };
 
         //MMG
-        class B_HeavyGunner_F {
+        class B_HeavyGunner_F: B_Survivor_F {
 
         };
 
@@ -296,6 +300,8 @@ class Loadouts {
         };
 
         //Unterstützung
+        // TTT-Wiki Pionier (Minimal) verlangt ACE_VMH3 (Minendetektor), ACE_DefusalKit, ACE_EntrenchingTool, Klappsäge,
+        // Drahtschneider und Sprengmittel - hier trägt der Pionier gar keine Sonderausrüstung (kein addItemsToVest/Backpack)
         class B_engineer_F: B_Soldier_F {
             backpack[] = {
                 "UK3CB_CHD_B_B_ENG_WDL_ALT",
@@ -343,6 +349,8 @@ class Loadouts {
             };
         };
 
+        // EOD - trägt hier gar keine Sonderausrüstung (kein ACE_VMH3, ACE_DefusalKit, ACE_Clacker, Sprengmittel laut
+        // TTT-Wiki EOD-Minimalliste)
         class B_soldier_mine_F: B_Soldier_F {
 
             class Rank {
@@ -359,7 +367,7 @@ class Loadouts {
         };
 
         //Fahrzeugbesatzung
-        class B_crew_F {
+        class B_crew_F: B_Survivor_F {
             primaryWeapon = "rhs_weap_vhsk2";
 
             vest[] = {
@@ -406,7 +414,7 @@ class Loadouts {
             };
         };
 
-        class B_sniper_F {
+        class B_sniper_F: B_Survivor_F {
 
         };
 
@@ -434,7 +442,7 @@ class Loadouts {
         };
 
         //Pilots
-        class B_helicrew_F {
+        class B_helicrew_F: B_Survivor_F {
 
         };
 
@@ -456,7 +464,7 @@ class Loadouts {
         };
 
         //Führung
-        class B_Soldier_TL_F {
+        class B_Soldier_TL_F: B_Survivor_F {
             backpack[] = {
                 "UK3CB_B_I_Backpack_Radio_Chem_OLI",
                 //"UK3CB_B_I_Backpack_Radio_Chem",
@@ -493,7 +501,7 @@ class Loadouts {
         };
 
         //Medics
-        class B_medic_F {
+        class B_medic_F: B_Soldier_F {
             primaryWeapon = "rhs_weap_vhsk2";
             vest[] = {
                 //"UK3CB_GAF_B_MBAV_MEDIC_BLK_02",
@@ -574,7 +582,7 @@ class Loadouts {
                         LIST_8("ACE_salineIV"),
                         LIST_3("kat_IV_16"),
                         LIST_3("ACE_epinephrine"),
-                        LSIT_9("kat_amiodarone"),
+                        LIST_9("kat_amiodarone"),
                         "kat_aed",
                         //H
                         LIST_3("kat_Penthrox"),
@@ -710,7 +718,7 @@ class Loadouts {
         };
 
         //SOF
-        class B_recon_F {
+        class B_recon_F: B_Survivor_F {
             primaryWeaponMuzzle[] = {
                 "rhsusf_acc_nt4_black",
                 //"rhsusf_acc_nt4_tan",

@@ -52,6 +52,11 @@ class Loadouts {
 
     class Side {
         class Blufor {
+        };
+    };
+
+    class Type {
+        class B_Survivor_F {
             uniform[] = {
                 "UK3CB_AAF_B_U_CombatUniform_DIGI_GRN",
                 "UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN",
@@ -76,6 +81,7 @@ class Loadouts {
                 LIST_2("kat_Painkiller"),
                 LIST_15("ACE_elasticBandage"),
                 LIST_15("ACE_packingBandage"),
+                LIST_15("ACE_quikclot"),
                 LIST_4("ACE_Tourniquet"),
                 LIST_2("kat_chestseal"),
                 LIST_2(""), //Frag Grenade
@@ -113,11 +119,9 @@ class Loadouts {
             gps = "";
             radio = "";
         };
-    };
 
-    class Type {
         //Rifleman
-        class B_Soldier_F {
+        class B_Soldier_F: B_Survivor_F {
             addItemsToVest[] = {
                 LIST_8(""),
             };
@@ -141,7 +145,7 @@ class Loadouts {
         };
 
         //Marksman
-        class B_soldier_M_F {
+        class B_soldier_M_F: B_Survivor_F {
             primaryWeapon[] = {
             };
             primaryWeaponOptics = "";
@@ -237,7 +241,7 @@ class Loadouts {
         };
 
         //MMG
-        class B_HeavyGunner_F {
+        class B_HeavyGunner_F: B_Survivor_F {
             primaryWeapon[] = {
 
             };
@@ -279,7 +283,7 @@ class Loadouts {
         };
 
         //Autorifleman
-        class B_soldier_AR_F {
+        class B_soldier_AR_F: B_Survivor_F {
             primaryWeapon[] = {
             };
             primaryWeaponMagazine = "";
@@ -347,7 +351,7 @@ class Loadouts {
         };
 
         //Fahrzeugbesatzung
-        class B_crew_F {
+        class B_crew_F: B_Survivor_F {
             primaryWeapon = "";
             primaryWeaponMagazine = "";
             primaryWeaponOptics = "";
@@ -407,7 +411,7 @@ class Loadouts {
         };
 
         //Pilots
-        class B_helicrew_F {
+        class B_helicrew_F: B_Survivor_F {
 
         };
 
@@ -416,7 +420,7 @@ class Loadouts {
         };
 
         //Aufklärer
-        class B_sniper_F {
+        class B_sniper_F: B_Survivor_F {
             primaryWeapon = "";
             primaryWeaponMagazine = "";
             primaryWeaponOptics = "";
@@ -505,7 +509,7 @@ class Loadouts {
         };
 
         //Führung
-        class B_Soldier_TL_F {
+        class B_Soldier_TL_F: B_Survivor_F {
             primaryWeaponMagazine = ""; //Tracer instead of regular ball
 
             addItemsToUniform[] += {
@@ -536,7 +540,7 @@ class Loadouts {
         };
 
         //Medics
-        class B_medic_F {
+        class B_medic_F: B_Soldier_F {
             vest = "";
 
             class Rank {
@@ -636,7 +640,7 @@ class Loadouts {
         };
 
         //SOF
-        class B_recon_F {
+        class B_recon_F: B_Survivor_F {
             uniform[] = {
             };
             vest[] = {
@@ -649,10 +653,12 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "kat_Painkiller",
-                LIST_15("ACE_fieldDressing"),
+                LIST_2("kat_Painkiller"),
+                LIST_15("ACE_elasticBandage"),
                 LIST_15("ACE_packingBandage"),
+                LIST_15("ACE_quikclot"),
                 LIST_4("ACE_Tourniquet"),
+                LIST_2("kat_chestseal"),
                 LIST_2(""),
                 LIST_2(""),
             };
@@ -731,7 +737,7 @@ class Loadouts {
 
         };
 
-        class B_recon_M_F {
+        class B_recon_M_F: B_Survivor_F {
             primaryWeapon = "";
             primaryWeaponMagazine = "";
             primaryWeaponMuzzle = "";

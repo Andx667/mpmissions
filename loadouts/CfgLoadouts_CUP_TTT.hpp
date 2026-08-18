@@ -31,6 +31,10 @@
 #define LIST_45(var1) LIST_30(var1),LIST_15(var1)
 #define LIST_60(var1) LIST_30(var1),LIST_30(var1)
 
+// Merged from CfgLoadouts_CUP_TTT.hpp and "CfgLoadouts_CUP_TTT copy.hpp" (the "copy" variant was the more
+// developed of the two - it had fleshed-out medic tiers and a more complete breacher/EOD kit where the original
+// was often left empty). Where the two genuinely collided on a choice (not just "copy adds more"), the copy's
+// value was kept active and the original's alternative is noted as a comment at that spot.
 class Loadouts {
     baseDelay = 1;
     perPlayerDelay = 1;
@@ -39,7 +43,7 @@ class Loadouts {
     randomizationMode = 1;
     customGear = 300;
     customGearAllowedCategories[] = {
-        "uniform",
+        //"uniform",
         //"vest",
         "primaryWeapon",
         "primaryWeaponOptics",
@@ -54,6 +58,11 @@ class Loadouts {
 
     class Side {
         class Blufor {
+        };
+    };
+
+    class Type {
+        class B_Survivor_F {
             uniform[] = {
                 "ttt_Uniform_green_BW_Flecktarn",
             };
@@ -73,11 +82,13 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "kat_Painkiller",
-                LIST_15("ACE_fieldDressing"),
+                LIST_2("kat_Painkiller"),
+                LIST_15("ACE_elasticBandage"),
                 LIST_15("ACE_packingBandage"),
+                LIST_15("ACE_quikclot"),
                 LIST_4("ACE_Tourniquet"),
                 LIST_2("CUP_17Rnd_9x19_glock17"),
+                LIST_2("kat_chestSeal"),
                 "ACE_IR_Strobe_Item",
             };
             addItemsToVest[] = {
@@ -94,20 +105,26 @@ class Loadouts {
                 "CUP_arifle_HK416_Desert",
                 "CUP_arifle_HK416_Wood",
             };
+            // Kollision: die alte CfgLoadouts_CUP_TTT.hpp nutzte hier aktiv CUP_optic_Elcan_SpecterDR_KF_RMR_*
+            // und CUP_optic_HensoldtZO_low_RDS_* statt der BWA3_optic_ZO4x30_* Reihe - nicht übernommen
             primaryWeaponOptics[] = {
-                "CUP_optic_Elcan_SpecterDR_KF_RMR_black",
-                "CUP_optic_Elcan_SpecterDR_KF_RMR_coyote",
-                "CUP_optic_Elcan_SpecterDR_KF_RMR_od",
-                "CUP_optic_Elcan_SpecterDR_KF_RMR",
-                "CUP_optic_HensoldtZO_low_RDS",
-                "CUP_optic_HensoldtZO_low_RDS_coyote",
-                "CUP_optic_HensoldtZO_low_RDS_desert",
-                "CUP_optic_HensoldtZO_low_RDS_od",
+                // "CUP_optic_Elcan_SpecterDR_KF_RMR_black",
+                // "CUP_optic_Elcan_SpecterDR_KF_RMR_coyote",
+                // "CUP_optic_Elcan_SpecterDR_KF_RMR_od",
+                // "CUP_optic_Elcan_SpecterDR_KF_RMR",
+                // "CUP_optic_HensoldtZO_low_RDS",
+                // "CUP_optic_HensoldtZO_low_RDS_coyote",
+                // "CUP_optic_HensoldtZO_low_RDS_desert",
+                // "CUP_optic_HensoldtZO_low_RDS_od",
+                "BWA3_optic_ZO4x30_MicroT2",
+                "BWA3_optic_ZO4x30_MicroT2_brown",
+                "BWA3_optic_ZO4x30_RSAS",
+                "BWA3_optic_ZO4x30_RSAS_brown",
                 };
             primaryWeaponPointer[] = {
-                "CUP_acc_ANPEQ_15_Top_Flashlight_Tan_L",
-                "CUP_acc_ANPEQ_15_Top_Flashlight_OD_L",
-                "CUP_acc_ANPEQ_15_Top_Flashlight_Black_L",
+                // "CUP_acc_ANPEQ_15_Top_Flashlight_Tan_L",
+                // "CUP_acc_ANPEQ_15_Top_Flashlight_OD_L",
+                // "CUP_acc_ANPEQ_15_Top_Flashlight_Black_L",
                 "CUP_acc_ANPEQ_15_Flashlight_Tan_L",
                 "CUP_acc_ANPEQ_15_Flashlight_OD_L",
                 "CUP_acc_ANPEQ_15_Flashlight_Black_L",
@@ -145,16 +162,14 @@ class Loadouts {
             gps = "";
             radio = "";
         };
-    };
 
-    class Type {
         //Rifleman
-        class B_Soldier_F {
+        class B_Soldier_F: B_Survivor_F {
             primaryWeaponMagazine = "CUP_30Rnd_556x45_PMAG_BLACK_RPL";
 
             addItemsToVest[] += {
                 LIST_8("CUP_30Rnd_556x45_PMAG_BLACK_RPL"),
-
+                "BWA3_optic_NSV600",
             };
 
         };
@@ -164,7 +179,7 @@ class Loadouts {
                 "CUP_arifle_HK416_AGL_Black",
                 "CUP_arifle_HK416_AGL_Desert",
                 "CUP_arifle_HK416_AGL_Wood",
-                };
+            };
 
             addItemsToBackpack[] += {
                 LIST_16("CUP_1Rnd_HE_M203"),
@@ -174,6 +189,9 @@ class Loadouts {
 
         };
 
+        // Kollision: die alte CfgLoadouts_CUP_TTT.hpp hatte hier LIST_3(tsp_breach_block_mag), LIST_2(ACE_M84)
+        // und kein CUP_6Rnd_12Gauge_Pellets_No00_Buck - nicht übernommen, die vollständigere Ausstattung mit
+        // Schrotmunition wurde beibehalten
         class B_soldier_exp_F: B_Soldier_F {
             goggles[] = {
                 "CUP_G_ESS_BLK_Dark",
@@ -209,9 +227,10 @@ class Loadouts {
             };
 
             addItemsToBackpack[] = {
-                LIST_3("tsp_breach_block_mag"),
+                LIST_2("tsp_breach_block_mag"),
                 LIST_2("tsp_breach_package_mag"),
-                LIST_2("ACE_M84"),
+                LIST_4("ACE_M84"),
+                LIST_3("CUP_6Rnd_12Gauge_Pellets_No00_Buck"),
             };
 
         };
@@ -278,12 +297,13 @@ class Loadouts {
         };
 
         // These dont inherit from the basic rifleman
-        class B_soldier_M_F {
+        class B_soldier_M_F: B_Survivor_F {
             primaryWeapon[] = {
                 "CUP_arifle_HK417_20",
                 "CUP_arifle_HK417_20_Desert",
                 "CUP_arifle_HK417_20_Wood",
             };
+            primaryWeaponMagazine = "CUP_20Rnd_762x51_HK417";
             primaryWeaponOptics[] = {
                 "optic_SOS",
                 "optic_SOS_khk_F",
@@ -294,12 +314,11 @@ class Loadouts {
                 "bipod_01_F_mtp",
                 "bipod_01_F_snd",
                 "bipod_01_F_khk",
-                };
+            };
 
             addItemsToVest[] += {
                 "ACE_RangeCard",
                 LIST_6("CUP_20Rnd_762x51_HK417"),
-
             };
 
             addItemsToBackpack[] += {
@@ -307,12 +326,14 @@ class Loadouts {
             };
         };
 
+        // Kollision: die alte CfgLoadouts_CUP_TTT.hpp nutzte hier CUP_lmg_L110A1 / CUP_100Rnd_TE4_Red_Tracer_556x45_M249
+        // statt BWA3_MG4 / BWA3_200Rnd_556x45_Tracer - nicht übernommen
         //Autorifleman
-        class B_soldier_AR_F {
+        class B_soldier_AR_F: B_Survivor_F {
             primaryWeapon[] = {
-                "CUP_lmg_L110A1",
+                "BWA3_MG4",
                 };
-            primaryWeaponMagazine = "CUP_100Rnd_TE4_Red_Tracer_556x45_M249";
+            primaryWeaponMagazine = "BWA3_200Rnd_556x45_Tracer";
             primaryWeaponPointer[] = {
                 "CUP_acc_ANPEQ_15_Flashlight_Tan_L",
                 "CUP_acc_ANPEQ_15_Flashlight_OD_L",
@@ -320,24 +341,24 @@ class Loadouts {
             };
 
             addItemsToVest[] += {
-                LIST_2("CUP_100Rnd_TE4_Red_Tracer_556x45_M249"),
-
+                LIST_2("BWA3_200Rnd_556x45_Tracer"),
+                "BWA3_optic_NSV600",
             };
 
             addItemsToBackpack[] = {
-                LIST_2("CUP_100Rnd_TE4_Red_Tracer_556x45_M249"),
+                LIST_2("BWA3_200Rnd_556x45_Tracer"),
             };
         };
 
         //MMG
-        class B_HeavyGunner_F {
+        class B_HeavyGunner_F: B_Survivor_F {
             primaryWeapon[] = {
                 "CUP_lmg_Mk48_wdl",
                 "CUP_lmg_Mk48_tan",
                 "CUP_lmg_Mk48_od",
                 "CUP_lmg_Mk48_des",
                 "CUP_lmg_Mk48",
-                };
+            };
             primaryWeaponOptics[] += {
                 "CUP_optic_ACOG_TA648_308_RDS_Black",
                 "CUP_optic_ACOG_TA648_308_RDS_coyo",
@@ -485,6 +506,7 @@ class Loadouts {
                     addItemsToVest[] += {
                         "ACE_Clacker",
                         "ACE_Defusalkit",
+                        "iedd_item_notebook",
                     };
 
                     addItemsToBackpack[] = {
@@ -511,28 +533,43 @@ class Loadouts {
             };
         };
 
+        // Kollision: die alte CfgLoadouts_CUP_TTT.hpp setzte hier uniform/vest/headgear direkt und
+        // addItemsToVest[]+= {ACE_UAVBattery, ACE_Defusalkit, ACE_Clacker} flach (ohne Rank), mit eigenem leeren
+        // addItemsToBackpack[]={} - nicht übernommen, die Rank-basierte Struktur wurde beibehalten
         class B_soldier_UGV_02_Demining_F: B_soldier_mine_F {
-            uniform = "ttt_Uniform_Blue_BW_Flecktarn";
-            vest = "ttt_Vest_Heavy_Blue_US_Desert";
-            headgear = "ttt_Beret_Blue";
-            //backpack = "B_UGV_02_Demining_backpack_F";
+            //uniform = "ttt_Uniform_Blue_BW_Flecktarn";
+            //vest = "ttt_Vest_Heavy_Blue_US_Desert";
+            //headgear = "ttt_Beret_Blue";
+            backpack = "B_UGV_02_Demining_backpack_F";
 
             handgunWeapon = "ACE_VMH3";
             handgunWeaponMagazine = "";
 
-            addItemsToVest[] += {
-                "ACE_UAVBattery",
-                "ACE_Defusalkit",
-                "ACE_Clacker",
+            class Rank {
+
+                class PRIVATE {
+                    addItemsToVest[] += {
+                        //"ACE_UAVBattery",
+                        "ACE_Defusalkit",
+                        "ACE_Clacker",
+                    };
+
+                    addItemsToBackpack[] = {};
+                };
+                class CORPORAL: PRIVATE {
+
+                };
+                class SERGEANT: CORPORAL {
+
+                };
             };
 
-            addItemsToBackpack[] = {};
 
             gps = "B_UavTerminal";
         };
 
         //Fahrzeugbesatzung
-        class B_crew_F {
+        class B_crew_F: B_Survivor_F {
             uniform = "ttt_Uniform_Bronze_BW_Flecktarn";
             vest = "ttt_Vest_Crew_Bronze";
             headgear = "ttt_Beret_Bronze";
@@ -554,10 +591,23 @@ class Loadouts {
             };
 
             goggles[] = {
+                "CUP_G_ESS_BLK_Dark",
+                "CUP_G_ESS_BLK_Ember",
                 "CUP_G_ESS_BLK",
+                "CUP_G_ESS_CBR_Dark",
+                "CUP_G_ESS_CBR_Ember",
                 "CUP_G_ESS_CBR",
+                "CUP_G_ESS_RGR_Dark",
+                "CUP_G_ESS_RGR_Ember",
                 "CUP_G_ESS_RGR",
+                "CUP_G_ESS_KHK_Dark",
+                "CUP_G_ESS_KHK_Ember",
                 "CUP_G_ESS_KHK",
+                "CUP_G_ESS_BLK_Scarf_Blk",
+                "CUP_G_ESS_BLK_Scarf_Grn",
+                "CUP_G_ESS_KHK_Scarf_Tan",
+                "CUP_G_ESS_BLK_Scarf_Face_Grn",
+                "CUP_G_ESS_KHK_Scarf_Face_Tan",
                 ""
             };
 
@@ -582,7 +632,7 @@ class Loadouts {
             };
         };
 
-        class B_sniper_F {
+        class B_sniper_F: B_Survivor_F {
             primaryWeapon[] =  {
                 "BWA3_G29",
             };
@@ -613,15 +663,15 @@ class Loadouts {
 
             addItemsToVest[] += {
                 "ItemAndroid",
-                LIST_5("BWA3_10Rnd_86x70_G29");
+                LIST_5("BWA3_10Rnd_86x70_G29"),
                 "ACE_Kestrel4500",
                 "ACE_ATragMX",
-                "BWA3_optic_NSV600",
+                "BWA3_optic_NSV80",
             };
 
             addItemsToBackpack[] = {
                 "ACE_Tripod",
-                LIST_5("BWA3_10Rnd_86x70_G29");
+                LIST_5("BWA3_10Rnd_86x70_G29"),
             };
 
             binoculars = "ACE_Vector";
@@ -660,7 +710,7 @@ class Loadouts {
 
             addItemsToBackpack[] = {
                 "ACE_SpottingScope",
-                LIST_5("BWA3_10Rnd_86x70_G29");
+                LIST_5("BWA3_10Rnd_86x70_G29"),
                 "ACE_EntrenchingTool",
                 "ACRE_PRC117F",
             };
@@ -705,7 +755,7 @@ class Loadouts {
         };
 
         //Pilots
-        class B_helicrew_F {
+        class B_helicrew_F: B_Survivor_F {
             uniform = "ttt_Uniform_Silver_BW_Flecktarn";
             vest = "FIR_pilot_vest";
             headgear[] = {
@@ -781,7 +831,7 @@ class Loadouts {
         };
 
         //Führung
-        class B_Soldier_TL_F {
+        class B_Soldier_TL_F: B_Survivor_F {
             primaryWeaponMagazine = "CUP_30Rnd_556x45_PMAG_OD_RPL_Tracer_Red";
 
             addItemsToUniform[] += {
@@ -819,7 +869,7 @@ class Loadouts {
         };
 
         class B_W_RadioOperator_F: B_Soldier_F {
-            backpack = "ttt_backpack_radio_green_us_desert"
+            backpack = "ttt_backpack_radio_green_us_desert";
 
             addItemsToVest[] += {
                 "ItemAndroid",
@@ -880,28 +930,88 @@ class Loadouts {
 
         };
 
+        // Kollision: in der alten CfgLoadouts_CUP_TTT.hpp war die PRIVATE-Stufe (Bravo Gruppe) komplett leer
+        // (kein Sanitätsmaterial über die Grundausstattung hinaus) und CORPORAL/SERGEANT/LIEUTENANT hatten kein
+        // M/A/R/C/H-Paket - die vollständigere Ausstattung dieser (ehemals "copy") Datei wurde beibehalten
         //Medics
-        class B_medic_F {
+        class B_medic_F: B_Soldier_F {
 
             class Rank {
 
+                //Bravo (Gruppe)
                 class PRIVATE {
-
+                    addItemsToBackpack[] += {
+                        //M
+                        LIST_30("ACE_quikclot"),
+                        LIST_30("ACE_packingBandage"),
+                        LIST_30("ACE_elasticBandage"),
+                        LIST_8("ACE_tourniquet"),
+                        //A
+                        //R
+                        LIST_4("kat_ncdKit"),
+                        LIST_8("kat_chestSeal"),
+                        //C
+                        LIST_4("ACE_epinephrine"),
+                        //H
+                        //P
+                        LIST_8("kat_Painkiller"),
+                        "ACE_surgicalKit",
+                        //A
+                        //W
+                        //S
+                    };
                 };
 
+                //Bravo (Zug)
                 class CORPORAL: PRIVATE {
                     uniform = "ttt_Uniform_Brown_BW_Flecktarn";
                     vest = "ttt_Vest_Heavy_Brown_US_Desert";
                     headgear = "ttt_Beret_Brown";
+                    backpack = "ttt_backpack_medic_rgr_02";
 
                     addItemsToVest[] = {
                         "ItemAndroid",
                         LIST_3("CUP_30Rnd_556x45_PMAG_BLACK_RPL"),
+                        "kat_basicDiagnostic",
+                        LIST_3("kat_Pulseoximeter"),
+                        "ACE_surgicalKit",
                     };
 
-                    backpack = "ttt_backpack_medic_rgr_02";
+                    addItemsToBackpack[] += {
+                        //M
+                        LIST_15("ACE_quikclot"),
+                        LIST_15("ACE_packingBandage"),
+                        LIST_15("ACE_elasticBandage"),
+                        //A
+                        LIST_6("kat_larynx"),
+                        LIST_6("kat_suction"),
+                        //R
+                        "kat_pocketBVM",
+                        LIST_8("kat_chestSeal"),
+                        //C
+                        LIST_9("kat_IV_16"),
+                        LIST_6("ACE_salineIV"),
+                        LIST_3("ACE_salineIV_500"),
+                        LIST_3("ACE_salineIV_250"),
+                        LIST_12("ACE_epinephrine"),
+                        "kat_AED",
+                        LIST_8("kat_lidocaine"),
+                        //H
+                        //P
+                        LIST_8("ACE_morphine"),
+                        LIST_4("kat_naloxone"),
+                        LIST_8("kat_Penthrox"),
+                        LIST_4("kat_Painkiller"),
+                        //A
+                        //W
+                        LIST_45("ACE_suture"),
+                        //S
+                        "ace_flags_blue",
+                        "ACE_SpraypaintBlue",
+                    };
                 };
 
+                //Charlie (Zug)
                 class SERGEANT: CORPORAL {
                     uniform = "ttt_Uniform_White_BW_Flecktarn";
                     vest = "ttt_Vest_Crew_White";
@@ -919,9 +1029,14 @@ class Loadouts {
                     addItemsToVest[] = {
                         LIST_2("50Rnd_570x28_SMG_03"),
                         "ItemAndroid",
+                        "kat_basicDiagnostic",
+                        LIST_3("kat_Pulseoximeter"),
+                        "ACE_surgicalKit",
+
                     };
                 };
 
+                //Charlie (Kompanie)
                 class LIEUTENANT: SERGEANT {
                     backpack = "ttt_backpack_radio_white_us_desert";
 
@@ -929,7 +1044,7 @@ class Loadouts {
             };
         };
 
-        class B_soldier_repair_F {
+        class B_soldier_repair_F: B_Soldier_F {
             uniform = "ttt_Uniform_Silver_BW_Flecktarn";
             vest = "ttt_Vest_Crew_Silver";
             headgear = "ttt_Beret_Silver";
@@ -968,7 +1083,7 @@ class Loadouts {
         };
 
         //SOF
-        class B_recon_F {
+        class B_recon_F: B_Survivor_F {
             uniform = "ttt_Uniform_Grey_BW_Flecktarn";
             vest = "ttt_Vest_Lite_Grey_US_Desert";
             headgear = "ttt_Beret_Grey";
@@ -1000,13 +1115,15 @@ class Loadouts {
                 LIST_2("ACE_M84"),
                 LIST_2("ACE_CableTie"),
                 "SmokeShellGreen",
+                "BWA3_optic_IRV600",
+                "BWA3_optic_NSV600",
             };
 
             goggles[] += {
                 "CUP_G_PMC_Facewrap_Tropical_Glasses_Ember",
                 "CUP_G_PMC_Facewrap_Tropical_Glasses_Dark",
-                //"CUP_G_PMC_Facewrap_Tan_Glasses_Ember",
-                //"CUP_G_PMC_Facewrap_Tan_Glasses_Dark",
+                "CUP_G_PMC_Facewrap_Tan_Glasses_Ember",
+                "CUP_G_PMC_Facewrap_Tan_Glasses_Dark",
                 "CUP_G_PMC_Facewrap_Black_Glasses_Ember",
                 "CUP_G_PMC_Facewrap_Black_Glasses_Dark",
             };
@@ -1017,6 +1134,8 @@ class Loadouts {
             binoculars = "ACE_MX2A";
         };
 
+        // Kollision: die alte CfgLoadouts_CUP_TTT.hpp hatte hier "class CORPORAL {}" ohne ": PRIVATE" und
+        // SERGEANT/LIEUTENANT waren leer (kein Sanitätsmaterial) - die vollständigere Ausstattung wurde beibehalten
         class B_recon_medic_F: B_recon_F {
             backpack[] = {
                 "ttt_backpack_medic_rgr_02",
@@ -1024,8 +1143,46 @@ class Loadouts {
             };
 
             class Rank {
-                class CORPORAL {
+                class PRIVATE;
+                class CORPORAL: PRIVATE {
+                    addItemsToVest[] += {
+                        "ACE_SurgicalKit",
+                        "kat_Pulseoximeter",
+                    };
 
+                    addItemsToBackpack[] = {
+                        //M
+                        LIST_45("ACE_elasticBandage"),
+                        LIST_45("ACE_packingBandage"),
+                        LIST_45("ACE_quikclot"),
+                        LIST_12("ACE_tourniquet"),
+                        LIST_12("kat_TXA"),
+                        LIST_6("kat_EACA"),
+                        //A
+                        LIST_12("kat_larynx"),
+                        LIST_6("kat_suction"),
+                        //R
+                        LIST_12("kat_chestSeal"),
+                        LIST_12("kat_aatKit"),
+                        "kat_pocketBVM",
+                        //C
+                        LIST_18("kat_IV_16"),
+                        LIST_6("KAT_Empty_bloodIV_250"),
+                        LIST_6("KAT_Empty_bloodIV_500"),
+                        LIST_12("ACE_epinephrine"),
+                        LIST_6("kat_phenylephrineAuto"),
+                        LIST_4("ACE_salineIV"),
+                        LIST_2("ACE_salineIV_250"),
+                        LIST_2("ACE_salineIV_500"),
+                        //H
+                        //P
+                        LIST_6("ACE_morphine"),
+                        LIST_6("kat_naloxone"),
+                        //A
+                        //W
+                        LIST_45("ACE_Suture"),
+                        //S
+                    };
                 };
 
                 class SERGEANT: CORPORAL {
@@ -1038,6 +1195,8 @@ class Loadouts {
             };
         };
 
+        // Kollision: die alte CfgLoadouts_CUP_TTT.hpp nutzte hier ACE_entrenchingTool + SatchelCharge_Remote_Mag
+        // statt tsp_breach_package_mag/tsp_breach_block_mag x3 + Schrotmunition + ACE_M84 x4 - nicht übernommen
         class B_recon_exp_F: B_recon_F {
             backpack[] = {
                 "B_Kitbag_cbr",
@@ -1050,11 +1209,12 @@ class Loadouts {
             };
 
             addItemsToBackpack[] = {
-                "ACE_entrenchingTool",
                 "ACE_Wirecutter",
                 LIST_3("DemoCharge_Remote_Mag"),
-                "SatchelCharge_Remote_Mag",
+                LIST_3("tsp_breach_package_mag"),
                 LIST_3("tsp_breach_block_mag"),
+                LIST_3("CUP_6Rnd_12Gauge_Pellets_No00_Buck"),
+                LIST_4("ACE_M84"),
             };
 
             goggles[] += {

@@ -50,6 +50,11 @@ class Loadouts {
 
     class Side {
         class Blufor {
+        };
+    };
+
+    class Type {
+        class B_Survivor_F {
             uniform[] = {
                 "UK3CB_LDF_B_U_CombatUniform_WDL_01",
                 "UK3CB_LDF_B_U_CombatUniform_Shortsleeve_WDL_01",
@@ -72,10 +77,12 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "kat_Painkiller",
-                LIST_15("ACE_fieldDressing"),
+                LIST_2("kat_Painkiller"),
+                LIST_15("ACE_elasticBandage"),
                 LIST_15("ACE_packingBandage"),
+                LIST_15("ACE_quikclot"),
                 LIST_4("ACE_Tourniquet"),
+                LIST_2("kat_chestSeal"),
             };
             addItemsToVest[] = {
                 "ACRE_PRC148",
@@ -116,11 +123,9 @@ class Loadouts {
             gps = "";
             radio = "";
         };
-    };
 
-    class Type {
         //Rifleman
-        class B_Soldier_F {
+        class B_Soldier_F: B_Survivor_F {
             addItemsToVest[] += {
                 LIST_8("UK3CB_AUG_30Rnd_556x45_Magazine"),
             };
@@ -130,6 +135,9 @@ class Loadouts {
 
         };
 
+        // Es gibt keine eigene B_engineer_F (Pionier) Klasse in dieser Datei - diese Rolle bekommt nur die
+        // Grundausstattung. Auch hier fehlt gegenüber der TTT-Wiki Pionier-Minimalliste ACE_VMH3 (Minendetektor)
+        // und ACE_EntrenchingTool
         class B_soldier_exp_F: B_Soldier_F {
             backpack[] += {
                 "UK3CB_CHD_B_B_ENG_WDL_ALT",
@@ -210,7 +218,7 @@ class Loadouts {
         };
 
         // These dont inherit from the basic rifleman
-        class B_soldier_M_F {
+        class B_soldier_M_F: B_Survivor_F {
             primaryWeapon = "rhs_weap_sr25_ec_wd";
             primaryWeaponOptics = "RKSL_optic_PMII_312_sunshade_wdl";
             primaryWeaponUnderBarrel = "bipod_01_F_khk";
@@ -241,7 +249,7 @@ class Loadouts {
         };
 
         //Autorifleman
-        class B_soldier_AR_F {
+        class B_soldier_AR_F: B_Survivor_F {
             primaryWeapon[] = {
                 "rhs_weap_m249_light_S",
                 "rhs_weap_m249_pip_S_para",
@@ -271,7 +279,7 @@ class Loadouts {
         };
 
         //MMG
-        class B_HeavyGunner_F {
+        class B_HeavyGunner_F: B_Survivor_F {
 
         };
 
@@ -299,6 +307,8 @@ class Loadouts {
             };
         };
 
+        // EOD - trägt hier gar keine Sonderausrüstung (kein ACE_VMH3, ACE_DefusalKit, ACE_Clacker, Sprengmittel laut
+        // TTT-Wiki EOD-Minimalliste)
         class B_soldier_mine_F: B_Soldier_F {
 
             class Rank {
@@ -315,7 +325,7 @@ class Loadouts {
         };
 
         //Fahrzeugbesatzung
-        class B_crew_F {
+        class B_crew_F: B_Survivor_F {
 
             class Rank {
                 class PRIVATE {
@@ -329,7 +339,7 @@ class Loadouts {
             };
         };
 
-        class B_sniper_F {
+        class B_sniper_F: B_Survivor_F {
 
         };
 
@@ -357,7 +367,7 @@ class Loadouts {
         };
 
         //Pilots
-        class B_helicrew_F {
+        class B_helicrew_F: B_Survivor_F {
             primaryWeapon = "";
             vest = "UK3CB_LDF_B_V_TacVest_GEO";
             backpack = "UK3CB_B_Invisible";
@@ -393,7 +403,7 @@ class Loadouts {
         };
 
         //Führung
-        class B_Soldier_TL_F {
+        class B_Soldier_TL_F: B_Survivor_F {
             vest[] = {
                 "UK3CB_LDF_B_V_TL_Vest_KKZ10_GEO",
                 "UK3CB_LDF_B_V_TL_Vest_KKZ10_OLI",
@@ -429,7 +439,7 @@ class Loadouts {
         };
 
         //Medics
-        class B_medic_F {
+        class B_medic_F: B_Soldier_F {
             vest[] = {
                 "UK3CB_LDF_B_V_MD_Vest_KKZ10_GEO",
                 "UK3CB_LDF_B_V_MD_Vest_KKZ10_OLI",
@@ -508,7 +518,7 @@ class Loadouts {
         };
 
         //SOF
-        class B_recon_F {
+        class B_recon_F: B_Survivor_F {
 
         };
 
@@ -531,7 +541,7 @@ class Loadouts {
 
         };
 
-        class B_recon_M_F {
+        class B_recon_M_F: B_Survivor_F {
 
         };
     };

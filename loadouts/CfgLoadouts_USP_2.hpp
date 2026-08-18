@@ -52,6 +52,11 @@ class Loadouts {
 
     class Side {
         class Blufor {
+        };
+    };
+
+    class Type {
+        class B_Survivor_F {
             uniform[] = {
                 // "USP_G3C_MCW",
                 // "USP_G3C_CU_MCW",
@@ -117,8 +122,9 @@ class Loadouts {
                 LIST_2("kat_Painkiller"),
                 LIST_15("ACE_elasticBandage"),
                 LIST_15("ACE_packingBandage"),
+                LIST_15("ACE_quikclot"),
                 LIST_4("ACE_Tourniquet"),
-                LIST_2("kat_chestseal"),
+                LIST_2("kat_chestSeal"),
                 LIST_2(""), //Frag Grenade
                 LIST_2(""), //White Smoke Grenade
             };
@@ -164,11 +170,9 @@ class Loadouts {
             gps = "";
             radio = "";
         };
-    };
 
-    class Type {
         //Rifleman
-        class B_Soldier_F {
+        class B_Soldier_F: B_Survivor_F {
             addItemsToVest[] = {
                 LIST_8(""),
             };
@@ -199,7 +203,7 @@ class Loadouts {
         };
 
         //Marksman
-        class B_soldier_M_F {
+        class B_soldier_M_F: B_Survivor_F {
             vest[] = {
                 "USP_CRYE_JPC_DMB_CBR",
                 "USP_CRYE_JPC_DMB_KHK",
@@ -423,7 +427,7 @@ class Loadouts {
         };
 
         //MMG
-        class B_HeavyGunner_F {
+        class B_HeavyGunner_F: B_Survivor_F {
             primaryWeapon[] = {
 
             };
@@ -484,7 +488,7 @@ class Loadouts {
         };
 
         //Autorifleman
-        class B_soldier_AR_F {
+        class B_soldier_AR_F: B_Survivor_F {
             vest[] = {
                 "USP_CRYE_JPC_MGB_RGR",
                 "USP_CRYE_JPC_MGB",
@@ -535,6 +539,9 @@ class Loadouts {
 
         //Unterstützung
         //Pionier
+        // TTT-Wiki Pionier (Minimal) verlangt ACE_VMH3 (Minendetektor), ACE_DefusalKit, ACE_Clacker,
+        // ACE_EntrenchingTool, Klappsäge, Drahtschneider und Sprengmittel - hier trägt der Pionier gar keine
+        // Sonderausrüstung (kein addItemsToVest/Backpack in dieser Klasse)
         class B_engineer_F: B_Soldier_F {
             vest[] = {
                 "USP_CRYE_CPC_COMMS_BELT",
@@ -634,6 +641,7 @@ class Loadouts {
                 "USP_OPSCORE_FASTMTC_CGSW",
             };
 
+            // TTT-Wiki EOD (Minimal) verlangt zusätzlich 3x DemoCharge_Remote_Mag - keine Sprengmittel in dieser Klasse vorhanden
             addItemsToVest[] += {
                 "ACE_DefusalKit",
                 "ACE_Clacker",
@@ -686,7 +694,7 @@ class Loadouts {
         };
 
         //Fahrzeugbesatzung
-        class B_crew_F {
+        class B_crew_F: B_Survivor_F {
             primaryWeapon = "";
             primaryWeaponMagazine = "";
             primaryWeaponOptics = "";
@@ -806,7 +814,7 @@ class Loadouts {
         };
 
         //Pilots
-        class B_helicrew_F {
+        class B_helicrew_F: B_Survivor_F {
 
         };
 
@@ -815,7 +823,7 @@ class Loadouts {
         };
 
         //Aufklärer
-        class B_sniper_F {
+        class B_sniper_F: B_Survivor_F {
             primaryWeapon = "";
             primaryWeaponMagazine = "";
             primaryWeaponOptics = "";
@@ -912,7 +920,7 @@ class Loadouts {
                 "", //LR Radio
             };
 
-            binoculars = "ACE_VEctor";
+            binoculars = "ACE_Vector";
         };
 
         class B_Patrol_Soldier_UAV_F: B_soldier_M_F {
@@ -941,7 +949,7 @@ class Loadouts {
         };
 
         //Führung
-        class B_Soldier_TL_F {
+        class B_Soldier_TL_F: B_Survivor_F {
             primaryWeaponMagazine = ""; //Tracer instead of regular ball
             uniform[] = {
                 //KP/VQ
@@ -979,7 +987,7 @@ class Loadouts {
             };
 
             addItemsToUniform[] += {
-                "ACE_Microdagr",
+                "ACE_microdagr",
             };
 
             addItemsToVest[] += {
@@ -1011,7 +1019,7 @@ class Loadouts {
         };
 
         //Medics
-        class B_medic_F {
+        class B_medic_F: B_Soldier_F {
             vest = "USP_CRYE_CPC_MEDIC_BELT_MC";
             headgear[] = {
                 "USP_OPSCORE_FASTMTC_CMT",
@@ -1210,7 +1218,7 @@ class Loadouts {
         };
 
         //SOF
-        class B_recon_F {
+        class B_recon_F: B_Survivor_F {
             uniform[] = {
                 "USP_SOFTSHELL_G3C_KP_MC",
                 "USP_SOFTSHELL_G3C_KP_MC_MCW",
@@ -1269,9 +1277,10 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "kat_Painkiller",
-                LIST_15("ACE_fieldDressing"),
+                LIST_2("kat_Painkiller"),
+                LIST_15("ACE_elasticBandage"),
                 LIST_15("ACE_packingBandage"),
+                LIST_15("ACE_quikclot"),
                 LIST_4("ACE_Tourniquet"),
                 LIST_2(""),
                 LIST_2(""),
@@ -1403,7 +1412,7 @@ class Loadouts {
 
         };
 
-        class B_recon_M_F {
+        class B_recon_M_F: B_Survivor_F {
             headgear[] += {
                 "USP_BOONIE_HAT_MC"
             };

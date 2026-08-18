@@ -47,6 +47,11 @@ class Loadouts {
 
     class Side {
         class Blufor {
+        };
+    };
+
+    class Type {
+        class B_Survivor_F {
             uniform[] = {
                 //Desert
                 // "CUP_U_B_CZ_DST_NoKneepads",
@@ -110,10 +115,12 @@ class Loadouts {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                "kat_Painkiller",
-                LIST_15("ACE_fieldDressing"),
+                LIST_2("kat_Painkiller"),
+                LIST_15("ACE_elasticBandage"),
                 LIST_15("ACE_packingBandage"),
-                LIST_4("ACE_Tourniquet")
+                LIST_15("ACE_quikclot"),
+                LIST_4("ACE_Tourniquet"),
+                LIST_2("kat_chestSeal")
             };
             addItemsToVest[] = {
                 LIST_2("CUP_HandGrenade_M67"),
@@ -156,11 +163,11 @@ class Loadouts {
             gps = "";
             radio = "";
         };
-    };
 
-    class Type {
-
-        class B_Soldier_F {
+        // Anders als in fast allen übrigen Loadout-Dateien fehlen hier eigene Klassen für B_medic_F (Sanitäter),
+        // B_Soldier_TL_F/SL_F (Truppführer/Gruppenführer), B_W_RadioOperator_F (Funker) und B_engineer_F (Pionier) -
+        // diese Rollen bekommen nur die Grundausstattung ohne die von der TTT-Wiki geforderte Spezialausrüstung
+        class B_Soldier_F: B_Survivor_F {
 
             addItemsToVest[] += {
                 LIST_8("CUP_30Rnd_556x45_PMAG_BLACK"),

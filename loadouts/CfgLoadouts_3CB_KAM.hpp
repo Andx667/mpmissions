@@ -52,6 +52,11 @@ class Loadouts {
 
     class Side {
         class Blufor {
+        };
+    };
+
+    class Type {
+        class B_Survivor_F {
             uniform[] = {
                 // //DDPM Desert
                 // "UK3CB_BAF_U_CombatUniform_DDPM",
@@ -120,6 +125,7 @@ class Loadouts {
                 "acex_intelitems_notepad",
                 LIST_15("ACE_ElasticBandage"),
                 LIST_15("ACE_packingBandage"),
+                LIST_15("ACE_quikclot"),
                 LIST_4("ACE_Tourniquet"),
                 "ACRE_PRC343",
                 LIST_2("kat_chestSeal"),
@@ -179,11 +185,9 @@ class Loadouts {
             gps = "";
             radio = "";
         };
-    };
 
-    class Type {
         //Rifleman
-        class B_Soldier_F {
+        class B_Soldier_F: B_Survivor_F {
             addItemsToVest[] += {
                 LIST_12("UK3CB_BAF_556_30Rnd"),
             };
@@ -320,7 +324,7 @@ class Loadouts {
         };
 
         // These dont inherit from the basic rifleman
-        class B_soldier_M_F {
+        class B_soldier_M_F: B_Survivor_F {
             vest = "UK3CB_BAF_V_Osprey_Marksman_A";
 
             primaryWeapon = "UK3CB_BAF_L129A1";
@@ -354,12 +358,12 @@ class Loadouts {
         };
 
         //Autorifleman
-        class B_soldier_AR_F {
+        class B_soldier_AR_F: B_Survivor_F {
 
         };
 
         //MMG
-        class B_HeavyGunner_F {
+        class B_HeavyGunner_F: B_Survivor_F {
             vest = "UK3CB_BAF_V_Osprey_MG_B";
 
             primaryWeapon = "UK3CB_BAF_L7A2";
@@ -400,6 +404,8 @@ class Loadouts {
         class B_engineer_F: B_Soldier_F {
             backpack = "UK3CB_BAF_B_Bergen_MTP_Engineer_H_A";
 
+            // TTT-Wiki Pionier (Minimal) verlangt zusätzlich ACE_VMH3 (Minendetektor) und ACE_EntrenchingTool - fehlen hier;
+            // andere Loadouts (z.B. CUP_BAF, CUP_TTT, CUP_Ranger, CUP_NOR) führen den Pionier mit VMH3+Klappspaten
             addItemsToVest[] += {
                 "ACE_Clacker",
                 "ACE_DefusalKit",
@@ -446,6 +452,8 @@ class Loadouts {
             };
         };
 
+        // EOD - trägt hier gar keine Sonderausrüstung (kein ACE_VMH3, ACE_DefusalKit, ACE_Clacker, Sprengmittel laut
+        // TTT-Wiki EOD-Minimalliste); andere Loadouts (z.B. CUP_BAF, CUP_Ranger) statten diese Rolle vollständig aus
         class B_soldier_mine_F: B_Soldier_F {
 
             class Rank {
@@ -462,7 +470,7 @@ class Loadouts {
         };
 
         //Fahrzeugbesatzung
-        class B_crew_F {
+        class B_crew_F: B_Survivor_F {
             primaryWeapon = "UK3CB_BAF_L22A2";
             primaryWeaponMagazine = "UK3CB_BAF_556_30Rnd";
             primaryWeaponOptics = "";
@@ -504,7 +512,7 @@ class Loadouts {
             };
         };
 
-        class B_sniper_F {
+        class B_sniper_F: B_Survivor_F {
 
         };
 
@@ -532,7 +540,7 @@ class Loadouts {
         };
 
         //Pilots
-        class B_helicrew_F {
+        class B_helicrew_F: B_Survivor_F {
             primaryWeapon = "";
             handgunWeapon = "UK3CB_BAF_L131A1";
             handgunWeaponMagazine = "UK3CB_BAF_9_17Rnd";
@@ -587,7 +595,7 @@ class Loadouts {
         };
 
         //Führung
-        class B_Soldier_TL_F {
+        class B_Soldier_TL_F: B_Survivor_F {
             vest[] = {
                 "UK3CB_BAF_V_Osprey_SL_A",
                 "UK3CB_BAF_V_Osprey_SL_B",
@@ -634,7 +642,7 @@ class Loadouts {
         };
 
         //Medics
-        class B_medic_F {
+        class B_medic_F: B_Soldier_F {
 
             class Rank {
 
@@ -865,7 +873,7 @@ class Loadouts {
         };
 
         //SOF
-        class B_recon_F {
+        class B_recon_F: B_Survivor_F {
 
         };
 
@@ -888,7 +896,7 @@ class Loadouts {
 
         };
 
-        class B_recon_M_F {
+        class B_recon_M_F: B_Survivor_F {
 
         };
     };
