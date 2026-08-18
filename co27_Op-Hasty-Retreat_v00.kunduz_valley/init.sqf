@@ -24,7 +24,7 @@ addMissionEventHandler ["EntityCreated", {
 
 ["ace_grenades_flashbangedAI", {
     params ["_unit", "_strength", "_grenadePosASL"];
-    if (isPlayer _unit || _unit getVariable ["dro_flashbangSurrenderResisted", false]) exitWith {};
+    if (isPlayer _unit || _unit getVariable ["ttt_flashbangSurrenderResisted", false]) exitWith {};
 
     if (_strength > 0.5) exitWith {
         if (vehicle _unit != _unit) then {moveOut _unit};
@@ -33,5 +33,5 @@ addMissionEventHandler ["EntityCreated", {
         };
         [_unit, true] remoteExecCall ["ACE_captives_fnc_setSurrendered", _unit];
     };
-    _unit setVariable ["dro_flashbangSurrenderResisted", true];
+    _unit setVariable ["ttt_flashbangSurrenderResisted", true];
 }] call CBA_fnc_addEventHandler;
