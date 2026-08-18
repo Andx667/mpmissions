@@ -129,6 +129,7 @@ class Loadouts {
                 LIST_4("ACE_Tourniquet"),
                 "ACRE_PRC343",
                 LIST_2("kat_chestSeal"),
+                "kat_guedel", // nur in KAM1 vorhanden, beim Merge übernommen
                 LIST_2("kat_Painkiller"),
             };
             addItemsToVest[] = {
@@ -167,6 +168,8 @@ class Loadouts {
                 };
             handgunWeaponMagazine = "";
 
+            // KAM1 nutzte hier stattdessen "rhs_googles_black/clear/orange/yellow" - beim Merge wurde
+            // die UK3CB-eigene Brillenauswahl (KAM2) als aktiv beibehalten
             goggles[] = {
                 "UK3CB_BAF_G_Tactical_Black",
                 "UK3CB_BAF_G_Tactical_Yellow",
@@ -192,6 +195,10 @@ class Loadouts {
                 LIST_12("UK3CB_BAF_556_30Rnd"),
             };
 
+            // Die beiden Quellkonfigs unterschieden sich systematisch beim medizinischen Top-up in fast jeder
+            // Rollenklasse: KAM1 legte hier zusätzliches ACE_elasticBandage nach, KAM2 zusätzliches ACE_quikClot.
+            // Da die Basisausstattung (B_Survivor_F) bereits beide Items mit je 15x enthält, wurde durchgehend
+            // KAM2s ACE_quikClot-Variante als aktiv übernommen, um Items nicht einseitig zu duplizieren.
             addItemsToBackpack[] += {
                 LIST_2("UK3CB_BAF_762_200Rnd_T"),
                 LIST_10("UK3CB_BAF_556_30Rnd"),
@@ -262,19 +269,32 @@ class Loadouts {
         //Radio Operator / FO /JTAC
         class B_W_RadioOperator_F: B_Soldier_F {
             class Rank {
+                // KAM2 hatte an dieser Stelle nur eine leere Funker-Platzhalterausstattung (Radio-/Rauch-Platzhalter
+                // ohne echtes Gerät); die vollausgestattete FO/JTAC-Variante aus KAM1 (SL-Weste, JTAC-Bergen,
+                // Laserdesignator) wurde beim Merge als aktiv übernommen
                 class PRIVATE {
-                    backpack = "";
-
-                    addItemsToBackpack[] += {
-                        LIST_2(""), //LR Radio
-                        LIST_10(""), //Purple Smoke
-                        "ACE_flags_blue",
-                        "ACE_flags_yellow",
+                    vest[] = {
+                        "UK3CB_BAF_V_Osprey_SL_A",
+                        "UK3CB_BAF_V_Osprey_SL_B",
                     };
+                    backpack = "UK3CB_BAF_B_Bergen_MTP_JTAC_H_A";
+                    addItemsToVest[] += {
+                        "ACRE_PRC148",
+                        "Laserbatteries",
+                        "ItemAndroid",
+                    };
+                    addItemsToBackpack[] = {
+                        "ACRE_PRC117F",
+                        LIST_15("UK3CB_BAF_SmokeShellPurple"),
+                        LIST_4("UK3CB_BAF_556_30Rnd"),
+                        "ace_flags_blue",
+                        "ACE_SpraypaintBlue",
+                        "UK3CB_BAF_762_200Rnd_T",
+                    };
+                    binoculars = "UK3CB_BAF_Soflam_Laserdesignator";
                 };
                //FO
                 class CORPORAL: PRIVATE {
-                    backpack = "";
 
                     addItemsToUniform[] += {
                         "ACE_microdagr",
@@ -434,14 +454,16 @@ class Loadouts {
         class B_engineer_F: B_Soldier_F {
             backpack = "UK3CB_BAF_B_Bergen_MTP_Engineer_H_A";
 
-            // TTT-Wiki Pionier (Minimal) verlangt zusätzlich ACE_VMH3 (Minendetektor), ACE_EntrenchingTool und
-            // ACE_Wirecutter - fehlen hier, obwohl die eigene EOD-Rolle (B_soldier_mine_F) diese Datei bereits mit VMH3 ausstattet
+            // TTT-Wiki Pionier (Minimal) verlangt zusätzlich ACE_VMH3 (Minendetektor) und ACE_EntrenchingTool -
+            // fehlen weiterhin hier, obwohl die eigene EOD-Rolle (B_soldier_mine_F) in dieser Datei bereits mit
+            // VMH3 ausgestattet ist; ACE_Wirecutter war nur in KAM1 vorhanden und wurde beim Merge wiederhergestellt
             addItemsToVest[] += {
                 "ACE_Clacker",
                 "ACE_DefusalKit",
             };
 
             addItemsToBackpack[] = {
+                "ACE_Wirecutter",
                 "mts_cutter_folding_saw",
                 LIST_8("UK3CB_BAF_556_30Rnd"),
 
@@ -754,6 +776,8 @@ class Loadouts {
             class Rank {
 
                 //Zugsanitäter
+                // KAM1 verwendete hier andere Item-Mengen und stattete zusätzlich kat_AED aus; KAM2s Zahlen
+                // (inkl. der bewussten Entscheidung, in diesem Szenario kein AED mitzuführen) wurden übernommen
                 class PRIVATE {
                     vest[] = {
                         "UK3CB_BAF_V_Osprey_Medic_A",
