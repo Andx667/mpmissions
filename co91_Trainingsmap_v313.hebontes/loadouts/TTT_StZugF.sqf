@@ -49,7 +49,7 @@ _unit addWeapon "Rangefinder";
 comment "Add items to containers";
 for "_i" from 1 to 10 do {_unit addItemToUniform "ACE_elasticBandage";};
 for "_i" from 1 to 10 do {_unit addItemToUniform "ACE_packingBandage";};
-for "_i" from 1 to 10 do {_unit addItemToUniform "ACE_quickClot";};
+for "_i" from 1 to 10 do {_unit addItemToUniform "ACE_quikclot";};
 for "_i" from 1 to 2 do {_unit addItemToUniform "kat_chestSeal";};
 for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_tourniquet";};
 for "_i" from 1 to 2 do {_unit addItemToUniform "kat_Painkiller";};
@@ -77,6 +77,9 @@ for "_i" from 1 to 3 do {_unit addItemToBackpack "1Rnd_SmokeOrange_Grenade_shell
 for "_i" from 1 to 3 do {_unit addItemToBackpack "1Rnd_SmokeRed_Grenade_shell";};
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_HuntIR_M203";};
 _unit addItemToBackpack "ACE_SpraypaintGreen";
+_unit addItemToBackpack "ACE_SpraypaintRed";
+_unit addItemToBackpack "ace_flags_green";
+_unit addItemToBackpack "ace_flags_red";
 _unit addItemToBackpack "ACE_NVG_Wide_Black";
 
 _unit addHeadgear (["TTT_Beret", _farbe] joinString "_");

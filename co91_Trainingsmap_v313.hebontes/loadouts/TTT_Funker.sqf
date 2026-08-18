@@ -50,7 +50,7 @@ _unit addWeapon "Binocular";
 comment "Add items to containers";
 for "_i" from 1 to 10 do {_unit addItemToUniform "ACE_elasticBandage";};
 for "_i" from 1 to 10 do {_unit addItemToUniform "ACE_packingBandage";};
-for "_i" from 1 to 10 do {_unit addItemToUniform "ACE_quickClot";};
+for "_i" from 1 to 10 do {_unit addItemToUniform "ACE_quikclot";};
 for "_i" from 1 to 2 do {_unit addItemToUniform "kat_chestSeal";};
 for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_tourniquet";};
 for "_i" from 1 to 2 do {_unit addItemToUniform "kat_Painkiller";};
@@ -64,6 +64,8 @@ for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
 _unit addItemToUniform "acex_intelitems_notepad";
 
 _unit addItemToVest "ACRE_PRC152";
+_unit addItemToVest "ace_flags_blue";
+_unit addItemToVest "ace_flags_yellow";
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
 _unit addItemToVest "SmokeShellGreen";
