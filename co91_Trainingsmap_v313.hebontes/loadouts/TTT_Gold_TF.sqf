@@ -50,7 +50,6 @@ _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "ACRE_PRC343";
 for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
 _unit addItemToUniform "acex_intelitems_notepad";
-_unit addItemToUniform "ItemAndroid";
 
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
@@ -70,6 +69,7 @@ comment "Add items";
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
+_unit linkItem "ItemAndroid";
 _unit linkItem "B_UavTerminal";
 
 _unit setVariable ["ace_medical_medicClass", 0, true];

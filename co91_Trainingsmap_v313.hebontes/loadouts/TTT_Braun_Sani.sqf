@@ -76,6 +76,7 @@ for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_adenosine";};
 for "_i" from 1 to 6 do {_unit addItemToBackpack "kat_Penthrox";};
 for "_i" from 1 to 4 do {_unit addItemToBackpack "kat_Painkiller";};
 _unit addItemToBackpack "ACE_NVG_Wide_Black";
+_unit addItemToBackpack "tt_medic_tarp_Black";
 
 _unit addHeadgear (["TTT_Beret", "brown"] joinString "_");
 

@@ -8,6 +8,7 @@
 #include "andx_loadouts\dialog.hpp"
 #include "reim_text\dialog.hpp"
 #include "VVS\menu.h"
+#include "modules\grad-fortifications\grad_fortifications.hpp"
 
 class CfgFunctions {
     #include "redd_actions\CfgFunctions.hpp"
@@ -31,6 +32,12 @@ class CfgFunctions {
     
     #include "VVS\Functions.h"
 
+    #include "modules\grad-fortifications\cfgFunctions.hpp"
+
+};
+
+class RscTitles {
+    #include "modules\grad-fortifications\dialog\hint\title.hpp"
 };
 
 class CfgSounds {
@@ -61,10 +68,10 @@ loadScreen = "pictures\onLoad_mission.jpg";
 disabledAI = 1;
 
 class Params {
-    class ttt_main_medicalSettings {
-        title = "TTT Medic Settings";
+    class medical_system {
+        title = "Sanitäts System";
         values[] = {0, 1, 2};
-        texts[] = {"KAM Standard", "KAM Einfach", "KAM Training"};
+        texts[] = {"Standard", "Einfach", "Training"};
         default = 0;
     };
 };

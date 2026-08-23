@@ -46,7 +46,6 @@ _unit addItemToUniform "ACE_Flashlight_XL50";
 _unit addItemToUniform "ACE_MapTools";
 for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
 _unit addItemToUniform "ACRE_PRC343";
-_unit addItemToUniform "ItemAndroid";
 _unit addItemToUniform "acex_intelitems_notepad";
 
 _unit addItemToVest "ACRE_PRC152";
@@ -94,6 +93,7 @@ for "_i" from 1 to 10 do {_unit addItemToBackpack "kat_lidocaine";};
 for "_i" from 1 to 6 do {_unit addItemToBackpack "kat_amiodarone";};
 for "_i" from 1 to 6 do {_unit addItemToBackpack "kat_atropine";};
 _unit addItemToBackpack "ACE_NVG_Wide_Black";
+_unit addItemToBackpack "tt_medic_tarp_Black";
 
 _unit addHeadgear (["TTT_Beret", "brown"] joinString "_");
 
@@ -101,6 +101,7 @@ comment "Add items";
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
+_unit linkItem "ItemAndroid";
 
 _unit setVariable ["ace_medical_medicClass", 1, true];
 _unit setVariable ["ACE_isEOD", false, true];

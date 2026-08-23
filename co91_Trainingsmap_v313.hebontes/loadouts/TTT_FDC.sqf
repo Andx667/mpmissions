@@ -58,7 +58,6 @@ for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_CableTie";};
 _unit addItemToUniform "ACE_IR_Strobe_Item";
 _unit addItemToUniform "ACE_Flashlight_XL50";
 _unit addItemToUniform "ACE_MapTools";
-_unit addItemToUniform "ItemAndroid";
 _unit addItemToUniform "ACRE_PRC343";
 for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
 _unit addItemToUniform "acex_intelitems_notepad";
@@ -85,6 +84,7 @@ comment "Add items";
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
+_unit linkItem "ItemAndroid";
 
 _unit setVariable ["ace_medical_medicClass", 0, true];
 _unit setVariable ["ACE_isEOD", false, true];

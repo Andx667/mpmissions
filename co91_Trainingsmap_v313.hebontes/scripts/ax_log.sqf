@@ -1,6 +1,7 @@
 //Fills given object with a list of Items
 
 params ["_containers"];
+if (!isServer) exitWith {}; //Nur einmal befüllen, sonst füllt jeder Client die Kiste erneut
 //Kiste befüllen
 [
     [_containers],

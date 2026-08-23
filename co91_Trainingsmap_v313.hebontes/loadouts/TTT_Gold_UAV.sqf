@@ -61,6 +61,7 @@ _unit addItemToBackpack (["TTT_Helmet", _helm, _tarn] joinString "_");
 _unit addItemToBackpack "ITC_Land_B_AR2e_Packed";
 _unit addItemToBackpack "ACE_RangeCard";
 _unit addItemToBackpack "ACE_NVG_Wide_Black";
+_unit addItemToBackpack "tt_drone_tarp_Green";
 
 _unit addHeadgear (["TTT_Beret", "gold"] joinString "_");
 
