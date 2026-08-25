@@ -35,7 +35,7 @@ class Loadouts {
     perPlayerDelay = 1;
     handleRadios = 0;
     resetLoadout = 1;
-    randomizationMode = 2;
+    randomizationMode = 1;
     //customGear = 300;
     customGear = "(_this select 0) distance2D (getMarkerPos 'armory') < 10";
     customGearAllowedCategories[] = {
