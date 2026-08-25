@@ -45,11 +45,7 @@ class Loadouts {
         //"primaryWeaponOptics",
     };
 
-    class Side {
-        class Blufor {
-        };
-    };
-
+    // Faction: Czech Republic Army (Armáda České republiky) - present day (~2020s, BREN 2 rifle era)
     class Type {
         class B_Survivor_F {
             uniform[] = {

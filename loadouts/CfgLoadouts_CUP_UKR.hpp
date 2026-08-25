@@ -40,12 +40,7 @@ class Loadouts {
     //
     customGearAllowedCategories[] = {};//STRING
 
-    //USMC2014
-    class Side {
-        class BluFor {
-        };
-    };
-
+    // Faction: Armed Forces of Ukraine (AFU) - present day (post-2014, current conflict era)
     class Type {
         class B_Survivor_F {
             uniform[] = {

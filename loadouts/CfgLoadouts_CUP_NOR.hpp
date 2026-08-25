@@ -47,11 +47,7 @@ class Loadouts {
         "headgear"
     };
 
-    class Side {
-        class Blufor {
-        };
-    };
-
+    // Faction: Norwegian Armed Forces (Gorka/OPSCORE kit) - modern day (~2010s-2020s)
     class Type {
         class B_Survivor_F {
             uniform[] = {

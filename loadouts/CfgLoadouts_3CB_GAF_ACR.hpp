@@ -49,11 +49,7 @@ class Loadouts {
         "headgear",
     };
 
-    class Side {
-        class Blufor {
-        };
-    };
-
+    // Faction: German Armed Forces (Bundeswehr) - digital Flecktarn/6B27M kit, present day (~2020s)
     class Type {
         class B_Survivor_F {
             uniform[] = {

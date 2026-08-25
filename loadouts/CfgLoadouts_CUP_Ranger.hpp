@@ -47,11 +47,7 @@ class Loadouts {
         "primaryWeaponMuzzle",
     };
 
-    class Side {
-        class Blufor {
-        };
-    };
-
+    // Faction: US Army 75th Ranger Regiment - modern day (~2010s-2020s)
     class Type {
         class B_Survivor_F {
             uniform[] = {

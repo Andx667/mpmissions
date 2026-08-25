@@ -46,11 +46,7 @@ class Loadouts {
         "goggles",
     };
 
-    class Side {
-        class BluFor {
-        };
-    };
-
+    // Faction: French Armed Forces - modern day (~2010s-2020s)
     class Type {
         class B_Survivor_F {
             uniform[] = {

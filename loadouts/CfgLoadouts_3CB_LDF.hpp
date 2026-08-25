@@ -48,11 +48,7 @@ class Loadouts {
         "headgear"
     };
 
-    class Side {
-        class Blufor {
-        };
-    };
-
+    // Faction: Livonian Defense Force (fictional Baltic militia/reserve force, Contact DLC) - present day (~2020s)
     class Type {
         class B_Survivor_F {
             uniform[] = {

@@ -42,11 +42,7 @@ class Loadouts {
 
     };
 
-    class Side {
-        class Blufor {
-        };
-    };
-
+    // Faction: German special-operations-style unit (KSK-pattern Crye/Flecktarn kit) - modern day (~2020s)
     class Type {
         class B_Survivor_F {
             uniform = "BWA3_Uniform_Crye_G3_Fleck";

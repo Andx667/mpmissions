@@ -49,11 +49,8 @@ class Loadouts {
     // MTP = Multi-Terrain Pattern
     // DDPM = Disruptive Pattern Material
     // DPMT = Disruptive Pattern Material Temperate
-    class Side {
-        class Blufor {
-        };
-    };
 
+    // Faction: British Armed Forces - MTP kit, post-2010 (Afghanistan era) through present day
     class Type {
         class B_Survivor_F {
             uniform[] = {

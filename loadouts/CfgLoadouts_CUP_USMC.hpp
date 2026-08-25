@@ -47,11 +47,8 @@ class Loadouts {
     customGearAllowedCategories[] = {};//STRING
 
     //USMC2014
-    class Side {
-        class BluFor {
-        };
-    };
 
+    // Faction: United States Marine Corps (USMC) - MARPAT/MCCUU kit, roughly fits the 2010s (OEF/Afghanistan era)
     class Type {
         class B_Survivor_F {
             uniform[] = {

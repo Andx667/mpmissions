@@ -50,11 +50,7 @@ class Loadouts {
         "goggles"
     };
 
-    class Side {
-        class Blufor {
-        };
-    };
-
+    // Faction: Altis Armed Forces (fictional Mediterranean nation, base Arma 3 setting) - Arma 3 canon near-future (~2030s)
     class Type {
         class B_Survivor_F {
             uniform[] = {

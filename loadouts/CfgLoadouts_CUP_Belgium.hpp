@@ -43,11 +43,7 @@ class Loadouts {
         "primaryWeapon",
     };
 
-    class Side {
-        class Blufor {
-        };
-    };
-
+    // Faction: Belgian Armed Forces / Special Forces Group (SCAR-L, Multicam) - modern day (~2010s-2020s)
     class Type {
         class B_Survivor_F {
             uniform[] = {"CUP_U_CRYE_G3C_MC_V3", "CUP_U_CRYE_G3C_MC_V2"};

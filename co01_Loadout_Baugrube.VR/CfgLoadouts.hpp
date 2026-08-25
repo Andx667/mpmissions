@@ -45,11 +45,6 @@ class Loadouts {
         //"primaryWeaponOptics",
     };
 
-    class Side {
-        class Blufor {
-        };
-    };
-
     class Type {
         class B_Survivor_F {
             uniform[] = {

@@ -56,6 +56,7 @@ class Loadouts {
 
         };
     };
+    // Faction: Bundeswehr (German Armed Forces) - modern day (~2010s-2020s)
     class Type {
 
         class B_Survivor_F {

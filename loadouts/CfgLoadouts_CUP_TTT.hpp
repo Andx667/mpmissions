@@ -56,11 +56,7 @@ class Loadouts {
         //"headgear"
     };
 
-    class Side {
-        class Blufor {
-        };
-    };
-
+    // Faction: generic/customizable TTT default loadout (BW Flecktarn-based mixed NATO kit) - modern day (~2020s)
     class Type {
         class B_Survivor_F {
             uniform[] = {
