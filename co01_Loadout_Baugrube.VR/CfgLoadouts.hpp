@@ -399,6 +399,7 @@ class Loadouts {
                         "ACE_Bodybag",
                         "ace_flags_blue",
                         "ACE_SpraypaintBlue",
+
                     };
                 };
 
@@ -407,6 +408,12 @@ class Loadouts {
                     addItemsToVest[] += {
                         "ACRE_PRC152",
                         "ItemAndroid",
+                    };
+                    addItemsToBackpack[] += {
+                        //Tactical Tarps (tacticaltrainingteam.github.io/tactical-tarps/medic)
+                        "tt_medic_tarp_Red",
+                        "tt_medic_tarp_Yellow",
+                        "tt_medic_tarp_Green",
                     };
                 };
 
@@ -524,12 +531,12 @@ class Loadouts {
                 "CUP_H_CZ_Cap_Headphones",
                 "CUP_H_CZ_Cap_rgr",
                 //Special Forces Desert
-                "CUP_H_CZ_Booniehat_vz95_des",
-                "CUP_H_CZ_Booniehat_fold_des",
+                //"CUP_H_CZ_Booniehat_vz95_des",
+                //"CUP_H_CZ_Booniehat_fold_des",
                 "CUP_H_CZ_Cap_khk",
-                "CUP_H_CZ_Cap_Headphones_des", //Rifleman / Explosive Specialist
+                //"CUP_H_CZ_Cap_Headphones_des", //Rifleman / Explosive Specialist
                 "CUP_H_CZ_Hat04",
-                "CFP_BoonieHat_ACRDesert",
+                //"CFP_BoonieHat_ACRDesert",
                 //Standard helmets
                 "CUP_H_CZ_Helmet09", //Recon
                 "CUP_H_CZ_Helmet10", //Scout
@@ -740,6 +747,12 @@ class Loadouts {
                     addItemsToVest[] += {
                         "ACRE_PRC152",
                         "ItemAndroid",
+                    };
+                    addItemsToBackpack[] += {
+                        //Tactical Tarps (tacticaltrainingteam.github.io/tactical-tarps/medic)
+                        "tt_medic_tarp_Red",
+                        "tt_medic_tarp_Yellow",
+                        "tt_medic_tarp_Green",
                     };
                 };
 
