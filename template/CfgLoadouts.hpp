@@ -107,6 +107,7 @@ class Loadouts {
         class B_Soldier_F: B_Survivor_F {
             addItemsToVest[] = {
                 LIST_8(""),
+                "", //Optional: passendes SR Funkgerät
             };
             addItemsToBackpack[] = {
 
@@ -172,11 +173,20 @@ class Loadouts {
                 class PRIVATE {
                     backpack = "";
 
+                    addItemsToVest[] += {
+                        "", //Minimal: passendes SR Funkgerät
+                    };
                     addItemsToBackpack[] += {
-                        LIST_2(""), //LR Radio
+                        LIST_2(""), //Minimal: passendes LR Funkgerät
                         LIST_10(""), //Purple Smoke
                         "ACE_flags_blue",
                         "ACE_flags_yellow",
+                        //Optional
+                        "ItemcTab",
+                        "ACRE_VHF30108SPIKE",
+                        //Tactical Tarps (tacticaltrainingteam.github.io/tactical-tarps/signal) - marks a helicopter LZ
+                        "tt_signal_tarp_Red",
+                        "tt_signal_tarp_Yellow",
                     };
                 };
                //FO
@@ -239,17 +249,20 @@ class Loadouts {
 
             };
             addItemsToBackpack[] += {
-                "ACE_Sparebarrel",
+                "ACE_SpareBarrel",
             };
         };
 
-        //MMG Assistent
+        //MMG Assistant
         class B_Soldier_A_F: B_Soldier_F {
             backpack = "";
+            secondaryWeapon = "dzn_MG_Tripod_Universal_Carry"; //optional
 
             addItemsToBackpack[] += {
-                "ACE_Sparebarrel",
+                "ACE_SpareBarrel",
                 "ACE_EntrenchingTool",
+                //Optional
+                LIST_2("ACE_Sandbag_empty")
             };
         };
 
@@ -260,6 +273,11 @@ class Loadouts {
             addItemsToBackpack[] = {
                 LIST_10("ACE_UAVBattery"),
                 "ITC_Land_B_AR2i_Packed",
+                //Tactical Tarps (tacticaltrainingteam.github.io/tactical-tarps/drone) - marks a drone landing spot
+                //"tt_drone_tarp_Black",
+                "tt_drone_tarp_Green",
+                //"tt_drone_tarp_Red",
+                //"tt_drone_tarp_Yellow",
             };
 
             gps = "B_UavTerminal";
@@ -275,6 +293,10 @@ class Loadouts {
             handgunWeapon[] = {
                 };
             handgunWeaponMagazine = "";
+
+            addItemsToBackpack[] += {
+                "ACE_SpareBarrel", //Optional
+            };
         };
 
         //Anti Air
@@ -296,6 +318,18 @@ class Loadouts {
         //Unterstützung
         //Pionier
         class B_engineer_F: B_Soldier_F {
+            handgunWeapon = "ACE_VMH3";
+
+            addItemsToVest[] += {
+                "ACE_Clacker",
+                "ACE_DefusalKit",
+                "mts_cutter_folding_saw",
+                "iedd_item_notebook", //nur falls IEDD-IEDs verbaut sind
+            };
+            addItemsToBackpack[] += {
+                "ACE_wirecutter",
+                "ACE_EntrenchingTool",
+            };
 
             class Rank {
 
@@ -318,6 +352,15 @@ class Loadouts {
             addItemsToVest[] += {
                 "ACE_DefusalKit",
                 "ACE_Clacker",
+                "mts_cutter_folding_saw",
+                "iedd_item_notebook", //nur falls IEDD-IEDs verbaut sind
+            };
+            addItemsToBackpack[] += {
+                "ACE_EntrenchingTool",
+                //Ideal
+                "ACE_SpraypaintRed",
+                "ACE_SpraypaintGreen",
+                LIST_5("ace_marker_flags_orange"),
             };
 
             class Rank {
@@ -370,6 +413,7 @@ class Loadouts {
 
             addItemsToVest[] += {
                 "ACE_PlottingBoard",
+                "ACE_artilleryTable",
             };
 
         };
@@ -394,7 +438,10 @@ class Loadouts {
 
         //Pilots
         class B_helicrew_F: B_Survivor_F {
-
+            addItemsToVest[] += {
+                "", //Minimal: passendes LR Funkgerät
+                "ACE_microDAGR"
+            };
         };
 
         class B_Helipilot_F: B_helicrew_F{
@@ -471,7 +518,7 @@ class Loadouts {
                 "", //LR Radio
             };
 
-            binoculars = "ACE_VEctor";
+            binoculars = "ACE_Vector";
         };
 
         class B_Patrol_Soldier_UAV_F: B_soldier_M_F {
@@ -480,6 +527,11 @@ class Loadouts {
             addItemsToBackpack[] += {
                 LIST_10("ACE_UAVBattery"),
                 "ITC_Land_B_AR2i_Packed",
+                //Tactical Tarps (tacticaltrainingteam.github.io/tactical-tarps/drone) - marks a drone landing spot
+                //"tt_drone_tarp_Black",
+                "tt_drone_tarp_Green",
+                //"tt_drone_tarp_Red",
+                //"tt_drone_tarp_Yellow",
             };
 
             gps = "B_UavTerminal";
@@ -505,9 +557,10 @@ class Loadouts {
             };
             addItemsToBackpack[] += {
                 "ACE_flags_red",
+                "ACE_flags_green",
                 "ACE_SpraypaintBlack",
                 "ACE_SpraypaintGreen",
-                "ACE_SpraypaintRed"
+                "ACE_SpraypaintRed",
             };
 
             binoculars = "ACE_Vector";
@@ -536,14 +589,36 @@ class Loadouts {
                         LIST_2(""), //White Smoke Grenade
                         //Medic Items
                         "ACE_SurgicalKit",
+                        "kat_basicDiagnostic", //Optional
                     };
 
                     addItemsToBackpack[] += {
                         //M
+                        LIST_30("ACE_packingBandage"),
+                        LIST_30("ACE_elasticBandage"),
+                        LIST_12("ACE_Tourniquet"),
+                        LIST_30("ACE_Suture"),
                         //A
+                        LIST_8("kat_larynx"),
+                        LIST_6("kat_ncdKit"),
                         //R
+                        LIST_8("kat_chestSeal"),
+                        LIST_3("kat_pocketBVM"),
                         //C
+                        LIST_8("kat_IV_16"),
+                        LIST_4("ACE_salineIV_250"),
+                        LIST_4("ACE_salineIV_500"),
+                        LIST_12("ACE_epinephrine"),
+                        LIST_4("ACE_adenosine"),
                         //H
+                        LIST_4("kat_Painkiller"),
+                        LIST_8("ACE_morphine"),
+                        LIST_8("kat_naloxone"),
+                        LIST_6("kat_Penthrox"),
+                        //Tactical Tarps (tacticaltrainingteam.github.io/tactical-tarps/medic)
+                        "tt_medic_tarp_Red",
+                        "tt_medic_tarp_Yellow",
+                        "tt_medic_tarp_Green",
                     };
                 };
 
@@ -565,23 +640,21 @@ class Loadouts {
                         "ACE_SurgicalKit",
                         "ACE_SpraypaintBlue",
                         "ace_flags_blue",
+                        //Optional
+                        "ItemAndroid",
+                        "", //weiteres SR Funkgerät
                     };
-                    addItemsToBackpack[] = {
-                        //M
-                        //A
-                        //R
-                        //C
-                        //H
+                    addItemsToBackpack[] += {
+                        //nothing new at this tier - inherits PRIVATE's M/A/R/C/H kit above
                     };
                 };
 
+                //Zugsanitäter (Doctor) - identisch zu Zugsanitäter (Medic) laut Wiki, daher keine eigene
+                //addItemsToVest[]/addItemsToBackpack[]-Überschreibung nötig
                 class SERGEANT: CORPORAL {
                     backpack = "";
 
-                    addItemsToVest[] = {
-
-                    };
-                    addItemsToBackpack[] = {
+                    addItemsToBackpack[] += {
                         //M
                         //A
                         //R
@@ -590,18 +663,17 @@ class Loadouts {
                     };
                 };
 
+                //Arzt (Doctor) - hier sind LR Funkgerät und Blue-Force-Tracking laut Wiki nicht mehr optional,
+                //sondern Minimal
                 class LIEUTENANT: SERGEANT {
                     backpack = "";
-                    addItemsToVest[] = {
 
-                    };
-                    addItemsToBackpack[] = {
-                        //M
-                        //A
-                        //R
-                        //C
-                        //H
-                        "",
+                    addItemsToBackpack[] += {
+                        "", //Minimal: passendes LR Funkgerät
+                        //Tactical Tarps (tacticaltrainingteam.github.io/tactical-tarps/signal) - marks the LZ for
+                        //an inbound medevac helicopter
+                        "tt_signal_tarp_Red",
+                        "tt_signal_tarp_Yellow",
                     };
                 };
             };
@@ -609,6 +681,11 @@ class Loadouts {
 
         //Logistik
         class B_soldier_repair_F: B_Soldier_F {
+            //Tactical Tarps (tacticaltrainingteam.github.io/tactical-tarps/repair) - spawns tool props on deploy;
+            //only available in black, unlike the other tarps
+            addItemsToBackpack[] += {
+                "tt_repair_tarp_Black",
+            };
 
             class Rank {
 
@@ -643,6 +720,7 @@ class Loadouts {
                 LIST_2(""),
             };
             addItemsToVest[] = {
+                "", //Optional: passendes SR Funkgerät
             };
             addItemsToBackpack[] = {};
 
@@ -676,13 +754,35 @@ class Loadouts {
 
             addItemsToVest[] += {
                 "ACE_SurgicalKit",
+                "kat_basicDiagnostic", //Optional
             };
             addItemsToBackpack[] += {
                 //M
+                LIST_30("ACE_packingBandage"),
+                LIST_30("ACE_elasticBandage"),
+                LIST_12("ACE_Tourniquet"),
+                LIST_30("ACE_Suture"),
                 //A
+                LIST_8("kat_larynx"),
+                LIST_6("kat_ncdKit"),
                 //R
+                LIST_8("kat_chestSeal"),
+                LIST_3("kat_pocketBVM"),
                 //C
+                LIST_8("kat_IV_16"),
+                LIST_4("ACE_salineIV_250"),
+                LIST_4("ACE_salineIV_500"),
+                LIST_12("ACE_epinephrine"),
+                LIST_4("ACE_adenosine"),
                 //H
+                LIST_4("kat_Painkiller"),
+                LIST_8("ACE_morphine"),
+                LIST_8("kat_naloxone"),
+                LIST_6("kat_Penthrox"),
+                //Tactical Tarps (tacticaltrainingteam.github.io/tactical-tarps/medic)
+                "tt_medic_tarp_Red",
+                "tt_medic_tarp_Yellow",
+                "tt_medic_tarp_Green",
             };
         };
 
@@ -693,7 +793,7 @@ class Loadouts {
             };
 
             addItemsToBackpack[] += {
-
+                "ACE_wirecutter",
             };
         };
 
@@ -727,6 +827,8 @@ class Loadouts {
             addItemsToUniform[] += {
                 "ACE_Rangecard",
             };
+
+            binoculars = "ACE_Yardage450"; //Optional: Entfernungsmesser
         };
     };
 };
