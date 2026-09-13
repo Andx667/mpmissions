@@ -49,7 +49,7 @@
                 };
             },
             //Args
-            [_target], typeOf
+            [_target],
             //Delay
             3
         ] call CBA_fnc_waitAndExecute;
