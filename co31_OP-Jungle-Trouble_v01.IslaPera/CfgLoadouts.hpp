@@ -344,7 +344,7 @@ class Loadouts {
                 LIST_4("CUP_100Rnd_TE4_Red_Tracer_556x45_M249"),
             };
             addItemsToBackpack[] = {
-                LIST_6("CUP_100Rnd_TE4_Red_Tracer_556x45_M249"),
+                LIST_3("CUP_100Rnd_TE4_Red_Tracer_556x45_M249"),
             };
         };
 
