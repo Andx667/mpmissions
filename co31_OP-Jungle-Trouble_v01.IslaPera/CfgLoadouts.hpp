@@ -188,19 +188,23 @@ class Loadouts {
                 // "CUP_G_Oakleys_Embr",
                 "USP_RAID_BLK",
                 "USP_RAID_BLK2",
-                "USP_RAID_BLK3",
+                //"USP_RAID_BLK3", red tint is not liked
                 "USP_RAID_SMG3_BLK",
                 "USP_RAID_SMG3_BLK2",
                 "USP_MFRAME_BLK",
                 "USP_MFRAME_BLK2",
-                "USP_MFRAME_BLK3",
+                //"USP_MFRAME_BLK3",
                 "USP_MFRAME_TAN",
                 "USP_MFRAME_TAN2",
-                "USP_MFRAME_TAN3",
+                //"USP_MFRAME_TAN3",
                 "USP_MFRAME_SMG3_BLK",
                 "USP_MFRAME_SMG3_BLK2",
                 "USP_MFRAME_SMG3_TAN",
                 "USP_MFRAME_SMG3_TAN2",
+                "USP_CROSSBOW_BLK",
+                "USP_CROSSBOW_BLK2",
+                "USP_CROSSBOW_TAN",
+                "USP_CROSSBOW_TAN2",
                 ""
             };
 
