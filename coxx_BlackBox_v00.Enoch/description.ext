@@ -1,0 +1,98 @@
+// - Generelle Einstellungen --------------------------------------------------
+// Name des Missionsbauers
+author = "[TTT] Andx";
+// Missionsname über dem Ladebild
+onLoadName = "";
+// Ladebild
+loadScreen = "";
+// Kurzbeschreibung unter dem Ladebild
+onLoadMission = "";
+// Kurzbeschreibung in der Missionsauswahl
+overviewText = "";
+
+class Header {
+    gameType = "coop";
+    minPlayers = "1";
+    maxPlayers = "24";
+};
+
+#include "modules\grad-fortifications\grad_fortifications.hpp"
+
+class RscTitles {
+    #include "modules\grad-fortifications\dialog\hint\title.hpp"
+};
+
+// - Respawn ------------------------------------------------------------------
+respawn = 3;
+respawnButton = 1;
+respawnDelay = 5;
+respawnDialog = 0;
+
+// - Misc ---------------------------------------------------------------------
+disabledAI = 1;
+cba_settings_hasSettingsFile = 1;
+
+// - Corpsemanager ------------------------------------------------------------
+corpseManagerMode = 1; // Default: 0
+corpseLimit = 15; // Default: 15
+corpseRemovalMinTime = 900; // Default: 10
+corpseRemovalMaxTime = 1800; // Default: 3600
+disposalCheckPeriod = 60; // seconds. Default: 10
+
+// - CfgFunctions -------------------------------------------------------------
+class CfgFunctions {
+  #include "modules\grad-loadout\CfgFunctions.hpp"
+  #include "modules\grad-fortifications\CfgFunctions.hpp"
+};
+
+// - Loadouts ----------------------------------------------------------------
+#include "CfgLoadouts.hpp"
+
+// - Streamator --------------------------------------------------------------
+class CLib {
+    Modules[] = {"CLib", "Streamator"};
+    useExperimentalAutoload = 0;
+    useCompressedFunction = 0;
+    useFallbackRemoteExecution = 0;
+};
+
+// - Params -------------------------------------------------------------------
+class Params {
+    class medical_system {
+        title = "Sanitäts System";
+        values[] = {0, 1, 2};
+        texts[] = {"Standard", "Einfach", "Training"};
+        default = 0;
+    };
+};
+
+// - ACE Killtracker -----------------------------------------------------------
+class CfgDebriefingSections {
+    #if __has_include("\z\ace\addons\killtracker\killtracker.inc")
+        #include "\z\ace\addons\killtracker\killtracker.inc"
+    #endif
+};
+
+// - Grad Fortifications -------------------------------------------------------
+class CfgGradFortifications {
+    canDemolishDefault = 1;
+    demolitionTimeFactor = 1;
+
+    class Fortifications {
+        class Land_BagFence_01_long_green_F {
+            canFloat = 1;
+            canCollide = 1;
+        };
+
+        class VR_Area_01_square_2x2_yellow_F {
+            canFloat = 1;
+        };
+    };
+
+    class Vehicles {
+        class UK3CB_LFR_I_LR_Softtop_Repair_Closed {
+            isStorage = 1;
+            vehicleInventorySize = 60;
+        };
+    };
+};
