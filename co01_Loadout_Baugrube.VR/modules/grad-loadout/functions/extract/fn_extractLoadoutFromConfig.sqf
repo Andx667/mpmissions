@@ -93,6 +93,10 @@ private _value = [_configPath >> "addItemsToBackpack", "array", false] call  CBA
 if (!(_value isEqualTo false)) then {
     {
 
+        // shorthand item-count entries (plain numbers following a classname) are left untouched here;
+        // fn_normalizeContent.sqf pairs them up with their preceding classname later on.
+        if ((typeName _x) == "STRING") then {
+
         /* entry is a weapon classname --> read attachments from a sibling class with the same classname, e.g.:
         *  addItemsToBackpack[] = {"arifle_Mk20C_F",...};
         *  class arifle_Mk20C_F {
@@ -134,6 +138,8 @@ if (!(_value isEqualTo false)) then {
                     _value set [_forEachIndex, [_weapon, _muzzle, _pointer, _scope, _magazine, _underBarrelMagazine, _underBarrel]];
                 };
             };
+        };
+
         };
 
     } forEach _value;

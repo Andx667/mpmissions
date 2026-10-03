@@ -4,8 +4,12 @@ params ["_unit"];
 
 private _faction = faction _unit;
 private _type = typeOf _unit;
-private _result = "";
 
 if (_faction != "CIV_F") exitWith {""};
 
-_type select [2];
+private _result = "";
+if ((_type find "C_") == 0) then {
+    _result = _type select [2];
+};
+
+_result

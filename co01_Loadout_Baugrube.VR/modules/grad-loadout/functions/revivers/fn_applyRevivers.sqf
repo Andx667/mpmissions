@@ -5,8 +5,8 @@ params [["_loadoutHash", []], ["_unit", objNull]];
 [
     _loadoutHash,
     {
-        _oldValue = _value;
-        _revivers = [_key] call FUNC(GetRevivers);
+        private _oldValue = _value;
+        private _revivers = [_key] call FUNC(GetRevivers);
         {
             _value = [_value, _unit] call _x;
         } forEach _revivers;

@@ -39,15 +39,19 @@ private _fnc_getMass = {
 
     private _mass = 0;
     {
-        _thisMass = [configFile >> "CfgWeapons" >> _x >> "ItemInfo","mass",0] call BIS_fnc_returnConfigEntry;
+        // magazine/underbarrelMagazine slots may be a [classname, roundsLoaded] pair
+        // (see fn_normalizeContent.sqf) - only the classname matters for mass lookup.
+        private _itemClassname = if (_x isEqualType []) then {_x select 0} else {_x};
+
+        private _thisMass = [configFile >> "CfgWeapons" >> _itemClassname >> "ItemInfo","mass",0] call BIS_fnc_returnConfigEntry;
         if (_thisMass isEqualTo 0) then {
-            _thisMass = [configFile >> "CfgWeapons" >> _x >> "WeaponSlotsInfo","mass",0] call BIS_fnc_returnConfigEntry;
+            _thisMass = [configFile >> "CfgWeapons" >> _itemClassname >> "WeaponSlotsInfo","mass",0] call BIS_fnc_returnConfigEntry;
         };
         if (_thisMass isEqualTo 0) then {
-            _thisMass = [configFile >> "CfgMagazines" >> _x,"mass",0] call BIS_fnc_returnConfigEntry;
+            _thisMass = [configFile >> "CfgMagazines" >> _itemClassname,"mass",0] call BIS_fnc_returnConfigEntry;
         };
         if (_thisMass isEqualTo 0) then {
-            _thisMass = [configFile >> "CfgVehicles" >> _x,"mass",0] call BIS_fnc_returnConfigEntry;
+            _thisMass = [configFile >> "CfgVehicles" >> _itemClassname,"mass",0] call BIS_fnc_returnConfigEntry;
         };
         if !(_thisMass isEqualType 0) then {
             _thisMass = 0;
@@ -61,15 +65,20 @@ private _fnc_getMass = {
 
 private _fnc_getLoad = {
     params ["_container","_itemsList"];
-    _load = 0;
-    {
-        _load = _load + ([_x] call _fnc_getMass);
-        false
-    } count _itemsList;
-    _maxLoad = getContainerMaxLoad _container;
 
-    _loadRatio = if (_maxLoad <= 0) then {-1} else {_load/_maxLoad};
-    _loadRatio
+    // reuse the same item/count-shorthand-aware normalization used at loadout
+    // application time, so verification can't drift out of sync with it.
+    private _normalizedItems = [_itemsList] call FUNC(normalizeContent);
+
+    private _load = 0;
+    {
+        _x params ["_itemClassOrArray", ["_itemCount", 1]];
+        _load = _load + (([_itemClassOrArray] call _fnc_getMass) * _itemCount);
+    } forEach _normalizedItems;
+
+    private _maxLoad = getContainerMaxLoad _container;
+
+    if (_maxLoad <= 0) then {-1} else {_load / _maxLoad}
 };
 
 private _fnc_checkClassExists = {
@@ -162,7 +171,7 @@ private _fnc_checkWeapons = {
     } forEach [
         ["primaryWeapon",["primaryWeaponMuzzle","primaryWeaponPointer","primaryWeaponOptics","primaryWeaponUnderbarrel"],["primaryWeaponMagazine","primaryWeaponUnderbarrelMagazine"]],
         ["secondaryWeapon",["secondaryWeaponMuzzle","secondaryWeaponPointer","secondaryWeaponOptics","secondaryWeaponUnderbarrel"],["secondaryWeaponMagazine","secondaryWeaponUnderbarrelMagazine"]],
-        ["handgunWeapon",["handgunWeaponMuzzle","handgunWeaponPointer","handgunWeaponOptics","handgunWeaponUnderbarrel"],["handgunWeaponMagazine","handungWeaponUnderbarrelMagazine"]]
+        ["handgunWeapon",["handgunWeaponMuzzle","handgunWeaponPointer","handgunWeaponOptics","handgunWeaponUnderbarrel"],["handgunWeaponMagazine","handgunWeaponUnderbarrelMagazine"]]
     ];
 };
 
@@ -303,7 +312,7 @@ systemChat "grad-loadout verifier: checking loadouts";
 
 private _configPath = missionConfigFile >> "Loadouts";
 
-if ((missionNamespace getVariable [QGVAR(Chosen_Prefix),""]) != "") then {
+if (GVAR(Chosen_Prefix) != "") then {
     _configPath = _configPath >> GVAR(Chosen_Prefix);
 };
 

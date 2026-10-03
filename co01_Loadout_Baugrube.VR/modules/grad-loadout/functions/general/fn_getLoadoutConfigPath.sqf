@@ -2,8 +2,8 @@
 
 private _configPath = missionConfigFile >> "Loadouts";
 
-if (GRAD_Loadout_Chosen_Prefix != "") then {
-    _configPath = _configPath >> GRAD_Loadout_Chosen_Prefix;
+if (GVAR(Chosen_Prefix) != "") then {
+    _configPath = _configPath >> GVAR(Chosen_Prefix);
 };
 
 _configPath
