@@ -217,7 +217,8 @@ class Loadouts {
                 LIST_3("tsp_breach_block_mag"),
                 LIST_3("tsp_breach_package_mag"),
                 LIST_8("CUP_1Rnd_HE_M203"),
-                
+                "ACE_Wirecutter",
+                "ACE_VMH3",                
             };
 
             goggles[] = {
@@ -794,6 +795,7 @@ class Loadouts {
                 LIST_2("ACE_Chemlight_UltraHiOrange"),
                 LIST_2("CUP_20Rnd_46x30_MP7"),
                 "ACE_MicroDAGR",
+                "ACRE_PRC152",
             };
 
             goggles = "";
@@ -810,10 +812,6 @@ class Loadouts {
                 "ttt_Helmet_Falcon",
                 "ttt_Helmet_Hawk",
                 };
-
-            addItemsToVest[] += {
-                "ACE_MicroDAGR",
-            };
 
             addItemsToBackpack[] = {
                 "ACRE_PRC117F",
@@ -882,6 +880,14 @@ class Loadouts {
                 "ACE_SpraypaintBlack",
             };
 
+            addItemsToBackpack[] += {
+                "ACRE_PRC152",
+                "ace_flags_red",
+                "ace_flags_green",
+                "ACE_SpraypaintGreen",
+                "ACE_SpraypaintRed",
+            };
+
             binoculars = "ACE_Vector";
             gps = "ItemAndroid";
         };
@@ -910,9 +916,12 @@ class Loadouts {
             addItemsToVest[] += {
                 LIST_8("CUP_30Rnd_556x45_PMAG_BLACK_Tracer_Red"),
                 "ace_flags_red",
+                "ace_flags_green",
                 "ACRE_PRC152",
                 "ACE_MicroDAGR",
                 "ACE_SpraypaintBlack",
+                "ACE_SpraypaintGreen",
+                "ACE_SpraypaintRed",
             };
 
             binoculars = "ACE_Vector";
@@ -934,6 +943,9 @@ class Loadouts {
             addItemsToBackpack[] += {
                 "ACRE_PRC117F",
                 "ACRE_VHF30108SPIKE",
+                "ace_flags_blue",
+                "ace_flags_yellow",
+                "tt_signal_tarp_Red",
                 //"itc_land_tablet_fdc",
             };
             binoculars = "ACE_Vector";
@@ -960,7 +972,8 @@ class Loadouts {
                 class PRIVATE {
                         backpack = "B_AssaultPack_cbr";
                     addItemsToVest[] = {
-                        LIST_3("CUP_30Rnd_556x45_Emag"),
+                        LIST_3("CUP_30Rnd_556x45_PMAG_BLACK"),
+                        LIST_2("SmokeShell"),
                         "ACE_flags_blue",
                         "ACE_SpraypaintBlue",
                         "kat_basicDiagnostic",
@@ -974,19 +987,21 @@ class Loadouts {
                         LIST_20("ACE_elasticBandage"),
                         LIST_20("ACE_quikclot"),
                         //A
-                        LIST_6("kat_larynx"),
+                        LIST_8("kat_larynx"),
                         //R
                         LIST_3("kat_pocketBVM"),
                         LIST_6("kat_ncdKit"),
                         LIST_6("kat_chestSeal"),
                         //C
+                        LIST_8("kat_IV_16"),
                         LIST_4("ACE_salineIV_500"),
                         LIST_4("ACE_SalineIV_250"),
                         LIST_12("ACE_Epinephrine"),
+                        LIST_4("ACE_adenosine"),
                         //H
                         //P
-                        LIST_6("ACE_morphine"),
-                        LIST_6("kat_naloxone",)
+                        LIST_8("ACE_morphine"),
+                        LIST_8("kat_naloxone"),
                         LIST_6("kat_Painkiller"),
                         LIST_6("kat_Penthrox"),
                         //A
@@ -1010,10 +1025,12 @@ class Loadouts {
                         LIST_6("ACE_bloodIV"),
                         LIST_3("ACE_bloodIV_250"),
                         LIST_3("ACE_bloodIV_500"),
+                        LIST_12("ACE_Tourniquet"),
                         LIST_30("ACE_packingBandage"),
                         LIST_30("ACE_elasticBandage"),
                         "kat_suction",
                         LIST_6("kat_aatKit"),
+                        LIST_6("kat_ncdKit"),
                         LIST_10("kat_IV_16"),
                         LIST_3("kat_BVM"),
                         LIST_6("kat_chestSeal"),
@@ -1021,14 +1038,20 @@ class Loadouts {
                         LIST_6("kat_fentanyl"),
                         LIST_12("kat_epinephrineIV"),
                         LIST_12("ACE_epinephrine"),
+                        LIST_4("ACE_adenosine"),
                         LIST_6("kat_ketamine"),
-                        LIST_5("kat_larynx"),
-                        LIST_6("kat_naloxone"),
+                        LIST_8("ACE_morphine"),
+                        LIST_8("kat_larynx"),
+                        LIST_8("kat_naloxone"),
                         LIST_6("kat_nitroglycerin"),
                         LIST_6("kat_norepinephrine"),
                         LIST_6("kat_phenylephrine"),
-                        "ACE_salineIV_250",
+                        LIST_6("kat_Penthrox"),
+                        LIST_4("kat_Painkiller"),
+                        LIST_4("ACE_salineIV_500"),
+                        LIST_4("ACE_salineIV_250"),
                         LIST_30("ACE_suture"),
+                        "ACE_surgicalKit",
                         LIST_12("kat_TXA"),
                         "kat_oxygenTank_150",
                     };

@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=1179;
+		nextID=1181;
 	};
 	class LayerIndexProvider
 	{
-		nextID=33;
+		nextID=39;
 	};
 	class Camera
 	{
-		pos[]={2752.7512,366.81027,3413.9854};
-		dir[]={-0.19015637,-0.54648721,0.81559318};
-		up[]={-0.12408604,0.83746743,0.53221321};
-		aside[]={0.97388047,-7.4505806e-09,0.2270612};
+		pos[]={3125.2195,185.5699,9319.1152};
+		dir[]={-0.077265456,-0.67109978,0.73736417};
+		up[]={-0.069939725,0.74136418,0.66744649};
+		aside[]={0.99457979,2.5991085e-07,0.10421804};
 	};
 };
 binarizationWanted=0;
@@ -65,7 +65,6 @@ addons[]=
 	"vtx_uh60_config",
 	"A3_Characters_F",
 	"A3_Characters_F_Enoch",
-	"rnt_lkw_5t_mil_gl_kat_i",
 	"A3_Structures_F_Mil_Helipads",
 	"A3_Structures_F_Heli_Items_Airport",
 	"A3_Supplies_F_Heli_Slingload",
@@ -76,7 +75,8 @@ addons[]=
 	"cfp_uniforms",
 	"A3_Structures_F_Enoch_Military_Camps",
 	"A3_Structures_F_Orange_Humanitarian_Camps",
-	"KJW_TwoPrimaryWeapons"
+	"KJW_TwoPrimaryWeapons",
+	"Flex_CUP_NOR_Faction"
 };
 class AddonsMetaData
 {
@@ -258,76 +258,76 @@ class AddonsMetaData
 		};
 		class Item27
 		{
-			className="rnt_lkw_5t_mil_gl_kat_i";
-			name="rnt_lkw_5t_mil_gl_kat_i";
-		};
-		class Item28
-		{
 			className="A3_Structures_F_Heli";
 			name="Arma 3 Helicopters - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item29
+		class Item28
 		{
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item30
+		class Item29
 		{
 			className="ace_rearm";
 			name="ACE3 - Rearm";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item31
+		class Item30
 		{
 			className="ace_cargo";
 			name="ACE3 - Cargo";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item32
+		class Item31
 		{
 			className="A3_Structures_F_Bootcamp";
 			name="Arma 3 Bootcamp Update - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item33
+		class Item32
 		{
 			className="ace_nouniformrestrictions";
 			name="ACE3 - No Uniform Restrictions";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item34
+		class Item33
 		{
 			className="cfp_uniforms";
 			name="cfp_uniforms";
 			author="CFP Team";
 		};
-		class Item35
+		class Item34
 		{
 			className="A3_Structures_F_Enoch_Military";
 			name="Arma 3 Contact Platform - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item36
+		class Item35
 		{
 			className="A3_Structures_F_Orange";
 			name="Arma 3 Orange - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item37
+		class Item36
 		{
 			className="KJW_TwoPrimaryWeapons";
 			name="KJW_TwoPrimaryWeapons";
 			author="KJW";
+		};
+		class Item37
+		{
+			className="Flex_CUP_NOR_Faction";
+			name="Flex_CUP_NOR_Faction";
 		};
 	};
 };
@@ -338,7 +338,8 @@ dlcs[]=
 	"Curator",
 	"Enoch",
 	"Heli",
-	"Orange"
+	"Orange",
+	"Expansion"
 };
 randomSeed=7964695;
 class ScenarioData
@@ -1479,12 +1480,13 @@ class Mission
 						angles[]={0.039974678,4.2690673,6.2318034};
 					};
 					side="East";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=525;
 					type="CFP_O_WAGNER_Contractor_1_WIN_01";
+					atlOffset=1.6644897;
 				};
 			};
 			class Attributes
@@ -1941,7 +1943,7 @@ class Mission
 					};
 					id=546;
 					type="CFP_O_WAGNER_Contractor_1_WIN_01";
-					atlOffset=0.005279541;
+					atlOffset=3.0517578e-05;
 				};
 				class Item1
 				{
@@ -1952,13 +1954,13 @@ class Mission
 						angles[]={0.057076108,4.0544868,6.2204108};
 					};
 					side="East";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=547;
 					type="CFP_O_WAGNER_Contractor_1_WIN_01";
-					atlOffset=0.005279541;
+					atlOffset=1.8858337;
 				};
 			};
 			class Attributes
@@ -2021,7 +2023,7 @@ class Mission
 				class Attribute0
 				{
 					property="ttt_w_shields_addVehicleShield";
-					expression="[[_this, false, [true, true], true], ttt_w_shields_fnc_addVehicleShield] call ttt_common_fnc_callGlobalFnc";
+					expression="" \n "                            if (_value) then {" \n "                                [[_this, false, [true, true], true], ttt_w_shields_fnc_addVehicleShield] call ttt_common_fnc_callGlobalFnc;" \n "                            } else {" \n "                                [[_this], ttt_w_shields_fnc_removeVehicleShield] call ttt_common_fnc_callGlobalFnc;" \n "                            }";
 					class Value
 					{
 						class data
@@ -2388,7 +2390,7 @@ class Mission
 						class Attribute0
 						{
 							property="ttt_w_shields_addBuildingShield";
-							expression="[_this] call ttt_fnc_buildingShield;";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 							class Value
 							{
 								class data
@@ -2401,7 +2403,7 @@ class Mission
 						class Attribute1
 						{
 							property="ttt_w_shields_windowpop";
-							expression="[_this] call ttt_fnc_removeWindowGlass;";
+							expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 							class Value
 							{
 								class data
@@ -2753,7 +2755,7 @@ class Mission
 						class Attribute0
 						{
 							property="ttt_w_shields_addBuildingShield";
-							expression="[_this] call ttt_fnc_buildingShield;";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 							class Value
 							{
 								class data
@@ -2766,7 +2768,7 @@ class Mission
 						class Attribute1
 						{
 							property="ttt_w_shields_windowpop";
-							expression="[_this] call ttt_fnc_removeWindowGlass;";
+							expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 							class Value
 							{
 								class data
@@ -2803,7 +2805,7 @@ class Mission
 						class Attribute0
 						{
 							property="ttt_w_shields_addBuildingShield";
-							expression="[_this] call ttt_fnc_buildingShield;";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 							class Value
 							{
 								class data
@@ -2816,7 +2818,7 @@ class Mission
 						class Attribute1
 						{
 							property="ttt_w_shields_windowpop";
-							expression="[_this] call ttt_fnc_removeWindowGlass;";
+							expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 							class Value
 							{
 								class data
@@ -2853,7 +2855,7 @@ class Mission
 						class Attribute0
 						{
 							property="ttt_w_shields_addBuildingShield";
-							expression="[_this] call ttt_fnc_buildingShield;";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 							class Value
 							{
 								class data
@@ -2866,7 +2868,7 @@ class Mission
 						class Attribute1
 						{
 							property="ttt_w_shields_windowpop";
-							expression="[_this] call ttt_fnc_removeWindowGlass;";
+							expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 							class Value
 							{
 								class data
@@ -2922,7 +2924,7 @@ class Mission
 						class Attribute0
 						{
 							property="ttt_w_shields_addBuildingShield";
-							expression="[_this] call ttt_fnc_buildingShield;";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 							class Value
 							{
 								class data
@@ -2935,7 +2937,7 @@ class Mission
 						class Attribute1
 						{
 							property="ttt_w_shields_windowpop";
-							expression="[_this] call ttt_fnc_removeWindowGlass;";
+							expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 							class Value
 							{
 								class data
@@ -2972,7 +2974,7 @@ class Mission
 						class Attribute0
 						{
 							property="ttt_w_shields_addBuildingShield";
-							expression="[_this] call ttt_fnc_buildingShield;";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 							class Value
 							{
 								class data
@@ -2985,7 +2987,7 @@ class Mission
 						class Attribute1
 						{
 							property="ttt_w_shields_windowpop";
-							expression="[_this] call ttt_fnc_removeWindowGlass;";
+							expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 							class Value
 							{
 								class data
@@ -3071,7 +3073,7 @@ class Mission
 						class Attribute0
 						{
 							property="ttt_w_shields_addBuildingShield";
-							expression="[_this] call ttt_fnc_buildingShield;";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 							class Value
 							{
 								class data
@@ -3084,7 +3086,7 @@ class Mission
 						class Attribute1
 						{
 							property="ttt_w_shields_windowpop";
-							expression="[_this] call ttt_fnc_removeWindowGlass;";
+							expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 							class Value
 							{
 								class data
@@ -3118,7 +3120,7 @@ class Mission
 						class Attribute0
 						{
 							property="ttt_w_shields_addBuildingShield";
-							expression="[_this] call ttt_fnc_buildingShield;";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 							class Value
 							{
 								class data
@@ -3131,7 +3133,7 @@ class Mission
 						class Attribute1
 						{
 							property="ttt_w_shields_windowpop";
-							expression="[_this] call ttt_fnc_removeWindowGlass;";
+							expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 							class Value
 							{
 								class data
@@ -3184,7 +3186,7 @@ class Mission
 						class Attribute0
 						{
 							property="ttt_w_shields_addBuildingShield";
-							expression="[_this] call ttt_fnc_buildingShield;";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 							class Value
 							{
 								class data
@@ -3197,7 +3199,7 @@ class Mission
 						class Attribute1
 						{
 							property="ttt_w_shields_windowpop";
-							expression="[_this] call ttt_fnc_removeWindowGlass;";
+							expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 							class Value
 							{
 								class data
@@ -3368,7 +3370,7 @@ class Mission
 						class Attribute0
 						{
 							property="ttt_w_shields_addBuildingShield";
-							expression="[_this] call ttt_fnc_buildingShield;";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 							class Value
 							{
 								class data
@@ -3381,7 +3383,7 @@ class Mission
 						class Attribute1
 						{
 							property="ttt_w_shields_windowpop";
-							expression="[_this] call ttt_fnc_removeWindowGlass;";
+							expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 							class Value
 							{
 								class data
@@ -3415,7 +3417,7 @@ class Mission
 						class Attribute0
 						{
 							property="ttt_w_shields_addBuildingShield";
-							expression="[_this] call ttt_fnc_buildingShield;";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 							class Value
 							{
 								class data
@@ -3428,7 +3430,7 @@ class Mission
 						class Attribute1
 						{
 							property="ttt_w_shields_windowpop";
-							expression="[_this] call ttt_fnc_removeWindowGlass;";
+							expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 							class Value
 							{
 								class data
@@ -3570,7 +3572,7 @@ class Mission
 						class Attribute0
 						{
 							property="ttt_w_shields_addBuildingShield";
-							expression="[_this] call ttt_fnc_buildingShield;";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 							class Value
 							{
 								class data
@@ -3583,7 +3585,7 @@ class Mission
 						class Attribute1
 						{
 							property="ttt_w_shields_windowpop";
-							expression="[_this] call ttt_fnc_removeWindowGlass;";
+							expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 							class Value
 							{
 								class data
@@ -3619,7 +3621,7 @@ class Mission
 						class Attribute0
 						{
 							property="ttt_w_shields_addBuildingShield";
-							expression="[_this] call ttt_fnc_buildingShield;";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 							class Value
 							{
 								class data
@@ -3632,7 +3634,7 @@ class Mission
 						class Attribute1
 						{
 							property="ttt_w_shields_windowpop";
-							expression="[_this] call ttt_fnc_removeWindowGlass;";
+							expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 							class Value
 							{
 								class data
@@ -3767,7 +3769,7 @@ class Mission
 						class Attribute0
 						{
 							property="ttt_w_shields_addBuildingShield";
-							expression="[_this] call ttt_fnc_buildingShield;";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 							class Value
 							{
 								class data
@@ -3780,7 +3782,7 @@ class Mission
 						class Attribute1
 						{
 							property="ttt_w_shields_windowpop";
-							expression="[_this] call ttt_fnc_removeWindowGlass;";
+							expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 							class Value
 							{
 								class data
@@ -3850,7 +3852,7 @@ class Mission
 						class Attribute0
 						{
 							property="ttt_w_shields_addBuildingShield";
-							expression="[_this] call ttt_fnc_buildingShield;";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 							class Value
 							{
 								class data
@@ -3863,7 +3865,7 @@ class Mission
 						class Attribute1
 						{
 							property="ttt_w_shields_windowpop";
-							expression="[_this] call ttt_fnc_removeWindowGlass;";
+							expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 							class Value
 							{
 								class data
@@ -5431,7 +5433,7 @@ class Mission
 						class Attribute0
 						{
 							property="ttt_w_shields_addBuildingShield";
-							expression="[_this] call ttt_fnc_buildingShield;";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 							class Value
 							{
 								class data
@@ -5444,7 +5446,7 @@ class Mission
 						class Attribute1
 						{
 							property="ttt_w_shields_windowpop";
-							expression="[_this] call ttt_fnc_removeWindowGlass;";
+							expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 							class Value
 							{
 								class data
@@ -5652,7 +5654,7 @@ class Mission
 						class Attribute0
 						{
 							property="ttt_w_shields_addBuildingShield";
-							expression="[_this] call ttt_fnc_buildingShield;";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 							class Value
 							{
 								class data
@@ -5665,7 +5667,7 @@ class Mission
 						class Attribute1
 						{
 							property="ttt_w_shields_windowpop";
-							expression="[_this] call ttt_fnc_removeWindowGlass;";
+							expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 							class Value
 							{
 								class data
@@ -5741,7 +5743,7 @@ class Mission
 						class Attribute0
 						{
 							property="ttt_w_shields_addBuildingShield";
-							expression="[_this] call ttt_fnc_buildingShield;";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 							class Value
 							{
 								class data
@@ -5754,7 +5756,7 @@ class Mission
 						class Attribute1
 						{
 							property="ttt_w_shields_windowpop";
-							expression="[_this] call ttt_fnc_removeWindowGlass;";
+							expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 							class Value
 							{
 								class data
@@ -6131,7 +6133,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6265,7 +6267,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6398,7 +6400,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6531,7 +6533,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6666,7 +6668,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6787,7 +6789,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6920,7 +6922,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -7053,7 +7055,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -7187,7 +7189,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -7320,7 +7322,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -7454,7 +7456,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -7573,7 +7575,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -7707,7 +7709,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -7841,7 +7843,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -7974,7 +7976,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -8109,7 +8111,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -8242,7 +8244,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -8375,7 +8377,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -8508,7 +8510,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -8642,7 +8644,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -8777,7 +8779,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -8911,7 +8913,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -9044,7 +9046,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -9176,7 +9178,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -9308,7 +9310,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -9441,7 +9443,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -9575,7 +9577,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -9709,7 +9711,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -9843,7 +9845,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -9977,7 +9979,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -10130,7 +10132,7 @@ class Mission
 				class Attribute0
 				{
 					property="ttt_w_shields_addBuildingShield";
-					expression="[_this] call ttt_fnc_buildingShield;";
+					expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 					class Value
 					{
 						class data
@@ -10143,7 +10145,7 @@ class Mission
 				class Attribute1
 				{
 					property="ttt_w_shields_windowpop";
-					expression="[_this] call ttt_fnc_removeWindowGlass;";
+					expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 					class Value
 					{
 						class data
@@ -10178,7 +10180,7 @@ class Mission
 				class Attribute0
 				{
 					property="ttt_w_shields_addBuildingShield";
-					expression="[_this] call ttt_fnc_buildingShield;";
+					expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 					class Value
 					{
 						class data
@@ -10191,7 +10193,7 @@ class Mission
 				class Attribute1
 				{
 					property="ttt_w_shields_windowpop";
-					expression="[_this] call ttt_fnc_removeWindowGlass;";
+					expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 					class Value
 					{
 						class data
@@ -10226,7 +10228,7 @@ class Mission
 				class Attribute0
 				{
 					property="ttt_w_shields_addBuildingShield";
-					expression="[_this] call ttt_fnc_buildingShield;";
+					expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 					class Value
 					{
 						class data
@@ -10239,7 +10241,7 @@ class Mission
 				class Attribute1
 				{
 					property="ttt_w_shields_windowpop";
-					expression="[_this] call ttt_fnc_removeWindowGlass;";
+					expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 					class Value
 					{
 						class data
@@ -10274,7 +10276,7 @@ class Mission
 				class Attribute0
 				{
 					property="ttt_w_shields_addBuildingShield";
-					expression="[_this] call ttt_fnc_buildingShield;";
+					expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 					class Value
 					{
 						class data
@@ -10287,7 +10289,7 @@ class Mission
 				class Attribute1
 				{
 					property="ttt_w_shields_windowpop";
-					expression="[_this] call ttt_fnc_removeWindowGlass;";
+					expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 					class Value
 					{
 						class data
@@ -10322,7 +10324,7 @@ class Mission
 				class Attribute0
 				{
 					property="ttt_w_shields_addBuildingShield";
-					expression="[_this] call ttt_fnc_buildingShield;";
+					expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 					class Value
 					{
 						class data
@@ -10335,7 +10337,7 @@ class Mission
 				class Attribute1
 				{
 					property="ttt_w_shields_windowpop";
-					expression="[_this] call ttt_fnc_removeWindowGlass;";
+					expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 					class Value
 					{
 						class data
@@ -10482,7 +10484,7 @@ class Mission
 			};
 			id=1014;
 			type="Box_NATO_Ammo_F";
-			atlOffset=0.1534729;
+			atlOffset=0.15045166;
 		};
 		class Item83
 		{
@@ -10500,7 +10502,7 @@ class Mission
 			};
 			id=1015;
 			type="Box_NATO_Ammo_F";
-			atlOffset=0.13725281;
+			atlOffset=0.13423157;
 		};
 		class Item84
 		{
@@ -10518,7 +10520,7 @@ class Mission
 			};
 			id=1016;
 			type="Box_NATO_Ammo_F";
-			atlOffset=0.11331177;
+			atlOffset=0.11029053;
 		};
 		class Item85
 		{
@@ -10536,7 +10538,7 @@ class Mission
 			};
 			id=1018;
 			type="Box_NATO_Ammo_F";
-			atlOffset=0.11625671;
+			atlOffset=0.11323547;
 		};
 		class Item86
 		{
@@ -10554,7 +10556,7 @@ class Mission
 			};
 			id=1019;
 			type="Box_NATO_Ammo_F";
-			atlOffset=0.094650269;
+			atlOffset=0.091629028;
 		};
 		class Item87
 		{
@@ -10572,7 +10574,7 @@ class Mission
 			};
 			id=1020;
 			type="Box_NATO_Grenades_F";
-			atlOffset=0.010910034;
+			atlOffset=0.0078887939;
 		};
 		class Item88
 		{
@@ -10583,13 +10585,14 @@ class Mission
 				angles[]={6.2557473,1.2064886,0.0052248435};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				name="grenades_02";
 			};
 			id=1021;
 			type="Box_NATO_Grenades_F";
-			atlOffset=0.2515564;
+			atlOffset=0.24937439;
 		};
 		class Item89
 		{
@@ -10607,7 +10610,7 @@ class Mission
 			};
 			id=1022;
 			type="Box_NATO_Grenades_F";
-			atlOffset=0.029541016;
+			atlOffset=0.026519775;
 		};
 		class Item90
 		{
@@ -10625,7 +10628,7 @@ class Mission
 			};
 			id=1023;
 			type="Box_NATO_Grenades_F";
-			atlOffset=0.087677002;
+			atlOffset=0.084655762;
 		};
 		class Item91
 		{
@@ -10643,7 +10646,7 @@ class Mission
 			};
 			id=1024;
 			type="Box_NATO_Grenades_F";
-			atlOffset=0.07069397;
+			atlOffset=0.067672729;
 		};
 		class Item92
 		{
@@ -10661,7 +10664,7 @@ class Mission
 			};
 			id=1025;
 			type="Box_NATO_Grenades_F";
-			atlOffset=0.046646118;
+			atlOffset=0.043624878;
 		};
 		class Item93
 		{
@@ -10672,12 +10675,13 @@ class Mission
 				angles[]={0.0032018756,1.1668611,6.2743831};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
 			id=1026;
 			type="ttt_common_pio_crate";
-			atlOffset=0.25143433;
+			atlOffset=0.24893188;
 		};
 		class Item94
 		{
@@ -10693,7 +10697,7 @@ class Mission
 			};
 			id=1027;
 			type="ttt_compat_kam_sana_crate";
-			atlOffset=0.28735352;
+			atlOffset=0.28567505;
 		};
 		class Item95
 		{
@@ -10709,7 +10713,7 @@ class Mission
 			};
 			id=1028;
 			type="ttt_compat_kam_sana_crate";
-			atlOffset=0.28738403;
+			atlOffset=0.28445435;
 		};
 		class Item96
 		{
@@ -10725,7 +10729,7 @@ class Mission
 			};
 			id=1029;
 			type="ttt_compat_kam_sana_crate";
-			atlOffset=0.28759766;
+			atlOffset=0.28627014;
 		};
 		class Item97
 		{
@@ -10741,7 +10745,7 @@ class Mission
 			};
 			id=1030;
 			type="ttt_compat_kam_sana_crate";
-			atlOffset=0.28761292;
+			atlOffset=0.28796387;
 		};
 		class Item98
 		{
@@ -10757,7 +10761,7 @@ class Mission
 			};
 			id=1032;
 			type="ttt_compat_kam_sana_crate";
-			atlOffset=0.28736877;
+			atlOffset=0.2849884;
 		};
 		class Item99
 		{
@@ -10774,7 +10778,7 @@ class Mission
 			};
 			id=1033;
 			type="ttt_compat_kam_sana_crate";
-			atlOffset=0.046844482;
+			atlOffset=0.043823242;
 		};
 		class Item100
 		{
@@ -10791,7 +10795,7 @@ class Mission
 			};
 			id=1034;
 			type="ttt_compat_kam_sanb_crate";
-			atlOffset=0.095809937;
+			atlOffset=0.092788696;
 		};
 		class Item101
 		{
@@ -10808,7 +10812,7 @@ class Mission
 			};
 			id=1035;
 			type="ttt_compat_kam_sanb_crate";
-			atlOffset=0.040908813;
+			atlOffset=0.037887573;
 		};
 		class Item102
 		{
@@ -10825,7 +10829,7 @@ class Mission
 			};
 			id=1036;
 			type="ttt_compat_kam_sanb_crate";
-			atlOffset=0.12084961;
+			atlOffset=0.11782837;
 		};
 		class Item103
 		{
@@ -10842,7 +10846,7 @@ class Mission
 			};
 			id=1037;
 			type="ttt_compat_kam_sanb_crate";
-			atlOffset=0.067855835;
+			atlOffset=0.064834595;
 		};
 		class Item104
 		{
@@ -10859,7 +10863,7 @@ class Mission
 			};
 			id=1038;
 			type="ttt_compat_kam_sana_crate";
-			atlOffset=0.14070129;
+			atlOffset=0.13768005;
 		};
 		class Item105
 		{
@@ -10876,7 +10880,7 @@ class Mission
 			};
 			id=1039;
 			type="ttt_compat_kam_sana_crate";
-			atlOffset=0.089492798;
+			atlOffset=0.086471558;
 		};
 		class Item106
 		{
@@ -10894,7 +10898,7 @@ class Mission
 			};
 			id=1040;
 			type="Box_NATO_Ammo_F";
-			atlOffset=0.13383484;
+			atlOffset=0.1308136;
 		};
 		class Item107
 		{
@@ -10905,20 +10909,21 @@ class Mission
 				angles[]={6.2828403,1.1873358,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
 			id=1041;
 			type="ttt_common_mark_crate";
-			atlOffset=0.25146484;
+			atlOffset=0.2492981;
 		};
 		class Item108
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3126.8376,154.77127,9357.1738};
-				angles[]={6.2667933,0.04663283,6.2681394};
+				position[]={3128.8376,154.91061,9365.4297};
+				angles[]={6.2631893,0.04663283,6.2803173};
 			};
 			side="Empty";
 			flags=4;
@@ -10931,7 +10936,6 @@ class Mission
 			};
 			id=1050;
 			type="vtx_UH60M_SLICK";
-			atlOffset=3.0517578e-05;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -13794,98 +13798,6 @@ class Mission
 		};
 		class Item114
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={2769.459,324.00287,3355.4951};
-				angles[]={0,3.8256221,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1157;
-			type="rnt_lkw_5t_mil_gl_kat_i_transport_winter";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ttt_w_shields_addVehicleShield";
-					expression="[[_this, false, [true, true], true], ttt_w_shields_fnc_addVehicleShield] call ttt_common_fnc_callGlobalFnc";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="iedd_vbied_edit";
-					expression="false";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="";
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item115
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={2759.886,324.00287,3345.498};
-				angles[]={0,3.8908622,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1159;
-			type="rnt_lkw_5t_mil_gl_kat_i_transport_winter";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ttt_w_shields_addVehicleShield";
-					expression="[[_this, false, [true, true], true], ttt_w_shields_fnc_addVehicleShield] call ttt_common_fnc_callGlobalFnc";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="iedd_vbied_edit";
-					expression="false";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="";
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item116
-		{
 			dataType="Logic";
 			class PositionInfo
 			{
@@ -13896,6 +13808,7 @@ class Mission
 			flags=1;
 			id=1160;
 			type="ModuleHideTerrainObjects_F";
+			atlOffset=-0.0026092529;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -13927,13 +13840,13 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item117
+		class Item115
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3127.1833,152.7596,9357.9912};
-				angles[]={6.2640953,6.251442,6.2708378};
+				position[]={3129.1833,152.90443,9366.2471};
+				angles[]={6.2631865,6.251442,6.2803173};
 			};
 			side="Empty";
 			flags=4;
@@ -13943,15 +13856,14 @@ class Mission
 			};
 			id=1161;
 			type="Land_HelipadRescue_F";
-			atlOffset=-1.5258789e-05;
 		};
-		class Item118
+		class Item116
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3121.9832,152.86406,9352.3105};
-				angles[]={6.2691183,0.39444807,6.2659979};
+				position[]={3123.9832,152.95056,9360.5664};
+				angles[]={6.2660465,0.39444807,6.2746162};
 			};
 			side="Empty";
 			flags=4;
@@ -13961,13 +13873,13 @@ class Mission
 			id=1162;
 			type="PortableHelipadLight_01_blue_F";
 		};
-		class Item119
+		class Item117
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3121.4634,153.01802,9363.4873};
-				angles[]={6.2718282,0.39447638,6.2752895};
+				position[]={3123.4634,153.11636,9371.7432};
+				angles[]={6.2660465,0.39447638,6.2803383};
 			};
 			side="Empty";
 			flags=4;
@@ -13976,14 +13888,15 @@ class Mission
 			};
 			id=1163;
 			type="PortableHelipadLight_01_blue_F";
+			atlOffset=0.0013885498;
 		};
-		class Item120
+		class Item118
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3132.7476,152.68497,9352.6816};
-				angles[]={6.2631927,0.39439827,6.2651982};
+				position[]={3134.7476,152.84042,9360.9375};
+				angles[]={6.2546253,0.39439827,6.2717552};
 			};
 			side="Empty";
 			flags=4;
@@ -13994,13 +13907,13 @@ class Mission
 			type="PortableHelipadLight_01_red_F";
 			atlOffset=1.5258789e-05;
 		};
-		class Item121
+		class Item119
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3132.3992,152.9352,9363.5742};
-				angles[]={6.2566171,0.39438513,6.2800975};
+				position[]={3134.3992,153.19321,9371.8301};
+				angles[]={6.2403526,0.39438513,0.017138813};
 			};
 			side="Empty";
 			flags=4;
@@ -14009,9 +13922,9 @@ class Mission
 			};
 			id=1165;
 			type="PortableHelipadLight_01_red_F";
-			atlOffset=-3.0517578e-05;
+			atlOffset=-1.5258789e-05;
 		};
-		class Item122
+		class Item120
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14027,8 +13940,9 @@ class Mission
 			};
 			id=1166;
 			type="B_Slingload_01_Ammo_F";
+			atlOffset=0.00050354004;
 		};
-		class Item123
+		class Item121
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14044,9 +13958,9 @@ class Mission
 			};
 			id=1167;
 			type="VR_Area_01_square_2x2_yellow_F";
-			atlOffset=0.025772095;
+			atlOffset=0.024017334;
 		};
-		class Item124
+		class Item122
 		{
 			dataType="Group";
 			side="West";
@@ -14070,6 +13984,7 @@ class Mission
 					};
 					id=1169;
 					type="B_Helipilot_F";
+					atlOffset=-0.0010375977;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14166,6 +14081,7 @@ class Mission
 					};
 					id=1170;
 					type="B_Helipilot_F";
+					atlOffset=1.5258789e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14262,6 +14178,7 @@ class Mission
 					};
 					id=1171;
 					type="B_helicrew_F";
+					atlOffset=-0.0005645752;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14359,6 +14276,7 @@ class Mission
 					};
 					id=1172;
 					type="B_medic_F";
+					atlOffset=0.00033569336;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14456,6 +14374,7 @@ class Mission
 					};
 					id=1173;
 					type="B_medic_F";
+					atlOffset=0.0019989014;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14540,8 +14459,9 @@ class Mission
 			{
 			};
 			id=1168;
+			atlOffset=-0.0010375977;
 		};
-		class Item125
+		class Item123
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14557,6 +14477,7 @@ class Mission
 			};
 			id=1174;
 			type="Land_MedicalTent_01_NATO_tropic_generic_open_F";
+			atlOffset=-0.0012664795;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14575,7 +14496,7 @@ class Mission
 				class Attribute1
 				{
 					property="ttt_w_shields_windowpop";
-					expression="[_this] call ttt_fnc_removeWindowGlass;";
+					expression="_this, _value call ttt_w_shields_fnc_setWindowGlass;";
 					class Value
 					{
 						class data
@@ -14601,7 +14522,7 @@ class Mission
 				class Attribute3
 				{
 					property="ttt_w_shields_addBuildingShield";
-					expression="[_this] call ttt_fnc_buildingShield;";
+					expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
 					class Value
 					{
 						class data
@@ -14614,7 +14535,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item126
+		class Item124
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14630,8 +14551,9 @@ class Mission
 			};
 			id=1175;
 			type="Land_MedicalTent_01_floor_light_F";
+			atlOffset=-0.0012359619;
 		};
-		class Item127
+		class Item125
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -14642,7 +14564,7 @@ class Mission
 			id=1176;
 			atlOffset=0.023193359;
 		};
-		class Item128
+		class Item126
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -14653,7 +14575,7 @@ class Mission
 			id=1177;
 			atlOffset=2.0111694;
 		};
-		class Item129
+		class Item127
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -14663,6 +14585,38 @@ class Mission
 			title="Verstärkungstrigger";
 			id=1178;
 			atlOffset=3.0517578e-05;
+		};
+		class Item128
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2784.7134,323.31479,3371.5471};
+				angles[]={-0,3.9088626,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1179;
+			type="Flex_CUP_NOR_Truck_01_covered";
+		};
+		class Item129
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2795.3159,323.31479,3382.3772};
+				angles[]={-0,3.9088626,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1180;
+			type="Flex_CUP_NOR_Truck_01_covered";
 		};
 	};
 	class Connections
