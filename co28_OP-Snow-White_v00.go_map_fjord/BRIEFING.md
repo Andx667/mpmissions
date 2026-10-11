@@ -14,14 +14,15 @@ Prorussische Separatisten haben in den vergangenen Tagen den Staudamm im Einsatz
 
 Eine zweite Feindgruppierung hält den **Straßentunnel** an der Hauptverbindungsstraße und hat diesen mit Fahrzeugwracks, Betonsperren und S-Draht blockiert.
 
-| | |
-|---|---|
-| **Stärke** | Am Damm etwa Zugstärke, am Tunnel etwa Gruppen- bis verstärkte Gruppenstärke. Dazu Kontrollposten an den Zufahrten. |
-| **Ausrüstung** | Winterbekleidung, AK-Familie, lMG/MG (RPK, PKM), Scharfschützengewehre, Unterlaufgranatwerfer, Panzerabwehrhandwaffen (RPG-18). |
-| **Schwere Waffen** | Mindestens ein sMG DShKM in ausgebauter Stellung, mindestens ein MT-LB. |
-| **Sperren** | Schützenminen und Stolperdrahtminen im Vorfeld der Stellungen, S-Draht an den Zugängen. |
-| **Reserven** | Motorisierte Eingreifkräfte auf geschützten Radfahrzeugen mit sMG (Tigr). Eintreffen wenige Minuten nach Gefechtsbeginn möglich. |
-| **Kampfwert** | Gut ausgebildet und ausgerüstet, kampferfahren, hohe Moral. Kein Gegner, der sich ergibt. |
+Am Damm steht der Feind etwa in Zugstärke, am Tunnel in Gruppen- bis verstärkter Gruppenstärke. Dazu kommen Kontrollposten an den Zufahrten.
+
+Der Feind trägt Winterbekleidung und ist mit Sturmgewehren der AK-Familie, leichten und mittleren Maschinengewehren (RPK, PKM), Scharfschützengewehren, Unterlaufgranatwerfern und Panzerabwehrhandwaffen (RPG-18) ausgerüstet. An schweren Waffen verfügt er über mindestens ein sMG DShKM in ausgebauter Stellung und mindestens einen MT-LB.
+
+Im Vorfeld der Stellungen liegen Schützenminen und Stolperdrahtminen, die Zugänge sind mit S-Draht gesperrt.
+
+Als Reserve hält der Feind motorisierte Eingreifkräfte auf geschützten Radfahrzeugen mit sMG (Tigr) bereit. Sie können wenige Minuten nach Gefechtsbeginn eintreffen.
+
+Der Feind ist gut ausgebildet und ausgerüstet, kampferfahren und hat eine hohe Moral. Er wird sich nicht ergeben.
 
 **Vermutete Absicht des Feindes:** Der Feind hält Damm und Tunnel, um Druck auf die Regierung auszuüben. Erkennt er einen Angriff auf den Damm, wird er die Ladungen zünden. Es ist davon auszugehen, dass zwischen Aufklärung unseres Angriffs und der Sprengung **nur etwa 10 Minuten** liegen.
 
@@ -29,15 +30,9 @@ Eine zweite Feindgruppierung hält den **Straßentunnel** an der Hauptverbindung
 
 Der Jegertropp „Bulldog“ ist als einziger verfügbarer Verband schnell genug im Einsatzraum. Weitere Kräfte des Bataillons folgen frühestens in mehreren Stunden über die Hauptverbindungsstraße – diese ist erst nutzbar, wenn der Tunnel frei ist.
 
-| Rufname | Element | Stärke |
-|---|---|---|
-| **Bulldog** | Zugtrupp (Zugführer, stv. Zugführer, Funker) | 3 |
-| **Bulldog-1** | 1. Jägergruppe | 8 |
-| **Bulldog-2** | 2. Jägergruppe | 8 |
-| **Bulldog-3** | 3. Jägergruppe | 8 |
-| **Pavehawk** | UH-60M mit 2 Piloten, Bordschütze und 2 Sanitätern | 5 |
+Der Zug gliedert sich in den Zugtrupp **Bulldog** mit Zugführer, stellvertretendem Zugführer und Funker sowie die drei Jägergruppen **Bulldog-1**, **Bulldog-2** und **Bulldog-3** mit je acht Soldaten. Jede Jägergruppe verfügt über einen Sprengspezialisten und einen Sanitätssoldaten.
 
-Jede Jägergruppe verfügt über einen Sprengspezialisten und einen Sanitätssoldaten.
+Dem Zug ist der Hubschrauber **Pavehawk** unterstellt, ein UH-60M mit zwei Piloten, einem Bordschützen und zwei Sanitätern.
 
 Keine Unterstützung durch Artillerie oder Kampfflugzeuge.
 
@@ -117,11 +112,9 @@ Die Aufteilung der Gruppen legt der Zugführer nach eigener Lagebeurteilung fest
 
 ### b) Fernmeldeverbindungen
 
-| Kreis | Gerät | Teilnehmer |
-|---|---|---|
-| Zugkreis | AN/PRC-152 | Zugtrupp, Gruppenführer, Truppführer |
-| Flugfunk / Führungskreis | AN/PRC-117F | Zugtrupp, Gruppenführer, Pavehawk |
-| Gruppenintern | AN/PRC-152 | innerhalb der Gruppen |
+Der Zugkreis läuft über das AN/PRC-152 und verbindet Zugtrupp, Gruppenführer und Truppführer. Innerhalb der Gruppen wird ebenfalls über das AN/PRC-152 geführt.
+
+Die Verbindung zu Pavehawk hält der Funker des Zugtrupps über das AN/PRC-117F.
 
 Kanalbelegung wird vor Einsatzbeginn durch den Zugführer befohlen.
 
