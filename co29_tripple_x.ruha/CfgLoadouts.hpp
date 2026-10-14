@@ -18,7 +18,7 @@ class Loadouts {
 
         class B_Survivor_F {
             uniform = "U_I_E_Uniform_01_F";
-            vest = "V_CarrierRigKBT_01_heavy_EAF_F";
+            vest = "V_CarrierRigKBT_01_light_EAF_F";
             backpack = "B_AssaultPack_eaf_F";
 
             addItemsToUniform[] = {
@@ -58,7 +58,9 @@ class Loadouts {
             primaryWeaponOptics[] = {
                 "optic_ico_01_f",
                 "optic_ico_01_black_f",
-                "optic_ico_01_camo_f"
+                "optic_ico_01_camo_f",
+                "optic_Hamr_khk_F",
+                "optic_ERCO_khk_F"
             };
 
             primaryWeaponPointer = "";
@@ -116,7 +118,7 @@ class Loadouts {
 
         class B_Soldier_F: B_Survivor_F {
             addItemsToVest[] += {
-                "30Rnd_65x39_caseless_msbs_mag", 8,
+                "30Rnd_65x39_caseless_msbs_mag", 7,
             };
         };
 
@@ -156,6 +158,7 @@ class Loadouts {
                 "arifle_MSBS65_UBS_black_F",
                 "arifle_MSBS65_UBS_F"
             };
+            vest = "V_CarrierRigKBT_01_heavy_EAF_F";
             headgear = "H_HelmetHBK_chops_F";
             backpack = "B_Carryall_eaf_F";
 
@@ -212,7 +215,7 @@ class Loadouts {
             };
 
             addItemsToVest[] += {
-                "200Rnd_65x39_cased_Box_Red", 3,
+                "200Rnd_65x39_cased_Box_Red", 1,
             };
             addItemsToBackpack[] = {
                 "200Rnd_65x39_cased_Box_Red", 3,
@@ -269,11 +272,16 @@ class Loadouts {
 
         //Führung
         class B_Soldier_TL_F: B_Survivor_F {
+            primaryWeapon[] = {
+                "arifle_MSBS65_GL_F",
+                "arifle_MSBS65_GL_black_F",
+                "arifle_MSBS65_GL_camo_F"
+            };
 
             primaryWeaponMagazine = "30Rnd_65x39_caseless_msbs_mag_Tracer";
 
             addItemsToVest[] += {
-                "30Rnd_65x39_caseless_msbs_mag_Tracer", 8,
+                "30Rnd_65x39_caseless_msbs_mag_Tracer", 7,
             };
             addItemsToBackpack[] = {
                 "1Rnd_Smoke_Grenade_shell", 5,
@@ -282,6 +290,8 @@ class Loadouts {
                 "ACE_SpraypaintGreen",
                 "ACE_Flags_red",
                 "ACE_Flags_green",
+                "ACE_HuntIR_M203", 3,
+                "ACE_HuntIR_monitor"
             };
 
             binoculars = "ACE_Vector";
@@ -301,6 +311,7 @@ class Loadouts {
                 "ACE_SpraypaintGreen",
                 "ACE_Flags_red",
                 "ACE_Flags_green",
+                "ACE_HuntIR_monitor"
             };
 
             binoculars = "ACE_Vector";
@@ -340,6 +351,11 @@ class Loadouts {
         };
 
         class B_W_Soldier_CBRN_F: B_Survivor_F {
+            addItemsToVest[] += {
+                "30Rnd_65x39_caseless_msbs_mag", 4,
+                "kat_sealant", 3
+            };
+            watch = "KAT_ChemicalDetector";
         };
 
         //Sani

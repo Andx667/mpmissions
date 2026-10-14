@@ -17,3 +17,11 @@ setDate [2016, 6, 25, 11, 15]; //Datum ändern
     };
 } forEach allUnits;
 
+
+[
+    [test_01],
+    [
+        ["B_CombinationUnitRespirator_01_F", 4]
+    ],
+    true
+] call ttt_common_fnc_crateFiller;
