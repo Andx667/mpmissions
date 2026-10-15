@@ -15,9 +15,12 @@
         0: _unit         <OBJECT> - unit whose uniform/vest should be changed
         1: _uniformClass <STRING> - classname of the new uniform
         2: _vestClass    <STRING> - classname of the new vest
+                                    An empty uniform or vest classname leaves that piece untouched
+                                    (at least one of the two is required).
         3: _isRevert     <BOOL>   - (optional) true when called by ttt_cbrn_fnc_revertUniformVest. Skips
-                                    saving the current outfit as "original" and allows empty
-                                    classnames (= unit had no uniform/vest before). Default false
+                                    saving the current outfit as "original" and treats empty
+                                    classnames as "unit had no uniform/vest before" (= remove it).
+                                    Default false
 
     Returns:
         BOOL - true if the swap was initiated (actual cargo restore happens a
@@ -36,8 +39,8 @@ params [
 
 if (isNull _unit) exitWith {false};
 
-if (!_isRevert && {_uniformClass == "" || {_vestClass == ""}}) exitWith {
-    diag_log text "[ttt_cbrn] swapUniformVest: missing uniform/vest classname.";
+if (!_isRevert && {_uniformClass == "" && {_vestClass == ""}}) exitWith {
+    diag_log text "[ttt_cbrn_uniformSwap] swapUniformVest: missing uniform/vest classname.";
     false
 };
 
@@ -58,8 +61,12 @@ private _fnc_getCargo = {
     [getItemCargo _container, getMagazineCargo _container, getWeaponCargo _container]
 };
 
-private _oldUniformCargo = [uniformContainer _unit] call _fnc_getCargo;
-private _oldVestCargo = [vestContainer _unit] call _fnc_getCargo;
+// Outside of a revert an empty classname means "leave this piece as it is"
+private _keepUniform = !_isRevert && {_uniformClass == ""};
+private _keepVest = !_isRevert && {_vestClass == ""};
+
+private _oldUniformCargo = [[uniformContainer _unit] call _fnc_getCargo, [[[], []], [[], []], [[], []]]] select _keepUniform;
+private _oldVestCargo = [[vestContainer _unit] call _fnc_getCargo, [[[], []], [[], []], [[], []]]] select _keepVest;
 
 // Remember what the unit wore before the first swap, so it can be swapped back
 // later (ttt_cbrn_fnc_revertUniformVest). Swapping again while already swapped keeps
@@ -70,8 +77,12 @@ if (!_isRevert && {isNil {_unit getVariable "ttt_cbrn_uniformSwap_original"}}) t
 
 // --- Swap the uniform and vest (the old ones and their cargo are discarded, --- //
 // --- the content was already saved above and gets restored afterwards)      --- //
-if (_uniformClass == "") then {removeUniform _unit} else {_unit forceAddUniform _uniformClass};
-if (_vestClass == "") then {removeVest _unit} else {_unit addVest _vestClass};
+if (!_keepUniform) then {
+    if (_uniformClass == "") then {removeUniform _unit} else {_unit forceAddUniform _uniformClass};
+};
+if (!_keepVest) then {
+    if (_vestClass == "") then {removeVest _unit} else {_unit addVest _vestClass};
+};
 
 // The new uniform/vest container objects (needed to restore the cargo into)
 // are not guaranteed to exist within the same frame the item was added, so the

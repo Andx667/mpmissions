@@ -18,8 +18,8 @@
 
     Parameters:
         0: _vehicle      <OBJECT|STRING> - vehicle object, OR vehicle classname to add the action to every vehicle of that class
-        1: _uniformClass <STRING> - classname of the new uniform
-        2: _vestClass    <STRING> - classname of the new vest
+        1: _uniformClass <STRING> - classname of the new uniform ("" = keep the current one)
+        2: _vestClass    <STRING> - classname of the new vest ("" = keep the current one)
         3: _actionText   <STRING> - (optional) text shown in the interaction menu, default "ABC-Schutzanzug anziehen"
         4: _condition    <CODE>   - (optional) extra condition, params: [_vehicle, _unit], default {true}
         5: _revertText   <STRING> - (optional) text of the swap-back action, default "Kampfanzug anziehen"
@@ -56,8 +56,8 @@ params [
     ["_revertText", "Kampfanzug anziehen", [""]]
 ];
 
-if (_uniformClass == "" || {_vestClass == ""}) exitWith {
-    diag_log text "[ttt_cbrn_uniformSwap] addVehicleUniformSwapAction: missing uniform/vest classname.";
+if (_uniformClass == "" && {_vestClass == ""}) exitWith {
+    diag_log text "[ttt_cbrn_uniformSwap] addVehicleUniformSwapAction: needs a uniform or a vest classname.";
 };
 
 // Time in seconds between choosing an action and the gear actually changing
