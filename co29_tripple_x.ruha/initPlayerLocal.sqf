@@ -69,6 +69,6 @@ _player addMPEventHandler ["MPRespawn", {
     };
 }];
 
-[test_01, "U_I_E_CBRN_Suit_01_EAF_F", "V_CarrierRigKBT_01_light_EAF_F"] call ttt_cbrn_fnc_addVehicleUniformSwapAction;
+[test_01, "U_I_E_CBRN_Suit_01_EAF_F", ""] call ttt_cbrn_fnc_addVehicleUniformSwapAction;
 
 

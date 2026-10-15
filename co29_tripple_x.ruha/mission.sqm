@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6655.1919,68.919167,1608.1749};
-		dir[]={-0.77505213,-0.5964272,-0.20873155};
-		up[]={-0.57590765,0.8026672,-0.15509938};
-		aside[]={-0.26004744,7.4505806e-09,0.96559596};
+		pos[]={6648.3389,56.788715,1602.1951};
+		dir[]={-0.5882895,-0.45610783,-0.66774917};
+		up[]={-0.30151221,0.88992345,-0.342237};
+		aside[]={-0.7503435,-4.706817e-08,0.66105467};
 	};
 };
 binarizationWanted=0;
@@ -802,8 +802,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6640.415,47.977108,1592.6353};
-				angles[]={0,0.32305381,0};
+				position[]={6640.415,47.977108,1592.6357};
+				angles[]={0,0.32306045,0};
 			};
 			side="Empty";
 			flags=4;
@@ -816,19 +816,6 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="ENH_doStop";
-					expression="if (!is3DEN && _value) then {doStop _this}";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				class Attribute1
-				{
 					property="iedd_vbied_speed";
 					expression="_this setVariable ['iedd_vbied_speed',_value];";
 					class Value
@@ -840,7 +827,166 @@ class Mission
 						};
 					};
 				};
-				nAttributes=2;
+				class Attribute1
+				{
+					property="ttt_w_shields_addVehicleShield";
+					expression="" \n "                            if (_value) then {" \n "                                [[_this, false, [true, true], true], ttt_w_shields_fnc_addVehicleShield] call ttt_common_fnc_callGlobalFnc;" \n "                            } else {" \n "                                [[_this], ttt_w_shields_fnc_removeVehicleShield] call ttt_common_fnc_callGlobalFnc;" \n "                            }";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="iedd_vbied_edit";
+					expression="false";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ENH_doStop";
+					expression="if (!is3DEN && _value) then {doStop _this}";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="iedd_vbied_up";
+					expression="_this setVariable ['iedd_vbied_up', _value];";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=3;
+								class Item0
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1;
+									};
+								};
+								class Item2
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="iedd_vbied_pos";
+					expression="_this setVariable ['iedd_vbied_pos', _value];";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=3;
+								class Item0
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=-0.28200001;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=2.1500001;
+									};
+								};
+								class Item2
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=-1.15;
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="iedd_vbied_dir";
+					expression="_this setVariable ['iedd_vbied_dir', _value];";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=3;
+								class Item0
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+								class Item2
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+							};
+						};
+					};
+				};
+				nAttributes=7;
 			};
 		};
 		class Item5
@@ -849,7 +995,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6634.2192,47.991909,1576.7609};
-				angles[]={-0,0.37384951,0};
+				angles[]={0,0.37384951,0};
 			};
 			side="Empty";
 			flags=4;

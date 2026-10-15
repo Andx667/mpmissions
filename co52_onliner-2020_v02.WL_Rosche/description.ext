@@ -1,0 +1,27 @@
+/*
+	author = Reimchen
+	description = n.a.
+*/
+
+class CfgFunctions {
+	#include "reim_trinken\CfgFunctions.hpp"
+	#include "reim_event\CfgFunctions.hpp"
+	#include "reim_animations\CfgFunctions.hpp"
+	#include "reim_box\CfgFunctions.hpp"
+	#include "GRAD_fireworks\CfgFunctions.hpp"
+	#include "reim_spawnUnits\CfgFunctions.hpp"
+	#include "reim_bus\CfgFunctions.hpp"
+	#include "reim_lightShow\CfgFunctions.hpp"
+	#include "reim_arsenal\CfgFunctions.hpp"
+};
+class CfgMusic {
+	#include "reim_bus\CfgMusic.hpp"	
+	
+	class lightShowMusic
+	{
+		name	= "Lichtershow Musik";
+		sound[]	= {"reim_lightShow\lightShowMusic.ogg", 1, 1.0};
+	};
+};
+
+OnLoadName = "Geburtstagsfeier 2026";
