@@ -1,6 +1,12 @@
 #include "component.hpp"
 
-params ["_unit", "_configPath"];
+params ["_unit", "_configPath", ["_type", ""], ["_rank", ""]];
+
+// fall back to the override set by doLoadoutForUnit, so customGear matches the loadout the unit actually got
+if (_type == "") then {_type = _unit getVariable [QGVAR(overrideType), ""]};
+if (_rank == "") then {_rank = _unit getVariable [QGVAR(overrideRank), ""]};
+if (_type == "") then {_type = typeOf _unit};
+if (_rank == "") then {_rank = rank _unit};
 
 private _getSidePath = {
     _configPath >> "Side" >> _this;
@@ -17,10 +23,10 @@ private _extractor = [_unit, _loadoutHierarchy] call FUNC(GetPathExtractor);
 [_configPath >> "AllPlayable", {_unit in playableUnits}] call _extractor;
 [_configPath >> "AllPlayers", {isPlayer _unit}] call _extractor;
 
-[_configPath >> "AllUnits" >> "Type" >> typeOf _unit, {true}] call _extractor;
-[_configPath >> "AllAi" >> "Type" >> typeOf _unit, {!isPlayer _unit}] call _extractor;
-[_configPath >> "AllPlayable" >> "Type" >> typeOf _unit, {_unit in playableUnits}] call _extractor;
-[_configPath >> "AllPlayers" >> "Type" >> typeOf _unit, {isPlayer _unit}] call _extractor;
+[_configPath >> "AllUnits" >> "Type" >> _type, {true}] call _extractor;
+[_configPath >> "AllAi" >> "Type" >> _type, {!isPlayer _unit}] call _extractor;
+[_configPath >> "AllPlayable" >> "Type" >> _type, {_unit in playableUnits}] call _extractor;
+[_configPath >> "AllPlayers" >> "Type" >> _type, {isPlayer _unit}] call _extractor;
 
 [("Blufor" call _getSidePath), {side _unit == blufor}] call _extractor;
 [("Opfor" call _getSidePath),{side _unit == opfor}] call _extractor;
@@ -37,9 +43,9 @@ private _extractor = [_unit, _loadoutHierarchy] call FUNC(GetPathExtractor);
 ["IndependentPlayers" call _getSidePath, { side _unit == independent && { isPlayer _unit }}] call _extractor;
 ["CivilianPlayers" call _getSidePath, {side _unit == civilian && { isPlayer _unit }}] call _extractor;
 
-[_configPath >> "Type" >> typeOf _unit, {true}] call _extractor;
-[_configPath >> "Rank" >> rank _unit, {true}] call _extractor;
-[_configPath >> "Type" >> typeof _unit >> "Rank" >> rank _unit, {true}] call _extractor;
+[_configPath >> "Type" >> _type, {true}] call _extractor;
+[_configPath >> "Rank" >> _rank, {true}] call _extractor;
+[_configPath >> "Type" >> _type >> "Rank" >> _rank, {true}] call _extractor;
 
 private _str = str _unit splitString "_" select 0;
 private _namePath = _configPath >> "Name" >> _str;
@@ -60,16 +66,16 @@ private _factionPath = _configPath >> "Faction" >> _factionPathBit;
 private _factionTypeConfig = "true" configClasses (_factionPath >> "Type");
 if (count _factionTypeConfig > 0) then {
     TRACE_1("type configs for faction %1 exist", _factionPath);
-    private _typeBit = [_unit] call FUNC(DefactionizeType);
+    private _typeBit = [_unit, _type] call FUNC(DefactionizeType);
     if (_typeBit != "") then {
         [_factionPath >> "Type" >> _typeBit, {true}] call _extractor;
-        [_factionPath >> "Type" >> _typeBit >> "Rank" >> rank _unit, {true}] call _extractor;
+        [_factionPath >> "Type" >> _typeBit >> "Rank" >> _rank, {true}] call _extractor;
     };
 } else {
     TRACE_1("no type configs for faction %1", _factionPath);
 };
 
-[_factionPath >> "Rank" >> (rank _unit), {true}] call _extractor;
+[_factionPath >> "Rank" >> _rank, {true}] call _extractor;
 [_factionPath >> "Role" >> _role, {true}] call _extractor;
 
 #ifdef DEBUG_MODE_NORMAL

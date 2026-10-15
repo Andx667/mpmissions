@@ -5,12 +5,14 @@
 The running shower (`modules/mb-deconshower`) has no audible sound. Particles and mist work.
 
 ### What is known
+
 - `MB_fnc_deconShowerToggle` calls BI's `BIN_fnc_deconShowerAnim` (on) and `BIN_fnc_deconShowerAnimStop` (off).
 - BI's function creates the sound with `"DeconShower_01_sound_F" createVehicleLocal [0,0,0]` and `setPosASL`s it to the shower. diwako_cbrn does exactly the same, so the code path is identical to both.
 - `DeconShower_01_sound_F` exists in `props_f_enoch`. Sound classes in `sounds_f_enoch`: `Sound_DeconShower_01_loop`, `DeconShower_01_loop`, `Sfx_DeconShowerLarge`, `Sfx_DeconShowerSmall_Valves`, `DeconShower_Center_Loop_01`, `DeconShower_Nozzle_Loop_01..04`, `DeconShower_Spray_Loop_01`.
 - An earlier attempt with a global `createSoundSource ["Sound_DeconShower_01_loop", getPosATL _shower, [], 0]` (created only where the shower is local) was also reported silent. It has since been removed.
 
 ### Things to check
+
 - [ ] Is the shower in the Contact DLC sound addon actually loaded (`sounds_f_enoch`)? Does the shower play sound in a plain Eden mission with the vanilla `DeconShower_01_F` placed and turned on via its own action?
 - [ ] After turning the shower on, run in the debug console:
   - `(shower getVariable ["bin_deconShower_objects", []])` and check the sound object exists and is not `objNull`.

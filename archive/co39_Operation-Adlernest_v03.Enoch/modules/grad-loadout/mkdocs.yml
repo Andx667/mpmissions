@@ -1,0 +1,45 @@
+site_name: GRAD Loadout
+site_description: Declarative loadout system for Arma 3 by Gruppe Adler
+site_url: https://andx667.github.io/grad-loadout/
+repo_url: https://github.com/andx667/grad-loadout
+repo_name: andx667/grad-loadout
+edit_uri: edit/master/docs/
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Configuration: configuration.md
+  - Creating Loadouts: creatingLoadouts.md
+  - customGear: customGear.md
+  - Converter: converter.md
+  - Functions: functions.md
+  - Variables: variables.md
+
+theme:
+  name: material
+  palette:
+    primary: amber
+    accent: amber
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.instant
+    - content.code.copy
+    - search.suggest
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+hooks:
+  - hooks/copy_converter_asset.py
+
+extra_javascript:
+  - assets/js/unitLoadoutToGradLoadout.js
