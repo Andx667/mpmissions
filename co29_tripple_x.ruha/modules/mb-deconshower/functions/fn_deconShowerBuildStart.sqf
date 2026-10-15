@@ -7,7 +7,7 @@
 
 params ["_target", "_caller"];
 
-private _position = (_target getPos [-10, getDir _target]) findEmptyPosition [2, 10, "Tank"];
+private _position = (_target getPos [-1, getDir _target]) findEmptyPosition [2, 10, "Tank"];
 if (_position isEqualTo []) exitWith {
     hint "Nicht genug Platz zum Aufbau der Dusche vorhanden.";
 };

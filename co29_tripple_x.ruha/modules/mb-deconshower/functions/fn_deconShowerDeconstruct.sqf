@@ -11,7 +11,7 @@ private _vehicle = [_target] call MB_fnc_deconShowerGetVehicle;
 
 {
     deleteVehicle _x;
-} forEach nearestObjects [getPos _target, MB_deconShower_items, 10];
+} forEach (_target getVariable ["MB_deconShower_attached", []]);
 
 if (!isNull _vehicle) then {
     hint format ["Die Dusche wurde in das Fahrzeug;\nRichtung: %1 Grad\nEntfernung: %2 Meter\ngeladen.",
