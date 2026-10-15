@@ -2,12 +2,12 @@
     #define MODULES_DIRECTORY modules
 #endif
 
-class MB_gasmaskFog {
+class ttt_cbrn_gasmaskFog {
     idd = -1;
     movingEnable = false;
     duration = 999999;
-    onLoad = "uiNamespace setVariable ['MB_gasmaskFog_display', _this select 0]";
-    onUnload = "uiNamespace setVariable ['MB_gasmaskFog_display', displayNull]";
+    onLoad = "uiNamespace setVariable ['ttt_cbrn_gasmaskFog_display', _this select 0]";
+    onUnload = "uiNamespace setVariable ['ttt_cbrn_gasmaskFog_display', displayNull]";
     controlsBackground[] = {overlay};
     objects[] = {};
     controls[] = {};
@@ -25,6 +25,6 @@ class MB_gasmaskFog {
         y = safeZoneY - safeZoneH / 4;
         w = safeZoneWAbs;
         h = safeZoneH * 1.5;
-        text = "modules\mb-gasmaskfog\images\fog_overlay.paa";
+        text = "modules\ttt_cbrn\images\fog_overlay.paa";
     };
 };

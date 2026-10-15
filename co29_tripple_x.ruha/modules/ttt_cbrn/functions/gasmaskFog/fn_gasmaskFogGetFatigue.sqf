@@ -1,5 +1,5 @@
 /*
-    Function: MB_fnc_gasmaskFogGetFatigue
+    Function: ttt_cbrn_fnc_gasmaskFogGetFatigue
 
     Parameters:
         0: _unit <OBJECT>

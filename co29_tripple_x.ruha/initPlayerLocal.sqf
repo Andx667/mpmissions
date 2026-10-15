@@ -69,24 +69,6 @@ _player addMPEventHandler ["MPRespawn", {
     };
 }];
 
-[test_01, "U_I_E_CBRN_Suit_01_EAF_F", "V_CarrierRigKBT_01_light_EAF_F"] call mb_fnc_addVehicleUniformSwapAction;
+[test_01, "U_I_E_CBRN_Suit_01_EAF_F", "V_CarrierRigKBT_01_light_EAF_F"] call ttt_cbrn_fnc_addVehicleUniformSwapAction;
 
-// CBRN: Atemschutz-Verbindung, nur mit APR (Brille) + Combination Unit Respirator (Rucksack)
-["loadout", {
-    params ["_unit"];
-
-    if (backpack _unit == "B_CombinationUnitRespirator_01_F") then {
-        (backpackContainer _unit) setObjectTexture [4, "\z\ttt\addons\common\data\ttt_logo_blau_co.paa"];
-    };
-
-    if (goggles _unit == "G_AirPurifyingRespirator_01_F" && {backpack _unit == "B_CombinationUnitRespirator_01_F"}) then {
-        // [_unit] call BIN_fnc_CBRNHoseInit;
-        (backpackContainer _unit) setObjectTexture [1, "a3\supplies_f_enoch\bags\data\b_cur_01_co.paa"]; 
-        (backpackContainer _unit) setObjectTexture [2, "a3\supplies_f_enoch\bags\data\b_cur_01_co.paa"];
-        
-    } else {
-        (backpackContainer _unit) setObjectTexture [1, ""]; 
-        (backpackContainer _unit) setObjectTexture [2, ""];
-    };
-}, true] call CBA_fnc_addPlayerEventHandler;
 

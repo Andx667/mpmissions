@@ -1,5 +1,5 @@
 /*
-    Function: MB_fnc_deconShowerCanDeconstruct
+    Function: ttt_cbrn_fnc_deconShowerCanDeconstruct
 
     Description:
         ACE condition: shower is not in use and a supported vehicle with a built-up shower is nearby.
@@ -10,4 +10,4 @@
 
 params ["_target"];
 
-!(_target getVariable ["inUse", false]) && {!isNull ([_target] call MB_fnc_deconShowerGetVehicle)}
+!(_target getVariable ["inUse", false]) && {!isNull ([_target] call ttt_cbrn_fnc_deconShowerGetVehicle)}

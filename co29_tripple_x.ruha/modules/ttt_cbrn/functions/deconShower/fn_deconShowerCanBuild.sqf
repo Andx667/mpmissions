@@ -1,5 +1,5 @@
 /*
-    Function: MB_fnc_deconShowerCanBuild
+    Function: ttt_cbrn_fnc_deconShowerCanBuild
 
     Description:
         ACE condition: the vehicle still carries its shower.

@@ -1,5 +1,5 @@
 /*
-    Function: MB_fnc_gasmaskFogCheck
+    Function: ttt_cbrn_fnc_gasmaskFogCheck
 
     Description:
         Called whenever the player's loadout or unit changes (and once at
@@ -13,8 +13,8 @@
 
 params [["_unit", call CBA_fnc_currentUnit]];
 
-if (MB_gasmaskFog_pfh != -1) exitWith {};
-if !(alive _unit && {(goggles _unit) in MB_gasmaskFog_masks}) exitWith {};
+if (ttt_cbrn_gasmaskFog_pfh != -1) exitWith {};
+if !(alive _unit && {(goggles _unit) in ttt_cbrn_gasmaskFog_masks}) exitWith {};
 
 // args: [last time, accumulated fog time, overlay shown, unit the state belongs to]
-MB_gasmaskFog_pfh = [MB_fnc_gasmaskFogPFH, 0.05, [CBA_missionTime, 0, false, _unit]] call CBA_fnc_addPerFrameHandler;
+ttt_cbrn_gasmaskFog_pfh = [ttt_cbrn_fnc_gasmaskFogPFH, 0.05, [CBA_missionTime, 0, false, _unit]] call CBA_fnc_addPerFrameHandler;

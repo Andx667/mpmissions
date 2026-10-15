@@ -36,14 +36,12 @@ disposalCheckPeriod = 60; // seconds. Default: 10
 // - CfgFunctions -------------------------------------------------------------
 class CfgFunctions {
   #include "modules\grad-loadout\CfgFunctions.hpp"
-  #include "modules\mb-uniformswap\cfgFunctions.hpp"
-  #include "modules\mb-gasmaskfog\cfgFunctions.hpp"
-  #include "modules\mb-deconshower\cfgFunctions.hpp"
+  #include "modules\ttt_cbrn\cfgFunctions.hpp"
 };
 
 // - Gas mask fog overlay ----------------------------------------------------
 class RscTitles {
-  #include "modules\mb-gasmaskfog\rsctitles.hpp"
+  #include "modules\ttt_cbrn\rsctitles.hpp"
 };
 
 // - Loadouts ----------------------------------------------------------------

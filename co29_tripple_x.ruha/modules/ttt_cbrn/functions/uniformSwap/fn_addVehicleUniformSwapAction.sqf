@@ -1,11 +1,11 @@
 /*
-    Function: MB_fnc_addVehicleUniformSwapAction
+    Function: ttt_cbrn_fnc_addVehicleUniformSwapAction
 
     Description:
         Adds an ACE interaction-menu action to a vehicle (either one specific
         object, or every vehicle of a given class) that lets a nearby unit
         change into a different uniform/vest set while keeping their current
-        inventory content. Uses MB_fnc_swapUniformVest to perform the actual
+        inventory content. Uses ttt_cbrn_fnc_swapUniformVest to perform the actual
         swap.
 
         This function must run on every machine that should see the action
@@ -18,8 +18,8 @@
 
     Parameters:
         0: _vehicle      <OBJECT|STRING> - vehicle object, OR vehicle classname to add the action to every vehicle of that class
-        1: _uniformClass <STRING> - classname of the new uniform   <<< PLACEHOLDER, CHANGE ME >>>
-        2: _vestClass    <STRING> - classname of the new vest      <<< PLACEHOLDER, CHANGE ME >>>
+        1: _uniformClass <STRING> - classname of the new uniform
+        2: _vestClass    <STRING> - classname of the new vest
         3: _actionText   <STRING> - (optional) text shown in the interaction menu, default "ABC-Schutzanzug anziehen"
         4: _condition    <CODE>   - (optional) extra condition, params: [_vehicle, _unit], default {true}
         5: _revertText   <STRING> - (optional) text of the swap-back action, default "Kampfanzug anziehen"
@@ -29,7 +29,7 @@
     gear is actually changed; moving away from the vehicle or dying cancels it.
 
     A second action swaps the unit back to the uniform/vest it wore before the
-    swap (MB_fnc_revertUniformVest). The two actions are mutually exclusive:
+    swap (ttt_cbrn_fnc_revertUniformVest). The two actions are mutually exclusive:
     "swap to" is hidden while swapped, "swap back" only shows after a swap.
 
     Returns:
@@ -37,14 +37,14 @@
 
     Examples:
         // One specific, already placed vehicle - put this in the vehicle's Init field:
-        [this, "U_I_C_Soldier_Bandit_1_F", "V_TacVest_oli"] call MB_fnc_addVehicleUniformSwapAction;
+        [this, "U_I_C_Soldier_Bandit_1_F", "V_TacVest_oli"] call ttt_cbrn_fnc_addVehicleUniformSwapAction;
 
         // Every vehicle of a class - call once from init.sqf:
-        ["B_Truck_01_covered_F", "U_I_C_Soldier_Bandit_1_F", "V_TacVest_oli"] call MB_fnc_addVehicleUniformSwapAction;
+        ["B_Truck_01_covered_F", "U_I_C_Soldier_Bandit_1_F", "V_TacVest_oli"] call ttt_cbrn_fnc_addVehicleUniformSwapAction;
 */
 
 if !(isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) exitWith {
-    diag_log text "[MB_uniformSwap] addVehicleUniformSwapAction needs the ace_interact_menu addon.";
+    diag_log text "[ttt_cbrn_uniformSwap] addVehicleUniformSwapAction needs the ace_interact_menu addon.";
 };
 
 params [
@@ -57,7 +57,7 @@ params [
 ];
 
 if (_uniformClass == "" || {_vestClass == ""}) exitWith {
-    diag_log text "[MB_uniformSwap] addVehicleUniformSwapAction: missing uniform/vest classname.";
+    diag_log text "[ttt_cbrn_uniformSwap] addVehicleUniformSwapAction: missing uniform/vest classname.";
 };
 
 // Time in seconds between choosing an action and the gear actually changing
@@ -68,7 +68,7 @@ private _duration = 6;
 private _fullCondition = {
     params ["_target", "_player", "_params"];
     _params params ["_uniformClass", "_vestClass", "_condition"];
-    (alive _target) && {alive _player} && {[_player, 1] call ace_repair_fnc_isEngineer} && {isNil {_player getVariable "MB_uniformSwap_original"}} && {[_target, _player] call _condition}
+    (alive _target) && {alive _player} && {[_player, 1] call ace_repair_fnc_isEngineer} && {isNil {_player getVariable "ttt_cbrn_uniformSwap_original"}} && {[_target, _player] call _condition}
 };
 
 private _fullStatement = {
@@ -79,7 +79,7 @@ private _fullStatement = {
         [_player, _target, _uniformClass, _vestClass],
         {
             (_this select 0) params ["_player", "_target", "_uniformClass", "_vestClass"];
-            [_player, _uniformClass, _vestClass] call MB_fnc_swapUniformVest;
+            [_player, _uniformClass, _vestClass] call ttt_cbrn_fnc_swapUniformVest;
         },
         {},
         _actionText,
@@ -91,13 +91,13 @@ private _fullStatement = {
 };
 
 // Guaranteed-unique action id, needed so repeated calls never overwrite each other
-private _uid = missionNamespace getVariable ["MB_uniformSwap_actionCounter", 0];
-missionNamespace setVariable ["MB_uniformSwap_actionCounter", _uid + 1];
+private _uid = missionNamespace getVariable ["ttt_cbrn_uniformSwap_actionCounter", 0];
+missionNamespace setVariable ["ttt_cbrn_uniformSwap_actionCounter", _uid + 1];
 
-// "Swap back" is only offered after a swap (the original outfit is stored on the unit by MB_fnc_swapUniformVest).
+// "Swap back" is only offered after a swap (the original outfit is stored on the unit by ttt_cbrn_fnc_swapUniformVest).
 private _revertCondition = {
     params ["_target", "_player", "_params"];
-    !isNil {_player getVariable "MB_uniformSwap_original"} && {alive _target} && {alive _player} && {[_player, 1] call ace_repair_fnc_isEngineer}
+    !isNil {_player getVariable "ttt_cbrn_uniformSwap_original"} && {alive _target} && {alive _player} && {[_player, 1] call ace_repair_fnc_isEngineer}
 };
 
 private _revertStatement = {
@@ -108,7 +108,7 @@ private _revertStatement = {
         [_player, _target],
         {
             (_this select 0) params ["_player"];
-            [_player] call MB_fnc_revertUniformVest;
+            [_player] call ttt_cbrn_fnc_revertUniformVest;
         },
         {},
         _revertText,
@@ -120,7 +120,7 @@ private _revertStatement = {
 };
 
 private _action = [
-    format ["MB_uniformSwap_%1", _uid],
+    format ["ttt_cbrn_uniformSwap_%1", _uid],
     _actionText,
     "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\uniform_ca.paa",
     _fullStatement,
@@ -130,7 +130,7 @@ private _action = [
 ] call ace_interact_menu_fnc_createAction;
 
 private _revertAction = [
-    format ["MB_uniformSwap_%1_revert", _uid],
+    format ["ttt_cbrn_uniformSwap_%1_revert", _uid],
     _revertText,
     "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\uniform_ca.paa",
     _revertStatement,

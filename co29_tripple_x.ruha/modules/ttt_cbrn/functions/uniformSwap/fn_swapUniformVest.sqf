@@ -1,5 +1,5 @@
 /*
-    Function: MB_fnc_swapUniformVest
+    Function: ttt_cbrn_fnc_swapUniformVest
 
     Description:
         Changes a unit's uniform and vest to a different set while keeping
@@ -13,9 +13,9 @@
 
     Parameters:
         0: _unit         <OBJECT> - unit whose uniform/vest should be changed
-        1: _uniformClass <STRING> - classname of the new uniform   <<< PLACEHOLDER, CHANGE ME >>>
-        2: _vestClass    <STRING> - classname of the new vest      <<< PLACEHOLDER, CHANGE ME >>>
-        3: _isRevert     <BOOL>   - (optional) true when called by MB_fnc_revertUniformVest. Skips
+        1: _uniformClass <STRING> - classname of the new uniform
+        2: _vestClass    <STRING> - classname of the new vest
+        3: _isRevert     <BOOL>   - (optional) true when called by ttt_cbrn_fnc_revertUniformVest. Skips
                                     saving the current outfit as "original" and allows empty
                                     classnames (= unit had no uniform/vest before). Default false
 
@@ -24,25 +24,30 @@
         moment later, via CBA_fnc_waitUntilAndExecute)
 
     Example:
-        [player, "U_I_C_Soldier_Bandit_1_F", "V_TacVest_oli"] call MB_fnc_swapUniformVest;
+        [player, "U_I_C_Soldier_Bandit_1_F", "V_TacVest_oli"] call ttt_cbrn_fnc_swapUniformVest;
 */
 
 params [
     ["_unit", objNull, [objNull]],
-    ["_uniformClass", "U_B_CombatUniform_mcam", [""]], // <<< PLACEHOLDER, CHANGE ME
-    ["_vestClass", "V_PlateCarrier1_rgr", [""]],        // <<< PLACEHOLDER, CHANGE ME
+    ["_uniformClass", "", [""]],
+    ["_vestClass", "", [""]],
     ["_isRevert", false, [false]]
 ];
 
 if (isNull _unit) exitWith {false};
 
+if (!_isRevert && {_uniformClass == "" || {_vestClass == ""}}) exitWith {
+    diag_log text "[ttt_cbrn] swapUniformVest: missing uniform/vest classname.";
+    false
+};
+
 if (_uniformClass != "" && {!isClass (configFile >> "CfgWeapons" >> _uniformClass)}) exitWith {
-    diag_log text format ["[MB_uniformSwap] Unknown uniform class: %1", _uniformClass];
+    diag_log text format ["[ttt_cbrn_uniformSwap] Unknown uniform class: %1", _uniformClass];
     false
 };
 
 if (_vestClass != "" && {!isClass (configFile >> "CfgWeapons" >> _vestClass)}) exitWith {
-    diag_log text format ["[MB_uniformSwap] Unknown vest class: %1", _vestClass];
+    diag_log text format ["[ttt_cbrn_uniformSwap] Unknown vest class: %1", _vestClass];
     false
 };
 
@@ -57,10 +62,10 @@ private _oldUniformCargo = [uniformContainer _unit] call _fnc_getCargo;
 private _oldVestCargo = [vestContainer _unit] call _fnc_getCargo;
 
 // Remember what the unit wore before the first swap, so it can be swapped back
-// later (MB_fnc_revertUniformVest). Swapping again while already swapped keeps
+// later (ttt_cbrn_fnc_revertUniformVest). Swapping again while already swapped keeps
 // the true original.
-if (!_isRevert && {isNil {_unit getVariable "MB_uniformSwap_original"}}) then {
-    _unit setVariable ["MB_uniformSwap_original", [uniform _unit, vest _unit]];
+if (!_isRevert && {isNil {_unit getVariable "ttt_cbrn_uniformSwap_original"}}) then {
+    _unit setVariable ["ttt_cbrn_uniformSwap_original", [uniform _unit, vest _unit]];
 };
 
 // --- Swap the uniform and vest (the old ones and their cargo are discarded, --- //
@@ -129,7 +134,7 @@ if (_vestClass == "") then {removeVest _unit} else {_unit addVest _vestClass};
     [_unit, _oldUniformCargo, _oldVestCargo, _uniformClass, _vestClass],
     5,
     {
-        diag_log text format ["[MB_uniformSwap] Timed out waiting for new uniform/vest containers of %1 - cargo not restored.", _this select 0];
+        diag_log text format ["[ttt_cbrn_uniformSwap] Timed out waiting for new uniform/vest containers of %1 - cargo not restored.", _this select 0];
     }
 ] call CBA_fnc_waitUntilAndExecute;
 
