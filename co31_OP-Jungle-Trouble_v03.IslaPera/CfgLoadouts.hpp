@@ -336,13 +336,7 @@ class Loadouts {
                 "CUP_lmg_Mk48"
             };
             primaryWeaponMagazine = "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M";
-            primaryWeaponOptics[] = {
-                "CUP_optic_ACOG_TA648_308_RDS_coyo",
-                "CUP_optic_ACOG_TA648_308_RDS_Desert",
-                "CUP_optic_ACOG_TA648_308_RDS_od",
-                "CUP_optic_ACOG_TA648_308_RDS_Wdl",
-                ""
-            };
+            primaryWeaponOptics = "";
             //secondaryWeapon= "dzn_MG_Tripod_M122A1_M240Mount_Carry";
 
             addItemsToVest[] += {
