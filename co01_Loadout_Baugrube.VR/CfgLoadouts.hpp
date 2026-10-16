@@ -158,7 +158,15 @@ class Loadouts {
 
         //Breacher
         class B_soldier_exp_F: B_Soldier_GL_F {
-            //via script: rhs_weap_M590_8RD
+            //Zweite Primärwaffe (KJW's Two Primary Weapons), wird ohne die Mod ignoriert
+            secondPrimaryWeapon = "rhs_weap_M590_8RD";
+            secondPrimaryWeaponMuzzle = "";             //Schalldämpfer oder ähnliches
+            secondPrimaryWeaponPointer = "";            //Laserpointer / Waffenlicht
+            secondPrimaryWeaponOptics = "";             //Optik
+            secondPrimaryWeaponMagazine = "rhsusf_8Rnd_00Buck";
+            secondPrimaryWeaponUnderbarrel = "";        //Zweibein oder ähnliches
+            secondPrimaryWeaponUnderbarrelMagazine = ""; //Zweites Magazin (z.B. UGL)
+
             addItemsToVest[] = {
                 "ACE_Clacker",
                 "ACE_DefusalKit",

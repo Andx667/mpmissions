@@ -31,20 +31,8 @@ private _id = [
                 private _helmet = ["ttt_Helmet_",groupID _unit,"_BW_Flecktarn"] joinString "";
                 //_unit addItemToBackpack _helmet;
 
+               // Zweite Primärwaffe (KJW's Two Primary Weapons) kommt jetzt über secondPrimaryWeapon* in der CfgLoadouts.hpp
                switch (typeOf _unit) do {
-                    // case "B_soldier_exp_F": {
-                    //     [
-                    //         [
-                    //         "CUP_sgun_M1014_Entry",                             //Classname der zweiten Waffe
-                    //         "",                             //Schalldämpfer oder ähnliches
-                    //         "",                             //Laserpointer / Waffenlicht
-                    //         "",                             //Optik
-                    //         ["CUP_6Rnd_12Gauge_Pellets_No00_Buck", 6],                         //Magazin mit Anzahl Kugeln
-                    //         [],                             //Zweites Magazin (z.B. UGL)
-                    //         ""                              //Zweibein oder ähnliches
-                    //         ]
-                    //     ] call KJW_TwoPrimaryWeapons_fnc_addSecondWeapon;
-                    // };
                     case "B_soldier_UGV_02_Demining_F": {
                         //_unit addHeadGear _helmet;
                     };
