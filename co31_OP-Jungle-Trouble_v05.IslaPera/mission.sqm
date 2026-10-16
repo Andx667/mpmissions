@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=7942;
+		nextID=7948;
 	};
 	class MarkerIDProvider
 	{
@@ -20,18 +20,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=649;
+		nextID=678;
 	};
 	class Camera
 	{
-		pos[]={4554.6304,5.199749,8632.6582};
-		dir[]={-0.0058322176,-0.30479416,-0.95244658};
-		up[]={-0.0018676727,0.95240337,-0.30482081};
-		aside[]={-1.0000247,-1.4700527e-07,0.0061235107};
+		pos[]={4558.478,12.447676,8641.0957};
+		dir[]={-0.067251764,-0.60970861,-0.7898165};
+		up[]={-0.051728416,0.79261374,-0.60751617};
+		aside[]={-0.99642682,-5.0937888e-07,0.084844261};
 	};
 };
 binarizationWanted=0;
-sourceName="co31_OP-Jungle-Trouble_v03";
+sourceName="co31_OP-Jungle-Trouble_v04";
 addons[]=
 {
 	"A3_Structures_F_Exp_Military_Fortifications",
@@ -1215,14 +1215,14 @@ class Mission
 		day=6;
 		hour=12;
 		minute=0;
-		startFogBase=250;
-		forecastFogBase=250;
+		startFogBase=-1000;
+		forecastFogBase=-1000;
 		startFogDecay=0.014;
 		forecastFogDecay=0.014;
 	};
 	class Entities
 	{
-		items=182;
+		items=184;
 		class Item0
 		{
 			dataType="Layer";
@@ -12079,6 +12079,7 @@ class Mission
 						angles[]={0,1.3068236,0};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						createAsSimpleObject=1;
@@ -12087,7 +12088,7 @@ class Mission
 					};
 					id=808;
 					type="Land_RiceBox_F";
-					atlOffset=0.88163233;
+					atlOffset=0.080548525;
 				};
 				class Item4
 				{
@@ -12117,6 +12118,7 @@ class Mission
 						angles[]={0,0.067640029,0};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						createAsSimpleObject=1;
@@ -12125,7 +12127,7 @@ class Mission
 					};
 					id=810;
 					type="Land_RiceBox_F";
-					atlOffset=0.88163233;
+					atlOffset=0.080548525;
 				};
 				class Item6
 				{
@@ -12346,7 +12348,7 @@ class Mission
 					};
 					id=820;
 					type="Land_WaterBottle_01_full_F";
-					atlOffset=0.31352448;
+					atlOffset=0.44176435;
 				};
 				class Item16
 				{
@@ -12483,7 +12485,7 @@ class Mission
 				};
 			};
 			id=804;
-			atlOffset=0.2150898;
+			atlOffset=0.21559143;
 		};
 		class Item12
 		{
@@ -16795,7 +16797,7 @@ class Mission
 					};
 					id=1060;
 					type="Land_RiceBox_F";
-					atlOffset=0.8475641;
+					atlOffset=0.93811321;
 				};
 				class Item5
 				{
@@ -16973,7 +16975,7 @@ class Mission
 				};
 			};
 			id=1055;
-			atlOffset=0.031563282;
+			atlOffset=0.032270908;
 		};
 		class Item25
 		{
@@ -19758,7 +19760,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6262.4087,1.7014389,9102.6953};
-						angles[]={0,1.3240416,0};
+						angles[]={-0,1.3240416,0};
 					};
 					side="East";
 					flags=4;
@@ -19774,7 +19776,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6262.4087,3.3080575,9102.915};
-						angles[]={0,1.3240416,0};
+						angles[]={-0,1.3240416,0};
 					};
 					side="East";
 					flags=2;
@@ -19829,8 +19831,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6262.4092,3.3066187,9102.8662};
-				angles[]={0,1.3240416,0};
+				position[]={6329,3.3066187,9106.2197};
+				angles[]={-0,1.3240416,0};
 			};
 			side="East";
 			flags=6;
@@ -25323,6 +25325,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1804;
@@ -25342,6 +25345,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1808;
@@ -25360,6 +25364,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1809;
@@ -25379,6 +25384,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1810;
@@ -25397,6 +25403,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1811;
@@ -25416,6 +25423,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1812;
@@ -25434,6 +25442,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1813;
@@ -25453,6 +25462,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1814;
@@ -25472,11 +25482,42 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1815;
 					type="Land_GarbageHeap_04_F";
 					atlOffset=0.044313669;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ttt_w_shields_addBuildingShield";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ttt_w_shields_windowpop";
+							expression="" \n "                            if (_value || {is3DEN}) then {" \n "                                [_this, _value] call ttt_w_shields_fnc_setWindowGlass;" \n "                            }";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 				class Item9
 				{
@@ -25491,11 +25532,42 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1816;
 					type="Land_GarbageHeap_04_F";
 					atlOffset=2.3841858e-07;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ttt_w_shields_addBuildingShield";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ttt_w_shields_windowpop";
+							expression="" \n "                            if (_value || {is3DEN}) then {" \n "                                [_this, _value] call ttt_w_shields_fnc_setWindowGlass;" \n "                            }";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 				class Item10
 				{
@@ -25510,6 +25582,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1818;
@@ -25529,6 +25602,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1819;
@@ -25548,6 +25622,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1820;
@@ -25567,6 +25642,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1821;
@@ -25586,6 +25662,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1822;
@@ -25605,6 +25682,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1823;
@@ -25624,6 +25702,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1824;
@@ -25643,6 +25722,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1825;
@@ -25662,6 +25742,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1826;
@@ -25681,11 +25762,42 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1827;
 					type="Land_GarbageHeap_04_F";
 					atlOffset=1.1920929e-07;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ttt_w_shields_addBuildingShield";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ttt_w_shields_windowpop";
+							expression="" \n "                            if (_value || {is3DEN}) then {" \n "                                [_this, _value] call ttt_w_shields_fnc_setWindowGlass;" \n "                            }";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 				class Item20
 				{
@@ -25700,6 +25812,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1828;
@@ -25719,6 +25832,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1829;
@@ -25738,6 +25852,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1832;
@@ -25756,6 +25871,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1833;
@@ -25775,6 +25891,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1834;
@@ -25794,6 +25911,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1835;
@@ -25813,6 +25931,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1836;
@@ -25843,6 +25962,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1862;
@@ -25862,6 +25982,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1865;
@@ -25881,6 +26002,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1866;
@@ -25900,6 +26022,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1867;
@@ -25918,11 +26041,42 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1868;
 					type="Land_GarbageHeap_04_F";
 					atlOffset=2.3841858e-07;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ttt_w_shields_addBuildingShield";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ttt_w_shields_windowpop";
+							expression="" \n "                            if (_value || {is3DEN}) then {" \n "                                [_this, _value] call ttt_w_shields_fnc_setWindowGlass;" \n "                            }";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 				class Item5
 				{
@@ -25937,6 +26091,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1869;
@@ -25956,6 +26111,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1870;
@@ -25974,6 +26130,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1875;
@@ -25992,6 +26149,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1876;
@@ -26011,6 +26169,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1877;
@@ -26030,6 +26189,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1878;
@@ -26049,6 +26209,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1879;
@@ -26068,6 +26229,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1880;
@@ -26087,6 +26249,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1883;
@@ -26105,6 +26268,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1887;
@@ -26124,6 +26288,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1888;
@@ -26143,6 +26308,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1889;
@@ -26161,6 +26327,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1890;
@@ -26180,6 +26347,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1892;
@@ -26198,6 +26366,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1894;
@@ -26217,6 +26386,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1895;
@@ -26236,6 +26406,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1896;
@@ -26255,6 +26426,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1897;
@@ -26273,6 +26445,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1898;
@@ -26291,6 +26464,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1899;
@@ -26310,6 +26484,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1900;
@@ -26608,6 +26783,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1908;
@@ -26626,6 +26802,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1909;
@@ -26645,6 +26822,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1910;
@@ -26664,11 +26842,42 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1913;
 					type="Land_GarbageHeap_04_F";
 					atlOffset=2.3841858e-07;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ttt_w_shields_addBuildingShield";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ttt_w_shields_windowpop";
+							expression="" \n "                            if (_value || {is3DEN}) then {" \n "                                [_this, _value] call ttt_w_shields_fnc_setWindowGlass;" \n "                            }";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 				class Item4
 				{
@@ -26683,6 +26892,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1914;
@@ -26702,6 +26912,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1915;
@@ -26721,6 +26932,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1922;
@@ -26740,6 +26952,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1923;
@@ -26759,6 +26972,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1924;
@@ -26777,6 +26991,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1925;
@@ -26796,6 +27011,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1926;
@@ -26815,6 +27031,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1929;
@@ -26834,6 +27051,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1930;
@@ -26852,6 +27070,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1931;
@@ -26871,11 +27090,42 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1932;
 					type="Land_GarbageHeap_04_F";
 					atlOffset=2.3841858e-07;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ttt_w_shields_addBuildingShield";
+							expression="" \n "                            if (_value) then {" \n "                                [_this] call ttt_w_shields_fnc_buildingShield;" \n "                            } else {" \n "                                [_this] call ttt_w_shields_fnc_removeBuildingShield;" \n "                            }";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ttt_w_shields_windowpop";
+							expression="" \n "                            if (_value || {is3DEN}) then {" \n "                                [_this, _value] call ttt_w_shields_fnc_setWindowGlass;" \n "                            }";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 				class Item15
 				{
@@ -26890,6 +27140,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsLocalObject=1;
 						disableSimulation=1;
 					};
 					id=1934;
@@ -37388,16 +37639,148 @@ class Mission
 			id=1587;
 			atlOffset=3.0994415e-06;
 		};
+		class Item182
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7316.0957,12.96461,7359.9458};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						rank="SERGEANT";
+					};
+					id=7943;
+					type="CFP_O_SOREBEL_Rifleman_01";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7321.0957,12.256792,7354.9458};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+					};
+					id=7944;
+					type="CFP_O_SOREBEL_Grenadier_01";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7311.0957,14.087173,7354.9458};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+					};
+					id=7945;
+					type="CFP_O_SOREBEL_Autorifleman_2_01";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7326.0957,11.248555,7349.9458};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+					};
+					id=7946;
+					type="CFP_O_SOREBEL_Rifleman_AT_01";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=7942;
+		};
+		class Item183
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={7320.5068,11.533609,7362.8311};
+			};
+			areaSize[]={50,-1,50};
+			flags=1;
+			id=7947;
+			type="lambs_wp_TaskCamp";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="lambs_wp_ExitWP";
+					expression="_this setVariable ['lambs_wp_ExitWP', _value, true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="lambs_wp_Teleport";
+					expression="_this setVariable ['lambs_wp_Teleport',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="lambs_wp_Patrol";
+					expression="_this setVariable ['lambs_wp_Patrol',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=3;
+			};
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=110;
+			nextID=111;
 		};
 		class Links
 		{
-			items=110;
+			items=111;
 			class Item0
 			{
 				linkID=0;
@@ -38496,6 +38879,16 @@ class Mission
 				class CustomData
 				{
 					type="WaypointActivation";
+				};
+			};
+			class Item110
+			{
+				linkID=110;
+				item0=7943;
+				item1=7947;
+				class CustomData
+				{
+					type="Sync";
 				};
 			};
 		};
