@@ -68,3 +68,11 @@ _player addMPEventHandler ["MPRespawn", {
         };
     };
 }];
+
+// Loadout-Wechselmenü am Teleporter (wird im TTT postInit erstellt, daher warten)
+[
+    {!isNil "ttt_teleport_teleporter"},
+    {[ttt_teleport_teleporter] call GRAD_Loadout_fnc_addLoadoutSwitchMenu;},
+    [],
+    30
+] call CBA_fnc_waitUntilAndExecute;

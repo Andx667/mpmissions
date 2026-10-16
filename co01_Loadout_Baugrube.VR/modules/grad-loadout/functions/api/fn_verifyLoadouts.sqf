@@ -170,6 +170,7 @@ private _fnc_checkWeapons = {
         };
     } forEach [
         ["primaryWeapon",["primaryWeaponMuzzle","primaryWeaponPointer","primaryWeaponOptics","primaryWeaponUnderbarrel"],["primaryWeaponMagazine","primaryWeaponUnderbarrelMagazine"]],
+        ["secondPrimaryWeapon",["secondPrimaryWeaponMuzzle","secondPrimaryWeaponPointer","secondPrimaryWeaponOptics","secondPrimaryWeaponUnderbarrel"],["secondPrimaryWeaponMagazine","secondPrimaryWeaponUnderbarrelMagazine"]],
         ["secondaryWeapon",["secondaryWeaponMuzzle","secondaryWeaponPointer","secondaryWeaponOptics","secondaryWeaponUnderbarrel"],["secondaryWeaponMagazine","secondaryWeaponUnderbarrelMagazine"]],
         ["handgunWeapon",["handgunWeaponMuzzle","handgunWeaponPointer","handgunWeaponOptics","handgunWeaponUnderbarrel"],["handgunWeaponMagazine","handgunWeaponUnderbarrelMagazine"]]
     ];

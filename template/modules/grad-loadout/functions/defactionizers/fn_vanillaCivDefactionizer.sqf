@@ -1,11 +1,15 @@
 #include "component.hpp"
 
-params ["_unit"];
+params ["_unit", ["_type", ""]];
 
 private _faction = faction _unit;
-private _type = typeOf _unit;
-private _result = "";
+if (_type == "") then {_type = typeOf _unit};
 
 if (_faction != "CIV_F") exitWith {""};
 
-_type select [2];
+private _result = "";
+if ((_type find "C_") == 0) then {
+    _result = _type select [2];
+};
+
+_result

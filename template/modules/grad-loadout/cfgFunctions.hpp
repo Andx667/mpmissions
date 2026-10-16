@@ -5,6 +5,8 @@
 class GRAD_Loadout {
     class Api {
         file = MODULES_DIRECTORY\grad-loadout\functions\api;
+        class addLoadoutSwitchInteraction {};
+        class addLoadoutSwitchMenu {};
         class doLoadoutForUnit {};
         class loadoutViewer {};
         class setAllowedCategories {};
@@ -39,6 +41,7 @@ class GRAD_Loadout {
         file = MODULES_DIRECTORY\grad-loadout\functions\general;
         class addChatCommands {postInit = 1;};
         class applyLoadout {};
+        class applySecondPrimaryWeapon {};
         class assignRespawn {postInit = 1;};
         class defactionizeType {};
         class doLoadout {};

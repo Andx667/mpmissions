@@ -85,6 +85,8 @@ class Loadouts {
             primaryWeaponMagazine = "";
             primaryWeaponUnderbarrel = "";
             primaryWeaponUnderbarrelMagazine = "";
+            secondPrimaryWeapon = ""; //KJW's Two Primary Weapons, z.B. Schrotflinte
+            secondPrimaryWeaponMagazine = "";
             secondaryWeapon = "";
             secondaryWeaponMagazine = "";
             handgunWeapon[] = {
@@ -777,7 +779,7 @@ class Loadouts {
                 //H
                 LIST_4("kat_Painkiller"),
                 LIST_8("ACE_morphine"),
-                LIST_8("kat_naloxone"),
+                LIST_4("kat_naloxone"),
                 LIST_6("kat_Penthrox"),
                 //Tactical Tarps (tacticaltrainingteam.github.io/tactical-tarps/medic)
                 "tt_medic_tarp_Red",

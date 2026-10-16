@@ -1,9 +1,9 @@
 #include "component.hpp"
 
-params ["_unit"];
+params ["_unit", ["_type", ""]];
 
 private _faction = faction _unit;
-private _type = typeOf _unit;
+if (_type == "") then {_type = typeOf _unit};
 private _result = "";
 
 if (side _unit == civilian) exitWith {""};

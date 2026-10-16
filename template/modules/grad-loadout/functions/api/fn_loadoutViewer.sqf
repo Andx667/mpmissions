@@ -52,7 +52,7 @@ if (isNull _display) exitWith {systemChat "[GRAD] (loadout) ERROR: Display is nu
 _display setVariable [QGVAR(sides),_this];
 
 {
-    _bgCtrl = _display ctrlCreate ["RscBackground",-1];
+    private _bgCtrl = _display ctrlCreate ["RscBackground",-1];
     _bgCtrl ctrlSetPosition _x;
     _bgCtrl ctrlSetBackgroundColor BACKGROUND_COLOR;
     _bgCtrl ctrlCommit 0;
@@ -134,23 +134,26 @@ _display setVariable [QGVAR(fnc_fillDialog),{
     _display setVariable [QGVAR(unitsCache),_unitsCache];
 }];
 
+// note: _unitsCache/_sideUnitsCache/_groupUnitsCache/_unit below are intentionally
+// inherited from the caller's scope (fnc_fillDialog -> fnc_addSide -> fnc_addGroup ->
+// fnc_addUnit -> fnc_addAnItem), relying on SQF's call-stack based variable scoping.
 _display setVariable [QGVAR(fnc_addSide),{
     params ["_display","_side","_onlyPlayable"];
 
-    _sideUnitsCache = _unitsCache select (_unitsCache pushBack []);
-    _sideGroups = allGroups select {side _x == _side && {count units _x > 0}};
-    _filteredGroups = _sideGroups select {!_onlyPlayable || {{_x in playableUnits} count (units _x) > 0}};
+    private _sideUnitsCache = _unitsCache select (_unitsCache pushBack []);
+    private _sideGroups = allGroups select {side _x == _side && {count units _x > 0}};
+    private _filteredGroups = _sideGroups select {!_onlyPlayable || {{_x in playableUnits} count (units _x) > 0}};
 
-    _sidePath = [DISPLAYCONTROL(tvCtrl) tvAdd [[],str _side]];
+    private _sidePath = [DISPLAYCONTROL(tvCtrl) tvAdd [[],str _side]];
     {[_display,_sidePath,_x,_onlyPlayable] call DISPLAYFUNC(addGroup)} forEach _filteredGroups;
 }];
 
 _display setVariable [QGVAR(fnc_addGroup),{
     params ["_display","_sidePath","_group","_onlyPlayable"];
 
-    _groupUnitsCache = _sideUnitsCache select (_sideUnitsCache pushBack []);
-    _groupPath = _sidePath + [DISPLAYCONTROL(tvCtrl) tvAdd [_sidePath,str _group]];
-    _filteredUnits = (units _group) select {!_onlyPlayable || {_x in playableUnits}};
+    private _groupUnitsCache = _sideUnitsCache select (_sideUnitsCache pushBack []);
+    private _groupPath = _sidePath + [DISPLAYCONTROL(tvCtrl) tvAdd [_sidePath,str _group]];
+    private _filteredUnits = (units _group) select {!_onlyPlayable || {_x in playableUnits}};
     {[_display,_groupPath,_x] call DISPLAYFUNC(addUnit)} forEach _filteredUnits;
 }];
 
@@ -158,11 +161,11 @@ _display setVariable [QGVAR(fnc_addUnit),{
     params ["_display","_groupPath","_unit"];
 
     _groupUnitsCache pushBack _unit;
-    _unitDisplayName = roleDescription _unit;
+    private _unitDisplayName = roleDescription _unit;
     if (_unitDisplayName == "") then {
         _unitDisplayName = [configfile >> "CfgVehicles" >> typeOf _unit,"displayName","ERROR: NO DISPLAYNAME"] call BIS_fnc_returnConfigEntry;
     };
-    _unitPath = _groupPath + [DISPLAYCONTROL(tvCtrl) tvAdd [_groupPath,_unitDisplayName]];
+    private _unitPath = _groupPath + [DISPLAYCONTROL(tvCtrl) tvAdd [_groupPath,_unitDisplayName]];
     DISPLAYCONTROL(tvCtrl) tvSetTooltip [_unitPath,typeOf _unit];
 
     {
@@ -181,28 +184,28 @@ _display setVariable [QGVAR(fnc_addUnit),{
 _display setVariable [QGVAR(fnc_addAnItem),{
     params ["_display","_unitPath","_itemsList","_containerType"];
 
-    _sanitizedItemsList = _itemsList select {_x != ""};
-    _uniqueItemsList = _sanitizedItemsList arrayIntersect _sanitizedItemsList;
-    _containerClassName = [QGVAR(STR_ASSIGNED_ITEMS),uniform _unit,vest _unit,backpack _unit,primaryWeapon _unit,secondaryWeapon _unit,handgunWeapon _unit] select _containerType;
-    _containerParentClass = [_containerClassName] call DISPLAYFUNC(getParentClass);
-    _containerDisplayName = [[configFile >> _containerParentClass >> _containerClassName,"displayName","ERROR: NO DISPLAY NAME"] call BIS_fnc_returnConfigEntry,"Assigned Items"] select (_containerType == 0);
+    private _sanitizedItemsList = _itemsList select {_x != ""};
+    private _uniqueItemsList = _sanitizedItemsList arrayIntersect _sanitizedItemsList;
+    private _containerClassName = [QGVAR(STR_ASSIGNED_ITEMS),uniform _unit,vest _unit,backpack _unit,primaryWeapon _unit,secondaryWeapon _unit,handgunWeapon _unit] select _containerType;
+    private _containerParentClass = [_containerClassName] call DISPLAYFUNC(getParentClass);
+    private _containerDisplayName = [[configFile >> _containerParentClass >> _containerClassName,"displayName","ERROR: NO DISPLAY NAME"] call BIS_fnc_returnConfigEntry,"Assigned Items"] select (_containerType == 0);
 
-    _tvCtrl = DISPLAYCONTROL(tvCtrl);
+    private _tvCtrl = DISPLAYCONTROL(tvCtrl);
 
     if (_containerClassName != "") then {
-        _containerContentMass = 0;
-        _containerPath = _unitPath + [_tvCtrl tvAdd [_unitPath,_containerDisplayName]];
+        private _containerContentMass = 0;
+        private _containerPath = _unitPath + [_tvCtrl tvAdd [_unitPath,_containerDisplayName]];
         _tvCtrl tvSetTooltip [_containerPath,_containerClassName];
         _tvCtrl tvSetData [_containerPath,_containerClassName];
         _tvCtrl tvSetPicture [_containerPath,[configFile >> _containerParentClass >> _containerClassName,"picture",""] call BIS_fnc_returnConfigEntry];
 
         {
-            _itemClassname = _x;
-            _itemCount = {_x == _itemClassname} count _sanitizedItemsList;
-            _itemParentClass = [_itemClassname] call DISPLAYFUNC(getParentClass);
-            _itemPic = [_itemClassname,_itemParentClass] call DISPLAYFUNC(getItemPic);
+            private _itemClassname = _x;
+            private _itemCount = {_x == _itemClassname} count _sanitizedItemsList;
+            private _itemParentClass = [_itemClassname] call DISPLAYFUNC(getParentClass);
+            private _itemPic = [_itemClassname,_itemParentClass] call DISPLAYFUNC(getItemPic);
 
-            _itemPath = _containerPath + [_tvCtrl tvAdd [_containerPath,format ["%1x %2",_itemCount,[configFile >> _itemParentClass >> _itemClassname,"displayName","ERROR: NO DISPLAY NAME"] call BIS_fnc_returnConfigEntry]]];
+            private _itemPath = _containerPath + [_tvCtrl tvAdd [_containerPath,format ["%1x %2",_itemCount,[configFile >> _itemParentClass >> _itemClassname,"displayName","ERROR: NO DISPLAY NAME"] call BIS_fnc_returnConfigEntry]]];
             _tvCtrl tvSetTooltip [_itemPath,_itemClassname];
             _tvCtrl tvSetValue [_itemPath,_itemCount];
             _tvCtrl tvSetData [_itemPath,_itemClassname];
@@ -233,8 +236,8 @@ _display setVariable [QGVAR(fnc_updateCamera),{
     _cam setvectordirandup [vectordir _targetHelper,vectorup _targetHelper];
 
     //--- Make sure the camera is not underground
-    if ((getposasl _cam select 2) < (getposasl _cam select 2)) then {
-        _disCoef = ((getposasl _targetHelper select 2) - (getposasl _cam select 2)) / ((getposasl _targetHelper select 2) - (getposasl _cam select 2) + 0.001);
+    if ((getposasl _cam select 2) < (getTerrainHeightASL (getPos _cam))) then {
+        private _disCoef = ((getposasl _targetHelper select 2) - (getposasl _cam select 2)) / ((getposasl _targetHelper select 2) - (getposasl _cam select 2) + 0.001);
         _cam setpos (_targetHelper modeltoworldvisual [0,-_dis * _disCoef,0]);
     };
 
@@ -277,12 +280,12 @@ _tvCtrl ctrlAddEventHandler ["treeSelChanged",{
     params ["_tvCtrl","_selPath"];
     _selPath params [["_sideIndex",999999],["_groupIndex",999999],["_unitIndex",999999],["_containerIndex",999999],["_itemIndex",999999]];
 
-    _display = ctrlParent _tvCtrl;
-    _switchUnitCtrl = _display getVariable [QGVAR(switchUnitCtrl),controlNull];
+    private _display = ctrlParent _tvCtrl;
+    private _switchUnitCtrl = _display getVariable [QGVAR(switchUnitCtrl),controlNull];
 
     // center cam on selected unit/group
-    _unitsCache = DISPLAYVAR(unitsCache,[]);
-    _unit = if (count _selPath > 1) then {
+    private _unitsCache = DISPLAYVAR(unitsCache,[]);
+    private _unit = if (count _selPath > 1) then {
         if (count _selPath > 2) then {
             _unitsCache select _sideIndex select _groupIndex select _unitIndex
         } else {
@@ -290,7 +293,7 @@ _tvCtrl ctrlAddEventHandler ["treeSelChanged",{
         };
     } else {objNull};
 
-    _camProperties = _display getVariable [QGVAR(camProperties),DEFAULT_CAMPROPS];
+    private _camProperties = _display getVariable [QGVAR(camProperties),DEFAULT_CAMPROPS];
     _camProperties params ["_dis","_dirH","_dirV","_targetHelperOffset",["_targetUnit",objNull]];
 
     if (count _selPath > 2 && {!isNull _unit} && {!isPlayer _unit}) then {
@@ -308,7 +311,7 @@ _tvCtrl ctrlAddEventHandler ["treeSelChanged",{
             deleteVehicle (_targetUnit getVariable [QGVAR(targetHelper),objNull]);
             _camProperties set [4,_unit];
 
-            _targetHelper = createagent ["Logic",getPos _unit,[],0,"NONE"];
+            private _targetHelper = createagent ["Logic",getPos _unit,[],0,"NONE"];
             _targetHelper attachto [_unit,_targetHelperOffset,""];
             _unit setVariable [QGVAR(targetHelper),_targetHelper];
         };
@@ -322,14 +325,14 @@ _tvCtrl ctrlAddEventHandler ["treeSelChanged",{
     };
 
     // display info
-    _infoPicCtrl = DISPLAYCONTROL(infoPicCtrl);
-    _infoTextCtrlL = DISPLAYCONTROL(infoTextCtrlL);
-    _infoTextCtrlR = DISPLAYCONTROL(infoTextCtrlR);
+    private _infoPicCtrl = DISPLAYCONTROL(infoPicCtrl);
+    private _infoTextCtrlL = DISPLAYCONTROL(infoTextCtrlL);
+    private _infoTextCtrlR = DISPLAYCONTROL(infoTextCtrlR);
 
     if (count _selPath > 2) then {
         // _infoTextArrayR needs <br/> instead of lineBreak because it's converted to structured text differently in order for <t align='right'> to work
-        _infoTextArrayL = [(_tvCtrl tvText _selPath),lineBreak,lineBreak];
-        _infoTextArrayR = ["<br/>","<br/>"];
+        private _infoTextArrayL = [(_tvCtrl tvText _selPath),lineBreak,lineBreak];
+        private _infoTextArrayR = ["<br/>","<br/>"];
 
         if (count _selPath == 3) then {
             _infoTextArrayL pushBack "Total Load:";
@@ -339,7 +342,7 @@ _tvCtrl ctrlAddEventHandler ["treeSelChanged",{
         if (count _selPath in [4,5]) then {
             _infoPicCtrl ctrlSetText (_tvCtrl tvPicture _selPath);
 
-            _itemWeight = [_tvCtrl tvData _selPath] call DISPLAYFUNC(getItemMass);
+            private _itemWeight = [_tvCtrl tvData _selPath] call DISPLAYFUNC(getItemMass);
 
             // assigned items container has no weight
             if (_selPath select 3 > 0 || count _selPath == 5) then {
@@ -350,7 +353,7 @@ _tvCtrl ctrlAddEventHandler ["treeSelChanged",{
             };
 
             if (count _selPath == 4) then {
-                _containerClassName = (_tvCtrl tvData _selPath);
+                private _containerClassName = (_tvCtrl tvData _selPath);
                 _infoTextArrayL pushBack "Content Weight:";
                 _infoTextArrayR pushBack format ["%1 kg",(_tvCtrl tvValue _selPath)/100];
 
@@ -359,9 +362,9 @@ _tvCtrl ctrlAddEventHandler ["treeSelChanged",{
                     _infoTextArrayL pushBack lineBreak;
                     _infoTextArrayR pushBack "<br/>";
 
-                    _maxLoad = CONVERTTOKG(getContainerMaxLoad _containerClassName);
-                    _currentLoad = ((_tvCtrl tvValue _selPath)/100);
-                    _spaceleft = _maxLoad - _currentLoad;
+                    private _maxLoad = CONVERTTOKG(getContainerMaxLoad _containerClassName);
+                    private _currentLoad = ((_tvCtrl tvValue _selPath)/100);
+                    private _spaceleft = _maxLoad - _currentLoad;
 
                     _infoTextArrayL pushBack "Space Left:";
                     _infoTextArrayR pushBack ([
@@ -380,7 +383,7 @@ _tvCtrl ctrlAddEventHandler ["treeSelChanged",{
         };
 
         _infoTextCtrlL ctrlSetStructuredText composeText _infoTextArrayL;
-        _infoTextCtrlR ctrlSetStructuredText parseText call {_t = "<t align='right'>"; {_t=_t+_x} forEach _infoTextArrayR;_t + "</t>"};
+        _infoTextCtrlR ctrlSetStructuredText parseText call {private _t = "<t align='right'>"; {_t=_t+_x} forEach _infoTextArrayR;_t + "</t>"};
     } else {
         _infoTextCtrlL ctrlSetStructuredText parseText "";
         _infoTextCtrlR ctrlSetStructuredText parseText "";
@@ -392,14 +395,14 @@ _switchUnitCtrl ctrlAddEventHandler ["buttonClick",{
     params [["_switchUnitCtrl",controlNull]];
 
 
-    _display = ctrlParent _switchUnitCtrl;
-    _tvCtrl = _display getVariable [QGVAR(tvCtrl),controlNull];
-    _selPath = tvCurSel _tvCtrl;
+    private _display = ctrlParent _switchUnitCtrl;
+    private _tvCtrl = _display getVariable [QGVAR(tvCtrl),controlNull];
+    private _selPath = tvCurSel _tvCtrl;
 
     _selPath params [["_sideIndex",999999],["_groupIndex",999999],["_unitIndex",999999],["_containerIndex",999999],["_itemIndex",999999]];
-    _unitsCache = DISPLAYVAR(unitsCache,[]);
+    private _unitsCache = DISPLAYVAR(unitsCache,[]);
 
-    _unit = if (count _selPath > 1) then {
+    private _unit = if (count _selPath > 1) then {
         if (count _selPath > 2) then {
             _unitsCache select _sideIndex select _groupIndex select _unitIndex
         } else {
@@ -420,7 +423,7 @@ _switchUnitCtrl ctrlAddEventHandler ["buttonClick",{
 _camInteractionCtrl ctrlAddEventHandler ["mouseMoving",{
     params ["_camInteractionCtrl","_mouseX","_mouseY","_mouseOver"];
 
-    _display = ctrlParent _camInteractionCtrl;
+    private _display = ctrlParent _camInteractionCtrl;
     _display setVariable [QGVAR(mouseOver),_mouseOver];
 
     if !(DISPLAYVAR(rMouseDown,false)) exitWith {
@@ -433,11 +436,11 @@ _camInteractionCtrl ctrlAddEventHandler ["mouseMoving",{
 
     (_display getVariable [QGVAR(oldMouseCoords),[0,0]]) params ["_mouseXOld","_mouseYOld"];
 
-    _camProperties = _display getVariable [QGVAR(camProperties),DEFAULT_CAMPROPS];
-    _camProperties params ["_dis","_dirH","_dirV","_targetHelperOffset",["_targetUnit",objNull]];;
+    private _camProperties = _display getVariable [QGVAR(camProperties),DEFAULT_CAMPROPS];
+    _camProperties params ["_dis","_dirH","_dirV","_targetHelperOffset",["_targetUnit",objNull]];
 
-    _dX = (_mouseXOld - _mouseX) * 0.75;
-    _dY = (_mouseYOld - _mouseY) * 0.75;
+    private _dX = (_mouseXOld - _mouseX) * 0.75;
+    private _dY = (_mouseYOld - _mouseY) * 0.75;
     _targetHelperOffset = [
         [0,0,_targetHelperOffset select 2],
         [[0,0,0],_targetHelperOffset] call bis_fnc_distance2D,
@@ -456,10 +459,10 @@ _camInteractionCtrl ctrlAddEventHandler ["mouseMoving",{
 _camInteractionCtrl ctrlAddEventHandler ["mouseZChanged",{
     params ["_camInteractionCtrl","_mouseZ"];
 
-    _display = ctrlParent _camInteractionCtrl;
+    private _display = ctrlParent _camInteractionCtrl;
     if !(DISPLAYVAR(mouseOver,false)) exitWith {};
 
-    _camProperties = _display getVariable [QGVAR(camProperties),DEFAULT_CAMPROPS];
+    private _camProperties = _display getVariable [QGVAR(camProperties),DEFAULT_CAMPROPS];
 
     _camProperties params ["_dis"];
     _camProperties set [0,((_dis - _mouseZ/2) max 2) min 20];
@@ -471,14 +474,14 @@ _checkboxCtrl ctrlAddEventHandler ["checkedChanged",{
     params ["_checkboxCtrl","_checkedID"];
 
     missionNamespace setVariable [QGVAR(loadoutViewer_onlyPlayable),_checkedID == 1];
-    _display = ctrlParent _checkboxCtrl;
+    private _display = ctrlParent _checkboxCtrl;
     [_display,DISPLAYVAR(sides,[]),_checkedID == 1] call DISPLAYFUNC(fillDialog);
 }];
 
 _display displayAddEventHandler ["unload",{
     params ["_display","_exitCode"];
 
-    _cam = DISPLAYVAR(cam,objNull);
+    private _cam = DISPLAYVAR(cam,objNull);
     _cam cameraeffect ["terminate", "back"];
     camDestroy _cam;
 }];

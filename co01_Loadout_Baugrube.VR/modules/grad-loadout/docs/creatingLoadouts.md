@@ -58,6 +58,8 @@ The loadout options are completely modular, just use what you need and nothing m
 | `primaryWeaponPointer`             | Set flashlight attachment of primary weapon                                      |
 | `primaryWeaponUnderbarrel`         | Set bipod/GL attachment of primary weapon.                                       |
 | `primaryWeaponUnderbarrelMagazine` | Set loaded GL magazine of primary weapon.                                        |
+| `secondPrimaryWeapon`              | Second primary weapon on the body (KJW's Two Primary Weapons, players only).     |
+| `secondPrimaryWeapon...`           | same as with primary weapon attachments.                                         |
 | `secondaryWeapon...`               | same as with primary weapon attachments.                                         |
 | `handgunWeapon...`                 | same as with primary weapon attachments.                                         |
 | `headgear`                         | Replaces headgear.                                                               |

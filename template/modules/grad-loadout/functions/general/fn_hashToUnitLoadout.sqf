@@ -19,7 +19,7 @@ private _getFirstOfType = {
     _hierarchy call BIS_fnc_ArrayPop;
     private _butLast = _hierarchy call BIS_fnc_ArrayPop;
 
-    _result = "";
+    private _result = "";
     {
         if (_x isKindOf [_className, _butLast]) exitWith {_result = _x; };
     } forEach _array;
@@ -51,8 +51,8 @@ private _assignFromLoadoutHash = {
         };
 
         if (!(isNil "_value")) then {
-            _index =  _indices call BIS_fnc_arrayPop;
-            _targetArray = [_unitLoadout, _indices] call _walkIntoArray;
+            private _index = _indices call BIS_fnc_arrayPop;
+            private _targetArray = [_unitLoadout, _indices] call _walkIntoArray;
             _targetArray set [_index, _value];
         };
     };
@@ -62,8 +62,8 @@ private _assignValue = {
     params [["_indices",[]], "_value"];
 
     if (!(isNil "_value")) then {
-        _index =  _indices call BIS_fnc_arrayPop;
-        _targetArray = [_unitLoadout, _indices] call _walkIntoArray;
+        private _index = _indices call BIS_fnc_arrayPop;
+        private _targetArray = [_unitLoadout, _indices] call _walkIntoArray;
         _targetArray set [_index, _value];
     };
 };
@@ -73,11 +73,11 @@ private _setEmptyParentArrayIfEmptyString = {
     if (count _indices < 2) then {
         throw '_setEmptyParentArrayIfEmptyString needs two indices at least';
     };
-    _testValue = [_unitLoadout, _indices] call _walkIntoArray;
+    private _testValue = [_unitLoadout, _indices] call _walkIntoArray;
     if (_testValue == "") then {
         _indices call BIS_fnc_arrayPop;
-        _targetIdx = _indices call BIS_fnc_arrayPop;
-        _targetArray = [_unitLoadout, _indices] call _walkIntoArray;
+        private _targetIdx = _indices call BIS_fnc_arrayPop;
+        private _targetArray = [_unitLoadout, _indices] call _walkIntoArray;
         _targetArray set [_targetIdx, []];
     };
 };
@@ -85,7 +85,7 @@ private _setEmptyParentArrayIfEmptyString = {
 private _normalizeWeaponArray = {
     private _weaponArray = _this;
     if ((count _weaponArray) > 0) then {
-        _weaponValue = _weaponArray select 0;
+        private _weaponValue = _weaponArray select 0;
         if ((isNil "_weaponValue") || (_weaponValue == "")) then {
             _weaponArray resize 0;
         } else {
@@ -124,7 +124,7 @@ private _defaultValueForItemCarriers = {
     private _targetArray = _unitLoadout select _this;
     private _carrierClassName = _targetArray select 0;
     if (!(isNil "_carrierClassName")) then {
-        _val = _targetArray select 1;
+        private _val = _targetArray select 1;
         if (isNil "_val") then {
             _targetArray set [1, []];
         };

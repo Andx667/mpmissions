@@ -74,7 +74,7 @@ private _action = [
                     _configPath = _configPath >> GVAR(Chosen_Prefix);
                 };
                 private _loadoutHash = [_unit, _configPath] call FUNC(GetUnitLoadoutFromConfig);
-                private _customGearOptionsHash = [_unit, _loadoutHash] call FUNC(getCustomGearOptions);
+                _customGearOptionsHash = [_unit, _loadoutHash] call FUNC(getCustomGearOptions);
             };
             count ([_customGearOptionsHash] call CBA_fnc_hashKeys) > 0
         }

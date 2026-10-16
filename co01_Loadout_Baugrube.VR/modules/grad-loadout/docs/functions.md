@@ -83,7 +83,7 @@ Like `addLoadoutSwitchInteraction`, but creates one parent action with a child a
 
 Param | Type   | Default Value       | Description
 ------|--------|---------------------|----------------------------------------------------------------------------------------------------
-0     | object | -                   | Object to attach the actions to.
+0     | object/array | -             | Object to attach the actions to, or an array of objects that all get the same menu.
 1     | array  | `[]`                | Entries: unit classnames, or `[classname, [ranks]]` to set ranks for just that class. Empty: every class defined in `Loadouts >> Type`.
 2     | string | "Change loadout"    | Label of the parent action.
 3     | code   | `{true}`            | ACE condition of the parent action, parameters `[target, player, params]`.
@@ -97,6 +97,9 @@ Param | Type   | Default Value       | Description
 
 // Change loadout > Medic > Private / Sergeant, AT Specialist (direct)
 [crate, [["B_medic_F", ["PRIVATE", "SERGEANT"]], "B_Soldier_AT_F"]] call GRAD_Loadout_fnc_addLoadoutSwitchMenu;
+
+// same menu on several objects, every class from Loadouts >> Type
+[[crate, truck]] call GRAD_Loadout_fnc_addLoadoutSwitchMenu;
 ```
 
 If neither the entry nor parameter 5 gives ranks, the `Rank` classes defined for that class in the loadout config (including inherited ones) are used automatically. A class with ranks becomes a submenu, a class without applies directly.

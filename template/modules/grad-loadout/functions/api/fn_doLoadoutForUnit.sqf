@@ -1,6 +1,6 @@
 #include "component.hpp"
 
-params [["_unit", objNull]];
+params [["_unit", objNull], ["_type", ""], ["_rank", ""]];
 
 private _configPath = missionConfigFile >> "Loadouts";
 
@@ -10,7 +10,12 @@ if (GVAR(Chosen_Prefix) != "") then {
 
 TRACE_2("applying loadout from mission config file %1 to %2 ...", _configPath, _unit);
 
-private _loadoutHash = [_unit, _configPath] call FUNC(GetUnitLoadoutFromConfig);
+// remember the override (cleared by a plain call, e.g. on respawn) for customGear lookups
+_unit setVariable [QGVAR(overrideType), _type];
+_unit setVariable [QGVAR(overrideRank), _rank];
+
+private _loadoutHash = [_unit, _configPath, _type, _rank] call FUNC(GetUnitLoadoutFromConfig);
+// _type and _rank optionally override typeOf and rank of _unit, e.g. to turn a rifleman into a medic
 [_loadoutHash, _unit] call FUNC(randomizeLoadout);
 _loadoutHash = [_loadoutHash, _unit] call FUNC(ApplyRevivers);
 

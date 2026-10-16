@@ -1,13 +1,23 @@
 #include "component.hpp"
 
 params [
-    ["_obj", objNull],
+    ["_obj", objNull, [objNull, []]],
     ["_entries", []],
     ["_displayName", "Change loadout"],
     ["_condition", {true}],
     ["_actionPath", ["ACE_MainActions"]],
     ["_ranks", []]
 ];
+
+// several objects: add the same menu to each of them
+if (_obj isEqualType []) exitWith {
+    if (_obj isEqualTo []) exitWith {
+        ERROR("addLoadoutSwitchMenu needs at least one object.");
+    };
+    {
+        [_x, _entries, _displayName, _condition, _actionPath, _ranks] call FUNC(addLoadoutSwitchMenu);
+    } forEach _obj;
+};
 
 // no entries: offer every class defined in Loadouts >> Type
 if (_entries isEqualTo []) then {
