@@ -1,36 +1,37 @@
-// brazenly stolen from 1tac
-#define LIST_1(var1) var1
-#define LIST_2(var1) var1,var1
-#define LIST_3(var1) var1,var1,var1
-#define LIST_4(var1) var1,var1,var1,var1
-#define LIST_5(var1) var1,var1,var1,var1,var1
-#define LIST_6(var1) var1,var1,var1,var1,var1,var1
-#define LIST_7(var1) var1,var1,var1,var1,var1,var1,var1
-#define LIST_8(var1) var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_9(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_10(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_11(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_12(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_13(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_14(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_15(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_16(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_17(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_18(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_19(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_20(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_21(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_22(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_23(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_24(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_25(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_26(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_27(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_28(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_29(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_30(var1) var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1,var1
-#define LIST_45(var1) LIST_30(var1),LIST_15(var1)
-#define LIST_60(var1) LIST_30(var1),LIST_30(var1)
+// ---------------------------------------------------------------------------
+// Varianten - in der description.ext VOR dem #include setzen:
+//   #define BW_CAMO Tropen
+//   #define BW_G36
+// BW_CAMO: Fleck | Tropen | Multi (Standard: Multi)
+// BW_G36:  G36-Familie statt G38  (Standard: G38)
+// ACHTUNG: Kein Kommentar und keine Leerzeichen hinter dem Wert von BW_CAMO -
+// Arma behält die Leerzeichen, daraus wird dann "BWA3_Uniform_Fleck      ".
+// ---------------------------------------------------------------------------
+#ifndef BW_CAMO
+    #define BW_CAMO Multi
+#endif
+
+// BW_CAMO_ITEM(BWA3_Vest_Rifleman) -> "BWA3_Vest_Rifleman_Multi"
+// BW_CAMO_ITEM_SUFFIX(BWA3_AssaultPack,Medic) -> "BWA3_AssaultPack_Multi_Medic"
+// Erst zusammenkleben, dann in Anführungszeichen setzen (wie CBA QUOTE(DOUBLES(...))).
+// Keine Leerzeichen in den Argumenten, sonst landen sie im Klassennamen!
+#define BW_STR(x) #x
+#define BW_JOIN2(a,b) a##_##b
+#define BW_JOIN3(a,b,c) a##_##b##_##c
+#define BW_CAMO_ITEM(base) BW_STR(BW_JOIN2(base,BW_CAMO))
+#define BW_CAMO_ITEM_SUFFIX(base,suffix) BW_STR(BW_JOIN3(base,BW_CAMO,suffix))
+
+#ifdef BW_G36
+    #define BW_RIFLE      "BWA3_G36A3", "BWA3_G36A3_green", "BWA3_G36A3_tan"
+    #define BW_RIFLE_GL   "BWA3_G36A3_AG40", "BWA3_G36A3_AG40_green", "BWA3_G36A3_AG40_tan"
+    #define BW_CARBINE    "BWA3_G36KA3", "BWA3_G36KA3_green", "BWA3_G36KA3_tan"
+    #define BW_CARBINE_GL BW_RIFLE_GL // kein G36K mit AG40, Truppführer nimmt das G36A3 AG40
+#else
+    #define BW_RIFLE      "BWA3_G38", "BWA3_G38_tan"
+    #define BW_RIFLE_GL   "BWA3_G38_AG40", "BWA3_G38_AG40_tan"
+    #define BW_CARBINE    "BWA3_G38K", "BWA3_G38K_tan"
+    #define BW_CARBINE_GL "BWA3_G38K_AG40", "BWA3_G38K_AG40_tan"
+#endif
 
 class Loadouts {
     baseDelay = 1;
@@ -61,57 +62,40 @@ class Loadouts {
 
         class B_Survivor_F {
             uniform[] = {
-                //"BWA3_Uniform_Fleck",
-                //"BWA3_Uniform_sleeves_Fleck", //handled by AWX
-                "BWA3_Uniform_Multi",
-                //"BWA3_Uniform_sleeves_Multi",
-                //"BWA3_Uniform_Tropen",
-                //"BWA3_Uniform_sleeves_Tropen",
+                BW_CAMO_ITEM(BWA3_Uniform), // sleeves-Variante handled by AWX
             };
             vest[] = {
-                //"BWA3_Vest_Rifleman_Fleck"
-                //"BWA3_Vest_Rifleman_Tropen"
-                "BWA3_Vest_Rifleman_Multi"
+                BW_CAMO_ITEM(BWA3_Vest_Rifleman)
             };
-            backpack[] = {  
-                //"BWA3_AssaultPack_Fleck",
-                "BWA3_AssaultPack_Multi",
-                //"BWA3_AssaultPack_Tropen"
+            backpack[] = {
+                BW_CAMO_ITEM(BWA3_AssaultPack)
                 };
             headgear[] = {
                 "BWA3_OpsCore_FastMT_Peltor",
-                //"BWA3_OpsCore_FastMT_Peltor_Fleck",
-                "BWA3_OpsCore_FastMT_Peltor_Multi",
-                //"BWA3_OpsCore_FastMT_Peltor_Tropen",
+                BW_CAMO_ITEM(BWA3_OpsCore_FastMT_Peltor),
             };
 
             addItemsToUniform[] = {
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
                 "acex_intelitems_notepad",
-                LIST_2("KAT_Painkiller"),
-                LIST_10("ACE_elasticBandage"),
-                LIST_10("ACE_packingBandage"),
-                LIST_10("ACE_Quikclot"),
-                LIST_4("ACE_Tourniquet"),
-                LIST_2("KAT_chestSeal"),
+                "KAT_Painkiller", 2,
+                "ACE_elasticBandage", 10,
+                "ACE_packingBandage", 10,
+                "ACE_Quikclot", 10,
+                "ACE_Tourniquet", 4,
+                "KAT_chestSeal", 2,
                 "BWA3_15Rnd_9x19_P8",
             };
             addItemsToVest[] = {
-                LIST_2("BWA3_DM25"),
-                LIST_2("BWA3_DM51A1"),
+                "BWA3_DM25", 2,
+                "BWA3_DM51A1", 2,
                 "ACRE_SEM52SL",
                 "BWA3_DM32_Green"
             };
             addItemsToBackpack[] = {};
 
-            primaryWeapon[] = {
-                // "BWA3_G36A3",
-                // "BWA3_G36A3_green",
-                // "BWA3_G36A3_tan"
-                "BWA3_G38",
-                "BWA3_G38_tan"
-                };
+            primaryWeapon[] = {BW_RIFLE};
             primaryWeaponOptics[] = {
                 //"BWA3_optic_ZO4x30_MicroT2",
                 //"BWA3_optic_ZO4x30_MicroT2_brown",
@@ -169,10 +153,7 @@ class Loadouts {
         
         class B_Soldier_F: B_Survivor_F { //Rifleman
             addItemsToVest[] += {
-                LIST_8("BWA3_30Rnd_556x45_G36_AP"),
-            };
-
-            addItemsToVest[] += {
+                "BWA3_30Rnd_556x45_G36_AP", 8,
                 "BWA3_optic_NSV600"
             };
             addItemsToBackpack[] = {
@@ -183,25 +164,17 @@ class Loadouts {
         };
 
         class B_Soldier_GL_F: B_Soldier_F { //Grenadier
-            primaryWeapon[] = {
-                // "BWA3_G36A3_AG40",
-                // "BWA3_G36A3_AG40_green",
-                // "BWA3_G36A3_AG40_tan",
-                "BWA3_G38_AG40",
-                "BWA3_G38_AG40_tan"
-                };
+            primaryWeapon[] = {BW_RIFLE_GL};
             vest[] = {
-                //"BWA3_Vest_Grenadier_Fleck",
-                "BWA3_Vest_Grenadier_Multi",
-                //"BWA3_Vest_Grenadier_Tropen"
+                BW_CAMO_ITEM(BWA3_Vest_Grenadier)
                 };
             addItemsToVest[] += {
-                LIST_8("1Rnd_HE_Grenade_shell"),
+                "1Rnd_HE_Grenade_shell", 8,
             };
             addItemsToBackpack[] += {
-                LIST_12("1Rnd_HE_Grenade_shell"),
-                LIST_5("1Rnd_SmokeRed_Grenade_shell"),
-                LIST_5("1Rnd_Smoke_Grenade_shell"),
+                "1Rnd_HE_Grenade_shell", 12,
+                "1Rnd_SmokeRed_Grenade_shell", 5,
+                "1Rnd_Smoke_Grenade_shell", 5,
             };
         };
 
@@ -222,8 +195,8 @@ class Loadouts {
                     backpack = "";
 
                     addItemsToBackpack[] += {
-                        LIST_2(""), //LR Radio
-                        LIST_10(""), //Purple Smoke
+                        "", 2, //LR Radio
+                        "", 10, //Purple Smoke
                         "ACE_flags_blue",
                         "ACE_flags_yellow",
                     };
@@ -266,43 +239,37 @@ class Loadouts {
 
         class B_soldier_AAT_F: B_Soldier_F { //AT Assistent
             backpack[] = {
-                //"BWA3_PatrolPack_Fleck",
-                "BWA3_PatrolPack_Multi",
-                //"BWA3_PatrolPack_Tropen"
+                BW_CAMO_ITEM(BWA3_PatrolPack)
                 };
 
             addItemsToBackpack[] = {
-                LIST_2("BWA3_CarlGustav_HEAT"),
-                LIST_2("BWA3_CarlGustav_HEDP"),
+                "BWA3_CarlGustav_HEAT", 2,
+                "BWA3_CarlGustav_HEDP", 2,
             };
 
         };
 
         class B_Soldier_A_F: B_Soldier_F { //MMG Assistent
             backpack[] = {
-                //"BWA3_PatrolPack_Fleck",
-                "BWA3_PatrolPack_Multi",
-                //"BWA3_PatrolPack_Tropen"
+                BW_CAMO_ITEM(BWA3_PatrolPack)
                 };
 
             addItemsToBackpack[] = {
                 "ACE_SpareBarrel",
-                LIST_6("BWA3_120Rnd_762x51_Tracer_soft"),
+                "BWA3_120Rnd_762x51_Tracer_soft", 6,
                 "ACE_EntrenchingTool",
-                LIST_3("ACE_Sandbag_empty")
+                "ACE_Sandbag_empty", 3
             };
             binoculars = "Rangefinder";
         };
 
         class B_soldier_UAV_F: B_Soldier_F { //Drohnenbediener
             backpack[] = {
-                //"BWA3_PatrolPack_Fleck",
-                "BWA3_PatrolPack_Multi",
-                //"BWA3_PatrolPack_Tropen"
+                BW_CAMO_ITEM(BWA3_PatrolPack)
                 };
 
             addItemsToBackpack[] = {
-                LIST_10("ACE_UAVBattery"),
+                "ACE_UAVBattery", 10,
                 "ITC_Land_B_AR2i_Packed"
             };
             gps = "B_UavTerminal";
@@ -317,12 +284,10 @@ class Loadouts {
 
         class B_soldier_AAA_F: B_Soldier_F {
             backpack[] = {  
-                //"BWA3_PatrolPack_Fleck",
-                "BWA3_PatrolPack_Multi",
-                //"BWA3_PatrolPack_Tropen"
+                BW_CAMO_ITEM(BWA3_PatrolPack)
                 };
             addItemsToBackpack[] = {
-                LIST_3("BWA3_Fliegerfaust_Mag"),
+                "BWA3_Fliegerfaust_Mag", 3,
             };
         };
 
@@ -350,46 +315,40 @@ class Loadouts {
             primaryWeaponMuzzle = "BWA3_muzzle_snds_Rotex_IIA";
 
             vest[] = {
-                //"BWA3_Vest_Marksman_Fleck"
-                "BWA3_Vest_Marksman_Multi",
-                //"BWA3_Vest_Marksman_Tropen"
+                BW_CAMO_ITEM(BWA3_Vest_Marksman)
                 };
 
             addItemsToVest[] += {
-                LIST_7("BWA3_20Rnd_762x51_G28_AP"),
+                "BWA3_20Rnd_762x51_G28_AP", 7,
                 "ACE_Rangecard",
             };
             addItemsToBackpack[] = {
-                LIST_8("BWA3_20Rnd_762x51_G28_LR"),
+                "BWA3_20Rnd_762x51_G28_LR", 8,
             };
             binoculars = "ACE_Yardage450";
         };
 
         class B_soldier_AR_F: B_Survivor_F { //Autorifleman / MG4
             vest[] ={
-                //"BWA3_Vest_MachineGunner_Fleck"
-                "BWA3_Vest_MachineGunner_Multi",
-                //"BWA3_Vest_MachineGunner_Tropen"
+                BW_CAMO_ITEM(BWA3_Vest_MachineGunner)
                 };
 
             primaryWeapon = "BWA3_MG4";
             primaryWeaponMagazine = "BWA3_200Rnd_556x45_Tracer";
 
             addItemsToVest[] += {
-                LIST_2("BWA3_200Rnd_556x45_Tracer"),
+                "BWA3_200Rnd_556x45_Tracer", 2,
                 "BWA3_optic_NSV600"
             };
             addItemsToBackpack[] = {
-                LIST_2("BWA3_200Rnd_556x45_Tracer"),
+                "BWA3_200Rnd_556x45_Tracer", 2,
             };
         };
 
 
         class B_HeavyGunner_F: B_Survivor_F { //MMG / MG5
             vest[] = {
-                //"BWA3_Vest_MachineGunner_Fleck"
-                "BWA3_Vest_MachineGunner_Multi",
-                //"BWA3_Vest_MachineGunner_Tropen"
+                BW_CAMO_ITEM(BWA3_Vest_MachineGunner)
                 };
 
             primaryWeapon[] = {
@@ -406,11 +365,11 @@ class Loadouts {
                 "BWA3_optic_ZO4x30i_sand",
             };
             addItemsToVest[] += {
-                LIST_2("BWA3_120Rnd_762x51_Tracer_soft"),
+                "BWA3_120Rnd_762x51_Tracer_soft", 2,
             };
             addItemsToBackpack[] = {
                 "ACE_SpareBarrel",
-                LIST_2("BWA3_120Rnd_762x51_Tracer_soft"),
+                "BWA3_120Rnd_762x51_Tracer_soft", 2,
             };
         };
 
@@ -420,9 +379,7 @@ class Loadouts {
         // Sonderausrüstung (kein addItemsToVest/Backpack in dieser Klasse)
         class B_engineer_F: B_Soldier_F { //Pionier
             backpack[] = {
-                //"BWA3_PatrolPack_Fleck",
-                "BWA3_PatrolPack_Multi",
-                //"BWA3_PatrolPack_Tropen"
+                BW_CAMO_ITEM(BWA3_PatrolPack)
                 };
 
             goggles[] = {
@@ -452,9 +409,7 @@ class Loadouts {
         // ACE_EntrenchingTool, Klappsäge und Sprengmittel - hier trägt EOD gar keine Sonderausrüstung
         class B_soldier_mine_F: B_Soldier_F { //EOD
             backpack[] = {
-                //"BWA3_PatrolPack_Fleck",
-                "BWA3_PatrolPack_Multi",
-                //"BWA3_PatrolPack_Tropen"
+                BW_CAMO_ITEM(BWA3_PatrolPack)
                 };
 
             class Rank {
@@ -473,9 +428,7 @@ class Loadouts {
         class B_crew_F: B_Survivor_F {         //Fahrzeugbesatzung
             //uniform = "BWA3_Uniform_Crew_Fleck";
             vest[] = {
-                //"BWA3_Vest_Fleck",
-                "BWA3_Vest_Multi",
-                //"BWA3_Vest_Tropen"
+                BW_CAMO_ITEM(BWA3_Vest)
                 };
             backpack = "";
             headgear = "BWA3_CrewmanKSK_Fleck_Headset";
@@ -491,8 +444,8 @@ class Loadouts {
             primaryWeaponPointer = "";
 
             addItemsToVest[] += {
-                //LIST_3("BWA3_20Rnd_46x30_MP7"),
-                LIST_3("BWA3_30Rnd_556x45_G36_AP"),
+                //"BWA3_20Rnd_46x30_MP7", 3,
+                "BWA3_30Rnd_556x45_G36_AP", 3,
             };
 
             goggles[] = {
@@ -551,9 +504,7 @@ class Loadouts {
         //Pilots
         class B_helicrew_F: B_Survivor_F { //Crew
             vest[] = {
-                //"BWA3_Vest_Fleck"
-                "BWA3_Vest_Multi",
-                //"BWA3_Vest_Tropen"
+                BW_CAMO_ITEM(BWA3_Vest)
                 };
             headgear[] = {
                 "BWA3_CrewHelmet_NH90",
@@ -625,23 +576,19 @@ class Loadouts {
             primaryWeaponMagazine = "BWA3_10Rnd_86x70_G29";
 
             uniform[] = {
-                //"BWA3_Uniform_Ghillie_Fleck",
-                "BWA3_Uniform_Ghillie_Multi",
-                //"BWA3_Uniform_Ghillie_Tropen"
+                BW_CAMO_ITEM(BWA3_Uniform_Ghillie)
             };
 
             vest[] = {
-                //"BWA3_Vest_Marksman_Fleck"
-                "BWA3_Vest_Marksman_Multi",
-                //"BWA3_Vest_Marksman_Tropen"
+                BW_CAMO_ITEM(BWA3_Vest_Marksman)
                 };
 
             addItemsToVest[] += {
-                LIST_7("BWA3_20Rnd_762x51_G28_AP"),
+                "BWA3_20Rnd_762x51_G28_AP", 7,
                 "ACE_Rangecard",
             };
             addItemsToBackpack[] = {
-                LIST_8("BWA3_20Rnd_762x51_G28_LR"),
+                "BWA3_20Rnd_762x51_G28_LR", 8,
             };
             binoculars = "ACE_Yardage450";
 
@@ -649,32 +596,16 @@ class Loadouts {
 
         class B_spotter_F: B_Patrol_Soldier_M_F {
             uniform[] = {
-                //"BWA3_Uniform_Ghillie_Fleck",
-                "BWA3_Uniform_Ghillie_Multi",
-                //"BWA3_Uniform_Ghillie_Tropen"
+                BW_CAMO_ITEM(BWA3_Uniform_Ghillie)
             };
         };
         //Führung
         class B_Soldier_TL_F: B_Survivor_F {
             vest[] = {
-                //"BWA3_Vest_Leader_Fleck"
-                "BWA3_Vest_Leader_Multi",
-                //"BWA3_Vest_Leader_Tropen"
+                BW_CAMO_ITEM(BWA3_Vest_Leader)
                 };
-            primaryWeapon[] = {
-                //"BWA3_G36KA3",
-                //"BWA3_G36KA3_green",
-                //"BWA3_G36KA3_tan",
-                //"BWA3_G36A3_AG40",
-                //"BWA3_G36A3_AG40_green",
-                //"BWA3_G36A3_AG40_tan"
-                //In mot.-mech. Units TF usually have a GL and shorter Rifles.
-                //"BWA3_G38K",
-                //"BWA3_G38K_tan"
-                "BWA3_G38K_AG40",
-                "BWA3_G38K_AG40_tan"
-
-            };
+            //In mot.-mech. Units TF usually have a GL and shorter Rifles.
+            primaryWeapon[] = {BW_CARBINE_GL};
 
             primaryWeaponMagazine = "BWA3_30Rnd_556x45_G36_Tracer";
 
@@ -683,7 +614,7 @@ class Loadouts {
                 "ACE_key_west"
             };
             addItemsToVest[] += {
-                LIST_8("BWA3_30Rnd_556x45_G36_Tracer"),
+                "BWA3_30Rnd_556x45_G36_Tracer", 8,
                 "ACRE_PRC152",
                 "BWA3_optic_NSV600"
             };
@@ -694,9 +625,9 @@ class Loadouts {
                 "ACE_flags_red",
                 "ACE_flags_green",
                 "ACE_flags_purple",
-                LIST_15("1Rnd_HE_Grenade_shell"),
-                LIST_5("1Rnd_SmokeRed_Grenade_shell"),
-                LIST_5("1Rnd_Smoke_Grenade_shell")
+                "1Rnd_HE_Grenade_shell", 15,
+                "1Rnd_SmokeRed_Grenade_shell", 5,
+                "1Rnd_Smoke_Grenade_shell", 5
             };
 
             binoculars = "ACE_Vector";
@@ -705,16 +636,7 @@ class Loadouts {
         };
 
         class B_Soldier_SL_F: B_Soldier_TL_F {
-            primaryWeapon[] = {
-                // "BWA3_G36KA3",
-                // "BWA3_G36KA3_green",
-                // "BWA3_G36KA3_tan",
-                // "BWA3_G36KA4",
-                // "BWA3_G36KA4_green",
-                // "BWA3_G36KA4_tan"
-                "BWA3_G38K",
-                "BWA3_G38K_tan"
-                };
+            primaryWeapon[] = {BW_CARBINE};
 
             addItemsToBackpack[] = {
                 "ACE_SprayPaintRed",
@@ -733,77 +655,71 @@ class Loadouts {
         //Medics
         class B_medic_F: B_Soldier_F {
             vest[] = {
-                //"BWA3_Vest_Medic_Fleck"
-                "BWA3_Vest_Medic_Multi",
-                //"BWA3_Vest_Medic_Tropen"
+                BW_CAMO_ITEM(BWA3_Vest_Medic)
                 };
 
             class Rank {
 
                 class PRIVATE { //Squad Level Medic
                     backpack[] = {
-                        //"BWA3_AssaultPack_Fleck_Medic",
-                        "BWA3_AssaultPack_Multi_Medic",
-                        //"BWA3_AssaultPack_Tropen_Medic"
+                        BW_CAMO_ITEM_SUFFIX(BWA3_AssaultPack,Medic)
                         };
                     addItemsToVest[] += {
                         //"kat_basicDiagnostic",
-                        LIST_3("kat_Pulseoximeter"),
+                        "kat_Pulseoximeter", 3,
                         "ACE_surgicalKit",
                         "BWA3_optic_NSV600"
                     };
 
                     addItemsToBackpack[] = {
                         //M
-                        LIST_30("ACE_packingBandage"),
-                        LIST_30("ACE_elasticBandage"),
-                        LIST_12("ACE_tourniquet"),
+                        "ACE_packingBandage", 30,
+                        "ACE_elasticBandage", 30,
+                        "ACE_tourniquet", 12,
                         //A
-                        LIST_8("kat_chestSeal"),
-                        LIST_8("kat_larynx"),
-                        LIST_6("kat_ncdKit"),
+                        "kat_chestSeal", 8,
+                        "kat_larynx", 8,
+                        "kat_ncdKit", 6,
                         //R
-                        LIST_3("kat_pocketBVM"),
+                        "kat_pocketBVM", 3,
                         //C
-                        LIST_4("ACE_salineIV_250"),
-                        LIST_4("ACE_salineIV_500"),
-                        LIST_8("kat_IV_16"),
-                        LIST_12("ACE_epinephrine"),
-                        LIST_4("ACE_adenosine"),
+                        "ACE_salineIV_250", 4,
+                        "ACE_salineIV_500", 4,
+                        "kat_IV_16", 8,
+                        "ACE_epinephrine", 12,
+                        "ACE_adenosine", 4,
                         //H
-                        LIST_6("kat_Penthrox"),
-                        LIST_8("kat_naloxone"),
-                        LIST_4("kat_Painkiller"),
-                        LIST_8("ACE_morphine"),
-                        LIST_45("ACE_suture"),
+                        "kat_Penthrox", 6,
+                        "kat_naloxone", 8,
+                        "kat_Painkiller", 4,
+                        "ACE_morphine", 8,
+                        "ACE_suture", 45,
                         //Admin
-                        LIST_2("ACE_Chemlight_IR"),
+                        "ACE_Chemlight_IR", 2,
                     };
                 };
 
                 class CORPORAL: PRIVATE { //Platoon Level Medic
                     backpack[] = {
-                        //"BWA3_TacticalPack_Fleck_Medic",
-                        "BWA3_TacticalPack_Multi_Medic",
-                        //"BWA3_TacticalPack_Tropen_Medic"
+                        BW_CAMO_ITEM_SUFFIX(BWA3_TacticalPack,Medic)
                         };
 
                     addItemsToVest[] += {
-                        LIST_3("kat_Pulseoximeter"),
+                        "kat_Pulseoximeter", 3,
                         "ace_flags_blue",
                         "ACE_SpraypaintBlue",
                     };
 
                     addItemsToBackpack[] += {
                         //A
-                        LIST_2("kat_larynx"),
-                        LIST_2("kat_ncdKit"),
+                        "kat_larynx", 2,
+                        "kat_ncdKit", 2,
                         //C
-                        LIST_5("ACE_salineIV"),
-                        LIST_9("kat_amiodarone"),
+                        "ACE_salineIV", 5,
+                        "kat_amiodarone", 9,
                         "kat_aed",
                         //HIGH-TECH
-                        LIST_8("kat_lidocaine"),
+                        "kat_lidocaine", 8,
                     };
                 };
 
@@ -815,40 +731,40 @@ class Loadouts {
 
                     addItemsToBackpack[] = {
                         //M
-                        LIST_45("ACE_packingBandage"),
-                        LIST_45("ACE_elasticBandage"),
+                        "ACE_packingBandage", 45,
+                        "ACE_elasticBandage", 45,
                         //A
-                        LIST_6("kat_aatKit"),
+                        "kat_aatKit", 6,
                         "kat_accuvac",
-                        LIST_6("kat_chestSeal"),
-                        LIST_5("kat_larynx"),
+                        "kat_chestSeal", 6,
+                        "kat_larynx", 5,
                         //R
-                        LIST_3("kat_BVM"),
+                        "kat_BVM", 3,
                         "kat_oxygenTank_150",
                         //C
-                        LIST_8("ACE_BloodIV"),
-                        LIST_3("ACE_BloodIV_500"),
-                        LIST_3("ACE_BloodIV_250"),
+                        "ACE_BloodIV", 8,
+                        "ACE_BloodIV_500", 3,
+                        "ACE_BloodIV_250", 3,
                         "ACE_salineIV_250",
                         "kat_X_AED",
-                        LIST_10("kat_IV_16"),
-                        LIST_2("kat_IO_FAST"),
-                        LIST_12("kat_epinephrineIV"),
-                        LIST_12("ACE_epinephrine"),
-                        LIST_10("kat_lidocaine"),
-                        LIST_6("kat_amiodarone"),
-                        LIST_6("kat_atropine"),
+                        "kat_IV_16", 10,
+                        "kat_IO_FAST", 2,
+                        "kat_epinephrineIV", 12,
+                        "ACE_epinephrine", 12,
+                        "kat_lidocaine", 10,
+                        "kat_amiodarone", 6,
+                        "kat_atropine", 6,
                         //H
-                        LIST_6("kat_eaca"),
-                        LIST_12("kat_txa"),
-                        LIST_6("kat_fentanyl"),
-                        LIST_6("kat_ketamine"),
-                        LIST_6("kat_naloxone"),
-                        LIST_6("kat_nitroglycerin"),
-                        LIST_6("kat_norepinephrine"),
-                        LIST_6("kat_phenylephrine"),
+                        "kat_eaca", 6,
+                        "kat_txa", 12,
+                        "kat_fentanyl", 6,
+                        "kat_ketamine", 6,
+                        "kat_naloxone", 6,
+                        "kat_nitroglycerin", 6,
+                        "kat_norepinephrine", 6,
+                        "kat_phenylephrine", 6,
                         //Admin
-                        LIST_45("ACE_suture"),
+                        "ACE_suture", 45,
                         "ACE_PersonalAidKit"
                     };
                 };
@@ -863,40 +779,40 @@ class Loadouts {
 
                     addItemsToBackpack[] = {
                         //M
-                        LIST_30("ACE_packingBandage"),
-                        LIST_30("ACE_elasticBandage"),
+                        "ACE_packingBandage", 30,
+                        "ACE_elasticBandage", 30,
                         //A
-                        LIST_6("kat_aatKit"),
+                        "kat_aatKit", 6,
                         "kat_accuvac",
-                        LIST_6("kat_chestSeal"),
-                        LIST_5("kat_larynx"),
+                        "kat_chestSeal", 6,
+                        "kat_larynx", 5,
                         //R
-                        LIST_3("kat_BVM"),
+                        "kat_BVM", 3,
                         "kat_oxygenTank_150",
                         //C
-                        LIST_8("ACE_BloodIV"),
-                        LIST_4("ACE_BloodIV_500"),
-                        LIST_4("ACE_BloodIV_250"),
+                        "ACE_BloodIV", 8,
+                        "ACE_BloodIV_500", 4,
+                        "ACE_BloodIV_250", 4,
                         "ACE_salineIV_250",
                         "kat_X_AED",
-                        LIST_10("kat_IV_16"),
-                        LIST_2("kat_IO_FAST"),
-                        LIST_12("kat_epinephrineIV"),
-                        LIST_12("ACE_epinephrine"),
-                        LIST_10("kat_lidocaine"),
-                        LIST_6("kat_amiodarone"),
-                        LIST_6("kat_atropine"),
+                        "kat_IV_16", 10,
+                        "kat_IO_FAST", 2,
+                        "kat_epinephrineIV", 12,
+                        "ACE_epinephrine", 12,
+                        "kat_lidocaine", 10,
+                        "kat_amiodarone", 6,
+                        "kat_atropine", 6,
                         //H
-                        LIST_6("kat_eaca"),
-                        LIST_12("kat_txa"),
-                        LIST_6("kat_fentanyl"),
-                        LIST_6("kat_ketamine"),
-                        LIST_6("kat_naloxone"),
-                        LIST_6("kat_nitroglycerin"),
-                        LIST_6("kat_norepinephrine"),
-                        LIST_6("kat_phenylephrine"),
+                        "kat_eaca", 6,
+                        "kat_txa", 12,
+                        "kat_fentanyl", 6,
+                        "kat_ketamine", 6,
+                        "kat_naloxone", 6,
+                        "kat_nitroglycerin", 6,
+                        "kat_norepinephrine", 6,
+                        "kat_phenylephrine", 6,
                         //Admin
-                        LIST_45("ACE_suture"),
+                        "ACE_suture", 45,
                     };
                 };
             };
@@ -936,14 +852,10 @@ class Loadouts {
                 "BWA3_muzzle_snds_Rotex_IIIC_tan"
             };
             vest[] = {
-                "BWA3_Vest_JPC_Rifleman_Multi",
-                //"BWA3_Vest_JPC_Rifleman_Fleck",
-                //"BWA3_Vest_JPC_Rifleman_Tropen"
+                BW_CAMO_ITEM(BWA3_Vest_JPC_Rifleman)
             };
             headgear[] = {
-                "BWA3_OpsCore_FastMT_SOF_Multi",
-                //"BWA3_OpsCore_FastMT_SOF_Fleck",
-                //"BWA3_OpsCore_FastMT_SOF_Tropen"
+                BW_CAMO_ITEM(BWA3_OpsCore_FastMT_SOF)
             };
 
 
@@ -975,9 +887,7 @@ class Loadouts {
 
         class B_recon_JTAC_F: B_recon_F {
             vest[] = {
-                "BWA3_Vest_JPC_Radioman_Multi",
-                //"BWA3_Vest_JPC_Radioman_Fleck",
-                //"BWA3_Vest_JPC_Radioman_Tropen"
+                BW_CAMO_ITEM(BWA3_Vest_JPC_Radioman)
             };
             goggles[] += {
                 "G_Aviator"
@@ -987,9 +897,7 @@ class Loadouts {
 
         class B_recon_TL_F: B_recon_JTAC_F {
             vest[] = {
-                "BWA3_Vest_JPC_Leader_Multi",
-                //"BWA3_Vest_JPC_Leader_Fleck",
-                //"BWA3_Vest_JPC_Leader_Tropen"
+                BW_CAMO_ITEM(BWA3_Vest_JPC_Leader)
             };
         };
 
@@ -1011,17 +919,15 @@ class Loadouts {
             };
             
             headgear[] += {
-                "BWA3_Booniehat_Multi",
-                //"BWA3_Booniehat_Fleck",
-                //"BWA3_Booniehat_Tropen"
+                BW_CAMO_ITEM(BWA3_Booniehat)
             };
 
             addItemsToVest[] = {
-                LIST_7("BWA3_20Rnd_762x51_G28_AP"),
+                "BWA3_20Rnd_762x51_G28_AP", 7,
                 "ACE_Rangecard",
             };
             addItemsToBackpack[] = {
-                LIST_8("BWA3_20Rnd_762x51_G28_LR"),
+                "BWA3_20Rnd_762x51_G28_LR", 8,
             };
         };
     };

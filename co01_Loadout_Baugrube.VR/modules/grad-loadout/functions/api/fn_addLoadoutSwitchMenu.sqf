@@ -6,7 +6,8 @@ params [
     ["_displayName", "Change loadout"],
     ["_condition", {true}],
     ["_actionPath", ["ACE_MainActions"]],
-    ["_ranks", []]
+    ["_ranks", []],
+    ["_grouped", true]
 ];
 
 // several objects: add the same menu to each of them
@@ -15,7 +16,7 @@ if (_obj isEqualType []) exitWith {
         ERROR("addLoadoutSwitchMenu needs at least one object.");
     };
     {
-        [_x, _entries, _displayName, _condition, _actionPath, _ranks] call FUNC(addLoadoutSwitchMenu);
+        [_x, _entries, _displayName, _condition, _actionPath, _ranks, _grouped] call FUNC(addLoadoutSwitchMenu);
     } forEach _obj;
 };
 
@@ -41,9 +42,35 @@ private _statement = {
 };
 
 private _parentId = format [QGVAR(switchMenu_%1), _displayName];
-private _parent = [_parentId, _displayName, _icon, {}, _condition] call ace_interact_menu_fnc_createAction;
+// actions that open a submenu get a trailing " >"
+private _parent = [_parentId, _displayName + " >", _icon, {}, _condition] call ace_interact_menu_fnc_createAction;
 [_obj, 0, _actionPath, _parent] call ace_interact_menu_fnc_addActionToObject;
 private _parentPath = _actionPath + [_parentId];
+
+// group submenus: every class sets loadoutGroup in Loadouts >> Type (inherited, "Infantry" if missing)
+// Loadouts >> loadoutGroups[] sets the menu order, unlisted groups follow in order of appearance
+private _groupPaths = createHashMap;
+if (_grouped) then {
+    private _typeCfg = missionConfigFile >> "Loadouts" >> "Type";
+    private _usedGroups = [];
+    {
+        _x params ["_type"];
+        private _group = getText (_typeCfg >> _type >> "loadoutGroup");
+        if (_group == "") then {_group = "Infantry"};
+        _usedGroups pushBackUnique _group;
+    } forEach _entries;
+
+    // only groups that actually have classes get a submenu
+    private _groupNames = (getArray (missionConfigFile >> "Loadouts" >> "loadoutGroups")) select {_x in _usedGroups};
+    {_groupNames pushBackUnique _x} forEach _usedGroups;
+
+    {
+        private _groupId = format ["%1_group_%2", _parentId, _forEachIndex]; // index, labels may contain spaces
+        private _groupAction = [_groupId, _x + " >", _icon, {}, {true}] call ace_interact_menu_fnc_createAction;
+        [_obj, 0, _parentPath, _groupAction] call ace_interact_menu_fnc_addActionToObject;
+        _groupPaths set [_x, _parentPath + [_groupId]];
+    } forEach _groupNames;
+};
 
 {
     // entry is either "classname" or ["classname", [ranks]]
@@ -60,14 +87,21 @@ private _parentPath = _actionPath + [_parentId];
     private _typeName = getText (configFile >> "CfgVehicles" >> _type >> "displayName");
     if (_typeName == "") then {_typeName = _type};
 
+    private _menuPath = _parentPath;
+    if (_grouped) then {
+        private _group = getText (missionConfigFile >> "Loadouts" >> "Type" >> _type >> "loadoutGroup");
+        if (_group == "") then {_group = "Infantry"};
+        _menuPath = _groupPaths get _group;
+    };
+
     private _typeId = format [QGVAR(switchMenu_%1_%2), _parentId, _type];
     // with ranks the class action is a submenu, otherwise it applies directly
     private _typeAction = if (_classRanks isEqualTo []) then {
         [_typeId, _typeName, _icon, _statement, {true}, {}, [_type, ""]] call ace_interact_menu_fnc_createAction
     } else {
-        [_typeId, _typeName, _icon, {}, {true}] call ace_interact_menu_fnc_createAction
+        [_typeId, _typeName + " >", _icon, {}, {true}] call ace_interact_menu_fnc_createAction
     };
-    [_obj, 0, _parentPath, _typeAction] call ace_interact_menu_fnc_addActionToObject;
+    [_obj, 0, _menuPath, _typeAction] call ace_interact_menu_fnc_addActionToObject;
 
     {
         private _rankAction = [
@@ -79,6 +113,6 @@ private _parentPath = _actionPath + [_parentId];
             {},
             [_type, _x]
         ] call ace_interact_menu_fnc_createAction;
-        [_obj, 0, _parentPath + [_typeId], _rankAction] call ace_interact_menu_fnc_addActionToObject;
+        [_obj, 0, _menuPath + [_typeId], _rankAction] call ace_interact_menu_fnc_addActionToObject;
     } forEach _classRanks;
 } forEach _entries;

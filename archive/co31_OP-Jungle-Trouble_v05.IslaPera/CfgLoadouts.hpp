@@ -192,6 +192,9 @@ class Loadouts {
             addItemsToVest[] += {
                 "CUP_30Rnd_556x45_Emag", 12,
             };
+            addItemsToBackpack[] = {
+                "ACE_EntrenchingTool",
+            };
         };
 
         class B_Soldier_GL_F: B_Soldier_F {
@@ -409,6 +412,7 @@ class Loadouts {
             addItemsToVest[] += {
                 "CUP_1Rnd_HE_M203", 6,
                 "CUP_30Rnd_556x45_Emag_Tracer_Red", 8,
+                "ACRE_PRC152"
             };
             addItemsToBackpack[] = {
                 "CUP_1Rnd_HE_M203", 14,

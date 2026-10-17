@@ -39,7 +39,12 @@ class CfgFunctions {
 };
 
 // - Loadouts ----------------------------------------------------------------
-#include "CfgLoadouts.hpp"
+// Kopie von loadouts\CfgLoadouts_CUP_BW.hpp - Varianten hier wählen.
+// Tarnmuster: Fleck | Tropen | Multi (kein Kommentar und keine Leerzeichen hinter dem Wert!)
+#define BW_CAMO Fleck
+// einkommentieren für G36 statt G38:
+//#define BW_G36
+#include "CfgLoadouts_CUP_BW.hpp"
 
 // - Streamator -------------------------------------------------------------
 class CLib {

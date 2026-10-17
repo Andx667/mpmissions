@@ -89,6 +89,7 @@ Param | Type   | Default Value       | Description
 3     | code   | `{true}`            | ACE condition of the parent action, parameters `[target, player, params]`.
 4     | array  | `["ACE_MainActions"]` | ACE action path of the parent action.
 5     | array  | `[]`                | Ranks offered for every class that does not set its own, e.g. `["PRIVATE", "SERGEANT"]`. Empty: no rank level.
+6     | bool   | `true`              | Group the classes into submenus by their `loadoutGroup` entry (see below). `false`: all classes directly under the parent action.
 
 **Example:**
 ```sqf
@@ -100,6 +101,28 @@ Param | Type   | Default Value       | Description
 
 // same menu on several objects, every class from Loadouts >> Type
 [[crate, truck]] call GRAD_Loadout_fnc_addLoadoutSwitchMenu;
+
+// every class, without group submenus
+[crate, [], "Change loadout", {true}, ["ACE_MainActions"], [], false] call GRAD_Loadout_fnc_addLoadoutSwitchMenu;
+```
+
+By default the classes are grouped into submenus, e.g. `Change loadout > Combat Support > Engineer`. The group comes from the `loadoutGroup` entry of the class in `Loadouts >> Type` and is inherited like any other config value; classes without one go into `Infantry`. Only groups that contain at least one class get a submenu. `loadoutGroups[]` in `Loadouts` sets their order, groups not listed there follow in the order they first appear:
+
+```cpp
+class Loadouts {
+    loadoutGroups[] = {"Infantry", "Crews", "Combat Support", "Logistics", "SOF"};
+
+    class Type {
+        class B_Survivor_F {
+            loadoutGroup = "Infantry";
+            // ...
+        };
+        class B_crew_F: B_Survivor_F {
+            loadoutGroup = "Crews";
+            // ...
+        };
+    };
+};
 ```
 
 If neither the entry nor parameter 5 gives ranks, the `Rank` classes defined for that class in the loadout config (including inherited ones) are used automatically. A class with ranks becomes a submenu, a class without applies directly.

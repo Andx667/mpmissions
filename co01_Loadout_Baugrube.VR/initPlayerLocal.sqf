@@ -28,7 +28,7 @@ private _id = [
                 [_unit, currentWeapon _unit, true] call ace_safemode_fnc_setWeaponSafety;
 
                 //Add TTT Helmet based on position in Squad
-                private _helmet = ["ttt_Helmet_",groupID _unit,"_BW_Flecktarn"] joinString "";
+                //private _helmet = ["ttt_Helmet_",groupID _unit,"_BW_Flecktarn"] joinString "";
                 //_unit addItemToBackpack _helmet;
 
                // Zweite Primärwaffe (KJW's Two Primary Weapons) kommt jetzt über secondPrimaryWeapon* in der CfgLoadouts.hpp
@@ -64,3 +64,6 @@ _player addMPEventHandler ["MPRespawn", {
 		};
 	};
 }];
+
+// Untermenüs nach loadoutGroup aus der CfgLoadouts (Infantry, Crews, Combat Support, Logistics, SOF)
+[loadout_changer] call GRAD_Loadout_fnc_addLoadoutSwitchMenu;
