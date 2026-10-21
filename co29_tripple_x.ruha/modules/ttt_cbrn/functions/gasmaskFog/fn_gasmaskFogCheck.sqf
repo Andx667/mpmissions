@@ -13,6 +13,7 @@
 
 params [["_unit", call CBA_fnc_currentUnit]];
 
+if !(ttt_cbrn_gasmaskFog_enabled) exitWith {};
 if (ttt_cbrn_gasmaskFog_pfh != -1) exitWith {};
 if !(alive _unit && {(goggles _unit) in ttt_cbrn_gasmaskFog_masks}) exitWith {};
 

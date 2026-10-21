@@ -25,10 +25,13 @@ if (isNull _unit) exitWith {false};
 private _original = _unit getVariable ["ttt_cbrn_uniformSwap_original", []];
 if (_original isEqualTo []) exitWith {false};
 
-_original params ["_uniformClass", "_vestClass"];
+// an entry is [classname] for a piece that was swapped, [] for a piece that was kept
+_original params [["_uniformEntry", [], [[]]], ["_vestEntry", [], [[]]]];
+_uniformEntry params [["_uniformClass", "", [""]]];
+_vestEntry params [["_vestClass", "", [""]]];
 
 // only forget the original outfit once the swap back was really started
-private _result = [_unit, _uniformClass, _vestClass, true] call ttt_cbrn_fnc_swapUniformVest;
+private _result = [_unit, _uniformClass, _vestClass, true, [_uniformEntry isNotEqualTo [], _vestEntry isNotEqualTo []]] call ttt_cbrn_fnc_swapUniformVest;
 if (_result) then {
     _unit setVariable ["ttt_cbrn_uniformSwap_original", nil];
 };

@@ -2,24 +2,17 @@
     Function: ttt_cbrn_fnc_deconShowerDeconstruct
 
     Description:
-        Progress bar success: removes the shower and its items and loads it into the vehicle again.
+        Progress bar success: asks the server to remove the shower and its items and to load it
+        into the vehicle again (ttt_cbrn_deconShower_requestRemove, see ttt_cbrn_fnc_initDeconShower).
 */
 
 (_this select 0) params ["_target", "_caller"];
 
 private _vehicle = [_target] call ttt_cbrn_fnc_deconShowerGetVehicle;
+if (isNull _vehicle) exitWith {_this call ttt_cbrn_fnc_deconShowerCancel};
 
-{
-    deleteVehicle _x;
-} forEach (_target getVariable ["ttt_cbrn_deconShower_attached", []]);
+hint format ["Die Dusche wurde in das Fahrzeug geladen.\nRichtung: %1 Grad\nEntfernung: %2 Meter",
+    round (getPos _target getDir getPos _vehicle), round (getPos _target distance getPos _vehicle)];
 
-if (!isNull _vehicle) then {
-    hint format ["Die Dusche wurde in das Fahrzeug geladen.\nRichtung: %1 Grad\nEntfernung: %2 Meter",
-        round (getPos _target getDir getPos _vehicle), round (getPos _target distance getPos _vehicle)];
-    _vehicle setVariable ["hasshower", true, true];
-    [_vehicle, _vehicle getVariable ["fuel", 1]] remoteExec ["setFuel", owner _vehicle, false];
-};
-
-["ttt_cbrn_deconShower_turnOff", [_target]] call CBA_fnc_globalEvent;
-deleteVehicle _target;
+["ttt_cbrn_deconShower_requestRemove", [_target, _vehicle]] call CBA_fnc_serverEvent;
 _caller switchMove "";

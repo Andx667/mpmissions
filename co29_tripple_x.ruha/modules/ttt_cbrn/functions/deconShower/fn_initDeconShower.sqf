@@ -16,7 +16,11 @@ if (isServer) then {
     ["ttt_cbrn_deconShower_requestOn", {
         params ["_shower"];
 
-        if (isNull _shower || {_shower getVariable ["ttt_cbrn_deconShower_on", false]}) exitWith {};
+        if (
+            isNull _shower
+            || {_shower getVariable ["ttt_cbrn_deconShower_on", false]}
+            || {_shower getVariable ["ttt_cbrn_deconShower_removing", false]}
+        ) exitWith {};
 
         private _remainingWater = _shower getVariable ["ttt_cbrn_deconShower_water", ttt_cbrn_deconShower_waterTime];
         if (_remainingWater <= 0) exitWith {};
@@ -45,6 +49,43 @@ if (isServer) then {
         _shower setVariable ["ttt_cbrn_deconShower_on", false, true];
         ["ttt_cbrn_deconShower_turnOff", [_shower]] call CBA_fnc_globalEvent;
     }] call CBA_fnc_addEventHandler;
+
+    // Building is decided here, so two players starting at the same time cannot both build
+    ["ttt_cbrn_deconShower_requestBuild", {
+        params ["_vehicle", "_caller"];
+
+        if (isNull _vehicle || {!(_vehicle getVariable ["hasshower", true])}) exitWith {
+            ["ttt_cbrn_deconShower_buildDenied", [], _caller] call CBA_fnc_targetEvent;
+        };
+
+        _vehicle setVariable ["hasshower", false, true];
+        [_vehicle, [0, 0, 0]] remoteExec ["setVelocity", _vehicle, false];
+
+        ["ttt_cbrn_deconShower_buildApproved", [_vehicle, _caller], _caller] call CBA_fnc_targetEvent;
+    }] call CBA_fnc_addEventHandler;
+
+    ["ttt_cbrn_deconShower_requestRemove", {
+        params ["_shower", "_vehicle"];
+
+        if (isNull _shower || {_shower getVariable ["ttt_cbrn_deconShower_removing", false]}) exitWith {};
+        _shower setVariable ["ttt_cbrn_deconShower_removing", true, true];
+
+        _shower setVariable ["ttt_cbrn_deconShower_on", false, true];
+        ["ttt_cbrn_deconShower_turnOff", [_shower]] call CBA_fnc_globalEvent;
+
+        if (!isNull _vehicle) then {
+            _vehicle setVariable ["hasshower", true, true];
+        };
+
+        // delete a bit later, so every client gets the turn off event while the shower still exists
+        [{
+            params ["_shower"];
+            {
+                deleteVehicle _x;
+            } forEach (_shower getVariable ["ttt_cbrn_deconShower_attached", []]);
+            deleteVehicle _shower;
+        }, [_shower], 2] call CBA_fnc_waitAndExecute;
+    }] call CBA_fnc_addEventHandler;
 };
 
 if (!hasInterface) exitWith {};
@@ -57,6 +98,16 @@ if (!hasInterface) exitWith {};
 ["ttt_cbrn_deconShower_turnOff", {
     params ["_shower"];
     [_shower, false] call ttt_cbrn_fnc_deconShowerToggle;
+}] call CBA_fnc_addEventHandler;
+
+["ttt_cbrn_deconShower_buildApproved", {
+    params ["_vehicle", "_caller"];
+    if (ttt_cbrn_deconShower_useAnimation) then {_caller playMove ttt_cbrn_deconShower_animation;};
+    [ttt_cbrn_deconShower_buildTime, [_vehicle, _caller], ttt_cbrn_fnc_deconShowerBuild, ttt_cbrn_fnc_deconShowerCancel, "Baue Dekon-Dusche auf"] call ace_common_fnc_progressBar;
+}] call CBA_fnc_addEventHandler;
+
+["ttt_cbrn_deconShower_buildDenied", {
+    hint "Die Dusche dieses Fahrzeugs wird bereits aufgebaut.";
 }] call CBA_fnc_addEventHandler;
 
 // Late joiners missed the turn on event: show the showers that are running already
@@ -87,6 +138,7 @@ private _on = ["ttt_cbrn_deconShower_on", "Dusche anschalten", "", {
     ["ttt_cbrn_deconShower_requestOn", [_target]] call CBA_fnc_serverEvent;
 }, {
     !(_target getVariable ["ttt_cbrn_deconShower_on", false])
+    && {!(_target getVariable ["ttt_cbrn_deconShower_removing", false])}
     && {(_target getVariable ["ttt_cbrn_deconShower_water", ttt_cbrn_deconShower_waterTime]) > 0}
 }, {}, [], [0, 0, 0], 5] call ace_interact_menu_fnc_createAction;
 [ttt_cbrn_deconShower_class, 0, ["ACE_MainActions"], _on] call ace_interact_menu_fnc_addActionToClass;

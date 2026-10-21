@@ -13,8 +13,6 @@
 
 if (!hasInterface) exitWith {};
 
-if !(ttt_cbrn_gasmaskFog_enabled) exitWith {};
-
 ttt_cbrn_gasmaskFog_pfh = -1;
 
 // the fog handler only runs while a mask is worn (or fog is still fading): start it whenever a mask is put on

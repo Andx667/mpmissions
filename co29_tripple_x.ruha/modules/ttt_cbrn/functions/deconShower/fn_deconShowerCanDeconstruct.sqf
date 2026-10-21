@@ -10,4 +10,6 @@
 
 params ["_target"];
 
-!(_target getVariable ["inUse", false]) && {!isNull ([_target] call ttt_cbrn_fnc_deconShowerGetVehicle)}
+!(_target getVariable ["inUse", false])
+&& {!(_target getVariable ["ttt_cbrn_deconShower_removing", false])}
+&& {!isNull ([_target] call ttt_cbrn_fnc_deconShowerGetVehicle)}

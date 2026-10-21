@@ -4,7 +4,8 @@
     Description:
         Changes a unit's uniform and vest to a different set while keeping
         everything that is currently stored inside the old uniform/vest
-        (items, magazines, weapons). If the new uniform/vest is too small to
+        (items, magazines with their ammo count, weapons with their attachments
+        and loaded magazines). If the new uniform/vest is too small to
         hold everything, the leftover items are dropped into a ground weapon
         holder next to the unit instead of being deleted.
 
@@ -21,6 +22,9 @@
                                     saving the current outfit as "original" and treats empty
                                     classnames as "unit had no uniform/vest before" (= remove it).
                                     Default false
+        4: _revertPieces <ARRAY>  - (optional, revert only) [uniform <BOOL>, vest <BOOL>]: which pieces
+                                    to change back. Pieces that were never swapped are left untouched.
+                                    Default [true, true]
 
     Returns:
         BOOL - true if the swap was initiated (actual cargo restore happens a
@@ -34,13 +38,19 @@ params [
     ["_unit", objNull, [objNull]],
     ["_uniformClass", "", [""]],
     ["_vestClass", "", [""]],
-    ["_isRevert", false, [false]]
+    ["_isRevert", false, [false]],
+    ["_revertPieces", [true, true], [[]], 2]
 ];
 
 if (isNull _unit) exitWith {false};
 
-if (!_isRevert && {_uniformClass == "" && {_vestClass == ""}}) exitWith {
-    diag_log text "[ttt_cbrn_uniformSwap] swapUniformVest: missing uniform/vest classname.";
+// Outside of a revert an empty classname means "leave this piece as it is",
+// during a revert only the pieces in _revertPieces are changed back
+private _keepUniform = [_uniformClass == "", !(_revertPieces select 0)] select _isRevert;
+private _keepVest = [_vestClass == "", !(_revertPieces select 1)] select _isRevert;
+
+if (_keepUniform && {_keepVest}) exitWith {
+    diag_log text "[ttt_cbrn_uniformSwap] swapUniformVest: nothing to change (missing uniform/vest classname).";
     false
 };
 
@@ -54,25 +64,26 @@ if (_vestClass != "" && {!isClass (configFile >> "CfgWeapons" >> _vestClass)}) e
     false
 };
 
-// --- Pull everything currently stored in a container (items/magazines/weapons) ---
+// --- Pull everything currently stored in a container ---
+// [items [[classes], [counts]], magazines [[class, ammo], ...], weapons [weaponsItems array, ...]]
 private _fnc_getCargo = {
     params ["_container"];
-    if (isNull _container) exitWith {[[[], []], [[], []], [[], []]]};
-    [getItemCargo _container, getMagazineCargo _container, getWeaponCargo _container]
+    if (isNull _container) exitWith {[[[], []], [], []]};
+    [getItemCargo _container, magazinesAmmoCargo _container, weaponsItemsCargo _container]
 };
 
-// Outside of a revert an empty classname means "leave this piece as it is"
-private _keepUniform = !_isRevert && {_uniformClass == ""};
-private _keepVest = !_isRevert && {_vestClass == ""};
-
-private _oldUniformCargo = [[uniformContainer _unit] call _fnc_getCargo, [[[], []], [[], []], [[], []]]] select _keepUniform;
-private _oldVestCargo = [[vestContainer _unit] call _fnc_getCargo, [[[], []], [[], []], [[], []]]] select _keepVest;
+private _oldUniformCargo = [[uniformContainer _unit] call _fnc_getCargo, [[[], []], [], []]] select _keepUniform;
+private _oldVestCargo = [[vestContainer _unit] call _fnc_getCargo, [[[], []], [], []]] select _keepVest;
 
 // Remember what the unit wore before the first swap, so it can be swapped back
-// later (ttt_cbrn_fnc_revertUniformVest). Swapping again while already swapped keeps
-// the true original.
-if (!_isRevert && {isNil {_unit getVariable "ttt_cbrn_uniformSwap_original"}}) then {
-    _unit setVariable ["ttt_cbrn_uniformSwap_original", [uniform _unit, vest _unit]];
+// later (ttt_cbrn_fnc_revertUniformVest). Stored as [uniformEntry, vestEntry], an entry
+// is [classname] once that piece was swapped and [] if it was kept. Swapping again
+// while already swapped keeps the true original.
+if (!_isRevert) then {
+    private _original = +(_unit getVariable ["ttt_cbrn_uniformSwap_original", [[], []]]);
+    if (!_keepUniform && {(_original select 0) isEqualTo []}) then {_original set [0, [uniform _unit]]};
+    if (!_keepVest && {(_original select 1) isEqualTo []}) then {_original set [1, [vest _unit]]};
+    _unit setVariable ["ttt_cbrn_uniformSwap_original", _original];
 };
 
 // --- Swap the uniform and vest (the old ones and their cargo are discarded, --- //
@@ -110,33 +121,38 @@ if (!_keepVest) then {
         _overflowHolder
     };
 
+    // Picks the container if the item still fits, otherwise the overflow holder
+    private _fnc_target = {
+        params ["_container", "_classname"];
+        if (!isNull _container && {_container canAdd _classname}) then {_container} else {call _fnc_getOverflowHolder}
+    };
+
     private _fnc_restoreCargo = {
-        params ["_container", "_cargo", "_addFnc"];
-        _cargo params ["_classnames", "_counts"];
+        params ["_container", "_cargo"];
+        _cargo params ["_items", "_magazines", "_weapons"];
+        _items params ["_classnames", "_counts"];
 
         {
             private _classname = _x;
-            private _count = _counts select _forEachIndex;
-            for "_i" from 1 to _count do {
-                if (!isNull _container && {_container canAdd _classname}) then {
-                    [_container, [_classname, 1]] call _addFnc;
-                } else {
-                    [(call _fnc_getOverflowHolder), [_classname, 1]] call _addFnc;
-                };
+            for "_i" from 1 to (_counts select _forEachIndex) do {
+                ([_container, _classname] call _fnc_target) addItemCargoGlobal [_classname, 1];
             };
         } forEach _classnames;
+
+        // keeps the ammo count of partly used magazines
+        {
+            _x params ["_classname", "_ammo"];
+            ([_container, _classname] call _fnc_target) addMagazineAmmoCargo [_classname, 1, _ammo];
+        } forEach _magazines;
+
+        // keeps attachments and loaded magazines
+        {
+            ([_container, _x select 0] call _fnc_target) addWeaponWithAttachmentsCargoGlobal [_x, 1];
+        } forEach _weapons;
     };
 
-    private _newUniformContainer = uniformContainer _unit;
-    private _newVestContainer = vestContainer _unit;
-
-    [_newUniformContainer, _oldUniformCargo select 0, {(_this select 0) addItemCargoGlobal (_this select 1)}] call _fnc_restoreCargo;
-    [_newUniformContainer, _oldUniformCargo select 1, {(_this select 0) addMagazineCargoGlobal (_this select 1)}] call _fnc_restoreCargo;
-    [_newUniformContainer, _oldUniformCargo select 2, {(_this select 0) addWeaponCargoGlobal (_this select 1)}] call _fnc_restoreCargo;
-
-    [_newVestContainer, _oldVestCargo select 0, {(_this select 0) addItemCargoGlobal (_this select 1)}] call _fnc_restoreCargo;
-    [_newVestContainer, _oldVestCargo select 1, {(_this select 0) addMagazineCargoGlobal (_this select 1)}] call _fnc_restoreCargo;
-    [_newVestContainer, _oldVestCargo select 2, {(_this select 0) addWeaponCargoGlobal (_this select 1)}] call _fnc_restoreCargo;
+    [uniformContainer _unit, _oldUniformCargo] call _fnc_restoreCargo;
+    [vestContainer _unit, _oldVestCargo] call _fnc_restoreCargo;
 
     if !(isNull _overflowHolder) then {
         systemChat "Deine neue Uniform/Weste hatte nicht genug Platz - einige Gegenstände liegen neben dir am Boden.";

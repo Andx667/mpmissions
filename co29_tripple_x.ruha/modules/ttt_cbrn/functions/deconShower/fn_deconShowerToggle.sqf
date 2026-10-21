@@ -18,6 +18,10 @@ if !(hasInterface) exitWith {};
 if (_on) then {
     if (_shower getVariable ["ttt_cbrn_deconShower_water", ttt_cbrn_deconShower_waterTime] isEqualTo 0) exitWith {};
 
+    // already running on this client (e.g. turn on event and late join check both fired)
+    if (_shower getVariable ["ttt_cbrn_deconShower_running", false]) exitWith {};
+    _shower setVariable ["ttt_cbrn_deconShower_running", true];
+
     // water particles, mist, valve and sound: BI's own shower animation (power, count)
     [_shower, 1.5, 9] spawn BIN_fnc_deconShowerAnim;
 
@@ -34,6 +38,7 @@ if (_on) then {
         [{deleteVehicle _this}, _puddle, 180] call CBA_fnc_waitAndExecute;
     };
 } else {
+    _shower setVariable ["ttt_cbrn_deconShower_running", false];
     [_shower] call BIN_fnc_deconShowerAnimStop;
 
     private _pfh = _shower getVariable ["ttt_cbrn_deconShower_pfh", -1];
@@ -41,6 +46,10 @@ if (_on) then {
         [_pfh] call CBA_fnc_removePerFrameHandler;
         _shower setVariable ["ttt_cbrn_deconShower_pfh", -1];
     };
-    ace_player setVariable ["ttt_cbrn_deconShower_time", 0];
+    // only reset the decon timer if this shower was the one timing it
+    if ((ace_player getVariable ["ttt_cbrn_deconShower_timeShower", objNull]) isEqualTo _shower) then {
+        ace_player setVariable ["ttt_cbrn_deconShower_time", 0];
+        ace_player setVariable ["ttt_cbrn_deconShower_timeShower", objNull];
+    };
 
 };

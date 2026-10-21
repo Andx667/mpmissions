@@ -24,7 +24,8 @@ if !(_unit isEqualTo _lastUnit) then {
     _lastUnit = _unit;
 };
 
-private _maskOn = alive _unit && {(goggles _unit) in ttt_cbrn_gasmaskFog_masks};
+// switching the fog off mid-mission lets the current fog fade like taking the mask off
+private _maskOn = ttt_cbrn_gasmaskFog_enabled && {alive _unit} && {(goggles _unit) in ttt_cbrn_gasmaskFog_masks};
 
 if (_maskOn) then {
     private _fatigueAdditive = 0;
@@ -36,7 +37,8 @@ if (_maskOn) then {
     if ((backpack _unit) in ttt_cbrn_gasmaskFog_conditioning) then {
         _increase = _increase * ttt_cbrn_gasmaskFog_accumulationCoef;
     };
-    _uptime = _uptime + _increase;
+    // capped at full fog, so wearing the mask longer does not make it take longer to clear
+    _uptime = (_uptime + _increase) min ttt_cbrn_gasmaskFog_maxTime;
 
     if (_uptime > ttt_cbrn_gasmaskFog_startTime) then {
         if (!_fogShown) then {

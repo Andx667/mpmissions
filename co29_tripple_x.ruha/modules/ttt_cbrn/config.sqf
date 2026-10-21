@@ -1,7 +1,14 @@
 /*
-    TTT CBRN settings. Every value can be overridden before this runs
-    (e.g. in init.sqf: ttt_cbrn_deconShower_buildTime = 30;) because only
-    variables that are not set yet get the default below.
+    TTT CBRN settings, loaded by ttt_cbrn_fnc_init (postInit). Only variables
+    that are not set yet get the default below.
+
+    Most values are read while the mission runs and can simply be set later,
+    e.g. in init.sqf or initServer.sqf: ttt_cbrn_deconShower_buildTime = 30;
+    (decon shower settings are used where the shower is built or run, so set
+    them on every machine, e.g. in init.sqf).
+
+    !!! Read once at mission start, before init.sqf runs - change them in
+    this file instead: ttt_cbrn_deconShower_vehicles, ttt_cbrn_deconShower_class
 */
 
 // ---- Decon shower ---------------------------------------------------------
@@ -53,12 +60,6 @@ ttt_cbrn_gasmaskFog_masks = missionNamespace getVariable ["ttt_cbrn_gasmaskFog_m
     "G_AirPurifyingRespirator_02_olive_F",
     "G_AirPurifyingRespirator_02_sand_F",
     "G_RegulatorMask_F",
-    "GP21_GasmaskPS",
-    "GP5Filter_RaspiratorPS",
-    "GP7_RaspiratorPS",
-    "SE_M17",
-    "Hamster_PS",
-    "SE_S10",
     "USP_GP21_BLK2"
 ]];
 
