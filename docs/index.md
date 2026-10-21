@@ -39,9 +39,17 @@ Mission folder names follow this structure:
 - **docs/** - Documentation files
 - **loadouts/** - Shared loadout configurations
 - **template/** - Mission template for creating new missions
-- **LICENSE** - Repository license
+- **LICENSE** - Repository license (CC0, see [Licensing](#licensing))
 - **mkdocs.yml** - Documentation configuration
 
 ## Development
 
 Use the `template/` folder as a starting point for creating new missions. Loadout configurations are stored in the `loadouts/` folder for reuse across missions.
+
+## Licensing
+
+The repository as a whole is released under CC0 (see `LICENSE`). Some missions contain their own `LICENSE` file, and those terms take precedence for that mission folder:
+
+- **co29_tripple_x.ruha** - Arma Public Licence Share Alike (APL-SA), because it bundles the APL-SA licensed CBRN module by diwako (`modules/ttt_cbrn`)
+
+Third-party modules may also ship their own license files inside a mission; check the module folder before reusing them.
